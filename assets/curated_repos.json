@@ -1,0 +1,52 @@
+[
+  {
+    "owner": "hypit-ai",
+    "name": "hypit",
+    "full_name": "hypit-ai/hypit",
+    "stars": 20342,
+    "description": "Clone any viral video with AI agents. Not just a script, the whole workflow: swap the face, the words, the B-roll, ship 100 variants in one command, and get your 100M views.",
+    "url": "https://github.com/hypit-ai/hypit",
+    "language": "TypeScript",
+    "og_image": "assets/repos/hypit-ai_hypit/og_banner.png"
+  },
+  {
+    "owner": "snapotter-hq",
+    "name": "SnapOtter",
+    "full_name": "snapotter-hq/SnapOtter",
+    "stars": 2793,
+    "description": "Open-source, self-hosted file-processing tool. Convert, compress, OCR, transcribe & run local AI across image, video, audio, PDF & documents, via UI, REST API & pipelines. Your files never leave your network.",
+    "url": "https://github.com/snapotter-hq/SnapOtter",
+    "language": "TypeScript"
+  },
+  {
+    "owner": "elie222",
+    "name": "inbox-zero",
+    "full_name": "elie222/inbox-zero",
+    "stars": 12430,
+    "description": "The world's best AI personal assistant for email. Open source app to help you reach inbox zero fast.",
+    "url": "https://github.com/elie222/inbox-zero",
+    "language": "TypeScript",
+    "demo_media": "assets/repos/elie222_inbox-zero/demo.jpg"
+  },
+  {
+    "owner": "elizaOS",
+    "name": "eliza",
+    "full_name": "elizaOS/eliza",
+    "stars": 19562,
+    "description": "Open source agentic operating system",
+    "url": "https://github.com/elizaOS/eliza",
+    "language": "TypeScript",
+    "og_image": "assets/repos/elizaOS_eliza/og_banner.png"
+  },
+  {
+    "owner": "CodeWithCJ",
+    "name": "SparkyFitness",
+    "full_name": "CodeWithCJ/SparkyFitness",
+    "stars": 6263,
+    "description": "SparkyFitness: Built for Families. Powered by AI. Track food, fitness, water, and health \u2014 together.",
+    "url": "https://github.com/CodeWithCJ/SparkyFitness",
+    "language": "TypeScript",
+    "og_image": "assets/repos/CodeWithCJ_SparkyFitness/og_banner.png",
+    "demo_media": "assets/repos/CodeWithCJ_SparkyFitness/demo.jpg"
+  }
+]
