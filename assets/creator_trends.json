@@ -1,0 +1,26 @@
+[
+  {
+    "creator": "Fireship",
+    "video_title": "A $6.3 billion open-weight model just got embarrassed by the French...",
+    "video_id": "WrCjAAl9okA",
+    "transcript_sample": "Yesterday, while you were being force-fed every iteration of that Rumple Stiltskin video, the Paris-based AI lab, Mistl, released Mistl large 4, a trillion parameter open weight model that they're claiming is the best of its kind, assuming you adopt the American ideology of just ignoring any technology coming out of China. It's natively multimodal, has a million token context window, and claims to blah blah blah. The more interesting part of this release was the timing because it landed in the middle of what many are calling the dumbest week in the history of the openweight race. It kicked off early in the week when Trump announced a super intelligence force [music] laser >> whose job it is to keep America at the frontier of the AI race with their first order of business claiming that AI is actually dumb and the real future is SI."
+  },
+  {
+    "creator": "Matthew Berman",
+    "video_title": "Mistral Large 4 Failed My Rubik's Cube Test",
+    "video_id": "QnxXx1FpnF8",
+    "transcript_sample": "I would definitely consider this a failure. So, I gave it the standard build a Rubik's cube simulation. It's a Rubik's cube. I can spin it. It actually looks pretty darn good. So, no complaints there. When I hit scramble, nothing happened. So, I had to go back. I iterated on it again. And now we get this. And as you can tell, the actual spinning of the sides is working just fine, but the colors disappear. But I actually don't blame the model itself."
+  },
+  {
+    "creator": "AI Jason",
+    "video_title": "GPT 6 + Hyperframe = Crazy combo for expert-level videos",
+    "video_id": "8pRe7kkPi6g",
+    "transcript_sample": "Thanks HubSpot for sponsoring this video. So when we talk about hyperframe or remote type of AI generated per launch video, many people's impression are still those type of PowerPoint slides type of video that looks really boring and not interesting. But things actually changed dramatically for the past few months ever since model like fable was introduced and it went even further with the recent launch of GPD6 Astra. Video editing capability just went out of roof. For example, I just feed this video I download from YouTube to Astra with hyperframe and with just one shot after 32 minutes and basically replicate this video pixel perfectly, which is absolutely insane because there's so many visual details to get it right. And I personally has been using Fable and Astra with Hyperframe to generate all those super high quality"
+  },
+  {
+    "creator": "Wes Roth",
+    "video_title": "OpenAI's secret model just BROKE math...",
+    "video_id": "fTGIV3e8dTU",
+    "transcript_sample": "Well, it looks like the rumors were true. Openai just published 722 mathematical manuscripts, all of them produced by this unreleased insider internal model. Did it solve the Reman hypothesis? Did it prove that P equals NP? Did it solve whole math forever? Well, not quite. But what it released is absolutely insane. Some people refer to it as the quasi reman hypothesis. to the people that have no idea what any of that stuff is. Basically, there's a set of math problems that are incredibly complicated and also if we make some progress on them or solve them, they will really, we hope, unlock a lot of new understanding in math, fundamental understanding. Some of these problems, if solved, carry millions of dollars in"
+  }
+]

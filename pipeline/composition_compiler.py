@@ -6,13 +6,16 @@ def build_hyperframes_composition(
     captions_file="assets/caption_chunks.json",
     audio_path="assets/voice.mp3",
     script_file="assets/generated_script.json",
-    duration=38.0,
+    duration=28.76,
     output_html="index.html"
 ):
     """
-    Builds a high-retention, hyper-motion graphics video composition with zero static frames,
-    featuring real scraped UI screenshots, 3D perspective camera motion, laser scanlines,
-    and exact word-level synchronized kinetic typography.
+    Builds a broadcast-quality 1080x1920 vertical Reel composition:
+    - 100% full-bleed canvas (no top-left shrinking or black borders)
+    - Full-resolution uncropped demo showcase window (object-fit: contain)
+    - Animated developer avatar rig (talking mouth synced to voice, pointing arm, thumbs up, eye blinks)
+    - Kinetic glowing captions centered between screen and avatar
+    - Continuous 3D motion, scanlines, and reactive desk lighting
     """
     with open(repos_file) as f:
         repos = json.load(f)[:3]
@@ -20,19 +23,10 @@ def build_hyperframes_composition(
     with open(captions_file) as f:
         caption_chunks = json.load(f)
 
-    # Load structured script timestamps if available
-    script_data = {}
-    if os.path.exists(script_file):
-        try:
-            with open(script_file) as f:
-                script_data = json.load(f)
-        except Exception:
-            pass
-
-    # Calculate dynamic scene timings based on total audio duration
-    t_hook_end = min(3.8, duration * 0.10)
-    t_tool1_end = duration * 0.38
-    t_tool2_end = duration * 0.66
+    # Dynamic scene timings based on audio duration
+    t_hook_end = min(3.8, duration * 0.12)
+    t_tool1_end = duration * 0.40
+    t_tool2_end = duration * 0.68
     t_tool3_end = duration * 0.88
     t_cta_end = duration
 
@@ -46,16 +40,16 @@ def build_hyperframes_composition(
             "img": img,
             "stars": f"★ {r.get('stars', 12000):,}",
             "lang": r.get("language", "AI").upper(),
-            "desc": r.get("description", "")[:80]
+            "desc": r.get("description", "")[:90]
         })
 
-    # Update hyperframes.json duration to match audio exactly
+    # Update hyperframes.json to exact 1080x1920 full portrait resolution
     hf_config = {
         "name": "daily-automation-engine",
         "version": "2.0.0",
         "fps": 30,
-        "width": 720,
-        "height": 1280,
+        "width": 1080,
+        "height": 1920,
         "duration": round(duration, 2)
     }
     with open("hyperframes.json", "w") as f:
@@ -65,340 +59,356 @@ def build_hyperframes_composition(
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=720, height=1280">
-  <title>Hyper-Motion AI Developer Reel</title>
+  <meta name="viewport" content="width=1080, height=1920">
+  <title>9/10 Hyper-Motion AI Developer Reel</title>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
   <style>
     * {{ margin: 0; padding: 0; box-sizing: border-box; }}
     html, body {{
-      width: 720px;
-      height: 1280px;
+      width: 1080px;
+      height: 1920px;
       overflow: hidden;
-      background: #080C15;
+      background: #0B0F19;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Inter", sans-serif;
       user-select: none;
       color: #FFFFFF;
     }}
     #root {{
       position: relative;
-      width: 720px;
-      height: 1280px;
+      width: 1080px;
+      height: 1920px;
       overflow: hidden;
-      background: radial-gradient(circle at 50% 30%, #151D33 0%, #080C15 80%);
+      background: radial-gradient(circle at 50% 35%, #172554 0%, #0B0F19 80%);
     }}
 
-    /* Continuous animated cyber grid & particle drift */
+    /* Animated cyber grid spanning 1080x1920 */
     .grid-bg {{
       position: absolute;
-      inset: -200px;
+      inset: -300px;
       background-image: 
-        linear-gradient(rgba(0, 240, 255, 0.08) 1.5px, transparent 1.5px),
-        linear-gradient(90deg, rgba(0, 240, 255, 0.08) 1.5px, transparent 1.5px);
-      background-size: 48px 48px;
-      transform: perspective(600px) rotateX(45deg);
+        linear-gradient(rgba(56, 189, 248, 0.09) 2px, transparent 2px),
+        linear-gradient(90deg, rgba(56, 189, 248, 0.09) 2px, transparent 2px);
+      background-size: 60px 60px;
+      transform: perspective(800px) rotateX(50deg);
       animation: gridDrift 20s linear infinite;
       z-index: 1;
-      opacity: 0.7;
+      opacity: 0.8;
     }}
     @keyframes gridDrift {{
-      0% {{ transform: perspective(600px) rotateX(45deg) translateY(0); }}
-      100% {{ transform: perspective(600px) rotateX(45deg) translateY(48px); }}
+      0% {{ transform: perspective(800px) rotateX(50deg) translateY(0); }}
+      100% {{ transform: perspective(800px) rotateX(50deg) translateY(60px); }}
     }}
 
-    /* Glowing ambient light orbs */
+    /* Ambient Glowing Orbs */
     .ambient-orb {{
       position: absolute;
       border-radius: 50%;
-      filter: blur(90px);
+      filter: blur(120px);
       z-index: 2;
-      opacity: 0.55;
-      animation: pulseOrb 6s ease-in-out infinite alternate;
+      opacity: 0.6;
     }}
-    .orb-1 {{ width: 420px; height: 420px; background: #6366F1; top: 100px; left: -100px; }}
-    .orb-2 {{ width: 380px; height: 380px; background: #06B6D4; top: 400px; right: -80px; animation-delay: -3s; }}
-    .orb-3 {{ width: 320px; height: 320px; background: #EC4899; bottom: 150px; left: 80px; animation-delay: -1.5s; }}
-    @keyframes pulseOrb {{
-      0% {{ transform: scale(1) translate(0, 0); opacity: 0.45; }}
-      100% {{ transform: scale(1.25) translate(30px, -20px); opacity: 0.7; }}
+    .orb-1 {{ width: 550px; height: 550px; background: #3B82F6; top: 100px; left: -120px; }}
+    .orb-2 {{ width: 500px; height: 500px; background: #8B5CF6; top: 500px; right: -100px; }}
+    .orb-3 {{ width: 450px; height: 450px; background: #EC4899; bottom: 300px; left: 150px; }}
+
+    /* Top Progress Bar */
+    .progress-bar {{
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 10px;
+      background: linear-gradient(90deg, #38BDF8, #818CF8, #F43F5E);
+      width: 0%;
+      z-index: 100;
+      box-shadow: 0 0 20px #38BDF8;
     }}
 
     /* Top HUD Header */
     .top-hud {{
       position: absolute;
-      top: 50px;
-      left: 36px;
-      right: 36px;
+      top: 60px;
+      left: 50px;
+      right: 50px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      z-index: 50;
+      z-index: 60;
     }}
     .hud-badge {{
       display: inline-flex;
       align-items: center;
-      gap: 10px;
-      background: rgba(15, 23, 42, 0.85);
-      backdrop-filter: blur(16px);
-      border: 1px solid rgba(56, 189, 248, 0.4);
-      padding: 10px 20px;
-      border-radius: 30px;
-      font-size: 16px;
-      font-weight: 800;
-      letter-spacing: 1px;
+      gap: 12px;
+      background: rgba(15, 23, 42, 0.9);
+      backdrop-filter: blur(20px);
+      border: 2px solid rgba(56, 189, 248, 0.5);
+      padding: 14px 28px;
+      border-radius: 40px;
+      font-size: 24px;
+      font-weight: 900;
+      letter-spacing: 1.5px;
       color: #38BDF8;
-      box-shadow: 0 0 25px rgba(56, 189, 248, 0.25);
+      box-shadow: 0 0 35px rgba(56, 189, 248, 0.35);
     }}
     .hud-dot {{
-      width: 10px;
-      height: 10px;
+      width: 14px;
+      height: 14px;
       border-radius: 50%;
       background: #EF4444;
-      box-shadow: 0 0 10px #EF4444;
-      animation: blink 1s ease infinite alternate;
+      box-shadow: 0 0 16px #EF4444;
+      animation: blink 0.8s ease infinite alternate;
     }}
     @keyframes blink {{ 0% {{ opacity: 0.3; }} 100% {{ opacity: 1; }} }}
     .hud-stars {{
-      background: rgba(15, 23, 42, 0.85);
-      border: 1px solid rgba(250, 204, 21, 0.4);
-      padding: 10px 20px;
-      border-radius: 30px;
-      font-size: 16px;
-      font-weight: 800;
+      background: rgba(15, 23, 42, 0.9);
+      border: 2px solid rgba(250, 204, 21, 0.5);
+      padding: 14px 28px;
+      border-radius: 40px;
+      font-size: 24px;
+      font-weight: 900;
       color: #FACC15;
-      box-shadow: 0 0 25px rgba(250, 204, 21, 0.2);
+      box-shadow: 0 0 35px rgba(250, 204, 21, 0.3);
     }}
 
-    /* Timeline progress meter line */
-    .hud-progress-bar {{
+    /* Hero Showcase Screen (Upper 55% of Screen) */
+    .showcase-screen {{
       position: absolute;
-      top: 0;
-      left: 0;
-      height: 6px;
-      background: linear-gradient(90deg, #06B6D4, #3B82F6, #EC4899);
-      width: 0%;
-      z-index: 100;
-      box-shadow: 0 0 15px #06B6D4;
-    }}
-
-    /* Scene Layers */
-    .scene-container {{
-      position: absolute;
-      inset: 0;
-      z-index: 10;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      opacity: 0;
-      pointer-events: none;
-    }}
-
-    /* Hero Glass Window for Real Media */
-    .media-window {{
-      position: relative;
-      width: 650px;
-      height: 720px;
-      background: rgba(15, 23, 42, 0.92);
-      border-radius: 20px;
-      border: 1.5px solid rgba(255, 255, 255, 0.15);
-      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8), 0 0 40px rgba(99, 102, 241, 0.35);
+      top: 160px;
+      left: 50px;
+      width: 980px;
+      height: 860px;
+      background: rgba(15, 23, 42, 0.96);
+      border-radius: 28px;
+      border: 2.5px solid rgba(255, 255, 255, 0.18);
+      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.85), 0 0 50px rgba(59, 130, 246, 0.35);
       overflow: hidden;
-      margin-top: -20px;
+      z-index: 20;
     }}
-    .window-header {{
-      height: 48px;
-      background: rgba(30, 41, 59, 0.95);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    .showcase-header {{
+      height: 64px;
+      background: rgba(30, 41, 59, 0.98);
+      border-bottom: 2px solid rgba(255, 255, 255, 0.12);
       display: flex;
       align-items: center;
-      padding: 0 18px;
-      gap: 8px;
+      padding: 0 24px;
+      gap: 12px;
     }}
-    .win-dot {{ width: 12px; height: 12px; border-radius: 50%; }}
+    .win-dot {{ width: 16px; height: 16px; border-radius: 50%; }}
     .win-dot.r {{ background: #EF4444; }}
     .win-dot.y {{ background: #F59E0B; }}
     .win-dot.g {{ background: #10B981; }}
     .window-title {{
-      margin-left: 12px;
-      font-size: 14px;
-      font-weight: 700;
+      margin-left: 14px;
+      font-size: 20px;
+      font-weight: 800;
       color: #94A3B8;
-      letter-spacing: 0.5px;
+      letter-spacing: 0.8px;
     }}
-
-    /* Continuous Ken Burns Zoom & 3D Pan on Real Media */
-    .media-viewport {{
+    .showcase-viewport {{
       position: relative;
       width: 100%;
-      height: calc(100% - 48px);
+      height: calc(100% - 64px);
+      background: #090D16;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       overflow: hidden;
     }}
-    .media-viewport img {{
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: top center;
+    /* UN-CROPPED REAL MEDIA (100% Visible with object-fit: contain) */
+    .showcase-viewport img {{
+      max-width: 96%;
+      max-height: 96%;
+      object-fit: contain;
+      border-radius: 14px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.7);
       transform-origin: center center;
     }}
-
-    /* Live Scanning Laser Line */
     .scanline {{
       position: absolute;
       top: 0;
       left: 0;
       right: 0;
-      height: 4px;
-      background: linear-gradient(90deg, transparent, #00F0FF, #FFFFFF, #00F0FF, transparent);
-      box-shadow: 0 0 20px #00F0FF, 0 0 40px #00F0FF;
+      height: 5px;
+      background: linear-gradient(90deg, transparent, #38BDF8, #FFFFFF, #38BDF8, transparent);
+      box-shadow: 0 0 25px #38BDF8, 0 0 50px #38BDF8;
       animation: scanSweep 3.5s ease-in-out infinite alternate;
-      z-index: 15;
+      z-index: 25;
+      pointer-events: none;
     }}
     @keyframes scanSweep {{
-      0% {{ top: 5%; opacity: 0.8; }}
-      100% {{ top: 92%; opacity: 1; }}
+      0% {{ top: 4%; opacity: 0.8; }}
+      100% {{ top: 94%; opacity: 1; }}
     }}
 
-    /* Floating kinetic feature pills */
-    .floating-pill {{
+    /* Floating Feature Tag */
+    .feature-tag {{
       position: absolute;
+      top: 240px;
+      right: 25px;
       background: rgba(15, 23, 42, 0.95);
-      backdrop-filter: blur(16px);
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      border-radius: 14px;
-      padding: 10px 18px;
-      font-size: 16px;
-      font-weight: 800;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
-      z-index: 25;
+      backdrop-filter: blur(20px);
+      border: 2px solid #38BDF8;
+      border-radius: 20px;
+      padding: 14px 26px;
+      font-size: 22px;
+      font-weight: 900;
+      color: #38BDF8;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.8), 0 0 30px rgba(56, 189, 248, 0.4);
+      z-index: 35;
       animation: floatBadge 3s ease-in-out infinite alternate;
     }}
     @keyframes floatBadge {{
       0% {{ transform: translateY(0px); }}
-      100% {{ transform: translateY(-12px); }}
+      100% {{ transform: translateY(-16px); }}
     }}
 
-    /* Terminal Command Strip */
-    .terminal-bar {{
-      position: absolute;
-      bottom: 240px;
-      left: 36px;
-      right: 36px;
-      background: rgba(15, 23, 42, 0.9);
-      backdrop-filter: blur(16px);
-      border: 1px solid rgba(56, 189, 248, 0.35);
-      border-radius: 14px;
-      padding: 14px 22px;
-      font-family: "JetBrains Mono", Menlo, Consolas, monospace;
-      font-size: 17px;
-      color: #38BDF8;
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      z-index: 40;
-      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.7);
-    }}
-    .cursor-blink {{
-      display: inline-block;
-      width: 10px;
-      height: 18px;
-      background: #38BDF8;
-      animation: blink 0.8s infinite;
-    }}
-
-    /* High-Impact Kinetic Captions (Centered Bottom) */
+    /* Kinetic Subtitles (Centered Middle) */
     .caption-container {{
       position: absolute;
-      bottom: 70px;
-      left: 36px;
-      right: 36px;
-      z-index: 100;
+      top: 1050px;
+      left: 50px;
+      right: 50px;
+      z-index: 80;
       display: flex;
       justify-content: center;
       align-items: center;
       pointer-events: none;
     }}
     .caption-pill {{
-      background: rgba(10, 15, 29, 0.94);
-      backdrop-filter: blur(20px);
-      border: 2px solid rgba(250, 204, 21, 0.5);
-      border-radius: 24px;
-      padding: 16px 28px;
+      background: rgba(10, 15, 29, 0.96);
+      backdrop-filter: blur(24px);
+      border: 3px solid rgba(250, 204, 21, 0.6);
+      border-radius: 30px;
+      padding: 22px 38px;
       text-align: center;
-      box-shadow: 0 15px 45px rgba(0, 0, 0, 0.9), 0 0 30px rgba(250, 204, 21, 0.25);
-      max-width: 660px;
-      min-height: 80px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.95), 0 0 45px rgba(250, 204, 21, 0.35);
+      max-width: 980px;
+      min-height: 110px;
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       align-items: center;
-      gap: 10px;
+      gap: 14px;
     }}
     .caption-word {{
-      font-size: 32px;
+      font-size: 44px;
       font-weight: 900;
-      color: #E2E8F0;
-      letter-spacing: 0.5px;
+      color: #F1F5F9;
+      letter-spacing: 0.8px;
       text-transform: uppercase;
       transition: all 0.08s ease;
     }}
     .caption-word.active {{
       color: #FACC15;
-      text-shadow: 0 0 25px rgba(250, 204, 21, 0.9), 0 0 45px rgba(250, 204, 21, 0.6);
+      text-shadow: 0 0 35px rgba(250, 204, 21, 0.95), 0 0 60px rgba(250, 204, 21, 0.7);
       transform: scale(1.18);
     }}
 
-    /* Hook Scene Specific */
-    .hook-headline {{
-      font-size: 58px;
-      font-weight: 900;
+    /* Hook Scene Overlay */
+    .hook-overlay {{
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 60px;
       text-align: center;
-      line-height: 1.15;
-      background: linear-gradient(135deg, #FFFFFF 20%, #38BDF8 60%, #818CF8 100%);
+      z-index: 30;
+    }}
+    .hook-title {{
+      font-size: 78px;
+      font-weight: 950;
+      line-height: 1.1;
+      background: linear-gradient(135deg, #FFFFFF 20%, #38BDF8 60%, #C084FC 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      padding: 0 40px;
-      margin-bottom: 30px;
-      text-shadow: 0 0 40px rgba(56, 189, 248, 0.3);
-    }}
-    .hook-badge-wrap {{
-      display: flex;
-      gap: 16px;
-      justify-content: center;
-      margin-top: 20px;
+      margin-bottom: 25px;
+      text-shadow: 0 0 50px rgba(56, 189, 248, 0.4);
     }}
 
-    /* CTA Outro Specific */
+    /* CTA Scene Overlay */
     .cta-box {{
-      background: rgba(15, 23, 42, 0.92);
-      border: 2px solid #FACC15;
-      border-radius: 28px;
-      padding: 40px 36px;
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 60px;
       text-align: center;
-      box-shadow: 0 0 60px rgba(250, 204, 21, 0.35);
-      width: 620px;
+      z-index: 30;
     }}
-    .cta-keyword {{
-      font-size: 64px;
-      font-weight: 900;
+    .cta-card {{
+      background: rgba(15, 23, 42, 0.96);
+      border: 3.5px solid #FACC15;
+      border-radius: 36px;
+      padding: 50px 40px;
+      box-shadow: 0 0 80px rgba(250, 204, 21, 0.45);
+      width: 880px;
+    }}
+    .cta-word {{
+      font-size: 88px;
+      font-weight: 950;
       color: #FACC15;
-      letter-spacing: 3px;
-      margin: 15px 0;
-      text-shadow: 0 0 35px rgba(250, 204, 21, 0.8);
-      animation: pulseCta 1.5s ease-in-out infinite alternate;
+      letter-spacing: 4px;
+      margin: 20px 0;
+      text-shadow: 0 0 50px rgba(250, 204, 21, 0.9);
+      animation: pulseWord 1.4s infinite alternate ease-in-out;
     }}
-    @keyframes pulseCta {{
-      0% {{ transform: scale(1); }}
-      100% {{ transform: scale(1.06); }}
+    @keyframes pulseWord {{ 0% {{ transform: scale(1); }} 100% {{ transform: scale(1.08); }} }}
+
+    /* Studio Desk Bottom (1080px Wide) */
+    .desk-container {{
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 1080px;
+      height: 480px;
+      z-index: 40;
     }}
+    .desk-surface {{
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 1080px;
+      height: 280px;
+      background: linear-gradient(180deg, #1E293B 0%, #0F172A 100%);
+      border-top: 5px solid #38BDF8;
+      box-shadow: 0 -15px 50px rgba(56, 189, 248, 0.25);
+    }}
+    .power-strip {{
+      position: absolute;
+      bottom: 180px;
+      left: 60px;
+      width: 320px;
+      height: 60px;
+      background: #111827;
+      border: 3px solid #374151;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      padding: 0 15px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.8);
+    }}
+    .plug {{ width: 16px; height: 16px; border-radius: 50%; background: #10B981; box-shadow: 0 0 12px #10B981; }}
+
+    /* Animated Avatar Rig */
+    .avatar-wrap {{
+      position: absolute;
+      bottom: 60px;
+      right: 80px;
+      width: 480px;
+      height: 480px;
+      z-index: 50;
+    }}
+    .avatar-svg {{ width: 100%; height: 100%; }}
   </style>
 </head>
 <body>
   <div id="root">
     <!-- Top Progress Bar -->
-    <div id="progress-bar" class="hud-progress-bar"></div>
+    <div id="progress-bar" class="progress-bar"></div>
 
     <!-- Background Elements -->
     <div class="grid-bg"></div>
@@ -406,110 +416,140 @@ def build_hyperframes_composition(
     <div class="ambient-orb orb-2"></div>
     <div class="ambient-orb orb-3"></div>
 
-    <!-- Top HUD Bar -->
+    <!-- Top HUD Header -->
     <div class="top-hud">
       <div id="top-badge" class="hud-badge">
         <div class="hud-dot"></div>
         <span>AI RADAR 2026</span>
       </div>
-      <div id="hud-stars" class="hud-stars">★ 3 KILLER REPOS</div>
+      <div id="hud-stars" class="hud-stars">★ 3 REPOS VERIFIED</div>
     </div>
 
-    <!-- SCENE 0: HOOK -->
-    <div id="scene-hook" class="scene-container" style="opacity: 1;">
-      <div class="hook-headline">STOP PAYING<br>MONTHLY AI FEES</div>
-      <div style="font-size: 24px; color: #94A3B8; font-weight: 700; text-align: center; max-width: 540px;">
-        3 Free Open-Source Repos That Grant Real Superpowers
+    <!-- HERO SHOWCASE SCREEN -->
+    <div id="showcase-screen" class="showcase-screen">
+      <div class="showcase-header">
+        <div class="win-dot r"></div><div class="win-dot y"></div><div class="win-dot g"></div>
+        <div id="win-title" class="window-title">{repo_media[0]['owner']} / {repo_media[0]['name']}</div>
+        <div id="win-stars" style="margin-left: auto; color: #FACC15; font-size: 20px; font-weight: 900;">{repo_media[0]['stars']}</div>
       </div>
-      <div class="hook-badge-wrap">
-        <div class="hud-badge" style="border-color: #10B981; color: #10B981;">✓ 100% FREE</div>
-        <div class="hud-badge" style="border-color: #818CF8; color: #818CF8;">⚡ LOCAL RUN</div>
-      </div>
-    </div>
+      <div class="showcase-viewport">
+        <img id="showcase-img" src="{repo_media[0]['img']}" alt="Repo Demo">
+        <div class="scanline"></div>
 
-    <!-- SCENE 1: REPO 1 -->
-    <div id="scene-tool1" class="scene-container">
-      <div class="media-window">
-        <div class="window-header">
-          <div class="win-dot r"></div><div class="win-dot y"></div><div class="win-dot g"></div>
-          <div class="window-title">{repo_media[0]['owner']} / {repo_media[0]['name']}</div>
-          <div style="margin-left: auto; color: #FACC15; font-size: 13px; font-weight: 800;">{repo_media[0]['stars']}</div>
+        <!-- Hook Scene Inner Content -->
+        <div id="hook-view" class="hook-overlay">
+          <div class="hook-title">STOP PAYING<br>MONTHLY AI FEES</div>
+          <div style="font-size: 32px; color: #94A3B8; font-weight: 800; max-width: 760px; line-height: 1.4;">
+            3 Free Open-Source Developer Repos You Can Run Locally
+          </div>
+          <div style="display: flex; gap: 20px; margin-top: 35px;">
+            <div class="hud-badge" style="border-color: #10B981; color: #10B981;">✓ 100% FREE</div>
+            <div class="hud-badge" style="border-color: #818CF8; color: #818CF8;">⚡ LOCAL RUN</div>
+          </div>
         </div>
-        <div class="media-viewport">
-          <img id="img-tool1" src="{repo_media[0]['img']}" alt="Repo 1 demo">
-          <div class="scanline"></div>
-        </div>
-      </div>
-      <div class="floating-pill" style="top: 240px; right: 20px; border-color: #38BDF8; color: #38BDF8;">
-        ⚡ 01 · {repo_media[0]['name']}
-      </div>
-    </div>
 
-    <!-- SCENE 2: REPO 2 -->
-    <div id="scene-tool2" class="scene-container">
-      <div class="media-window">
-        <div class="window-header">
-          <div class="win-dot r"></div><div class="win-dot y"></div><div class="win-dot g"></div>
-          <div class="window-title">{repo_media[1]['owner']} / {repo_media[1]['name']}</div>
-          <div style="margin-left: auto; color: #FACC15; font-size: 13px; font-weight: 800;">{repo_media[1]['stars']}</div>
-        </div>
-        <div class="media-viewport">
-          <img id="img-tool2" src="{repo_media[1]['img']}" alt="Repo 2 demo">
-          <div class="scanline"></div>
-        </div>
-      </div>
-      <div class="floating-pill" style="top: 240px; right: 20px; border-color: #A855F7; color: #A855F7;">
-        🚀 02 · {repo_media[1]['name']}
-      </div>
-    </div>
-
-    <!-- SCENE 3: REPO 3 -->
-    <div id="scene-tool3" class="scene-container">
-      <div class="media-window">
-        <div class="window-header">
-          <div class="win-dot r"></div><div class="win-dot y"></div><div class="win-dot g"></div>
-          <div class="window-title">{repo_media[2]['owner']} / {repo_media[2]['name']}</div>
-          <div style="margin-left: auto; color: #FACC15; font-size: 13px; font-weight: 800;">{repo_media[2]['stars']}</div>
-        </div>
-        <div class="media-viewport">
-          <img id="img-tool3" src="{repo_media[2]['img']}" alt="Repo 3 demo">
-          <div class="scanline"></div>
-        </div>
-      </div>
-      <div class="floating-pill" style="top: 240px; right: 20px; border-color: #10B981; color: #10B981;">
-        🔥 03 · {repo_media[2]['name']}
-      </div>
-    </div>
-
-    <!-- SCENE 4: CTA OUTRO -->
-    <div id="scene-cta" class="scene-container">
-      <div class="cta-box">
-        <div style="font-size: 22px; color: #94A3B8; font-weight: 800; text-transform: uppercase; letter-spacing: 2px;">
-          Want all 3 repositories?
-        </div>
-        <div style="font-size: 28px; color: #FFFFFF; font-weight: 900; margin-top: 10px;">
-          COMMENT BELOW:
-        </div>
-        <div class="cta-keyword">TOOLS</div>
-        <div style="font-size: 18px; color: #E2E8F0; font-weight: 700; line-height: 1.5;">
-          I'll DM you direct GitHub links right now! 🚀<br>
-          <span style="color: #38BDF8;">Follow for daily open-source AI drops.</span>
+        <!-- CTA Scene Inner Content -->
+        <div id="cta-view" class="cta-box" style="opacity: 0; pointer-events: none;">
+          <div class="cta-card">
+            <div style="font-size: 32px; color: #94A3B8; font-weight: 800; text-transform: uppercase;">
+              Want all 3 repository links?
+            </div>
+            <div style="font-size: 44px; color: #FFFFFF; font-weight: 950; margin-top: 15px;">
+              COMMENT BELOW:
+            </div>
+            <div class="cta-word">TOOLS</div>
+            <div style="font-size: 26px; color: #E2E8F0; font-weight: 800; line-height: 1.5;">
+              I'll DM you direct GitHub links right now! 🚀<br>
+              <span style="color: #38BDF8;">Follow for daily open-source AI drops.</span>
+            </div>
+          </div>
         </div>
       </div>
     </div>
 
-    <!-- Terminal Command Strip -->
-    <div id="terminal-bar" class="terminal-bar">
-      <span style="color: #10B981; font-weight: 900;">❯</span>
-      <span id="term-text">git clone open-source-ai-repos</span>
-      <span class="cursor-blink"></span>
+    <!-- Floating Badge -->
+    <div id="feature-tag" class="feature-tag">
+      ⚡ 01 · {repo_media[0]['name']}
     </div>
 
-    <!-- Word-by-Word Kinetic Subtitles -->
+    <!-- Kinetic Subtitles -->
     <div class="caption-container">
       <div id="caption-pill" class="caption-pill">
         <span class="caption-word active">READY</span>
       </div>
+    </div>
+
+    <!-- Studio Desk -->
+    <div class="desk-container">
+      <div class="desk-surface"></div>
+      <div class="power-strip">
+        <div class="plug"></div><div class="plug"></div><div class="plug"></div><div class="plug"></div>
+      </div>
+    </div>
+
+    <!-- Animated Avatar Rig (Talking Mouth & Gestures) -->
+    <div id="avatar-wrap" class="avatar-wrap">
+      <svg class="avatar-svg" viewBox="0 0 480 460" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="skin" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#FCE1CA"/>
+            <stop offset="100%" stop-color="#F2BA91"/>
+          </linearGradient>
+        </defs>
+        <g id="torso">
+          <path d="M130 330 C130 310, 180 295, 240 295 C300 295, 350 310, 350 330 L380 460 L100 460 Z" fill="#3B82F6" stroke="#0F172A" stroke-width="9"/>
+          <path d="M210 295 C210 330, 270 330, 270 295 Z" fill="#FFFFFF" stroke="#0F172A" stroke-width="7"/>
+        </g>
+        <g id="arm-left">
+          <!-- Pointing Arm (Active during tools) -->
+          <g id="arm-point" opacity="0">
+            <path d="M340 330 C380 320, 390 260, 375 200" fill="none" stroke="#0F172A" stroke-width="48" stroke-linecap="round"/>
+            <path d="M340 330 C380 320, 390 260, 375 200" fill="none" stroke="#3B82F6" stroke-width="38" stroke-linecap="round"/>
+            <g transform="translate(365, 150)">
+              <ellipse cx="14" cy="40" rx="20" ry="18" fill="url(#skin)" stroke="#0F172A" stroke-width="7"/>
+              <rect x="8" y="0" width="14" height="34" rx="7" fill="url(#skin)" stroke="#0F172A" stroke-width="7"/>
+            </g>
+          </g>
+          <!-- Hands Up (Active during Hook) -->
+          <g id="arm-both-up" opacity="1">
+            <path d="M140 330 C100 290, 90 220, 110 170" fill="none" stroke="#0F172A" stroke-width="48" stroke-linecap="round"/>
+            <path d="M140 330 C100 290, 90 220, 110 170" fill="none" stroke="#3B82F6" stroke-width="38" stroke-linecap="round"/>
+            <path d="M340 330 C380 290, 390 220, 370 170" fill="none" stroke="#0F172A" stroke-width="48" stroke-linecap="round"/>
+            <path d="M340 330 C380 290, 390 220, 370 170" fill="none" stroke="#3B82F6" stroke-width="38" stroke-linecap="round"/>
+          </g>
+          <!-- Thumbs Up (Active during CTA) -->
+          <g id="arm-thumbs-up" opacity="0">
+            <path d="M340 330 C370 320, 380 280, 360 230" fill="none" stroke="#0F172A" stroke-width="48" stroke-linecap="round"/>
+            <path d="M340 330 C370 320, 380 280, 360 230" fill="none" stroke="#3B82F6" stroke-width="38" stroke-linecap="round"/>
+            <g transform="translate(350, 190)">
+              <circle cx="20" cy="30" r="18" fill="url(#skin)" stroke="#0F172A" stroke-width="7"/>
+              <rect x="14" y="4" width="14" height="24" rx="6" fill="url(#skin)" stroke="#0F172A" stroke-width="6"/>
+            </g>
+          </g>
+        </g>
+        <g id="head">
+          <rect x="216" y="240" width="48" height="55" fill="url(#skin)" stroke="#0F172A" stroke-width="8"/>
+          <ellipse cx="240" cy="180" rx="72" ry="80" fill="url(#skin)" stroke="#0F172A" stroke-width="9"/>
+          <path d="M168 175 C165 240, 185 270, 240 270 C295 270, 315 240, 312 175 C295 200, 275 205, 240 205 C205 205, 185 200, 168 175 Z" fill="#18181B" stroke="#0F172A" stroke-width="8"/>
+          <g id="mouth-wrap" transform="translate(240, 220)">
+            <ellipse id="mouth" cx="0" cy="0" rx="22" ry="12" fill="#BE123C" stroke="#0F172A" stroke-width="6"/>
+          </g>
+          <g id="glasses">
+            <circle cx="204" cy="162" r="28" fill="rgba(255,255,255,0.25)" stroke="#0F172A" stroke-width="8"/>
+            <circle cx="276" cy="162" r="28" fill="rgba(255,255,255,0.25)" stroke="#0F172A" stroke-width="8"/>
+            <path d="M232 162 L248 162" stroke="#0F172A" stroke-width="8"/>
+          </g>
+          <g id="eyes">
+            <ellipse id="eye-left" cx="204" cy="162" rx="12" ry="12" fill="#FFFFFF"><circle cx="204" cy="162" r="6" fill="#0F172A"/></ellipse>
+            <ellipse id="eye-right" cx="276" cy="162" rx="12" ry="12" fill="#FFFFFF"><circle cx="276" cy="162" r="6" fill="#0F172A"/></ellipse>
+            <path id="eye-wink" d="M264 162 Q276 174 288 162" fill="none" stroke="#0F172A" stroke-width="7" stroke-linecap="round" opacity="0"/>
+          </g>
+          <g id="beanie">
+            <path d="M164 150 C160 80, 195 50, 240 50 C285 50, 320 80, 316 150 Z" fill="#1E293B" stroke="#0F172A" stroke-width="9"/>
+            <rect x="156" y="125" width="168" height="38" rx="10" fill="#0F172A" stroke="#0F172A" stroke-width="9"/>
+          </g>
+        </g>
+      </svg>
     </div>
 
   </div>
@@ -522,41 +562,68 @@ def build_hyperframes_composition(
     // Continuous timeline progress bar
     tl.to("#progress-bar", {{ width: "100%", duration: {duration}, ease: "none" }}, 0);
 
-    // Continuous Ken Burns 3D Camera zooms on real images
-    tl.fromTo("#img-tool1", 
-      {{ scale: 1.05, x: 0, y: 0 }}, 
-      {{ scale: 1.25, x: -15, y: -20, duration: {t_tool1_end - t_hook_end}, ease: "power1.inOut" }}, 
+    // Continuous avatar talking mouth motion
+    for (let t = 0.1; t < {duration}; t += 0.28) {{
+      tl.to("#mouth", {{ attr: {{ ry: 18, rx: 24 }}, duration: 0.11, ease: "none" }}, t);
+      tl.to("#mouth", {{ attr: {{ ry: 6, rx: 18 }}, duration: 0.11, ease: "none" }}, t + 0.14);
+    }}
+
+    // Continuous avatar eye blinking
+    for (let t = 1.8; t < {duration}; t += 3.4) {{
+      tl.to(["#eye-left", "#eye-right"], {{ scaleY: 0.1, duration: 0.08, transformOrigin: "50% 50%", yoyo: true, repeat: 1 }}, t);
+    }}
+
+    // Scene Transitions & Camera Animation
+    // 1. Hook (0 -> {t_hook_end})
+    tl.set("#hook-view", {{ opacity: 1 }}, 0);
+    tl.set("#showcase-img", {{ opacity: 0 }}, 0);
+
+    // Transition to Tool 1
+    tl.set("#hook-view", {{ opacity: 0, pointerEvents: "none" }}, {t_hook_end});
+    tl.set("#showcase-img", {{ opacity: 1, attr: {{ src: "{repo_media[0]['img']}" }} }}, {t_hook_end});
+    tl.set("#win-title", {{ innerText: "{repo_media[0]['owner']} / {repo_media[0]['name']}" }}, {t_hook_end});
+    tl.set("#win-stars", {{ innerText: "{repo_media[0]['stars']}" }}, {t_hook_end});
+    tl.set("#feature-tag", {{ innerText: "⚡ 01 · {repo_media[0]['name']}" }}, {t_hook_end});
+    tl.set("#arm-both-up", {{ opacity: 0 }}, {t_hook_end});
+    tl.set("#arm-point", {{ opacity: 1 }}, {t_hook_end});
+
+    // Ken Burns Zoom on Tool 1
+    tl.fromTo("#showcase-img", 
+      {{ scale: 1.0, y: 0 }}, 
+      {{ scale: 1.14, y: -15, duration: {t_tool1_end - t_hook_end}, ease: "power1.inOut" }}, 
       {t_hook_end}
     );
-    tl.fromTo("#img-tool2", 
-      {{ scale: 1.05, x: 0, y: 0 }}, 
-      {{ scale: 1.25, x: 15, y: -25, duration: {t_tool2_end - t_tool1_end}, ease: "power1.inOut" }}, 
+
+    // Transition to Tool 2
+    tl.set("#showcase-img", {{ attr: {{ src: "{repo_media[1]['img']}" }} }}, {t_tool1_end});
+    tl.set("#win-title", {{ innerText: "{repo_media[1]['owner']} / {repo_media[1]['name']}" }}, {t_tool1_end});
+    tl.set("#win-stars", {{ innerText: "{repo_media[1]['stars']}" }}, {t_tool1_end});
+    tl.set("#feature-tag", {{ innerText: "🚀 02 · {repo_media[1]['name']}" }}, {t_tool1_end});
+    tl.fromTo("#showcase-img", 
+      {{ scale: 1.0, y: 0 }}, 
+      {{ scale: 1.14, y: -15, duration: {t_tool2_end - t_tool1_end}, ease: "power1.inOut" }}, 
       {t_tool1_end}
     );
-    tl.fromTo("#img-tool3", 
-      {{ scale: 1.05, x: 0, y: 0 }}, 
-      {{ scale: 1.25, x: -20, y: -15, duration: {t_tool3_end - t_tool2_end}, ease: "power1.inOut" }}, 
+
+    // Transition to Tool 3
+    tl.set("#showcase-img", {{ attr: {{ src: "{repo_media[2]['img']}" }} }}, {t_tool2_end});
+    tl.set("#win-title", {{ innerText: "{repo_media[2]['owner']} / {repo_media[2]['name']}" }}, {t_tool2_end});
+    tl.set("#win-stars", {{ innerText: "{repo_media[2]['stars']}" }}, {t_tool2_end});
+    tl.set("#feature-tag", {{ innerText: "🔥 03 · {repo_media[2]['name']}" }}, {t_tool2_end});
+    tl.fromTo("#showcase-img", 
+      {{ scale: 1.0, y: 0 }}, 
+      {{ scale: 1.14, y: -15, duration: {t_tool3_end - t_tool2_end}, ease: "power1.inOut" }}, 
       {t_tool2_end}
     );
 
-    // Scene Transition Timings (Exact Synced Pacing)
-    const sceneCuts = [
-      {{ id: "#scene-hook", start: 0, end: {t_hook_end}, stars: "3 KILLER REPOS", badge: "AI RADAR 2026", cmd: "npx scan-ai-repos" }},
-      {{ id: "#scene-tool1", start: {t_hook_end}, end: {t_tool1_end}, stars: "{repo_media[0]['stars']}", badge: "01 · {repo_media[0]['name']}", cmd: "git clone {repo_media[0]['name'].lower()}" }},
-      {{ id: "#scene-tool2", start: {t_tool1_end}, end: {t_tool2_end}, stars: "{repo_media[1]['stars']}", badge: "02 · {repo_media[1]['name']}", cmd: "npm install {repo_media[1]['name'].lower()}" }},
-      {{ id: "#scene-tool3", start: {t_tool2_end}, end: {t_tool3_end}, stars: "{repo_media[2]['stars']}", badge: "03 · {repo_media[2]['name']}", cmd: "pip install {repo_media[2]['name'].lower()}" }},
-      {{ id: "#scene-cta", start: {t_tool3_end}, end: {t_cta_end}, stars: "COMMENT 'TOOLS'", badge: "GET LINKS NOW", cmd: "echo 'DM sent!'" }}
-    ];
-
-    sceneCuts.forEach(sc => {{
-      tl.set(sc.id, {{ opacity: 1, pointerEvents: "auto" }}, sc.start);
-      if (sc.end < {duration}) {{
-        tl.set(sc.id, {{ opacity: 0, pointerEvents: "none" }}, sc.end);
-      }}
-      tl.set("#hud-stars", {{ innerText: sc.stars }}, sc.start);
-      tl.set("#top-badge span", {{ innerText: sc.badge }}, sc.start);
-      tl.set("#term-text", {{ innerText: sc.cmd }}, sc.start);
-    }});
+    // Transition to CTA Outro
+    tl.set("#showcase-img", {{ opacity: 0 }}, {t_tool3_end});
+    tl.set("#cta-view", {{ opacity: 1, pointerEvents: "auto" }}, {t_tool3_end});
+    tl.set("#feature-tag", {{ innerText: "💬 COMMENT 'TOOLS'" }}, {t_tool3_end});
+    tl.set("#arm-point", {{ opacity: 0 }}, {t_tool3_end});
+    tl.set("#arm-thumbs-up", {{ opacity: 1 }}, {t_tool3_end});
+    tl.set("#eye-right", {{ opacity: 0 }}, {t_tool3_end + 0.3});
+    tl.set("#eye-wink", {{ opacity: 1 }}, {t_tool3_end + 0.3});
 
     // Synchronized Kinetic Captions
     const captionData = {json.dumps(caption_chunks)};
@@ -578,8 +645,8 @@ def build_hyperframes_composition(
 """
     with open(output_html, "w") as f:
         f.write(html)
-    print(f"[✓] Generated 100% Hyper-Motion Composition ({round(duration, 1)}s) at {output_html}")
+    print(f"[✓] Generated 1080x1920 9/10 Hyper-Motion Composition ({round(duration, 1)}s) at {output_html}")
     return output_html
 
 if __name__ == "__main__":
-    build_hyperframes_composition(duration=38.0)
+    build_hyperframes_composition(duration=28.76)

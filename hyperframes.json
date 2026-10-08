@@ -2,7 +2,7 @@
   "name": "daily-automation-engine",
   "version": "2.0.0",
   "fps": 30,
-  "width": 720,
-  "height": 1280,
+  "width": 1080,
+  "height": 1920,
   "duration": 28.76
 }

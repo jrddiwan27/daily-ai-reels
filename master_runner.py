@@ -63,19 +63,25 @@ def run_daily_pipeline():
     )
 
     # 6. Render High-Definition MP4 Video via HyperFrames
-    print("\n[STEP 6/6] Rendering High-Definition MP4 Video...")
+    print("\n[STEP 6/6] Rendering High-Definition MP4 Video & Multiplexing Audio...")
+    raw_mp4 = "out/raw_video.mp4"
     out_mp4 = "out/daily-reel.mp4"
     os.makedirs("out", exist_ok=True)
     
-    render_cmd = f"npx hyperframes render -o {out_mp4}"
+    render_cmd = f"npx hyperframes render -o {raw_mp4}"
     print(f"[*] Executing: {render_cmd}")
     res = subprocess.call(render_cmd, shell=True)
     
-    if res != 0 or not os.path.exists(out_mp4):
-        print("[!] Video render had warnings or exited. Checking output...")
-    else:
-        file_size = os.path.getsize(out_mp4)
-        print(f"[✓] Render Complete: {out_mp4} ({file_size} bytes, {round(file_size/1024/1024, 2)} MB)")
+    # Multiplex synchronized audio track
+    print(f"[*] Multiplexing voiceover ({audio_path}) into final video via FFmpeg...")
+    mux_cmd = f"ffmpeg -y -i {raw_mp4} -i {audio_path} -c:v copy -c:a aac -b:a 192k -shortest {out_mp4}"
+    subprocess.check_call(mux_cmd, shell=True)
+    
+    if not os.path.exists(out_mp4):
+        raise RuntimeError("Final video generation failed.")
+        
+    file_size = os.path.getsize(out_mp4)
+    print(f"[✓] Final Video Complete with Audio: {out_mp4} ({file_size} bytes, {round(file_size/1024/1024, 2)} MB)")
 
     # 7. Auto-Publish to Buffer Instagram Reels (Strictly 5 Hashtags)
     print("\n[*] Dispatching to Buffer for Auto-Publishing...")
