@@ -2,35 +2,41 @@ import os
 import sys
 import json
 import subprocess
+from pipeline.creator_radar import fetch_creator_trending_transcripts
 from pipeline.repo_asset_scraper import scrape_and_cache_all
+from pipeline.ai_scriptwriter import generate_viral_script_with_gemini
 from pipeline.fish_audio_client import generate_voiceover, generate_caption_chunks
 from pipeline.composition_compiler import build_hyperframes_composition
 from pipeline.buffer_dispatcher import dispatch_to_buffer
 
 def run_daily_pipeline():
     print("=" * 60)
-    print("🚀 LAUNCHING AUTONOMOUS DAILY VIDEO ENGINE")
+    print("🚀 LAUNCHING AUTONOMOUS DAILY HYPER-MOTION REEL ENGINE")
     print("=" * 60)
 
-    # 1. Scrape trending repos & download real media assets
-    print("\n[STEP 1/5] Scraping Trending Repos & Real Media Assets...")
-    repos = scrape_and_cache_all(limit=5)
-    print(f"[✓] Curated {len(repos)} repositories with real images & demos.")
+    # 1. Creator Radar: Monitor top creators for viral transcripts
+    print("\n[STEP 1/6] Scanning Top Tech Creators for Viral Formats...")
+    trends = fetch_creator_trending_transcripts(limit_creators=4)
+    print(f"[✓] Captured {len(trends)} trending reference hooks.")
 
-    # 2. Build voiceover script
-    script_text = (
-        f"Stop paying for expensive AI subscriptions. "
-        f"Here are five insane open-source GitHub repos every developer needs right now. "
-        f"First is {repos[0]['name']}, {repos[0]['description']} "
-        f"Second is {repos[1]['name']}, {repos[1]['description']} "
-        f"Third is {repos[2]['name']}, {repos[2]['description']} "
-        f"Fourth is {repos[3]['name']}, {repos[3]['description']} "
-        f"And fifth is {repos[4]['name']}, {repos[4]['description']} "
-        f"Comment REPOS below and I'll send you the direct links right away."
-    )
+    # 2. Scrape 3 breakthrough repos with real demo images/GIFs
+    print("\n[STEP 2/6] Scraping 3 Trending AI Repos & Real Media Assets...")
+    repos = scrape_and_cache_all(limit=3)
+    print(f"[✓] Curated {len(repos)} repositories with real demo assets.")
 
-    # 3. Generate Fish Audio Voiceover & Captions
-    print("\n[STEP 2/5] Synthesizing Voiceover with Fish Audio (S2.1 Pro Free)...")
+    # 3. AI Scriptwriter: Craft viral script with Gemini (strictly 95-105 words)
+    print("\n[STEP 3/6] Generating High-Retention Script with Gemini 3.8 Flash...")
+    script_data = generate_viral_script_with_gemini(repos, trends)
+    script_text = script_data["full_script"]
+    
+    # Save generated script for composition
+    with open("assets/generated_script.json", "w") as f:
+        json.dump(script_data, f, indent=2)
+        
+    print(f"\n[Generated Voiceover Script]:\n\"{script_text}\"\n")
+
+    # 4. Synthesize Voiceover & Captions with Fish Audio S2.1 Pro Free
+    print("\n[STEP 4/6] Synthesizing Voiceover with Fish Audio (S2.1 Pro Free)...")
     audio_path = "assets/voice.mp3"
     captions_path = "assets/caption_chunks.json"
     
@@ -40,21 +46,24 @@ def run_daily_pipeline():
         print(f"[!] Fish Audio failed ({e}), falling back to Edge-TTS...")
         cmd = f'edge-tts --voice en-US-ChristopherNeural --text "{script_text}" --write-media {audio_path}'
         subprocess.check_call(cmd, shell=True)
-        dur = 60.9
+        dur = 38.0
         
+    print(f"[✓] Exact Voice Duration: {dur:.2f} seconds (Target: <50s)")
     generate_caption_chunks(script_text, dur, captions_path)
 
-    # 4. Compile Composition
-    print("\n[STEP 3/5] Compiling HyperFrames Code Composition...")
+    # 5. Compile 100% Hyper-Motion Composition with Real Scraped Media
+    print("\n[STEP 5/6] Compiling Hyper-Motion Code Composition...")
     build_hyperframes_composition(
         repos_file="assets/curated_repos.json",
         captions_file=captions_path,
         audio_path=audio_path,
+        script_file="assets/generated_script.json",
+        duration=dur,
         output_html="index.html"
     )
 
-    # 5. Render Video via HyperFrames
-    print("\n[STEP 4/5] Rendering High-Definition MP4 Video...")
+    # 6. Render High-Definition MP4 Video via HyperFrames
+    print("\n[STEP 6/6] Rendering High-Definition MP4 Video...")
     out_mp4 = "out/daily-reel.mp4"
     os.makedirs("out", exist_ok=True)
     
@@ -65,21 +74,22 @@ def run_daily_pipeline():
     if res != 0 or not os.path.exists(out_mp4):
         print("[!] Video render had warnings or exited. Checking output...")
     else:
-        print(f"[✓] Render Complete: {out_mp4} ({os.path.getsize(out_mp4)} bytes)")
+        file_size = os.path.getsize(out_mp4)
+        print(f"[✓] Render Complete: {out_mp4} ({file_size} bytes, {round(file_size/1024/1024, 2)} MB)")
 
-    # 6. Dispatch to Buffer
-    print("\n[STEP 5/5] Dispatching to Buffer for Auto-Publishing...")
+    # 7. Auto-Publish to Buffer Instagram Reels (Strictly 5 Hashtags)
+    print("\n[*] Dispatching to Buffer for Auto-Publishing...")
+    repo_names = [r["name"].split("/")[-1] for r in repos]
     caption = (
-        f"5 Insane Open-Source AI Developer Repos You Need Today! 🚀\n\n"
-        f"1. {repos[0]['name']}\n2. {repos[1]['name']}\n3. {repos[2]['name']}\n"
-        f"4. {repos[3]['name']}\n5. {repos[4]['name']}\n\n"
-        f"Comment 'REPOS' and I'll DM you all 5 links!\n\n"
+        f"3 Insane Open-Source AI Developer Repos You Need Today! 🚀\n\n"
+        f"1. {repo_names[0]}\n2. {repo_names[1]}\n3. {repo_names[2]}\n\n"
+        f"Comment 'TOOLS' and I'll DM you all 3 links!\n\n"
         f"#developer #ai #opensource #github #coding"
     )
     dispatch_to_buffer(out_mp4, caption)
 
     print("\n" + "=" * 60)
-    print("✨ DAILY PIPELINE EXECUTION COMPLETED")
+    print("✨ DAILY HYPER-MOTION PIPELINE COMPLETED")
     print("=" * 60)
 
 if __name__ == "__main__":

@@ -5,3 +5,6 @@ node_modules/
 out/*.mp4
 *.mp3
 *.wav
+.gemini_key
+.env
+.DS_Store

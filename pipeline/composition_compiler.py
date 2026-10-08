@@ -1,31 +1,72 @@
 import json
 import os
 
-def build_hyperframes_composition(repos_file="assets/curated_repos.json", captions_file="assets/caption_chunks.json", audio_path="assets/voice.mp3", output_html="index.html"):
+def build_hyperframes_composition(
+    repos_file="assets/curated_repos.json",
+    captions_file="assets/caption_chunks.json",
+    audio_path="assets/voice.mp3",
+    script_file="assets/generated_script.json",
+    duration=38.0,
+    output_html="index.html"
+):
     """
-    Assembles the complete grounded hyper-motion HyperFrames composition incorporating real scraped media assets.
+    Builds a high-retention, hyper-motion graphics video composition with zero static frames,
+    featuring real scraped UI screenshots, 3D perspective camera motion, laser scanlines,
+    and exact word-level synchronized kinetic typography.
     """
     with open(repos_file) as f:
-        repos = json.load(f)
+        repos = json.load(f)[:3]
         
     with open(captions_file) as f:
         caption_chunks = json.load(f)
 
-    # Repo color themes
-    themes = [
-        {"bg": "bg-browser", "desk": "#1D4ED8", "badge": "01 · " + repos[0]["name"].upper(), "sock": [1,0,0,0,0]},
-        {"bg": "bg-ollama", "desk": "#047857", "badge": "02 · " + repos[1]["name"].upper(), "sock": [1,1,0,0,0]},
-        {"bg": "bg-firecrawl", "desk": "#C2410C", "badge": "03 · " + repos[2]["name"].upper(), "sock": [1,1,1,0,0]},
-        {"bg": "bg-cline", "desk": "#6D28D9", "badge": "04 · " + repos[3]["name"].upper(), "sock": [1,1,1,1,0]},
-        {"bg": "bg-hyperframes", "desk": "#854D0E", "badge": "05 · " + repos[4]["name"].upper(), "sock": [1,1,1,1,1]},
-    ]
+    # Load structured script timestamps if available
+    script_data = {}
+    if os.path.exists(script_file):
+        try:
+            with open(script_file) as f:
+                script_data = json.load(f)
+        except Exception:
+            pass
+
+    # Calculate dynamic scene timings based on total audio duration
+    t_hook_end = min(3.8, duration * 0.10)
+    t_tool1_end = duration * 0.38
+    t_tool2_end = duration * 0.66
+    t_tool3_end = duration * 0.88
+    t_cta_end = duration
+
+    # Real media assets for each repo
+    repo_media = []
+    for r in repos:
+        img = r.get("demo_media") or r.get("og_image") or "assets/repos/default_banner.png"
+        repo_media.append({
+            "name": r["name"].split("/")[-1].upper(),
+            "owner": r.get("owner", "open-source"),
+            "img": img,
+            "stars": f"★ {r.get('stars', 12000):,}",
+            "lang": r.get("language", "AI").upper(),
+            "desc": r.get("description", "")[:80]
+        })
+
+    # Update hyperframes.json duration to match audio exactly
+    hf_config = {
+        "name": "daily-automation-engine",
+        "version": "2.0.0",
+        "fps": 30,
+        "width": 720,
+        "height": 1280,
+        "duration": round(duration, 2)
+    }
+    with open("hyperframes.json", "w") as f:
+        json.dump(hf_config, f, indent=2)
 
     html = f"""<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=720, height=1280">
-  <title>Autonomous Daily AI Developer Reel</title>
+  <title>Hyper-Motion AI Developer Reel</title>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
   <style>
     * {{ margin: 0; padding: 0; box-sizing: border-box; }}
@@ -33,519 +74,491 @@ def build_hyperframes_composition(repos_file="assets/curated_repos.json", captio
       width: 720px;
       height: 1280px;
       overflow: hidden;
-      background: #F4EEDF;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #080C15;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Inter", sans-serif;
       user-select: none;
+      color: #FFFFFF;
     }}
     #root {{
       position: relative;
       width: 720px;
       height: 1280px;
       overflow: hidden;
-      background: #F4EEDF;
+      background: radial-gradient(circle at 50% 30%, #151D33 0%, #080C15 80%);
     }}
-    .bg-layer {{
+
+    /* Continuous animated cyber grid & particle drift */
+    .grid-bg {{
       position: absolute;
-      inset: 0;
-      opacity: 0;
+      inset: -200px;
+      background-image: 
+        linear-gradient(rgba(0, 240, 255, 0.08) 1.5px, transparent 1.5px),
+        linear-gradient(90deg, rgba(0, 240, 255, 0.08) 1.5px, transparent 1.5px);
+      background-size: 48px 48px;
+      transform: perspective(600px) rotateX(45deg);
+      animation: gridDrift 20s linear infinite;
       z-index: 1;
+      opacity: 0.7;
     }}
-    .bg-hook {{
-      background-color: #F4EEDF;
-      background-image: radial-gradient(#C8BFAD 2.4px, transparent 2.4px), radial-gradient(#C8BFAD 2.4px, transparent 2.4px);
-      background-size: 24px 24px;
-      background-position: 0 0, 12px 12px;
-      opacity: 1;
-    }}
-    .bg-browser {{
-      background-color: #E0F2FE;
-      background-image: radial-gradient(#93C5FD 2.4px, transparent 2.4px), radial-gradient(#93C5FD 2.4px, transparent 2.4px);
-      background-size: 24px 24px;
-      background-position: 0 0, 12px 12px;
-    }}
-    .bg-ollama {{
-      background-color: #ECFDF5;
-      background-image: radial-gradient(#6EE7B7 2.4px, transparent 2.4px), radial-gradient(#6EE7B7 2.4px, transparent 2.4px);
-      background-size: 24px 24px;
-      background-position: 0 0, 12px 12px;
-    }}
-    .bg-firecrawl {{
-      background-color: #FEF3C7;
-      background-image: radial-gradient(#FCD34D 2.4px, transparent 2.4px), radial-gradient(#FCD34D 2.4px, transparent 2.4px);
-      background-size: 24px 24px;
-      background-position: 0 0, 12px 12px;
-    }}
-    .bg-cline {{
-      background-color: #EDE9FE;
-      background-image: radial-gradient(#C4B5FD 2.4px, transparent 2.4px), radial-gradient(#C4B5FD 2.4px, transparent 2.4px);
-      background-size: 24px 24px;
-      background-position: 0 0, 12px 12px;
-    }}
-    .bg-hyperframes {{
-      background-color: #FEF08A;
-      background-image: radial-gradient(#F59E0B 2.4px, transparent 2.4px), radial-gradient(#F59E0B 2.4px, transparent 2.4px);
-      background-size: 24px 24px;
-      background-position: 0 0, 12px 12px;
-    }}
-    .bg-outro {{
-      background-color: #F4EEDF;
-      background-image: radial-gradient(#C8BFAD 2.4px, transparent 2.4px), radial-gradient(#C8BFAD 2.4px, transparent 2.4px);
-      background-size: 24px 24px;
-      background-position: 0 0, 12px 12px;
+    @keyframes gridDrift {{
+      0% {{ transform: perspective(600px) rotateX(45deg) translateY(0); }}
+      100% {{ transform: perspective(600px) rotateX(45deg) translateY(48px); }}
     }}
 
-    .crosshair {{
+    /* Glowing ambient light orbs */
+    .ambient-orb {{
       position: absolute;
-      font-family: monospace;
-      font-size: 22px;
-      font-weight: 900;
-      color: rgba(23, 24, 25, 0.28);
-      pointer-events: none;
-      z-index: 2;
-    }}
-
-    .top-badge {{
-      position: absolute;
-      left: 36px;
-      top: 36px;
-      z-index: 50;
-      background: #171819;
-      color: #FFFFFF;
-      font-size: 20px;
-      font-weight: 950;
-      letter-spacing: 0.08em;
-      padding: 10px 22px;
-      border-radius: 4px;
-      transform: rotate(-1.5deg);
-      box-shadow: 4px 4px 0 rgba(0,0,0,0.25);
-      border: 3px solid #171819;
-      display: inline-block;
-    }}
-
-    .top-meter {{
-      position: absolute;
-      right: 36px;
-      top: 30px;
-      z-index: 50;
-      background: #FFFFFF;
-      border: 4px solid #171819;
-      border-radius: 14px;
-      padding: 8px 14px 6px;
-      box-shadow: 5px 5px 0 #171819;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 4px;
-    }}
-    .meter-strip {{ display: flex; align-items: center; gap: 8px; }}
-    .meter-switch {{ width: 16px; height: 26px; background: #E03622; border: 3px solid #171819; border-radius: 4px; }}
-    .meter-sockets {{ display: flex; gap: 6px; position: relative; }}
-    .socket-dot {{
-      width: 24px;
-      height: 24px;
-      background: #E8E2D2;
-      border: 3px solid #171819;
       border-radius: 50%;
-      position: relative;
+      filter: blur(90px);
+      z-index: 2;
+      opacity: 0.55;
+      animation: pulseOrb 6s ease-in-out infinite alternate;
     }}
-    .socket-dot::before, .socket-dot::after {{
-      content: "";
-      position: absolute;
-      top: 5px;
-      width: 3px;
-      height: 7px;
-      background: #171819;
-      border-radius: 1px;
+    .orb-1 {{ width: 420px; height: 420px; background: #6366F1; top: 100px; left: -100px; }}
+    .orb-2 {{ width: 380px; height: 380px; background: #06B6D4; top: 400px; right: -80px; animation-delay: -3s; }}
+    .orb-3 {{ width: 320px; height: 320px; background: #EC4899; bottom: 150px; left: 80px; animation-delay: -1.5s; }}
+    @keyframes pulseOrb {{
+      0% {{ transform: scale(1) translate(0, 0); opacity: 0.45; }}
+      100% {{ transform: scale(1.25) translate(30px, -20px); opacity: 0.7; }}
     }}
-    .socket-dot::before {{ left: 5px; }}
-    .socket-dot::after {{ right: 5px; }}
-    .socket-dot.plug-1 {{ background: #2563EB; box-shadow: 0 0 12px #2563EB; }}
-    .socket-dot.plug-2 {{ background: #059669; box-shadow: 0 0 12px #059669; }}
-    .socket-dot.plug-3 {{ background: #EA580C; box-shadow: 0 0 12px #EA580C; }}
-    .socket-dot.plug-4 {{ background: #7C3AED; box-shadow: 0 0 12px #7C3AED; }}
-    .socket-dot.plug-5 {{ background: #EAB308; box-shadow: 0 0 16px #EAB308; }}
 
-    .meter-label {{ font-size: 11px; font-weight: 950; letter-spacing: 0.12em; color: #171819; }}
-
-    .desk {{
+    /* Top HUD Header */
+    .top-hud {{
       position: absolute;
+      top: 50px;
+      left: 36px;
+      right: 36px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 50;
+    }}
+    .hud-badge {{
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(15, 23, 42, 0.85);
+      backdrop-filter: blur(16px);
+      border: 1px solid rgba(56, 189, 248, 0.4);
+      padding: 10px 20px;
+      border-radius: 30px;
+      font-size: 16px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      color: #38BDF8;
+      box-shadow: 0 0 25px rgba(56, 189, 248, 0.25);
+    }}
+    .hud-dot {{
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #EF4444;
+      box-shadow: 0 0 10px #EF4444;
+      animation: blink 1s ease infinite alternate;
+    }}
+    @keyframes blink {{ 0% {{ opacity: 0.3; }} 100% {{ opacity: 1; }} }}
+    .hud-stars {{
+      background: rgba(15, 23, 42, 0.85);
+      border: 1px solid rgba(250, 204, 21, 0.4);
+      padding: 10px 20px;
+      border-radius: 30px;
+      font-size: 16px;
+      font-weight: 800;
+      color: #FACC15;
+      box-shadow: 0 0 25px rgba(250, 204, 21, 0.2);
+    }}
+
+    /* Timeline progress meter line */
+    .hud-progress-bar {{
+      position: absolute;
+      top: 0;
       left: 0;
-      right: 0;
-      bottom: 0;
-      height: 380px;
-      background: #B64D29;
-      border-top: 10px solid #171819;
-      z-index: 20;
-      box-shadow: inset 0 10px 0 rgba(255,255,255,0.18);
+      height: 6px;
+      background: linear-gradient(90deg, #06B6D4, #3B82F6, #EC4899);
+      width: 0%;
+      z-index: 100;
+      box-shadow: 0 0 15px #06B6D4;
     }}
-    .desk::before {{
-      content: "";
+
+    /* Scene Layers */
+    .scene-container {{
       position: absolute;
       inset: 0;
-      background: repeating-linear-gradient(90deg, transparent 0, transparent 238px, rgba(0,0,0,0.14) 238px, rgba(0,0,0,0.14) 242px);
-    }}
-    .desk-drawer {{ position: absolute; top: 36px; left: 100px; width: 140px; height: 26px; background: #171819; border-radius: 13px; border: 3px solid rgba(255,255,255,0.25); }}
-    .desk-drawer-right {{ position: absolute; top: 36px; right: 100px; width: 140px; height: 26px; background: #171819; border-radius: 13px; border: 3px solid rgba(255,255,255,0.25); }}
-
-    .desk-mug {{ position: absolute; right: 48px; bottom: 390px; width: 46px; height: 52px; background: #FFFFFF; border: 4px solid #171819; border-radius: 4px 4px 10px 10px; z-index: 25; }}
-    .desk-mug::before {{ content: ""; position: absolute; top: 14px; left: 0; right: 0; height: 9px; background: #2563EB; }}
-    .desk-mug::after {{ content: ""; position: absolute; right: -16px; top: 12px; width: 14px; height: 24px; border: 4px solid #171819; border-radius: 0 10px 10px 0; }}
-    .steam-bubble {{ position: absolute; right: 64px; bottom: 450px; font-size: 18px; color: rgba(23, 24, 25, 0.4); z-index: 25; font-weight: 900; }}
-
-    .avatar-wrapper {{
-      position: absolute;
-      left: 50%;
-      bottom: 310px;
-      transform: translateX(-50%);
-      width: 480px;
-      height: 460px;
-      z-index: 22;
-      pointer-events: none;
-    }}
-    .avatar-svg {{ width: 100%; height: 100%; overflow: visible; }}
-
-    .scene-layer {{ position: absolute; inset: 0; z-index: 15; pointer-events: none; }}
-
-    .upper-card {{
-      position: absolute;
-      left: 30px;
-      top: 95px;
-      width: 660px;
-      background: #FFFFFF;
-      border: 5px solid #171819;
-      border-radius: 18px;
-      box-shadow: 6px 8px 0 #171819;
-      padding: 16px 20px;
-      color: #171819;
-      z-index: 18;
-    }}
-    .repo-header {{ display: flex; align-items: center; gap: 10px; margin-bottom: 6px; }}
-    .repo-slug {{ font-weight: 950; font-size: 19px; letter-spacing: -0.01em; }}
-    .repo-star {{ margin-left: auto; background: #FEF08A; border: 2px solid #171819; border-radius: 6px; padding: 2px 8px; font-weight: 950; font-size: 14px; box-shadow: 2px 2px 0 #171819; }}
-    .repo-title {{ font-size: 24px; font-weight: 950; margin-bottom: 4px; }}
-    .repo-desc {{ font-size: 15px; color: #4B5563; font-weight: 750; line-height: 1.35; }}
-
-    .tech-console {{
-      position: absolute;
-      left: 30px;
-      top: 255px;
-      width: 405px;
-      height: 635px;
-      background: #191B21;
-      border: 5px solid #171819;
-      border-radius: 18px;
-      box-shadow: 8px 10px 0 #171819;
-      color: #F3F4F6;
-      padding: 14px 16px;
-      z-index: 25;
-      font-family: monospace;
-      overflow: hidden;
+      z-index: 10;
       display: flex;
       flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      pointer-events: none;
     }}
-    .console-header {{
+
+    /* Hero Glass Window for Real Media */
+    .media-window {{
+      position: relative;
+      width: 650px;
+      height: 720px;
+      background: rgba(15, 23, 42, 0.92);
+      border-radius: 20px;
+      border: 1.5px solid rgba(255, 255, 255, 0.15);
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8), 0 0 40px rgba(99, 102, 241, 0.35);
+      overflow: hidden;
+      margin-top: -20px;
+    }}
+    .window-header {{
+      height: 48px;
+      background: rgba(30, 41, 59, 0.95);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
       display: flex;
       align-items: center;
-      gap: 6px;
-      padding-bottom: 10px;
-      border-bottom: 2px solid #374151;
-      margin-bottom: 12px;
-      font-size: 13px;
-      color: #9CA3AF;
+      padding: 0 18px;
+      gap: 8px;
     }}
-    .console-dots {{ display: flex; gap: 6px; }}
-    .console-dot {{ width: 11px; height: 11px; border-radius: 50%; }}
-    .console-dot.r {{ background: #EF4444; }}
-    .console-dot.y {{ background: #F59E0B; }}
-    .console-dot.g {{ background: #10B981; }}
-    .console-title {{ margin-left: auto; font-weight: 700; color: #D1D5DB; font-size: 12px; }}
+    .win-dot {{ width: 12px; height: 12px; border-radius: 50%; }}
+    .win-dot.r {{ background: #EF4444; }}
+    .win-dot.y {{ background: #F59E0B; }}
+    .win-dot.g {{ background: #10B981; }}
+    .window-title {{
+      margin-left: 12px;
+      font-size: 14px;
+      font-weight: 700;
+      color: #94A3B8;
+      letter-spacing: 0.5px;
+    }}
 
-    /* Real Image / Video Container inside Console */
-    .media-card {{
+    /* Continuous Ken Burns Zoom & 3D Pan on Real Media */
+    .media-viewport {{
+      position: relative;
       width: 100%;
-      border-radius: 10px;
+      height: calc(100% - 48px);
       overflow: hidden;
-      border: 2px solid #374151;
-      margin-bottom: 12px;
-      background: #000;
     }}
-    .media-card img {{
+    .media-viewport img {{
       width: 100%;
-      height: auto;
-      display: block;
+      height: 100%;
       object-fit: cover;
+      object-position: top center;
+      transform-origin: center center;
     }}
 
-    .captions-wrapper {{
+    /* Live Scanning Laser Line */
+    .scanline {{
       position: absolute;
+      top: 0;
       left: 0;
       right: 0;
-      bottom: 200px;
+      height: 4px;
+      background: linear-gradient(90deg, transparent, #00F0FF, #FFFFFF, #00F0FF, transparent);
+      box-shadow: 0 0 20px #00F0FF, 0 0 40px #00F0FF;
+      animation: scanSweep 3.5s ease-in-out infinite alternate;
+      z-index: 15;
+    }}
+    @keyframes scanSweep {{
+      0% {{ top: 5%; opacity: 0.8; }}
+      100% {{ top: 92%; opacity: 1; }}
+    }}
+
+    /* Floating kinetic feature pills */
+    .floating-pill {{
+      position: absolute;
+      background: rgba(15, 23, 42, 0.95);
+      backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 14px;
+      padding: 10px 18px;
+      font-size: 16px;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+      z-index: 25;
+      animation: floatBadge 3s ease-in-out infinite alternate;
+    }}
+    @keyframes floatBadge {{
+      0% {{ transform: translateY(0px); }}
+      100% {{ transform: translateY(-12px); }}
+    }}
+
+    /* Terminal Command Strip */
+    .terminal-bar {{
+      position: absolute;
+      bottom: 240px;
+      left: 36px;
+      right: 36px;
+      background: rgba(15, 23, 42, 0.9);
+      backdrop-filter: blur(16px);
+      border: 1px solid rgba(56, 189, 248, 0.35);
+      border-radius: 14px;
+      padding: 14px 22px;
+      font-family: "JetBrains Mono", Menlo, Consolas, monospace;
+      font-size: 17px;
+      color: #38BDF8;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      z-index: 40;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.7);
+    }}
+    .cursor-blink {{
+      display: inline-block;
+      width: 10px;
+      height: 18px;
+      background: #38BDF8;
+      animation: blink 0.8s infinite;
+    }}
+
+    /* High-Impact Kinetic Captions (Centered Bottom) */
+    .caption-container {{
+      position: absolute;
+      bottom: 70px;
+      left: 36px;
+      right: 36px;
+      z-index: 100;
       display: flex;
       justify-content: center;
       align-items: center;
-      z-index: 60;
+      pointer-events: none;
     }}
     .caption-pill {{
-      background: #171819;
-      border: 5px solid #FFFFFF;
-      border-radius: 22px;
-      padding: 12px 28px;
-      box-shadow: 0 10px 0 #000000, 0 16px 24px rgba(0,0,0,0.35);
+      background: rgba(10, 15, 29, 0.94);
+      backdrop-filter: blur(20px);
+      border: 2px solid rgba(250, 204, 21, 0.5);
+      border-radius: 24px;
+      padding: 16px 28px;
+      text-align: center;
+      box-shadow: 0 15px 45px rgba(0, 0, 0, 0.9), 0 0 30px rgba(250, 204, 21, 0.25);
+      max-width: 660px;
+      min-height: 80px;
       display: flex;
-      gap: 12px;
-      align-items: center;
+      flex-wrap: wrap;
       justify-content: center;
-      max-width: 90%;
+      align-items: center;
+      gap: 10px;
     }}
-    .caption-word {{ font-size: 38px; font-weight: 950; color: #FFFFFF; letter-spacing: -0.02em; line-height: 1; }}
-    .caption-word.active {{ background: #FACC15; color: #171819; padding: 4px 16px; border-radius: 12px; box-shadow: 2px 2px 0 #000000; }}
+    .caption-word {{
+      font-size: 32px;
+      font-weight: 900;
+      color: #E2E8F0;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      transition: all 0.08s ease;
+    }}
+    .caption-word.active {{
+      color: #FACC15;
+      text-shadow: 0 0 25px rgba(250, 204, 21, 0.9), 0 0 45px rgba(250, 204, 21, 0.6);
+      transform: scale(1.18);
+    }}
 
-    .phone-mockup {{
-      position: absolute;
-      left: 45px;
-      top: 175px;
-      width: 375px;
-      height: 715px;
-      background: #000000;
-      border: 9px solid #171819;
-      border-radius: 50px;
-      box-shadow: 12px 16px 0 rgba(0,0,0,0.3);
-      z-index: 35;
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
+    /* Hook Scene Specific */
+    .hook-headline {{
+      font-size: 58px;
+      font-weight: 900;
+      text-align: center;
+      line-height: 1.15;
+      background: linear-gradient(135deg, #FFFFFF 20%, #38BDF8 60%, #818CF8 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      padding: 0 40px;
+      margin-bottom: 30px;
+      text-shadow: 0 0 40px rgba(56, 189, 248, 0.3);
     }}
-    .phone-notch {{ width: 130px; height: 26px; background: #171819; margin: 0 auto; border-radius: 0 0 16px 16px; }}
-    .phone-screen {{ flex: 1; background: #FFFFFF; padding: 18px 16px; font-family: -apple-system, sans-serif; overflow: hidden; display: flex; flex-direction: column; }}
+    .hook-badge-wrap {{
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      margin-top: 20px;
+    }}
+
+    /* CTA Outro Specific */
+    .cta-box {{
+      background: rgba(15, 23, 42, 0.92);
+      border: 2px solid #FACC15;
+      border-radius: 28px;
+      padding: 40px 36px;
+      text-align: center;
+      box-shadow: 0 0 60px rgba(250, 204, 21, 0.35);
+      width: 620px;
+    }}
+    .cta-keyword {{
+      font-size: 64px;
+      font-weight: 900;
+      color: #FACC15;
+      letter-spacing: 3px;
+      margin: 15px 0;
+      text-shadow: 0 0 35px rgba(250, 204, 21, 0.8);
+      animation: pulseCta 1.5s ease-in-out infinite alternate;
+    }}
+    @keyframes pulseCta {{
+      0% {{ transform: scale(1); }}
+      100% {{ transform: scale(1.06); }}
+    }}
   </style>
 </head>
 <body>
-  <div id="root" data-composition-id="root" data-start="0" data-duration="60.9" data-width="720" data-height="1280">
-    <div id="bg-hook" class="bg-layer bg-hook"></div>
-    <div id="bg-browser" class="bg-layer bg-browser"></div>
-    <div id="bg-ollama" class="bg-layer bg-ollama"></div>
-    <div id="bg-firecrawl" class="bg-layer bg-firecrawl"></div>
-    <div id="bg-cline" class="bg-layer bg-cline"></div>
-    <div id="bg-hyperframes" class="bg-layer bg-hyperframes"></div>
-    <div id="bg-outro" class="bg-layer bg-outro"></div>
+  <div id="root">
+    <!-- Top Progress Bar -->
+    <div id="progress-bar" class="hud-progress-bar"></div>
 
-    <audio id="voice" src="{audio_path}" data-start="0" data-duration="60.9" data-volume="1"></audio>
+    <!-- Background Elements -->
+    <div class="grid-bg"></div>
+    <div class="ambient-orb orb-1"></div>
+    <div class="ambient-orb orb-2"></div>
+    <div class="ambient-orb orb-3"></div>
 
-    <div id="top-badge" class="top-badge" style="opacity: 0;">TOP 5 AI DEV REPOS</div>
-    <div id="top-meter" class="top-meter" style="opacity: 0;">
-      <div class="meter-strip">
-        <div class="meter-switch"></div>
-        <div class="meter-sockets">
-          <div id="sock-1" class="socket-dot"></div>
-          <div id="sock-2" class="socket-dot"></div>
-          <div id="sock-3" class="socket-dot"></div>
-          <div id="sock-4" class="socket-dot"></div>
-          <div id="sock-5" class="socket-dot"></div>
-        </div>
+    <!-- Top HUD Bar -->
+    <div class="top-hud">
+      <div id="top-badge" class="hud-badge">
+        <div class="hud-dot"></div>
+        <span>AI RADAR 2026</span>
       </div>
-      <div id="meter-label" class="meter-label">REPOS 0/5</div>
+      <div id="hud-stars" class="hud-stars">★ 3 KILLER REPOS</div>
     </div>
 
-    <div id="desk" class="desk">
-      <div class="desk-drawer"></div>
-      <div class="desk-drawer-right"></div>
-      <div class="desk-mug"></div>
-      <div id="steam-1" class="steam-bubble">~</div>
-    </div>
-
-    <!-- Avatar Character Rig -->
-    <div id="avatar-wrap" class="avatar-wrapper">
-      <svg class="avatar-svg" viewBox="0 0 480 460" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          <linearGradient id="skin" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%" stop-color="#FCE1CA"/>
-            <stop offset="100%" stop-color="#F2BA91"/>
-          </linearGradient>
-        </defs>
-        <g id="torso">
-          <path d="M130 330 C130 310, 180 295, 240 295 C300 295, 350 310, 350 330 L380 460 L100 460 Z" fill="#756D65" stroke="#171819" stroke-width="8"/>
-          <path d="M210 295 C210 330, 270 330, 270 295 Z" fill="#FFFFFF" stroke="#171819" stroke-width="6"/>
-        </g>
-        <g id="arm-left">
-          <g id="arm-point" opacity="0">
-            <path d="M340 330 C380 320, 390 260, 375 220" fill="none" stroke="#171819" stroke-width="44" stroke-linecap="round"/>
-            <path d="M340 330 C380 320, 390 260, 375 220" fill="none" stroke="#756D65" stroke-width="36" stroke-linecap="round"/>
-            <g transform="translate(365, 170)">
-              <ellipse cx="14" cy="40" rx="18" ry="16" fill="url(#skin)" stroke="#171819" stroke-width="6"/>
-              <rect x="8" y="0" width="12" height="32" rx="6" fill="url(#skin)" stroke="#171819" stroke-width="6"/>
-            </g>
-          </g>
-          <g id="arm-both-up" opacity="1">
-            <path d="M140 330 C100 290, 90 220, 110 170" fill="none" stroke="#171819" stroke-width="44" stroke-linecap="round"/>
-            <path d="M140 330 C100 290, 90 220, 110 170" fill="none" stroke="#756D65" stroke-width="36" stroke-linecap="round"/>
-            <path d="M340 330 C380 290, 390 220, 370 170" fill="none" stroke="#171819" stroke-width="44" stroke-linecap="round"/>
-            <path d="M340 330 C380 290, 390 220, 370 170" fill="none" stroke="#756D65" stroke-width="36" stroke-linecap="round"/>
-          </g>
-          <g id="arm-thumbs-up" opacity="0">
-            <path d="M340 330 C370 320, 380 280, 360 240" fill="none" stroke="#171819" stroke-width="44" stroke-linecap="round"/>
-            <path d="M340 330 C370 320, 380 280, 360 240" fill="none" stroke="#756D65" stroke-width="36" stroke-linecap="round"/>
-            <g transform="translate(350, 200)">
-              <circle cx="20" cy="30" r="16" fill="url(#skin)" stroke="#171819" stroke-width="6"/>
-              <rect x="14" y="6" width="12" height="20" rx="5" fill="url(#skin)" stroke="#171819" stroke-width="5"/>
-            </g>
-          </g>
-        </g>
-        <g id="head">
-          <rect x="216" y="240" width="48" height="55" fill="url(#skin)" stroke="#171819" stroke-width="7"/>
-          <ellipse cx="240" cy="180" rx="72" ry="80" fill="url(#skin)" stroke="#171819" stroke-width="8"/>
-          <path d="M168 175 C165 240, 185 270, 240 270 C295 270, 315 240, 312 175 C295 200, 275 205, 240 205 C205 205, 185 200, 168 175 Z" fill="#222326" stroke="#171819" stroke-width="7"/>
-          <g id="mouth-wrap" transform="translate(240, 218)">
-            <ellipse id="mouth" cx="0" cy="0" rx="22" ry="12" fill="#881337" stroke="#171819" stroke-width="5"/>
-          </g>
-          <g id="glasses">
-            <circle cx="204" cy="162" r="26" fill="rgba(255,255,255,0.2)" stroke="#171819" stroke-width="7"/>
-            <circle cx="276" cy="162" r="26" fill="rgba(255,255,255,0.2)" stroke="#171819" stroke-width="7"/>
-            <path d="M230 162 L250 162" stroke="#171819" stroke-width="7"/>
-          </g>
-          <g id="eyes">
-            <ellipse id="eye-left" cx="204" cy="162" rx="12" ry="12" fill="#FFFFFF"><circle cx="204" cy="162" r="6" fill="#171819"/></ellipse>
-            <ellipse id="eye-right" cx="276" cy="162" rx="12" ry="12" fill="#FFFFFF"><circle cx="276" cy="162" r="6" fill="#171819"/></ellipse>
-            <path id="eye-wink" d="M264 162 Q276 172 288 162" fill="none" stroke="#171819" stroke-width="6" stroke-linecap="round" opacity="0"/>
-          </g>
-          <g id="beanie">
-            <path d="M164 150 C160 80, 195 55, 240 55 C285 55, 320 80, 316 150 Z" fill="#2B2D31" stroke="#171819" stroke-width="8"/>
-            <rect x="156" y="125" width="168" height="36" rx="10" fill="#222326" stroke="#171819" stroke-width="8"/>
-          </g>
-        </g>
-      </svg>
-    </div>
-
-    <!-- SCENE 1: Hook -->
-    <div id="scene-hook" class="scene-layer" style="opacity: 1;">
-      <div id="hook-strip" style="position: absolute; top: 180px; left: 45px; width: 630px; background: #FFFFFF; border: 6px solid #171819; border-radius: 24px; box-shadow: 8px 10px 0 #171819; padding: 16px 20px 20px; display: flex; flex-direction: column; gap: 14px; z-index: 28;">
-        <div style="display: flex; align-items: center; justify-content: space-between;">
-          <div style="font-size: 21px; font-weight: 950; letter-spacing: 0.08em; color: #171819;">AI TECH STACK 2026</div>
-          <div style="background: #EF4444; color: #FFF; font-weight: 950; font-size: 15px; padding: 4px 14px; border-radius: 6px; border: 2px solid #171819;">0 OF 5 INSTALLED</div>
-        </div>
+    <!-- SCENE 0: HOOK -->
+    <div id="scene-hook" class="scene-container" style="opacity: 1;">
+      <div class="hook-headline">STOP PAYING<br>MONTHLY AI FEES</div>
+      <div style="font-size: 24px; color: #94A3B8; font-weight: 700; text-align: center; max-width: 540px;">
+        3 Free Open-Source Repos That Grant Real Superpowers
       </div>
-      <div id="hook-banner" style="position: absolute; left: 45px; top: 270px; width: 630px; opacity: 0; background: #FEF08A; border: 6px solid #171819; border-radius: 20px; box-shadow: 8px 12px 0 #171819; padding: 22px; text-align: center; z-index: 30;">
-        <div style="font-size: 38px; font-weight: 950; margin-bottom: 6px;">5 INSANE AI REPOS</div>
-        <div style="font-size: 19px; font-weight: 850; color: #374151;">Every Developer Needs Right Now</div>
+      <div class="hook-badge-wrap">
+        <div class="hud-badge" style="border-color: #10B981; color: #10B981;">✓ 100% FREE</div>
+        <div class="hud-badge" style="border-color: #818CF8; color: #818CF8;">⚡ LOCAL RUN</div>
       </div>
     </div>
 
-    <!-- SCENES 2 to 6: The 5 Repos with Real Media -->
-    """
-
-    # Dynamically inject each of the 5 curated repos with their actual scraped media assets
-    scene_ids = ["#scene-browser", "#scene-ollama", "#scene-firecrawl", "#scene-cline", "#scene-hyperframes"]
-    bg_ids = ["#bg-browser", "#bg-ollama", "#bg-firecrawl", "#bg-cline", "#bg-hyperframes"]
-    
-    for i, repo in enumerate(repos[:5]):
-        sc_id = scene_ids[i].replace("#", "")
-        media_img = repo.get("demo_media") or repo.get("og_image") or "assets/repos/default_banner.png"
-        
-        html += f"""
-    <div id="{sc_id}" class="scene-layer" style="opacity: 0;">
-      <div class="upper-card">
-        <div class="repo-header">
-          <span class="repo-slug">{repo["full_name"]}</span>
-          <span class="repo-star">★ {repo["stars"]:,}</span>
+    <!-- SCENE 1: REPO 1 -->
+    <div id="scene-tool1" class="scene-container">
+      <div class="media-window">
+        <div class="window-header">
+          <div class="win-dot r"></div><div class="win-dot y"></div><div class="win-dot g"></div>
+          <div class="window-title">{repo_media[0]['owner']} / {repo_media[0]['name']}</div>
+          <div style="margin-left: auto; color: #FACC15; font-size: 13px; font-weight: 800;">{repo_media[0]['stars']}</div>
         </div>
-        <div class="repo-title">{repo["name"]}</div>
-        <div class="repo-desc">{repo["description"]}</div>
+        <div class="media-viewport">
+          <img id="img-tool1" src="{repo_media[0]['img']}" alt="Repo 1 demo">
+          <div class="scanline"></div>
+        </div>
       </div>
-      <div class="tech-console">
-        <div class="console-header">
-          <div class="console-dots"><div class="console-dot r"></div><div class="console-dot y"></div><div class="console-dot g"></div></div>
-          <div class="console-title">{repo["language"]} · Live Repository Demo</div>
-        </div>
-        <div class="media-card">
-          <img src="{media_img}" alt="{repo['name']} demo">
-        </div>
-        <div style="background: #111827; border: 1px solid #374151; border-radius: 8px; padding: 12px; margin-top: auto;">
-          <div style="font-size: 12px; color: #10B981; font-weight: 900;">✓ VERIFIED OPEN SOURCE</div>
-          <div style="font-size: 14px; color: #F3F4F6; font-weight: 800; margin-top: 4px;">Language: {repo["language"]}</div>
-        </div>
+      <div class="floating-pill" style="top: 240px; right: 20px; border-color: #38BDF8; color: #38BDF8;">
+        ⚡ 01 · {repo_media[0]['name']}
       </div>
     </div>
-"""
 
-    html += f"""
-    <!-- SCENE 7: Outro -->
-    <div id="scene-outro" class="scene-layer" style="opacity: 0; z-index: 35;">
-      <div class="phone-mockup">
-        <div class="phone-notch"></div>
-        <div class="phone-screen">
-          <div style="font-weight: 900; font-size: 16px; margin-bottom: 12px;">Jayant Digital Studio</div>
-          <div style="background: #2563EB; color: #FFF; padding: 10px 18px; border-radius: 18px 18px 4px 18px; margin-left: auto; max-width: 75%; font-weight: 900; margin-bottom: 14px;">REPOS</div>
-          <div style="background: #F3F4F6; border: 3px solid #171819; border-radius: 16px; padding: 14px;">
-            <div style="font-weight: 950; font-size: 15px; margin-bottom: 8px;">Here are all 5 links:</div>
-            <div style="font-size: 13px; font-weight: 850; line-height: 1.6;">
-              <div>1. <b>{repos[0]['name']}</b></div>
-              <div>2. <b>{repos[1]['name']}</b></div>
-              <div>3. <b>{repos[2]['name']}</b></div>
-              <div>4. <b>{repos[3]['name']}</b></div>
-              <div>5. <b>{repos[4]['name']}</b></div>
-            </div>
-          </div>
+    <!-- SCENE 2: REPO 2 -->
+    <div id="scene-tool2" class="scene-container">
+      <div class="media-window">
+        <div class="window-header">
+          <div class="win-dot r"></div><div class="win-dot y"></div><div class="win-dot g"></div>
+          <div class="window-title">{repo_media[1]['owner']} / {repo_media[1]['name']}</div>
+          <div style="margin-left: auto; color: #FACC15; font-size: 13px; font-weight: 800;">{repo_media[1]['stars']}</div>
+        </div>
+        <div class="media-viewport">
+          <img id="img-tool2" src="{repo_media[1]['img']}" alt="Repo 2 demo">
+          <div class="scanline"></div>
+        </div>
+      </div>
+      <div class="floating-pill" style="top: 240px; right: 20px; border-color: #A855F7; color: #A855F7;">
+        🚀 02 · {repo_media[1]['name']}
+      </div>
+    </div>
+
+    <!-- SCENE 3: REPO 3 -->
+    <div id="scene-tool3" class="scene-container">
+      <div class="media-window">
+        <div class="window-header">
+          <div class="win-dot r"></div><div class="win-dot y"></div><div class="win-dot g"></div>
+          <div class="window-title">{repo_media[2]['owner']} / {repo_media[2]['name']}</div>
+          <div style="margin-left: auto; color: #FACC15; font-size: 13px; font-weight: 800;">{repo_media[2]['stars']}</div>
+        </div>
+        <div class="media-viewport">
+          <img id="img-tool3" src="{repo_media[2]['img']}" alt="Repo 3 demo">
+          <div class="scanline"></div>
+        </div>
+      </div>
+      <div class="floating-pill" style="top: 240px; right: 20px; border-color: #10B981; color: #10B981;">
+        🔥 03 · {repo_media[2]['name']}
+      </div>
+    </div>
+
+    <!-- SCENE 4: CTA OUTRO -->
+    <div id="scene-cta" class="scene-container">
+      <div class="cta-box">
+        <div style="font-size: 22px; color: #94A3B8; font-weight: 800; text-transform: uppercase; letter-spacing: 2px;">
+          Want all 3 repositories?
+        </div>
+        <div style="font-size: 28px; color: #FFFFFF; font-weight: 900; margin-top: 10px;">
+          COMMENT BELOW:
+        </div>
+        <div class="cta-keyword">TOOLS</div>
+        <div style="font-size: 18px; color: #E2E8F0; font-weight: 700; line-height: 1.5;">
+          I'll DM you direct GitHub links right now! 🚀<br>
+          <span style="color: #38BDF8;">Follow for daily open-source AI drops.</span>
         </div>
       </div>
     </div>
 
-    <!-- Word Captions -->
-    <div class="captions-wrapper">
+    <!-- Terminal Command Strip -->
+    <div id="terminal-bar" class="terminal-bar">
+      <span style="color: #10B981; font-weight: 900;">❯</span>
+      <span id="term-text">git clone open-source-ai-repos</span>
+      <span class="cursor-blink"></span>
+    </div>
+
+    <!-- Word-by-Word Kinetic Subtitles -->
+    <div class="caption-container">
       <div id="caption-pill" class="caption-pill">
-        <span class="caption-word active">Stop</span>
-        <span class="caption-word">paying</span>
+        <span class="caption-word active">READY</span>
       </div>
     </div>
+
   </div>
 
   <script>
     const tl = gsap.timeline({{ paused: true }});
     window.__timelines = {{ root: tl }};
-    tl.to({{}}, {{ duration: 60.9 }}, 0);
+    tl.to({{}}, {{ duration: {duration} }}, 0);
 
-    const scenes = [
-      {{ id: "#scene-hook", bg: "#bg-hook", desk: "#B64D29", start: 0, end: 7.05, badge: "AI DEV REPOS", meter: "0/5" }},
-      {{ id: "#scene-browser", bg: "#bg-browser", desk: "#1D4ED8", start: 7.05, end: 17.09, badge: "01 · {repos[0]['name'].upper()}", meter: "1/5" }},
-      {{ id: "#scene-ollama", bg: "#bg-ollama", desk: "#047857", start: 17.09, end: 26.00, badge: "02 · {repos[1]['name'].upper()}", meter: "2/5" }},
-      {{ id: "#scene-firecrawl", bg: "#bg-firecrawl", desk: "#C2410C", start: 26.00, end: 36.31, badge: "03 · {repos[2]['name'].upper()}", meter: "3/5" }},
-      {{ id: "#scene-cline", bg: "#bg-cline", desk: "#6D28D9", start: 36.31, end: 44.60, badge: "04 · {repos[3]['name'].upper()}", meter: "4/5" }},
-      {{ id: "#scene-hyperframes", bg: "#bg-hyperframes", desk: "#854D0E", start: 44.60, end: 55.91, badge: "05 · {repos[4]['name'].upper()}", meter: "5/5" }},
-      {{ id: "#scene-outro", bg: "#bg-outro", desk: "#B64D29", start: 55.91, end: 60.90, badge: "5 REPOS · 1 DM", meter: "5/5" }}
+    // Continuous timeline progress bar
+    tl.to("#progress-bar", {{ width: "100%", duration: {duration}, ease: "none" }}, 0);
+
+    // Continuous Ken Burns 3D Camera zooms on real images
+    tl.fromTo("#img-tool1", 
+      {{ scale: 1.05, x: 0, y: 0 }}, 
+      {{ scale: 1.25, x: -15, y: -20, duration: {t_tool1_end - t_hook_end}, ease: "power1.inOut" }}, 
+      {t_hook_end}
+    );
+    tl.fromTo("#img-tool2", 
+      {{ scale: 1.05, x: 0, y: 0 }}, 
+      {{ scale: 1.25, x: 15, y: -25, duration: {t_tool2_end - t_tool1_end}, ease: "power1.inOut" }}, 
+      {t_tool1_end}
+    );
+    tl.fromTo("#img-tool3", 
+      {{ scale: 1.05, x: 0, y: 0 }}, 
+      {{ scale: 1.25, x: -20, y: -15, duration: {t_tool3_end - t_tool2_end}, ease: "power1.inOut" }}, 
+      {t_tool2_end}
+    );
+
+    // Scene Transition Timings (Exact Synced Pacing)
+    const sceneCuts = [
+      {{ id: "#scene-hook", start: 0, end: {t_hook_end}, stars: "3 KILLER REPOS", badge: "AI RADAR 2026", cmd: "npx scan-ai-repos" }},
+      {{ id: "#scene-tool1", start: {t_hook_end}, end: {t_tool1_end}, stars: "{repo_media[0]['stars']}", badge: "01 · {repo_media[0]['name']}", cmd: "git clone {repo_media[0]['name'].lower()}" }},
+      {{ id: "#scene-tool2", start: {t_tool1_end}, end: {t_tool2_end}, stars: "{repo_media[1]['stars']}", badge: "02 · {repo_media[1]['name']}", cmd: "npm install {repo_media[1]['name'].lower()}" }},
+      {{ id: "#scene-tool3", start: {t_tool2_end}, end: {t_tool3_end}, stars: "{repo_media[2]['stars']}", badge: "03 · {repo_media[2]['name']}", cmd: "pip install {repo_media[2]['name'].lower()}" }},
+      {{ id: "#scene-cta", start: {t_tool3_end}, end: {t_cta_end}, stars: "COMMENT 'TOOLS'", badge: "GET LINKS NOW", cmd: "echo 'DM sent!'" }}
     ];
 
-    scenes.forEach((sc, i) => {{
-      tl.set(sc.id, {{ opacity: 1 }}, sc.start);
-      if (sc.end < 60.9) tl.set(sc.id, {{ opacity: 0 }}, sc.end);
-      tl.to(sc.bg, {{ opacity: 1, duration: 0.35 }}, sc.start);
-      if (sc.end < 60.9) tl.to(sc.bg, {{ opacity: 0, duration: 0.35 }}, sc.end);
-      tl.to("#desk", {{ backgroundColor: sc.desk, duration: 0.35 }}, sc.start);
-      if (sc.start >= 2.85) {{
-        tl.set("#top-badge", {{ opacity: 1 }}, 2.85);
-        tl.set("#top-meter", {{ opacity: 1 }}, 2.85);
+    sceneCuts.forEach(sc => {{
+      tl.set(sc.id, {{ opacity: 1, pointerEvents: "auto" }}, sc.start);
+      if (sc.end < {duration}) {{
+        tl.set(sc.id, {{ opacity: 0, pointerEvents: "none" }}, sc.end);
       }}
-      tl.set("#top-badge", {{ innerText: sc.badge }}, sc.start);
-      tl.set("#meter-label", {{ innerText: `REPOS ${{sc.meter}}` }}, sc.start);
+      tl.set("#hud-stars", {{ innerText: sc.stars }}, sc.start);
+      tl.set("#top-badge span", {{ innerText: sc.badge }}, sc.start);
+      tl.set("#term-text", {{ innerText: sc.cmd }}, sc.start);
     }});
 
-    // Avatar movement
-    tl.to("#avatar-wrap", {{ x: 180, duration: 0.65, ease: "power2.inOut" }}, 6.7);
-    tl.set("#arm-both-up", {{ opacity: 0 }}, 6.8);
-    tl.set("#arm-point", {{ opacity: 1 }}, 6.8);
-    tl.set("#arm-point", {{ opacity: 0 }}, 56.8);
-    tl.set("#arm-thumbs-up", {{ opacity: 1 }}, 56.8);
-    tl.set("#eye-right", {{ opacity: 0 }}, 57.2);
-    tl.set("#eye-wink", {{ opacity: 1 }}, 57.2);
-
-    // Continuous avatar face motion
-    for (let t = 1.5; t < 59; t += 3.2) {{
-      tl.to(["#eye-left", "#eye-right"], {{ scaleY: 0.1, duration: 0.08, transformOrigin: "50% 50%", yoyo: true, repeat: 1 }}, t);
-    }}
-    for (let t = 0.15; t < 59; t += 0.32) {{
-      tl.to("#mouth", {{ attr: {{ ry: 18, rx: 24 }}, duration: 0.09, ease: "none" }}, t);
-      tl.to("#mouth", {{ attr: {{ ry: 8, rx: 20 }}, duration: 0.09, ease: "none" }}, t + 0.11);
-    }}
-
-    // Synchronized kinetic captions
+    // Synchronized Kinetic Captions
     const captionData = {json.dumps(caption_chunks)};
     captionData.forEach(chunk => {{
       tl.call(() => {{
@@ -565,8 +578,8 @@ def build_hyperframes_composition(repos_file="assets/curated_repos.json", captio
 """
     with open(output_html, "w") as f:
         f.write(html)
-    print(f"[✓] Generated complete dynamic HyperFrames composition incorporating real scraped media at {output_html}")
+    print(f"[✓] Generated 100% Hyper-Motion Composition ({round(duration, 1)}s) at {output_html}")
     return output_html
 
 if __name__ == "__main__":
-    build_hyperframes_composition()
+    build_hyperframes_composition(duration=38.0)

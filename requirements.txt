@@ -1,2 +1,4 @@
 requests>=2.31.0
 edge-tts>=6.1.10
+youtube-transcript-api>=1.2.0
+defusedxml>=0.7.1
