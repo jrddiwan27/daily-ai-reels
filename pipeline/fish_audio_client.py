@@ -4,8 +4,8 @@ import json
 import requests
 import subprocess
 
-FISH_API_KEY = "sk-fish-e_CiO1ZoKFL64y_iv6_dEHz6EZ15WoNv0fRZx5Mq-mk"
-VOICE_ID = "c85fb11f91f84312a4bd16756f298ae2"
+FISH_API_KEY = os.environ.get("FISH_API_KEY") or "sk-fish-e_CiO1ZoKFL64y_iv6_dEHz6EZ15WoNv0fRZx5Mq-mk"
+VOICE_ID = os.environ.get("FISH_VOICE_ID") or "c85fb11f91f84312a4bd16756f298ae2"
 
 def generate_voiceover(text: str, output_audio_path: str = "assets/voice.mp3") -> float:
     """

@@ -2,8 +2,8 @@ import os
 import json
 import requests
 
-BUFFER_ACCESS_TOKEN = os.environ.get("BUFFER_ACCESS_TOKEN", "gCUwoZC7cOjHobBSz5a9S3a4nrBh1PF8mydBp6_Rku2")
-DEFAULT_CHANNEL_ID = os.environ.get("BUFFER_CHANNEL_ID", "6ac7f82a6a5c39ccb6564f06") # jayant.digitalstudio
+BUFFER_ACCESS_TOKEN = os.environ.get("BUFFER_ACCESS_TOKEN") or "gCUwoZC7cOjHobBSz5a9S3a4nrBh1PF8mydBp6_Rku2"
+DEFAULT_CHANNEL_ID = os.environ.get("BUFFER_CHANNEL_ID") or "6ac7f82a6a5c39ccb6564f06" # jayant.digitalstudio
 
 def dispatch_to_buffer(video_url: str, caption: str, channel_id: str = None):
     """

@@ -33,7 +33,7 @@ jobs:
 
       - name: Install Python Dependencies
         run: |
-          pip install requests edge-tts
+          pip install -r requirements.txt
 
       - name: Install HyperFrames CLI
         run: |
