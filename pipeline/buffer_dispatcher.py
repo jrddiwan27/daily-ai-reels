@@ -5,7 +5,48 @@ import requests
 BUFFER_ACCESS_TOKEN = os.environ.get("BUFFER_ACCESS_TOKEN") or "gCUwoZC7cOjHobBSz5a9S3a4nrBh1PF8mydBp6_Rku2"
 DEFAULT_CHANNEL_ID = os.environ.get("BUFFER_CHANNEL_ID") or "6ac7f82a6a5c39ccb6564f06" # jayant.digitalstudio
 
-def dispatch_to_buffer(video_url: str, caption: str, channel_id: str = None):
+def upload_to_public_cdn(file_path: str) -> str:
+    """
+    Uploads video to free permanent public CDN so Buffer can ingest it.
+    Zero configuration, zero API key, zero cost.
+    """
+    print(f"[*] Uploading {file_path} to public CDN for Buffer ingestion...")
+    try:
+        with open(file_path, "rb") as f:
+            res = requests.post(
+                "https://catbox.moe/user/api.php",
+                data={"reqtype": "fileupload"},
+                files={"fileToUpload": f},
+                timeout=120
+            )
+        if res.status_code == 200 and res.text.startswith("https://"):
+            public_url = res.text.strip()
+            print(f"[✓] Video hosted publicly at: {public_url}")
+            return public_url
+    except Exception as e:
+        print(f"[!] Primary upload error: {e}, trying fallback...")
+
+    # Fallback to tmpfiles
+    try:
+        with open(file_path, "rb") as f:
+            res = requests.post(
+                "https://tmpfiles.org/api/v1/upload",
+                files={"file": f},
+                timeout=120
+            )
+        if res.status_code == 200:
+            data = res.json()
+            raw_url = data["data"]["url"]
+            # Convert https://tmpfiles.org/ID/name to https://tmpfiles.org/dl/ID/name
+            direct_url = raw_url.replace("tmpfiles.org/", "tmpfiles.org/dl/")
+            print(f"[✓] Video hosted publicly at fallback: {direct_url}")
+            return direct_url
+    except Exception as e:
+        print(f"[!] Fallback upload error: {e}")
+
+    raise RuntimeError("Failed to obtain public video URL for Buffer ingestion.")
+
+def dispatch_to_buffer(video_target: str, caption: str, channel_id: str = None):
     """
     Schedules and publishes video to Buffer using official GraphQL API.
     """
@@ -16,6 +57,12 @@ def dispatch_to_buffer(video_url: str, caption: str, channel_id: str = None):
         print("[!] Missing BUFFER_ACCESS_TOKEN or channel ID.")
         return False
         
+    # If video_target is a local file, upload it to get public URL
+    if os.path.exists(video_target):
+        public_video_url = upload_to_public_cdn(video_target)
+    else:
+        public_video_url = video_target
+
     url = "https://api.buffer.com"
     headers = {
         "Authorization": f"Bearer {token}",
@@ -29,7 +76,7 @@ def dispatch_to_buffer(video_url: str, caption: str, channel_id: str = None):
           post {
             id
             text
-            state
+            status
           }
         }
         ... on MutationError {
@@ -49,7 +96,7 @@ def dispatch_to_buffer(video_url: str, caption: str, channel_id: str = None):
             "assets": [
                 {
                     "video": {
-                        "url": video_url
+                        "url": public_video_url
                     }
                 }
             ]
