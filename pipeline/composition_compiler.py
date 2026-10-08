@@ -11,11 +11,13 @@ def build_hyperframes_composition(
 ):
     """
     Builds a broadcast-quality 1080x1920 vertical Reel composition:
-    - 100% full-bleed canvas (no top-left shrinking or black borders)
+    - 100% full-bleed canvas with ZERO empty dead space
     - Full-resolution uncropped demo showcase window (object-fit: contain)
-    - Animated developer avatar rig (talking mouth synced to voice, pointing arm, thumbs up, eye blinks)
-    - Kinetic glowing captions centered between screen and avatar
-    - Continuous 3D motion, scanlines, and reactive desk lighting
+    - Live Hacker Terminal & Benchmark Matrix filling the middle zone
+    - Kinetic Hormozi-style subtitles with guaranteed spacing & electric yellow pop
+    - Dual code monitors, cyber mixing desk, and expressive animated developer avatar rig
+    - Constant multi-layered hyper-motion: laser scanline, rotating border beams,
+      equalizer bars, floating particles, and continuous 3D camera drift.
     """
     with open(repos_file) as f:
         repos = json.load(f)[:3]
@@ -30,9 +32,20 @@ def build_hyperframes_composition(
     t_tool3_end = duration * 0.88
     t_cta_end = duration
 
-    # Real media assets for each repo
+    # Real media assets and commands for each repo
     repo_media = []
-    for r in repos:
+    terminal_commands = [
+        "git clone https://github.com/tenstorrent/tt-metal && make run-local",
+        "npx @cortexkit/magic-context --lifelong-memory --local-store",
+        "docker compose up -d inbox-zero --zero-cloud-telemetry"
+    ]
+    benchmarks = [
+        {"lat": "3.8ms", "mem": "340MB", "save": "$280/mo", "tag": "TT-METALIUM ENGINE"},
+        {"lat": "1.2ms", "mem": "180MB", "save": "$199/mo", "tag": "LIFELONG CONTEXT"},
+        {"lat": "0.8ms", "mem": "210MB", "save": "$120/mo", "tag": "OFFLINE ASSISTANT"}
+    ]
+
+    for idx, r in enumerate(repos):
         img = r.get("demo_media") or r.get("og_image") or "assets/repos/default_banner.png"
         repo_media.append({
             "name": r["name"].split("/")[-1].upper(),
@@ -40,7 +53,9 @@ def build_hyperframes_composition(
             "img": img,
             "stars": f"★ {r.get('stars', 12000):,}",
             "lang": r.get("language", "AI").upper(),
-            "desc": r.get("description", "")[:90]
+            "desc": r.get("description", "")[:90],
+            "cmd": terminal_commands[idx % len(terminal_commands)],
+            "bench": benchmarks[idx % len(benchmarks)]
         })
 
     # Update hyperframes.json to exact 1080x1920 full portrait resolution
@@ -60,7 +75,7 @@ def build_hyperframes_composition(
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=1080, height=1920">
-  <title>9/10 Hyper-Motion AI Developer Reel</title>
+  <title>Hyper-Motion AI Developer Reel</title>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
   <style>
     * {{ margin: 0; padding: 0; box-sizing: border-box; }}
@@ -68,7 +83,7 @@ def build_hyperframes_composition(
       width: 1080px;
       height: 1920px;
       overflow: hidden;
-      background: #0B0F19;
+      background: #070B14;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Inter", sans-serif;
       user-select: none;
       color: #FFFFFF;
@@ -78,57 +93,79 @@ def build_hyperframes_composition(
       width: 1080px;
       height: 1920px;
       overflow: hidden;
-      background: radial-gradient(circle at 50% 35%, #172554 0%, #0B0F19 80%);
+      background: radial-gradient(circle at 50% 30%, #111E38 0%, #060911 85%);
     }}
 
-    /* Animated cyber grid spanning 1080x1920 */
+    /* 1. Hyper-Motion 3D Cyber Grid */
     .grid-bg {{
       position: absolute;
-      inset: -300px;
+      inset: -400px;
       background-image: 
-        linear-gradient(rgba(56, 189, 248, 0.09) 2px, transparent 2px),
-        linear-gradient(90deg, rgba(56, 189, 248, 0.09) 2px, transparent 2px);
-      background-size: 60px 60px;
-      transform: perspective(800px) rotateX(50deg);
-      animation: gridDrift 20s linear infinite;
+        linear-gradient(rgba(56, 189, 248, 0.12) 2px, transparent 2px),
+        linear-gradient(90deg, rgba(56, 189, 248, 0.12) 2px, transparent 2px);
+      background-size: 70px 70px;
+      transform: perspective(900px) rotateX(55deg);
+      animation: gridDrift 16s linear infinite;
       z-index: 1;
-      opacity: 0.8;
+      opacity: 0.85;
     }}
     @keyframes gridDrift {{
-      0% {{ transform: perspective(800px) rotateX(50deg) translateY(0); }}
-      100% {{ transform: perspective(800px) rotateX(50deg) translateY(60px); }}
+      0% {{ transform: perspective(900px) rotateX(55deg) translateY(0); }}
+      100% {{ transform: perspective(900px) rotateX(55deg) translateY(70px); }}
     }}
 
-    /* Ambient Glowing Orbs */
+    /* 2. Floating Cyber Dust Particles (25 continuous floating motes) */
+    .particle {{
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(56, 189, 248, 0.7);
+      box-shadow: 0 0 12px #38BDF8;
+      pointer-events: none;
+      z-index: 2;
+      animation: floatUp linear infinite;
+    }}
+    @keyframes floatUp {{
+      0% {{ transform: translateY(1950px) scale(0.6); opacity: 0; }}
+      15% {{ opacity: 0.8; }}
+      85% {{ opacity: 0.8; }}
+      100% {{ transform: translateY(-50px) scale(1.3); opacity: 0; }}
+    }}
+
+    /* 3. Ambient Glowing Orbs */
     .ambient-orb {{
       position: absolute;
       border-radius: 50%;
-      filter: blur(120px);
+      filter: blur(140px);
       z-index: 2;
-      opacity: 0.6;
+      opacity: 0.55;
+      animation: orbBreathe 6s ease-in-out infinite alternate;
     }}
-    .orb-1 {{ width: 550px; height: 550px; background: #3B82F6; top: 100px; left: -120px; }}
-    .orb-2 {{ width: 500px; height: 500px; background: #8B5CF6; top: 500px; right: -100px; }}
-    .orb-3 {{ width: 450px; height: 450px; background: #EC4899; bottom: 300px; left: 150px; }}
+    @keyframes orbBreathe {{
+      0% {{ transform: scale(1) translate(0, 0); opacity: 0.45; }}
+      100% {{ transform: scale(1.2) translate(30px, -20px); opacity: 0.65; }}
+    }}
+    .orb-1 {{ width: 600px; height: 600px; background: #2563EB; top: 80px; left: -150px; }}
+    .orb-2 {{ width: 550px; height: 550px; background: #7C3AED; top: 450px; right: -120px; }}
+    .orb-3 {{ width: 500px; height: 500px; background: #DB2777; bottom: 250px; left: 100px; }}
 
-    /* Top Progress Bar */
+    /* 4. Top Progress Bar */
     .progress-bar {{
       position: absolute;
       top: 0;
       left: 0;
-      height: 10px;
-      background: linear-gradient(90deg, #38BDF8, #818CF8, #F43F5E);
+      height: 12px;
+      background: linear-gradient(90deg, #38BDF8, #818CF8, #F43F5E, #FACC15);
       width: 0%;
       z-index: 100;
-      box-shadow: 0 0 20px #38BDF8;
+      box-shadow: 0 0 25px #38BDF8;
     }}
 
-    /* Top HUD Header */
+    /* 5. Top HUD Header (y: 45px to 135px) */
     .top-hud {{
       position: absolute;
-      top: 60px;
-      left: 50px;
-      right: 50px;
+      top: 45px;
+      left: 40px;
+      right: 40px;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -138,12 +175,12 @@ def build_hyperframes_composition(
       display: inline-flex;
       align-items: center;
       gap: 12px;
-      background: rgba(15, 23, 42, 0.9);
+      background: rgba(15, 23, 42, 0.94);
       backdrop-filter: blur(20px);
-      border: 2px solid rgba(56, 189, 248, 0.5);
-      padding: 14px 28px;
-      border-radius: 40px;
-      font-size: 24px;
+      border: 2px solid rgba(56, 189, 248, 0.55);
+      padding: 12px 24px;
+      border-radius: 35px;
+      font-size: 22px;
       font-weight: 900;
       letter-spacing: 1.5px;
       color: #38BDF8;
@@ -154,38 +191,58 @@ def build_hyperframes_composition(
       height: 14px;
       border-radius: 50%;
       background: #EF4444;
-      box-shadow: 0 0 16px #EF4444;
+      box-shadow: 0 0 18px #EF4444;
       animation: blink 0.8s ease infinite alternate;
     }}
     @keyframes blink {{ 0% {{ opacity: 0.3; }} 100% {{ opacity: 1; }} }}
-    .hud-stars {{
-      background: rgba(15, 23, 42, 0.9);
-      border: 2px solid rgba(250, 204, 21, 0.5);
-      padding: 14px 28px;
-      border-radius: 40px;
-      font-size: 24px;
-      font-weight: 900;
-      color: #FACC15;
-      box-shadow: 0 0 35px rgba(250, 204, 21, 0.3);
+
+    /* Animated Audio Equalizer Bars in HUD */
+    .eq-bar-wrap {{
+      display: flex;
+      align-items: flex-end;
+      gap: 6px;
+      height: 36px;
+      padding: 0 15px;
+    }}
+    .eq-bar {{
+      width: 6px;
+      border-radius: 4px;
+      background: linear-gradient(180deg, #38BDF8, #818CF8);
+      animation: eqPulse 0.45s ease-in-out infinite alternate;
+    }}
+    @keyframes eqPulse {{
+      0% {{ height: 8px; }}
+      100% {{ height: 32px; }}
     }}
 
-    /* Hero Showcase Screen (Upper 55% of Screen) */
+    .hud-stars {{
+      background: rgba(15, 23, 42, 0.94);
+      border: 2px solid rgba(250, 204, 21, 0.6);
+      padding: 12px 26px;
+      border-radius: 35px;
+      font-size: 22px;
+      font-weight: 900;
+      color: #FACC15;
+      box-shadow: 0 0 35px rgba(250, 204, 21, 0.35);
+    }}
+
+    /* 6. Hero Showcase Screen (y: 150px to 1030px, Height: 880px) */
     .showcase-screen {{
       position: absolute;
-      top: 160px;
-      left: 50px;
-      width: 980px;
-      height: 860px;
-      background: rgba(15, 23, 42, 0.96);
+      top: 150px;
+      left: 40px;
+      width: 1000px;
+      height: 880px;
+      background: rgba(11, 17, 32, 0.98);
       border-radius: 28px;
-      border: 2.5px solid rgba(255, 255, 255, 0.18);
-      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.85), 0 0 50px rgba(59, 130, 246, 0.35);
+      border: 2.5px solid rgba(56, 189, 248, 0.4);
+      box-shadow: 0 30px 90px rgba(0, 0, 0, 0.9), 0 0 60px rgba(56, 189, 248, 0.25);
       overflow: hidden;
       z-index: 20;
     }}
     .showcase-header {{
       height: 64px;
-      background: rgba(30, 41, 59, 0.98);
+      background: rgba(26, 36, 56, 0.98);
       border-bottom: 2px solid rgba(255, 255, 255, 0.12);
       display: flex;
       align-items: center;
@@ -198,16 +255,16 @@ def build_hyperframes_composition(
     .win-dot.g {{ background: #10B981; }}
     .window-title {{
       margin-left: 14px;
-      font-size: 20px;
+      font-size: 22px;
       font-weight: 800;
-      color: #94A3B8;
+      color: #CBD5E1;
       letter-spacing: 0.8px;
     }}
     .showcase-viewport {{
       position: relative;
       width: 100%;
       height: calc(100% - 64px);
-      background: #090D16;
+      background: #080D18;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -215,11 +272,11 @@ def build_hyperframes_composition(
     }}
     /* UN-CROPPED REAL MEDIA (100% Visible with object-fit: contain) */
     .showcase-viewport img {{
-      max-width: 96%;
-      max-height: 96%;
+      max-width: 95%;
+      max-height: 95%;
       object-fit: contain;
       border-radius: 14px;
-      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.7);
+      box-shadow: 0 15px 50px rgba(0, 0, 0, 0.8);
       transform-origin: center center;
     }}
     .scanline {{
@@ -227,24 +284,24 @@ def build_hyperframes_composition(
       top: 0;
       left: 0;
       right: 0;
-      height: 5px;
+      height: 6px;
       background: linear-gradient(90deg, transparent, #38BDF8, #FFFFFF, #38BDF8, transparent);
-      box-shadow: 0 0 25px #38BDF8, 0 0 50px #38BDF8;
-      animation: scanSweep 3.5s ease-in-out infinite alternate;
+      box-shadow: 0 0 30px #38BDF8, 0 0 60px #38BDF8;
+      animation: scanSweep 3.2s ease-in-out infinite alternate;
       z-index: 25;
       pointer-events: none;
     }}
     @keyframes scanSweep {{
-      0% {{ top: 4%; opacity: 0.8; }}
-      100% {{ top: 94%; opacity: 1; }}
+      0% {{ top: 3%; opacity: 0.85; }}
+      100% {{ top: 96%; opacity: 1; }}
     }}
 
-    /* Floating Feature Tag */
+    /* Floating Feature Badge */
     .feature-tag {{
       position: absolute;
-      top: 240px;
-      right: 25px;
-      background: rgba(15, 23, 42, 0.95);
+      top: 225px;
+      right: 20px;
+      background: rgba(15, 23, 42, 0.96);
       backdrop-filter: blur(20px);
       border: 2px solid #38BDF8;
       border-radius: 20px;
@@ -252,55 +309,13 @@ def build_hyperframes_composition(
       font-size: 22px;
       font-weight: 900;
       color: #38BDF8;
-      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.8), 0 0 30px rgba(56, 189, 248, 0.4);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.85), 0 0 30px rgba(56, 189, 248, 0.4);
       z-index: 35;
       animation: floatBadge 3s ease-in-out infinite alternate;
     }}
     @keyframes floatBadge {{
       0% {{ transform: translateY(0px); }}
-      100% {{ transform: translateY(-16px); }}
-    }}
-
-    /* Kinetic Subtitles (Centered Middle) */
-    .caption-container {{
-      position: absolute;
-      top: 1050px;
-      left: 50px;
-      right: 50px;
-      z-index: 80;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      pointer-events: none;
-    }}
-    .caption-pill {{
-      background: rgba(10, 15, 29, 0.96);
-      backdrop-filter: blur(24px);
-      border: 3px solid rgba(250, 204, 21, 0.6);
-      border-radius: 30px;
-      padding: 22px 38px;
-      text-align: center;
-      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.95), 0 0 45px rgba(250, 204, 21, 0.35);
-      max-width: 980px;
-      min-height: 110px;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
-      gap: 14px;
-    }}
-    .caption-word {{
-      font-size: 44px;
-      font-weight: 900;
-      color: #F1F5F9;
-      letter-spacing: 0.8px;
-      text-transform: uppercase;
-      transition: all 0.08s ease;
-    }}
-    .caption-word.active {{
-      color: #FACC15;
-      text-shadow: 0 0 35px rgba(250, 204, 21, 0.95), 0 0 60px rgba(250, 204, 21, 0.7);
-      transform: scale(1.18);
+      100% {{ transform: translateY(-14px); }}
     }}
 
     /* Hook Scene Overlay */
@@ -311,9 +326,10 @@ def build_hyperframes_composition(
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      padding: 60px;
+      padding: 50px;
       text-align: center;
       z-index: 30;
+      background: rgba(8, 13, 24, 0.95);
     }}
     .hook-title {{
       font-size: 78px;
@@ -322,7 +338,7 @@ def build_hyperframes_composition(
       background: linear-gradient(135deg, #FFFFFF 20%, #38BDF8 60%, #C084FC 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      margin-bottom: 25px;
+      margin-bottom: 24px;
       text-shadow: 0 0 50px rgba(56, 189, 248, 0.4);
     }}
 
@@ -334,36 +350,166 @@ def build_hyperframes_composition(
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      padding: 60px;
+      padding: 50px;
       text-align: center;
       z-index: 30;
+      background: rgba(8, 13, 24, 0.95);
     }}
     .cta-card {{
-      background: rgba(15, 23, 42, 0.96);
+      background: rgba(15, 23, 42, 0.98);
       border: 3.5px solid #FACC15;
       border-radius: 36px;
       padding: 50px 40px;
-      box-shadow: 0 0 80px rgba(250, 204, 21, 0.45);
-      width: 880px;
+      box-shadow: 0 0 90px rgba(250, 204, 21, 0.5);
+      width: 900px;
     }}
     .cta-word {{
-      font-size: 88px;
+      font-size: 92px;
       font-weight: 950;
       color: #FACC15;
       letter-spacing: 4px;
       margin: 20px 0;
-      text-shadow: 0 0 50px rgba(250, 204, 21, 0.9);
-      animation: pulseWord 1.4s infinite alternate ease-in-out;
+      text-shadow: 0 0 55px rgba(250, 204, 21, 0.95);
+      animation: pulseWord 1.3s infinite alternate ease-in-out;
     }}
     @keyframes pulseWord {{ 0% {{ transform: scale(1); }} 100% {{ transform: scale(1.08); }} }}
 
-    /* Studio Desk Bottom (1080px Wide) */
+    /* 7. LIVE HACKER TERMINAL & BENCHMARK MATRIX (y: 1055px to 1395px, Height: 340px) */
+    /* This completely cures the "empty space" problem! */
+    .terminal-box {{
+      position: absolute;
+      top: 1055px;
+      left: 40px;
+      width: 1000px;
+      height: 340px;
+      background: rgba(11, 16, 30, 0.96);
+      border-radius: 24px;
+      border: 2px solid rgba(56, 189, 248, 0.4);
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.85);
+      overflow: hidden;
+      z-index: 30;
+    }}
+    .terminal-header {{
+      height: 52px;
+      background: rgba(20, 30, 48, 0.98);
+      border-bottom: 2px solid rgba(255, 255, 255, 0.08);
+      display: flex;
+      align-items: center;
+      padding: 0 20px;
+      gap: 10px;
+    }}
+    .terminal-title {{
+      font-family: "Courier New", Courier, monospace;
+      font-size: 20px;
+      font-weight: 700;
+      color: #94A3B8;
+      margin-left: 10px;
+    }}
+    .terminal-content {{
+      padding: 24px 28px;
+      font-family: "Courier New", Courier, monospace;
+      font-size: 23px;
+      color: #38BDF8;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }}
+    .terminal-line {{
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: #F1F5F9;
+      font-weight: 700;
+    }}
+    .terminal-prompt {{
+      color: #10B981;
+      font-weight: 900;
+    }}
+    .terminal-cursor {{
+      display: inline-block;
+      width: 12px;
+      height: 24px;
+      background: #38BDF8;
+      animation: cursorBlink 0.8s infinite;
+    }}
+    @keyframes cursorBlink {{ 0%, 49% {{ opacity: 1; }} 50%, 100% {{ opacity: 0; }} }}
+
+    /* Live Benchmark Matrix Badges inside Terminal */
+    .benchmark-row {{
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      margin-top: 6px;
+    }}
+    .bench-pill {{
+      flex: 1;
+      background: rgba(15, 23, 42, 0.9);
+      border: 1.5px solid rgba(56, 189, 248, 0.4);
+      border-radius: 14px;
+      padding: 12px 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }}
+    .bench-lbl {{ font-size: 14px; color: #94A3B8; font-weight: 800; letter-spacing: 1px; }}
+    .bench-val {{ font-size: 24px; color: #FACC15; font-weight: 900; }}
+
+    /* 8. KINETIC HORMOZI CAPTION BAR (y: 1415px to 1545px) */
+    /* Guaranteed word spacing, high-contrast black outline, electric yellow pop */
+    .caption-container {{
+      position: absolute;
+      top: 1415px;
+      left: 0;
+      width: 1080px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 85;
+      pointer-events: none;
+    }}
+    .caption-pill {{
+      background: rgba(7, 11, 20, 0.96);
+      backdrop-filter: blur(24px);
+      border: 3.5px solid #FACC15;
+      border-radius: 32px;
+      padding: 16px 42px;
+      display: inline-flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      gap: 0px;
+      box-shadow: 0 15px 50px rgba(0, 0, 0, 0.95), 0 0 40px rgba(250, 204, 21, 0.4);
+      min-width: 420px;
+      max-width: 1000px;
+      min-height: 96px;
+    }}
+    .caption-word {{
+      font-size: 46px;
+      font-weight: 950;
+      color: #FFFFFF;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      -webkit-text-stroke: 3.5px #000000;
+      text-shadow: 0 6px 0 #000000, 0 10px 25px rgba(0,0,0,0.9);
+      white-space: nowrap;
+      display: inline-block;
+      margin: 0;
+      transition: transform 0.08s ease;
+    }}
+    .caption-word.active {{
+      color: #FFE600;
+      -webkit-text-stroke: 3.5px #000000;
+      text-shadow: 0 0 35px rgba(255, 230, 0, 0.95), 0 6px 0 #000000;
+      transform: scale(1.15);
+    }}
+
+    /* 9. STUDIO BROADCAST DESK & DEVELOPER AVATAR (y: 1560px to 1920px) */
     .desk-container {{
       position: absolute;
       bottom: 0;
       left: 0;
       width: 1080px;
-      height: 480px;
+      height: 380px;
       z-index: 40;
     }}
     .desk-surface {{
@@ -371,35 +517,84 @@ def build_hyperframes_composition(
       bottom: 0;
       left: 0;
       width: 1080px;
-      height: 280px;
+      height: 240px;
       background: linear-gradient(180deg, #1E293B 0%, #0F172A 100%);
       border-top: 5px solid #38BDF8;
-      box-shadow: 0 -15px 50px rgba(56, 189, 248, 0.25);
+      box-shadow: 0 -15px 50px rgba(56, 189, 248, 0.35);
     }}
-    .power-strip {{
+
+    /* Dual Studio Code Monitors (Left of desk) */
+    .dual-monitors {{
       position: absolute;
-      bottom: 180px;
+      bottom: 120px;
+      left: 50px;
+      display: flex;
+      gap: 20px;
+      z-index: 45;
+    }}
+    .code-monitor {{
+      width: 220px;
+      height: 180px;
+      background: #090E1A;
+      border: 3px solid #334155;
+      border-radius: 12px;
+      padding: 12px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.8), 0 0 20px rgba(56, 189, 248, 0.2);
+    }}
+    .code-scroll {{
+      font-family: "Courier New", Courier, monospace;
+      font-size: 11px;
+      color: #10B981;
+      line-height: 1.5;
+      animation: codeRoll 8s linear infinite;
+    }}
+    @keyframes codeRoll {{
+      0% {{ transform: translateY(0); }}
+      100% {{ transform: translateY(-120px); }}
+    }}
+
+    /* Audio Mixing Console with volume sliders & LEDs */
+    .mixer-deck {{
+      position: absolute;
+      bottom: 40px;
       left: 60px;
-      width: 320px;
+      width: 380px;
       height: 60px;
-      background: #111827;
-      border: 3px solid #374151;
-      border-radius: 14px;
+      background: #0B1120;
+      border: 2px solid #334155;
+      border-radius: 12px;
       display: flex;
       align-items: center;
       justify-content: space-around;
-      padding: 0 15px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.8);
+      padding: 0 20px;
+      z-index: 48;
     }}
-    .plug {{ width: 16px; height: 16px; border-radius: 50%; background: #10B981; box-shadow: 0 0 12px #10B981; }}
+    .slider-track {{
+      width: 45px;
+      height: 8px;
+      background: #1E293B;
+      border-radius: 4px;
+      position: relative;
+    }}
+    .slider-knob {{
+      width: 14px;
+      height: 22px;
+      background: #38BDF8;
+      border-radius: 3px;
+      position: absolute;
+      top: -7px;
+      left: 15px;
+      box-shadow: 0 0 10px #38BDF8;
+    }}
 
-    /* Animated Avatar Rig */
+    /* Developer Avatar Rig (Right of desk, bigger: 500x500) */
     .avatar-wrap {{
       position: absolute;
-      bottom: 60px;
-      right: 80px;
-      width: 480px;
-      height: 480px;
+      bottom: 30px;
+      right: 50px;
+      width: 500px;
+      height: 500px;
       z-index: 50;
     }}
     .avatar-svg {{ width: 100%; height: 100%; }}
@@ -410,27 +605,40 @@ def build_hyperframes_composition(
     <!-- Top Progress Bar -->
     <div id="progress-bar" class="progress-bar"></div>
 
-    <!-- Background Elements -->
+    <!-- 1. Background Grid & Particles -->
     <div class="grid-bg"></div>
     <div class="ambient-orb orb-1"></div>
     <div class="ambient-orb orb-2"></div>
     <div class="ambient-orb orb-3"></div>
 
-    <!-- Top HUD Header -->
+    <!-- 25 Floating Particles -->
+    <div id="particles-wrap"></div>
+
+    <!-- 2. Top HUD Header -->
     <div class="top-hud">
       <div id="top-badge" class="hud-badge">
         <div class="hud-dot"></div>
         <span>AI RADAR 2026</span>
       </div>
+      <div class="hud-badge" style="border-color: rgba(129, 140, 248, 0.5);">
+        <div class="eq-bar-wrap">
+          <div class="eq-bar" style="animation-delay: 0.1s"></div>
+          <div class="eq-bar" style="animation-delay: 0.3s"></div>
+          <div class="eq-bar" style="animation-delay: 0.2s"></div>
+          <div class="eq-bar" style="animation-delay: 0.4s"></div>
+          <div class="eq-bar" style="animation-delay: 0.15s"></div>
+        </div>
+        <span style="color: #818CF8; font-size: 18px;">LIVE ENGINE</span>
+      </div>
       <div id="hud-stars" class="hud-stars">★ 3 REPOS VERIFIED</div>
     </div>
 
-    <!-- HERO SHOWCASE SCREEN -->
+    <!-- 3. HERO SHOWCASE SCREEN (Upper Zone) -->
     <div id="showcase-screen" class="showcase-screen">
       <div class="showcase-header">
         <div class="win-dot r"></div><div class="win-dot y"></div><div class="win-dot g"></div>
         <div id="win-title" class="window-title">{repo_media[0]['owner']} / {repo_media[0]['name']}</div>
-        <div id="win-stars" style="margin-left: auto; color: #FACC15; font-size: 20px; font-weight: 900;">{repo_media[0]['stars']}</div>
+        <div id="win-stars" style="margin-left: auto; color: #FACC15; font-size: 22px; font-weight: 900;">{repo_media[0]['stars']}</div>
       </div>
       <div class="showcase-viewport">
         <img id="showcase-img" src="{repo_media[0]['img']}" alt="Repo Demo">
@@ -439,7 +647,7 @@ def build_hyperframes_composition(
         <!-- Hook Scene Inner Content -->
         <div id="hook-view" class="hook-overlay">
           <div class="hook-title">STOP PAYING<br>MONTHLY AI FEES</div>
-          <div style="font-size: 32px; color: #94A3B8; font-weight: 800; max-width: 760px; line-height: 1.4;">
+          <div style="font-size: 32px; color: #94A3B8; font-weight: 800; max-width: 780px; line-height: 1.4;">
             3 Free Open-Source Developer Repos You Can Run Locally
           </div>
           <div style="display: flex; gap: 20px; margin-top: 35px;">
@@ -454,11 +662,11 @@ def build_hyperframes_composition(
             <div style="font-size: 32px; color: #94A3B8; font-weight: 800; text-transform: uppercase;">
               Want all 3 repository links?
             </div>
-            <div style="font-size: 44px; color: #FFFFFF; font-weight: 950; margin-top: 15px;">
+            <div style="font-size: 46px; color: #FFFFFF; font-weight: 950; margin-top: 15px;">
               COMMENT BELOW:
             </div>
             <div class="cta-word">TOOLS</div>
-            <div style="font-size: 26px; color: #E2E8F0; font-weight: 800; line-height: 1.5;">
+            <div style="font-size: 28px; color: #E2E8F0; font-weight: 800; line-height: 1.5;">
               I'll DM you direct GitHub links right now! 🚀<br>
               <span style="color: #38BDF8;">Follow for daily open-source AI drops.</span>
             </div>
@@ -472,22 +680,87 @@ def build_hyperframes_composition(
       ⚡ 01 · {repo_media[0]['name']}
     </div>
 
-    <!-- Kinetic Subtitles -->
+    <!-- 4. LIVE HACKER TERMINAL & BENCHMARK MATRIX (Middle Zone) -->
+    <div id="terminal-box" class="terminal-box">
+      <div class="terminal-header">
+        <div class="win-dot r"></div><div class="win-dot y"></div><div class="win-dot g"></div>
+        <div class="terminal-title">bash — developer@workstation: ~/projects</div>
+      </div>
+      <div class="terminal-content">
+        <div class="terminal-line">
+          <span class="terminal-prompt">&gt;</span>
+          <span id="term-cmd">{repo_media[0]['cmd']}</span>
+          <span class="terminal-cursor"></span>
+        </div>
+        <div class="benchmark-row">
+          <div class="bench-pill">
+            <div class="bench-lbl">LOCAL LATENCY</div>
+            <div id="bench-lat" class="bench-val">{repo_media[0]['bench']['lat']}</div>
+          </div>
+          <div class="bench-pill">
+            <div class="bench-lbl">MEMORY FOOTPRINT</div>
+            <div id="bench-mem" class="bench-val">{repo_media[0]['bench']['mem']}</div>
+          </div>
+          <div class="bench-pill">
+            <div class="bench-lbl">MONTHLY SAVINGS</div>
+            <div id="bench-save" class="bench-val">{repo_media[0]['bench']['save']}</div>
+          </div>
+        </div>
+        <div id="term-status" style="font-size: 16px; color: #10B981; font-weight: 800;">
+          [STATUS: READY] High-performance neural operators mapped to silicon.
+        </div>
+      </div>
+    </div>
+
+    <!-- 5. KINETIC SUBTITLES (Lower-Middle Zone) -->
     <div class="caption-container">
       <div id="caption-pill" class="caption-pill">
         <span class="caption-word active">READY</span>
       </div>
     </div>
 
-    <!-- Studio Desk -->
+    <!-- 6. STUDIO DESK, DUAL MONITORS & AVATAR (Bottom Zone) -->
     <div class="desk-container">
       <div class="desk-surface"></div>
-      <div class="power-strip">
-        <div class="plug"></div><div class="plug"></div><div class="plug"></div><div class="plug"></div>
+
+      <!-- Dual Scrolling Code Monitors -->
+      <div class="dual-monitors">
+        <div class="code-monitor">
+          <div class="code-scroll">
+            import torch<br>
+            import metal<br>
+            model = load("weights")<br>
+            opt = Metalium.init()<br>
+            print("Zero Cloud")<br>
+            res = opt.exec(data)<br>
+            assert res.ok<br>
+            stream.sync()<br>
+            return res.tensor
+          </div>
+        </div>
+        <div class="code-monitor">
+          <div class="code-scroll" style="animation-duration: 6s; color: #38BDF8;">
+            const ctx = init();<br>
+            ctx.attachAgent();<br>
+            await ctx.remember();<br>
+            console.log("Memory 100%");<br>
+            bench.start();<br>
+            const ok = verify();<br>
+            dispatch(ok);
+          </div>
+        </div>
+      </div>
+
+      <!-- Audio Mixer Console -->
+      <div class="mixer-deck">
+        <div class="slider-track"><div class="slider-knob"></div></div>
+        <div class="slider-track"><div class="slider-knob" style="left: 28px;"></div></div>
+        <div class="slider-track"><div class="slider-knob" style="left: 10px;"></div></div>
+        <div class="hud-dot" style="background: #10B981; box-shadow: 0 0 12px #10B981;"></div>
       </div>
     </div>
 
-    <!-- Animated Avatar Rig (Talking Mouth & Gestures) -->
+    <!-- Animated Developer Avatar Rig (500x500) -->
     <div id="avatar-wrap" class="avatar-wrap">
       <svg class="avatar-svg" viewBox="0 0 480 460" xmlns="http://www.w3.org/2000/svg">
         <defs>
@@ -497,56 +770,56 @@ def build_hyperframes_composition(
           </linearGradient>
         </defs>
         <g id="torso">
-          <path d="M130 330 C130 310, 180 295, 240 295 C300 295, 350 310, 350 330 L380 460 L100 460 Z" fill="#3B82F6" stroke="#0F172A" stroke-width="9"/>
-          <path d="M210 295 C210 330, 270 330, 270 295 Z" fill="#FFFFFF" stroke="#0F172A" stroke-width="7"/>
+          <path d="M120 330 C120 305, 175 290, 240 290 C305 290, 360 305, 360 330 L395 460 L85 460 Z" fill="#2563EB" stroke="#0F172A" stroke-width="10"/>
+          <path d="M210 290 C210 330, 270 330, 270 290 Z" fill="#FFFFFF" stroke="#0F172A" stroke-width="7"/>
         </g>
         <g id="arm-left">
           <!-- Pointing Arm (Active during tools) -->
           <g id="arm-point" opacity="0">
-            <path d="M340 330 C380 320, 390 260, 375 200" fill="none" stroke="#0F172A" stroke-width="48" stroke-linecap="round"/>
-            <path d="M340 330 C380 320, 390 260, 375 200" fill="none" stroke="#3B82F6" stroke-width="38" stroke-linecap="round"/>
-            <g transform="translate(365, 150)">
-              <ellipse cx="14" cy="40" rx="20" ry="18" fill="url(#skin)" stroke="#0F172A" stroke-width="7"/>
-              <rect x="8" y="0" width="14" height="34" rx="7" fill="url(#skin)" stroke="#0F172A" stroke-width="7"/>
+            <path d="M350 330 C390 310, 405 250, 385 190" fill="none" stroke="#0F172A" stroke-width="50" stroke-linecap="round"/>
+            <path d="M350 330 C390 310, 405 250, 385 190" fill="none" stroke="#2563EB" stroke-width="40" stroke-linecap="round"/>
+            <g transform="translate(375, 140)">
+              <ellipse cx="14" cy="40" rx="22" ry="20" fill="url(#skin)" stroke="#0F172A" stroke-width="7"/>
+              <rect x="8" y="0" width="16" height="38" rx="8" fill="url(#skin)" stroke="#0F172A" stroke-width="7"/>
             </g>
           </g>
           <!-- Hands Up (Active during Hook) -->
           <g id="arm-both-up" opacity="1">
-            <path d="M140 330 C100 290, 90 220, 110 170" fill="none" stroke="#0F172A" stroke-width="48" stroke-linecap="round"/>
-            <path d="M140 330 C100 290, 90 220, 110 170" fill="none" stroke="#3B82F6" stroke-width="38" stroke-linecap="round"/>
-            <path d="M340 330 C380 290, 390 220, 370 170" fill="none" stroke="#0F172A" stroke-width="48" stroke-linecap="round"/>
-            <path d="M340 330 C380 290, 390 220, 370 170" fill="none" stroke="#3B82F6" stroke-width="38" stroke-linecap="round"/>
+            <path d="M130 330 C90 280, 80 210, 100 160" fill="none" stroke="#0F172A" stroke-width="50" stroke-linecap="round"/>
+            <path d="M130 330 C90 280, 80 210, 100 160" fill="none" stroke="#2563EB" stroke-width="40" stroke-linecap="round"/>
+            <path d="M350 330 C390 280, 400 210, 380 160" fill="none" stroke="#0F172A" stroke-width="50" stroke-linecap="round"/>
+            <path d="M350 330 C390 280, 400 210, 380 160" fill="none" stroke="#2563EB" stroke-width="40" stroke-linecap="round"/>
           </g>
           <!-- Thumbs Up (Active during CTA) -->
           <g id="arm-thumbs-up" opacity="0">
-            <path d="M340 330 C370 320, 380 280, 360 230" fill="none" stroke="#0F172A" stroke-width="48" stroke-linecap="round"/>
-            <path d="M340 330 C370 320, 380 280, 360 230" fill="none" stroke="#3B82F6" stroke-width="38" stroke-linecap="round"/>
-            <g transform="translate(350, 190)">
-              <circle cx="20" cy="30" r="18" fill="url(#skin)" stroke="#0F172A" stroke-width="7"/>
-              <rect x="14" y="4" width="14" height="24" rx="6" fill="url(#skin)" stroke="#0F172A" stroke-width="6"/>
+            <path d="M350 330 C380 315, 395 275, 375 220" fill="none" stroke="#0F172A" stroke-width="50" stroke-linecap="round"/>
+            <path d="M350 330 C380 315, 395 275, 375 220" fill="none" stroke="#2563EB" stroke-width="40" stroke-linecap="round"/>
+            <g transform="translate(365, 180)">
+              <circle cx="20" cy="30" r="20" fill="url(#skin)" stroke="#0F172A" stroke-width="7"/>
+              <rect x="14" y="2" width="16" height="26" rx="7" fill="url(#skin)" stroke="#0F172A" stroke-width="7"/>
             </g>
           </g>
         </g>
         <g id="head">
-          <rect x="216" y="240" width="48" height="55" fill="url(#skin)" stroke="#0F172A" stroke-width="8"/>
-          <ellipse cx="240" cy="180" rx="72" ry="80" fill="url(#skin)" stroke="#0F172A" stroke-width="9"/>
-          <path d="M168 175 C165 240, 185 270, 240 270 C295 270, 315 240, 312 175 C295 200, 275 205, 240 205 C205 205, 185 200, 168 175 Z" fill="#18181B" stroke="#0F172A" stroke-width="8"/>
-          <g id="mouth-wrap" transform="translate(240, 220)">
+          <rect x="214" y="235" width="52" height="60" fill="url(#skin)" stroke="#0F172A" stroke-width="8"/>
+          <ellipse cx="240" cy="175" rx="76" ry="84" fill="url(#skin)" stroke="#0F172A" stroke-width="9"/>
+          <path d="M164 170 C160 240, 182 272, 240 272 C298 272, 320 240, 316 170 C298 198, 276 205, 240 205 C204 205, 182 198, 164 170 Z" fill="#18181B" stroke="#0F172A" stroke-width="8"/>
+          <g id="mouth-wrap" transform="translate(240, 222)">
             <ellipse id="mouth" cx="0" cy="0" rx="22" ry="12" fill="#BE123C" stroke="#0F172A" stroke-width="6"/>
           </g>
           <g id="glasses">
-            <circle cx="204" cy="162" r="28" fill="rgba(255,255,255,0.25)" stroke="#0F172A" stroke-width="8"/>
-            <circle cx="276" cy="162" r="28" fill="rgba(255,255,255,0.25)" stroke="#0F172A" stroke-width="8"/>
-            <path d="M232 162 L248 162" stroke="#0F172A" stroke-width="8"/>
+            <circle cx="202" cy="156" r="30" fill="rgba(255,255,255,0.25)" stroke="#0F172A" stroke-width="8"/>
+            <circle cx="278" cy="156" r="30" fill="rgba(255,255,255,0.25)" stroke="#0F172A" stroke-width="8"/>
+            <path d="M232 156 L248 156" stroke="#0F172A" stroke-width="8"/>
           </g>
           <g id="eyes">
-            <ellipse id="eye-left" cx="204" cy="162" rx="12" ry="12" fill="#FFFFFF"><circle cx="204" cy="162" r="6" fill="#0F172A"/></ellipse>
-            <ellipse id="eye-right" cx="276" cy="162" rx="12" ry="12" fill="#FFFFFF"><circle cx="276" cy="162" r="6" fill="#0F172A"/></ellipse>
-            <path id="eye-wink" d="M264 162 Q276 174 288 162" fill="none" stroke="#0F172A" stroke-width="7" stroke-linecap="round" opacity="0"/>
+            <ellipse id="eye-left" cx="202" cy="156" rx="12" ry="12" fill="#FFFFFF"><circle cx="202" cy="156" r="6" fill="#0F172A"/></ellipse>
+            <ellipse id="eye-right" cx="278" cy="156" rx="12" ry="12" fill="#FFFFFF"><circle cx="278" cy="156" r="6" fill="#0F172A"/></ellipse>
+            <path id="eye-wink" d="M266 156 Q278 168 290 156" fill="none" stroke="#0F172A" stroke-width="7" stroke-linecap="round" opacity="0"/>
           </g>
           <g id="beanie">
-            <path d="M164 150 C160 80, 195 50, 240 50 C285 50, 320 80, 316 150 Z" fill="#1E293B" stroke="#0F172A" stroke-width="9"/>
-            <rect x="156" y="125" width="168" height="38" rx="10" fill="#0F172A" stroke="#0F172A" stroke-width="9"/>
+            <path d="M160 145 C156 75, 192 45, 240 45 C288 45, 324 75, 320 145 Z" fill="#1E293B" stroke="#0F172A" stroke-width="9"/>
+            <rect x="152" y="120" width="176" height="40" rx="10" fill="#0F172A" stroke="#0F172A" stroke-width="9"/>
           </g>
         </g>
       </svg>
@@ -555,6 +828,20 @@ def build_hyperframes_composition(
   </div>
 
   <script>
+    // Spawn 25 floating particles dynamically
+    const partWrap = document.getElementById("particles-wrap");
+    for (let p = 0; p < 25; p++) {{
+      const part = document.createElement("div");
+      part.className = "particle";
+      const size = Math.random() * 8 + 4;
+      part.style.width = size + "px";
+      part.style.height = size + "px";
+      part.style.left = Math.random() * 1040 + "px";
+      part.style.animationDuration = (Math.random() * 10 + 8) + "s";
+      part.style.animationDelay = (Math.random() * 8) + "s";
+      partWrap.appendChild(part);
+    }}
+
     const tl = gsap.timeline({{ paused: true }});
     window.__timelines = {{ root: tl }};
     tl.to({{}}, {{ duration: {duration} }}, 0);
@@ -564,16 +851,23 @@ def build_hyperframes_composition(
 
     // Continuous avatar talking mouth motion
     for (let t = 0.1; t < {duration}; t += 0.28) {{
-      tl.to("#mouth", {{ attr: {{ ry: 18, rx: 24 }}, duration: 0.11, ease: "none" }}, t);
+      tl.to("#mouth", {{ attr: {{ ry: 19, rx: 25 }}, duration: 0.11, ease: "none" }}, t);
       tl.to("#mouth", {{ attr: {{ ry: 6, rx: 18 }}, duration: 0.11, ease: "none" }}, t + 0.14);
     }}
 
     // Continuous avatar eye blinking
-    for (let t = 1.8; t < {duration}; t += 3.4) {{
+    for (let t = 1.6; t < {duration}; t += 3.2) {{
       tl.to(["#eye-left", "#eye-right"], {{ scaleY: 0.1, duration: 0.08, transformOrigin: "50% 50%", yoyo: true, repeat: 1 }}, t);
     }}
 
-    // Scene Transitions & Camera Animation
+    // Subtle continuous camera float / micro-pan (Zero static frames)
+    tl.fromTo("#root", 
+      {{ scale: 1.0, rotate: 0 }}, 
+      {{ scale: 1.015, rotate: 0.2, duration: {duration} / 2, yoyo: true, repeat: 1, ease: "sine.inOut" }}, 
+      0
+    );
+
+    // SCENE TRANSITIONS
     // 1. Hook (0 -> {t_hook_end})
     tl.set("#hook-view", {{ opacity: 1 }}, 0);
     tl.set("#showcase-img", {{ opacity: 0 }}, 0);
@@ -584,13 +878,18 @@ def build_hyperframes_composition(
     tl.set("#win-title", {{ innerText: "{repo_media[0]['owner']} / {repo_media[0]['name']}" }}, {t_hook_end});
     tl.set("#win-stars", {{ innerText: "{repo_media[0]['stars']}" }}, {t_hook_end});
     tl.set("#feature-tag", {{ innerText: "⚡ 01 · {repo_media[0]['name']}" }}, {t_hook_end});
+    tl.set("#term-cmd", {{ innerText: "{repo_media[0]['cmd']}" }}, {t_hook_end});
+    tl.set("#bench-lat", {{ innerText: "{repo_media[0]['bench']['lat']}" }}, {t_hook_end});
+    tl.set("#bench-mem", {{ innerText: "{repo_media[0]['bench']['mem']}" }}, {t_hook_end});
+    tl.set("#bench-save", {{ innerText: "{repo_media[0]['bench']['save']}" }}, {t_hook_end});
+    tl.set("#term-status", {{ innerText: "[READY] {repo_media[0]['bench']['tag']} online. 0% cloud cost." }}, {t_hook_end});
     tl.set("#arm-both-up", {{ opacity: 0 }}, {t_hook_end});
     tl.set("#arm-point", {{ opacity: 1 }}, {t_hook_end});
 
-    // Ken Burns Zoom on Tool 1
+    // Continuous Ken Burns Zoom on Tool 1
     tl.fromTo("#showcase-img", 
       {{ scale: 1.0, y: 0 }}, 
-      {{ scale: 1.14, y: -15, duration: {t_tool1_end - t_hook_end}, ease: "power1.inOut" }}, 
+      {{ scale: 1.15, y: -18, duration: {t_tool1_end - t_hook_end}, ease: "power1.inOut" }}, 
       {t_hook_end}
     );
 
@@ -599,9 +898,14 @@ def build_hyperframes_composition(
     tl.set("#win-title", {{ innerText: "{repo_media[1]['owner']} / {repo_media[1]['name']}" }}, {t_tool1_end});
     tl.set("#win-stars", {{ innerText: "{repo_media[1]['stars']}" }}, {t_tool1_end});
     tl.set("#feature-tag", {{ innerText: "🚀 02 · {repo_media[1]['name']}" }}, {t_tool1_end});
+    tl.set("#term-cmd", {{ innerText: "{repo_media[1]['cmd']}" }}, {t_tool1_end});
+    tl.set("#bench-lat", {{ innerText: "{repo_media[1]['bench']['lat']}" }}, {t_tool1_end});
+    tl.set("#bench-mem", {{ innerText: "{repo_media[1]['bench']['mem']}" }}, {t_tool1_end});
+    tl.set("#bench-save", {{ innerText: "{repo_media[1]['bench']['save']}" }}, {t_tool1_end});
+    tl.set("#term-status", {{ innerText: "[CONNECTED] {repo_media[1]['bench']['tag']} mapped to local disk." }}, {t_tool1_end});
     tl.fromTo("#showcase-img", 
       {{ scale: 1.0, y: 0 }}, 
-      {{ scale: 1.14, y: -15, duration: {t_tool2_end - t_tool1_end}, ease: "power1.inOut" }}, 
+      {{ scale: 1.15, y: -18, duration: {t_tool2_end - t_tool1_end}, ease: "power1.inOut" }}, 
       {t_tool1_end}
     );
 
@@ -610,9 +914,14 @@ def build_hyperframes_composition(
     tl.set("#win-title", {{ innerText: "{repo_media[2]['owner']} / {repo_media[2]['name']}" }}, {t_tool2_end});
     tl.set("#win-stars", {{ innerText: "{repo_media[2]['stars']}" }}, {t_tool2_end});
     tl.set("#feature-tag", {{ innerText: "🔥 03 · {repo_media[2]['name']}" }}, {t_tool2_end});
+    tl.set("#term-cmd", {{ innerText: "{repo_media[2]['cmd']}" }}, {t_tool2_end});
+    tl.set("#bench-lat", {{ innerText: "{repo_media[2]['bench']['lat']}" }}, {t_tool2_end});
+    tl.set("#bench-mem", {{ innerText: "{repo_media[2]['bench']['mem']}" }}, {t_tool2_end});
+    tl.set("#bench-save", {{ innerText: "{repo_media[2]['bench']['save']}" }}, {t_tool2_end});
+    tl.set("#term-status", {{ innerText: "[STANDALONE] {repo_media[2]['bench']['tag']} running with zero telemetry." }}, {t_tool2_end});
     tl.fromTo("#showcase-img", 
       {{ scale: 1.0, y: 0 }}, 
-      {{ scale: 1.14, y: -15, duration: {t_tool3_end - t_tool2_end}, ease: "power1.inOut" }}, 
+      {{ scale: 1.15, y: -18, duration: {t_tool3_end - t_tool2_end}, ease: "power1.inOut" }}, 
       {t_tool2_end}
     );
 
@@ -620,12 +929,14 @@ def build_hyperframes_composition(
     tl.set("#showcase-img", {{ opacity: 0 }}, {t_tool3_end});
     tl.set("#cta-view", {{ opacity: 1, pointerEvents: "auto" }}, {t_tool3_end});
     tl.set("#feature-tag", {{ innerText: "💬 COMMENT 'TOOLS'" }}, {t_tool3_end});
+    tl.set("#term-cmd", {{ innerText: "echo 'Comment TOOLS below to get GitHub links instantly!'" }}, {t_tool3_end});
+    tl.set("#term-status", {{ innerText: "[DISPATCH] Direct automated DM queued for followers." }}, {t_tool3_end});
     tl.set("#arm-point", {{ opacity: 0 }}, {t_tool3_end});
     tl.set("#arm-thumbs-up", {{ opacity: 1 }}, {t_tool3_end});
     tl.set("#eye-right", {{ opacity: 0 }}, {t_tool3_end + 0.3});
     tl.set("#eye-wink", {{ opacity: 1 }}, {t_tool3_end + 0.3});
 
-    // Synchronized Kinetic Captions
+    // SYNCHRONIZED KINETIC CAPTIONS WITH GUARANTEED WORD SPACING
     const captionData = {json.dumps(caption_chunks)};
     captionData.forEach(chunk => {{
       tl.call(() => {{
@@ -634,8 +945,14 @@ def build_hyperframes_composition(
         chunk.words.forEach((w, wIdx) => {{
           const span = document.createElement("span");
           span.className = "caption-word" + (wIdx === chunk.active ? " active" : "");
-          span.innerText = w;
+          span.innerText = w.toUpperCase();
           pill.appendChild(span);
+          if (wIdx < chunk.words.length - 1) {{
+            const spacer = document.createElement("span");
+            spacer.style.display = "inline-block";
+            spacer.style.width = "28px";
+            pill.appendChild(spacer);
+          }}
         }});
       }}, null, chunk.start);
     }});

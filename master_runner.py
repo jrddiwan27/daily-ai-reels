@@ -6,6 +6,7 @@ from pipeline.creator_radar import fetch_creator_trending_transcripts
 from pipeline.repo_asset_scraper import scrape_and_cache_all
 from pipeline.ai_scriptwriter import generate_viral_script_with_gemini
 from pipeline.fish_audio_client import generate_voiceover, generate_caption_chunks
+from pipeline.audio_enhancer import produce_master_audio
 from pipeline.composition_compiler import build_hyperframes_composition
 from pipeline.buffer_dispatcher import dispatch_to_buffer
 
@@ -72,9 +73,12 @@ def run_daily_pipeline():
     print(f"[*] Executing: {render_cmd}")
     res = subprocess.call(render_cmd, shell=True)
     
-    # Multiplex synchronized audio track
-    print(f"[*] Multiplexing voiceover ({audio_path}) into final video via FFmpeg...")
-    mux_cmd = f"ffmpeg -y -i {raw_mp4} -i {audio_path} -c:v copy -c:a aac -b:a 192k -shortest {out_mp4}"
+    # Multiplex synchronized broadcast audio track with SFX and beat
+    print(f"[*] Producing broadcast master audio (voice + SFX + cyber beat)...")
+    master_audio = produce_master_audio(voice_path=audio_path, duration=dur)
+    
+    print(f"[*] Multiplexing master audio ({master_audio}) into final video via FFmpeg...")
+    mux_cmd = f"ffmpeg -y -i {raw_mp4} -i {master_audio} -c:v copy -c:a aac -b:a 192k -shortest {out_mp4}"
     subprocess.check_call(mux_cmd, shell=True)
     
     if not os.path.exists(out_mp4):
