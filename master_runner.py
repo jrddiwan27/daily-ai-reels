@@ -73,8 +73,8 @@ def run_daily_pipeline():
         f"5 Insane Open-Source AI Developer Repos You Need Today! 🚀\n\n"
         f"1. {repos[0]['name']}\n2. {repos[1]['name']}\n3. {repos[2]['name']}\n"
         f"4. {repos[3]['name']}\n5. {repos[4]['name']}\n\n"
-        f"Comment 'REPOS' and I'll DM you all 5 links!\n"
-        f"#developer #ai #opensource #github #coding #programming #webdev"
+        f"Comment 'REPOS' and I'll DM you all 5 links!\n\n"
+        f"#developer #ai #opensource #github #coding"
     )
     dispatch_to_buffer(out_mp4, caption)
 
