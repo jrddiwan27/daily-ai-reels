@@ -3,10 +3,30 @@ import json
 import time
 import requests
 
+import subprocess
+
 BUFFER_ACCESS_TOKEN = os.environ.get("BUFFER_ACCESS_TOKEN") or "gCUwoZC7cOjHobBSz5a9S3a4nrBh1PF8mydBp6_Rku2"
 DEFAULT_CHANNEL_ID = os.environ.get("BUFFER_CHANNEL_ID") or "6ac7f82a6a5c39ccb6564f06" # jayant.digitalstudio
-GITHUB_TOKEN = os.environ.get("GITHUB_TOKEN")
 GITHUB_REPO = os.environ.get("GITHUB_REPOSITORY") or "jrddiwan27/daily-ai-reels"
+
+def get_github_token():
+    token = os.environ.get("GITHUB_TOKEN")
+    if token:
+        return token
+    try:
+        res = subprocess.check_output(
+            "printf 'protocol=https\\nhost=github.com\\n' | git credential fill",
+            shell=True,
+            text=True
+        )
+        for line in res.splitlines():
+            if line.startswith("password="):
+                return line.split("=", 1)[1].strip()
+    except Exception:
+        pass
+    return None
+
+GITHUB_TOKEN = get_github_token()
 
 def upload_video_to_github_release(file_path: str) -> str:
     """
