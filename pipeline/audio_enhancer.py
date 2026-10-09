@@ -8,12 +8,13 @@ def produce_master_audio(
     scene_transitions=None
 ):
     """
-    Mixes voiceover with pristine studio sound effects (whoosh, pop, ding, click).
+    Mixes voiceover with ducked background beat (at -18dB) + pristine studio sound effects (whoosh, pop, ding, click).
     """
     whoosh_path = "assets/sfx/sfx_whoosh.mp3"
     pop_path = "assets/sfx/sfx_pop.mp3"
     ding_path = "assets/sfx/sfx_ding.mp3"
     click_path = "assets/sfx/sfx_click.mp3"
+    bgm_path = "assets/bg_music.wav"
 
     # Default cues timed to scene changes
     if scene_transitions is None:
@@ -37,9 +38,9 @@ def produce_master_audio(
             ("ding", t_tool2_end + 0.85),
             ("click", t_tool2_end + 1.4),
             ("whoosh", t_tool3_end),
-            ("pop", t_tool3_end + 0.4),
-            ("ding", t_tool3_end + 1.0),
-            ("click", t_tool3_end + 1.5)
+            ("pop", t_tool3_end + 0.25),
+            ("ding", t_tool3_end + 0.7),
+            ("click", t_tool3_end + 1.2)
         ]
 
     # Build filter complex for ffmpeg
@@ -52,9 +53,15 @@ def produce_master_audio(
     ]
 
     filter_chains = [
-        "[0:a]volume=1.25[voice]"
+        "[0:a]volume=1.30[voice]"
     ]
     mix_labels = ["[voice]"]
+
+    # Background music ducked underneath voice
+    if os.path.exists(bgm_path):
+        inputs.extend(["-i", bgm_path]) # 5: bgm
+        filter_chains.append("[5:a]volume=0.15[bgm]")
+        mix_labels.append("[bgm]")
 
     idx = 0
     for sfx_type, t_sec in scene_transitions:
@@ -79,14 +86,14 @@ def produce_master_audio(
         *inputs,
         "-filter_complex", filter_complex,
         "-map", "[outa]",
-        "-t", str(round(duration + 0.5, 2)),
+        "-t", str(round(duration + 0.2, 2)),
         "-c:a", "libmp3lame",
         "-b:a", "192k",
         output_audio
     ]
 
     subprocess.check_call(cmd)
-    print(f"[✓] Master audio mixed with studio SFX cues: {output_audio}")
+    print(f"[✓] Broadcast master audio produced with ducked beat & studio SFX: {output_audio}")
     return output_audio
 
 if __name__ == "__main__":

@@ -67,7 +67,7 @@
     .crosshair {
       position: absolute;
       font-family: monospace;
-      font-size: 22px;
+      font-size: 24px;
       font-weight: 900;
       color: rgba(23, 24, 25, 0.28);
       pointer-events: none;
@@ -165,7 +165,7 @@
       pointer-events: none;
     }
 
-    /* Studio Desk (Dynamically colored per scene) */
+    /* Studio Desk */
     .desk {
       position: absolute;
       left: 0;
@@ -292,7 +292,7 @@
       pointer-events: none;
     }
 
-    /* Upper Repo Card Base (top: 95px, width: 660px, height: 145px) */
+    /* Upper Repo Card Base */
     .upper-card {
       position: absolute;
       left: 30px;
@@ -342,7 +342,7 @@
       line-height: 1.35;
     }
 
-    /* Grounded Tech Console (Starts at top: 255px, resting directly on desk surface) */
+    /* Grounded Tech Console */
     .tech-console {
       position: absolute;
       left: 30px;
@@ -380,11 +380,11 @@
 
     .demo-media-box {
       width: 100%;
-      height: 165px;
+      height: 155px;
       border-radius: 10px;
       overflow: hidden;
       border: 2.5px solid #374151;
-      margin-bottom: 12px;
+      margin-bottom: 10px;
       background: #000;
       box-shadow: inset 0 2px 4px rgba(0,0,0,0.5);
       position: relative;
@@ -396,7 +396,7 @@
       display: block;
     }
 
-    /* Bottom Tactile Keyboard Keycaps Captions on Desk Front (Reference Gold Standard) */
+    /* Bottom Tactile Keyboard Keycaps Captions on Desk Front */
     .captions-wrapper {
       position: absolute;
       left: 0;
@@ -434,7 +434,7 @@
       box-shadow: 2px 2px 0 #000000;
     }
 
-    /* Phone Mockup for Outro (Grounded directly on desk surface) */
+    /* Phone Mockup for Outro */
     .phone-mockup {
       position: absolute;
       left: 45px;
@@ -480,10 +480,10 @@
     <div id="bg-outro" class="bg-layer bg-outro"></div>
 
     <!-- Floating Crosshairs -->
-    <div class="crosshair" style="left: 40px; top: 90px;">+</div>
-    <div class="crosshair" style="right: 50px; top: 120px;">+</div>
-    <div class="crosshair" style="left: 30px; top: 480px;">+</div>
-    <div class="crosshair" style="right: 40px; top: 520px;">+</div>
+    <div class="crosshair ch1" style="left: 40px; top: 90px;">+</div>
+    <div class="crosshair ch2" style="right: 50px; top: 120px;">+</div>
+    <div class="crosshair ch3" style="left: 30px; top: 480px;">+</div>
+    <div class="crosshair ch4" style="right: 40px; top: 520px;">+</div>
 
     <!-- Audio Elements for HyperFrames Native Mixer -->
     <audio id="voice" src="assets/voice.mp3" data-start="0" data-duration="28.76" data-volume="1"></audio>
@@ -497,7 +497,7 @@
     <audio id="sfx-whoosh-4" src="assets/sfx/sfx_whoosh.mp3" data-start="19.56" data-duration="0.5" data-volume="0.6"></audio>
     <audio id="sfx-pop-3" src="assets/sfx/sfx_pop.mp3" data-start="19.91" data-duration="0.5" data-volume="0.5"></audio>
     <audio id="sfx-whoosh-5" src="assets/sfx/sfx_whoosh.mp3" data-start="25.31" data-duration="0.5" data-volume="0.6"></audio>
-    <audio id="sfx-click-1" src="assets/sfx/sfx_click.mp3" data-start="25.81" data-duration="0.3" data-volume="0.6"></audio>
+    <audio id="sfx-click-1" src="assets/sfx/sfx_click.mp3" data-start="25.56" data-duration="0.3" data-volume="0.6"></audio>
 
     <!-- Top Left Comic Sticker Badge -->
     <div id="top-badge" class="top-badge">STOP PAYING FOR AI</div>
@@ -547,12 +547,8 @@
 
         <!-- Arms -->
         <g id="arm-left">
-          <!-- Pointing Arm (Rigged with complete resting left sleeve and pointing right hand) -->
+          <!-- Pointing Arm (Default when presenting on right) -->
           <g id="arm-point" opacity="0">
-            <!-- Resting left arm on desk -->
-            <path d="M140 330 C110 350, 100 400, 130 435" fill="none" stroke="#171819" stroke-width="44" stroke-linecap="round"/>
-            <path d="M140 330 C110 350, 100 400, 130 435" fill="none" stroke="#756D65" stroke-width="36" stroke-linecap="round"/>
-            <!-- Pointing right arm pointing up and across to console -->
             <path d="M340 330 C380 320, 390 260, 375 220" fill="none" stroke="#171819" stroke-width="44" stroke-linecap="round"/>
             <path d="M340 330 C380 320, 390 260, 375 220" fill="none" stroke="#756D65" stroke-width="36" stroke-linecap="round"/>
             <g transform="translate(365, 170)">
@@ -583,10 +579,8 @@
             </g>
           </g>
 
-          <!-- Thumbs Up Arm (Outro) -->
+          <!-- Confident Thumbs Up Arm (Outro) -->
           <g id="arm-thumbs-up" opacity="0">
-            <path d="M140 330 C110 350, 100 400, 130 435" fill="none" stroke="#171819" stroke-width="44" stroke-linecap="round"/>
-            <path d="M140 330 C110 350, 100 400, 130 435" fill="none" stroke="#756D65" stroke-width="36" stroke-linecap="round"/>
             <path d="M340 330 C370 320, 380 280, 360 240" fill="none" stroke="#171819" stroke-width="44" stroke-linecap="round"/>
             <path d="M340 330 C370 320, 380 280, 360 240" fill="none" stroke="#756D65" stroke-width="36" stroke-linecap="round"/>
             <g transform="translate(350, 200)">
@@ -652,7 +646,6 @@
 
     <!-- SCENE 1: Hook (0 - 3.7388000000000003s) -->
     <div id="scene-hook" class="scene-layer" style="opacity: 1;">
-      <!-- Giant Comic Strip in Hook -->
       <div id="hook-strip" style="position: absolute; left: 45px; top: 130px; width: 630px; background: #FFFFFF; border: 5px solid #171819; border-radius: 20px; box-shadow: 8px 10px 0 #171819; padding: 20px;">
         <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px;">
           <div style="display: flex; align-items: center; gap: 8px;">
@@ -695,7 +688,6 @@
 
     <!-- SCENE 2: Repo 1 - TT-Metal (3.7388000000000003 - 11.504000000000001s) -->
     <div id="scene-tool1" class="scene-layer" style="opacity: 0;">
-      <!-- Upper Repo Card Base -->
       <div class="upper-card">
         <div class="repo-header">
           <span class="repo-icon">⚡</span>
@@ -708,7 +700,7 @@
         </div>
       </div>
 
-      <!-- Grounded Tech Console with REAL SCRAPED DEMO MEDIA -->
+      <!-- Grounded Tech Console with KINETIC HARDWARE COMPILER BAR -->
       <div class="tech-console">
         <div class="console-header">
           <div class="console-dots">
@@ -719,23 +711,33 @@
           <div class="console-title">Silicon Operator Compiler</div>
         </div>
         
-        <!-- Embedded Real Screenshot/Demo Image -->
         <div class="demo-media-box">
           <img src="assets/repos/tenstorrent_tt-metal/demo.png" alt="TT-Metal Demo">
         </div>
 
-        <div style="background: #2D3748; border-radius: 8px; padding: 7px 10px; font-size: 12px; color: #68D391; margin-bottom: 10px; border: 2px solid #4A5568;">
+        <!-- Kinetic Hardware Compiler Gauge -->
+        <div id="t1-comp-box" style="background: #0F172A; border: 2px solid #3B82F6; border-radius: 8px; padding: 8px 10px; margin-bottom: 8px;">
+          <div style="display: flex; justify-content: space-between; font-size: 11px; font-weight: 900; color: #93C5FD; margin-bottom: 5px;">
+            <span>⚡ HARDWARE COMPILER</span>
+            <span id="t1-prog-text" style="color: #60A5FA;">100% COMPILED</span>
+          </div>
+          <div style="width: 100%; height: 8px; background: #1E293B; border-radius: 4px; overflow: hidden; border: 1.5px solid #171819;">
+            <div id="t1-bar" style="width: 0%; height: 100%; background: linear-gradient(90deg, #2563EB, #60A5FA); border-radius: 4px;"></div>
+          </div>
+        </div>
+
+        <div style="background: #2D3748; border-radius: 8px; padding: 6px 10px; font-size: 11px; color: #68D391; margin-bottom: 8px; border: 1.5px solid #4A5568;">
           &gt; git clone tenstorrent/tt-metal &amp;&amp; make run
         </div>
-        <div style="display: flex; flex-direction: column; gap: 7px; font-size: 12px; line-height: 1.35;">
-          <div id="t1-step-1" style="color: #63B3ED; opacity: 0; background: #1E293B; padding: 6px 8px; border-radius: 6px; border-left: 4px solid #63B3ED;">
+        <div style="display: flex; flex-direction: column; gap: 6px; font-size: 12px; line-height: 1.35;">
+          <div id="t1-step-1" style="color: #63B3ED; opacity: 0; background: #1E293B; padding: 5px 8px; border-radius: 6px; border-left: 4px solid #63B3ED;">
             [✓] Mapping low-level tensor kernels
           </div>
-          <div id="t1-step-2" style="color: #68D391; opacity: 0; background: #1E293B; padding: 6px 8px; border-radius: 6px; border-left: 4px solid #68D391;">
+          <div id="t1-step-2" style="color: #68D391; opacity: 0; background: #1E293B; padding: 5px 8px; border-radius: 6px; border-left: 4px solid #68D391;">
             [✓] Silicon hardware acceleration: ACTIVE
           </div>
-          <div id="t1-step-3" style="color: #F6AD55; opacity: 0; background: #2D3748; padding: 6px 8px; border-radius: 6px; border: 1.5px solid #F6AD55;">
-            ⚡ LATENCY: 3.8ms · MEMORY: 1.2 TB/s
+          <div id="t1-step-3" style="color: #F6AD55; opacity: 0; background: #2D3748; padding: 5px 8px; border-radius: 6px; border: 1.5px solid #F6AD55;">
+            ⚡ LATENCY: 3.8ms · MEMORY: 1.2 TB/s HBM3
           </div>
         </div>
         <div id="t1-badge" style="margin-top: auto; opacity: 0; background: #2563EB; color: #FFF; padding: 8px 10px; border-radius: 8px; font-weight: 950; text-align: center; font-size: 12px; box-shadow: 0 4px 0 #1D4ED8;">
@@ -758,7 +760,7 @@
         </div>
       </div>
 
-      <!-- Grounded Tech Console with REAL SCRAPED BANNER -->
+      <!-- Grounded Tech Console with KINETIC CONTEXT COMPACTION GAUGE -->
       <div class="tech-console">
         <div class="console-header">
           <div class="console-dots">
@@ -769,22 +771,35 @@
           <div class="console-title">Lifelong Memory Hippocampus</div>
         </div>
 
-        <!-- Embedded Real Screenshot/OG Banner -->
         <div class="demo-media-box">
           <img src="assets/repos/cortexkit_magic-context/og_banner.png" alt="Magic-Context Banner">
         </div>
 
-        <div style="background: #2D3748; border-radius: 8px; padding: 7px 10px; font-size: 12px; color: #68D391; margin-bottom: 10px; border: 2px solid #4A5568;">
+        <!-- Kinetic Context Compaction Gauge -->
+        <div id="t2-ctx-box" style="background: #064E3B; border: 2px solid #10B981; border-radius: 8px; padding: 8px 10px; margin-bottom: 8px;">
+          <div style="display: flex; justify-content: space-between; font-size: 11px; font-weight: 900; color: #A7F3D0; margin-bottom: 4px;">
+            <span>🧠 CONTEXT REDUCTION</span>
+            <span style="color: #34D399; font-weight: 950;">-99.1% SAVED</span>
+          </div>
+          <div style="display: flex; gap: 8px; align-items: center; font-size: 11px;">
+            <div style="flex: 1; height: 8px; background: #065F46; border-radius: 4px; overflow: hidden;">
+              <div id="t2-bar" style="width: 0%; height: 100%; background: #34D399;"></div>
+            </div>
+            <span style="color: #E2E8F0; font-size: 10px; font-weight: 800;">128k → 1.2k tok</span>
+          </div>
+        </div>
+
+        <div style="background: #2D3748; border-radius: 8px; padding: 6px 10px; font-size: 11px; color: #68D391; margin-bottom: 8px; border: 1.5px solid #4A5568;">
           &gt; npx @cortexkit/magic-context --lifelong-session
         </div>
-        <div style="display: flex; flex-direction: column; gap: 7px; font-size: 12px; line-height: 1.35;">
-          <div id="t2-step-1" style="color: #63B3ED; opacity: 0; background: #1E293B; padding: 6px 8px; border-radius: 6px; border-left: 4px solid #63B3ED;">
+        <div style="display: flex; flex-direction: column; gap: 6px; font-size: 12px; line-height: 1.35;">
+          <div id="t2-step-1" style="color: #63B3ED; opacity: 0; background: #1E293B; padding: 5px 8px; border-radius: 6px; border-left: 4px solid #63B3ED;">
             [✓] Unbounded session context attached
           </div>
-          <div id="t2-step-2" style="color: #68D391; opacity: 0; background: #1E293B; padding: 6px 8px; border-radius: 6px; border-left: 4px solid #68D391;">
+          <div id="t2-step-2" style="color: #68D391; opacity: 0; background: #1E293B; padding: 5px 8px; border-radius: 6px; border-left: 4px solid #68D391;">
             [✓] 100% Offline local disk storage
           </div>
-          <div id="t2-step-3" style="color: #F6AD55; opacity: 0; background: #2D3748; padding: 6px 8px; border-radius: 6px; border: 1.5px solid #F6AD55;">
+          <div id="t2-step-3" style="color: #F6AD55; opacity: 0; background: #2D3748; padding: 5px 8px; border-radius: 6px; border: 1.5px solid #F6AD55;">
             🔒 Zero telemetry · One session for life
           </div>
         </div>
@@ -808,7 +823,7 @@
         </div>
       </div>
 
-      <!-- Grounded Tech Console with REAL SCRAPED DEMO IMAGE -->
+      <!-- Grounded Tech Console with MECHANICAL UNREAD EMAIL ODOMETER -->
       <div class="tech-console">
         <div class="console-header">
           <div class="console-dots">
@@ -819,23 +834,28 @@
           <div class="console-title">Automated Inbox Cleaner</div>
         </div>
 
-        <!-- Embedded Real Screenshot/Demo Image -->
         <div class="demo-media-box">
           <img src="assets/repos/elie222_inbox-zero/demo.jpg" alt="Inbox-Zero Demo">
         </div>
 
-        <div style="background: #2D3748; border-radius: 8px; padding: 7px 10px; font-size: 12px; color: #68D391; margin-bottom: 10px; border: 2px solid #4A5568;">
+        <!-- Mechanical Unread Email Countdown Odometer -->
+        <div id="t3-ticker-box" style="background: #7C2D12; border: 2px solid #EA580C; border-radius: 8px; padding: 8px 10px; margin-bottom: 8px; text-align: center;">
+          <div style="font-size: 10px; font-weight: 900; color: #FED7AA; letter-spacing: 0.08em; margin-bottom: 2px;">UNREAD EMAILS CLEANING</div>
+          <div id="t3-counter" style="font-size: 26px; font-weight: 950; color: #FFF; font-family: monospace; letter-spacing: 0.05em; line-height: 1;">1,420</div>
+        </div>
+
+        <div style="background: #2D3748; border-radius: 8px; padding: 6px 10px; font-size: 11px; color: #68D391; margin-bottom: 8px; border: 1.5px solid #4A5568;">
           &gt; docker compose up -d inbox-zero
         </div>
-        <div style="display: flex; flex-direction: column; gap: 7px; font-size: 12px; line-height: 1.35;">
-          <div id="t3-step-1" style="color: #63B3ED; opacity: 0; background: #1E293B; padding: 6px 8px; border-radius: 6px; border-left: 4px solid #63B3ED;">
+        <div style="display: flex; flex-direction: column; gap: 6px; font-size: 12px; line-height: 1.35;">
+          <div id="t3-step-1" style="color: #63B3ED; opacity: 0; background: #1E293B; padding: 5px 8px; border-radius: 6px; border-left: 4px solid #63B3ED;">
             [✓] Cleared 1,420 unread developer newsletters
           </div>
-          <div id="t3-step-2" style="color: #68D391; opacity: 0; background: #1E293B; padding: 6px 8px; border-radius: 6px; border-left: 4px solid #68D391;">
+          <div id="t3-step-2" style="color: #68D391; opacity: 0; background: #1E293B; padding: 5px 8px; border-radius: 6px; border-left: 4px solid #68D391;">
             [✓] Auto-categorized critical pull requests
           </div>
-          <div id="t3-step-3" style="color: #F6AD55; opacity: 0; background: #2D3748; padding: 6px 8px; border-radius: 6px; border: 1.5px solid #F6AD55;">
-            ⏱️ Saved 240+ developer hours this month
+          <div id="t3-zero-badge" style="opacity: 0; background: #10B981; color: #171819; font-weight: 950; padding: 6px 10px; border-radius: 6px; text-align: center; border: 2px solid #FFF;">
+            🎉 INBOX ZERO ACHIEVED! (0 UNREAD)
           </div>
         </div>
         <div id="t3-badge" style="margin-top: auto; opacity: 0; background: #EA580C; color: #FFF; padding: 8px 10px; border-radius: 8px; font-weight: 950; text-align: center; font-size: 12px; box-shadow: 0 4px 0 #C2410C;">
@@ -858,11 +878,11 @@
             </div>
           </div>
           <!-- User Comment Bubble -->
-          <div id="dm-bubble" style="opacity: 0; align-self: flex-end; background: #2563EB; color: #FFF; font-weight: 950; font-size: 17px; padding: 10px 18px; border-radius: 18px 18px 4px 18px; margin-bottom: 16px; box-shadow: 0 4px 12px rgba(37,99,235,0.3);">
+          <div id="dm-bubble" style="opacity: 0; align-self: flex-end; background: #2563EB; color: #FFF; font-weight: 950; font-size: 17px; padding: 10px 18px; border-radius: 18px 18px 4px 18px; margin-bottom: 14px; box-shadow: 0 4px 12px rgba(37,99,235,0.3);">
             TOOLS
           </div>
           <!-- Automated DM Reply with 3 Repos -->
-          <div id="dm-reply" style="opacity: 0; background: #F8FAFC; border: 2px solid #E2E8F0; border-radius: 18px; padding: 14px; display: flex; flex-direction: column; gap: 10px;">
+          <div id="dm-reply" style="opacity: 0; background: #F8FAFC; border: 2px solid #E2E8F0; border-radius: 18px; padding: 12px; display: flex; flex-direction: column; gap: 8px;">
             <div style="font-size: 12px; font-weight: 900; color: #64748B;">Automated Instant Delivery:</div>
             <div style="display: flex; align-items: center; gap: 8px; background: #FFF; padding: 8px 10px; border-radius: 10px; border: 1.5px solid #CBD5E1;">
               <span style="font-size: 16px;">⚡</span>
@@ -913,6 +933,9 @@
         tl.set(sc.id, { opacity: 0 }, sc.end);
       }
 
+      // Background subtle push-in motion (zero static frames)
+      tl.fromTo(sc.id, { scale: 1.0 }, { scale: 1.025, duration: sc.end - sc.start, ease: "none" }, sc.start);
+
       tl.to(sc.bg, { opacity: 1, duration: 0.35 }, sc.start);
       if (sc.end < 28.76) {
         tl.to(sc.bg, { opacity: 0, duration: 0.35 }, sc.end);
@@ -955,33 +978,58 @@
     // --- SCENE 2: TOOL 1 - TT-METAL (3.7388000000000003 - 11.504000000000001s) ---
     tl.fromTo("#scene-tool1 .upper-card", { x: -60, opacity: 0 }, { x: 0, opacity: 1, duration: 0.45, ease: "back.out(1.5)" }, 3.7388000000000003);
     tl.fromTo("#scene-tool1 .tech-console", { y: 80, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5, ease: "back.out(1.4)" }, 3.8388000000000004);
-    tl.fromTo("#t1-step-1", { x: -20, opacity: 0 }, { x: 0, opacity: 1, duration: 0.35 }, 4.5388);
-    tl.fromTo("#t1-step-2", { x: -20, opacity: 0 }, { x: 0, opacity: 1, duration: 0.35 }, 5.5388);
+    
+    // Kinetic Hardware Compilation Bar animation
+    tl.to("#t1-bar", { width: "100%", duration: 1.4, ease: "power2.out" }, 4.5388);
+
+    tl.fromTo("#t1-step-1", { x: -20, opacity: 0 }, { x: 0, opacity: 1, duration: 0.35 }, 4.9388000000000005);
+    tl.fromTo("#t1-step-2", { x: -20, opacity: 0 }, { x: 0, opacity: 1, duration: 0.35 }, 5.7388);
     tl.fromTo("#t1-step-3", { scale: 0.9, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.35, ease: "back.out(1.5)" }, 6.5388);
-    tl.fromTo("#t1-badge", { scale: 0.8, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.35, ease: "back.out(2)" }, 7.5388);
+    tl.fromTo("#t1-badge", { scale: 0.8, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.35, ease: "back.out(2)" }, 7.338800000000001);
 
     // --- SCENE 3: TOOL 2 - MAGIC-CONTEXT (11.504000000000001 - 19.556800000000003s) ---
     tl.fromTo("#scene-tool2 .upper-card", { x: -60, opacity: 0 }, { x: 0, opacity: 1, duration: 0.45, ease: "back.out(1.5)" }, 11.504000000000001);
     tl.fromTo("#scene-tool2 .tech-console", { y: 80, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5, ease: "back.out(1.4)" }, 11.604000000000001);
-    tl.fromTo("#t2-step-1", { x: -20, opacity: 0 }, { x: 0, opacity: 1, duration: 0.35 }, 12.304000000000002);
-    tl.fromTo("#t2-step-2", { x: -20, opacity: 0 }, { x: 0, opacity: 1, duration: 0.35 }, 13.304000000000002);
+
+    // Kinetic Context Reduction Bar animation
+    tl.to("#t2-bar", { width: "99%", duration: 1.4, ease: "power2.out" }, 12.304000000000002);
+
+    tl.fromTo("#t2-step-1", { x: -20, opacity: 0 }, { x: 0, opacity: 1, duration: 0.35 }, 12.704);
+    tl.fromTo("#t2-step-2", { x: -20, opacity: 0 }, { x: 0, opacity: 1, duration: 0.35 }, 13.504000000000001);
     tl.fromTo("#t2-step-3", { scale: 0.9, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.35, ease: "back.out(1.5)" }, 14.304000000000002);
-    tl.fromTo("#t2-badge", { scale: 0.8, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.35, ease: "back.out(2)" }, 15.304000000000002);
+    tl.fromTo("#t2-badge", { scale: 0.8, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.35, ease: "back.out(2)" }, 15.104000000000001);
 
     // --- SCENE 4: TOOL 3 - INBOX-ZERO (19.556800000000003 - 25.3088s) ---
     tl.fromTo("#scene-tool3 .upper-card", { x: -60, opacity: 0 }, { x: 0, opacity: 1, duration: 0.45, ease: "back.out(1.5)" }, 19.556800000000003);
     tl.fromTo("#scene-tool3 .tech-console", { y: 80, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5, ease: "back.out(1.4)" }, 19.656800000000004);
-    tl.fromTo("#t3-step-1", { x: -20, opacity: 0 }, { x: 0, opacity: 1, duration: 0.35 }, 20.356800000000003);
+
+    // Mechanical Unread Email Odometer Countdown (1,420 -> 0)
+    let emailCounterObj = { val: 1420 };
+    tl.to(emailCounterObj, {
+      val: 0,
+      duration: 1.6,
+      ease: "power2.inOut",
+      onUpdate: () => {
+        const el = document.getElementById("t3-counter");
+        if (el) el.innerText = Math.round(emailCounterObj.val).toLocaleString();
+      }
+    }, 20.156800000000004);
+
+    tl.fromTo("#t3-step-1", { x: -20, opacity: 0 }, { x: 0, opacity: 1, duration: 0.35 }, 20.556800000000003);
     tl.fromTo("#t3-step-2", { x: -20, opacity: 0 }, { x: 0, opacity: 1, duration: 0.35 }, 21.356800000000003);
-    tl.fromTo("#t3-step-3", { scale: 0.9, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.35, ease: "back.out(1.5)" }, 22.356800000000003);
-    tl.fromTo("#t3-badge", { scale: 0.8, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.35, ease: "back.out(2)" }, 23.156800000000004);
+    
+    // INBOX ZERO ACHIEVED badge slam right as counter reaches 0
+    tl.fromTo("#t3-zero-badge", { scale: 1.8, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.35, ease: "bounce.out" }, 21.856800000000003);
+    tl.fromTo("#t3-badge", { scale: 0.8, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.35, ease: "back.out(2)" }, 22.756800000000002);
 
     // --- SCENE 5: OUTRO (25.3088 - 28.76s) ---
     tl.set("#arm-point", { opacity: 0 }, 25.3088);
     tl.set("#arm-thumbs-up", { opacity: 1 }, 25.3088);
-    tl.fromTo("#scene-outro .phone-mockup", { y: 120, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5, ease: "back.out(1.4)" }, 25.3088);
-    tl.fromTo("#dm-bubble", { scale: 0.8, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.35, ease: "back.out(2)" }, 25.7088);
-    tl.fromTo("#dm-reply", { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.45, ease: "back.out(1.5)" }, 26.108800000000002);
+
+    // Phone and chat elements drop in immediately for max readability
+    tl.fromTo("#scene-outro .phone-mockup", { y: 120, opacity: 0 }, { y: 0, opacity: 1, duration: 0.45, ease: "back.out(1.4)" }, 25.3088);
+    tl.fromTo("#dm-bubble", { scale: 0.8, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.3, ease: "back.out(2)" }, 25.5588);
+    tl.fromTo("#dm-reply", { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.4, ease: "back.out(1.5)" }, 25.858800000000002);
 
     // Continuous micro head-bob
     tl.to("#head", { y: -3, duration: 0.22, repeat: -1, yoyo: true, ease: "sine.inOut" }, 0);
@@ -1001,6 +1049,9 @@
     for (let t = 2.0; t < 27.76; t += 4.5) {
       tl.to(["#brow-left", "#brow-right"], { y: -5, duration: 0.2, yoyo: true, repeat: 1 }, t);
     }
+
+    // Continuous floating crosshair drift
+    tl.to(".crosshair", { y: "+=12", rotation: 30, duration: 5, repeat: -1, yoyo: true, ease: "sine.inOut" }, 0);
 
     // Rising steam bubbles
     tl.to("#steam-1", { y: -25, opacity: 0, duration: 1.8, repeat: -1, ease: "power1.out" }, 0);
