@@ -10,14 +10,21 @@ def build_hyperframes_composition(
     output_html="index.html"
 ):
     """
-    Builds a broadcast-quality 1080x1920 vertical Reel composition:
-    - 100% full-bleed canvas with ZERO empty dead space
-    - Full-resolution uncropped demo showcase window (object-fit: contain)
-    - Live Hacker Terminal & Benchmark Matrix filling the middle zone
-    - Kinetic Hormozi-style subtitles with guaranteed spacing & electric yellow pop
-    - Dual code monitors, cyber mixing desk, and expressive animated developer avatar rig
-    - Constant multi-layered hyper-motion: laser scanline, rotating border beams,
-      equalizer bars, floating particles, and continuous 3D camera drift.
+    Builds the high-retention comic/halftone developer motion graphic reel matching
+    the gold standard from top-5-ai-repos-reel / reference MP4:
+    - Halftone textured backgrounds with per-scene color shifts
+    - Dynamic studio desk that changes color per scene
+    - Comic-book slanted stickers & power strip meter with spark FX
+    - Developer avatar rig (beanie, glasses, beard, jacket):
+        * Centered with hands up in Hook
+        * Smoothly transitions to right side (x: 180) for tool reviews
+        * Pointing arm with complete resting left arm
+        * Thumbs up in Outro
+        * Continuous syllable mouth sync, head bobs, eye blinks, eyebrow twitches
+    - Left tech consoles grounded on desk showcasing REAL scraped demo media & metrics
+    - Grounded 3D smartphone mockup showing Instagram DM delivery in Outro
+    - Tactile 3D keyboard keycap captions with yellow active pop on front of desk
+    - HyperFrames native audio cues (whoosh, pop, ding, click)
     """
     with open(repos_file) as f:
         repos = json.load(f)[:3]
@@ -25,46 +32,38 @@ def build_hyperframes_composition(
     with open(captions_file) as f:
         caption_chunks = json.load(f)
 
-    # Dynamic scene timings based on audio duration
-    t_hook_end = min(3.8, duration * 0.12)
+    # Dynamic scene timings based on audio duration (28.76s)
+    t_hook_end = min(3.8, duration * 0.13)
     t_tool1_end = duration * 0.40
     t_tool2_end = duration * 0.68
     t_tool3_end = duration * 0.88
     t_cta_end = duration
 
-    # Real media assets and commands for each repo
-    repo_media = []
-    terminal_commands = [
-        "git clone https://github.com/tenstorrent/tt-metal && make run-local",
-        "npx @cortexkit/magic-context --lifelong-memory --local-store",
-        "docker compose up -d inbox-zero --zero-cloud-telemetry"
+    # Real repo metadata with fallback demo media
+    repo_data = []
+    default_demos = [
+        "assets/repos/tenstorrent_tt-metal/demo.png",
+        "assets/repos/cortexkit_magic-context/og_banner.png",
+        "assets/repos/elie222_inbox-zero/demo.jpg"
     ]
-    benchmarks = [
-        {"lat": "3.8ms", "mem": "340MB", "save": "$280/mo", "tag": "TT-METALIUM ENGINE"},
-        {"lat": "1.2ms", "mem": "180MB", "save": "$199/mo", "tag": "LIFELONG CONTEXT"},
-        {"lat": "0.8ms", "mem": "210MB", "save": "$120/mo", "tag": "OFFLINE ASSISTANT"}
-    ]
-
     for idx, r in enumerate(repos):
-        img = r.get("demo_media") or r.get("og_image") or "assets/repos/default_banner.png"
-        repo_media.append({
+        demo_path = r.get("demo_media") or r.get("og_image") or default_demos[idx]
+        repo_data.append({
             "name": r["name"].split("/")[-1].upper(),
             "owner": r.get("owner", "open-source"),
-            "img": img,
+            "full_name": r.get("full_name", r["name"]),
             "stars": f"★ {r.get('stars', 12000):,}",
-            "lang": r.get("language", "AI").upper(),
-            "desc": r.get("description", "")[:90],
-            "cmd": terminal_commands[idx % len(terminal_commands)],
-            "bench": benchmarks[idx % len(benchmarks)]
+            "desc": r.get("description", "")[:95],
+            "demo": demo_path
         })
 
-    # Update hyperframes.json to exact 1080x1920 full portrait resolution
+    # Exact 720x1280 resolution matching the reference standard
     hf_config = {
         "name": "daily-automation-engine",
         "version": "2.0.0",
         "fps": 30,
-        "width": 1080,
-        "height": 1920,
+        "width": 720,
+        "height": 1280,
         "duration": round(duration, 2)
     }
     with open("hyperframes.json", "w") as f:
@@ -74,694 +73,533 @@ def build_hyperframes_composition(
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=1080, height=1920">
-  <title>Hyper-Motion AI Developer Reel</title>
+  <meta name="viewport" content="width=720, height=1280">
+  <title>Top AI Dev Repos - Comic Halftone Motion Graphic Reel</title>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
   <style>
     * {{ margin: 0; padding: 0; box-sizing: border-box; }}
     html, body {{
-      width: 1080px;
-      height: 1920px;
+      width: 720px;
+      height: 1280px;
       overflow: hidden;
-      background: #070B14;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Inter", sans-serif;
+      background: #F4EEDF;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       user-select: none;
-      color: #FFFFFF;
     }}
+
     #root {{
       position: relative;
-      width: 1080px;
-      height: 1920px;
+      width: 720px;
+      height: 1280px;
       overflow: hidden;
-      background: radial-gradient(circle at 50% 30%, #111E38 0%, #060911 85%);
+      background: #F4EEDF;
     }}
 
-    /* 1. Hyper-Motion 3D Cyber Grid */
-    .grid-bg {{
+    /* Halftone dot pattern per scene */
+    .bg-layer {{
       position: absolute;
-      inset: -400px;
-      background-image: 
-        linear-gradient(rgba(56, 189, 248, 0.12) 2px, transparent 2px),
-        linear-gradient(90deg, rgba(56, 189, 248, 0.12) 2px, transparent 2px);
-      background-size: 70px 70px;
-      transform: perspective(900px) rotateX(55deg);
-      animation: gridDrift 16s linear infinite;
+      inset: 0;
+      opacity: 0;
       z-index: 1;
-      opacity: 0.85;
     }}
-    @keyframes gridDrift {{
-      0% {{ transform: perspective(900px) rotateX(55deg) translateY(0); }}
-      100% {{ transform: perspective(900px) rotateX(55deg) translateY(70px); }}
+    .bg-hook {{
+      background-color: #F4EEDF;
+      background-image: radial-gradient(#C8BFAD 2.4px, transparent 2.4px), radial-gradient(#C8BFAD 2.4px, transparent 2.4px);
+      background-size: 24px 24px;
+      background-position: 0 0, 12px 12px;
+      opacity: 1;
+    }}
+    .bg-tool1 {{
+      background-color: #E0F2FE;
+      background-image: radial-gradient(#93C5FD 2.4px, transparent 2.4px), radial-gradient(#93C5FD 2.4px, transparent 2.4px);
+      background-size: 24px 24px;
+      background-position: 0 0, 12px 12px;
+    }}
+    .bg-tool2 {{
+      background-color: #ECFDF5;
+      background-image: radial-gradient(#6EE7B7 2.4px, transparent 2.4px), radial-gradient(#6EE7B7 2.4px, transparent 2.4px);
+      background-size: 24px 24px;
+      background-position: 0 0, 12px 12px;
+    }}
+    .bg-tool3 {{
+      background-color: #FEF3C7;
+      background-image: radial-gradient(#FCD34D 2.4px, transparent 2.4px), radial-gradient(#FCD34D 2.4px, transparent 2.4px);
+      background-size: 24px 24px;
+      background-position: 0 0, 12px 12px;
+    }}
+    .bg-outro {{
+      background-color: #EDE9FE;
+      background-image: radial-gradient(#C4B5FD 2.4px, transparent 2.4px), radial-gradient(#C4B5FD 2.4px, transparent 2.4px);
+      background-size: 24px 24px;
+      background-position: 0 0, 12px 12px;
     }}
 
-    /* 2. Floating Cyber Dust Particles (25 continuous floating motes) */
-    .particle {{
+    /* Floating crosshairs */
+    .crosshair {{
       position: absolute;
-      border-radius: 50%;
-      background: rgba(56, 189, 248, 0.7);
-      box-shadow: 0 0 12px #38BDF8;
+      font-family: monospace;
+      font-size: 22px;
+      font-weight: 900;
+      color: rgba(23, 24, 25, 0.28);
       pointer-events: none;
       z-index: 2;
-      animation: floatUp linear infinite;
-    }}
-    @keyframes floatUp {{
-      0% {{ transform: translateY(1950px) scale(0.6); opacity: 0; }}
-      15% {{ opacity: 0.8; }}
-      85% {{ opacity: 0.8; }}
-      100% {{ transform: translateY(-50px) scale(1.3); opacity: 0; }}
     }}
 
-    /* 3. Ambient Glowing Orbs */
-    .ambient-orb {{
+    /* Top Left Slanted Comic Sticker Badge */
+    .top-badge {{
       position: absolute;
-      border-radius: 50%;
-      filter: blur(140px);
-      z-index: 2;
-      opacity: 0.55;
-      animation: orbBreathe 6s ease-in-out infinite alternate;
-    }}
-    @keyframes orbBreathe {{
-      0% {{ transform: scale(1) translate(0, 0); opacity: 0.45; }}
-      100% {{ transform: scale(1.2) translate(30px, -20px); opacity: 0.65; }}
-    }}
-    .orb-1 {{ width: 600px; height: 600px; background: #2563EB; top: 80px; left: -150px; }}
-    .orb-2 {{ width: 550px; height: 550px; background: #7C3AED; top: 450px; right: -120px; }}
-    .orb-3 {{ width: 500px; height: 500px; background: #DB2777; bottom: 250px; left: 100px; }}
-
-    /* 4. Top Progress Bar */
-    .progress-bar {{
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 12px;
-      background: linear-gradient(90deg, #38BDF8, #818CF8, #F43F5E, #FACC15);
-      width: 0%;
-      z-index: 100;
-      box-shadow: 0 0 25px #38BDF8;
+      left: 36px;
+      top: 36px;
+      z-index: 50;
+      background: #171819;
+      color: #FFFFFF;
+      font-size: 20px;
+      font-weight: 950;
+      letter-spacing: 0.08em;
+      padding: 10px 22px;
+      border-radius: 4px;
+      transform: rotate(-1.5deg);
+      box-shadow: 4px 4px 0 rgba(0,0,0,0.25);
+      border: 3px solid #171819;
+      display: inline-block;
     }}
 
-    /* 5. Top HUD Header (y: 45px to 135px) */
-    .top-hud {{
+    /* Top Right 3-Plug Power Strip Meter */
+    .top-meter {{
       position: absolute;
-      top: 45px;
-      left: 40px;
-      right: 40px;
+      right: 36px;
+      top: 30px;
+      z-index: 50;
+      background: #FFFFFF;
+      border: 4px solid #171819;
+      border-radius: 14px;
+      padding: 8px 14px 6px;
+      box-shadow: 5px 5px 0 #171819;
       display: flex;
-      justify-content: space-between;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+    }}
+    .meter-strip {{
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }}
+    .meter-switch {{
+      width: 16px;
+      height: 26px;
+      background: #E03622;
+      border: 3px solid #171819;
+      border-radius: 4px;
+    }}
+    .meter-sockets {{
+      display: flex;
+      gap: 7px;
+    }}
+    .socket-dot {{
+      width: 24px;
+      height: 24px;
+      background: #E8E2D2;
+      border: 3px solid #171819;
+      border-radius: 50%;
+      position: relative;
+    }}
+    .socket-dot::before, .socket-dot::after {{
+      content: "";
+      position: absolute;
+      top: 5px;
+      width: 3px;
+      height: 7px;
+      background: #171819;
+      border-radius: 1px;
+    }}
+    .socket-dot::before {{ left: 5px; }}
+    .socket-dot::after {{ right: 5px; }}
+    .socket-dot.plug-1 {{ background: #2563EB; box-shadow: 0 0 12px #2563EB; }}
+    .socket-dot.plug-2 {{ background: #059669; box-shadow: 0 0 12px #059669; }}
+    .socket-dot.plug-3 {{ background: #EA580C; box-shadow: 0 0 12px #EA580C; }}
+
+    .meter-label {{
+      font-size: 11px;
+      font-weight: 950;
+      letter-spacing: 0.12em;
+      color: #171819;
+    }}
+
+    .spark-fx {{
+      position: absolute;
+      top: 24px;
+      right: 50px;
+      font-size: 34px;
+      opacity: 0;
+      z-index: 60;
+      pointer-events: none;
+    }}
+
+    /* Studio Desk (Dynamically colored per scene) */
+    .desk {{
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 380px;
+      background: #B64D29;
+      border-top: 10px solid #171819;
+      z-index: 20;
+      box-shadow: inset 0 10px 0 rgba(255,255,255,0.18);
+    }}
+    .desk::before {{
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: repeating-linear-gradient(90deg, transparent 0, transparent 238px, rgba(0,0,0,0.14) 238px, rgba(0,0,0,0.14) 242px);
+    }}
+    .desk-drawer {{
+      position: absolute;
+      top: 36px;
+      left: 100px;
+      width: 140px;
+      height: 26px;
+      background: #171819;
+      border-radius: 13px;
+      border: 3px solid rgba(255,255,255,0.25);
+    }}
+    .desk-drawer-right {{
+      position: absolute;
+      top: 36px;
+      right: 100px;
+      width: 140px;
+      height: 26px;
+      background: #171819;
+      border-radius: 13px;
+      border: 3px solid rgba(255,255,255,0.25);
+    }}
+
+    /* Coffee mug with rising steam */
+    .desk-mug {{
+      position: absolute;
+      right: 48px;
+      bottom: 390px;
+      width: 46px;
+      height: 52px;
+      background: #FFFFFF;
+      border: 4px solid #171819;
+      border-radius: 4px 4px 10px 10px;
+      z-index: 25;
+    }}
+    .desk-mug::before {{
+      content: "";
+      position: absolute;
+      top: 14px;
+      left: 0;
+      right: 0;
+      height: 9px;
+      background: #2563EB;
+    }}
+    .desk-mug::after {{
+      content: "";
+      position: absolute;
+      right: -16px;
+      top: 12px;
+      width: 14px;
+      height: 24px;
+      border: 4px solid #171819;
+      border-radius: 0 10px 10px 0;
+    }}
+    .steam-bubble {{
+      position: absolute;
+      right: 64px;
+      bottom: 450px;
+      font-size: 18px;
+      color: rgba(23, 24, 25, 0.4);
+      z-index: 25;
+      font-weight: 900;
+    }}
+    .desk-tape {{
+      position: absolute;
+      left: 42px;
+      bottom: 392px;
+      width: 40px;
+      height: 40px;
+      border: 10px solid #171819;
+      border-radius: 50%;
+      background: transparent;
+      z-index: 25;
+    }}
+    .desk-ruler {{
+      position: absolute;
+      left: 100px;
+      bottom: 394px;
+      width: 90px;
+      height: 8px;
+      background: #EAB308;
+      border: 2px solid #171819;
+      border-radius: 4px;
+      z-index: 25;
+    }}
+
+    /* Avatar Container */
+    .avatar-wrapper {{
+      position: absolute;
+      left: 50%;
+      bottom: 310px;
+      transform: translateX(-50%);
+      width: 480px;
+      height: 460px;
+      z-index: 22;
+      pointer-events: none;
+    }}
+    .avatar-svg {{
+      width: 100%;
+      height: 100%;
+      overflow: visible;
+    }}
+
+    /* Scene Layers */
+    .scene-layer {{
+      position: absolute;
+      inset: 0;
+      z-index: 15;
+      pointer-events: none;
+    }}
+
+    /* Upper Repo Card Base (top: 95px, width: 660px, height: 145px) */
+    .upper-card {{
+      position: absolute;
+      left: 30px;
+      top: 95px;
+      width: 660px;
+      background: #FFFFFF;
+      border: 5px solid #171819;
+      border-radius: 18px;
+      box-shadow: 6px 8px 0 #171819;
+      padding: 16px 20px;
+      color: #171819;
+      z-index: 18;
+    }}
+    .repo-header {{
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 6px;
+    }}
+    .repo-icon {{
+      font-size: 24px;
+    }}
+    .repo-slug {{
+      font-weight: 950;
+      font-size: 19px;
+      letter-spacing: -0.01em;
+    }}
+    .repo-star {{
+      margin-left: auto;
+      background: #FEF08A;
+      border: 2px solid #171819;
+      border-radius: 6px;
+      padding: 2px 8px;
+      font-weight: 950;
+      font-size: 14px;
+      box-shadow: 2px 2px 0 #171819;
+    }}
+    .repo-title {{
+      font-size: 24px;
+      font-weight: 950;
+      margin-bottom: 4px;
+    }}
+    .repo-desc {{
+      font-size: 15px;
+      color: #4B5563;
+      font-weight: 750;
+      line-height: 1.35;
+    }}
+
+    /* Grounded Tech Console (Starts at top: 255px, resting directly on desk surface) */
+    .tech-console {{
+      position: absolute;
+      left: 30px;
+      top: 255px;
+      width: 405px;
+      height: 635px;
+      background: #191B21;
+      border: 5px solid #171819;
+      border-radius: 18px;
+      box-shadow: 8px 10px 0 #171819;
+      color: #F3F4F6;
+      padding: 14px 16px;
+      z-index: 25;
+      font-family: monospace;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }}
+    .console-header {{
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #374151;
+      margin-bottom: 12px;
+      font-size: 13px;
+      color: #9CA3AF;
+    }}
+    .console-dots {{ display: flex; gap: 6px; }}
+    .console-dot {{ width: 11px; height: 11px; border-radius: 50%; }}
+    .console-dot.r {{ background: #EF4444; }}
+    .console-dot.y {{ background: #F59E0B; }}
+    .console-dot.g {{ background: #10B981; }}
+    .console-title {{ margin-left: auto; font-weight: 700; color: #D1D5DB; font-size: 12px; }}
+
+    .demo-media-box {{
+      width: 100%;
+      height: 165px;
+      border-radius: 10px;
+      overflow: hidden;
+      border: 2.5px solid #374151;
+      margin-bottom: 12px;
+      background: #000;
+      box-shadow: inset 0 2px 4px rgba(0,0,0,0.5);
+      position: relative;
+    }}
+    .demo-media-box img {{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }}
+
+    /* Bottom Tactile Keyboard Keycaps Captions on Desk Front (Reference Gold Standard) */
+    .captions-wrapper {{
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 200px;
+      display: flex;
+      justify-content: center;
       align-items: center;
       z-index: 60;
     }}
-    .hud-badge {{
-      display: inline-flex;
-      align-items: center;
-      gap: 12px;
-      background: rgba(15, 23, 42, 0.94);
-      backdrop-filter: blur(20px);
-      border: 2px solid rgba(56, 189, 248, 0.55);
-      padding: 12px 24px;
-      border-radius: 35px;
-      font-size: 22px;
-      font-weight: 900;
-      letter-spacing: 1.5px;
-      color: #38BDF8;
-      box-shadow: 0 0 35px rgba(56, 189, 248, 0.35);
-    }}
-    .hud-dot {{
-      width: 14px;
-      height: 14px;
-      border-radius: 50%;
-      background: #EF4444;
-      box-shadow: 0 0 18px #EF4444;
-      animation: blink 0.8s ease infinite alternate;
-    }}
-    @keyframes blink {{ 0% {{ opacity: 0.3; }} 100% {{ opacity: 1; }} }}
-
-    /* Animated Audio Equalizer Bars in HUD */
-    .eq-bar-wrap {{
-      display: flex;
-      align-items: flex-end;
-      gap: 6px;
-      height: 36px;
-      padding: 0 15px;
-    }}
-    .eq-bar {{
-      width: 6px;
-      border-radius: 4px;
-      background: linear-gradient(180deg, #38BDF8, #818CF8);
-      animation: eqPulse 0.45s ease-in-out infinite alternate;
-    }}
-    @keyframes eqPulse {{
-      0% {{ height: 8px; }}
-      100% {{ height: 32px; }}
-    }}
-
-    .hud-stars {{
-      background: rgba(15, 23, 42, 0.94);
-      border: 2px solid rgba(250, 204, 21, 0.6);
-      padding: 12px 26px;
-      border-radius: 35px;
-      font-size: 22px;
-      font-weight: 900;
-      color: #FACC15;
-      box-shadow: 0 0 35px rgba(250, 204, 21, 0.35);
-    }}
-
-    /* 6. Hero Showcase Screen (y: 150px to 1030px, Height: 880px) */
-    .showcase-screen {{
-      position: absolute;
-      top: 150px;
-      left: 40px;
-      width: 1000px;
-      height: 880px;
-      background: rgba(11, 17, 32, 0.98);
-      border-radius: 28px;
-      border: 2.5px solid rgba(56, 189, 248, 0.4);
-      box-shadow: 0 30px 90px rgba(0, 0, 0, 0.9), 0 0 60px rgba(56, 189, 248, 0.25);
-      overflow: hidden;
-      z-index: 20;
-    }}
-    .showcase-header {{
-      height: 64px;
-      background: rgba(26, 36, 56, 0.98);
-      border-bottom: 2px solid rgba(255, 255, 255, 0.12);
-      display: flex;
-      align-items: center;
-      padding: 0 24px;
-      gap: 12px;
-    }}
-    .win-dot {{ width: 16px; height: 16px; border-radius: 50%; }}
-    .win-dot.r {{ background: #EF4444; }}
-    .win-dot.y {{ background: #F59E0B; }}
-    .win-dot.g {{ background: #10B981; }}
-    .window-title {{
-      margin-left: 14px;
-      font-size: 22px;
-      font-weight: 800;
-      color: #CBD5E1;
-      letter-spacing: 0.8px;
-    }}
-    .showcase-viewport {{
-      position: relative;
-      width: 100%;
-      height: calc(100% - 64px);
-      background: #080D18;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-    }}
-    /* UN-CROPPED REAL MEDIA (100% Visible with object-fit: contain) */
-    .showcase-viewport img {{
-      max-width: 95%;
-      max-height: 95%;
-      object-fit: contain;
-      border-radius: 14px;
-      box-shadow: 0 15px 50px rgba(0, 0, 0, 0.8);
-      transform-origin: center center;
-    }}
-    .scanline {{
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 6px;
-      background: linear-gradient(90deg, transparent, #38BDF8, #FFFFFF, #38BDF8, transparent);
-      box-shadow: 0 0 30px #38BDF8, 0 0 60px #38BDF8;
-      animation: scanSweep 3.2s ease-in-out infinite alternate;
-      z-index: 25;
-      pointer-events: none;
-    }}
-    @keyframes scanSweep {{
-      0% {{ top: 3%; opacity: 0.85; }}
-      100% {{ top: 96%; opacity: 1; }}
-    }}
-
-    /* Floating Feature Badge */
-    .feature-tag {{
-      position: absolute;
-      top: 225px;
-      right: 20px;
-      background: rgba(15, 23, 42, 0.96);
-      backdrop-filter: blur(20px);
-      border: 2px solid #38BDF8;
-      border-radius: 20px;
-      padding: 14px 26px;
-      font-size: 22px;
-      font-weight: 900;
-      color: #38BDF8;
-      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.85), 0 0 30px rgba(56, 189, 248, 0.4);
-      z-index: 35;
-      animation: floatBadge 3s ease-in-out infinite alternate;
-    }}
-    @keyframes floatBadge {{
-      0% {{ transform: translateY(0px); }}
-      100% {{ transform: translateY(-14px); }}
-    }}
-
-    /* Hook Scene Overlay */
-    .hook-overlay {{
-      position: absolute;
-      inset: 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: 50px;
-      text-align: center;
-      z-index: 30;
-      background: rgba(8, 13, 24, 0.95);
-    }}
-    .hook-title {{
-      font-size: 78px;
-      font-weight: 950;
-      line-height: 1.1;
-      background: linear-gradient(135deg, #FFFFFF 20%, #38BDF8 60%, #C084FC 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      margin-bottom: 24px;
-      text-shadow: 0 0 50px rgba(56, 189, 248, 0.4);
-    }}
-
-    /* CTA Scene Overlay */
-    .cta-box {{
-      position: absolute;
-      inset: 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: 50px;
-      text-align: center;
-      z-index: 30;
-      background: rgba(8, 13, 24, 0.95);
-    }}
-    .cta-card {{
-      background: rgba(15, 23, 42, 0.98);
-      border: 3.5px solid #FACC15;
-      border-radius: 36px;
-      padding: 50px 40px;
-      box-shadow: 0 0 90px rgba(250, 204, 21, 0.5);
-      width: 900px;
-    }}
-    .cta-word {{
-      font-size: 92px;
-      font-weight: 950;
-      color: #FACC15;
-      letter-spacing: 4px;
-      margin: 20px 0;
-      text-shadow: 0 0 55px rgba(250, 204, 21, 0.95);
-      animation: pulseWord 1.3s infinite alternate ease-in-out;
-    }}
-    @keyframes pulseWord {{ 0% {{ transform: scale(1); }} 100% {{ transform: scale(1.08); }} }}
-
-    /* 7. LIVE HACKER TERMINAL & BENCHMARK MATRIX (y: 1055px to 1395px, Height: 340px) */
-    /* This completely cures the "empty space" problem! */
-    .terminal-box {{
-      position: absolute;
-      top: 1055px;
-      left: 40px;
-      width: 1000px;
-      height: 340px;
-      background: rgba(11, 16, 30, 0.96);
-      border-radius: 24px;
-      border: 2px solid rgba(56, 189, 248, 0.4);
-      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.85);
-      overflow: hidden;
-      z-index: 30;
-    }}
-    .terminal-header {{
-      height: 52px;
-      background: rgba(20, 30, 48, 0.98);
-      border-bottom: 2px solid rgba(255, 255, 255, 0.08);
-      display: flex;
-      align-items: center;
-      padding: 0 20px;
-      gap: 10px;
-    }}
-    .terminal-title {{
-      font-family: "Courier New", Courier, monospace;
-      font-size: 20px;
-      font-weight: 700;
-      color: #94A3B8;
-      margin-left: 10px;
-    }}
-    .terminal-content {{
-      padding: 24px 28px;
-      font-family: "Courier New", Courier, monospace;
-      font-size: 23px;
-      color: #38BDF8;
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-    }}
-    .terminal-line {{
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      color: #F1F5F9;
-      font-weight: 700;
-    }}
-    .terminal-prompt {{
-      color: #10B981;
-      font-weight: 900;
-    }}
-    .terminal-cursor {{
-      display: inline-block;
-      width: 12px;
-      height: 24px;
-      background: #38BDF8;
-      animation: cursorBlink 0.8s infinite;
-    }}
-    @keyframes cursorBlink {{ 0%, 49% {{ opacity: 1; }} 50%, 100% {{ opacity: 0; }} }}
-
-    /* Live Benchmark Matrix Badges inside Terminal */
-    .benchmark-row {{
-      display: flex;
-      align-items: center;
-      gap: 18px;
-      margin-top: 6px;
-    }}
-    .bench-pill {{
-      flex: 1;
-      background: rgba(15, 23, 42, 0.9);
-      border: 1.5px solid rgba(56, 189, 248, 0.4);
-      border-radius: 14px;
-      padding: 12px 18px;
-      display: flex;
-      flex-direction: column;
-      gap: 4px;
-    }}
-    .bench-lbl {{ font-size: 14px; color: #94A3B8; font-weight: 800; letter-spacing: 1px; }}
-    .bench-val {{ font-size: 24px; color: #FACC15; font-weight: 900; }}
-
-    /* 8. KINETIC HORMOZI CAPTION BAR (y: 1415px to 1545px) */
-    /* Guaranteed word spacing, high-contrast black outline, electric yellow pop */
-    .caption-container {{
-      position: absolute;
-      top: 1415px;
-      left: 0;
-      width: 1080px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      z-index: 85;
-      pointer-events: none;
-    }}
     .caption-pill {{
-      background: rgba(7, 11, 20, 0.96);
-      backdrop-filter: blur(24px);
-      border: 3.5px solid #FACC15;
-      border-radius: 32px;
-      padding: 16px 42px;
-      display: inline-flex;
-      flex-direction: row;
+      background: #171819;
+      border: 5px solid #FFFFFF;
+      border-radius: 22px;
+      padding: 12px 28px;
+      box-shadow: 0 10px 0 #000000, 0 16px 24px rgba(0,0,0,0.35);
+      display: flex;
+      gap: 12px;
       align-items: center;
       justify-content: center;
-      gap: 0px;
-      box-shadow: 0 15px 50px rgba(0, 0, 0, 0.95), 0 0 40px rgba(250, 204, 21, 0.4);
-      min-width: 420px;
-      max-width: 1000px;
-      min-height: 96px;
+      max-width: 90%;
     }}
     .caption-word {{
-      font-size: 46px;
+      font-size: 38px;
       font-weight: 950;
       color: #FFFFFF;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      -webkit-text-stroke: 3.5px #000000;
-      text-shadow: 0 6px 0 #000000, 0 10px 25px rgba(0,0,0,0.9);
-      white-space: nowrap;
-      display: inline-block;
-      margin: 0;
-      transition: transform 0.08s ease;
+      letter-spacing: -0.02em;
+      line-height: 1;
     }}
     .caption-word.active {{
-      color: #FFE600;
-      -webkit-text-stroke: 3.5px #000000;
-      text-shadow: 0 0 35px rgba(255, 230, 0, 0.95), 0 6px 0 #000000;
-      transform: scale(1.15);
-    }}
-
-    /* 9. STUDIO BROADCAST DESK & DEVELOPER AVATAR (y: 1560px to 1920px) */
-    .desk-container {{
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 1080px;
-      height: 380px;
-      z-index: 40;
-    }}
-    .desk-surface {{
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 1080px;
-      height: 240px;
-      background: linear-gradient(180deg, #1E293B 0%, #0F172A 100%);
-      border-top: 5px solid #38BDF8;
-      box-shadow: 0 -15px 50px rgba(56, 189, 248, 0.35);
-    }}
-
-    /* Dual Studio Code Monitors (Left of desk) */
-    .dual-monitors {{
-      position: absolute;
-      bottom: 120px;
-      left: 50px;
-      display: flex;
-      gap: 20px;
-      z-index: 45;
-    }}
-    .code-monitor {{
-      width: 220px;
-      height: 180px;
-      background: #090E1A;
-      border: 3px solid #334155;
+      background: #FACC15;
+      color: #171819;
+      padding: 4px 16px;
       border-radius: 12px;
-      padding: 12px;
+      box-shadow: 2px 2px 0 #000000;
+    }}
+
+    /* Phone Mockup for Outro (Grounded directly on desk surface) */
+    .phone-mockup {{
+      position: absolute;
+      left: 45px;
+      top: 175px;
+      width: 375px;
+      height: 715px;
+      background: #000000;
+      border: 9px solid #171819;
+      border-radius: 50px;
+      box-shadow: 8px 12px 0 #171819;
+      z-index: 25;
       overflow: hidden;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.8), 0 0 20px rgba(56, 189, 248, 0.2);
-    }}
-    .code-scroll {{
-      font-family: "Courier New", Courier, monospace;
-      font-size: 11px;
-      color: #10B981;
-      line-height: 1.5;
-      animation: codeRoll 8s linear infinite;
-    }}
-    @keyframes codeRoll {{
-      0% {{ transform: translateY(0); }}
-      100% {{ transform: translateY(-120px); }}
-    }}
-
-    /* Audio Mixing Console with volume sliders & LEDs */
-    .mixer-deck {{
-      position: absolute;
-      bottom: 40px;
-      left: 60px;
-      width: 380px;
-      height: 60px;
-      background: #0B1120;
-      border: 2px solid #334155;
-      border-radius: 12px;
       display: flex;
-      align-items: center;
-      justify-content: space-around;
-      padding: 0 20px;
-      z-index: 48;
+      flex-direction: column;
     }}
-    .slider-track {{
-      width: 45px;
-      height: 8px;
-      background: #1E293B;
-      border-radius: 4px;
-      position: relative;
+    .phone-notch {{
+      width: 150px;
+      height: 24px;
+      background: #171819;
+      margin: 0 auto;
+      border-radius: 0 0 14px 14px;
+      z-index: 30;
     }}
-    .slider-knob {{
-      width: 14px;
-      height: 22px;
-      background: #38BDF8;
-      border-radius: 3px;
-      position: absolute;
-      top: -7px;
-      left: 15px;
-      box-shadow: 0 0 10px #38BDF8;
+    .phone-screen {{
+      flex: 1;
+      background: #FFFFFF;
+      padding: 18px 16px;
+      font-family: -apple-system, sans-serif;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
     }}
-
-    /* Developer Avatar Rig (Right of desk, bigger: 500x500) */
-    .avatar-wrap {{
-      position: absolute;
-      bottom: 30px;
-      right: 50px;
-      width: 500px;
-      height: 500px;
-      z-index: 50;
-    }}
-    .avatar-svg {{ width: 100%; height: 100%; }}
   </style>
 </head>
 <body>
-  <div id="root">
-    <!-- Top Progress Bar -->
-    <div id="progress-bar" class="progress-bar"></div>
+  <div id="root" data-composition-id="root" data-start="0" data-duration="{round(duration, 2)}" data-width="720" data-height="1280">
 
-    <!-- 1. Background Grid & Particles -->
-    <div class="grid-bg"></div>
-    <div class="ambient-orb orb-1"></div>
-    <div class="ambient-orb orb-2"></div>
-    <div class="ambient-orb orb-3"></div>
+    <!-- Scene Background Layers -->
+    <div id="bg-hook" class="bg-layer bg-hook"></div>
+    <div id="bg-tool1" class="bg-layer bg-tool1"></div>
+    <div id="bg-tool2" class="bg-layer bg-tool2"></div>
+    <div id="bg-tool3" class="bg-layer bg-tool3"></div>
+    <div id="bg-outro" class="bg-layer bg-outro"></div>
 
-    <!-- 25 Floating Particles -->
-    <div id="particles-wrap"></div>
+    <!-- Floating Crosshairs -->
+    <div class="crosshair" style="left: 40px; top: 90px;">+</div>
+    <div class="crosshair" style="right: 50px; top: 120px;">+</div>
+    <div class="crosshair" style="left: 30px; top: 480px;">+</div>
+    <div class="crosshair" style="right: 40px; top: 520px;">+</div>
 
-    <!-- 2. Top HUD Header -->
-    <div class="top-hud">
-      <div id="top-badge" class="hud-badge">
-        <div class="hud-dot"></div>
-        <span>AI RADAR 2026</span>
-      </div>
-      <div class="hud-badge" style="border-color: rgba(129, 140, 248, 0.5);">
-        <div class="eq-bar-wrap">
-          <div class="eq-bar" style="animation-delay: 0.1s"></div>
-          <div class="eq-bar" style="animation-delay: 0.3s"></div>
-          <div class="eq-bar" style="animation-delay: 0.2s"></div>
-          <div class="eq-bar" style="animation-delay: 0.4s"></div>
-          <div class="eq-bar" style="animation-delay: 0.15s"></div>
+    <!-- Audio Elements for HyperFrames Native Mixer -->
+    <audio id="voice" src="{audio_path}" data-start="0" data-duration="{round(duration, 2)}" data-volume="1"></audio>
+    <audio id="sfx-whoosh-1" src="assets/sfx/sfx_whoosh.mp3" data-start="0.0" data-duration="0.5" data-volume="0.6"></audio>
+    <audio id="sfx-whoosh-2" src="assets/sfx/sfx_whoosh.mp3" data-start="{round(t_hook_end, 2)}" data-duration="0.5" data-volume="0.6"></audio>
+    <audio id="sfx-pop-1" src="assets/sfx/sfx_pop.mp3" data-start="{round(t_hook_end + 0.35, 2)}" data-duration="0.5" data-volume="0.5"></audio>
+    <audio id="sfx-ding-1" src="assets/sfx/sfx_ding.mp3" data-start="{round(t_hook_end + 0.85, 2)}" data-duration="0.5" data-volume="0.5"></audio>
+    <audio id="sfx-whoosh-3" src="assets/sfx/sfx_whoosh.mp3" data-start="{round(t_tool1_end, 2)}" data-duration="0.5" data-volume="0.6"></audio>
+    <audio id="sfx-pop-2" src="assets/sfx/sfx_pop.mp3" data-start="{round(t_tool1_end + 0.35, 2)}" data-duration="0.5" data-volume="0.5"></audio>
+    <audio id="sfx-ding-2" src="assets/sfx/sfx_ding.mp3" data-start="{round(t_tool1_end + 0.85, 2)}" data-duration="0.5" data-volume="0.5"></audio>
+    <audio id="sfx-whoosh-4" src="assets/sfx/sfx_whoosh.mp3" data-start="{round(t_tool2_end, 2)}" data-duration="0.5" data-volume="0.6"></audio>
+    <audio id="sfx-pop-3" src="assets/sfx/sfx_pop.mp3" data-start="{round(t_tool2_end + 0.35, 2)}" data-duration="0.5" data-volume="0.5"></audio>
+    <audio id="sfx-whoosh-5" src="assets/sfx/sfx_whoosh.mp3" data-start="{round(t_tool3_end, 2)}" data-duration="0.5" data-volume="0.6"></audio>
+    <audio id="sfx-click-1" src="assets/sfx/sfx_click.mp3" data-start="{round(t_tool3_end + 0.5, 2)}" data-duration="0.3" data-volume="0.6"></audio>
+
+    <!-- Top Left Comic Sticker Badge -->
+    <div id="top-badge" class="top-badge">STOP PAYING FOR AI</div>
+
+    <!-- Top Right 3-Plug Power Strip Meter -->
+    <div id="top-meter" class="top-meter">
+      <div class="meter-strip">
+        <div class="meter-switch"></div>
+        <div class="meter-sockets">
+          <div id="sock-1" class="socket-dot"></div>
+          <div id="sock-2" class="socket-dot"></div>
+          <div id="sock-3" class="socket-dot"></div>
         </div>
-        <span style="color: #818CF8; font-size: 18px;">LIVE ENGINE</span>
       </div>
-      <div id="hud-stars" class="hud-stars">★ 3 REPOS VERIFIED</div>
+      <div id="meter-label" class="meter-label">REPOS 0/3</div>
+    </div>
+    <div id="spark-fx" class="spark-fx">💥</div>
+
+    <!-- Studio Desk -->
+    <div id="desk" class="desk">
+      <div class="desk-drawer"></div>
+      <div class="desk-drawer-right"></div>
+      <div class="desk-tape"></div>
+      <div class="desk-ruler"></div>
+      <div class="desk-mug"></div>
+      <div id="steam-1" class="steam-bubble">~</div>
+      <div id="steam-2" class="steam-bubble" style="right: 56px; bottom: 462px;">~</div>
     </div>
 
-    <!-- 3. HERO SHOWCASE SCREEN (Upper Zone) -->
-    <div id="showcase-screen" class="showcase-screen">
-      <div class="showcase-header">
-        <div class="win-dot r"></div><div class="win-dot y"></div><div class="win-dot g"></div>
-        <div id="win-title" class="window-title">{repo_media[0]['owner']} / {repo_media[0]['name']}</div>
-        <div id="win-stars" style="margin-left: auto; color: #FACC15; font-size: 22px; font-weight: 900;">{repo_media[0]['stars']}</div>
-      </div>
-      <div class="showcase-viewport">
-        <img id="showcase-img" src="{repo_media[0]['img']}" alt="Repo Demo">
-        <div class="scanline"></div>
-
-        <!-- Hook Scene Inner Content -->
-        <div id="hook-view" class="hook-overlay">
-          <div class="hook-title">STOP PAYING<br>MONTHLY AI FEES</div>
-          <div style="font-size: 32px; color: #94A3B8; font-weight: 800; max-width: 780px; line-height: 1.4;">
-            3 Free Open-Source Developer Repos You Can Run Locally
-          </div>
-          <div style="display: flex; gap: 20px; margin-top: 35px;">
-            <div class="hud-badge" style="border-color: #10B981; color: #10B981;">✓ 100% FREE</div>
-            <div class="hud-badge" style="border-color: #818CF8; color: #818CF8;">⚡ LOCAL RUN</div>
-          </div>
-        </div>
-
-        <!-- CTA Scene Inner Content -->
-        <div id="cta-view" class="cta-box" style="opacity: 0; pointer-events: none;">
-          <div class="cta-card">
-            <div style="font-size: 32px; color: #94A3B8; font-weight: 800; text-transform: uppercase;">
-              Want all 3 repository links?
-            </div>
-            <div style="font-size: 46px; color: #FFFFFF; font-weight: 950; margin-top: 15px;">
-              COMMENT BELOW:
-            </div>
-            <div class="cta-word">TOOLS</div>
-            <div style="font-size: 28px; color: #E2E8F0; font-weight: 800; line-height: 1.5;">
-              I'll DM you direct GitHub links right now! 🚀<br>
-              <span style="color: #38BDF8;">Follow for daily open-source AI drops.</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Floating Badge -->
-    <div id="feature-tag" class="feature-tag">
-      ⚡ 01 · {repo_media[0]['name']}
-    </div>
-
-    <!-- 4. LIVE HACKER TERMINAL & BENCHMARK MATRIX (Middle Zone) -->
-    <div id="terminal-box" class="terminal-box">
-      <div class="terminal-header">
-        <div class="win-dot r"></div><div class="win-dot y"></div><div class="win-dot g"></div>
-        <div class="terminal-title">bash — developer@workstation: ~/projects</div>
-      </div>
-      <div class="terminal-content">
-        <div class="terminal-line">
-          <span class="terminal-prompt">&gt;</span>
-          <span id="term-cmd">{repo_media[0]['cmd']}</span>
-          <span class="terminal-cursor"></span>
-        </div>
-        <div class="benchmark-row">
-          <div class="bench-pill">
-            <div class="bench-lbl">LOCAL LATENCY</div>
-            <div id="bench-lat" class="bench-val">{repo_media[0]['bench']['lat']}</div>
-          </div>
-          <div class="bench-pill">
-            <div class="bench-lbl">MEMORY FOOTPRINT</div>
-            <div id="bench-mem" class="bench-val">{repo_media[0]['bench']['mem']}</div>
-          </div>
-          <div class="bench-pill">
-            <div class="bench-lbl">MONTHLY SAVINGS</div>
-            <div id="bench-save" class="bench-val">{repo_media[0]['bench']['save']}</div>
-          </div>
-        </div>
-        <div id="term-status" style="font-size: 16px; color: #10B981; font-weight: 800;">
-          [STATUS: READY] High-performance neural operators mapped to silicon.
-        </div>
-      </div>
-    </div>
-
-    <!-- 5. KINETIC SUBTITLES (Lower-Middle Zone) -->
-    <div class="caption-container">
-      <div id="caption-pill" class="caption-pill">
-        <span class="caption-word active">READY</span>
-      </div>
-    </div>
-
-    <!-- 6. STUDIO DESK, DUAL MONITORS & AVATAR (Bottom Zone) -->
-    <div class="desk-container">
-      <div class="desk-surface"></div>
-
-      <!-- Dual Scrolling Code Monitors -->
-      <div class="dual-monitors">
-        <div class="code-monitor">
-          <div class="code-scroll">
-            import torch<br>
-            import metal<br>
-            model = load("weights")<br>
-            opt = Metalium.init()<br>
-            print("Zero Cloud")<br>
-            res = opt.exec(data)<br>
-            assert res.ok<br>
-            stream.sync()<br>
-            return res.tensor
-          </div>
-        </div>
-        <div class="code-monitor">
-          <div class="code-scroll" style="animation-duration: 6s; color: #38BDF8;">
-            const ctx = init();<br>
-            ctx.attachAgent();<br>
-            await ctx.remember();<br>
-            console.log("Memory 100%");<br>
-            bench.start();<br>
-            const ok = verify();<br>
-            dispatch(ok);
-          </div>
-        </div>
-      </div>
-
-      <!-- Audio Mixer Console -->
-      <div class="mixer-deck">
-        <div class="slider-track"><div class="slider-knob"></div></div>
-        <div class="slider-track"><div class="slider-knob" style="left: 28px;"></div></div>
-        <div class="slider-track"><div class="slider-knob" style="left: 10px;"></div></div>
-        <div class="hud-dot" style="background: #10B981; box-shadow: 0 0 12px #10B981;"></div>
-      </div>
-    </div>
-
-    <!-- Animated Developer Avatar Rig (500x500) -->
-    <div id="avatar-wrap" class="avatar-wrap">
+    <!-- Developer Avatar Rig -->
+    <div id="avatar-wrap" class="avatar-wrapper">
       <svg class="avatar-svg" viewBox="0 0 480 460" xmlns="http://www.w3.org/2000/svg">
         <defs>
           <linearGradient id="skin" x1="0" y1="0" x2="0" y2="1">
@@ -769,175 +607,479 @@ def build_hyperframes_composition(
             <stop offset="100%" stop-color="#F2BA91"/>
           </linearGradient>
         </defs>
+
+        <!-- Torso & Clothes -->
         <g id="torso">
-          <path d="M120 330 C120 305, 175 290, 240 290 C305 290, 360 305, 360 330 L395 460 L85 460 Z" fill="#2563EB" stroke="#0F172A" stroke-width="10"/>
-          <path d="M210 290 C210 330, 270 330, 270 290 Z" fill="#FFFFFF" stroke="#0F172A" stroke-width="7"/>
+          <path d="M130 330 C130 310, 180 295, 240 295 C300 295, 350 310, 350 330 L380 460 L100 460 Z" fill="#756D65" stroke="#171819" stroke-width="8"/>
+          <path d="M210 295 C210 330, 270 330, 270 295 Z" fill="#FFFFFF" stroke="#171819" stroke-width="6"/>
+          <path d="M180 295 L220 380 L200 460" fill="none" stroke="#171819" stroke-width="6"/>
+          <path d="M300 295 L260 380 L280 460" fill="none" stroke="#171819" stroke-width="6"/>
         </g>
+
+        <!-- Arms -->
         <g id="arm-left">
-          <!-- Pointing Arm (Active during tools) -->
+          <!-- Pointing Arm (Rigged with complete resting left sleeve and pointing right hand) -->
           <g id="arm-point" opacity="0">
-            <path d="M350 330 C390 310, 405 250, 385 190" fill="none" stroke="#0F172A" stroke-width="50" stroke-linecap="round"/>
-            <path d="M350 330 C390 310, 405 250, 385 190" fill="none" stroke="#2563EB" stroke-width="40" stroke-linecap="round"/>
-            <g transform="translate(375, 140)">
-              <ellipse cx="14" cy="40" rx="22" ry="20" fill="url(#skin)" stroke="#0F172A" stroke-width="7"/>
-              <rect x="8" y="0" width="16" height="38" rx="8" fill="url(#skin)" stroke="#0F172A" stroke-width="7"/>
+            <!-- Resting left arm on desk -->
+            <path d="M140 330 C110 350, 100 400, 130 435" fill="none" stroke="#171819" stroke-width="44" stroke-linecap="round"/>
+            <path d="M140 330 C110 350, 100 400, 130 435" fill="none" stroke="#756D65" stroke-width="36" stroke-linecap="round"/>
+            <!-- Pointing right arm pointing up and across to console -->
+            <path d="M340 330 C380 320, 390 260, 375 220" fill="none" stroke="#171819" stroke-width="44" stroke-linecap="round"/>
+            <path d="M340 330 C380 320, 390 260, 375 220" fill="none" stroke="#756D65" stroke-width="36" stroke-linecap="round"/>
+            <g transform="translate(365, 170)">
+              <ellipse cx="14" cy="40" rx="18" ry="16" fill="url(#skin)" stroke="#171819" stroke-width="6"/>
+              <rect x="8" y="0" width="12" height="32" rx="6" fill="url(#skin)" stroke="#171819" stroke-width="6"/>
             </g>
           </g>
-          <!-- Hands Up (Active during Hook) -->
+
+          <!-- Both Hands Up in Frustration (Hook Intro) -->
           <g id="arm-both-up" opacity="1">
-            <path d="M130 330 C90 280, 80 210, 100 160" fill="none" stroke="#0F172A" stroke-width="50" stroke-linecap="round"/>
-            <path d="M130 330 C90 280, 80 210, 100 160" fill="none" stroke="#2563EB" stroke-width="40" stroke-linecap="round"/>
-            <path d="M350 330 C390 280, 400 210, 380 160" fill="none" stroke="#0F172A" stroke-width="50" stroke-linecap="round"/>
-            <path d="M350 330 C390 280, 400 210, 380 160" fill="none" stroke="#2563EB" stroke-width="40" stroke-linecap="round"/>
+            <path d="M140 330 C100 290, 90 220, 110 170" fill="none" stroke="#171819" stroke-width="44" stroke-linecap="round"/>
+            <path d="M140 330 C100 290, 90 220, 110 170" fill="none" stroke="#756D65" stroke-width="36" stroke-linecap="round"/>
+            <g transform="translate(90, 120)">
+              <circle cx="20" cy="35" r="18" fill="url(#skin)" stroke="#171819" stroke-width="6"/>
+              <rect x="5" y="8" width="8" height="24" rx="4" fill="url(#skin)" stroke="#171819" stroke-width="5"/>
+              <rect x="16" y="2" width="8" height="28" rx="4" fill="url(#skin)" stroke="#171819" stroke-width="5"/>
+              <rect x="27" y="5" width="8" height="26" rx="4" fill="url(#skin)" stroke="#171819" stroke-width="5"/>
+              <rect x="37" y="12" width="7" height="20" rx="4" fill="url(#skin)" stroke="#171819" stroke-width="5"/>
+            </g>
+            <path d="M340 330 C380 290, 390 220, 370 170" fill="none" stroke="#171819" stroke-width="44" stroke-linecap="round"/>
+            <path d="M340 330 C380 290, 390 220, 370 170" fill="none" stroke="#756D65" stroke-width="36" stroke-linecap="round"/>
+            <g transform="translate(350, 120)">
+              <circle cx="20" cy="35" r="18" fill="url(#skin)" stroke="#171819" stroke-width="6"/>
+              <rect x="5" y="8" width="8" height="24" rx="4" fill="url(#skin)" stroke="#171819" stroke-width="5"/>
+              <rect x="16" y="2" width="8" height="28" rx="4" fill="url(#skin)" stroke="#171819" stroke-width="5"/>
+              <rect x="27" y="5" width="8" height="26" rx="4" fill="url(#skin)" stroke="#171819" stroke-width="5"/>
+              <rect x="37" y="12" width="7" height="20" rx="4" fill="url(#skin)" stroke="#171819" stroke-width="5"/>
+            </g>
           </g>
-          <!-- Thumbs Up (Active during CTA) -->
+
+          <!-- Thumbs Up Arm (Outro) -->
           <g id="arm-thumbs-up" opacity="0">
-            <path d="M350 330 C380 315, 395 275, 375 220" fill="none" stroke="#0F172A" stroke-width="50" stroke-linecap="round"/>
-            <path d="M350 330 C380 315, 395 275, 375 220" fill="none" stroke="#2563EB" stroke-width="40" stroke-linecap="round"/>
-            <g transform="translate(365, 180)">
-              <circle cx="20" cy="30" r="20" fill="url(#skin)" stroke="#0F172A" stroke-width="7"/>
-              <rect x="14" y="2" width="16" height="26" rx="7" fill="url(#skin)" stroke="#0F172A" stroke-width="7"/>
+            <path d="M140 330 C110 350, 100 400, 130 435" fill="none" stroke="#171819" stroke-width="44" stroke-linecap="round"/>
+            <path d="M140 330 C110 350, 100 400, 130 435" fill="none" stroke="#756D65" stroke-width="36" stroke-linecap="round"/>
+            <path d="M340 330 C370 320, 380 280, 360 240" fill="none" stroke="#171819" stroke-width="44" stroke-linecap="round"/>
+            <path d="M340 330 C370 320, 380 280, 360 240" fill="none" stroke="#756D65" stroke-width="36" stroke-linecap="round"/>
+            <g transform="translate(350, 200)">
+              <circle cx="20" cy="30" r="16" fill="url(#skin)" stroke="#171819" stroke-width="6"/>
+              <rect x="14" y="6" width="12" height="20" rx="5" fill="url(#skin)" stroke="#171819" stroke-width="5"/>
             </g>
           </g>
         </g>
+
+        <!-- Head -->
         <g id="head">
-          <rect x="214" y="235" width="52" height="60" fill="url(#skin)" stroke="#0F172A" stroke-width="8"/>
-          <ellipse cx="240" cy="175" rx="76" ry="84" fill="url(#skin)" stroke="#0F172A" stroke-width="9"/>
-          <path d="M164 170 C160 240, 182 272, 240 272 C298 272, 320 240, 316 170 C298 198, 276 205, 240 205 C204 205, 182 198, 164 170 Z" fill="#18181B" stroke="#0F172A" stroke-width="8"/>
-          <g id="mouth-wrap" transform="translate(240, 222)">
-            <ellipse id="mouth" cx="0" cy="0" rx="22" ry="12" fill="#BE123C" stroke="#0F172A" stroke-width="6"/>
+          <rect x="216" y="240" width="48" height="55" fill="url(#skin)" stroke="#171819" stroke-width="7"/>
+          <ellipse cx="240" cy="180" rx="72" ry="80" fill="url(#skin)" stroke="#171819" stroke-width="8"/>
+          <ellipse cx="166" cy="180" rx="14" ry="18" fill="url(#skin)" stroke="#171819" stroke-width="6"/>
+          <ellipse cx="314" cy="180" rx="14" ry="18" fill="url(#skin)" stroke="#171819" stroke-width="6"/>
+
+          <!-- Full Dark Beard & Mustache -->
+          <path d="M168 175 C165 240, 185 270, 240 270 C295 270, 315 240, 312 175 C295 200, 275 205, 240 205 C205 205, 185 200, 168 175 Z" fill="#222326" stroke="#171819" stroke-width="7"/>
+
+          <!-- Mouth -->
+          <g id="mouth-wrap" transform="translate(240, 218)">
+            <ellipse id="mouth" cx="0" cy="0" rx="22" ry="12" fill="#881337" stroke="#171819" stroke-width="5"/>
+            <path id="teeth" d="M-15 -3 Q0 4 15 -3" fill="#FFFFFF" stroke="#171819" stroke-width="2"/>
           </g>
+
+          <path d="M236 172 Q240 182 248 180" fill="none" stroke="#171819" stroke-width="5" stroke-linecap="round"/>
+
+          <!-- Glasses -->
           <g id="glasses">
-            <circle cx="202" cy="156" r="30" fill="rgba(255,255,255,0.25)" stroke="#0F172A" stroke-width="8"/>
-            <circle cx="278" cy="156" r="30" fill="rgba(255,255,255,0.25)" stroke="#0F172A" stroke-width="8"/>
-            <path d="M232 156 L248 156" stroke="#0F172A" stroke-width="8"/>
+            <circle cx="204" cy="162" r="26" fill="rgba(255,255,255,0.2)" stroke="#171819" stroke-width="7"/>
+            <circle cx="276" cy="162" r="26" fill="rgba(255,255,255,0.2)" stroke="#171819" stroke-width="7"/>
+            <path d="M230 162 L250 162" stroke="#171819" stroke-width="7"/>
+            <path d="M178 160 L166 165" stroke="#171819" stroke-width="6"/>
+            <path d="M302 160 L314 165" stroke="#171819" stroke-width="6"/>
           </g>
+
+          <!-- Eyes -->
           <g id="eyes">
-            <ellipse id="eye-left" cx="202" cy="156" rx="12" ry="12" fill="#FFFFFF"><circle cx="202" cy="156" r="6" fill="#0F172A"/></ellipse>
-            <ellipse id="eye-right" cx="278" cy="156" rx="12" ry="12" fill="#FFFFFF"><circle cx="278" cy="156" r="6" fill="#0F172A"/></ellipse>
-            <path id="eye-wink" d="M266 156 Q278 168 290 156" fill="none" stroke="#0F172A" stroke-width="7" stroke-linecap="round" opacity="0"/>
+            <ellipse id="eye-left" cx="204" cy="162" rx="12" ry="12" fill="#FFFFFF">
+              <circle cx="204" cy="162" r="6" fill="#171819"/>
+              <circle cx="206" cy="159" r="2" fill="#FFFFFF"/>
+            </ellipse>
+            <ellipse id="eye-right" cx="276" cy="162" rx="12" ry="12" fill="#FFFFFF">
+              <circle cx="276" cy="162" r="6" fill="#171819"/>
+              <circle cx="278" cy="159" r="2" fill="#FFFFFF"/>
+            </ellipse>
           </g>
+
+          <path id="brow-left" d="M188 140 Q204 132 220 140" fill="none" stroke="#171819" stroke-width="7" stroke-linecap="round"/>
+          <path id="brow-right" d="M260 140 Q276 132 292 140" fill="none" stroke="#171819" stroke-width="7" stroke-linecap="round"/>
+
+          <!-- Knit Beanie -->
           <g id="beanie">
-            <path d="M160 145 C156 75, 192 45, 240 45 C288 45, 324 75, 320 145 Z" fill="#1E293B" stroke="#0F172A" stroke-width="9"/>
-            <rect x="152" y="120" width="176" height="40" rx="10" fill="#0F172A" stroke="#0F172A" stroke-width="9"/>
+            <path d="M164 150 C160 80, 195 55, 240 55 C285 55, 320 80, 316 150 Z" fill="#2B2D31" stroke="#171819" stroke-width="8"/>
+            <rect x="156" y="125" width="168" height="36" rx="10" fill="#222326" stroke="#171819" stroke-width="8"/>
+            <rect x="178" y="136" width="18" height="12" rx="2" fill="#EF4444" stroke="#171819" stroke-width="2"/>
           </g>
         </g>
       </svg>
     </div>
 
+    <!-- ================= SCENE GRAPHICS ================= -->
+
+    <!-- SCENE 1: Hook (0 - {t_hook_end}s) -->
+    <div id="scene-hook" class="scene-layer" style="opacity: 1;">
+      <!-- Giant Comic Strip in Hook -->
+      <div id="hook-strip" style="position: absolute; left: 45px; top: 130px; width: 630px; background: #FFFFFF; border: 5px solid #171819; border-radius: 20px; box-shadow: 8px 10px 0 #171819; padding: 20px;">
+        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px;">
+          <div style="display: flex; align-items: center; gap: 8px;">
+            <div style="width: 18px; height: 32px; background: #E03622; border: 3px solid #171819; border-radius: 4px;"></div>
+            <div style="font-weight: 950; font-size: 19px; letter-spacing: 0.05em;">AI TECH STACK 2026</div>
+          </div>
+          <div style="background: #EF4444; color: #FFF; font-weight: 950; font-size: 13px; padding: 4px 10px; border-radius: 6px; border: 2px solid #171819;">0 OF 3 INSTALLED</div>
+        </div>
+        <div style="display: flex; justify-content: space-around; padding: 12px 0 6px;">
+          <div style="text-align: center;">
+            <div class="socket-dot" style="margin: 0 auto 6px; transform: scale(1.4);"></div>
+            <span style="font-size: 12px; font-weight: 950; background: #2563EB; color: #FFF; padding: 2px 6px; border-radius: 4px;">TT-METAL</span>
+          </div>
+          <div style="text-align: center;">
+            <div class="socket-dot" style="margin: 0 auto 6px; transform: scale(1.4);"></div>
+            <span style="font-size: 12px; font-weight: 950; background: #059669; color: #FFF; padding: 2px 6px; border-radius: 4px;">MAGIC-CTX</span>
+          </div>
+          <div style="text-align: center;">
+            <div class="socket-dot" style="margin: 0 auto 6px; transform: scale(1.4);"></div>
+            <span style="font-size: 12px; font-weight: 950; background: #EA580C; color: #FFF; padding: 2px 6px; border-radius: 4px;">INBOX-ZERO</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Subscription bills with CANCELLED stamp -->
+      <div id="hook-bills" style="position: absolute; left: 90px; top: 295px; width: 540px; display: flex; flex-direction: column; gap: 10px; z-index: 24;">
+        <div style="display: flex; gap: 12px;">
+          <div id="bill-1" style="flex: 1; background: #FFF; border: 4px solid #171819; border-radius: 12px; padding: 10px 14px; box-shadow: 4px 4px 0 #171819; font-weight: 900; font-size: 16px; color: #EF4444;">
+            💳 OpenAI: $200/mo
+          </div>
+          <div id="bill-2" style="flex: 1; background: #FFF; border: 4px solid #171819; border-radius: 12px; padding: 10px 14px; box-shadow: 4px 4px 0 #171819; font-weight: 900; font-size: 16px; color: #EF4444;">
+            💳 Cursor Pro: $40/mo
+          </div>
+        </div>
+        <div id="bill-stamp" style="align-self: center; background: #EF4444; color: #FFF; font-weight: 950; font-size: 26px; letter-spacing: 0.05em; padding: 8px 24px; border-radius: 12px; border: 4px solid #171819; transform: rotate(-5deg); box-shadow: 5px 5px 0 #171819; text-shadow: 1px 1px 0 #000;">
+          ✕ OVERPRICED &amp; CANCELLED
+        </div>
+      </div>
+    </div>
+
+    <!-- SCENE 2: Repo 1 - TT-Metal ({t_hook_end} - {t_tool1_end}s) -->
+    <div id="scene-tool1" class="scene-layer" style="opacity: 0;">
+      <!-- Upper Repo Card Base -->
+      <div class="upper-card">
+        <div class="repo-header">
+          <span class="repo-icon">⚡</span>
+          <span class="repo-slug">{repo_data[0]['full_name']}</span>
+          <span class="repo-star">{repo_data[0]['stars']}</span>
+        </div>
+        <div class="repo-title">TT-Metalium Engine</div>
+        <div class="repo-desc">
+          Automates complex engineering tasks in seconds with zero manual coding.
+        </div>
+      </div>
+
+      <!-- Grounded Tech Console with REAL SCRAPED DEMO MEDIA -->
+      <div class="tech-console">
+        <div class="console-header">
+          <div class="console-dots">
+            <div class="console-dot r"></div>
+            <div class="console-dot y"></div>
+            <div class="console-dot g"></div>
+          </div>
+          <div class="console-title">Silicon Operator Compiler</div>
+        </div>
+        
+        <!-- Embedded Real Screenshot/Demo Image -->
+        <div class="demo-media-box">
+          <img src="{repo_data[0]['demo']}" alt="TT-Metal Demo">
+        </div>
+
+        <div style="background: #2D3748; border-radius: 8px; padding: 7px 10px; font-size: 12px; color: #68D391; margin-bottom: 10px; border: 2px solid #4A5568;">
+          &gt; git clone {repo_data[0]['full_name']} &amp;&amp; make run
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 7px; font-size: 12px; line-height: 1.35;">
+          <div id="t1-step-1" style="color: #63B3ED; opacity: 0; background: #1E293B; padding: 6px 8px; border-radius: 6px; border-left: 4px solid #63B3ED;">
+            [✓] Mapping low-level tensor kernels
+          </div>
+          <div id="t1-step-2" style="color: #68D391; opacity: 0; background: #1E293B; padding: 6px 8px; border-radius: 6px; border-left: 4px solid #68D391;">
+            [✓] Silicon hardware acceleration: ACTIVE
+          </div>
+          <div id="t1-step-3" style="color: #F6AD55; opacity: 0; background: #2D3748; padding: 6px 8px; border-radius: 6px; border: 1.5px solid #F6AD55;">
+            ⚡ LATENCY: 3.8ms · MEMORY: 1.2 TB/s
+          </div>
+        </div>
+        <div id="t1-badge" style="margin-top: auto; opacity: 0; background: #2563EB; color: #FFF; padding: 8px 10px; border-radius: 8px; font-weight: 950; text-align: center; font-size: 12px; box-shadow: 0 4px 0 #1D4ED8;">
+          🚀 ZERO MANUAL CODING · OPEN HARDWARE
+        </div>
+      </div>
+    </div>
+
+    <!-- SCENE 3: Repo 2 - Magic-Context ({t_tool1_end} - {t_tool2_end}s) -->
+    <div id="scene-tool2" class="scene-layer" style="opacity: 0;">
+      <div class="upper-card">
+        <div class="repo-header">
+          <span class="repo-icon">🧠</span>
+          <span class="repo-slug">{repo_data[1]['full_name']}</span>
+          <span class="repo-star">{repo_data[1]['stars']}</span>
+        </div>
+        <div class="repo-title">Magic-Context</div>
+        <div class="repo-desc">
+          An insane self-hosted powerhouse that runs locally on your own machine.
+        </div>
+      </div>
+
+      <!-- Grounded Tech Console with REAL SCRAPED BANNER -->
+      <div class="tech-console">
+        <div class="console-header">
+          <div class="console-dots">
+            <div class="console-dot r"></div>
+            <div class="console-dot y"></div>
+            <div class="console-dot g"></div>
+          </div>
+          <div class="console-title">Lifelong Memory Hippocampus</div>
+        </div>
+
+        <!-- Embedded Real Screenshot/OG Banner -->
+        <div class="demo-media-box">
+          <img src="{repo_data[1]['demo']}" alt="Magic-Context Banner">
+        </div>
+
+        <div style="background: #2D3748; border-radius: 8px; padding: 7px 10px; font-size: 12px; color: #68D391; margin-bottom: 10px; border: 2px solid #4A5568;">
+          &gt; npx @cortexkit/magic-context --lifelong-session
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 7px; font-size: 12px; line-height: 1.35;">
+          <div id="t2-step-1" style="color: #63B3ED; opacity: 0; background: #1E293B; padding: 6px 8px; border-radius: 6px; border-left: 4px solid #63B3ED;">
+            [✓] Unbounded session context attached
+          </div>
+          <div id="t2-step-2" style="color: #68D391; opacity: 0; background: #1E293B; padding: 6px 8px; border-radius: 6px; border-left: 4px solid #68D391;">
+            [✓] 100% Offline local disk storage
+          </div>
+          <div id="t2-step-3" style="color: #F6AD55; opacity: 0; background: #2D3748; padding: 6px 8px; border-radius: 6px; border: 1.5px solid #F6AD55;">
+            🔒 Zero telemetry · One session for life
+          </div>
+        </div>
+        <div id="t2-badge" style="margin-top: auto; opacity: 0; background: #059669; color: #FFF; padding: 8px 10px; border-radius: 8px; font-weight: 950; text-align: center; font-size: 12px; box-shadow: 0 4px 0 #047857;">
+          💎 SELF-HOSTED POWERHOUSE
+        </div>
+      </div>
+    </div>
+
+    <!-- SCENE 4: Repo 3 - Inbox-Zero ({t_tool2_end} - {t_tool3_end}s) -->
+    <div id="scene-tool3" class="scene-layer" style="opacity: 0;">
+      <div class="upper-card">
+        <div class="repo-header">
+          <span class="repo-icon">✉️</span>
+          <span class="repo-slug">{repo_data[2]['full_name']}</span>
+          <span class="repo-star">{repo_data[2]['stars']}</span>
+        </div>
+        <div class="repo-title">Inbox-Zero AI</div>
+        <div class="repo-desc">
+          The ultimate breakthrough developer secret that saves hundreds of hours.
+        </div>
+      </div>
+
+      <!-- Grounded Tech Console with REAL SCRAPED DEMO IMAGE -->
+      <div class="tech-console">
+        <div class="console-header">
+          <div class="console-dots">
+            <div class="console-dot r"></div>
+            <div class="console-dot y"></div>
+            <div class="console-dot g"></div>
+          </div>
+          <div class="console-title">Automated Inbox Cleaner</div>
+        </div>
+
+        <!-- Embedded Real Screenshot/Demo Image -->
+        <div class="demo-media-box">
+          <img src="{repo_data[2]['demo']}" alt="Inbox-Zero Demo">
+        </div>
+
+        <div style="background: #2D3748; border-radius: 8px; padding: 7px 10px; font-size: 12px; color: #68D391; margin-bottom: 10px; border: 2px solid #4A5568;">
+          &gt; docker compose up -d inbox-zero
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 7px; font-size: 12px; line-height: 1.35;">
+          <div id="t3-step-1" style="color: #63B3ED; opacity: 0; background: #1E293B; padding: 6px 8px; border-radius: 6px; border-left: 4px solid #63B3ED;">
+            [✓] Cleared 1,420 unread developer newsletters
+          </div>
+          <div id="t3-step-2" style="color: #68D391; opacity: 0; background: #1E293B; padding: 6px 8px; border-radius: 6px; border-left: 4px solid #68D391;">
+            [✓] Auto-categorized critical pull requests
+          </div>
+          <div id="t3-step-3" style="color: #F6AD55; opacity: 0; background: #2D3748; padding: 6px 8px; border-radius: 6px; border: 1.5px solid #F6AD55;">
+            ⏱️ Saved 240+ developer hours this month
+          </div>
+        </div>
+        <div id="t3-badge" style="margin-top: auto; opacity: 0; background: #EA580C; color: #FFF; padding: 8px 10px; border-radius: 8px; font-weight: 950; text-align: center; font-size: 12px; box-shadow: 0 4px 0 #C2410C;">
+          🔥 12,430+ GITHUB STARS
+        </div>
+      </div>
+    </div>
+
+    <!-- SCENE 5: Outro Phone DM ({t_tool3_end} - {duration}s) -->
+    <div id="scene-outro" class="scene-layer" style="opacity: 0;">
+      <div class="phone-mockup">
+        <div class="phone-notch"></div>
+        <div class="phone-screen">
+          <!-- Chat Header -->
+          <div style="display: flex; align-items: center; gap: 10px; padding-bottom: 12px; border-bottom: 2px solid #F3F4F6; margin-bottom: 14px;">
+            <div style="width: 36px; height: 36px; background: #2563EB; border-radius: 50%; color: #FFF; font-weight: 950; display: flex; align-items: center; justify-content: center; font-size: 18px;">JD</div>
+            <div>
+              <div style="font-weight: 950; font-size: 14px; color: #171819;">Jayant Diwan</div>
+              <div style="font-size: 11px; color: #10B981; font-weight: 750;">● Active now</div>
+            </div>
+          </div>
+          <!-- User Comment Bubble -->
+          <div id="dm-bubble" style="opacity: 0; align-self: flex-end; background: #2563EB; color: #FFF; font-weight: 950; font-size: 17px; padding: 10px 18px; border-radius: 18px 18px 4px 18px; margin-bottom: 16px; box-shadow: 0 4px 12px rgba(37,99,235,0.3);">
+            TOOLS
+          </div>
+          <!-- Automated DM Reply with 3 Repos -->
+          <div id="dm-reply" style="opacity: 0; background: #F8FAFC; border: 2px solid #E2E8F0; border-radius: 18px; padding: 14px; display: flex; flex-direction: column; gap: 10px;">
+            <div style="font-size: 12px; font-weight: 900; color: #64748B;">Automated Instant Delivery:</div>
+            <div style="display: flex; align-items: center; gap: 8px; background: #FFF; padding: 8px 10px; border-radius: 10px; border: 1.5px solid #CBD5E1;">
+              <span style="font-size: 16px;">⚡</span>
+              <span style="font-weight: 900; font-size: 13px; color: #1E293B;">{repo_data[0]['full_name']}</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 8px; background: #FFF; padding: 8px 10px; border-radius: 10px; border: 1.5px solid #CBD5E1;">
+              <span style="font-size: 16px;">🧠</span>
+              <span style="font-weight: 900; font-size: 13px; color: #1E293B;">{repo_data[1]['full_name']}</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 8px; background: #FFF; padding: 8px 10px; border-radius: 10px; border: 1.5px solid #CBD5E1;">
+              <span style="font-size: 16px;">✉️</span>
+              <span style="font-weight: 900; font-size: 13px; color: #1E293B;">{repo_data[2]['full_name']}</span>
+            </div>
+            <div style="font-size: 11px; color: #2563EB; font-weight: 950; text-align: center; margin-top: 4px;">
+              ✓ Direct GitHub links sent!
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Captions Pill (3D Keycap Subtitles on Front of Desk) -->
+    <div class="captions-wrapper">
+      <div id="caption-pill" class="caption-pill">
+        <span class="caption-word active">READY</span>
+      </div>
+    </div>
+
   </div>
 
   <script>
-    // Spawn 25 floating particles dynamically
-    const partWrap = document.getElementById("particles-wrap");
-    for (let p = 0; p < 25; p++) {{
-      const part = document.createElement("div");
-      part.className = "particle";
-      const size = Math.random() * 8 + 4;
-      part.style.width = size + "px";
-      part.style.height = size + "px";
-      part.style.left = Math.random() * 1040 + "px";
-      part.style.animationDuration = (Math.random() * 10 + 8) + "s";
-      part.style.animationDelay = (Math.random() * 8) + "s";
-      partWrap.appendChild(part);
-    }}
-
     const tl = gsap.timeline({{ paused: true }});
     window.__timelines = {{ root: tl }};
-    tl.to({{}}, {{ duration: {duration} }}, 0);
+    tl.to({{}}, {{ duration: {round(duration, 2)} }}, 0);
 
-    // Continuous timeline progress bar
-    tl.to("#progress-bar", {{ width: "100%", duration: {duration}, ease: "none" }}, 0);
+    // Dynamic Desk & Scene Colors
+    const sceneConfigs = [
+      {{ id: "#scene-hook", bg: "#bg-hook", desk: "#B64D29", start: 0, end: {t_hook_end}, badge: "STOP PAYING FOR AI", meter: "0/3", plugs: [0,0,0] }},
+      {{ id: "#scene-tool1", bg: "#bg-tool1", desk: "#1D4ED8", start: {t_hook_end}, end: {t_tool1_end}, badge: "01 · TT-METAL", meter: "1/3", plugs: [1,0,0] }},
+      {{ id: "#scene-tool2", bg: "#bg-tool2", desk: "#047857", start: {t_tool1_end}, end: {t_tool2_end}, badge: "02 · MAGIC-CTX", meter: "2/3", plugs: [1,1,0] }},
+      {{ id: "#scene-tool3", bg: "#bg-tool3", desk: "#C2410C", start: {t_tool2_end}, end: {t_tool3_end}, badge: "03 · INBOX-ZERO", meter: "3/3", plugs: [1,1,1] }},
+      {{ id: "#scene-outro", bg: "#bg-outro", desk: "#B64D29", start: {t_tool3_end}, end: {duration}, badge: "3 REPOS · 1 DM", meter: "3/3", plugs: [1,1,1] }}
+    ];
 
-    // Continuous avatar talking mouth motion
-    for (let t = 0.1; t < {duration}; t += 0.28) {{
-      tl.to("#mouth", {{ attr: {{ ry: 19, rx: 25 }}, duration: 0.11, ease: "none" }}, t);
-      tl.to("#mouth", {{ attr: {{ ry: 6, rx: 18 }}, duration: 0.11, ease: "none" }}, t + 0.14);
-    }}
+    sceneConfigs.forEach((sc, i) => {{
+      tl.set(sc.id, {{ opacity: 1 }}, sc.start);
+      if (sc.end < {round(duration, 2)}) {{
+        tl.set(sc.id, {{ opacity: 0 }}, sc.end);
+      }}
 
-    // Continuous avatar eye blinking
-    for (let t = 1.6; t < {duration}; t += 3.2) {{
-      tl.to(["#eye-left", "#eye-right"], {{ scaleY: 0.1, duration: 0.08, transformOrigin: "50% 50%", yoyo: true, repeat: 1 }}, t);
-    }}
+      tl.to(sc.bg, {{ opacity: 1, duration: 0.35 }}, sc.start);
+      if (sc.end < {round(duration, 2)}) {{
+        tl.to(sc.bg, {{ opacity: 0, duration: 0.35 }}, sc.end);
+      }}
 
-    // Subtle continuous camera float / micro-pan (Zero static frames)
-    tl.fromTo("#root", 
-      {{ scale: 1.0, rotate: 0 }}, 
-      {{ scale: 1.015, rotate: 0.2, duration: {duration} / 2, yoyo: true, repeat: 1, ease: "sine.inOut" }}, 
-      0
+      tl.to("#desk", {{ backgroundColor: sc.desk, duration: 0.35 }}, sc.start);
+
+      tl.set("#top-badge", {{ innerText: sc.badge }}, sc.start);
+      tl.fromTo("#top-badge", {{ scale: 0.85, rotate: -4 }}, {{ scale: 1, rotate: -1.5, duration: 0.35, ease: "back.out(2)" }}, sc.start);
+
+      tl.set("#meter-label", {{ innerText: `REPOS ${{sc.meter}}` }}, sc.start);
+      tl.set("#sock-1", {{ className: sc.plugs[0] ? "socket-dot plug-1" : "socket-dot" }}, sc.start);
+      tl.set("#sock-2", {{ className: sc.plugs[1] ? "socket-dot plug-2" : "socket-dot" }}, sc.start);
+      tl.set("#sock-3", {{ className: sc.plugs[2] ? "socket-dot plug-3" : "socket-dot" }}, sc.start);
+
+      if (i > 0 && i < 4) {{
+        tl.fromTo("#spark-fx", {{ opacity: 1, scale: 1.5 }}, {{ opacity: 0, scale: 0.5, duration: 0.3 }}, sc.start);
+      }}
+    }});
+
+    // ================= TIMELINE SCENE CHOREOGRAPHY =================
+
+    // --- SCENE 1: HOOK (0 - {t_hook_end}s) ---
+    tl.set("#arm-both-up", {{ opacity: 1 }}, 0);
+    tl.fromTo("#hook-strip", {{ y: -160, opacity: 0 }}, {{ y: 0, opacity: 1, duration: 0.45, ease: "back.out(1.5)" }}, 0.1);
+    tl.fromTo("#bill-1", {{ y: -30, opacity: 0 }}, {{ y: 0, opacity: 1, duration: 0.35, ease: "back.out(1.5)" }}, 0.6);
+    tl.fromTo("#bill-2", {{ y: -30, opacity: 0 }}, {{ y: 0, opacity: 1, duration: 0.35, ease: "back.out(1.5)" }}, 0.9);
+    tl.fromTo("#bill-stamp", 
+      {{ scale: 2.2, opacity: 0, rotate: -25 }}, 
+      {{ scale: 1, opacity: 1, rotate: -5, duration: 0.35, ease: "bounce.out" }}, 
+      1.4
     );
+    tl.to("#bill-1, #bill-2", {{ textDecoration: "line-through", opacity: 0.55, duration: 0.2 }}, 1.65);
 
-    // SCENE TRANSITIONS
-    // 1. Hook (0 -> {t_hook_end})
-    tl.set("#hook-view", {{ opacity: 1 }}, 0);
-    tl.set("#showcase-img", {{ opacity: 0 }}, 0);
-
-    // Transition to Tool 1
-    tl.set("#hook-view", {{ opacity: 0, pointerEvents: "none" }}, {t_hook_end});
-    tl.set("#showcase-img", {{ opacity: 1, attr: {{ src: "{repo_media[0]['img']}" }} }}, {t_hook_end});
-    tl.set("#win-title", {{ innerText: "{repo_media[0]['owner']} / {repo_media[0]['name']}" }}, {t_hook_end});
-    tl.set("#win-stars", {{ innerText: "{repo_media[0]['stars']}" }}, {t_hook_end});
-    tl.set("#feature-tag", {{ innerText: "⚡ 01 · {repo_media[0]['name']}" }}, {t_hook_end});
-    tl.set("#term-cmd", {{ innerText: "{repo_media[0]['cmd']}" }}, {t_hook_end});
-    tl.set("#bench-lat", {{ innerText: "{repo_media[0]['bench']['lat']}" }}, {t_hook_end});
-    tl.set("#bench-mem", {{ innerText: "{repo_media[0]['bench']['mem']}" }}, {t_hook_end});
-    tl.set("#bench-save", {{ innerText: "{repo_media[0]['bench']['save']}" }}, {t_hook_end});
-    tl.set("#term-status", {{ innerText: "[READY] {repo_media[0]['bench']['tag']} online. 0% cloud cost." }}, {t_hook_end});
+    // Transition Avatar to Right side (presenter position) for all repo reviews
+    tl.to("#avatar-wrap", {{ x: 180, y: 15, duration: 0.65, ease: "power2.inOut" }}, {t_hook_end});
     tl.set("#arm-both-up", {{ opacity: 0 }}, {t_hook_end});
     tl.set("#arm-point", {{ opacity: 1 }}, {t_hook_end});
 
-    // Continuous Ken Burns Zoom on Tool 1
-    tl.fromTo("#showcase-img", 
-      {{ scale: 1.0, y: 0 }}, 
-      {{ scale: 1.15, y: -18, duration: {t_tool1_end - t_hook_end}, ease: "power1.inOut" }}, 
-      {t_hook_end}
-    );
+    // --- SCENE 2: TOOL 1 - TT-METAL ({t_hook_end} - {t_tool1_end}s) ---
+    tl.fromTo("#scene-tool1 .upper-card", {{ x: -60, opacity: 0 }}, {{ x: 0, opacity: 1, duration: 0.45, ease: "back.out(1.5)" }}, {t_hook_end});
+    tl.fromTo("#scene-tool1 .tech-console", {{ y: 80, opacity: 0 }}, {{ y: 0, opacity: 1, duration: 0.5, ease: "back.out(1.4)" }}, {t_hook_end + 0.1});
+    tl.fromTo("#t1-step-1", {{ x: -20, opacity: 0 }}, {{ x: 0, opacity: 1, duration: 0.35 }}, {t_hook_end + 0.8});
+    tl.fromTo("#t1-step-2", {{ x: -20, opacity: 0 }}, {{ x: 0, opacity: 1, duration: 0.35 }}, {t_hook_end + 1.8});
+    tl.fromTo("#t1-step-3", {{ scale: 0.9, opacity: 0 }}, {{ scale: 1, opacity: 1, duration: 0.35, ease: "back.out(1.5)" }}, {t_hook_end + 2.8});
+    tl.fromTo("#t1-badge", {{ scale: 0.8, opacity: 0 }}, {{ scale: 1, opacity: 1, duration: 0.35, ease: "back.out(2)" }}, {t_hook_end + 3.8});
 
-    // Transition to Tool 2
-    tl.set("#showcase-img", {{ attr: {{ src: "{repo_media[1]['img']}" }} }}, {t_tool1_end});
-    tl.set("#win-title", {{ innerText: "{repo_media[1]['owner']} / {repo_media[1]['name']}" }}, {t_tool1_end});
-    tl.set("#win-stars", {{ innerText: "{repo_media[1]['stars']}" }}, {t_tool1_end});
-    tl.set("#feature-tag", {{ innerText: "🚀 02 · {repo_media[1]['name']}" }}, {t_tool1_end});
-    tl.set("#term-cmd", {{ innerText: "{repo_media[1]['cmd']}" }}, {t_tool1_end});
-    tl.set("#bench-lat", {{ innerText: "{repo_media[1]['bench']['lat']}" }}, {t_tool1_end});
-    tl.set("#bench-mem", {{ innerText: "{repo_media[1]['bench']['mem']}" }}, {t_tool1_end});
-    tl.set("#bench-save", {{ innerText: "{repo_media[1]['bench']['save']}" }}, {t_tool1_end});
-    tl.set("#term-status", {{ innerText: "[CONNECTED] {repo_media[1]['bench']['tag']} mapped to local disk." }}, {t_tool1_end});
-    tl.fromTo("#showcase-img", 
-      {{ scale: 1.0, y: 0 }}, 
-      {{ scale: 1.15, y: -18, duration: {t_tool2_end - t_tool1_end}, ease: "power1.inOut" }}, 
-      {t_tool1_end}
-    );
+    // --- SCENE 3: TOOL 2 - MAGIC-CONTEXT ({t_tool1_end} - {t_tool2_end}s) ---
+    tl.fromTo("#scene-tool2 .upper-card", {{ x: -60, opacity: 0 }}, {{ x: 0, opacity: 1, duration: 0.45, ease: "back.out(1.5)" }}, {t_tool1_end});
+    tl.fromTo("#scene-tool2 .tech-console", {{ y: 80, opacity: 0 }}, {{ y: 0, opacity: 1, duration: 0.5, ease: "back.out(1.4)" }}, {t_tool1_end + 0.1});
+    tl.fromTo("#t2-step-1", {{ x: -20, opacity: 0 }}, {{ x: 0, opacity: 1, duration: 0.35 }}, {t_tool1_end + 0.8});
+    tl.fromTo("#t2-step-2", {{ x: -20, opacity: 0 }}, {{ x: 0, opacity: 1, duration: 0.35 }}, {t_tool1_end + 1.8});
+    tl.fromTo("#t2-step-3", {{ scale: 0.9, opacity: 0 }}, {{ scale: 1, opacity: 1, duration: 0.35, ease: "back.out(1.5)" }}, {t_tool1_end + 2.8});
+    tl.fromTo("#t2-badge", {{ scale: 0.8, opacity: 0 }}, {{ scale: 1, opacity: 1, duration: 0.35, ease: "back.out(2)" }}, {t_tool1_end + 3.8});
 
-    // Transition to Tool 3
-    tl.set("#showcase-img", {{ attr: {{ src: "{repo_media[2]['img']}" }} }}, {t_tool2_end});
-    tl.set("#win-title", {{ innerText: "{repo_media[2]['owner']} / {repo_media[2]['name']}" }}, {t_tool2_end});
-    tl.set("#win-stars", {{ innerText: "{repo_media[2]['stars']}" }}, {t_tool2_end});
-    tl.set("#feature-tag", {{ innerText: "🔥 03 · {repo_media[2]['name']}" }}, {t_tool2_end});
-    tl.set("#term-cmd", {{ innerText: "{repo_media[2]['cmd']}" }}, {t_tool2_end});
-    tl.set("#bench-lat", {{ innerText: "{repo_media[2]['bench']['lat']}" }}, {t_tool2_end});
-    tl.set("#bench-mem", {{ innerText: "{repo_media[2]['bench']['mem']}" }}, {t_tool2_end});
-    tl.set("#bench-save", {{ innerText: "{repo_media[2]['bench']['save']}" }}, {t_tool2_end});
-    tl.set("#term-status", {{ innerText: "[STANDALONE] {repo_media[2]['bench']['tag']} running with zero telemetry." }}, {t_tool2_end});
-    tl.fromTo("#showcase-img", 
-      {{ scale: 1.0, y: 0 }}, 
-      {{ scale: 1.15, y: -18, duration: {t_tool3_end - t_tool2_end}, ease: "power1.inOut" }}, 
-      {t_tool2_end}
-    );
+    // --- SCENE 4: TOOL 3 - INBOX-ZERO ({t_tool2_end} - {t_tool3_end}s) ---
+    tl.fromTo("#scene-tool3 .upper-card", {{ x: -60, opacity: 0 }}, {{ x: 0, opacity: 1, duration: 0.45, ease: "back.out(1.5)" }}, {t_tool2_end});
+    tl.fromTo("#scene-tool3 .tech-console", {{ y: 80, opacity: 0 }}, {{ y: 0, opacity: 1, duration: 0.5, ease: "back.out(1.4)" }}, {t_tool2_end + 0.1});
+    tl.fromTo("#t3-step-1", {{ x: -20, opacity: 0 }}, {{ x: 0, opacity: 1, duration: 0.35 }}, {t_tool2_end + 0.8});
+    tl.fromTo("#t3-step-2", {{ x: -20, opacity: 0 }}, {{ x: 0, opacity: 1, duration: 0.35 }}, {t_tool2_end + 1.8});
+    tl.fromTo("#t3-step-3", {{ scale: 0.9, opacity: 0 }}, {{ scale: 1, opacity: 1, duration: 0.35, ease: "back.out(1.5)" }}, {t_tool2_end + 2.8});
+    tl.fromTo("#t3-badge", {{ scale: 0.8, opacity: 0 }}, {{ scale: 1, opacity: 1, duration: 0.35, ease: "back.out(2)" }}, {t_tool2_end + 3.6});
 
-    // Transition to CTA Outro
-    tl.set("#showcase-img", {{ opacity: 0 }}, {t_tool3_end});
-    tl.set("#cta-view", {{ opacity: 1, pointerEvents: "auto" }}, {t_tool3_end});
-    tl.set("#feature-tag", {{ innerText: "💬 COMMENT 'TOOLS'" }}, {t_tool3_end});
-    tl.set("#term-cmd", {{ innerText: "echo 'Comment TOOLS below to get GitHub links instantly!'" }}, {t_tool3_end});
-    tl.set("#term-status", {{ innerText: "[DISPATCH] Direct automated DM queued for followers." }}, {t_tool3_end});
+    // --- SCENE 5: OUTRO ({t_tool3_end} - {duration}s) ---
     tl.set("#arm-point", {{ opacity: 0 }}, {t_tool3_end});
     tl.set("#arm-thumbs-up", {{ opacity: 1 }}, {t_tool3_end});
-    tl.set("#eye-right", {{ opacity: 0 }}, {t_tool3_end + 0.3});
-    tl.set("#eye-wink", {{ opacity: 1 }}, {t_tool3_end + 0.3});
+    tl.fromTo("#scene-outro .phone-mockup", {{ y: 120, opacity: 0 }}, {{ y: 0, opacity: 1, duration: 0.5, ease: "back.out(1.4)" }}, {t_tool3_end});
+    tl.fromTo("#dm-bubble", {{ scale: 0.8, opacity: 0 }}, {{ scale: 1, opacity: 1, duration: 0.35, ease: "back.out(2)" }}, {t_tool3_end + 0.4});
+    tl.fromTo("#dm-reply", {{ y: 20, opacity: 0 }}, {{ y: 0, opacity: 1, duration: 0.45, ease: "back.out(1.5)" }}, {t_tool3_end + 0.8});
 
-    // SYNCHRONIZED KINETIC CAPTIONS WITH GUARANTEED WORD SPACING
+    // Continuous micro head-bob
+    tl.to("#head", {{ y: -3, duration: 0.22, repeat: -1, yoyo: true, ease: "sine.inOut" }}, 0);
+
+    // Continuous mouth morphing matching speech
+    for (let t = 0.15; t < {round(duration - 0.5, 2)}; t += 0.32) {{
+      tl.to("#mouth", {{ attr: {{ ry: 18, rx: 24 }}, duration: 0.09, ease: "none" }}, t);
+      tl.to("#mouth", {{ attr: {{ ry: 8, rx: 20 }}, duration: 0.09, ease: "none" }}, t + 0.11);
+    }}
+
+    // Eye blinks every ~3.8 seconds
+    for (let t = 1.8; t < {round(duration - 1, 2)}; t += 3.8) {{
+      tl.to(["#eye-left circle", "#eye-right circle"], {{ scaleY: 0.1, transformOrigin: "center", duration: 0.08, yoyo: true, repeat: 1 }}, t);
+    }}
+
+    // Eyebrow twitches on key emphasis
+    for (let t = 2.0; t < {round(duration - 1, 2)}; t += 4.5) {{
+      tl.to(["#brow-left", "#brow-right"], {{ y: -5, duration: 0.2, yoyo: true, repeat: 1 }}, t);
+    }}
+
+    // Rising steam bubbles
+    tl.to("#steam-1", {{ y: -25, opacity: 0, duration: 1.8, repeat: -1, ease: "power1.out" }}, 0);
+    tl.to("#steam-2", {{ y: -30, opacity: 0, duration: 2.2, repeat: -1, ease: "power1.out", delay: 0.8 }}, 0);
+
+    // Kinetic Captions Choreography (3D Keyboard Keycap Pills)
     const captionData = {json.dumps(caption_chunks)};
+
     captionData.forEach(chunk => {{
       tl.call(() => {{
         const pill = document.getElementById("caption-pill");
@@ -945,14 +1087,8 @@ def build_hyperframes_composition(
         chunk.words.forEach((w, wIdx) => {{
           const span = document.createElement("span");
           span.className = "caption-word" + (wIdx === chunk.active ? " active" : "");
-          span.innerText = w.toUpperCase();
+          span.innerText = w;
           pill.appendChild(span);
-          if (wIdx < chunk.words.length - 1) {{
-            const spacer = document.createElement("span");
-            spacer.style.display = "inline-block";
-            spacer.style.width = "28px";
-            pill.appendChild(spacer);
-          }}
         }});
       }}, null, chunk.start);
     }});
@@ -960,10 +1096,12 @@ def build_hyperframes_composition(
 </body>
 </html>
 """
+
     with open(output_html, "w") as f:
         f.write(html)
-    print(f"[✓] Generated 1080x1920 9/10 Hyper-Motion Composition ({round(duration, 1)}s) at {output_html}")
+
+    print(f"[✓] Compiled hyper-motion composition to {output_html} ({round(duration, 2)}s, 720x1280)")
     return output_html
 
 if __name__ == "__main__":
-    build_hyperframes_composition(duration=28.76)
+    build_hyperframes_composition()

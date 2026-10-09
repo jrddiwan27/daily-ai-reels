@@ -78,7 +78,7 @@ def run_daily_pipeline():
     master_audio = produce_master_audio(voice_path=audio_path, duration=dur)
     
     print(f"[*] Multiplexing master audio ({master_audio}) into final video via FFmpeg...")
-    mux_cmd = f"ffmpeg -y -i {raw_mp4} -i {master_audio} -c:v copy -c:a aac -b:a 192k -shortest {out_mp4}"
+    mux_cmd = f"ffmpeg -y -i {raw_mp4} -i {master_audio} -map 0:v:0 -map 1:a:0 -c:v copy -c:a aac -b:a 192k -shortest {out_mp4}"
     subprocess.check_call(mux_cmd, shell=True)
     
     if not os.path.exists(out_mp4):
