@@ -9,8 +9,9 @@ from pipeline.ai_scriptwriter import generate_viral_script_with_gemini
 from pipeline.fish_audio_client import generate_voiceover, generate_caption_chunks
 from pipeline.audio_enhancer import produce_master_audio
 from pipeline.composition_compiler import build_hyperframes_composition
-from pipeline.buffer_dispatcher import dispatch_to_buffer
+from pipeline.buffer_dispatcher import dispatch_to_buffer, dispatch_to_all_platforms
 from pipeline.dedup_manager import record_published
+from pipeline.blog_engine import generate_blog_article
 
 def run_pipeline(slot_id: int = None, dry_run: bool = False):
     if slot_id is None:
@@ -96,27 +97,24 @@ def run_pipeline(slot_id: int = None, dry_run: bool = False):
     file_size = os.path.getsize(out_mp4)
     print(f"[✓] Final Video Generated: {out_mp4} ({round(file_size/1024/1024, 2)} MB)")
 
-    # 7. Auto-Publish to Buffer & Update Persistent Deduplication Ledger
-    item_titles = [it["name"].split("/")[-1].replace("-", " ").title() for it in items]
-    caption = (
-        f"{meta['post_title']}\n\n"
-        f"1. {item_titles[0]}\n2. {item_titles[1]}\n3. {item_titles[2]}\n\n"
-        f"Comment '{meta['cta_keyword']}' and I'll DM you the full links & blueprint!\n\n"
-        f"{' '.join(meta['hashtags'])}"
-    )
-
-    post_id = None
+    # 7. Auto-Publish to Buffer across Instagram, YouTube Shorts & X
+    post_ids = {}
     if not dry_run:
-        print("\n[STEP 7/7] Dispatching to Buffer Instagram Reels Queue...")
-        post_id = dispatch_to_buffer(out_mp4, caption)
+        print("\n[STEP 7/8] Dispatching across Instagram Reels, YouTube Shorts & X...")
+        post_ids = dispatch_to_all_platforms(out_mp4, meta, items)
     else:
-        print("\n[STEP 7/7] Dry-run mode enabled. Skipping Buffer dispatch.")
+        print("\n[STEP 7/8] Dry-run mode enabled. Skipping multi-platform dispatch.")
+
+    # 8. Update Autonomous AI Blog & Hub
+    print("\n[STEP 8/8] Updating Autonomous AI Blog & Hub (docs/)...")
+    generate_blog_article(slot_id, meta, items, script_data)
 
     # Record in deduplication ledger to guarantee no repeats
-    record_published(slot_id, meta["slot_name"], items, post_id=post_id)
+    primary_id = post_ids.get("instagram") or "scheduled"
+    record_published(slot_id, meta["slot_name"], items, post_id=primary_id)
 
     print("\n" + "=" * 65)
-    print(f"✨ COMPLETED REEL PIPELINE FOR SLOT {slot_id} ({meta['slot_name']})")
+    print(f"✨ COMPLETED 5X PIPELINE FOR SLOT {slot_id} ({meta['slot_name']})")
     print("=" * 65)
 
 if __name__ == "__main__":

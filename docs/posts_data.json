@@ -1,0 +1,267 @@
+[
+  {
+    "id": "2026-10-10-slot-5",
+    "title": "The Senior AI Prompt Framework You Should Be Using in 2026",
+    "date": "October 10, 2026",
+    "date_slug": "2026-10-10",
+    "slot_id": 5,
+    "slot_name": "Night Owl Deep Dive (Master Prompts)",
+    "badge": "PROMPT LAB",
+    "cta_keyword": "PROMPT",
+    "video_url": "",
+    "summary": "Here are 3 breakthrough items featured in today's Night Owl Deep Dive (Master Prompts) edition.",
+    "voiceover_script": "Discover the newest tools shaping PROMPT LAB in 2026.",
+    "items": [
+      {
+        "number": 1,
+        "name": "Chain Of Density",
+        "url": "https://arxiv.org/abs/2309.04269",
+        "stars": "\u2605 26,000",
+        "badge": "DENSITY RECURSION",
+        "description": "Recursive distillation framework that packs maximum technical insights into minimal token count.",
+        "command": "git clone https://arxiv.org/abs/2309.04269.git\ncd chain-of-density\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 2,
+        "name": "Role Task Constraint",
+        "url": "https://jayantdigital.com",
+        "stars": "\u2605 31,000",
+        "badge": "ZERO HALLUCINATION",
+        "description": "The senior engineer prompt template that eliminates 99% of LLM hallucinations in codebases.",
+        "command": "git clone https://jayantdigital.com.git\ncd role-task-constraint\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 3,
+        "name": "Subagent Decomposition",
+        "url": "https://jayantdigital.com",
+        "stars": "\u2605 22,000",
+        "badge": "MULTI-AGENT",
+        "description": "Modular orchestration prompt dividing large software features into 4 parallel micro-agents.",
+        "command": "git clone https://jayantdigital.com.git\ncd subagent-decomposition\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      }
+    ],
+    "cta_text": "Want our studio to build custom autonomous AI employees for your workflow? Follow @jayant.digitalstudio and DM 'PROMPT'.",
+    "tags": [
+      "#promptengineering",
+      "#chatgpt",
+      "#claude",
+      "#softwareengineer",
+      "#aicoding"
+    ]
+  },
+  {
+    "id": "2026-10-10-slot-4",
+    "title": "3 Secret AI Websites That Feel Illegal To Know",
+    "date": "October 10, 2026",
+    "date_slug": "2026-10-10",
+    "slot_id": 4,
+    "slot_name": "Evening Toolkit (Secret Web AI Tools)",
+    "badge": "SECRET AI TOOLS",
+    "cta_keyword": "TOOLS",
+    "video_url": "",
+    "summary": "Here are 3 breakthrough items featured in today's Evening Toolkit (Secret Web AI Tools) edition.",
+    "voiceover_script": "Discover the newest tools shaping SECRET AI TOOLS in 2026.",
+    "items": [
+      {
+        "number": 1,
+        "name": "Bolt New",
+        "url": "https://bolt.new",
+        "stars": "\u2605 48,000",
+        "badge": "FULLSTACK BROWSER",
+        "description": "Full-stack web development directly in browser sandbox with one-click Netlify deployment.",
+        "command": "git clone https://bolt.new.git\ncd bolt-new\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 2,
+        "name": "Lovable Dev",
+        "url": "https://lovable.dev",
+        "stars": "\u2605 32,000",
+        "badge": "PROD BUILDER",
+        "description": "Text-to-software builder creating production React and Supabase apps in 3 minutes.",
+        "command": "git clone https://lovable.dev.git\ncd lovable-dev\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 3,
+        "name": "Elevenlabs Reader",
+        "url": "https://elevenlabs.io",
+        "stars": "\u2605 55,000",
+        "badge": "VOICE CLONE",
+        "description": "Ultra-realistic emotional voice cloning with dynamic accents and live text narration.",
+        "command": "git clone https://elevenlabs.io.git\ncd elevenlabs-reader\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      }
+    ],
+    "cta_text": "Want our studio to build custom autonomous AI employees for your workflow? Follow @jayant.digitalstudio and DM 'TOOLS'.",
+    "tags": [
+      "#aitools",
+      "#techhacks",
+      "#freelancer",
+      "#creatortools",
+      "#websites"
+    ]
+  },
+  {
+    "id": "2026-10-10-slot-3",
+    "title": "New Frontier Model Teardown: Why This Changes Everything",
+    "date": "October 10, 2026",
+    "date_slug": "2026-10-10",
+    "slot_id": 3,
+    "slot_name": "Tech Radar Teardown (Model Benchmarks)",
+    "badge": "MODEL RADAR",
+    "cta_keyword": "RADAR",
+    "video_url": "",
+    "summary": "Here are 3 breakthrough items featured in today's Tech Radar Teardown (Model Benchmarks) edition.",
+    "voiceover_script": "Discover the newest tools shaping MODEL RADAR in 2026.",
+    "items": [
+      {
+        "number": 1,
+        "name": "Claude 3.7 Sonnet",
+        "url": "https://anthropic.com",
+        "stars": "\u2605 99,000",
+        "badge": "HYBRID REASONING",
+        "description": "Hybrid thinking architecture offering instant response or deep reasoning in a single model.",
+        "command": "git clone https://anthropic.com.git\ncd claude-3.7-sonnet\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 2,
+        "name": "Gemini 3.0 Flash",
+        "url": "https://deepmind.google",
+        "stars": "\u2605 94,000",
+        "badge": "MILLION CONTEXT",
+        "description": "1-million token context window processing 100 pages of code in sub-500 milliseconds.",
+        "command": "git clone https://deepmind.google.git\ncd gemini-3.0-flash\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 3,
+        "name": "Deepseek R1",
+        "url": "https://deepseek.com",
+        "stars": "\u2605 89,000",
+        "badge": "OPEN REASONING",
+        "description": "Open-weights reasoning model matching closed commercial models at 95% lower inference cost.",
+        "command": "git clone https://deepseek.com.git\ncd deepseek-r1\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      }
+    ],
+    "cta_text": "Want our studio to build custom autonomous AI employees for your workflow? Follow @jayant.digitalstudio and DM 'RADAR'.",
+    "tags": [
+      "#artificialintelligence",
+      "#deeplearning",
+      "#llm",
+      "#techtrends",
+      "#futureoftech"
+    ]
+  },
+  {
+    "id": "2026-10-10-slot-2",
+    "title": "The Automated AI Workflow Saving Us 20 Hours Every Week",
+    "date": "October 10, 2026",
+    "date_slug": "2026-10-10",
+    "slot_id": 2,
+    "slot_name": "Midday Cheat Code (AI Workflows)",
+    "badge": "AI AUTOMATION",
+    "cta_keyword": "FLOW",
+    "video_url": "",
+    "summary": "Here are 3 breakthrough items featured in today's Midday Cheat Code (AI Workflows) edition.",
+    "voiceover_script": "Discover the newest tools shaping AI AUTOMATION in 2026.",
+    "items": [
+      {
+        "number": 1,
+        "name": "Cursor Agent Loop",
+        "url": "https://cursor.com",
+        "stars": "\u2605 9,400",
+        "badge": "CURSOR AGENTS",
+        "description": "Continuous test-driven AI agent loop in Cursor that fixes its own bugs automatically.",
+        "command": "git clone https://cursor.com.git\ncd cursor-agent-loop\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 2,
+        "name": "N8N Rag Pipeline",
+        "url": "https://n8n.io",
+        "stars": "\u2605 14,200",
+        "badge": "N8N WEBHOOK",
+        "description": "Self-hosted webhook automation that turns client PDFs into vector databases in 60 seconds.",
+        "command": "git clone https://n8n.io.git\ncd n8n-rag-pipeline\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 3,
+        "name": "Local Rag Ollama",
+        "url": "https://ollama.com",
+        "stars": "\u2605 11,800",
+        "badge": "OFFLINE AI",
+        "description": "100% private offline document search engine using local embeddings and Ollama.",
+        "command": "git clone https://ollama.com.git\ncd local-rag-ollama\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      }
+    ],
+    "cta_text": "Want our studio to build custom autonomous AI employees for your workflow? Follow @jayant.digitalstudio and DM 'FLOW'.",
+    "tags": [
+      "#automation",
+      "#aiworkflow",
+      "#n8n",
+      "#productivity",
+      "#nocode"
+    ]
+  },
+  {
+    "id": "2026-10-10-slot-1",
+    "title": "3 Insane Open-Source AI Developer Repos You Need Today",
+    "date": "October 10, 2026",
+    "date_slug": "2026-10-10",
+    "slot_id": 1,
+    "slot_name": "Morning Breakthrough (Open Source Repos)",
+    "badge": "AI OPEN SOURCE",
+    "cta_keyword": "REPOS",
+    "video_url": "",
+    "summary": "Here are 3 breakthrough items featured in today's Morning Breakthrough (Open Source Repos) edition.",
+    "voiceover_script": "Discover the newest tools shaping AI OPEN SOURCE in 2026.",
+    "items": [
+      {
+        "number": 1,
+        "name": "Hyperframes",
+        "url": "https://github.com/heygen-com/hyperframes",
+        "stars": "\u2605 15,400",
+        "badge": "AI OPEN SOURCE",
+        "description": "Deterministic code-to-video rendering engine using HTML, CSS, and GSAP.",
+        "command": "git clone https://github.com/heygen-com/hyperframes.git\ncd hyperframes\n./setup.sh",
+        "image": "assets/slot_1/heygen-com_hyperframes/demo.png"
+      },
+      {
+        "number": 2,
+        "name": "Browser Use",
+        "url": "https://github.com/browser-use/browser-use",
+        "stars": "\u2605 38,500",
+        "badge": "AI OPEN SOURCE",
+        "description": "Make websites accessible for AI agents to browse, click, and automate workflows.",
+        "command": "git clone https://github.com/browser-use/browser-use.git\ncd browser-use\n./setup.sh",
+        "image": "assets/slot_1/browser-use_browser-use/demo.png"
+      },
+      {
+        "number": 3,
+        "name": "Firecrawl",
+        "url": "https://github.com/mendableai/firecrawl",
+        "stars": "\u2605 24,200",
+        "badge": "AI OPEN SOURCE",
+        "description": "Turn entire websites into clean, LLM-ready markdown with zero hallucinations.",
+        "command": "git clone https://github.com/mendableai/firecrawl.git\ncd firecrawl\n./setup.sh",
+        "image": "assets/slot_1/mendableai_firecrawl/demo.png"
+      }
+    ],
+    "cta_text": "Want our studio to build custom autonomous AI employees for your workflow? Follow @jayant.digitalstudio and DM 'REPOS'.",
+    "tags": [
+      "#developer",
+      "#ai",
+      "#opensource",
+      "#github",
+      "#coding"
+    ]
+  }
+]
