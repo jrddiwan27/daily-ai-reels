@@ -52,5 +52,32 @@
         "title": "100% private offline document search engine using local embeddings and Ollama."
       }
     ]
+  },
+  {
+    "slot_id": 2,
+    "slot_name": "Midday Cheat Code (AI Workflows)",
+    "timestamp_utc": "2026-10-09T22:37:51.838239+00:00",
+    "date_ist": "2026-10-10 04:07:51 IST",
+    "buffer_post_id": "6ac96cbfbba9419ccbe2672b",
+    "items": [
+      {
+        "id": "jayant/firecrawl-lead-finder",
+        "name": "firecrawl-lead-finder",
+        "url": "https://firecrawl.dev",
+        "title": "Autonomous bot that scrapes 500 company websites, extracts founder emails, and d"
+      },
+      {
+        "id": "jayant/remotion-auto-reels",
+        "name": "remotion-auto-reels",
+        "url": "https://remotion.dev",
+        "title": "Python to Remotion pipeline that renders 20 high-converting video variations per"
+      },
+      {
+        "id": "jayant/claude-code-subagents",
+        "name": "claude-code-subagents",
+        "url": "https://anthropic.com",
+        "title": "Autonomous CLI architecture where subagents write tests and refactor large codeb"
+      }
+    ]
   }
 ]
