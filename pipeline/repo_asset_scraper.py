@@ -27,6 +27,10 @@ def search_trending_ai_repos(limit=3):
             items = res.json().get("items", [])
             curated = []
             for item in items:
+                name_low = item["name"].lower()
+                desc_low = (item.get("description") or "").lower()
+                if any(bad in name_low or bad in desc_low for bad in ["mev", "flashloan", "crypto", "trading", "airdrop", "arbitrage", "casino"]):
+                    continue
                 if item.get("stargazers_count", 0) > 1000 and item.get("description"):
                     curated.append({
                         "owner": item["owner"]["login"],

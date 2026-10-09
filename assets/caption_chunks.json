@@ -6,7 +6,7 @@
     ],
     "active": 1,
     "start": 0.0,
-    "end": 0.86
+    "end": 0.78
   },
   {
     "words": [
@@ -14,8 +14,8 @@
       "software"
     ],
     "active": 1,
-    "start": 0.86,
-    "end": 1.72
+    "start": 0.78,
+    "end": 1.56
   },
   {
     "words": [
@@ -23,8 +23,8 @@
       "These"
     ],
     "active": 1,
-    "start": 1.72,
-    "end": 2.58
+    "start": 1.56,
+    "end": 2.34
   },
   {
     "words": [
@@ -32,44 +32,62 @@
       "open"
     ],
     "active": 1,
-    "start": 2.58,
-    "end": 3.43
+    "start": 2.34,
+    "end": 3.12
   },
   {
     "words": [
       "source",
-      "tools"
+      "repos"
     ],
     "active": 1,
-    "start": 3.43,
-    "end": 4.29
+    "start": 3.12,
+    "end": 3.9
   },
   {
     "words": [
-      "grant",
-      "total"
+      "give",
+      "you"
     ],
     "active": 1,
-    "start": 4.29,
-    "end": 5.15
+    "start": 3.9,
+    "end": 4.69
   },
   {
     "words": [
-      "superpowers.",
-      "First"
+      "insane",
+      "superpowers."
     ],
     "active": 1,
-    "start": 5.15,
-    "end": 6.01
+    "start": 4.69,
+    "end": 5.47
+  },
+  {
+    "words": [
+      "First",
+      "up"
+    ],
+    "active": 1,
+    "start": 5.47,
+    "end": 6.25
   },
   {
     "words": [
       "is",
-      "tt-metal."
+      "cursor"
     ],
     "active": 1,
-    "start": 6.01,
-    "end": 6.87
+    "start": 6.25,
+    "end": 7.03
+  },
+  {
+    "words": [
+      "agent",
+      "loop."
+    ],
+    "active": 1,
+    "start": 7.03,
+    "end": 7.81
   },
   {
     "words": [
@@ -77,8 +95,8 @@
       "automates"
     ],
     "active": 1,
-    "start": 6.87,
-    "end": 7.73
+    "start": 7.81,
+    "end": 8.59
   },
   {
     "words": [
@@ -86,8 +104,8 @@
       "engineering"
     ],
     "active": 1,
-    "start": 7.73,
-    "end": 8.59
+    "start": 8.59,
+    "end": 9.37
   },
   {
     "words": [
@@ -95,8 +113,8 @@
       "in"
     ],
     "active": 1,
-    "start": 8.59,
-    "end": 9.44
+    "start": 9.37,
+    "end": 10.15
   },
   {
     "words": [
@@ -104,8 +122,8 @@
       "with"
     ],
     "active": 1,
-    "start": 9.44,
-    "end": 10.3
+    "start": 10.15,
+    "end": 10.93
   },
   {
     "words": [
@@ -113,134 +131,161 @@
       "manual"
     ],
     "active": 1,
-    "start": 10.3,
-    "end": 11.16
+    "start": 10.93,
+    "end": 11.71
   },
   {
     "words": [
-      "coding.",
+      "friction.",
       "Next"
     ],
     "active": 1,
-    "start": 11.16,
-    "end": 12.02
+    "start": 11.71,
+    "end": 12.5
   },
   {
     "words": [
       "is",
-      "magic-context."
+      "n8n"
     ],
     "active": 1,
-    "start": 12.02,
-    "end": 12.88
+    "start": 12.5,
+    "end": 13.28
   },
   {
     "words": [
-      "An",
-      "insane"
+      "rag",
+      "pipeline."
     ],
     "active": 1,
-    "start": 12.88,
-    "end": 13.74
+    "start": 13.28,
+    "end": 14.06
   },
   {
     "words": [
-      "self-hosted",
-      "powerhouse"
+      "A",
+      "high-performance"
     ],
     "active": 1,
-    "start": 13.74,
-    "end": 14.6
+    "start": 14.06,
+    "end": 14.84
+  },
+  {
+    "words": [
+      "powerhouse",
+      "that"
+    ],
+    "active": 1,
+    "start": 14.84,
+    "end": 15.62
+  },
+  {
+    "words": [
+      "runs",
+      "locally"
+    ],
+    "active": 1,
+    "start": 15.62,
+    "end": 16.4
+  },
+  {
+    "words": [
+      "on",
+      "your"
+    ],
+    "active": 1,
+    "start": 16.4,
+    "end": 17.18
+  },
+  {
+    "words": [
+      "machine",
+      "with"
+    ],
+    "active": 1,
+    "start": 17.18,
+    "end": 17.96
+  },
+  {
+    "words": [
+      "extreme",
+      "speed."
+    ],
+    "active": 1,
+    "start": 17.96,
+    "end": 18.74
+  },
+  {
+    "words": [
+      "Finally,",
+      "local"
+    ],
+    "active": 1,
+    "start": 18.74,
+    "end": 19.52
+  },
+  {
+    "words": [
+      "rag",
+      "ollama."
+    ],
+    "active": 1,
+    "start": 19.52,
+    "end": 20.31
+  },
+  {
+    "words": [
+      "The",
+      "ultimate"
+    ],
+    "active": 1,
+    "start": 20.31,
+    "end": 21.09
+  },
+  {
+    "words": [
+      "secret",
+      "weapon"
+    ],
+    "active": 1,
+    "start": 21.09,
+    "end": 21.87
   },
   {
     "words": [
       "that",
-      "runs"
+      "senior"
     ],
     "active": 1,
-    "start": 14.6,
-    "end": 15.45
+    "start": 21.87,
+    "end": 22.65
   },
   {
     "words": [
-      "locally",
-      "on"
+      "creators",
+      "and"
     ],
     "active": 1,
-    "start": 15.45,
-    "end": 16.31
+    "start": 22.65,
+    "end": 23.43
   },
   {
     "words": [
-      "your",
-      "own"
+      "engineers",
+      "use"
     ],
     "active": 1,
-    "start": 16.31,
-    "end": 17.17
+    "start": 23.43,
+    "end": 24.21
   },
   {
     "words": [
-      "machine.",
-      "Finally,"
-    ],
-    "active": 1,
-    "start": 17.17,
-    "end": 18.03
-  },
-  {
-    "words": [
-      "inbox-zero.",
-      "The"
-    ],
-    "active": 1,
-    "start": 18.03,
-    "end": 18.89
-  },
-  {
-    "words": [
-      "ultimate",
-      "breakthrough"
-    ],
-    "active": 1,
-    "start": 18.89,
-    "end": 19.75
-  },
-  {
-    "words": [
-      "developer",
-      "secret"
-    ],
-    "active": 1,
-    "start": 19.75,
-    "end": 20.6
-  },
-  {
-    "words": [
-      "that",
-      "saves"
-    ],
-    "active": 1,
-    "start": 20.6,
-    "end": 21.46
-  },
-  {
-    "words": [
-      "hundreds",
-      "of"
-    ],
-    "active": 1,
-    "start": 21.46,
-    "end": 22.32
-  },
-  {
-    "words": [
-      "hours.",
+      "silently.",
       "Comment"
     ],
     "active": 1,
-    "start": 22.32,
-    "end": 23.18
+    "start": 24.21,
+    "end": 24.99
   },
   {
     "words": [
@@ -248,17 +293,17 @@
       "word"
     ],
     "active": 1,
-    "start": 23.18,
-    "end": 24.04
+    "start": 24.99,
+    "end": 25.77
   },
   {
     "words": [
-      "TOOLS",
+      "FLOW",
       "below,"
     ],
     "active": 1,
-    "start": 24.04,
-    "end": 24.9
+    "start": 25.77,
+    "end": 26.55
   },
   {
     "words": [
@@ -266,42 +311,43 @@
       "I"
     ],
     "active": 1,
-    "start": 24.9,
-    "end": 25.76
+    "start": 26.55,
+    "end": 27.33
   },
   {
     "words": [
       "will",
-      "send"
+      "DM"
     ],
     "active": 1,
-    "start": 25.76,
-    "end": 26.61
+    "start": 27.33,
+    "end": 28.12
   },
   {
     "words": [
-      "every",
-      "repository"
+      "you",
+      "the"
     ],
     "active": 1,
-    "start": 26.61,
-    "end": 27.47
+    "start": 28.12,
+    "end": 28.9
   },
   {
     "words": [
-      "straight",
-      "to"
+      "exact",
+      "links"
     ],
     "active": 1,
-    "start": 27.47,
-    "end": 28.33
+    "start": 28.9,
+    "end": 29.68
   },
   {
     "words": [
-      "you."
+      "right",
+      "now."
     ],
-    "active": 0,
-    "start": 28.33,
-    "end": 28.76
+    "active": 1,
+    "start": 29.68,
+    "end": 30.46
   }
 ]

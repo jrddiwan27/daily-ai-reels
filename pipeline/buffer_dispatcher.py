@@ -144,19 +144,20 @@ def dispatch_to_buffer(video_target: str, caption: str, channel_id: str = None):
         data = res.json()
         if "errors" in data:
             print(f"[!] GraphQL Error: {json.dumps(data['errors'])}")
-            return False
+            return None
             
         post_res = data.get("data", {}).get("createPost", {})
         if "message" in post_res and "post" not in post_res:
             print(f"[!] Buffer error message: {post_res['message']}")
-            return False
+            return None
             
-        print(f"[✓] Successfully queued Instagram Reel in Buffer for @jayant.digitalstudio!")
+        post_id = post_res.get("post", {}).get("id") or "scheduled"
+        print(f"[✓] Successfully queued Instagram Reel in Buffer for @jayant.digitalstudio! (Post ID: {post_id})")
         print(json.dumps(post_res, indent=2))
-        return True
+        return post_id
     else:
         print(f"[✗] Failed to communicate with Buffer: {res.status_code} - {res.text}")
-        return False
+        return None
 
 if __name__ == "__main__":
     print("Buffer GraphQL Dispatcher initialized for @jayant.digitalstudio.")

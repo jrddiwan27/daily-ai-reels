@@ -1,0 +1,32 @@
+[
+  {
+    "owner": "web-tools",
+    "name": "bolt-new",
+    "full_name": "stackblitz/bolt-new",
+    "stars": 48000,
+    "description": "Full-stack web development directly in browser sandbox with one-click Netlify deployment.",
+    "url": "https://bolt.new",
+    "badge": "FULLSTACK BROWSER",
+    "demo_media": "assets/repos/heygen-com_hyperframes/og_banner.png"
+  },
+  {
+    "owner": "no-code",
+    "name": "lovable-dev",
+    "full_name": "lovable/lovable-dev",
+    "stars": 32000,
+    "description": "Text-to-software builder creating production React and Supabase apps in 3 minutes.",
+    "url": "https://lovable.dev",
+    "badge": "PROD BUILDER",
+    "demo_media": "assets/repos/heygen-com_hyperframes/og_banner.png"
+  },
+  {
+    "owner": "media-ai",
+    "name": "elevenlabs-reader",
+    "full_name": "elevenlabs/reader",
+    "stars": 55000,
+    "description": "Ultra-realistic emotional voice cloning with dynamic accents and live text narration.",
+    "url": "https://elevenlabs.io",
+    "badge": "VOICE CLONE",
+    "demo_media": "assets/repos/heygen-com_hyperframes/og_banner.png"
+  }
+]

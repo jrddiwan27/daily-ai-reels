@@ -7,26 +7,41 @@ def build_hyperframes_composition(
     audio_path="assets/voice.mp3",
     script_file="assets/generated_script.json",
     duration=28.76,
-    output_html="index.html"
+    output_html="index.html",
+    slot_meta=None
 ):
     """
     9.5/10 Gold-Standard Comic Motion Graphic Reel:
     - Halftone dot texture per scene with dynamic desk & background palette
     - Fully rigged developer avatar with angled presenter point gesture directly toward console
     - Natural resting hand on desk lip
-    - Kinetic widgets for every tool:
-        1. TT-Metal: Live animated silicon hardware compilation progress bar (0% -> 100%)
-        2. Magic-Context: Live animated context reduction compaction gauge (128k -> 1.2k tokens, -99%)
-        3. Inbox-Zero: Mechanical unread email odometer rapidly counting down 1,420 -> 0 + INBOX ZERO badge slam
-    - Grounded 3D smartphone displaying Instagram automated DM delivery with all 3 repos
+    - Dynamic slot theme, kinetic widgets, and interactive visual progression
+    - Grounded 3D smartphone displaying Instagram automated DM delivery with all 3 items
     - 3D tactile keyboard keycap captions with yellow active pop
     - Zero static frames: drifting crosshairs, slow scene push-ins, steam bubbles, head bob & mouth sync
     """
+    if slot_meta is None:
+        slot_meta = {
+            "slot_id": 1,
+            "badge_title": "AI OPEN SOURCE",
+            "badge_sub": "3 VERIFIED REPOS",
+            "cta_keyword": "REPOS"
+        }
     with open(repos_file) as f:
         repos = json.load(f)[:3]
         
     with open(captions_file) as f:
         caption_chunks = json.load(f)
+
+    slot_hook_visuals = {
+        1: {"strip": "AI OPEN-SOURCE 2026", "b1": "OpenAI: $200/mo", "b2": "Cursor Pro: $40/mo", "stamp": "✕ OVERPRICED & CANCELLED"},
+        2: {"strip": "AUTOMATION BLUEPRINT", "b1": "Manual Data Entry", "b2": "Manual Outreach", "stamp": "✕ 20 HRS/WK WASTED"},
+        3: {"strip": "TECH RADAR TEARDOWN", "b1": "Outdated Models", "b2": "Slow 4k Context", "stamp": "✕ OBSOLETE & SLOW"},
+        4: {"strip": "SECRET AI TOOLKIT", "b1": "Adobe Suite: $60/mo", "b2": "Figma Seat: $45/mo", "stamp": "✕ EXPENSIVE APPS REPLACED"},
+        5: {"strip": "SENIOR PROMPT LAB", "b1": "1-Line Generic Prompt", "b2": "'Act as an expert'", "stamp": "✕ AMATEUR HALLUCINATIONS"}
+    }
+    sid = slot_meta.get("slot_id", 1)
+    vis = slot_hook_visuals.get(sid, slot_hook_visuals[1])
 
     # Dynamic scene timings based on audio duration (28.76s)
     t_hook_end = min(3.8, duration * 0.13)
@@ -717,43 +732,43 @@ def build_hyperframes_composition(
         <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px;">
           <div style="display: flex; align-items: center; gap: 8px;">
             <div style="width: 18px; height: 32px; background: #E03622; border: 3px solid #171819; border-radius: 4px;"></div>
-            <div style="font-weight: 950; font-size: 19px; letter-spacing: 0.05em;">AI TECH STACK 2026</div>
+            <div style="font-weight: 950; font-size: 19px; letter-spacing: 0.05em;">{vis['strip']}</div>
           </div>
-          <div style="background: #EF4444; color: #FFF; font-weight: 950; font-size: 13px; padding: 4px 10px; border-radius: 6px; border: 2px solid #171819;">0 OF 3 INSTALLED</div>
+          <div style="background: #EF4444; color: #FFF; font-weight: 950; font-size: 13px; padding: 4px 10px; border-radius: 6px; border: 2px solid #171819;">0 OF 3 CURATED</div>
         </div>
         <div style="display: flex; justify-content: space-around; padding: 12px 0 6px;">
           <div style="text-align: center;">
             <div class="socket-dot" style="margin: 0 auto 6px; transform: scale(1.4);"></div>
-            <span style="font-size: 12px; font-weight: 950; background: #2563EB; color: #FFF; padding: 2px 6px; border-radius: 4px;">TT-METAL</span>
+            <span style="font-size: 12px; font-weight: 950; background: #2563EB; color: #FFF; padding: 2px 6px; border-radius: 4px;">{repo_data[0]['name'][:10]}</span>
           </div>
           <div style="text-align: center;">
             <div class="socket-dot" style="margin: 0 auto 6px; transform: scale(1.4);"></div>
-            <span style="font-size: 12px; font-weight: 950; background: #059669; color: #FFF; padding: 2px 6px; border-radius: 4px;">MAGIC-CTX</span>
+            <span style="font-size: 12px; font-weight: 950; background: #059669; color: #FFF; padding: 2px 6px; border-radius: 4px;">{repo_data[1]['name'][:10]}</span>
           </div>
           <div style="text-align: center;">
             <div class="socket-dot" style="margin: 0 auto 6px; transform: scale(1.4);"></div>
-            <span style="font-size: 12px; font-weight: 950; background: #EA580C; color: #FFF; padding: 2px 6px; border-radius: 4px;">INBOX-ZERO</span>
+            <span style="font-size: 12px; font-weight: 950; background: #EA580C; color: #FFF; padding: 2px 6px; border-radius: 4px;">{repo_data[2]['name'][:10]}</span>
           </div>
         </div>
       </div>
 
-      <!-- Subscription bills with CANCELLED stamp -->
+      <!-- Subscription bills / challenge cards with stamp -->
       <div id="hook-bills" style="position: absolute; left: 90px; top: 295px; width: 540px; display: flex; flex-direction: column; gap: 10px; z-index: 24;">
         <div style="display: flex; gap: 12px;">
           <div id="bill-1" style="flex: 1; background: #FFF; border: 4px solid #171819; border-radius: 12px; padding: 10px 14px; box-shadow: 4px 4px 0 #171819; font-weight: 900; font-size: 16px; color: #EF4444;">
-            💳 OpenAI: $200/mo
+            💳 {vis['b1']}
           </div>
           <div id="bill-2" style="flex: 1; background: #FFF; border: 4px solid #171819; border-radius: 12px; padding: 10px 14px; box-shadow: 4px 4px 0 #171819; font-weight: 900; font-size: 16px; color: #EF4444;">
-            💳 Cursor Pro: $40/mo
+            💳 {vis['b2']}
           </div>
         </div>
         <div id="bill-stamp" style="align-self: center; background: #EF4444; color: #FFF; font-weight: 950; font-size: 26px; letter-spacing: 0.05em; padding: 8px 24px; border-radius: 12px; border: 4px solid #171819; transform: rotate(-5deg); box-shadow: 5px 5px 0 #171819; text-shadow: 1px 1px 0 #000;">
-          ✕ OVERPRICED &amp; CANCELLED
+          {vis['stamp']}
         </div>
       </div>
     </div>
 
-    <!-- SCENE 2: Repo 1 - TT-Metal ({t_hook_end} - {t_tool1_end}s) -->
+    <!-- SCENE 2: Repo 1 ({t_hook_end} - {t_tool1_end}s) -->
     <div id="scene-tool1" class="scene-layer" style="opacity: 0;">
       <div class="upper-card">
         <div class="repo-header">
@@ -761,9 +776,9 @@ def build_hyperframes_composition(
           <span class="repo-slug">{repo_data[0]['full_name']}</span>
           <span class="repo-star">{repo_data[0]['stars']}</span>
         </div>
-        <div class="repo-title">TT-Metalium Engine</div>
+        <div class="repo-title">{repo_data[0]['name']}</div>
         <div class="repo-desc">
-          Automates complex engineering tasks in seconds with zero manual coding.
+          {repo_data[0]['desc']}
         </div>
       </div>
 
@@ -813,7 +828,7 @@ def build_hyperframes_composition(
       </div>
     </div>
 
-    <!-- SCENE 3: Repo 2 - Magic-Context ({t_tool1_end} - {t_tool2_end}s) -->
+    <!-- SCENE 3: Tool 2 ({t_tool1_end} - {t_tool2_end}s) -->
     <div id="scene-tool2" class="scene-layer" style="opacity: 0;">
       <div class="upper-card">
         <div class="repo-header">
@@ -821,9 +836,9 @@ def build_hyperframes_composition(
           <span class="repo-slug">{repo_data[1]['full_name']}</span>
           <span class="repo-star">{repo_data[1]['stars']}</span>
         </div>
-        <div class="repo-title">Magic-Context</div>
+        <div class="repo-title">{repo_data[1]['name']}</div>
         <div class="repo-desc">
-          An insane self-hosted powerhouse that runs locally on your own machine.
+          {repo_data[1]['desc']}
         </div>
       </div>
 
@@ -876,7 +891,7 @@ def build_hyperframes_composition(
       </div>
     </div>
 
-    <!-- SCENE 4: Repo 3 - Inbox-Zero ({t_tool2_end} - {t_tool3_end}s) -->
+    <!-- SCENE 4: Tool 3 ({t_tool2_end} - {t_tool3_end}s) -->
     <div id="scene-tool3" class="scene-layer" style="opacity: 0;">
       <div class="upper-card">
         <div class="repo-header">
@@ -884,9 +899,9 @@ def build_hyperframes_composition(
           <span class="repo-slug">{repo_data[2]['full_name']}</span>
           <span class="repo-star">{repo_data[2]['stars']}</span>
         </div>
-        <div class="repo-title">Inbox-Zero AI</div>
+        <div class="repo-title">{repo_data[2]['name']}</div>
         <div class="repo-desc">
-          The ultimate breakthrough developer secret that saves hundreds of hours.
+          {repo_data[2]['desc']}
         </div>
       </div>
 
@@ -946,9 +961,9 @@ def build_hyperframes_composition(
           </div>
           <!-- User Comment Bubble -->
           <div id="dm-bubble" style="opacity: 0; align-self: flex-end; background: #2563EB; color: #FFF; font-weight: 950; font-size: 17px; padding: 10px 18px; border-radius: 18px 18px 4px 18px; margin-bottom: 14px; box-shadow: 0 4px 12px rgba(37,99,235,0.3);">
-            TOOLS
+            {slot_meta.get('cta_keyword', 'TOOLS')}
           </div>
-          <!-- Automated DM Reply with 3 Repos -->
+          <!-- Automated DM Reply with 3 Items -->
           <div id="dm-reply" style="opacity: 0; background: #F8FAFC; border: 2px solid #E2E8F0; border-radius: 18px; padding: 12px; display: flex; flex-direction: column; gap: 8px;">
             <div style="font-size: 12px; font-weight: 900; color: #64748B;">Automated Instant Delivery:</div>
             <div style="display: flex; align-items: center; gap: 8px; background: #FFF; padding: 8px 10px; border-radius: 10px; border: 1.5px solid #CBD5E1;">
@@ -964,7 +979,7 @@ def build_hyperframes_composition(
               <span style="font-weight: 900; font-size: 13px; color: #1E293B;">{repo_data[2]['full_name']}</span>
             </div>
             <div style="font-size: 11px; color: #2563EB; font-weight: 950; text-align: center; margin-top: 4px;">
-              ✓ Direct GitHub links sent!
+              ✓ Instant blueprint &amp; direct links sent!
             </div>
           </div>
         </div>
@@ -987,11 +1002,11 @@ def build_hyperframes_composition(
 
     // Dynamic Desk & Scene Colors
     const sceneConfigs = [
-      {{ id: "#scene-hook", bg: "#bg-hook", desk: "#B64D29", start: 0, end: {t_hook_end}, badge: "STOP PAYING FOR AI", meter: "0/3", plugs: [0,0,0] }},
-      {{ id: "#scene-tool1", bg: "#bg-tool1", desk: "#1D4ED8", start: {t_hook_end}, end: {t_tool1_end}, badge: "01 · TT-METAL", meter: "1/3", plugs: [1,0,0] }},
-      {{ id: "#scene-tool2", bg: "#bg-tool2", desk: "#047857", start: {t_tool1_end}, end: {t_tool2_end}, badge: "02 · MAGIC-CTX", meter: "2/3", plugs: [1,1,0] }},
-      {{ id: "#scene-tool3", bg: "#bg-tool3", desk: "#C2410C", start: {t_tool2_end}, end: {t_tool3_end}, badge: "03 · INBOX-ZERO", meter: "3/3", plugs: [1,1,1] }},
-      {{ id: "#scene-outro", bg: "#bg-outro", desk: "#B64D29", start: {t_tool3_end}, end: {duration}, badge: "3 REPOS · 1 DM", meter: "3/3", plugs: [1,1,1] }}
+      {{ id: "#scene-hook", bg: "#bg-hook", desk: "#B64D29", start: 0, end: {t_hook_end}, badge: "{slot_meta.get('badge_title', 'AI RADAR')}", meter: "0/3", plugs: [0,0,0] }},
+      {{ id: "#scene-tool1", bg: "#bg-tool1", desk: "#1D4ED8", start: {t_hook_end}, end: {t_tool1_end}, badge: "01 · {repo_data[0]['name'][:10]}", meter: "1/3", plugs: [1,0,0] }},
+      {{ id: "#scene-tool2", bg: "#bg-tool2", desk: "#047857", start: {t_tool1_end}, end: {t_tool2_end}, badge: "02 · {repo_data[1]['name'][:10]}", meter: "2/3", plugs: [1,1,0] }},
+      {{ id: "#scene-tool3", bg: "#bg-tool3", desk: "#C2410C", start: {t_tool2_end}, end: {t_tool3_end}, badge: "03 · {repo_data[2]['name'][:10]}", meter: "3/3", plugs: [1,1,1] }},
+      {{ id: "#scene-outro", bg: "#bg-outro", desk: "#B64D29", start: {t_tool3_end}, end: {duration}, badge: "3 {slot_meta.get('cta_keyword', 'ITEMS')} · 1 DM", meter: "3/3", plugs: [1,1,1] }}
     ];
 
     sceneConfigs.forEach((sc, i) => {{
@@ -1013,7 +1028,7 @@ def build_hyperframes_composition(
       tl.set("#top-badge", {{ innerText: sc.badge }}, sc.start);
       tl.fromTo("#top-badge", {{ scale: 0.85, rotate: -4 }}, {{ scale: 1, rotate: -1.5, duration: 0.35, ease: "back.out(2)" }}, sc.start);
 
-      tl.set("#meter-label", {{ innerText: `REPOS ${{sc.meter}}` }}, sc.start);
+      tl.set("#meter-label", {{ innerText: `{slot_meta.get('badge_title', 'AI RADAR')} ${{sc.meter}}` }}, sc.start);
       tl.set("#sock-1", {{ className: sc.plugs[0] ? "socket-dot plug-1" : "socket-dot" }}, sc.start);
       tl.set("#sock-2", {{ className: sc.plugs[1] ? "socket-dot plug-2" : "socket-dot" }}, sc.start);
       tl.set("#sock-3", {{ className: sc.plugs[2] ? "socket-dot plug-3" : "socket-dot" }}, sc.start);

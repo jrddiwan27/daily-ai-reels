@@ -1,0 +1,32 @@
+[
+  {
+    "owner": "prompt-lab",
+    "name": "chain-of-density",
+    "full_name": "prompt/chain-of-density",
+    "stars": 26000,
+    "description": "Recursive distillation framework that packs maximum technical insights into minimal token count.",
+    "url": "https://arxiv.org/abs/2309.04269",
+    "badge": "DENSITY RECURSION",
+    "demo_media": "assets/repos/heygen-com_hyperframes/og_banner.png"
+  },
+  {
+    "owner": "arch-patterns",
+    "name": "role-task-constraint",
+    "full_name": "prompt/rtc-framework",
+    "stars": 31000,
+    "description": "The senior engineer prompt template that eliminates 99% of LLM hallucinations in codebases.",
+    "url": "https://jayantdigital.com",
+    "badge": "ZERO HALLUCINATION",
+    "demo_media": "assets/repos/heygen-com_hyperframes/og_banner.png"
+  },
+  {
+    "owner": "agentic-ai",
+    "name": "subagent-decomposition",
+    "full_name": "prompt/subagent-decomp",
+    "stars": 22000,
+    "description": "Modular orchestration prompt dividing large software features into 4 parallel micro-agents.",
+    "url": "https://jayantdigital.com",
+    "badge": "MULTI-AGENT",
+    "demo_media": "assets/repos/heygen-com_hyperframes/og_banner.png"
+  }
+]

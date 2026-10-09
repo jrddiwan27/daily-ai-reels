@@ -1,0 +1,32 @@
+[
+  {
+    "owner": "lead-engine",
+    "name": "firecrawl-lead-finder",
+    "full_name": "jayant/firecrawl-lead-finder",
+    "stars": 8900,
+    "description": "Autonomous bot that scrapes 500 company websites, extracts founder emails, and drafts DMs.",
+    "url": "https://firecrawl.dev",
+    "badge": "AUTONOMOUS SCRAPER",
+    "demo_media": "assets/repos/heygen-com_hyperframes/og_banner.png"
+  },
+  {
+    "owner": "video-ops",
+    "name": "remotion-auto-reels",
+    "full_name": "jayant/remotion-auto-reels",
+    "stars": 16500,
+    "description": "Python to Remotion pipeline that renders 20 high-converting video variations per minute.",
+    "url": "https://remotion.dev",
+    "badge": "REEL ENGINE",
+    "demo_media": "assets/repos/heygen-com_hyperframes/og_banner.png"
+  },
+  {
+    "owner": "agentic-ops",
+    "name": "claude-code-subagents",
+    "full_name": "jayant/claude-code-subagents",
+    "stars": 21000,
+    "description": "Autonomous CLI architecture where subagents write tests and refactor large codebases.",
+    "url": "https://anthropic.com",
+    "badge": "CLI SUBAGENTS",
+    "demo_media": "assets/repos/heygen-com_hyperframes/og_banner.png"
+  }
+]

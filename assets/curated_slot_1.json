@@ -1,0 +1,35 @@
+[
+  {
+    "owner": "heygen-com",
+    "name": "hyperframes",
+    "full_name": "heygen-com/hyperframes",
+    "stars": 15400,
+    "description": "Deterministic code-to-video rendering engine using HTML, CSS, and GSAP.",
+    "url": "https://github.com/heygen-com/hyperframes",
+    "language": "TypeScript",
+    "og_image": "assets/slot_1/heygen-com_hyperframes/og_banner.png",
+    "demo_media": "assets/slot_1/heygen-com_hyperframes/demo.png"
+  },
+  {
+    "owner": "browser-use",
+    "name": "browser-use",
+    "full_name": "browser-use/browser-use",
+    "stars": 38500,
+    "description": "Make websites accessible for AI agents to browse, click, and automate workflows.",
+    "url": "https://github.com/browser-use/browser-use",
+    "language": "Python",
+    "og_image": "assets/slot_1/browser-use_browser-use/og_banner.png",
+    "demo_media": "assets/slot_1/browser-use_browser-use/demo.png"
+  },
+  {
+    "owner": "mendableai",
+    "name": "firecrawl",
+    "full_name": "mendableai/firecrawl",
+    "stars": 24200,
+    "description": "Turn entire websites into clean, LLM-ready markdown with zero hallucinations.",
+    "url": "https://github.com/mendableai/firecrawl",
+    "language": "TypeScript",
+    "og_image": "assets/slot_1/mendableai_firecrawl/og_banner.png",
+    "demo_media": "assets/slot_1/mendableai_firecrawl/demo.png"
+  }
+]

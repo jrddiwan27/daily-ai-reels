@@ -1,0 +1,56 @@
+[
+  {
+    "slot_id": 1,
+    "slot_name": "Morning Breakthrough (Open Source Repos)",
+    "timestamp_utc": "2026-10-09T21:40:00+00:00",
+    "date_ist": "2026-10-10 03:10:00 IST",
+    "buffer_post_id": "6ac95de3b07d37ac9750eb13",
+    "items": [
+      {
+        "id": "tenstorrent/tt-metal",
+        "name": "tt-metal",
+        "url": "https://github.com/tenstorrent/tt-metal",
+        "title": "TT-Metalium and TT-NN open-source programming frameworks for silicon hardware acceleration."
+      },
+      {
+        "id": "cortexkit/magic-context",
+        "name": "magic-context",
+        "url": "https://github.com/cortexkit/magic-context",
+        "title": "CLI tool that condenses large codebases into compact LLM prompt context."
+      },
+      {
+        "id": "elie222/inbox-zero",
+        "name": "inbox-zero",
+        "url": "https://github.com/elie222/inbox-zero",
+        "title": "Open-source AI personal email assistant to automate inbox zero."
+      }
+    ]
+  },
+  {
+    "slot_id": 2,
+    "slot_name": "Midday Cheat Code (AI Workflows)",
+    "timestamp_utc": "2026-10-09T22:14:22.561449+00:00",
+    "date_ist": "2026-10-10 03:44:22 IST",
+    "buffer_post_id": null,
+    "items": [
+      {
+        "id": "jayant/cursor-agent-loop",
+        "name": "cursor-agent-loop",
+        "url": "https://cursor.com",
+        "title": "Continuous test-driven AI agent loop in Cursor that fixes its own bugs automatic"
+      },
+      {
+        "id": "jayant/n8n-rag-pipeline",
+        "name": "n8n-rag-pipeline",
+        "url": "https://n8n.io",
+        "title": "Self-hosted webhook automation that turns client PDFs into vector databases in 6"
+      },
+      {
+        "id": "jayant/local-rag-ollama",
+        "name": "local-rag-ollama",
+        "url": "https://ollama.com",
+        "title": "100% private offline document search engine using local embeddings and Ollama."
+      }
+    ]
+  }
+]
