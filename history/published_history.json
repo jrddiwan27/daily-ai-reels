@@ -79,5 +79,32 @@
         "title": "Autonomous CLI architecture where subagents write tests and refactor large codeb"
       }
     ]
+  },
+  {
+    "slot_id": 1,
+    "slot_name": "Morning Breakthrough (Open Source Repos)",
+    "timestamp_utc": "2026-10-10T02:04:01.278719+00:00",
+    "date_ist": "2026-10-10 07:34:01 IST",
+    "buffer_post_id": "6ac99d10d9cab260a7acb5de",
+    "items": [
+      {
+        "id": "heygen-com/hyperframes",
+        "name": "hyperframes",
+        "url": "https://github.com/heygen-com/hyperframes",
+        "title": "Deterministic code-to-video rendering engine using HTML, CSS, and GSAP."
+      },
+      {
+        "id": "browser-use/browser-use",
+        "name": "browser-use",
+        "url": "https://github.com/browser-use/browser-use",
+        "title": "Make websites accessible for AI agents to browse, click, and automate workflows."
+      },
+      {
+        "id": "mendableai/firecrawl",
+        "name": "firecrawl",
+        "url": "https://github.com/mendableai/firecrawl",
+        "title": "Turn entire websites into clean, LLM-ready markdown with zero hallucinations."
+      }
+    ]
   }
 ]

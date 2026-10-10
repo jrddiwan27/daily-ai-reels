@@ -1,5 +1,58 @@
 [
   {
+    "id": "2026-10-10-slot-1",
+    "title": "3 Insane Open-Source AI Developer Repos You Need Today",
+    "date": "October 10, 2026",
+    "date_slug": "2026-10-10",
+    "slot_id": 1,
+    "slot_name": "Morning Breakthrough (Open Source Repos)",
+    "badge": "AI OPEN SOURCE",
+    "cta_keyword": "REPOS",
+    "video_url": "",
+    "summary": "Stop paying monthly software fees. These three open source repos give you insane superpowers.",
+    "voiceover_script": "Stop paying monthly software fees. These three open source repos give you insane superpowers. First up is hyperframes. It automates complex engineering tasks in seconds with zero manual friction. Next is browser use. A high-performance powerhouse that runs locally on your machine with extreme speed. Finally, firecrawl. The ultimate secret weapon that senior creators and engineers use silently. Comment the word REPOS below, and I will DM you the exact links right now.",
+    "items": [
+      {
+        "number": 1,
+        "name": "Hyperframes",
+        "url": "https://github.com/heygen-com/hyperframes",
+        "stars": "\u2605 15,400",
+        "badge": "AI OPEN SOURCE",
+        "description": "Deterministic code-to-video rendering engine using HTML, CSS, and GSAP.",
+        "command": "git clone https://github.com/heygen-com/hyperframes.git\ncd hyperframes\n./setup.sh",
+        "image": "assets/slot_1/heygen-com_hyperframes/demo.png"
+      },
+      {
+        "number": 2,
+        "name": "Browser Use",
+        "url": "https://github.com/browser-use/browser-use",
+        "stars": "\u2605 38,500",
+        "badge": "AI OPEN SOURCE",
+        "description": "Make websites accessible for AI agents to browse, click, and automate workflows.",
+        "command": "git clone https://github.com/browser-use/browser-use.git\ncd browser-use\n./setup.sh",
+        "image": "assets/slot_1/browser-use_browser-use/demo.png"
+      },
+      {
+        "number": 3,
+        "name": "Firecrawl",
+        "url": "https://github.com/mendableai/firecrawl",
+        "stars": "\u2605 24,200",
+        "badge": "AI OPEN SOURCE",
+        "description": "Turn entire websites into clean, LLM-ready markdown with zero hallucinations.",
+        "command": "git clone https://github.com/mendableai/firecrawl.git\ncd firecrawl\n./setup.sh",
+        "image": "assets/slot_1/mendableai_firecrawl/demo.png"
+      }
+    ],
+    "cta_text": "Want our studio to build custom autonomous AI employees for your workflow? Follow @jayant.digitalstudio and DM 'REPOS'.",
+    "tags": [
+      "#developer",
+      "#ai",
+      "#opensource",
+      "#github",
+      "#coding"
+    ]
+  },
+  {
     "id": "2026-10-10-slot-5",
     "title": "The Senior AI Prompt Framework You Should Be Using in 2026",
     "date": "October 10, 2026",
@@ -209,59 +262,6 @@
       "#n8n",
       "#productivity",
       "#nocode"
-    ]
-  },
-  {
-    "id": "2026-10-10-slot-1",
-    "title": "3 Insane Open-Source AI Developer Repos You Need Today",
-    "date": "October 10, 2026",
-    "date_slug": "2026-10-10",
-    "slot_id": 1,
-    "slot_name": "Morning Breakthrough (Open Source Repos)",
-    "badge": "AI OPEN SOURCE",
-    "cta_keyword": "REPOS",
-    "video_url": "",
-    "summary": "Here are 3 breakthrough items featured in today's Morning Breakthrough (Open Source Repos) edition.",
-    "voiceover_script": "Discover the newest tools shaping AI OPEN SOURCE in 2026.",
-    "items": [
-      {
-        "number": 1,
-        "name": "Hyperframes",
-        "url": "https://github.com/heygen-com/hyperframes",
-        "stars": "\u2605 15,400",
-        "badge": "AI OPEN SOURCE",
-        "description": "Deterministic code-to-video rendering engine using HTML, CSS, and GSAP.",
-        "command": "git clone https://github.com/heygen-com/hyperframes.git\ncd hyperframes\n./setup.sh",
-        "image": "assets/slot_1/heygen-com_hyperframes/demo.png"
-      },
-      {
-        "number": 2,
-        "name": "Browser Use",
-        "url": "https://github.com/browser-use/browser-use",
-        "stars": "\u2605 38,500",
-        "badge": "AI OPEN SOURCE",
-        "description": "Make websites accessible for AI agents to browse, click, and automate workflows.",
-        "command": "git clone https://github.com/browser-use/browser-use.git\ncd browser-use\n./setup.sh",
-        "image": "assets/slot_1/browser-use_browser-use/demo.png"
-      },
-      {
-        "number": 3,
-        "name": "Firecrawl",
-        "url": "https://github.com/mendableai/firecrawl",
-        "stars": "\u2605 24,200",
-        "badge": "AI OPEN SOURCE",
-        "description": "Turn entire websites into clean, LLM-ready markdown with zero hallucinations.",
-        "command": "git clone https://github.com/mendableai/firecrawl.git\ncd firecrawl\n./setup.sh",
-        "image": "assets/slot_1/mendableai_firecrawl/demo.png"
-      }
-    ],
-    "cta_text": "Want our studio to build custom autonomous AI employees for your workflow? Follow @jayant.digitalstudio and DM 'REPOS'.",
-    "tags": [
-      "#developer",
-      "#ai",
-      "#opensource",
-      "#github",
-      "#coding"
     ]
   }
 ]
