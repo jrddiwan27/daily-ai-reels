@@ -52,5 +52,32 @@
         "title": "100% private offline document search engine using local embeddings and Ollama."
       }
     ]
+  },
+  {
+    "slot_id": 3,
+    "slot_name": "Tech Radar Teardown (Model Benchmarks)",
+    "timestamp_utc": "2026-10-10T10:04:05.106682+00:00",
+    "date_ist": "2026-10-10 15:34:05 IST",
+    "buffer_post_id": "6aca0d7cbba9419ccbf99cc5",
+    "items": [
+      {
+        "id": "anthropic/claude-3.7-sonnet",
+        "name": "claude-3.7-sonnet",
+        "url": "https://anthropic.com",
+        "title": "Hybrid thinking architecture offering instant response or deep reasoning in a si"
+      },
+      {
+        "id": "google/gemini-3-flash",
+        "name": "gemini-3.0-flash",
+        "url": "https://deepmind.google",
+        "title": "1-million token context window processing 100 pages of code in sub-500 milliseco"
+      },
+      {
+        "id": "deepseek-ai/deepseek-r1",
+        "name": "deepseek-r1",
+        "url": "https://deepseek.com",
+        "title": "Open-weights reasoning model matching closed commercial models at 95% lower infe"
+      }
+    ]
   }
 ]
