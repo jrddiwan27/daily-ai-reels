@@ -1,32 +1,26 @@
 [
   {
-    "owner": "web-tools",
-    "name": "bolt-new",
-    "full_name": "stackblitz/bolt-new",
-    "stars": 48000,
-    "description": "Full-stack web development directly in browser sandbox with one-click Netlify deployment.",
-    "url": "https://bolt.new",
-    "badge": "FULLSTACK BROWSER",
-    "demo_media": "assets/repos/heygen-com_hyperframes/og_banner.png"
+    "name": "open-slopware \u2013 Alternati",
+    "full_name": "open-slopware \u2013 Alternatives to FOSS projects choosing to use LLMs/AI",
+    "description": "Alternatives to FOSS projects choosing to use and/or support LLMs/AI, as well as tips for requesting better policies or forking.",
+    "url": "https://codeberg.org/ethical-foss/open-slopware",
+    "badge": "SECRET WEB TOOL",
+    "demo_media": null
   },
   {
-    "owner": "no-code",
-    "name": "lovable-dev",
-    "full_name": "lovable/lovable-dev",
-    "stars": 32000,
-    "description": "Text-to-software builder creating production React and Supabase apps in 3 minutes.",
-    "url": "https://lovable.dev",
-    "badge": "PROD BUILDER",
-    "demo_media": "assets/repos/heygen-com_hyperframes/og_banner.png"
+    "name": "/C O R R E C T I O N -- T",
+    "full_name": "/C O R R E C T I O N -- TickTalk/",
+    "description": "In the news release, TickTalk 6: New Hardware, Smarter Software, Same Mission \u2014 A Phone Alternative Built for Kids, issued 08-Oct-2026 by TickTalk over PR Newswire, we are advised by the company that changes have been made. The complete, corrected release fol\u2026",
+    "url": "https://www.prnewswire.com/news-releases/ticktalk-6-new-hardware-smarter-software-same-mission--a-phone-alternative-built-for-kids-302902267.html",
+    "badge": "SECRET WEB TOOL",
+    "demo_media": null
   },
   {
-    "owner": "media-ai",
-    "name": "elevenlabs-reader",
-    "full_name": "elevenlabs/reader",
-    "stars": 55000,
-    "description": "Ultra-realistic emotional voice cloning with dynamic accents and live text narration.",
-    "url": "https://elevenlabs.io",
-    "badge": "VOICE CLONE",
-    "demo_media": "assets/repos/heygen-com_hyperframes/og_banner.png"
+    "name": "TORTUS Health vs Heidi II",
+    "full_name": "TORTUS Health vs Heidi II: Delivering Care or Helping Clinicians Deliver It?",
+    "description": "Compare TORTUS Health and Heidi II through the patient relationship, clinical work, business model, regional access and responsibility for follow-through.",
+    "url": "https://www.iatrox.com/blog/tortus-health-vs-heidi-ii-delivering-care-or-helping-clinicians-deliver-it",
+    "badge": "SECRET WEB TOOL",
+    "demo_media": null
   }
 ]

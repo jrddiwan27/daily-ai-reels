@@ -145,23 +145,34 @@ def detect_current_slot() -> int:
 def fetch_content_for_slot(slot_id: int, count: int = 3) -> tuple:
     """
     Fetches 3 verified non-duplicate items for the specified slot.
-    Guarantees zero repeat against history/published_history.json.
+    Uses Omni Intelligence Radar (FreeNewsAPI, NewsData, NewsAPI, Tavily, Exa, SerpAPI, Hugging Face)
+    and guarantees zero repeat against history/published_history.json.
     """
     meta = dict(SLOT_METADATA.get(slot_id, SLOT_METADATA[1]))
     meta["slot_id"] = slot_id
     candidates = []
 
+    # 1. Try Live Omni Intelligence Radar first
+    try:
+        from pipeline.omni_intelligence_radar import fetch_slot_intelligence
+        live_items = fetch_slot_intelligence(slot_id, count=count + 2)
+        if live_items:
+            print(f"[✓] Omni Radar fetched {len(live_items)} real-time items for Slot {slot_id}")
+            candidates.extend(live_items)
+    except Exception as e:
+        print(f"[!] Omni Radar dynamic fetch warning: {e}")
+
     if slot_id == 1:
-        # Slot 1: First try dynamic trending search from GitHub
+        # Slot 1: Also include dynamic trending search from GitHub
         try:
-            dynamic_repos = search_trending_ai_repos(limit=10)
+            dynamic_repos = search_trending_ai_repos(limit=8)
             candidates.extend(dynamic_repos)
         except Exception as e:
             print(f"[!] Dynamic search fallback: {e}")
         # Add catalog items
         candidates.extend(SLOT_CATALOGS[1])
     else:
-        # Slots 2-5: Pull from specialized curated catalog
+        # Slots 2-5: Fallback to specialized curated catalog
         candidates.extend(SLOT_CATALOGS.get(slot_id, []))
 
     # Apply deduplication check (filter out anything used in last 60 days)

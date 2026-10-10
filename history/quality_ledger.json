@@ -10,5 +10,17 @@
     "historical_avg": 85.0,
     "progress_delta": 10.0,
     "status": "PASS"
+  },
+  {
+    "timestamp": "2026-10-10T20:46:24.842616+00:00",
+    "video": "daily-reel.mp4",
+    "score": 85,
+    "width": 720,
+    "height": 1280,
+    "duration": 47.42,
+    "loudness_lufs": -20.1,
+    "historical_avg": 95.0,
+    "progress_delta": -10.0,
+    "status": "PASS"
   }
 ]

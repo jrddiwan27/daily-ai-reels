@@ -1,0 +1,4 @@
+# JAYANT DIGITAL STUDIO — VIDEO INBOX
+# Paste any video URL (YouTube Shorts, Instagram Reel, X video, TikTok) below, one per line.
+# The 24/7 Autonomous Agent will download it, deconstruct it frame-by-frame,
+# and recreate a new viral reel in that exact style!

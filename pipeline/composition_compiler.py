@@ -433,9 +433,7 @@ def build_hyperframes_composition(
     hero_visual_2 = generate_hero_visual(repo_data[1], sid, 2, theme)
     hero_visual_3 = generate_hero_visual(repo_data[2], sid, 3, theme)
 
-    arm_point_op = "1" if theme.get("initial_pose") == "point" else "0"
-    arm_both_op = "1" if theme.get("initial_pose") == "both-up" else "0"
-    arm_thumbs_op = "1" if theme.get("initial_pose") == "thumbs-up" else "0"
+
 
     # Dynamic commands
     cmd_1 = f"git clone github.com/{repo_data[0]['full_name']} && make run" if sid == 1 else f"npx @flow/{repo_data[0]['name'].lower()} --deploy"
@@ -631,123 +629,28 @@ def build_hyperframes_composition(
       pointer-events: none;
     }}
 
-    /* Studio Desk */
-    .desk {{
-      position: absolute;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      height: 380px;
-      background: {theme['desk_hook']};
-      border-top: 10px solid {theme['desk_border']};
-      z-index: 20;
-      box-shadow: inset 0 10px 0 rgba(255,255,255,0.18);
+    /* Top Right Audio Visualizer Bars */
+    .equalizer-bars {{
+      display: flex;
+      align-items: flex-end;
+      gap: 3px;
+      height: 18px;
+      padding: 0 4px;
     }}
-    .desk::before {{
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: repeating-linear-gradient(90deg, transparent 0, transparent 238px, rgba(0,0,0,0.14) 238px, rgba(0,0,0,0.14) 242px);
+    .eq-bar {{
+      width: 4px;
+      background: #10B981;
+      border-radius: 2px;
+      animation: eqPulse 0.5s infinite alternate ease-in-out;
     }}
-    .desk-drawer {{
-      position: absolute;
-      top: 36px;
-      left: 100px;
-      width: 140px;
-      height: 26px;
-      background: #171819;
-      border-radius: 13px;
-      border: 3px solid rgba(255,255,255,0.25);
-    }}
-    .desk-drawer-right {{
-      position: absolute;
-      top: 36px;
-      right: 100px;
-      width: 140px;
-      height: 26px;
-      background: #171819;
-      border-radius: 13px;
-      border: 3px solid rgba(255,255,255,0.25);
-    }}
-
-    /* Coffee mug with rising steam */
-    .desk-mug {{
-      position: absolute;
-      right: 48px;
-      bottom: 390px;
-      width: 46px;
-      height: 52px;
-      background: #FFFFFF;
-      border: 4px solid #171819;
-      border-radius: 4px 4px 10px 10px;
-      z-index: 25;
-    }}
-    .desk-mug::before {{
-      content: "";
-      position: absolute;
-      top: 14px;
-      left: 0;
-      right: 0;
-      height: 9px;
-      background: {theme['mug_color']};
-    }}
-    .desk-mug::after {{
-      content: "";
-      position: absolute;
-      right: -16px;
-      top: 12px;
-      width: 14px;
-      height: 24px;
-      border: 4px solid #171819;
-      border-radius: 0 10px 10px 0;
-    }}
-    .steam-bubble {{
-      position: absolute;
-      right: 64px;
-      bottom: 450px;
-      font-size: 18px;
-      color: rgba(255, 255, 255, 0.45);
-      z-index: 25;
-      font-weight: 900;
-    }}
-    .desk-tape {{
-      position: absolute;
-      left: 42px;
-      bottom: 392px;
-      width: 40px;
-      height: 40px;
-      border: 10px solid #171819;
-      border-radius: 50%;
-      background: transparent;
-      z-index: 25;
-    }}
-    .desk-ruler {{
-      position: absolute;
-      left: 100px;
-      bottom: 394px;
-      width: 90px;
-      height: 8px;
-      background: #EAB308;
-      border: 2px solid #171819;
-      border-radius: 4px;
-      z-index: 25;
-    }}
-
-    /* Avatar Container */
-    .avatar-wrapper {{
-      position: absolute;
-      left: 50%;
-      bottom: 310px;
-      transform: translateX(-50%);
-      width: 480px;
-      height: 460px;
-      z-index: 22;
-      pointer-events: none;
-    }}
-    .avatar-svg {{
-      width: 100%;
-      height: 100%;
-      overflow: visible;
+    .eq-bar.b1 {{ height: 6px; animation-delay: 0.1s; }}
+    .eq-bar.b2 {{ height: 16px; animation-delay: 0.25s; }}
+    .eq-bar.b3 {{ height: 10px; animation-delay: 0.15s; }}
+    .eq-bar.b4 {{ height: 18px; animation-delay: 0.35s; }}
+    .eq-bar.b5 {{ height: 8px; animation-delay: 0.2s; }}
+    @keyframes eqPulse {{
+      0% {{ height: 4px; }}
+      100% {{ height: 18px; }}
     }}
 
     /* Scene Layers */
@@ -808,19 +711,19 @@ def build_hyperframes_composition(
       line-height: 1.35;
     }}
 
-    /* Grounded Tech Console */
+    /* Grounded Tech Console - Full 660px Theater */
     .tech-console {{
       position: absolute;
       left: 30px;
-      top: 255px;
-      width: 405px;
-      height: 635px;
+      top: 250px;
+      width: 660px;
+      height: 680px;
       background: {theme['console_bg']};
       border: 5px solid #171819;
-      border-radius: 18px;
+      border-radius: 20px;
       box-shadow: 8px 10px 0 #171819;
       color: #F3F4F6;
-      padding: 14px 16px;
+      padding: 16px 20px;
       z-index: 25;
       font-family: monospace;
       overflow: hidden;
@@ -846,11 +749,11 @@ def build_hyperframes_composition(
 
     .demo-media-box {{
       width: 100%;
-      height: 155px;
-      border-radius: 10px;
+      height: 180px;
+      border-radius: 12px;
       overflow: hidden;
       border: 2.5px solid #374151;
-      margin-bottom: 10px;
+      margin-bottom: 12px;
       background: #000;
       box-shadow: inset 0 2px 4px rgba(0,0,0,0.5);
       position: relative;
@@ -945,7 +848,7 @@ def build_hyperframes_composition(
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 2px;
+      gap: 4px;
     }}
     .wf-node.active {{
       border-color: #10B981;
@@ -1119,55 +1022,79 @@ def build_hyperframes_composition(
       border-radius: 4px;
     }}
 
-    /* Bottom Tactile Keyboard Keycaps Captions on Desk Front */
+    /* Figma-style Kinetic Captions */
     .captions-wrapper {{
       position: absolute;
       left: 0;
       right: 0;
-      bottom: 200px;
+      bottom: 75px;
       display: flex;
       justify-content: center;
       align-items: center;
       z-index: 60;
     }}
     .caption-pill {{
-      background: #171819;
-      border: 5px solid #FFFFFF;
-      border-radius: 22px;
+      background: rgba(14, 14, 16, 0.95);
+      backdrop-filter: blur(16px);
+      border: 3px solid rgba(255, 255, 255, 0.18);
+      border-radius: 20px;
       padding: 12px 28px;
-      box-shadow: 0 10px 0 #000000, 0 16px 24px rgba(0,0,0,0.35);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.65), 0 4px 0 #000;
       display: flex;
-      gap: 12px;
+      gap: 14px;
       align-items: center;
       justify-content: center;
-      max-width: 90%;
+      max-width: 92%;
     }}
     .caption-word {{
-      font-size: 38px;
-      font-weight: 950;
-      color: #FFFFFF;
+      font-size: 34px;
+      font-weight: 800;
+      color: #9CA3AF;
       letter-spacing: -0.02em;
-      line-height: 1;
+      position: relative;
     }}
     .caption-word.active {{
-      background: #FACC15;
-      color: #171819;
-      padding: 4px 16px;
-      border-radius: 12px;
-      box-shadow: 2px 2px 0 #000000;
+      color: #FFFFFF;
+      font-weight: 950;
+      background: rgba(224, 90, 43, 0.22);
+      border: 2px solid #E05A2B;
+      padding: 2px 14px;
+      border-radius: 8px;
+      box-shadow: 0 0 18px rgba(224, 90, 43, 0.45);
+    }}
+    .caption-word.active::before {{
+      content: "";
+      position: absolute;
+      top: -4px;
+      left: -4px;
+      width: 6px;
+      height: 6px;
+      background: #FFFFFF;
+      border: 1.5px solid #E05A2B;
+    }}
+    .caption-word.active::after {{
+      content: "";
+      position: absolute;
+      bottom: -4px;
+      right: -4px;
+      width: 6px;
+      height: 6px;
+      background: #FFFFFF;
+      border: 1.5px solid #E05A2B;
     }}
 
-    /* Phone Mockup for Outro */
+    /* Phone Mockup for Outro - Centered */
     .phone-mockup {{
       position: absolute;
-      left: 45px;
-      top: 175px;
-      width: 375px;
-      height: 715px;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 155px;
+      width: 440px;
+      height: 750px;
       background: #000000;
       border: 9px solid #171819;
       border-radius: 50px;
-      box-shadow: 8px 12px 0 #171819;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.6);
       z-index: 25;
       overflow: hidden;
       display: flex;
@@ -1225,10 +1152,16 @@ def build_hyperframes_composition(
     <!-- Top Left Comic Sticker Badge -->
     <div id="top-badge" class="top-badge">{theme['badge_pill']}</div>
 
-    <!-- Top Right 3-Plug Power Strip Meter -->
+    <!-- Top Right 3-Plug Power Strip Meter with Equalizer -->
     <div id="top-meter" class="top-meter">
       <div class="meter-strip">
-        <div class="meter-switch"></div>
+        <div class="equalizer-bars">
+          <div class="eq-bar b1"></div>
+          <div class="eq-bar b2"></div>
+          <div class="eq-bar b3"></div>
+          <div class="eq-bar b4"></div>
+          <div class="eq-bar b5"></div>
+        </div>
         <div class="meter-sockets">
           <div id="sock-1" class="socket-dot"></div>
           <div id="sock-2" class="socket-dot"></div>
@@ -1238,118 +1171,6 @@ def build_hyperframes_composition(
       <div id="meter-label" class="meter-label">ITEMS 0/3</div>
     </div>
     <div id="spark-fx" class="spark-fx">💥</div>
-
-    <!-- Studio Desk -->
-    <div id="desk" class="desk">
-      <div class="desk-drawer"></div>
-      <div class="desk-drawer-right"></div>
-      <div class="desk-tape"></div>
-      <div class="desk-ruler"></div>
-      <div class="desk-mug"></div>
-      <div id="steam-1" class="steam-bubble">~</div>
-      <div id="steam-2" class="steam-bubble" style="right: 56px; bottom: 462px;">~</div>
-    </div>
-
-    <!-- Developer Avatar Rig (With Dynamic Hoodie Color) -->
-    <div id="avatar-wrap" class="avatar-wrapper">
-      <svg class="avatar-svg" viewBox="0 0 480 460" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          <linearGradient id="skin" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%" stop-color="#FCE1CA"/>
-            <stop offset="100%" stop-color="#F2BA91"/>
-          </linearGradient>
-        </defs>
-
-        <!-- Torso & Clothes -->
-        <g id="torso">
-          <path d="M130 330 C130 310, 180 295, 240 295 C300 295, 350 310, 350 330 L380 460 L100 460 Z" fill="{theme['hoodie_color']}" stroke="#171819" stroke-width="8"/>
-          <path d="M210 295 C210 330, 270 330, 270 295 Z" fill="#FFFFFF" stroke="#171819" stroke-width="6"/>
-          <path d="M180 295 L220 380 L200 460" fill="none" stroke="{theme['hoodie_trim']}" stroke-width="6"/>
-          <path d="M300 295 L260 380 L280 460" fill="none" stroke="{theme['hoodie_trim']}" stroke-width="6"/>
-        </g>
-
-        <!-- Arms -->
-        <g id="arm-left">
-          <!-- Pointing Arm (Default when presenting on right) -->
-          <g id="arm-point" opacity="{arm_point_op}">
-            <path d="M340 330 C380 320, 390 260, 375 220" fill="none" stroke="#171819" stroke-width="44" stroke-linecap="round"/>
-            <path d="M340 330 C380 320, 390 260, 375 220" fill="none" stroke="{theme['hoodie_color']}" stroke-width="36" stroke-linecap="round"/>
-            <g transform="translate(365, 170)">
-              <ellipse cx="14" cy="40" rx="18" ry="16" fill="url(#skin)" stroke="#171819" stroke-width="6"/>
-              <rect x="8" y="0" width="12" height="32" rx="6" fill="url(#skin)" stroke="#171819" stroke-width="6"/>
-            </g>
-          </g>
-
-          <!-- Both Hands Up in Frustration (Hook Intro) -->
-          <g id="arm-both-up" opacity="{arm_both_op}">
-            <path d="M140 330 C100 290, 90 220, 110 170" fill="none" stroke="#171819" stroke-width="44" stroke-linecap="round"/>
-            <path d="M140 330 C100 290, 90 220, 110 170" fill="none" stroke="{theme['hoodie_color']}" stroke-width="36" stroke-linecap="round"/>
-            <g transform="translate(90, 120)">
-              <circle cx="20" cy="35" r="18" fill="url(#skin)" stroke="#171819" stroke-width="6"/>
-              <rect x="5" y="8" width="8" height="24" rx="4" fill="url(#skin)" stroke="#171819" stroke-width="5"/>
-              <rect x="16" y="2" width="8" height="28" rx="4" fill="url(#skin)" stroke="#171819" stroke-width="5"/>
-              <rect x="27" y="5" width="8" height="26" rx="4" fill="url(#skin)" stroke="#171819" stroke-width="5"/>
-            </g>
-
-            <path d="M340 330 C380 290, 390 220, 370 170" fill="none" stroke="#171819" stroke-width="44" stroke-linecap="round"/>
-            <path d="M340 330 C380 290, 390 220, 370 170" fill="none" stroke="{theme['hoodie_color']}" stroke-width="36" stroke-linecap="round"/>
-            <g transform="translate(350, 120)">
-              <circle cx="20" cy="35" r="18" fill="url(#skin)" stroke="#171819" stroke-width="6"/>
-              <rect x="5" y="5" width="8" height="26" rx="4" fill="url(#skin)" stroke="#171819" stroke-width="5"/>
-              <rect x="16" y="2" width="8" height="28" rx="4" fill="url(#skin)" stroke="#171819" stroke-width="5"/>
-              <rect x="27" y="8" width="8" height="24" rx="4" fill="url(#skin)" stroke="#171819" stroke-width="5"/>
-            </g>
-          </g>
-
-          <!-- Thumbs Up Arm (Outro) -->
-          <g id="arm-thumbs-up" opacity="{arm_thumbs_op}">
-            <path d="M340 330 C370 310, 370 240, 350 200" fill="none" stroke="#171819" stroke-width="44" stroke-linecap="round"/>
-            <path d="M340 330 C370 310, 370 240, 350 200" fill="none" stroke="{theme['hoodie_color']}" stroke-width="36" stroke-linecap="round"/>
-            <g transform="translate(330, 150)">
-              <ellipse cx="20" cy="35" rx="16" ry="14" fill="url(#skin)" stroke="#171819" stroke-width="6"/>
-              <rect x="12" y="2" width="14" height="28" rx="7" fill="url(#skin)" stroke="#171819" stroke-width="6"/>
-            </g>
-          </g>
-        </g>
-
-        <!-- Head, Face, Hair -->
-        <g id="head">
-          <path d="M220 280 L220 310 L260 310 L260 280 Z" fill="url(#skin)" stroke="#171819" stroke-width="6"/>
-          <ellipse cx="240" cy="210" rx="65" ry="75" fill="url(#skin)" stroke="#171819" stroke-width="8"/>
-          <!-- Hair Base -->
-          <path d="M175 190 C175 125, 230 110, 290 125 C315 130, 310 160, 310 180 C310 160, 300 145, 280 145 C250 145, 240 160, 200 160 C180 160, 175 180, 175 190 Z" fill="#171819"/>
-          
-          <!-- Eyes -->
-          <g id="eye-left">
-            <ellipse cx="215" cy="205" rx="10" ry="14" fill="#FFFFFF" stroke="#171819" stroke-width="4"/>
-            <circle cx="217" cy="206" r="6" fill="#171819"/>
-            <circle cx="219" cy="203" r="2.5" fill="#FFFFFF"/>
-          </g>
-          <g id="eye-right">
-            <ellipse cx="265" cy="205" rx="10" ry="14" fill="#FFFFFF" stroke="#171819" stroke-width="4"/>
-            <circle cx="267" cy="206" r="6" fill="#171819"/>
-            <circle cx="269" cy="203" r="2.5" fill="#FFFFFF"/>
-          </g>
-
-          <!-- Eyebrows -->
-          <path id="brow-left" d="M205 185 Q220 180 230 188" fill="none" stroke="#171819" stroke-width="6" stroke-linecap="round"/>
-          <path id="brow-right" d="M250 188 Q260 180 275 185" fill="none" stroke="#171819" stroke-width="6" stroke-linecap="round"/>
-
-          <!-- Nose -->
-          <path d="M240 205 L236 225 L244 225" fill="none" stroke="#171819" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
-
-          <!-- Mouth (Morphs during speech) -->
-          <ellipse id="mouth" cx="240" cy="245" rx="20" ry="8" fill="#B91C1C" stroke="#171819" stroke-width="5"/>
-
-          <!-- Glasses -->
-          <rect x="198" y="190" width="34" height="30" rx="8" fill="none" stroke="#171819" stroke-width="7"/>
-          <rect x="248" y="190" width="34" height="30" rx="8" fill="none" stroke="#171819" stroke-width="7"/>
-          <path d="M232 205 L248 205" fill="none" stroke="#171819" stroke-width="7"/>
-          <path d="M198 202 L180 198" fill="none" stroke="#171819" stroke-width="5"/>
-          <path d="M282 202 L300 198" fill="none" stroke="#171819" stroke-width="5"/>
-        </g>
-      </svg>
-    </div>
 
     <!-- ================= SCENES ================= -->
 
@@ -1659,9 +1480,6 @@ def build_hyperframes_composition(
     // ================= TIMELINE SCENE CHOREOGRAPHY =================
 
     // --- SCENE 1: HOOK (0 - {t_hook_end}s) ---
-    tl.set("#arm-point", {{ opacity: {arm_point_op} }}, 0);
-    tl.set("#arm-both-up", {{ opacity: {arm_both_op} }}, 0);
-    tl.set("#arm-thumbs-up", {{ opacity: {arm_thumbs_op} }}, 0);
     tl.fromTo("#hook-strip", {{ y: -160, opacity: 0 }}, {{ y: 0, opacity: 1, duration: 0.45, ease: "back.out(1.5)" }}, 0.1);
     tl.fromTo("#bill-1", {{ y: -30, opacity: 0 }}, {{ y: 0, opacity: 1, duration: 0.35, ease: "back.out(1.5)" }}, 0.6);
     tl.fromTo("#bill-2", {{ y: -30, opacity: 0 }}, {{ y: 0, opacity: 1, duration: 0.35, ease: "back.out(1.5)" }}, 0.9);
@@ -1672,11 +1490,7 @@ def build_hyperframes_composition(
     );
     tl.to("#bill-1, #bill-2", {{ textDecoration: "line-through", opacity: 0.55, duration: 0.2 }}, 1.65);
 
-    // Transition Avatar to Right side (presenter position) for all reviews
-    tl.to("#avatar-wrap", {{ x: 180, y: 15, duration: 0.65, ease: "power2.inOut" }}, {t_hook_end});
-    tl.set("#arm-both-up", {{ opacity: 0 }}, {t_hook_end});
-    tl.set("#arm-thumbs-up", {{ opacity: 0 }}, {t_hook_end});
-    tl.set("#arm-point", {{ opacity: 1 }}, {t_hook_end});
+
 
     // --- SCENE 2: ITEM 1 ({t_hook_end} - {t_tool1_end}s) ---
     tl.fromTo("#scene-tool1 .upper-card", {{ x: -60, opacity: 0 }}, {{ x: 0, opacity: 1, duration: 0.45, ease: "back.out(1.5)" }}, {t_hook_end});
@@ -1726,39 +1540,13 @@ def build_hyperframes_composition(
     tl.fromTo("#t3-badge", {{ scale: 0.8, opacity: 0 }}, {{ scale: 1, opacity: 1, duration: 0.35, ease: "back.out(2)" }}, {t_tool2_end + 3.2});
 
     // --- SCENE 5: OUTRO ({t_tool3_end} - {duration}s) ---
-    tl.set("#arm-point", {{ opacity: 0 }}, {t_tool3_end});
-    tl.set("#arm-thumbs-up", {{ opacity: 1 }}, {t_tool3_end});
-
     // Phone and chat elements drop in immediately
     tl.fromTo("#scene-outro .phone-mockup", {{ y: 120, opacity: 0 }}, {{ y: 0, opacity: 1, duration: 0.45, ease: "back.out(1.4)" }}, {t_tool3_end});
     tl.fromTo("#dm-bubble", {{ scale: 0.8, opacity: 0 }}, {{ scale: 1, opacity: 1, duration: 0.3, ease: "back.out(2)" }}, {t_tool3_end + 0.25});
     tl.fromTo("#dm-reply", {{ y: 20, opacity: 0 }}, {{ y: 0, opacity: 1, duration: 0.4, ease: "back.out(1.5)" }}, {t_tool3_end + 0.55});
 
-    // Continuous micro head-bob
-    tl.to("#head", {{ y: -3, duration: 0.22, repeat: -1, yoyo: true, ease: "sine.inOut" }}, 0);
-
-    // Continuous mouth morphing matching speech
-    for (let t = 0.15; t < {round(duration - 0.5, 2)}; t += 0.32) {{
-      tl.to("#mouth", {{ attr: {{ ry: 18, rx: 24 }}, duration: 0.09, ease: "none" }}, t);
-      tl.to("#mouth", {{ attr: {{ ry: 8, rx: 20 }}, duration: 0.09, ease: "none" }}, t + 0.11);
-    }}
-
-    // Eye blinks every ~3.8 seconds
-    for (let t = 1.8; t < {round(duration - 1, 2)}; t += 3.8) {{
-      tl.to(["#eye-left circle", "#eye-right circle"], {{ scaleY: 0.1, transformOrigin: "center", duration: 0.08, yoyo: true, repeat: 1 }}, t);
-    }}
-
-    // Eyebrow twitches on key emphasis
-    for (let t = 2.0; t < {round(duration - 1, 2)}; t += 4.5) {{
-      tl.to(["#brow-left", "#brow-right"], {{ y: -5, duration: 0.2, yoyo: true, repeat: 1 }}, t);
-    }}
-
     // Continuous floating crosshair drift
     tl.to(".crosshair", {{ y: "+=12", rotation: 30, duration: 5, repeat: -1, yoyo: true, ease: "sine.inOut" }}, 0);
-
-    // Rising steam bubbles
-    tl.to("#steam-1", {{ y: -25, opacity: 0, duration: 1.8, repeat: -1, ease: "power1.out" }}, 0);
-    tl.to("#steam-2", {{ y: -30, opacity: 0, duration: 2.2, repeat: -1, ease: "power1.out", delay: 0.8 }}, 0);
 
     // Kinetic Captions Choreography (3D Keyboard Keycap Pills)
     const captionData = {json.dumps(caption_chunks)};

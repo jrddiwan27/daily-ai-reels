@@ -6,6 +6,25 @@ import subprocess
 import requests
 from pipeline.ai_scriptwriter import get_gemini_key, sanitize_voice_script
 
+def download_video_from_url(url: str, output_dir: str = "inbox/videos") -> str:
+    """
+    Downloads a video from any social platform (YouTube Shorts, X, Instagram, TikTok)
+    using yt-dlp into the inbox/videos directory.
+    """
+    os.makedirs(output_dir, exist_ok=True)
+    out_template = os.path.join(output_dir, "%(title).30s_%(id)s.%(ext)s")
+    print(f"[*] Downloading reference video from URL: {url}...")
+    cmd = f'yt-dlp -f "mp4/best" --no-playlist -o "{out_template}" "{url}"'
+    subprocess.check_call(cmd, shell=True)
+
+    # Find the newest downloaded video in output_dir
+    files = [os.path.join(output_dir, f) for f in os.listdir(output_dir) if f.endswith((".mp4", ".mov", ".mkv", ".webm"))]
+    if not files:
+        raise FileNotFoundError(f"Failed to locate downloaded video for {url}")
+    newest = max(files, key=os.path.getctime)
+    print(f"[✓] Successfully downloaded reference video to: {newest}")
+    return newest
+
 def analyze_reference_video(video_path: str, output_dir: str = "inbox/analysis") -> dict:
     """
     Deconstructs a reference video frame-by-frame and audio using Gemini:
@@ -149,10 +168,45 @@ RULES:
     print(f"\"{script_data['full_script']}\"")
     return script_data
 
+def process_inbox():
+    """
+    Scans inbox/videos for uploaded video files and inbox/urls.txt for shared links.
+    Deconstructs and recreates them into high-converting studio productions.
+    """
+    os.makedirs("inbox/videos", exist_ok=True)
+    url_file = "inbox/urls.txt"
+    if os.path.exists(url_file):
+        with open(url_file, "r") as uf:
+            urls = [line.strip() for line in uf.readlines() if line.strip() and not line.startswith("#")]
+        if urls:
+            print(f"[*] Found {len(urls)} URLs in {url_file}. Processing first URL...")
+            target_url = urls[0]
+            downloaded_video = download_video_from_url(target_url)
+            recreate_video_with_topic(downloaded_video, "Qwen Open-Source Vision & Image Model (Qwen-Image)")
+            # Remove processed URL from file
+            with open(url_file, "w") as uf:
+                uf.write("\n".join(urls[1:]) + "\n")
+            return
+
+    # Check for direct video files
+    video_files = [os.path.join("inbox/videos", f) for f in os.listdir("inbox/videos") if f.endswith((".mp4", ".mov", ".mkv", ".webm"))]
+    if video_files:
+        print(f"[*] Found video in inbox/videos: {video_files[0]}")
+        recreate_video_with_topic(video_files[0], "Qwen Open-Source Vision & Image Model (Qwen-Image)")
+    else:
+        print("[*] Inbox is currently empty. Drop videos into inbox/videos/ or add links to inbox/urls.txt")
+
 if __name__ == "__main__":
     if len(sys.argv) > 1:
-        video_input = sys.argv[1]
-        topic = sys.argv[2] if len(sys.argv) > 2 else "Qwen Open-Source Image Model (Qwen-Image)"
-        recreate_video_with_topic(video_input, topic)
+        arg = sys.argv[1]
+        if arg.startswith("http://") or arg.startswith("https://"):
+            vid = download_video_from_url(arg)
+            topic = sys.argv[2] if len(sys.argv) > 2 else "Qwen Open-Source Image Model (Qwen-Image)"
+            recreate_video_with_topic(vid, topic)
+        elif os.path.exists(arg):
+            topic = sys.argv[2] if len(sys.argv) > 2 else "Qwen Open-Source Image Model (Qwen-Image)"
+            recreate_video_with_topic(arg, topic)
+        elif arg == "--inbox":
+            process_inbox()
     else:
-        print("Usage: python -m pipeline.video_recreator <video_path> [target_topic]")
+        process_inbox()

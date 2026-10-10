@@ -2,7 +2,10 @@ import os
 import json
 import urllib.request
 import xml.etree.ElementTree as ET
-from youtube_transcript_api import YouTubeTranscriptApi
+try:
+    from youtube_transcript_api import YouTubeTranscriptApi
+except ImportError:
+    YouTubeTranscriptApi = None
 
 TOP_CREATORS = [
     {"name": "Fireship", "channel_id": "UCsBjURrPoezykLs9EqgamOA"},

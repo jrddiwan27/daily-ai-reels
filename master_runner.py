@@ -134,6 +134,14 @@ def run_pipeline(slot_id: int = None, dry_run: bool = False):
     file_size = os.path.getsize(out_mp4)
     print(f"[✓] Final Video Generated (Reel + Face CTA): {out_mp4} ({round(file_size/1024/1024, 2)} MB)")
 
+    # 6c. Quality Progression Sentinel Audit
+    try:
+        from pipeline.quality_evaluator import evaluate_video_quality
+        q_result = evaluate_video_quality(out_mp4, expected_duration=dur)
+        print(f"[✓] Quality Audit: {q_result['score']}/100 (Status: {q_result['status']})")
+    except Exception as e:
+        print(f"[!] Quality Sentinel warning: {e}")
+
     # 7. Auto-Publish to Buffer across Instagram, YouTube Shorts & X
     post_ids = {}
     if not dry_run:

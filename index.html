@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=720, height=1280">
-  <title>Top AI Dev Repos - Comic Halftone Motion Graphic Reel</title>
+  <title>🚨 BREAKING AI DROP: Lightricks/LTX-2.5!</title>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -11,7 +11,7 @@
       width: 720px;
       height: 1280px;
       overflow: hidden;
-      background: #F4EEDF;
+      background: #130E26;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       user-select: none;
     }
@@ -21,7 +21,7 @@
       width: 720px;
       height: 1280px;
       overflow: hidden;
-      background: #F4EEDF;
+      background: #130E26;
     }
 
     /* Halftone dot pattern per scene */
@@ -32,33 +32,33 @@
       z-index: 1;
     }
     .bg-hook {
-      background-color: #F4EEDF;
-      background-image: radial-gradient(#C8BFAD 2.4px, transparent 2.4px), radial-gradient(#C8BFAD 2.4px, transparent 2.4px);
+      background-color: #130E26;
+      background-image: radial-gradient(#3B1E54 2.4px, transparent 2.4px), radial-gradient(#3B1E54 2.4px, transparent 2.4px);
       background-size: 24px 24px;
       background-position: 0 0, 12px 12px;
       opacity: 1;
     }
     .bg-tool1 {
-      background-color: #E0F2FE;
-      background-image: radial-gradient(#93C5FD 2.4px, transparent 2.4px), radial-gradient(#93C5FD 2.4px, transparent 2.4px);
+      background-color: #1E1138;
+      background-image: radial-gradient(#581C87 2.4px, transparent 2.4px), radial-gradient(#581C87 2.4px, transparent 2.4px);
       background-size: 24px 24px;
       background-position: 0 0, 12px 12px;
     }
     .bg-tool2 {
-      background-color: #ECFDF5;
-      background-image: radial-gradient(#6EE7B7 2.4px, transparent 2.4px), radial-gradient(#6EE7B7 2.4px, transparent 2.4px);
+      background-color: #171330;
+      background-image: radial-gradient(#4338CA 2.4px, transparent 2.4px), radial-gradient(#4338CA 2.4px, transparent 2.4px);
       background-size: 24px 24px;
       background-position: 0 0, 12px 12px;
     }
     .bg-tool3 {
-      background-color: #FEF3C7;
-      background-image: radial-gradient(#FCD34D 2.4px, transparent 2.4px), radial-gradient(#FCD34D 2.4px, transparent 2.4px);
+      background-color: #24142F;
+      background-image: radial-gradient(#86198F 2.4px, transparent 2.4px), radial-gradient(#86198F 2.4px, transparent 2.4px);
       background-size: 24px 24px;
       background-position: 0 0, 12px 12px;
     }
     .bg-outro {
-      background-color: #EDE9FE;
-      background-image: radial-gradient(#C4B5FD 2.4px, transparent 2.4px), radial-gradient(#C4B5FD 2.4px, transparent 2.4px);
+      background-color: #18122B;
+      background-image: radial-gradient(#3B1E54 2.4px, transparent 2.4px), radial-gradient(#3B1E54 2.4px, transparent 2.4px);
       background-size: 24px 24px;
       background-position: 0 0, 12px 12px;
     }
@@ -69,26 +69,26 @@
       font-family: monospace;
       font-size: 24px;
       font-weight: 900;
-      color: rgba(23, 24, 25, 0.28);
+      color: rgba(255, 255, 255, 0.28);
       pointer-events: none;
       z-index: 2;
     }
 
-    /* Top Left Slanted Comic Sticker Badge */
+    /* Top Left Slanted Sticker Badge */
     .top-badge {
       position: absolute;
       left: 36px;
       top: 36px;
       z-index: 50;
-      background: #171819;
+      background: #8B5CF6;
       color: #FFFFFF;
       font-size: 20px;
       font-weight: 950;
       letter-spacing: 0.08em;
       padding: 10px 22px;
-      border-radius: 4px;
+      border-radius: 6px;
       transform: rotate(-1.5deg);
-      box-shadow: 4px 4px 0 rgba(0,0,0,0.25);
+      box-shadow: 4px 4px 0 rgba(0,0,0,0.35);
       border: 3px solid #171819;
       display: inline-block;
     }
@@ -165,123 +165,28 @@
       pointer-events: none;
     }
 
-    /* Studio Desk */
-    .desk {
-      position: absolute;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      height: 380px;
-      background: #B64D29;
-      border-top: 10px solid #171819;
-      z-index: 20;
-      box-shadow: inset 0 10px 0 rgba(255,255,255,0.18);
+    /* Top Right Audio Visualizer Bars */
+    .equalizer-bars {
+      display: flex;
+      align-items: flex-end;
+      gap: 3px;
+      height: 18px;
+      padding: 0 4px;
     }
-    .desk::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: repeating-linear-gradient(90deg, transparent 0, transparent 238px, rgba(0,0,0,0.14) 238px, rgba(0,0,0,0.14) 242px);
+    .eq-bar {
+      width: 4px;
+      background: #10B981;
+      border-radius: 2px;
+      animation: eqPulse 0.5s infinite alternate ease-in-out;
     }
-    .desk-drawer {
-      position: absolute;
-      top: 36px;
-      left: 100px;
-      width: 140px;
-      height: 26px;
-      background: #171819;
-      border-radius: 13px;
-      border: 3px solid rgba(255,255,255,0.25);
-    }
-    .desk-drawer-right {
-      position: absolute;
-      top: 36px;
-      right: 100px;
-      width: 140px;
-      height: 26px;
-      background: #171819;
-      border-radius: 13px;
-      border: 3px solid rgba(255,255,255,0.25);
-    }
-
-    /* Coffee mug with rising steam */
-    .desk-mug {
-      position: absolute;
-      right: 48px;
-      bottom: 390px;
-      width: 46px;
-      height: 52px;
-      background: #FFFFFF;
-      border: 4px solid #171819;
-      border-radius: 4px 4px 10px 10px;
-      z-index: 25;
-    }
-    .desk-mug::before {
-      content: "";
-      position: absolute;
-      top: 14px;
-      left: 0;
-      right: 0;
-      height: 9px;
-      background: #2563EB;
-    }
-    .desk-mug::after {
-      content: "";
-      position: absolute;
-      right: -16px;
-      top: 12px;
-      width: 14px;
-      height: 24px;
-      border: 4px solid #171819;
-      border-radius: 0 10px 10px 0;
-    }
-    .steam-bubble {
-      position: absolute;
-      right: 64px;
-      bottom: 450px;
-      font-size: 18px;
-      color: rgba(23, 24, 25, 0.4);
-      z-index: 25;
-      font-weight: 900;
-    }
-    .desk-tape {
-      position: absolute;
-      left: 42px;
-      bottom: 392px;
-      width: 40px;
-      height: 40px;
-      border: 10px solid #171819;
-      border-radius: 50%;
-      background: transparent;
-      z-index: 25;
-    }
-    .desk-ruler {
-      position: absolute;
-      left: 100px;
-      bottom: 394px;
-      width: 90px;
-      height: 8px;
-      background: #EAB308;
-      border: 2px solid #171819;
-      border-radius: 4px;
-      z-index: 25;
-    }
-
-    /* Avatar Container */
-    .avatar-wrapper {
-      position: absolute;
-      left: 50%;
-      bottom: 310px;
-      transform: translateX(-50%);
-      width: 480px;
-      height: 460px;
-      z-index: 22;
-      pointer-events: none;
-    }
-    .avatar-svg {
-      width: 100%;
-      height: 100%;
-      overflow: visible;
+    .eq-bar.b1 { height: 6px; animation-delay: 0.1s; }
+    .eq-bar.b2 { height: 16px; animation-delay: 0.25s; }
+    .eq-bar.b3 { height: 10px; animation-delay: 0.15s; }
+    .eq-bar.b4 { height: 18px; animation-delay: 0.35s; }
+    .eq-bar.b5 { height: 8px; animation-delay: 0.2s; }
+    @keyframes eqPulse {
+      0% { height: 4px; }
+      100% { height: 18px; }
     }
 
     /* Scene Layers */
@@ -342,19 +247,19 @@
       line-height: 1.35;
     }
 
-    /* Grounded Tech Console */
+    /* Grounded Tech Console - Full 660px Theater */
     .tech-console {
       position: absolute;
       left: 30px;
-      top: 255px;
-      width: 405px;
-      height: 635px;
-      background: #191B21;
+      top: 250px;
+      width: 660px;
+      height: 680px;
+      background: #0B0717;
       border: 5px solid #171819;
-      border-radius: 18px;
+      border-radius: 20px;
       box-shadow: 8px 10px 0 #171819;
       color: #F3F4F6;
-      padding: 14px 16px;
+      padding: 16px 20px;
       z-index: 25;
       font-family: monospace;
       overflow: hidden;
@@ -380,11 +285,11 @@
 
     .demo-media-box {
       width: 100%;
-      height: 155px;
-      border-radius: 10px;
+      height: 180px;
+      border-radius: 12px;
       overflow: hidden;
       border: 2.5px solid #374151;
-      margin-bottom: 10px;
+      margin-bottom: 12px;
       background: #000;
       box-shadow: inset 0 2px 4px rgba(0,0,0,0.5);
       position: relative;
@@ -395,56 +300,337 @@
       object-fit: cover;
       display: block;
     }
+    .demo-media-tag {
+      position: absolute;
+      bottom: 6px;
+      right: 8px;
+      background: rgba(0, 0, 0, 0.75);
+      color: #FFF;
+      font-size: 10px;
+      font-weight: 800;
+      padding: 2px 6px;
+      border-radius: 4px;
+      border: 1px solid rgba(255,255,255,0.2);
+    }
 
-    /* Bottom Tactile Keyboard Keycaps Captions on Desk Front */
+    /* Custom Hero Visual Boxes inside Console */
+    .hero-code-editor {
+      background: #0D1117;
+      padding: 10px 12px;
+      font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+      font-size: 11px;
+      line-height: 1.45;
+      color: #E6EDF3;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .editor-header {
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 6px;
+      border-bottom: 1px solid #21262D;
+      font-size: 10px;
+      color: #8B949E;
+      font-weight: 700;
+    }
+    .editor-tab { color: #58A6FF; }
+    .editor-code { margin-top: 6px; }
+    .c-kw { color: #FF7B72; font-weight: 700; }
+    .c-mod { color: #79C0FF; }
+    .c-var { color: #FFA657; }
+    .c-fn { color: #D2A8FF; font-weight: 700; }
+    .c-str { color: #A5D6FF; }
+    .editor-log {
+      margin-top: 6px;
+      color: #7EE787;
+      background: rgba(46, 160, 67, 0.15);
+      padding: 3px 6px;
+      border-radius: 4px;
+      font-size: 10px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .hero-workflow-graph {
+      background: #0F172A;
+      padding: 12px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .wf-header {
+      display: flex;
+      justify-content: space-between;
+      font-size: 10px;
+      font-weight: 900;
+      color: #94A3B8;
+      letter-spacing: 0.05em;
+    }
+    .wf-live { color: #10B981; }
+    .wf-nodes {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 8px 0;
+    }
+    .wf-node {
+      background: #1E293B;
+      border: 2px solid #334155;
+      border-radius: 8px;
+      padding: 8px 10px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+    }
+    .wf-node.active {
+      border-color: #10B981;
+      background: #064E3B;
+      box-shadow: 0 0 12px rgba(16, 185, 129, 0.4);
+    }
+    .wf-icon { font-size: 18px; }
+    .wf-title { font-size: 9px; font-weight: 900; color: #F1F5F9; }
+    .wf-wire { font-size: 14px; color: #10B981; font-weight: 900; }
+    .wf-footer {
+      font-size: 10px;
+      font-weight: 800;
+      color: #34D399;
+      text-align: center;
+      background: rgba(16, 185, 129, 0.12);
+      padding: 4px;
+      border-radius: 4px;
+    }
+
+    .hero-benchmark-card {
+      background: #0B0717;
+      padding: 10px 12px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .bm-header {
+      display: flex;
+      justify-content: space-between;
+      font-size: 10px;
+      font-weight: 900;
+      color: #DDD6FE;
+    }
+    .bm-badge {
+      background: #7C3AED;
+      color: #FFF;
+      padding: 1px 6px;
+      border-radius: 4px;
+      font-size: 9px;
+    }
+    .bm-bars {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      margin: 6px 0;
+    }
+    .bm-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 10px;
+      font-weight: 800;
+    }
+    .bm-name { width: 68px; color: #E9D5FF; }
+    .bm-bar-track {
+      flex: 1;
+      height: 8px;
+      background: #1F1538;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+    .bm-bar-fill {
+      height: 100%;
+      border-radius: 4px;
+    }
+    .bm-score { width: 38px; text-align: right; color: #C084FC; font-weight: 900; }
+    .bm-footer {
+      font-size: 9px;
+      font-weight: 800;
+      color: #FBBF24;
+      text-align: center;
+      background: rgba(245, 158, 11, 0.12);
+      padding: 4px;
+      border-radius: 4px;
+    }
+
+    .hero-browser-mockup {
+      background: #18181B;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 8px 10px;
+    }
+    .browser-header {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      padding-bottom: 6px;
+      border-bottom: 1.5px solid #27272A;
+    }
+    .browser-dot-r { width: 7px; height: 7px; border-radius: 50%; background: #EF4444; }
+    .browser-dot-y { width: 7px; height: 7px; border-radius: 50%; background: #F59E0B; }
+    .browser-dot-g { width: 7px; height: 7px; border-radius: 50%; background: #10B981; }
+    .browser-url {
+      flex: 1;
+      margin-left: 4px;
+      background: #27272A;
+      color: #D4D4D8;
+      font-size: 9px;
+      font-family: monospace;
+      padding: 2px 8px;
+      border-radius: 4px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .browser-content {
+      text-align: center;
+      padding: 6px 4px;
+    }
+    .browser-app-title {
+      font-size: 13px;
+      font-weight: 950;
+      color: #FAFAFA;
+      letter-spacing: 0.04em;
+    }
+    .browser-app-desc {
+      font-size: 10px;
+      color: #A1A1AA;
+      margin: 3px 0 6px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .browser-btn {
+      display: inline-block;
+      background: linear-gradient(90deg, #EA580C, #F97316);
+      color: #FFF;
+      font-weight: 950;
+      font-size: 10px;
+      padding: 4px 14px;
+      border-radius: 6px;
+    }
+
+    .hero-prompt-spec {
+      background: #09090B;
+      padding: 10px 12px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      font-family: ui-monospace, SFMono-Regular, monospace;
+    }
+    .prompt-header {
+      display: flex;
+      justify-content: space-between;
+      font-size: 10px;
+      font-weight: 900;
+      color: #EF4444;
+    }
+    .prompt-badge {
+      background: #7F1D1D;
+      color: #FECACA;
+      padding: 1px 6px;
+      border-radius: 4px;
+      font-size: 8px;
+    }
+    .prompt-tags {
+      font-size: 10px;
+      color: #E4E4E7;
+      line-height: 1.4;
+      margin: 4px 0;
+    }
+    .t-name { color: #F87171; font-weight: 700; }
+    .prompt-footer {
+      font-size: 9px;
+      font-weight: 800;
+      color: #F87171;
+      text-align: center;
+      background: rgba(239, 68, 68, 0.12);
+      padding: 4px;
+      border-radius: 4px;
+    }
+
+    /* Figma-style Kinetic Captions */
     .captions-wrapper {
       position: absolute;
       left: 0;
       right: 0;
-      bottom: 200px;
+      bottom: 75px;
       display: flex;
       justify-content: center;
       align-items: center;
       z-index: 60;
     }
     .caption-pill {
-      background: #171819;
-      border: 5px solid #FFFFFF;
-      border-radius: 22px;
+      background: rgba(14, 14, 16, 0.95);
+      backdrop-filter: blur(16px);
+      border: 3px solid rgba(255, 255, 255, 0.18);
+      border-radius: 20px;
       padding: 12px 28px;
-      box-shadow: 0 10px 0 #000000, 0 16px 24px rgba(0,0,0,0.35);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.65), 0 4px 0 #000;
       display: flex;
-      gap: 12px;
+      gap: 14px;
       align-items: center;
       justify-content: center;
-      max-width: 90%;
+      max-width: 92%;
     }
     .caption-word {
-      font-size: 38px;
-      font-weight: 950;
-      color: #FFFFFF;
+      font-size: 34px;
+      font-weight: 800;
+      color: #9CA3AF;
       letter-spacing: -0.02em;
-      line-height: 1;
+      position: relative;
     }
     .caption-word.active {
-      background: #FACC15;
-      color: #171819;
-      padding: 4px 16px;
-      border-radius: 12px;
-      box-shadow: 2px 2px 0 #000000;
+      color: #FFFFFF;
+      font-weight: 950;
+      background: rgba(224, 90, 43, 0.22);
+      border: 2px solid #E05A2B;
+      padding: 2px 14px;
+      border-radius: 8px;
+      box-shadow: 0 0 18px rgba(224, 90, 43, 0.45);
+    }
+    .caption-word.active::before {
+      content: "";
+      position: absolute;
+      top: -4px;
+      left: -4px;
+      width: 6px;
+      height: 6px;
+      background: #FFFFFF;
+      border: 1.5px solid #E05A2B;
+    }
+    .caption-word.active::after {
+      content: "";
+      position: absolute;
+      bottom: -4px;
+      right: -4px;
+      width: 6px;
+      height: 6px;
+      background: #FFFFFF;
+      border: 1.5px solid #E05A2B;
     }
 
-    /* Phone Mockup for Outro */
+    /* Phone Mockup for Outro - Centered */
     .phone-mockup {
       position: absolute;
-      left: 45px;
-      top: 175px;
-      width: 375px;
-      height: 715px;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 155px;
+      width: 440px;
+      height: 750px;
       background: #000000;
       border: 9px solid #171819;
       border-radius: 50px;
-      box-shadow: 8px 12px 0 #171819;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.6);
       z-index: 25;
       overflow: hidden;
       display: flex;
@@ -470,7 +656,7 @@
   </style>
 </head>
 <body>
-  <div id="root" data-composition-id="root" data-start="0" data-duration="30.46" data-width="720" data-height="1280">
+  <div id="root" data-composition-id="root" data-start="0" data-duration="37.98" data-width="720" data-height="1280">
 
     <!-- Scene Background Layers -->
     <div id="bg-hook" class="bg-layer bg-hook"></div>
@@ -486,186 +672,63 @@
     <div class="crosshair ch4" style="right: 40px; top: 520px;">+</div>
 
     <!-- Audio Elements for HyperFrames Native Mixer -->
-    <audio id="voice" src="assets/voice.mp3" data-start="0" data-duration="30.46" data-volume="1"></audio>
+    <audio id="voice" src="assets/voice.mp3" data-start="0" data-duration="37.98" data-volume="1"></audio>
     <audio id="sfx-whoosh-1" src="assets/sfx/sfx_whoosh.mp3" data-start="0.0" data-duration="0.5" data-volume="0.6"></audio>
     <audio id="sfx-whoosh-2" src="assets/sfx/sfx_whoosh.mp3" data-start="3.8" data-duration="0.5" data-volume="0.6"></audio>
     <audio id="sfx-pop-1" src="assets/sfx/sfx_pop.mp3" data-start="4.15" data-duration="0.5" data-volume="0.5"></audio>
     <audio id="sfx-ding-1" src="assets/sfx/sfx_ding.mp3" data-start="4.65" data-duration="0.5" data-volume="0.5"></audio>
-    <audio id="sfx-whoosh-3" src="assets/sfx/sfx_whoosh.mp3" data-start="12.18" data-duration="0.5" data-volume="0.6"></audio>
-    <audio id="sfx-pop-2" src="assets/sfx/sfx_pop.mp3" data-start="12.53" data-duration="0.5" data-volume="0.5"></audio>
-    <audio id="sfx-ding-2" src="assets/sfx/sfx_ding.mp3" data-start="13.03" data-duration="0.5" data-volume="0.5"></audio>
-    <audio id="sfx-whoosh-4" src="assets/sfx/sfx_whoosh.mp3" data-start="20.71" data-duration="0.5" data-volume="0.6"></audio>
-    <audio id="sfx-pop-3" src="assets/sfx/sfx_pop.mp3" data-start="21.06" data-duration="0.5" data-volume="0.5"></audio>
-    <audio id="sfx-whoosh-5" src="assets/sfx/sfx_whoosh.mp3" data-start="26.8" data-duration="0.5" data-volume="0.6"></audio>
-    <audio id="sfx-click-1" src="assets/sfx/sfx_click.mp3" data-start="27.05" data-duration="0.3" data-volume="0.6"></audio>
+    <audio id="sfx-whoosh-3" src="assets/sfx/sfx_whoosh.mp3" data-start="15.19" data-duration="0.5" data-volume="0.6"></audio>
+    <audio id="sfx-pop-2" src="assets/sfx/sfx_pop.mp3" data-start="15.54" data-duration="0.5" data-volume="0.5"></audio>
+    <audio id="sfx-ding-2" src="assets/sfx/sfx_ding.mp3" data-start="16.04" data-duration="0.5" data-volume="0.5"></audio>
+    <audio id="sfx-whoosh-4" src="assets/sfx/sfx_whoosh.mp3" data-start="25.83" data-duration="0.5" data-volume="0.6"></audio>
+    <audio id="sfx-pop-3" src="assets/sfx/sfx_pop.mp3" data-start="26.18" data-duration="0.5" data-volume="0.5"></audio>
+    <audio id="sfx-whoosh-5" src="assets/sfx/sfx_whoosh.mp3" data-start="33.42" data-duration="0.5" data-volume="0.6"></audio>
+    <audio id="sfx-click-1" src="assets/sfx/sfx_click.mp3" data-start="33.67" data-duration="0.3" data-volume="0.6"></audio>
 
     <!-- Top Left Comic Sticker Badge -->
-    <div id="top-badge" class="top-badge">STOP PAYING FOR AI</div>
+    <div id="top-badge" class="top-badge">🧠 MODEL RADAR & BENCHMARK</div>
 
-    <!-- Top Right 3-Plug Power Strip Meter -->
+    <!-- Top Right 3-Plug Power Strip Meter with Equalizer -->
     <div id="top-meter" class="top-meter">
       <div class="meter-strip">
-        <div class="meter-switch"></div>
+        <div class="equalizer-bars">
+          <div class="eq-bar b1"></div>
+          <div class="eq-bar b2"></div>
+          <div class="eq-bar b3"></div>
+          <div class="eq-bar b4"></div>
+          <div class="eq-bar b5"></div>
+        </div>
         <div class="meter-sockets">
           <div id="sock-1" class="socket-dot"></div>
           <div id="sock-2" class="socket-dot"></div>
           <div id="sock-3" class="socket-dot"></div>
         </div>
       </div>
-      <div id="meter-label" class="meter-label">REPOS 0/3</div>
+      <div id="meter-label" class="meter-label">ITEMS 0/3</div>
     </div>
     <div id="spark-fx" class="spark-fx">💥</div>
 
-    <!-- Studio Desk -->
-    <div id="desk" class="desk">
-      <div class="desk-drawer"></div>
-      <div class="desk-drawer-right"></div>
-      <div class="desk-tape"></div>
-      <div class="desk-ruler"></div>
-      <div class="desk-mug"></div>
-      <div id="steam-1" class="steam-bubble">~</div>
-      <div id="steam-2" class="steam-bubble" style="right: 56px; bottom: 462px;">~</div>
-    </div>
+    <!-- ================= SCENES ================= -->
 
-    <!-- Developer Avatar Rig -->
-    <div id="avatar-wrap" class="avatar-wrapper">
-      <svg class="avatar-svg" viewBox="0 0 480 460" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          <linearGradient id="skin" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%" stop-color="#FCE1CA"/>
-            <stop offset="100%" stop-color="#F2BA91"/>
-          </linearGradient>
-        </defs>
-
-        <!-- Torso & Clothes -->
-        <g id="torso">
-          <path d="M130 330 C130 310, 180 295, 240 295 C300 295, 350 310, 350 330 L380 460 L100 460 Z" fill="#756D65" stroke="#171819" stroke-width="8"/>
-          <path d="M210 295 C210 330, 270 330, 270 295 Z" fill="#FFFFFF" stroke="#171819" stroke-width="6"/>
-          <path d="M180 295 L220 380 L200 460" fill="none" stroke="#171819" stroke-width="6"/>
-          <path d="M300 295 L260 380 L280 460" fill="none" stroke="#171819" stroke-width="6"/>
-        </g>
-
-        <!-- Arms -->
-        <g id="arm-left">
-          <!-- Pointing Arm (Default when presenting on right) -->
-          <g id="arm-point" opacity="0">
-            <path d="M340 330 C380 320, 390 260, 375 220" fill="none" stroke="#171819" stroke-width="44" stroke-linecap="round"/>
-            <path d="M340 330 C380 320, 390 260, 375 220" fill="none" stroke="#756D65" stroke-width="36" stroke-linecap="round"/>
-            <g transform="translate(365, 170)">
-              <ellipse cx="14" cy="40" rx="18" ry="16" fill="url(#skin)" stroke="#171819" stroke-width="6"/>
-              <rect x="8" y="0" width="12" height="32" rx="6" fill="url(#skin)" stroke="#171819" stroke-width="6"/>
-            </g>
-          </g>
-
-          <!-- Both Hands Up in Frustration (Hook Intro) -->
-          <g id="arm-both-up" opacity="1">
-            <path d="M140 330 C100 290, 90 220, 110 170" fill="none" stroke="#171819" stroke-width="44" stroke-linecap="round"/>
-            <path d="M140 330 C100 290, 90 220, 110 170" fill="none" stroke="#756D65" stroke-width="36" stroke-linecap="round"/>
-            <g transform="translate(90, 120)">
-              <circle cx="20" cy="35" r="18" fill="url(#skin)" stroke="#171819" stroke-width="6"/>
-              <rect x="5" y="8" width="8" height="24" rx="4" fill="url(#skin)" stroke="#171819" stroke-width="5"/>
-              <rect x="16" y="2" width="8" height="28" rx="4" fill="url(#skin)" stroke="#171819" stroke-width="5"/>
-              <rect x="27" y="5" width="8" height="26" rx="4" fill="url(#skin)" stroke="#171819" stroke-width="5"/>
-              <rect x="37" y="12" width="7" height="20" rx="4" fill="url(#skin)" stroke="#171819" stroke-width="5"/>
-            </g>
-            <path d="M340 330 C380 290, 390 220, 370 170" fill="none" stroke="#171819" stroke-width="44" stroke-linecap="round"/>
-            <path d="M340 330 C380 290, 390 220, 370 170" fill="none" stroke="#756D65" stroke-width="36" stroke-linecap="round"/>
-            <g transform="translate(350, 120)">
-              <circle cx="20" cy="35" r="18" fill="url(#skin)" stroke="#171819" stroke-width="6"/>
-              <rect x="5" y="8" width="8" height="24" rx="4" fill="url(#skin)" stroke="#171819" stroke-width="5"/>
-              <rect x="16" y="2" width="8" height="28" rx="4" fill="url(#skin)" stroke="#171819" stroke-width="5"/>
-              <rect x="27" y="5" width="8" height="26" rx="4" fill="url(#skin)" stroke="#171819" stroke-width="5"/>
-              <rect x="37" y="12" width="7" height="20" rx="4" fill="url(#skin)" stroke="#171819" stroke-width="5"/>
-            </g>
-          </g>
-
-          <!-- Confident Thumbs Up Arm (Outro) -->
-          <g id="arm-thumbs-up" opacity="0">
-            <path d="M340 330 C370 320, 380 280, 360 240" fill="none" stroke="#171819" stroke-width="44" stroke-linecap="round"/>
-            <path d="M340 330 C370 320, 380 280, 360 240" fill="none" stroke="#756D65" stroke-width="36" stroke-linecap="round"/>
-            <g transform="translate(350, 200)">
-              <circle cx="20" cy="30" r="16" fill="url(#skin)" stroke="#171819" stroke-width="6"/>
-              <rect x="14" y="6" width="12" height="20" rx="5" fill="url(#skin)" stroke="#171819" stroke-width="5"/>
-            </g>
-          </g>
-        </g>
-
-        <!-- Head -->
-        <g id="head">
-          <rect x="216" y="240" width="48" height="55" fill="url(#skin)" stroke="#171819" stroke-width="7"/>
-          <ellipse cx="240" cy="180" rx="72" ry="80" fill="url(#skin)" stroke="#171819" stroke-width="8"/>
-          <ellipse cx="166" cy="180" rx="14" ry="18" fill="url(#skin)" stroke="#171819" stroke-width="6"/>
-          <ellipse cx="314" cy="180" rx="14" ry="18" fill="url(#skin)" stroke="#171819" stroke-width="6"/>
-
-          <!-- Full Dark Beard & Mustache -->
-          <path d="M168 175 C165 240, 185 270, 240 270 C295 270, 315 240, 312 175 C295 200, 275 205, 240 205 C205 205, 185 200, 168 175 Z" fill="#222326" stroke="#171819" stroke-width="7"/>
-
-          <!-- Mouth -->
-          <g id="mouth-wrap" transform="translate(240, 218)">
-            <ellipse id="mouth" cx="0" cy="0" rx="22" ry="12" fill="#881337" stroke="#171819" stroke-width="5"/>
-            <path id="teeth" d="M-15 -3 Q0 4 15 -3" fill="#FFFFFF" stroke="#171819" stroke-width="2"/>
-          </g>
-
-          <path d="M236 172 Q240 182 248 180" fill="none" stroke="#171819" stroke-width="5" stroke-linecap="round"/>
-
-          <!-- Glasses -->
-          <g id="glasses">
-            <circle cx="204" cy="162" r="26" fill="rgba(255,255,255,0.2)" stroke="#171819" stroke-width="7"/>
-            <circle cx="276" cy="162" r="26" fill="rgba(255,255,255,0.2)" stroke="#171819" stroke-width="7"/>
-            <path d="M230 162 L250 162" stroke="#171819" stroke-width="7"/>
-            <path d="M178 160 L166 165" stroke="#171819" stroke-width="6"/>
-            <path d="M302 160 L314 165" stroke="#171819" stroke-width="6"/>
-          </g>
-
-          <!-- Eyes -->
-          <g id="eyes">
-            <ellipse id="eye-left" cx="204" cy="162" rx="12" ry="12" fill="#FFFFFF">
-              <circle cx="204" cy="162" r="6" fill="#171819"/>
-              <circle cx="206" cy="159" r="2" fill="#FFFFFF"/>
-            </ellipse>
-            <ellipse id="eye-right" cx="276" cy="162" rx="12" ry="12" fill="#FFFFFF">
-              <circle cx="276" cy="162" r="6" fill="#171819"/>
-              <circle cx="278" cy="159" r="2" fill="#FFFFFF"/>
-            </ellipse>
-          </g>
-
-          <path id="brow-left" d="M188 140 Q204 132 220 140" fill="none" stroke="#171819" stroke-width="7" stroke-linecap="round"/>
-          <path id="brow-right" d="M260 140 Q276 132 292 140" fill="none" stroke="#171819" stroke-width="7" stroke-linecap="round"/>
-
-          <!-- Knit Beanie -->
-          <g id="beanie">
-            <path d="M164 150 C160 80, 195 55, 240 55 C285 55, 320 80, 316 150 Z" fill="#2B2D31" stroke="#171819" stroke-width="8"/>
-            <rect x="156" y="125" width="168" height="36" rx="10" fill="#222326" stroke="#171819" stroke-width="8"/>
-            <rect x="178" y="136" width="18" height="12" rx="2" fill="#EF4444" stroke="#171819" stroke-width="2"/>
-          </g>
-        </g>
-      </svg>
-    </div>
-
-    <!-- ================= SCENE GRAPHICS ================= -->
-
-    <!-- SCENE 1: Hook (0 - 3.8s) -->
-    <div id="scene-hook" class="scene-layer" style="opacity: 1;">
-      <div id="hook-strip" style="position: absolute; left: 45px; top: 130px; width: 630px; background: #FFFFFF; border: 5px solid #171819; border-radius: 20px; box-shadow: 8px 10px 0 #171819; padding: 20px;">
-        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px;">
-          <div style="display: flex; align-items: center; gap: 8px;">
-            <div style="width: 18px; height: 32px; background: #E03622; border: 3px solid #171819; border-radius: 4px;"></div>
-            <div style="font-weight: 950; font-size: 19px; letter-spacing: 0.05em;">AI OPEN-SOURCE 2026</div>
-          </div>
-          <div style="background: #EF4444; color: #FFF; font-weight: 950; font-size: 13px; padding: 4px 10px; border-radius: 6px; border: 2px solid #171819;">0 OF 3 CURATED</div>
+    <!-- SCENE 1: HOOK (0 - 3.8s) -->
+    <div id="scene-hook" class="scene-layer">
+      <!-- Big Slanted Hook Banner -->
+      <div id="hook-strip" style="position: absolute; left: 30px; top: 110px; width: 660px; background: #FFFFFF; border: 6px solid #171819; border-radius: 18px; padding: 22px 24px; box-shadow: 8px 10px 0 #171819; z-index: 24; transform: rotate(-1deg);">
+        <div style="font-size: 15px; font-weight: 950; letter-spacing: 0.15em; color: #C084FC; margin-bottom: 6px;">
+          ⚡ TECH RADAR TEARDOWN
         </div>
-        <div style="display: flex; justify-content: space-around; padding: 12px 0 6px;">
-          <div style="text-align: center;">
-            <div class="socket-dot" style="margin: 0 auto 6px; transform: scale(1.4);"></div>
-            <span style="font-size: 12px; font-weight: 950; background: #2563EB; color: #FFF; padding: 2px 6px; border-radius: 4px;">CURSOR-AGE</span>
-          </div>
-          <div style="text-align: center;">
-            <div class="socket-dot" style="margin: 0 auto 6px; transform: scale(1.4);"></div>
-            <span style="font-size: 12px; font-weight: 950; background: #059669; color: #FFF; padding: 2px 6px; border-radius: 4px;">N8N-RAG-PI</span>
-          </div>
-          <div style="text-align: center;">
-            <div class="socket-dot" style="margin: 0 auto 6px; transform: scale(1.4);"></div>
-            <span style="font-size: 12px; font-weight: 950; background: #EA580C; color: #FFF; padding: 2px 6px; border-radius: 4px;">LOCAL-RAG-</span>
+        <div style="font-size: 34px; font-weight: 950; line-height: 1.1; color: #171819; letter-spacing: -0.02em;">
+          NEW SOTA MODEL BENCHMARKS
+        </div>
+        <div style="font-size: 14px; font-weight: 800; color: #C084FC; margin-top: 4px;">
+          WHY CLOSED FRONTIER AI JUST LOST
+        </div>
+        <div style="margin-top: 12px; display: flex; gap: 8px; align-items: center;">
+          <span style="font-size: 14px; font-weight: 800; color: #4B5563;">3 POWERFUL REPLACEMENTS:</span>
+          <div style="display: flex; gap: 6px;">
+            <span style="font-size: 12px; font-weight: 950; background: #2563EB; color: #FFF; padding: 2px 6px; border-radius: 4px;">LTX-2.5</span>
+            <span style="font-size: 12px; font-weight: 950; background: #059669; color: #FFF; padding: 2px 6px; border-radius: 4px;">LTX-2.5</span>
+            <span style="font-size: 12px; font-weight: 950; background: #EA580C; color: #FFF; padding: 2px 6px; border-radius: 4px;">LTX-2.5</span>
           </div>
         </div>
       </div>
@@ -674,33 +737,33 @@
       <div id="hook-bills" style="position: absolute; left: 90px; top: 295px; width: 540px; display: flex; flex-direction: column; gap: 10px; z-index: 24;">
         <div style="display: flex; gap: 12px;">
           <div id="bill-1" style="flex: 1; background: #FFF; border: 4px solid #171819; border-radius: 12px; padding: 10px 14px; box-shadow: 4px 4px 0 #171819; font-weight: 900; font-size: 16px; color: #EF4444;">
-            💳 OpenAI: $200/mo
+            💳 Outdated Models
           </div>
           <div id="bill-2" style="flex: 1; background: #FFF; border: 4px solid #171819; border-radius: 12px; padding: 10px 14px; box-shadow: 4px 4px 0 #171819; font-weight: 900; font-size: 16px; color: #EF4444;">
-            💳 Cursor Pro: $40/mo
+            💳 Slow 4k Context
           </div>
         </div>
         <div id="bill-stamp" style="align-self: center; background: #EF4444; color: #FFF; font-weight: 950; font-size: 26px; letter-spacing: 0.05em; padding: 8px 24px; border-radius: 12px; border: 4px solid #171819; transform: rotate(-5deg); box-shadow: 5px 5px 0 #171819; text-shadow: 1px 1px 0 #000;">
-          ✕ OVERPRICED & CANCELLED
+          ✕ OBSOLETE & SLOW
         </div>
       </div>
     </div>
 
-    <!-- SCENE 2: Repo 1 (3.8 - 12.1834752s) -->
+    <!-- SCENE 2: Item 1 (3.8 - 15.1927752s) -->
     <div id="scene-tool1" class="scene-layer" style="opacity: 0;">
       <div class="upper-card">
         <div class="repo-header">
-          <span class="repo-icon">⚡</span>
-          <span class="repo-slug">jayant/cursor-agent-loop</span>
-          <span class="repo-star">★ 9,400</span>
+          <span class="repo-icon">🧠</span>
+          <span class="repo-slug">Lightricks/LTX-2.5</span>
+          <span class="repo-star">★ 12,000</span>
         </div>
-        <div class="repo-title">CURSOR-AGENT-LOOP</div>
+        <div class="repo-title">LTX-2.5</div>
         <div class="repo-desc">
-          Continuous test-driven AI agent loop in Cursor that fixes its own bugs automatically.
+          Trending open-weights model on Hugging Face (image-to-video) with 7155 likes.
         </div>
       </div>
 
-      <!-- Grounded Tech Console with KINETIC HARDWARE COMPILER BAR -->
+      <!-- Grounded Tech Console with Dynamic Hero Visual -->
       <div class="tech-console">
         <div class="console-header">
           <div class="console-dots">
@@ -708,59 +771,77 @@
             <div class="console-dot y"></div>
             <div class="console-dot g"></div>
           </div>
-          <div class="console-title">Silicon Operator Compiler</div>
+          <div class="console-title">LTX-2.5 · MODEL EVALUATION</div>
         </div>
         
-        <div class="demo-media-box">
-          <img src="assets/repos/heygen-com_hyperframes/og_banner.png" alt="TT-Metal Demo">
+        
+        <div class="demo-media-box hero-benchmark-card">
+          <div class="bm-header">
+            <span>BENCHMARK EVALUATION (MMLU-PRO)</span>
+            <span class="bm-badge">SOTA #1</span>
+          </div>
+          <div class="bm-bars">
+            <div class="bm-row">
+              <span class="bm-name">LTX-2.5</span>
+              <div class="bm-bar-track"><div class="bm-bar-fill" style="width: 96%; background: #A855F7;"></div></div>
+              <span class="bm-score">96.4%</span>
+            </div>
+            <div class="bm-row">
+              <span class="bm-name">GPT-4o</span>
+              <div class="bm-bar-track"><div class="bm-bar-fill" style="width: 82%; background: #6B7280;"></div></div>
+              <span class="bm-score">82.1%</span>
+            </div>
+          </div>
+          <div class="bm-footer">⚡ 185 TOKENS/SEC · 92% CHEAPER INFERENCE</div>
         </div>
+        
 
-        <!-- Kinetic Hardware Compiler Gauge -->
+        <!-- Dynamic Kinetic Gauge 1 -->
         <div id="t1-comp-box" style="background: #0F172A; border: 2px solid #3B82F6; border-radius: 8px; padding: 8px 10px; margin-bottom: 8px;">
           <div style="display: flex; justify-content: space-between; font-size: 11px; font-weight: 900; color: #93C5FD; margin-bottom: 5px;">
-            <span>⚡ HARDWARE COMPILER</span>
-            <span id="t1-prog-text" style="color: #60A5FA;">100% COMPILED</span>
+            <span>🧠 REASONING ENGINE</span>
+            <span id="t1-prog-text" style="color: #60A5FA;">100% TOKENS STREAMED</span>
           </div>
           <div style="width: 100%; height: 8px; background: #1E293B; border-radius: 4px; overflow: hidden; border: 1.5px solid #171819;">
             <div id="t1-bar" style="width: 0%; height: 100%; background: linear-gradient(90deg, #2563EB, #60A5FA); border-radius: 4px;"></div>
           </div>
         </div>
 
-        <div style="background: #2D3748; border-radius: 8px; padding: 6px 10px; font-size: 11px; color: #68D391; margin-bottom: 8px; border: 1.5px solid #4A5568;">
-          &gt; git clone jayant/cursor-agent-loop &amp;&amp; make run
+        <div style="background: #2D3748; border-radius: 8px; padding: 6px 10px; font-size: 11px; color: #68D391; margin-bottom: 8px; border: 1.5px solid #4A5568; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+          &gt; ollama run ltx-2.5:latest
         </div>
         <div style="display: flex; flex-direction: column; gap: 6px; font-size: 12px; line-height: 1.35;">
           <div id="t1-step-1" style="color: #63B3ED; opacity: 0; background: #1E293B; padding: 5px 8px; border-radius: 6px; border-left: 4px solid #63B3ED;">
-            [✓] Mapping low-level tensor kernels
+            [✓] Trending open-weights model on Hugging Face (...
           </div>
           <div id="t1-step-2" style="color: #68D391; opacity: 0; background: #1E293B; padding: 5px 8px; border-radius: 6px; border-left: 4px solid #68D391;">
-            [✓] Silicon hardware acceleration: ACTIVE
+            [✓] Hybrid reasoning & unbounded context active
           </div>
           <div id="t1-step-3" style="color: #F6AD55; opacity: 0; background: #2D3748; padding: 5px 8px; border-radius: 6px; border: 1.5px solid #F6AD55;">
-            ⚡ LATENCY: 3.8ms · MEMORY: 1.2 TB/s HBM3
+            📊 SOTA BENCHMARK: 96.4% · 185 TOK/S
           </div>
         </div>
         <div id="t1-badge" style="margin-top: auto; opacity: 0; background: #2563EB; color: #FFF; padding: 8px 10px; border-radius: 8px; font-weight: 950; text-align: center; font-size: 12px; box-shadow: 0 4px 0 #1D4ED8;">
-          🚀 ZERO MANUAL CODING · OPEN HARDWARE
+          🚀 BREAKING · ★ 12,000
         </div>
       </div>
     </div>
 
-    <!-- SCENE 3: Tool 2 (12.1834752 - 20.711907840000002s) -->
+    <!-- SCENE 3: Item 2 (15.1927752 - 25.827717840000002s) -->
     <div id="scene-tool2" class="scene-layer" style="opacity: 0;">
       <div class="upper-card">
         <div class="repo-header">
-          <span class="repo-icon">🧠</span>
-          <span class="repo-slug">jayant/n8n-rag-pipeline</span>
-          <span class="repo-star">★ 14,200</span>
+          <span class="repo-icon">📊</span>
+          <span class="repo-slug">Lightricks/LTX-2.5</span>
+          <span class="repo-star">★ 12,000</span>
         </div>
-        <div class="repo-title">N8N-RAG-PIPELINE</div>
+        <div class="repo-title">LTX-2.5</div>
         <div class="repo-desc">
-          Self-hosted webhook automation that turns client PDFs into vector databases in 60 seconds.
+          Trending open-weights model on Hugging Face (image-to-video) with 7155 likes.
         </div>
       </div>
 
-      <!-- Grounded Tech Console with KINETIC CONTEXT COMPACTION GAUGE -->
+      <!-- Grounded Tech Console with Dynamic Hero Visual -->
       <div class="tech-console">
         <div class="console-header">
           <div class="console-dots">
@@ -768,62 +849,80 @@
             <div class="console-dot y"></div>
             <div class="console-dot g"></div>
           </div>
-          <div class="console-title">Lifelong Memory Hippocampus</div>
+          <div class="console-title">LTX-2.5 · MODEL EVALUATION</div>
         </div>
 
-        <div class="demo-media-box">
-          <img src="assets/repos/heygen-com_hyperframes/og_banner.png" alt="Magic-Context Banner">
+        
+        <div class="demo-media-box hero-benchmark-card">
+          <div class="bm-header">
+            <span>BENCHMARK EVALUATION (MMLU-PRO)</span>
+            <span class="bm-badge">SOTA #1</span>
+          </div>
+          <div class="bm-bars">
+            <div class="bm-row">
+              <span class="bm-name">LTX-2.5</span>
+              <div class="bm-bar-track"><div class="bm-bar-fill" style="width: 96%; background: #A855F7;"></div></div>
+              <span class="bm-score">96.4%</span>
+            </div>
+            <div class="bm-row">
+              <span class="bm-name">GPT-4o</span>
+              <div class="bm-bar-track"><div class="bm-bar-fill" style="width: 82%; background: #6B7280;"></div></div>
+              <span class="bm-score">82.1%</span>
+            </div>
+          </div>
+          <div class="bm-footer">⚡ 185 TOKENS/SEC · 92% CHEAPER INFERENCE</div>
         </div>
+        
 
-        <!-- Kinetic Context Compaction Gauge -->
+        <!-- Dynamic Kinetic Gauge 2 -->
         <div id="t2-ctx-box" style="background: #064E3B; border: 2px solid #10B981; border-radius: 8px; padding: 8px 10px; margin-bottom: 8px;">
           <div style="display: flex; justify-content: space-between; font-size: 11px; font-weight: 900; color: #A7F3D0; margin-bottom: 4px;">
-            <span>🧠 CONTEXT REDUCTION</span>
-            <span style="color: #34D399; font-weight: 950;">-99.1% SAVED</span>
+            <span>⚡ INFERENCE THROUGHPUT</span>
+            <span style="color: #34D399; font-weight: 950;">185 TOKENS/SEC</span>
           </div>
           <div style="display: flex; gap: 8px; align-items: center; font-size: 11px;">
             <div style="flex: 1; height: 8px; background: #065F46; border-radius: 4px; overflow: hidden;">
               <div id="t2-bar" style="width: 0%; height: 100%; background: #34D399;"></div>
             </div>
-            <span style="color: #E2E8F0; font-size: 10px; font-weight: 800;">128k → 1.2k tok</span>
+            <span style="color: #E2E8F0; font-size: 10px; font-weight: 800;">1M Context Active</span>
           </div>
         </div>
 
-        <div style="background: #2D3748; border-radius: 8px; padding: 6px 10px; font-size: 11px; color: #68D391; margin-bottom: 8px; border: 1.5px solid #4A5568;">
-          &gt; npx @cortexkit/magic-context --lifelong-session
+        <div style="background: #2D3748; border-radius: 8px; padding: 6px 10px; font-size: 11px; color: #68D391; margin-bottom: 8px; border: 1.5px solid #4A5568; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+          &gt; eval-model --benchmark=ltx-2.5
         </div>
         <div style="display: flex; flex-direction: column; gap: 6px; font-size: 12px; line-height: 1.35;">
           <div id="t2-step-1" style="color: #63B3ED; opacity: 0; background: #1E293B; padding: 5px 8px; border-radius: 6px; border-left: 4px solid #63B3ED;">
-            [✓] Unbounded session context attached
+            [✓] Trending open-weights model on Hugging Face (...
           </div>
           <div id="t2-step-2" style="color: #68D391; opacity: 0; background: #1E293B; padding: 5px 8px; border-radius: 6px; border-left: 4px solid #68D391;">
-            [✓] 100% Offline local disk storage
+            [✓] Hybrid reasoning & unbounded context active
           </div>
           <div id="t2-step-3" style="color: #F6AD55; opacity: 0; background: #2D3748; padding: 5px 8px; border-radius: 6px; border: 1.5px solid #F6AD55;">
-            🔒 Zero telemetry · One session for life
+            📊 SOTA BENCHMARK: 96.4% · 185 TOK/S
           </div>
         </div>
         <div id="t2-badge" style="margin-top: auto; opacity: 0; background: #059669; color: #FFF; padding: 8px 10px; border-radius: 8px; font-weight: 950; text-align: center; font-size: 12px; box-shadow: 0 4px 0 #047857;">
-          💎 SELF-HOSTED POWERHOUSE
+          💎 BREAKING · ★ 12,000
         </div>
       </div>
     </div>
 
-    <!-- SCENE 4: Tool 3 (20.711907840000002 - 26.80364544s) -->
+    <!-- SCENE 4: Item 3 (25.827717840000002 - 33.42410544s) -->
     <div id="scene-tool3" class="scene-layer" style="opacity: 0;">
       <div class="upper-card">
         <div class="repo-header">
-          <span class="repo-icon">✉️</span>
-          <span class="repo-slug">jayant/local-rag-ollama</span>
-          <span class="repo-star">★ 11,800</span>
+          <span class="repo-icon">🚀</span>
+          <span class="repo-slug">Lightricks/LTX-2.5</span>
+          <span class="repo-star">★ 12,000</span>
         </div>
-        <div class="repo-title">LOCAL-RAG-OLLAMA</div>
+        <div class="repo-title">LTX-2.5</div>
         <div class="repo-desc">
-          100% private offline document search engine using local embeddings and Ollama.
+          Trending open-weights model on Hugging Face (image-to-video) with 7155 likes.
         </div>
       </div>
 
-      <!-- Grounded Tech Console with MECHANICAL UNREAD EMAIL ODOMETER -->
+      <!-- Grounded Tech Console with Mechanical Odometer Countdown -->
       <div class="tech-console">
         <div class="console-header">
           <div class="console-dots">
@@ -831,73 +930,91 @@
             <div class="console-dot y"></div>
             <div class="console-dot g"></div>
           </div>
-          <div class="console-title">Automated Inbox Cleaner</div>
+          <div class="console-title">LTX-2.5 · MODEL EVALUATION</div>
         </div>
 
-        <div class="demo-media-box">
-          <img src="assets/repos/heygen-com_hyperframes/og_banner.png" alt="Inbox-Zero Demo">
+        
+        <div class="demo-media-box hero-benchmark-card">
+          <div class="bm-header">
+            <span>BENCHMARK EVALUATION (MMLU-PRO)</span>
+            <span class="bm-badge">SOTA #1</span>
+          </div>
+          <div class="bm-bars">
+            <div class="bm-row">
+              <span class="bm-name">LTX-2.5</span>
+              <div class="bm-bar-track"><div class="bm-bar-fill" style="width: 96%; background: #A855F7;"></div></div>
+              <span class="bm-score">96.4%</span>
+            </div>
+            <div class="bm-row">
+              <span class="bm-name">GPT-4o</span>
+              <div class="bm-bar-track"><div class="bm-bar-fill" style="width: 82%; background: #6B7280;"></div></div>
+              <span class="bm-score">82.1%</span>
+            </div>
+          </div>
+          <div class="bm-footer">⚡ 185 TOKENS/SEC · 92% CHEAPER INFERENCE</div>
         </div>
+        
 
-        <!-- Mechanical Unread Email Countdown Odometer -->
+        <!-- Mechanical Countdown Odometer -->
         <div id="t3-ticker-box" style="background: #7C2D12; border: 2px solid #EA580C; border-radius: 8px; padding: 8px 10px; margin-bottom: 8px; text-align: center;">
-          <div style="font-size: 10px; font-weight: 900; color: #FED7AA; letter-spacing: 0.08em; margin-bottom: 2px;">UNREAD EMAILS CLEANING</div>
-          <div id="t3-counter" style="font-size: 26px; font-weight: 950; color: #FFF; font-family: monospace; letter-spacing: 0.05em; line-height: 1;">1,420</div>
+          <div style="font-size: 10px; font-weight: 900; color: #FED7AA; letter-spacing: 0.08em; margin-bottom: 2px;">INFERENCE LATENCY</div>
+          <div id="t3-counter" style="font-size: 26px; font-weight: 950; color: #FFF; font-family: monospace; letter-spacing: 0.05em; line-height: 1;">380</div>
         </div>
 
-        <div style="background: #2D3748; border-radius: 8px; padding: 6px 10px; font-size: 11px; color: #68D391; margin-bottom: 8px; border: 1.5px solid #4A5568;">
-          &gt; docker compose up -d inbox-zero
+        <div style="background: #2D3748; border-radius: 8px; padding: 6px 10px; font-size: 11px; color: #68D391; margin-bottom: 8px; border: 1.5px solid #4A5568; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+          &gt; vllm serve ltx-2.5 --fp8
         </div>
         <div style="display: flex; flex-direction: column; gap: 6px; font-size: 12px; line-height: 1.35;">
           <div id="t3-step-1" style="color: #63B3ED; opacity: 0; background: #1E293B; padding: 5px 8px; border-radius: 6px; border-left: 4px solid #63B3ED;">
-            [✓] Cleared 1,420 unread developer newsletters
+            [✓] Trending open-weights model on Hugging Face (...
           </div>
           <div id="t3-step-2" style="color: #68D391; opacity: 0; background: #1E293B; padding: 5px 8px; border-radius: 6px; border-left: 4px solid #68D391;">
-            [✓] Auto-categorized critical pull requests
+            [✓] Hybrid reasoning & unbounded context active
           </div>
           <div id="t3-zero-badge" style="opacity: 0; background: #10B981; color: #171819; font-weight: 950; padding: 6px 10px; border-radius: 6px; text-align: center; border: 2px solid #FFF;">
-            🎉 INBOX ZERO ACHIEVED! (0 UNREAD)
+            🎉 SOTA BENCHMARK VERIFIED!
           </div>
         </div>
         <div id="t3-badge" style="margin-top: auto; opacity: 0; background: #EA580C; color: #FFF; padding: 8px 10px; border-radius: 8px; font-weight: 950; text-align: center; font-size: 12px; box-shadow: 0 4px 0 #C2410C;">
-          🔥 12,430+ GITHUB STARS
+          🔥 BREAKING · ★ 12,000
         </div>
       </div>
     </div>
 
-    <!-- SCENE 5: Outro Phone DM (26.80364544 - 30.458688s) -->
+    <!-- SCENE 5: Outro Phone DM (33.42410544 - 37.981938s) -->
     <div id="scene-outro" class="scene-layer" style="opacity: 0;">
       <div class="phone-mockup">
         <div class="phone-notch"></div>
         <div class="phone-screen">
           <!-- Chat Header -->
           <div style="display: flex; align-items: center; gap: 10px; padding-bottom: 12px; border-bottom: 2px solid #F3F4F6; margin-bottom: 14px;">
-            <div style="width: 36px; height: 36px; background: #2563EB; border-radius: 50%; color: #FFF; font-weight: 950; display: flex; align-items: center; justify-content: center; font-size: 18px;">JD</div>
+            <div style="width: 36px; height: 36px; background: #7C3AED; border-radius: 50%; color: #FFF; font-weight: 950; display: flex; align-items: center; justify-content: center; font-size: 18px;">JD</div>
             <div>
               <div style="font-weight: 950; font-size: 14px; color: #171819;">Jayant Diwan</div>
               <div style="font-size: 11px; color: #10B981; font-weight: 750;">● Active now</div>
             </div>
           </div>
           <!-- User Comment Bubble -->
-          <div id="dm-bubble" style="opacity: 0; align-self: flex-end; background: #2563EB; color: #FFF; font-weight: 950; font-size: 17px; padding: 10px 18px; border-radius: 18px 18px 4px 18px; margin-bottom: 14px; box-shadow: 0 4px 12px rgba(37,99,235,0.3);">
-            FLOW
+          <div id="dm-bubble" style="opacity: 0; align-self: flex-end; background: #7C3AED; color: #FFF; font-weight: 950; font-size: 17px; padding: 10px 18px; border-radius: 18px 18px 4px 18px; margin-bottom: 14px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+            BREAKING
           </div>
           <!-- Automated DM Reply with 3 Items -->
           <div id="dm-reply" style="opacity: 0; background: #F8FAFC; border: 2px solid #E2E8F0; border-radius: 18px; padding: 12px; display: flex; flex-direction: column; gap: 8px;">
             <div style="font-size: 12px; font-weight: 900; color: #64748B;">Automated Instant Delivery:</div>
             <div style="display: flex; align-items: center; gap: 8px; background: #FFF; padding: 8px 10px; border-radius: 10px; border: 1.5px solid #CBD5E1;">
-              <span style="font-size: 16px;">⚡</span>
-              <span style="font-weight: 900; font-size: 13px; color: #1E293B;">jayant/cursor-agent-loop</span>
-            </div>
-            <div style="display: flex; align-items: center; gap: 8px; background: #FFF; padding: 8px 10px; border-radius: 10px; border: 1.5px solid #CBD5E1;">
               <span style="font-size: 16px;">🧠</span>
-              <span style="font-weight: 900; font-size: 13px; color: #1E293B;">jayant/n8n-rag-pipeline</span>
+              <span style="font-weight: 900; font-size: 13px; color: #1E293B;">Lightricks/LTX-2.5</span>
             </div>
             <div style="display: flex; align-items: center; gap: 8px; background: #FFF; padding: 8px 10px; border-radius: 10px; border: 1.5px solid #CBD5E1;">
-              <span style="font-size: 16px;">✉️</span>
-              <span style="font-weight: 900; font-size: 13px; color: #1E293B;">jayant/local-rag-ollama</span>
+              <span style="font-size: 16px;">📊</span>
+              <span style="font-weight: 900; font-size: 13px; color: #1E293B;">Lightricks/LTX-2.5</span>
             </div>
-            <div style="font-size: 11px; color: #2563EB; font-weight: 950; text-align: center; margin-top: 4px;">
-              ✓ Instant blueprint &amp; direct links sent!
+            <div style="display: flex; align-items: center; gap: 8px; background: #FFF; padding: 8px 10px; border-radius: 10px; border: 1.5px solid #CBD5E1;">
+              <span style="font-size: 16px;">🚀</span>
+              <span style="font-weight: 900; font-size: 13px; color: #1E293B;">Lightricks/LTX-2.5</span>
+            </div>
+            <div style="font-size: 11px; color: #7C3AED; font-weight: 950; text-align: center; margin-top: 4px;">
+              ✓ Instant links &amp; guides sent to your DMs!
             </div>
           </div>
         </div>
@@ -916,20 +1033,20 @@
   <script>
     const tl = gsap.timeline({ paused: true });
     window.__timelines = { root: tl };
-    tl.to({}, { duration: 30.46 }, 0);
+    tl.to({}, { duration: 37.98 }, 0);
 
     // Dynamic Desk & Scene Colors
     const sceneConfigs = [
-      { id: "#scene-hook", bg: "#bg-hook", desk: "#B64D29", start: 0, end: 3.8, badge: "AI AUTOMATION", meter: "0/3", plugs: [0,0,0] },
-      { id: "#scene-tool1", bg: "#bg-tool1", desk: "#1D4ED8", start: 3.8, end: 12.1834752, badge: "01 · CURSOR-AGE", meter: "1/3", plugs: [1,0,0] },
-      { id: "#scene-tool2", bg: "#bg-tool2", desk: "#047857", start: 12.1834752, end: 20.711907840000002, badge: "02 · N8N-RAG-PI", meter: "2/3", plugs: [1,1,0] },
-      { id: "#scene-tool3", bg: "#bg-tool3", desk: "#C2410C", start: 20.711907840000002, end: 26.80364544, badge: "03 · LOCAL-RAG-", meter: "3/3", plugs: [1,1,1] },
-      { id: "#scene-outro", bg: "#bg-outro", desk: "#B64D29", start: 26.80364544, end: 30.458688, badge: "3 FLOW · 1 DM", meter: "3/3", plugs: [1,1,1] }
+      { id: "#scene-hook", bg: "#bg-hook", desk: "#312E81", start: 0, end: 3.8, badge: "🧠 MODEL RADAR & BENCHMARK", meter: "0/3", plugs: [0,0,0] },
+      { id: "#scene-tool1", bg: "#bg-tool1", desk: "#6D28D9", start: 3.8, end: 15.1927752, badge: "01 · LTX-2.5", meter: "1/3", plugs: [1,0,0] },
+      { id: "#scene-tool2", bg: "#bg-tool2", desk: "#4338CA", start: 15.1927752, end: 25.827717840000002, badge: "02 · LTX-2.5", meter: "2/3", plugs: [1,1,0] },
+      { id: "#scene-tool3", bg: "#bg-tool3", desk: "#701A75", start: 25.827717840000002, end: 33.42410544, badge: "03 · LTX-2.5", meter: "3/3", plugs: [1,1,1] },
+      { id: "#scene-outro", bg: "#bg-outro", desk: "#312E81", start: 33.42410544, end: 37.981938, badge: "3 BREAKING · 1 DM", meter: "3/3", plugs: [1,1,1] }
     ];
 
     sceneConfigs.forEach((sc, i) => {
       tl.set(sc.id, { opacity: 1 }, sc.start);
-      if (sc.end < 30.46) {
+      if (sc.end < 37.98) {
         tl.set(sc.id, { opacity: 0 }, sc.end);
       }
 
@@ -937,7 +1054,7 @@
       tl.fromTo(sc.id, { scale: 1.0 }, { scale: 1.025, duration: sc.end - sc.start, ease: "none" }, sc.start);
 
       tl.to(sc.bg, { opacity: 1, duration: 0.35 }, sc.start);
-      if (sc.end < 30.46) {
+      if (sc.end < 37.98) {
         tl.to(sc.bg, { opacity: 0, duration: 0.35 }, sc.end);
       }
 
@@ -946,7 +1063,7 @@
       tl.set("#top-badge", { innerText: sc.badge }, sc.start);
       tl.fromTo("#top-badge", { scale: 0.85, rotate: -4 }, { scale: 1, rotate: -1.5, duration: 0.35, ease: "back.out(2)" }, sc.start);
 
-      tl.set("#meter-label", { innerText: `AI AUTOMATION ${sc.meter}` }, sc.start);
+      tl.set("#meter-label", { innerText: `ITEMS ${sc.meter}` }, sc.start);
       tl.set("#sock-1", { className: sc.plugs[0] ? "socket-dot plug-1" : "socket-dot" }, sc.start);
       tl.set("#sock-2", { className: sc.plugs[1] ? "socket-dot plug-2" : "socket-dot" }, sc.start);
       tl.set("#sock-3", { className: sc.plugs[2] ? "socket-dot plug-3" : "socket-dot" }, sc.start);
@@ -959,7 +1076,6 @@
     // ================= TIMELINE SCENE CHOREOGRAPHY =================
 
     // --- SCENE 1: HOOK (0 - 3.8s) ---
-    tl.set("#arm-both-up", { opacity: 1 }, 0);
     tl.fromTo("#hook-strip", { y: -160, opacity: 0 }, { y: 0, opacity: 1, duration: 0.45, ease: "back.out(1.5)" }, 0.1);
     tl.fromTo("#bill-1", { y: -30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.35, ease: "back.out(1.5)" }, 0.6);
     tl.fromTo("#bill-2", { y: -30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.35, ease: "back.out(1.5)" }, 0.9);
@@ -970,16 +1086,13 @@
     );
     tl.to("#bill-1, #bill-2", { textDecoration: "line-through", opacity: 0.55, duration: 0.2 }, 1.65);
 
-    // Transition Avatar to Right side (presenter position) for all repo reviews
-    tl.to("#avatar-wrap", { x: 180, y: 15, duration: 0.65, ease: "power2.inOut" }, 3.8);
-    tl.set("#arm-both-up", { opacity: 0 }, 3.8);
-    tl.set("#arm-point", { opacity: 1 }, 3.8);
 
-    // --- SCENE 2: TOOL 1 - TT-METAL (3.8 - 12.1834752s) ---
+
+    // --- SCENE 2: ITEM 1 (3.8 - 15.1927752s) ---
     tl.fromTo("#scene-tool1 .upper-card", { x: -60, opacity: 0 }, { x: 0, opacity: 1, duration: 0.45, ease: "back.out(1.5)" }, 3.8);
     tl.fromTo("#scene-tool1 .tech-console", { y: 80, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5, ease: "back.out(1.4)" }, 3.9);
     
-    // Kinetic Hardware Compilation Bar animation
+    // Kinetic Bar 1 animation
     tl.to("#t1-bar", { width: "100%", duration: 1.4, ease: "power2.out" }, 4.6);
 
     tl.fromTo("#t1-step-1", { x: -20, opacity: 0 }, { x: 0, opacity: 1, duration: 0.35 }, 5.0);
@@ -987,78 +1100,52 @@
     tl.fromTo("#t1-step-3", { scale: 0.9, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.35, ease: "back.out(1.5)" }, 6.6);
     tl.fromTo("#t1-badge", { scale: 0.8, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.35, ease: "back.out(2)" }, 7.4);
 
-    // --- SCENE 3: TOOL 2 - MAGIC-CONTEXT (12.1834752 - 20.711907840000002s) ---
-    tl.fromTo("#scene-tool2 .upper-card", { x: -60, opacity: 0 }, { x: 0, opacity: 1, duration: 0.45, ease: "back.out(1.5)" }, 12.1834752);
-    tl.fromTo("#scene-tool2 .tech-console", { y: 80, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5, ease: "back.out(1.4)" }, 12.2834752);
+    // --- SCENE 3: ITEM 2 (15.1927752 - 25.827717840000002s) ---
+    tl.fromTo("#scene-tool2 .upper-card", { x: -60, opacity: 0 }, { x: 0, opacity: 1, duration: 0.45, ease: "back.out(1.5)" }, 15.1927752);
+    tl.fromTo("#scene-tool2 .tech-console", { y: 80, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5, ease: "back.out(1.4)" }, 15.2927752);
 
-    // Kinetic Context Reduction Bar animation
-    tl.to("#t2-bar", { width: "99%", duration: 1.4, ease: "power2.out" }, 12.9834752);
+    // Kinetic Bar 2 animation
+    tl.to("#t2-bar", { width: "99%", duration: 1.4, ease: "power2.out" }, 15.9927752);
 
-    tl.fromTo("#t2-step-1", { x: -20, opacity: 0 }, { x: 0, opacity: 1, duration: 0.35 }, 13.3834752);
-    tl.fromTo("#t2-step-2", { x: -20, opacity: 0 }, { x: 0, opacity: 1, duration: 0.35 }, 14.1834752);
-    tl.fromTo("#t2-step-3", { scale: 0.9, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.35, ease: "back.out(1.5)" }, 14.9834752);
-    tl.fromTo("#t2-badge", { scale: 0.8, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.35, ease: "back.out(2)" }, 15.7834752);
+    tl.fromTo("#t2-step-1", { x: -20, opacity: 0 }, { x: 0, opacity: 1, duration: 0.35 }, 16.3927752);
+    tl.fromTo("#t2-step-2", { x: -20, opacity: 0 }, { x: 0, opacity: 1, duration: 0.35 }, 17.1927752);
+    tl.fromTo("#t2-step-3", { scale: 0.9, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.35, ease: "back.out(1.5)" }, 17.9927752);
+    tl.fromTo("#t2-badge", { scale: 0.8, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.35, ease: "back.out(2)" }, 18.7927752);
 
-    // --- SCENE 4: TOOL 3 - INBOX-ZERO (20.711907840000002 - 26.80364544s) ---
-    tl.fromTo("#scene-tool3 .upper-card", { x: -60, opacity: 0 }, { x: 0, opacity: 1, duration: 0.45, ease: "back.out(1.5)" }, 20.711907840000002);
-    tl.fromTo("#scene-tool3 .tech-console", { y: 80, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5, ease: "back.out(1.4)" }, 20.811907840000003);
+    // --- SCENE 4: ITEM 3 (25.827717840000002 - 33.42410544s) ---
+    tl.fromTo("#scene-tool3 .upper-card", { x: -60, opacity: 0 }, { x: 0, opacity: 1, duration: 0.45, ease: "back.out(1.5)" }, 25.827717840000002);
+    tl.fromTo("#scene-tool3 .tech-console", { y: 80, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5, ease: "back.out(1.4)" }, 25.927717840000003);
 
-    // Mechanical Unread Email Odometer Countdown (1,420 -> 0)
-    let emailCounterObj = { val: 1420 };
-    tl.to(emailCounterObj, {
-      val: 0,
+    // Countdown Odometer (380 -> 12)
+    let counterObj = { val: 380 };
+    tl.to(counterObj, {
+      val: 12,
       duration: 1.6,
       ease: "power2.inOut",
       onUpdate: () => {
         const el = document.getElementById("t3-counter");
-        if (el) el.innerText = Math.round(emailCounterObj.val).toLocaleString();
+        if (el) el.innerText = Math.round(counterObj.val).toLocaleString();
       }
-    }, 21.311907840000003);
+    }, 26.427717840000003);
 
-    tl.fromTo("#t3-step-1", { x: -20, opacity: 0 }, { x: 0, opacity: 1, duration: 0.35 }, 21.711907840000002);
-    tl.fromTo("#t3-step-2", { x: -20, opacity: 0 }, { x: 0, opacity: 1, duration: 0.35 }, 22.511907840000003);
+    tl.fromTo("#t3-step-1", { x: -20, opacity: 0 }, { x: 0, opacity: 1, duration: 0.35 }, 26.827717840000002);
+    tl.fromTo("#t3-step-2", { x: -20, opacity: 0 }, { x: 0, opacity: 1, duration: 0.35 }, 27.627717840000003);
     
-    // INBOX ZERO ACHIEVED badge slam right as counter reaches 0
-    tl.fromTo("#t3-zero-badge", { scale: 1.8, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.35, ease: "bounce.out" }, 23.011907840000003);
-    tl.fromTo("#t3-badge", { scale: 0.8, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.35, ease: "back.out(2)" }, 23.91190784);
+    // Counter badge slam right as counter finishes
+    tl.fromTo("#t3-zero-badge", { scale: 1.8, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.35, ease: "bounce.out" }, 28.127717840000003);
+    tl.fromTo("#t3-badge", { scale: 0.8, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.35, ease: "back.out(2)" }, 29.02771784);
 
-    // --- SCENE 5: OUTRO (26.80364544 - 30.458688s) ---
-    tl.set("#arm-point", { opacity: 0 }, 26.80364544);
-    tl.set("#arm-thumbs-up", { opacity: 1 }, 26.80364544);
-
-    // Phone and chat elements drop in immediately for max readability
-    tl.fromTo("#scene-outro .phone-mockup", { y: 120, opacity: 0 }, { y: 0, opacity: 1, duration: 0.45, ease: "back.out(1.4)" }, 26.80364544);
-    tl.fromTo("#dm-bubble", { scale: 0.8, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.3, ease: "back.out(2)" }, 27.05364544);
-    tl.fromTo("#dm-reply", { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.4, ease: "back.out(1.5)" }, 27.35364544);
-
-    // Continuous micro head-bob
-    tl.to("#head", { y: -3, duration: 0.22, repeat: -1, yoyo: true, ease: "sine.inOut" }, 0);
-
-    // Continuous mouth morphing matching speech
-    for (let t = 0.15; t < 29.96; t += 0.32) {
-      tl.to("#mouth", { attr: { ry: 18, rx: 24 }, duration: 0.09, ease: "none" }, t);
-      tl.to("#mouth", { attr: { ry: 8, rx: 20 }, duration: 0.09, ease: "none" }, t + 0.11);
-    }
-
-    // Eye blinks every ~3.8 seconds
-    for (let t = 1.8; t < 29.46; t += 3.8) {
-      tl.to(["#eye-left circle", "#eye-right circle"], { scaleY: 0.1, transformOrigin: "center", duration: 0.08, yoyo: true, repeat: 1 }, t);
-    }
-
-    // Eyebrow twitches on key emphasis
-    for (let t = 2.0; t < 29.46; t += 4.5) {
-      tl.to(["#brow-left", "#brow-right"], { y: -5, duration: 0.2, yoyo: true, repeat: 1 }, t);
-    }
+    // --- SCENE 5: OUTRO (33.42410544 - 37.981938s) ---
+    // Phone and chat elements drop in immediately
+    tl.fromTo("#scene-outro .phone-mockup", { y: 120, opacity: 0 }, { y: 0, opacity: 1, duration: 0.45, ease: "back.out(1.4)" }, 33.42410544);
+    tl.fromTo("#dm-bubble", { scale: 0.8, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.3, ease: "back.out(2)" }, 33.67410544);
+    tl.fromTo("#dm-reply", { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.4, ease: "back.out(1.5)" }, 33.974105439999995);
 
     // Continuous floating crosshair drift
     tl.to(".crosshair", { y: "+=12", rotation: 30, duration: 5, repeat: -1, yoyo: true, ease: "sine.inOut" }, 0);
 
-    // Rising steam bubbles
-    tl.to("#steam-1", { y: -25, opacity: 0, duration: 1.8, repeat: -1, ease: "power1.out" }, 0);
-    tl.to("#steam-2", { y: -30, opacity: 0, duration: 2.2, repeat: -1, ease: "power1.out", delay: 0.8 }, 0);
-
     // Kinetic Captions Choreography (3D Keyboard Keycap Pills)
-    const captionData = [{"words": ["Stop", "paying"], "active": 1, "start": 0.0, "end": 0.78}, {"words": ["monthly", "software"], "active": 1, "start": 0.78, "end": 1.56}, {"words": ["fees.", "These"], "active": 1, "start": 1.56, "end": 2.34}, {"words": ["three", "open"], "active": 1, "start": 2.34, "end": 3.12}, {"words": ["source", "repos"], "active": 1, "start": 3.12, "end": 3.9}, {"words": ["give", "you"], "active": 1, "start": 3.9, "end": 4.69}, {"words": ["insane", "superpowers."], "active": 1, "start": 4.69, "end": 5.47}, {"words": ["First", "up"], "active": 1, "start": 5.47, "end": 6.25}, {"words": ["is", "cursor"], "active": 1, "start": 6.25, "end": 7.03}, {"words": ["agent", "loop."], "active": 1, "start": 7.03, "end": 7.81}, {"words": ["It", "automates"], "active": 1, "start": 7.81, "end": 8.59}, {"words": ["complex", "engineering"], "active": 1, "start": 8.59, "end": 9.37}, {"words": ["tasks", "in"], "active": 1, "start": 9.37, "end": 10.15}, {"words": ["seconds", "with"], "active": 1, "start": 10.15, "end": 10.93}, {"words": ["zero", "manual"], "active": 1, "start": 10.93, "end": 11.71}, {"words": ["friction.", "Next"], "active": 1, "start": 11.71, "end": 12.5}, {"words": ["is", "n8n"], "active": 1, "start": 12.5, "end": 13.28}, {"words": ["rag", "pipeline."], "active": 1, "start": 13.28, "end": 14.06}, {"words": ["A", "high-performance"], "active": 1, "start": 14.06, "end": 14.84}, {"words": ["powerhouse", "that"], "active": 1, "start": 14.84, "end": 15.62}, {"words": ["runs", "locally"], "active": 1, "start": 15.62, "end": 16.4}, {"words": ["on", "your"], "active": 1, "start": 16.4, "end": 17.18}, {"words": ["machine", "with"], "active": 1, "start": 17.18, "end": 17.96}, {"words": ["extreme", "speed."], "active": 1, "start": 17.96, "end": 18.74}, {"words": ["Finally,", "local"], "active": 1, "start": 18.74, "end": 19.52}, {"words": ["rag", "ollama."], "active": 1, "start": 19.52, "end": 20.31}, {"words": ["The", "ultimate"], "active": 1, "start": 20.31, "end": 21.09}, {"words": ["secret", "weapon"], "active": 1, "start": 21.09, "end": 21.87}, {"words": ["that", "senior"], "active": 1, "start": 21.87, "end": 22.65}, {"words": ["creators", "and"], "active": 1, "start": 22.65, "end": 23.43}, {"words": ["engineers", "use"], "active": 1, "start": 23.43, "end": 24.21}, {"words": ["silently.", "Comment"], "active": 1, "start": 24.21, "end": 24.99}, {"words": ["the", "word"], "active": 1, "start": 24.99, "end": 25.77}, {"words": ["FLOW", "below,"], "active": 1, "start": 25.77, "end": 26.55}, {"words": ["and", "I"], "active": 1, "start": 26.55, "end": 27.33}, {"words": ["will", "DM"], "active": 1, "start": 27.33, "end": 28.12}, {"words": ["you", "the"], "active": 1, "start": 28.12, "end": 28.9}, {"words": ["exact", "links"], "active": 1, "start": 28.9, "end": 29.68}, {"words": ["right", "now."], "active": 1, "start": 29.68, "end": 30.46}];
+    const captionData = [{"words": ["Stop", "scrolling"], "active": 1, "start": 0.0, "end": 0.79}, {"words": ["right", "now."], "active": 1, "start": 0.79, "end": 1.58}, {"words": ["Open", "source"], "active": 1, "start": 1.58, "end": 2.37}, {"words": ["AI", "video"], "active": 1, "start": 2.37, "end": 3.17}, {"words": ["just", "changed"], "active": 1, "start": 3.17, "end": 3.96}, {"words": ["everything", "forever."], "active": 1, "start": 3.96, "end": 4.75}, {"words": ["Lightricks", "just"], "active": 1, "start": 4.75, "end": 5.54}, {"words": ["dropped", "LTX-2.5,"], "active": 1, "start": 5.54, "end": 6.33}, {"words": ["a", "monster"], "active": 1, "start": 6.33, "end": 7.12}, {"words": ["open-weights", "model"], "active": 1, "start": 7.12, "end": 7.91}, {"words": ["blowing", "up"], "active": 1, "start": 7.91, "end": 8.7}, {"words": ["Hugging", "Face"], "active": 1, "start": 8.7, "end": 9.5}, {"words": ["with", "over"], "active": 1, "start": 9.5, "end": 10.29}, {"words": ["seven", "thousand"], "active": 1, "start": 10.29, "end": 11.08}, {"words": ["likes.", "It"], "active": 1, "start": 11.08, "end": 11.87}, {"words": ["turns", "still"], "active": 1, "start": 11.87, "end": 12.66}, {"words": ["images", "into"], "active": 1, "start": 12.66, "end": 13.45}, {"words": ["cinematic", "motion"], "active": 1, "start": 13.45, "end": 14.24}, {"words": ["instantly.", "The"], "active": 1, "start": 14.24, "end": 15.03}, {"words": ["superpower?", "You"], "active": 1, "start": 15.03, "end": 15.83}, {"words": ["get", "Hollywood-grade"], "active": 1, "start": 15.83, "end": 16.62}, {"words": ["physics", "and"], "active": 1, "start": 16.62, "end": 17.41}, {"words": ["fluid", "camera"], "active": 1, "start": 17.41, "end": 18.2}, {"words": ["control", "running"], "active": 1, "start": 18.2, "end": 18.99}, {"words": ["locally", "on"], "active": 1, "start": 18.99, "end": 19.78}, {"words": ["consumer", "hardware."], "active": 1, "start": 19.78, "end": 20.57}, {"words": ["No", "expensive"], "active": 1, "start": 20.57, "end": 21.36}, {"words": ["subscriptions", "or"], "active": 1, "start": 21.36, "end": 22.16}, {"words": ["cloud", "render"], "active": 1, "start": 22.16, "end": 22.95}, {"words": ["queues", "needed."], "active": 1, "start": 22.95, "end": 23.74}, {"words": ["The", "secret"], "active": 1, "start": 23.74, "end": 24.53}, {"words": ["advantage", "is"], "active": 1, "start": 24.53, "end": 25.32}, {"words": ["complete", "commercial"], "active": 1, "start": 25.32, "end": 26.11}, {"words": ["freedom.", "Modify"], "active": 1, "start": 26.11, "end": 26.9}, {"words": ["the", "weights,"], "active": 1, "start": 26.9, "end": 27.7}, {"words": ["train", "custom"], "active": 1, "start": 27.7, "end": 28.49}, {"words": ["styles,", "and"], "active": 1, "start": 28.49, "end": 29.28}, {"words": ["generate", "unlimited"], "active": 1, "start": 29.28, "end": 30.07}, {"words": ["high-framerate", "clips"], "active": 1, "start": 30.07, "end": 30.86}, {"words": ["straight", "from"], "active": 1, "start": 30.86, "end": 31.65}, {"words": ["your", "personal"], "active": 1, "start": 31.65, "end": 32.44}, {"words": ["rig.", "Comment"], "active": 1, "start": 32.44, "end": 33.23}, {"words": ["the", "word"], "active": 1, "start": 33.23, "end": 34.03}, {"words": ["BREAKING", "below,"], "active": 1, "start": 34.03, "end": 34.82}, {"words": ["and", "I"], "active": 1, "start": 34.82, "end": 35.61}, {"words": ["will", "DM"], "active": 1, "start": 35.61, "end": 36.4}, {"words": ["you", "the"], "active": 1, "start": 36.4, "end": 37.19}, {"words": ["links", "immediately."], "active": 1, "start": 37.19, "end": 37.98}];
 
     captionData.forEach(chunk => {
       tl.call(() => {

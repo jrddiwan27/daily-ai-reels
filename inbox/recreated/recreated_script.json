@@ -1,0 +1,39 @@
+{
+  "hook": "OpenAI\u2019s visual monopoly just died, and your home GPU inherited super-vision.",
+  "body_1": "Meet Qwen\u2019s new open-weight vision powerhouse. While closed models charge per pixel, Qwen runs locally\u2014generating razor-sharp text, photoreal rendering, and zero-shot visual reasoning. On massive multimodal benchmarks, it literally outperforms closed giants twice its size, reading complex diagrams in milliseconds.",
+  "body_2": "Feed it a raw wireframe or dense technical schematic. It pins down exact spatial coordinates, debugs visual errors, and renders polished, ready-to-ship production imagery in real time.",
+  "cta_keyword": "QWEN",
+  "full_script": "OpenAI\u2019s visual monopoly just died, and your home GPU inherited super-vision. Meet Qwen\u2019s new open-weight vision powerhouse. While closed models charge per pixel, Qwen runs locally\u2014generating razor-sharp text, photoreal rendering, and zero-shot visual reasoning. On massive multimodal benchmarks, it literally outperforms closed giants twice its size, reading complex diagrams in milliseconds. Feed it a raw wireframe or dense technical schematic. It pins down exact spatial coordinates, debugs visual errors, and renders polished, ready-to-ship production imagery in real time. Comment QWEN.",
+  "motion_scenes": [
+    {
+      "timestamp": "0-3s",
+      "visual": "Vertical 60/40 split. Upper half shows a surreal cross-section animation of glowing fiber-optic camera lenses sprouting like roots underground out of presenter's silhouette. Quick cut to light-mode minimalist grid background.",
+      "on_screen_text": "SUPER-VISION UNLOCKED \ud83d\udc41\ufe0f",
+      "audio_cue": "Fast digital bass swell + glitch riser"
+    },
+    {
+      "timestamp": "3-8s",
+      "visual": "Instant switch to dark-mode HUD grid (#161618). Upper frame displays skeuomorphic terminal window cloning the open-source Qwen repo, accented with glowing neon orange (#E45A24) status pill badges.",
+      "on_screen_text": "QWEN // LOCAL & UNRESTRICTED \ud83d\ude80",
+      "audio_cue": "Mechanical click and terminal typing sound"
+    },
+    {
+      "timestamp": "8-18s",
+      "visual": "Comparative multi-card benchmark UI pops in. Glowing wireframe vision grid maps spatial vectors over an image. High-contrast bar charts show Qwen surpassing proprietary closed-source models with animated orange metric tallies.",
+      "on_screen_text": "BENCHMARK CRUSHER \ud83d\udcca",
+      "audio_cue": "High-tech scan sweeps and data chime"
+    },
+    {
+      "timestamp": "18-30s",
+      "visual": "Live test UI demo: upper section scrubs through an unformatted technical schematic transforming into glowing 3D coordinates, snapping into a photorealistic 4K render in real time with an interactive timeline scrubber.",
+      "on_screen_text": "RAW WIREFRAME \u2794 4K RENDER \u26a1",
+      "audio_cue": "Whoosh transition followed by high-speed processing hum"
+    },
+    {
+      "timestamp": "30-33s",
+      "visual": "Dark screen flashes a single high-contrast orange card with 'QWEN' highlighted in bold sans-serif, blinking prompt cursor underneath.",
+      "on_screen_text": "COMMENT 'QWEN' \ud83d\udce5",
+      "audio_cue": "Punchy sub-bass drop"
+    }
+  ]
+}

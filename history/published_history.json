@@ -160,5 +160,20 @@
         "title": "Two-pass generation prompt that critiques its own draft architecture before outp"
       }
     ]
+  },
+  {
+    "slot_id": 3,
+    "slot_name": "BREAKING: Lightricks/LTX-2.5",
+    "timestamp_utc": "2026-10-10T20:46:24.843686+00:00",
+    "date_ist": "2026-10-11 02:16:24 IST",
+    "buffer_post_id": "breaking_published",
+    "items": [
+      {
+        "id": "Lightricks/LTX-2.5",
+        "name": "Lightricks/LTX-2.5",
+        "url": "https://huggingface.co/Lightricks/LTX-2.5",
+        "title": "Trending open-weights model on Hugging Face (image-to-video) with 7155 likes."
+      }
+    ]
   }
 ]

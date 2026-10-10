@@ -1,32 +1,26 @@
 [
   {
-    "owner": "anthropic",
-    "name": "claude-3.7-sonnet",
-    "full_name": "anthropic/claude-3.7-sonnet",
-    "stars": 99000,
-    "description": "Hybrid thinking architecture offering instant response or deep reasoning in a single model.",
-    "url": "https://anthropic.com",
-    "badge": "HYBRID REASONING",
-    "demo_media": "assets/repos/heygen-com_hyperframes/og_banner.png"
+    "name": "Longitudinal benchmarking",
+    "full_name": "Longitudinal benchmarking of artificial intelligence models for the differential diagnosis of oral mucosal lesions: a controlled clinical validation study",
+    "description": "",
+    "url": "",
+    "badge": "BENCHMARK SOTA",
+    "demo_media": null
   },
   {
-    "owner": "google",
-    "name": "gemini-3.0-flash",
-    "full_name": "google/gemini-3-flash",
-    "stars": 94000,
-    "description": "1-million token context window processing 100 pages of code in sub-500 milliseconds.",
-    "url": "https://deepmind.google",
-    "badge": "MILLION CONTEXT",
-    "demo_media": "assets/repos/heygen-com_hyperframes/og_banner.png"
+    "name": "YMTC PC550 Review: A PCIe",
+    "full_name": "YMTC PC550 Review: A PCIe 5.0 SSD Built for Cool, Compact PCs",
+    "description": "PCIe 5.0 SSDs are no longer a new category. There are already many drives that can deliver very fast read and write speeds. The harder part is putting that level of performance into a laptop, mini PC,",
+    "url": "https://technode.com/2026/10/10/ymtc-pc550-review-pcie-5-ssd-built-for-cool-compact-pcs/",
+    "badge": "PERFORMANCE DUEL",
+    "demo_media": null
   },
   {
-    "owner": "deepseek",
-    "name": "deepseek-r1",
-    "full_name": "deepseek-ai/deepseek-r1",
-    "stars": 89000,
-    "description": "Open-weights reasoning model matching closed commercial models at 95% lower inference cost.",
-    "url": "https://deepseek.com",
-    "badge": "OPEN REASONING",
-    "demo_media": "assets/repos/heygen-com_hyperframes/og_banner.png"
+    "name": "Ugreen NASync DXP8800 Ult",
+    "full_name": "Ugreen NASync DXP8800 Ultra review",
+    "description": "The Ugreen NASync DXP8800 Ultra is the DXP8800 Plus with a newer Intel processor and a higher memory ceiling. It also costs much more.",
+    "url": "https://www.techradar.com/computing/ugreen-nasync-dxp8800-ultra-review",
+    "badge": "PERFORMANCE DUEL",
+    "demo_media": null
   }
 ]
