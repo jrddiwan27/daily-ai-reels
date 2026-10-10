@@ -1,1 +1,29 @@
-[]
+[
+  {
+    "slot_id": 1,
+    "slot_name": "Morning Breakthrough (Open Source Repos)",
+    "timestamp_utc": "2026-10-10T04:10:24.984107+00:00",
+    "date_ist": "2026-10-10 09:40:24 IST",
+    "buffer_post_id": "6ac9baafed92ed8fa5b7f198",
+    "items": [
+      {
+        "id": "heygen-com/hyperframes",
+        "name": "hyperframes",
+        "url": "https://github.com/heygen-com/hyperframes",
+        "title": "Deterministic code-to-video rendering engine using HTML, CSS, and GSAP."
+      },
+      {
+        "id": "browser-use/browser-use",
+        "name": "browser-use",
+        "url": "https://github.com/browser-use/browser-use",
+        "title": "Make websites accessible for AI agents to browse, click, and automate workflows."
+      },
+      {
+        "id": "mendableai/firecrawl",
+        "name": "firecrawl",
+        "url": "https://github.com/mendableai/firecrawl",
+        "title": "Turn entire websites into clean, LLM-ready markdown with zero hallucinations."
+      }
+    ]
+  }
+]
