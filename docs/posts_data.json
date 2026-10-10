@@ -1,5 +1,58 @@
 [
   {
+    "id": "2026-10-10-slot-5",
+    "title": "The Senior AI Prompt Framework You Should Be Using in 2026",
+    "date": "October 10, 2026",
+    "date_slug": "2026-10-10",
+    "slot_id": 5,
+    "slot_name": "Night Owl Deep Dive (Master Prompts)",
+    "badge": "PROMPT LAB",
+    "cta_keyword": "PROMPT",
+    "video_url": "",
+    "summary": "Stop paying monthly software fees. These three open source repos give you insane superpowers.",
+    "voiceover_script": "Stop paying monthly software fees. These three open source repos give you insane superpowers. First up is chain of density. It automates complex engineering tasks in seconds with zero manual friction. Next is role task constraint. A high-performance powerhouse that runs locally on your machine with extreme speed. Finally, subagent decomposition. The ultimate secret weapon that senior creators and engineers use silently. Comment the word PROMPT below, and I will DM you the exact links right now.",
+    "items": [
+      {
+        "number": 1,
+        "name": "Chain Of Density",
+        "url": "https://arxiv.org/abs/2309.04269",
+        "stars": "\u2605 26,000",
+        "badge": "DENSITY RECURSION",
+        "description": "Recursive distillation framework that packs maximum technical insights into minimal token count.",
+        "command": "git clone https://arxiv.org/abs/2309.04269.git\ncd chain-of-density\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 2,
+        "name": "Role Task Constraint",
+        "url": "https://jayantdigital.com",
+        "stars": "\u2605 31,000",
+        "badge": "ZERO HALLUCINATION",
+        "description": "The senior engineer prompt template that eliminates 99% of LLM hallucinations in codebases.",
+        "command": "git clone https://jayantdigital.com.git\ncd role-task-constraint\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 3,
+        "name": "Subagent Decomposition",
+        "url": "https://jayantdigital.com",
+        "stars": "\u2605 22,000",
+        "badge": "MULTI-AGENT",
+        "description": "Modular orchestration prompt dividing large software features into 4 parallel micro-agents.",
+        "command": "git clone https://jayantdigital.com.git\ncd subagent-decomposition\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      }
+    ],
+    "cta_text": "Want our studio to build custom autonomous AI employees for your workflow? Follow @jayant.digitalstudio and DM 'PROMPT'.",
+    "tags": [
+      "#promptengineering",
+      "#chatgpt",
+      "#claude",
+      "#softwareengineer",
+      "#aicoding"
+    ]
+  },
+  {
     "id": "2026-10-10-slot-4",
     "title": "3 Secret AI Websites That Feel Illegal To Know",
     "date": "October 10, 2026",
@@ -209,59 +262,6 @@
       "#opensource",
       "#github",
       "#coding"
-    ]
-  },
-  {
-    "id": "2026-10-10-slot-5",
-    "title": "The Senior AI Prompt Framework You Should Be Using in 2026",
-    "date": "October 10, 2026",
-    "date_slug": "2026-10-10",
-    "slot_id": 5,
-    "slot_name": "Night Owl Deep Dive (Master Prompts)",
-    "badge": "PROMPT LAB",
-    "cta_keyword": "PROMPT",
-    "video_url": "",
-    "summary": "Here are 3 breakthrough items featured in today's Night Owl Deep Dive (Master Prompts) edition.",
-    "voiceover_script": "Discover the newest tools shaping PROMPT LAB in 2026.",
-    "items": [
-      {
-        "number": 1,
-        "name": "Chain Of Density",
-        "url": "https://arxiv.org/abs/2309.04269",
-        "stars": "\u2605 26,000",
-        "badge": "DENSITY RECURSION",
-        "description": "Recursive distillation framework that packs maximum technical insights into minimal token count.",
-        "command": "git clone https://arxiv.org/abs/2309.04269.git\ncd chain-of-density\n./setup.sh",
-        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
-      },
-      {
-        "number": 2,
-        "name": "Role Task Constraint",
-        "url": "https://jayantdigital.com",
-        "stars": "\u2605 31,000",
-        "badge": "ZERO HALLUCINATION",
-        "description": "The senior engineer prompt template that eliminates 99% of LLM hallucinations in codebases.",
-        "command": "git clone https://jayantdigital.com.git\ncd role-task-constraint\n./setup.sh",
-        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
-      },
-      {
-        "number": 3,
-        "name": "Subagent Decomposition",
-        "url": "https://jayantdigital.com",
-        "stars": "\u2605 22,000",
-        "badge": "MULTI-AGENT",
-        "description": "Modular orchestration prompt dividing large software features into 4 parallel micro-agents.",
-        "command": "git clone https://jayantdigital.com.git\ncd subagent-decomposition\n./setup.sh",
-        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
-      }
-    ],
-    "cta_text": "Want our studio to build custom autonomous AI employees for your workflow? Follow @jayant.digitalstudio and DM 'PROMPT'.",
-    "tags": [
-      "#promptengineering",
-      "#chatgpt",
-      "#claude",
-      "#softwareengineer",
-      "#aicoding"
     ]
   }
 ]

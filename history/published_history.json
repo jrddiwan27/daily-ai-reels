@@ -106,5 +106,32 @@
         "title": "Ultra-realistic emotional voice cloning with dynamic accents and live text narra"
       }
     ]
+  },
+  {
+    "slot_id": 5,
+    "slot_name": "Night Owl Deep Dive (Master Prompts)",
+    "timestamp_utc": "2026-10-10T15:30:29.658796+00:00",
+    "date_ist": "2026-10-10 21:00:29 IST",
+    "buffer_post_id": "6aca5a01ed92ed8fa5d29998",
+    "items": [
+      {
+        "id": "prompt/chain-of-density",
+        "name": "chain-of-density",
+        "url": "https://arxiv.org/abs/2309.04269",
+        "title": "Recursive distillation framework that packs maximum technical insights into mini"
+      },
+      {
+        "id": "prompt/rtc-framework",
+        "name": "role-task-constraint",
+        "url": "https://jayantdigital.com",
+        "title": "The senior engineer prompt template that eliminates 99% of LLM hallucinations in"
+      },
+      {
+        "id": "prompt/subagent-decomp",
+        "name": "subagent-decomposition",
+        "url": "https://jayantdigital.com",
+        "title": "Modular orchestration prompt dividing large software features into 4 parallel mi"
+      }
+    ]
   }
 ]
