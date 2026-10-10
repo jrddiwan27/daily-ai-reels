@@ -190,7 +190,7 @@ def dispatch_to_all_platforms(video_target: str, meta: dict, items: list) -> dic
     yt_meta = {
         "youtube": {
             "title": yt_title,
-            "privacy": "PUBLIC",
+            "privacy": "public",
             "madeForKids": False
         }
     }
@@ -198,16 +198,23 @@ def dispatch_to_all_platforms(video_target: str, meta: dict, items: list) -> dic
     results["youtube"] = yt_id
     print(f"[✓ YOUTUBE] Scheduled Shorts: Post ID {yt_id}")
 
-    # 3. Twitter / X
+    # 3. Twitter / X (Strict Standard Non-Premium <= 280 Chars, Zero Links)
+    tw_title = meta['post_title'].rstrip('! 🚀⚡🧠🤫🎯')
     tw_text = (
-        f"🔥 {meta['post_title']}\n\n"
-        f"1. {item_titles[0]}\n2. {item_titles[1]}\n3. {item_titles[2]}\n\n"
-        f"All direct links & setup guides in our bio hub 👇\n{bio_hub_url}\n\n"
-        f"#AI #Developer"
+        f"⚡ {tw_title}\n\n"
+        f"1. {item_titles[0]}\n"
+        f"2. {item_titles[1]}\n"
+        f"3. {item_titles[2]}\n\n"
+        f"Drop a comment below to get the setup code.\n"
+        f"#AI #Tech #Developers"
     )
+    # Hard clamp to 270 characters to guarantee non-premium compliance
+    if len(tw_text) > 270:
+        tw_text = tw_text[:267] + "..."
+
     tw_id = dispatch_post_payload(CHANNELS["twitter"], tw_text, public_video_url)
     results["twitter"] = tw_id
-    print(f"[✓ X/TWITTER] Scheduled Post: Post ID {tw_id}")
+    print(f"[✓ X/TWITTER] Scheduled Post: Post ID {tw_id} ({len(tw_text)} chars)")
 
     return results
 
