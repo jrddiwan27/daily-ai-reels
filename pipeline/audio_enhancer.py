@@ -89,6 +89,8 @@ def produce_master_audio(
         "-t", str(round(duration + 0.2, 2)),
         "-c:a", "libmp3lame",
         "-b:a", "192k",
+        "-ar", "44100",
+        "-ac", "2",
         output_audio
     ]
 

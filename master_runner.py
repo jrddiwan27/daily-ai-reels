@@ -90,7 +90,7 @@ def run_pipeline(slot_id: int = None, dry_run: bool = False):
     master_audio = produce_master_audio(voice_path=audio_path, duration=dur)
 
     temp_main = "out/temp_main.mp4"
-    mux_cmd = f"ffmpeg -y -i {raw_mp4} -i {master_audio} -map 0:v:0 -map 1:a:0 -c:v copy -c:a aac -b:a 192k -shortest {temp_main}"
+    mux_cmd = f"ffmpeg -y -i {raw_mp4} -i {master_audio} -map 0:v:0 -map 1:a:0 -c:v copy -c:a aac -b:a 192k -ar 44100 -ac 2 -shortest {temp_main}"
     subprocess.check_call(mux_cmd, shell=True)
 
     # 6b. Append Rotating Creator Face CTA Outro
@@ -115,7 +115,8 @@ def run_pipeline(slot_id: int = None, dry_run: bool = False):
             cf.write(f"file '{os.path.abspath(temp_main)}'\n")
             cf.write(f"file '{os.path.abspath(chosen_cta)}'\n")
 
-        stitch_cmd = f"ffmpeg -y -f concat -safe 0 -i {concat_list} -c copy {out_mp4}"
+        # Copy video instantly, but re-encode audio to continuous unified AAC stereo (prevents social media audio dropping)
+        stitch_cmd = f"ffmpeg -y -f concat -safe 0 -i {concat_list} -c:v copy -c:a aac -b:a 192k -ar 44100 -ac 2 {out_mp4}"
         subprocess.check_call(stitch_cmd, shell=True)
         if os.path.exists(concat_list):
             os.remove(concat_list)
