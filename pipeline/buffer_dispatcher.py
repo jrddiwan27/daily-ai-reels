@@ -78,59 +78,77 @@ def upload_video_to_github_release(file_path: str) -> str:
     print(f"[✓] Video successfully hosted on GitHub CDN: {download_url}")
     return download_url
 
+def _to_graphql_literal(val):
+    if isinstance(val, dict):
+        items = []
+        for k, v in val.items():
+            if k in ["mode", "schedulingType", "type", "privacy"]:
+                items.append(f"{k}: {v}")
+            else:
+                items.append(f"{k}: {_to_graphql_literal(v)}")
+        return "{ " + ", ".join(items) + " }"
+    elif isinstance(val, list):
+        return "[ " + ", ".join(_to_graphql_literal(x) for x in val) + " ]"
+    elif isinstance(val, bool):
+        return "true" if val else "false"
+    elif isinstance(val, (int, float)):
+        return str(val)
+    elif isinstance(val, str):
+        return json.dumps(val)
+    return "null"
+
 def dispatch_post_payload(channel_id: str, text: str, public_video_url: str, metadata: dict = None) -> str:
     url = "https://api.buffer.com"
     headers = {
         "Authorization": f"Bearer {BUFFER_ACCESS_TOKEN}",
         "Content-Type": "application/json"
     }
-    
-    mutation = """
-    mutation CreatePost($input: CreatePostInput!) {
-      createPost(input: $input) {
-        ... on PostActionSuccess {
-          post {
-            id
-            text
-            status
-          }
-        }
-        ... on MutationError {
-          message
-        }
-      }
-    }
-    """
-    
-    variables = {
-        "input": {
-            "channelId": channel_id,
-            "text": text,
-            "schedulingType": "automatic",
-            "mode": "addToQueue",
-            "needsApproval": False,
-            "assets": [
-                {
-                    "video": {
-                        "url": public_video_url
-                    }
+
+    input_payload = {
+        "channelId": channel_id,
+        "text": text,
+        "schedulingType": "automatic",
+        "mode": "addToQueue",
+        "needsApproval": False,
+        "assets": [
+            {
+                "video": {
+                    "url": public_video_url
                 }
-            ]
-        }
+            }
+        ]
     }
     if metadata:
-        variables["input"]["metadata"] = metadata
-        
-    res = requests.post(url, headers=headers, json={"query": mutation, "variables": variables}, timeout=60)
+        input_payload["metadata"] = metadata
+
+    q_input = _to_graphql_literal(input_payload)
+    mutation = (
+        "mutation { createPost(input: " + q_input + ") { "
+        "__typename "
+        "... on PostActionSuccess { post { id status channelId } } "
+        "... on MutationError { message } "
+        "... on InvalidInputError { message } "
+        "} }"
+    )
+
+    res = requests.post(url, headers=headers, json={"query": mutation}, timeout=60)
     if res.status_code == 200:
         data = res.json()
         if "errors" in data:
-            print(f"[!] GraphQL Error ({channel_id}): {json.dumps(data['errors'])}")
+            print(f"[!] Buffer GraphQL Error ({channel_id}): {json.dumps(data['errors'])}")
             return None
-        post_res = data.get("data", {}).get("createPost", {})
-        post_id = post_res.get("post", {}).get("id") or "scheduled"
-        return post_id
-    return None
+        action_res = data.get("data", {}).get("createPost", {})
+        typename = action_res.get("__typename")
+        if typename == "PostActionSuccess":
+            post_id = action_res.get("post", {}).get("id") or "scheduled"
+            return post_id
+        else:
+            err_msg = action_res.get("message", "Unknown buffer error")
+            print(f"[!] Buffer Mutation Error ({channel_id}): {err_msg}")
+            return None
+    else:
+        print(f"[!] Buffer HTTP Error {res.status_code}: {res.text}")
+        return None
 
 def dispatch_to_buffer(video_target: str, caption: str, channel_id: str = None):
     """
@@ -191,6 +209,7 @@ def dispatch_to_all_platforms(video_target: str, meta: dict, items: list) -> dic
         "youtube": {
             "title": yt_title,
             "privacy": "public",
+            "categoryId": "28",
             "madeForKids": False
         }
     }
