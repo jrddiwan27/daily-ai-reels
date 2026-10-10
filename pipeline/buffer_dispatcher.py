@@ -108,7 +108,7 @@ def dispatch_post_payload(channel_id: str, text: str, public_video_url: str, met
         "channelId": channel_id,
         "text": text,
         "schedulingType": "automatic",
-        "mode": "addToQueue",
+        "mode": "shareNow",
         "needsApproval": False,
         "assets": [
             {
