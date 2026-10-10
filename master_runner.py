@@ -82,7 +82,7 @@ def run_pipeline(slot_id: int = None, dry_run: bool = False):
     out_mp4 = "out/daily-reel.mp4"
     os.makedirs("out", exist_ok=True)
 
-    render_cmd = f"npx hyperframes render -o {raw_mp4}"
+    render_cmd = f"npx --yes hyperframes render -o {raw_mp4}"
     print(f"[*] Executing: {render_cmd}")
     subprocess.check_call(render_cmd, shell=True)
 

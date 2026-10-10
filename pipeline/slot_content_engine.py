@@ -67,6 +67,7 @@ SLOT_CATALOGS = {
 
 SLOT_METADATA = {
     1: {
+        "slot_id": 1,
         "slot_name": "Morning Breakthrough (Open Source Repos)",
         "badge_title": "AI OPEN SOURCE",
         "badge_sub": "3 VERIFIED REPOS",
@@ -76,6 +77,7 @@ SLOT_METADATA = {
         "post_title": "3 Insane Open-Source AI Developer Repos You Need Today! 🚀"
     },
     2: {
+        "slot_id": 2,
         "slot_name": "Midday Cheat Code (AI Workflows)",
         "badge_title": "AI AUTOMATION",
         "badge_sub": "AGENCY BLUEPRINT",
@@ -85,6 +87,7 @@ SLOT_METADATA = {
         "post_title": "The Automated AI Workflow Saving Us 20 Hours Every Week! ⚡"
     },
     3: {
+        "slot_id": 3,
         "slot_name": "Tech Radar Teardown (Model Benchmarks)",
         "badge_title": "MODEL RADAR",
         "badge_sub": "BENCHMARK TEARDOWN",
@@ -94,6 +97,7 @@ SLOT_METADATA = {
         "post_title": "New Frontier Model Teardown: Why This Changes Everything! 🧠"
     },
     4: {
+        "slot_id": 4,
         "slot_name": "Evening Toolkit (Secret Web AI Tools)",
         "badge_title": "SECRET AI TOOLS",
         "badge_sub": "NO-CODE WEBSITES",
@@ -103,6 +107,7 @@ SLOT_METADATA = {
         "post_title": "3 Secret AI Websites That Feel Illegal To Know! 🤫"
     },
     5: {
+        "slot_id": 5,
         "slot_name": "Night Owl Deep Dive (Master Prompts)",
         "badge_title": "PROMPT LAB",
         "badge_sub": "ELITE FRAMEWORK",
@@ -142,7 +147,8 @@ def fetch_content_for_slot(slot_id: int, count: int = 3) -> tuple:
     Fetches 3 verified non-duplicate items for the specified slot.
     Guarantees zero repeat against history/published_history.json.
     """
-    meta = SLOT_METADATA.get(slot_id, SLOT_METADATA[1])
+    meta = dict(SLOT_METADATA.get(slot_id, SLOT_METADATA[1]))
+    meta["slot_id"] = slot_id
     candidates = []
 
     if slot_id == 1:
@@ -176,12 +182,20 @@ def fetch_content_for_slot(slot_id: int, count: int = 3) -> tuple:
         if slot_id == 1 and "full_name" in item and "/" in item["full_name"] and not item.get("demo_media"):
             enriched.append(fetch_repo_media_assets(item, base_dir=base_dir))
         else:
-            # For web tools / prompts / models: ensure fallback asset image exists
+            # Check if a custom asset image already exists
             slug = item["name"].replace("-", "_")
-            fallback_img = f"assets/repos/{slug}/og_banner.png"
-            if not os.path.exists(fallback_img):
-                fallback_img = "assets/repos/heygen-com_hyperframes/og_banner.png"
-            item["demo_media"] = fallback_img
+            candidate_imgs = [
+                f"assets/repos/{slug}/demo.png",
+                f"assets/repos/{slug}/og_banner.png",
+                f"assets/slot_{slot_id}/{slug}/demo.png",
+                f"assets/slot_{slot_id}/{slug}/og_banner.png"
+            ]
+            found_img = None
+            for p in candidate_imgs:
+                if os.path.exists(p):
+                    found_img = p
+                    break
+            item["demo_media"] = found_img
             enriched.append(item)
 
     # Save to curated slot file
