@@ -79,7 +79,7 @@ Write the viral reel script following the strict word count rules and ending wit
 """
 
     api_key = get_gemini_key()
-    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key={api_key}" if api_key else ""
+    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-3.8-flash:generateContent?key={api_key}" if api_key else ""
     payload = {
         "contents": [{"parts": [{"text": f"{system_instruction}\n\n{prompt}"}]}],
         "generationConfig": {
