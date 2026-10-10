@@ -5,6 +5,7 @@ node_modules/
 out/
 *.mp4
 !assets/cta/*.mp4
+assets/cta_1080p/
 *.log
 .gemini_key
 .env

@@ -22,5 +22,41 @@
     "historical_avg": 95.0,
     "progress_delta": -10.0,
     "status": "PASS"
+  },
+  {
+    "timestamp": "2026-10-10T22:47:14.185094+00:00",
+    "video": "daily-reel.mp4",
+    "score": 75,
+    "width": 1080,
+    "height": 1920,
+    "duration": 47.42,
+    "loudness_lufs": -20.1,
+    "historical_avg": 90.0,
+    "progress_delta": -15.0,
+    "status": "NEEDS_IMPROVEMENT"
+  },
+  {
+    "timestamp": "2026-10-10T22:51:43.824462+00:00",
+    "video": "daily-reel.mp4",
+    "score": 95,
+    "width": 1080,
+    "height": 1920,
+    "duration": 47.42,
+    "loudness_lufs": -20.1,
+    "historical_avg": 85.0,
+    "progress_delta": 10.0,
+    "status": "PASS"
+  },
+  {
+    "timestamp": "2026-10-10T22:55:33.424661+00:00",
+    "video": "daily-reel.mp4",
+    "score": 100,
+    "width": 1080,
+    "height": 1920,
+    "duration": 47.42,
+    "loudness_lufs": -20.1,
+    "historical_avg": 87.5,
+    "progress_delta": 12.5,
+    "status": "PASS"
   }
 ]

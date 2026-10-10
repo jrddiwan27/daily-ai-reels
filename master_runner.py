@@ -64,6 +64,11 @@ def run_pipeline(slot_id: int = None, dry_run: bool = False):
     print(f"[✓] Exact Voice Duration: {dur:.2f}s (Pacing: <50s broadcast target)")
     generate_caption_chunks(script_text, dur, captions_path)
 
+    # 4b. Frame-Accurate RMS Lip-Sync & Blink Generator (30fps)
+    print("\n[STEP 4b/7] Computing Deterministic Lip-Sync & Eye-Blink Data...")
+    from pipeline.lipsync_engine import generate_lipsync_data
+    generate_lipsync_data(audio_path=audio_path, caption_chunks_path=captions_path, output_mouth_path="assets/mouth.json", fps=30)
+
     # 5. Compile Hyper-Motion Code Composition
     print("\n[STEP 5/7] Compiling Hyper-Motion Code Composition (720x1280 @ 60fps)...")
     build_hyperframes_composition(
@@ -82,7 +87,7 @@ def run_pipeline(slot_id: int = None, dry_run: bool = False):
     out_mp4 = "out/daily-reel.mp4"
     os.makedirs("out", exist_ok=True)
 
-    render_cmd = f"npx --yes hyperframes render -o {raw_mp4}"
+    render_cmd = f"echo '' | npx --yes hyperframes render -o {raw_mp4}"
     print(f"[*] Executing: {render_cmd}")
     subprocess.check_call(render_cmd, shell=True)
 
@@ -110,10 +115,21 @@ def run_pipeline(slot_id: int = None, dry_run: bool = False):
         chosen_cta = cta_files[cta_idx]
         print(f"[*] Attaching Rotating Creator Face CTA: {os.path.basename(chosen_cta)} (Cycle #{cta_idx + 1}/{len(cta_files)})...")
 
+        # Ensure normalized 1080x1920 Full HD CTA exists
+        os.makedirs("assets/cta_1080p", exist_ok=True)
+        final_cta = os.path.join("assets/cta_1080p", os.path.basename(chosen_cta))
+        if not os.path.exists(final_cta):
+            print(f"[*] Normalizing {os.path.basename(chosen_cta)} to 1080x1920 Full HD...")
+            subprocess.check_call(
+                f"ffmpeg -y -i '{chosen_cta}' -vf 'scale=1080:1920:flags=lanczos,fps=30' "
+                f"-c:v libx264 -preset fast -crf 18 -pix_fmt yuv420p -c:a aac -ar 44100 -ac 2 -b:a 192k '{final_cta}'",
+                shell=True
+            )
+
         concat_list = "out/concat_list.txt"
         with open(concat_list, "w") as cf:
             cf.write(f"file '{os.path.abspath(temp_main)}'\n")
-            cf.write(f"file '{os.path.abspath(chosen_cta)}'\n")
+            cf.write(f"file '{os.path.abspath(final_cta)}'\n")
 
         # Copy video instantly, but re-encode audio to continuous unified AAC stereo (prevents social media audio dropping)
         stitch_cmd = f"ffmpeg -y -f concat -safe 0 -i {concat_list} -c:v copy -c:a aac -b:a 192k -ar 44100 -ac 2 {out_mp4}"

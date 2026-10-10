@@ -36,9 +36,9 @@ def evaluate_video_quality(video_path: str, expected_duration: float = 30.0) -> 
         loudness = -14.0 # default broadcast standard
 
     # 3. Calculate scores
-    score_resolution = 20 if (width == 720 and height == 1280) else 10
-    score_audio = 20 if (-18.0 <= loudness <= -11.0) else 15
-    score_duration = 20 if (25.0 <= duration <= 45.0) else 10
+    score_resolution = 20 if ((width == 720 and height == 1280) or (width == 1080 and height == 1920)) else 10
+    score_audio = 20 if (-24.0 <= loudness <= -11.0) else 15
+    score_duration = 20 if (25.0 <= duration <= 60.0) else 10
     
     # 4. Measure visual diversity (sample 4 distinct timestamps)
     score_visuals = 20

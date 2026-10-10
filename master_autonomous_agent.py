@@ -133,6 +133,9 @@ def check_breaking_news(dry_run: bool = False):
                 dur = generate_voiceover(script_text, audio_path)
                 generate_caption_chunks(script_text, dur, captions_path)
 
+                from pipeline.lipsync_engine import generate_lipsync_data
+                generate_lipsync_data(audio_path=audio_path, caption_chunks_path=captions_path, output_mouth_path="assets/mouth.json", fps=30)
+
                 curated_file = "assets/breaking_curated.json"
                 with open(curated_file, "w") as cf:
                     json.dump(single_item * 3, cf)
@@ -148,7 +151,7 @@ def check_breaking_news(dry_run: bool = False):
 
                 raw_mp4 = "out/raw_video.mp4"
                 out_mp4 = "out/daily-reel.mp4"
-                subprocess.check_call(f"npx --yes hyperframes render -o {raw_mp4}", shell=True)
+                subprocess.check_call(f"echo '' | npx --yes hyperframes render -o {raw_mp4}", shell=True)
                 master_audio = produce_master_audio(voice_path=audio_path, duration=dur)
                 temp_main = "out/temp_main.mp4"
                 subprocess.check_call(f"ffmpeg -y -i {raw_mp4} -i {master_audio} -map 0:v:0 -map 1:a:0 -c:v copy -c:a aac -b:a 192k -ar 44100 -ac 2 -shortest {temp_main}", shell=True)
@@ -157,9 +160,17 @@ def check_breaking_news(dry_run: bool = False):
                 cta_files = sorted(glob.glob("assets/cta/cta_*.mp4"))
                 if cta_files:
                     chosen_cta = cta_files[0]
+                    os.makedirs("assets/cta_1080p", exist_ok=True)
+                    final_cta = os.path.join("assets/cta_1080p", os.path.basename(chosen_cta))
+                    if not os.path.exists(final_cta):
+                        subprocess.check_call(
+                            f"ffmpeg -y -i '{chosen_cta}' -vf 'scale=1080:1920:flags=lanczos,fps=30' "
+                            f"-c:v libx264 -preset fast -crf 18 -pix_fmt yuv420p -c:a aac -ar 44100 -ac 2 -b:a 192k '{final_cta}'",
+                            shell=True
+                        )
                     concat_list = "out/concat_list.txt"
                     with open(concat_list, "w") as f:
-                        f.write(f"file '{os.path.abspath(temp_main)}'\nfile '{os.path.abspath(chosen_cta)}'\n")
+                        f.write(f"file '{os.path.abspath(temp_main)}'\nfile '{os.path.abspath(final_cta)}'\n")
                     subprocess.check_call(f"ffmpeg -y -f concat -safe 0 -i {concat_list} -c:v copy -c:a aac -b:a 192k -ar 44100 -ac 2 {out_mp4}", shell=True)
                 else:
                     os.rename(temp_main, out_mp4)
