@@ -1,5 +1,58 @@
 [
   {
+    "id": "2026-10-10-slot-2",
+    "title": "The Automated AI Workflow Saving Us 20 Hours Every Week",
+    "date": "October 10, 2026",
+    "date_slug": "2026-10-10",
+    "slot_id": 2,
+    "slot_name": "Midday Cheat Code (AI Workflows)",
+    "badge": "AI AUTOMATION",
+    "cta_keyword": "FLOW",
+    "video_url": "",
+    "summary": "Stop paying monthly software fees. These three open source repos give you insane superpowers.",
+    "voiceover_script": "Stop paying monthly software fees. These three open source repos give you insane superpowers. First up is cursor agent loop. It automates complex engineering tasks in seconds with zero manual friction. Next is n8n rag pipeline. A high-performance powerhouse that runs locally on your machine with extreme speed. Finally, local rag ollama. The ultimate secret weapon that senior creators and engineers use silently. Comment the word FLOW below, and I will DM you the exact links right now.",
+    "items": [
+      {
+        "number": 1,
+        "name": "Cursor Agent Loop",
+        "url": "https://cursor.com",
+        "stars": "\u2605 9,400",
+        "badge": "CURSOR AGENTS",
+        "description": "Continuous test-driven AI agent loop in Cursor that fixes its own bugs automatically.",
+        "command": "git clone https://cursor.com.git\ncd cursor-agent-loop\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 2,
+        "name": "N8N Rag Pipeline",
+        "url": "https://n8n.io",
+        "stars": "\u2605 14,200",
+        "badge": "N8N WEBHOOK",
+        "description": "Self-hosted webhook automation that turns client PDFs into vector databases in 60 seconds.",
+        "command": "git clone https://n8n.io.git\ncd n8n-rag-pipeline\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 3,
+        "name": "Local Rag Ollama",
+        "url": "https://ollama.com",
+        "stars": "\u2605 11,800",
+        "badge": "OFFLINE AI",
+        "description": "100% private offline document search engine using local embeddings and Ollama.",
+        "command": "git clone https://ollama.com.git\ncd local-rag-ollama\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      }
+    ],
+    "cta_text": "Want our studio to build custom autonomous AI employees for your workflow? Follow @jayant.digitalstudio and DM 'FLOW'.",
+    "tags": [
+      "#automation",
+      "#aiworkflow",
+      "#n8n",
+      "#productivity",
+      "#nocode"
+    ]
+  },
+  {
     "id": "2026-10-10-slot-1",
     "title": "3 Insane Open-Source AI Developer Repos You Need Today",
     "date": "October 10, 2026",
@@ -209,59 +262,6 @@
       "#llm",
       "#techtrends",
       "#futureoftech"
-    ]
-  },
-  {
-    "id": "2026-10-10-slot-2",
-    "title": "The Automated AI Workflow Saving Us 20 Hours Every Week",
-    "date": "October 10, 2026",
-    "date_slug": "2026-10-10",
-    "slot_id": 2,
-    "slot_name": "Midday Cheat Code (AI Workflows)",
-    "badge": "AI AUTOMATION",
-    "cta_keyword": "FLOW",
-    "video_url": "",
-    "summary": "Here are 3 breakthrough items featured in today's Midday Cheat Code (AI Workflows) edition.",
-    "voiceover_script": "Discover the newest tools shaping AI AUTOMATION in 2026.",
-    "items": [
-      {
-        "number": 1,
-        "name": "Cursor Agent Loop",
-        "url": "https://cursor.com",
-        "stars": "\u2605 9,400",
-        "badge": "CURSOR AGENTS",
-        "description": "Continuous test-driven AI agent loop in Cursor that fixes its own bugs automatically.",
-        "command": "git clone https://cursor.com.git\ncd cursor-agent-loop\n./setup.sh",
-        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
-      },
-      {
-        "number": 2,
-        "name": "N8N Rag Pipeline",
-        "url": "https://n8n.io",
-        "stars": "\u2605 14,200",
-        "badge": "N8N WEBHOOK",
-        "description": "Self-hosted webhook automation that turns client PDFs into vector databases in 60 seconds.",
-        "command": "git clone https://n8n.io.git\ncd n8n-rag-pipeline\n./setup.sh",
-        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
-      },
-      {
-        "number": 3,
-        "name": "Local Rag Ollama",
-        "url": "https://ollama.com",
-        "stars": "\u2605 11,800",
-        "badge": "OFFLINE AI",
-        "description": "100% private offline document search engine using local embeddings and Ollama.",
-        "command": "git clone https://ollama.com.git\ncd local-rag-ollama\n./setup.sh",
-        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
-      }
-    ],
-    "cta_text": "Want our studio to build custom autonomous AI employees for your workflow? Follow @jayant.digitalstudio and DM 'FLOW'.",
-    "tags": [
-      "#automation",
-      "#aiworkflow",
-      "#n8n",
-      "#productivity",
-      "#nocode"
     ]
   }
 ]

@@ -25,5 +25,32 @@
         "title": "Turn entire websites into clean, LLM-ready markdown with zero hallucinations."
       }
     ]
+  },
+  {
+    "slot_id": 2,
+    "slot_name": "Midday Cheat Code (AI Workflows)",
+    "timestamp_utc": "2026-10-10T08:10:36.332946+00:00",
+    "date_ist": "2026-10-10 13:40:36 IST",
+    "buffer_post_id": "6ac9f2e8b07d37ac97662adc",
+    "items": [
+      {
+        "id": "jayant/cursor-agent-loop",
+        "name": "cursor-agent-loop",
+        "url": "https://cursor.com",
+        "title": "Continuous test-driven AI agent loop in Cursor that fixes its own bugs automatic"
+      },
+      {
+        "id": "jayant/n8n-rag-pipeline",
+        "name": "n8n-rag-pipeline",
+        "url": "https://n8n.io",
+        "title": "Self-hosted webhook automation that turns client PDFs into vector databases in 6"
+      },
+      {
+        "id": "jayant/local-rag-ollama",
+        "name": "local-rag-ollama",
+        "url": "https://ollama.com",
+        "title": "100% private offline document search engine using local embeddings and Ollama."
+      }
+    ]
   }
 ]
