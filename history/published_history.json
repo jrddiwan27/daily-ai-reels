@@ -133,5 +133,32 @@
         "title": "Modular orchestration prompt dividing large software features into 4 parallel mi"
       }
     ]
+  },
+  {
+    "slot_id": 5,
+    "slot_name": "Night Owl Deep Dive (Master Prompts)",
+    "timestamp_utc": "2026-10-10T17:27:43.337579+00:00",
+    "date_ist": "2026-10-10 22:57:43 IST",
+    "buffer_post_id": "6aca7577c4de2d2b12358a5b",
+    "items": [
+      {
+        "id": "prompt/reverse-debugger",
+        "name": "reverse-logic-debugger",
+        "url": "https://jayantdigital.com",
+        "title": "Forces AI to write edge-case test suites and attack its own code before writing "
+      },
+      {
+        "id": "prompt/xml-structured-spec",
+        "name": "xml-tag-spec-generator",
+        "url": "https://anthropic.com",
+        "title": "Anthropic-grade XML prompt pattern for deterministic JSON outputs without broken"
+      },
+      {
+        "id": "prompt/self-reflective-critic",
+        "name": "self-reflective-critic",
+        "url": "https://jayantdigital.com",
+        "title": "Two-pass generation prompt that critiques its own draft architecture before outp"
+      }
+    ]
   }
 ]
