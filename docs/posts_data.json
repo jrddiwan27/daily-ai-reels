@@ -1,5 +1,58 @@
 [
   {
+    "id": "2026-10-10-slot-4",
+    "title": "3 Secret AI Websites That Feel Illegal To Know",
+    "date": "October 10, 2026",
+    "date_slug": "2026-10-10",
+    "slot_id": 4,
+    "slot_name": "Evening Toolkit (Secret Web AI Tools)",
+    "badge": "SECRET AI TOOLS",
+    "cta_keyword": "TOOLS",
+    "video_url": "",
+    "summary": "Stop paying monthly software fees. These three open source repos give you insane superpowers.",
+    "voiceover_script": "Stop paying monthly software fees. These three open source repos give you insane superpowers. First up is bolt new. It automates complex engineering tasks in seconds with zero manual friction. Next is lovable dev. A high-performance powerhouse that runs locally on your machine with extreme speed. Finally, elevenlabs reader. The ultimate secret weapon that senior creators and engineers use silently. Comment the word TOOLS below, and I will DM you the exact links right now.",
+    "items": [
+      {
+        "number": 1,
+        "name": "Bolt New",
+        "url": "https://bolt.new",
+        "stars": "\u2605 48,000",
+        "badge": "FULLSTACK BROWSER",
+        "description": "Full-stack web development directly in browser sandbox with one-click Netlify deployment.",
+        "command": "git clone https://bolt.new.git\ncd bolt-new\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 2,
+        "name": "Lovable Dev",
+        "url": "https://lovable.dev",
+        "stars": "\u2605 32,000",
+        "badge": "PROD BUILDER",
+        "description": "Text-to-software builder creating production React and Supabase apps in 3 minutes.",
+        "command": "git clone https://lovable.dev.git\ncd lovable-dev\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 3,
+        "name": "Elevenlabs Reader",
+        "url": "https://elevenlabs.io",
+        "stars": "\u2605 55,000",
+        "badge": "VOICE CLONE",
+        "description": "Ultra-realistic emotional voice cloning with dynamic accents and live text narration.",
+        "command": "git clone https://elevenlabs.io.git\ncd elevenlabs-reader\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      }
+    ],
+    "cta_text": "Want our studio to build custom autonomous AI employees for your workflow? Follow @jayant.digitalstudio and DM 'TOOLS'.",
+    "tags": [
+      "#aitools",
+      "#techhacks",
+      "#freelancer",
+      "#creatortools",
+      "#websites"
+    ]
+  },
+  {
     "id": "2026-10-10-slot-3",
     "title": "New Frontier Model Teardown: Why This Changes Everything",
     "date": "October 10, 2026",
@@ -209,59 +262,6 @@
       "#claude",
       "#softwareengineer",
       "#aicoding"
-    ]
-  },
-  {
-    "id": "2026-10-10-slot-4",
-    "title": "3 Secret AI Websites That Feel Illegal To Know",
-    "date": "October 10, 2026",
-    "date_slug": "2026-10-10",
-    "slot_id": 4,
-    "slot_name": "Evening Toolkit (Secret Web AI Tools)",
-    "badge": "SECRET AI TOOLS",
-    "cta_keyword": "TOOLS",
-    "video_url": "",
-    "summary": "Here are 3 breakthrough items featured in today's Evening Toolkit (Secret Web AI Tools) edition.",
-    "voiceover_script": "Discover the newest tools shaping SECRET AI TOOLS in 2026.",
-    "items": [
-      {
-        "number": 1,
-        "name": "Bolt New",
-        "url": "https://bolt.new",
-        "stars": "\u2605 48,000",
-        "badge": "FULLSTACK BROWSER",
-        "description": "Full-stack web development directly in browser sandbox with one-click Netlify deployment.",
-        "command": "git clone https://bolt.new.git\ncd bolt-new\n./setup.sh",
-        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
-      },
-      {
-        "number": 2,
-        "name": "Lovable Dev",
-        "url": "https://lovable.dev",
-        "stars": "\u2605 32,000",
-        "badge": "PROD BUILDER",
-        "description": "Text-to-software builder creating production React and Supabase apps in 3 minutes.",
-        "command": "git clone https://lovable.dev.git\ncd lovable-dev\n./setup.sh",
-        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
-      },
-      {
-        "number": 3,
-        "name": "Elevenlabs Reader",
-        "url": "https://elevenlabs.io",
-        "stars": "\u2605 55,000",
-        "badge": "VOICE CLONE",
-        "description": "Ultra-realistic emotional voice cloning with dynamic accents and live text narration.",
-        "command": "git clone https://elevenlabs.io.git\ncd elevenlabs-reader\n./setup.sh",
-        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
-      }
-    ],
-    "cta_text": "Want our studio to build custom autonomous AI employees for your workflow? Follow @jayant.digitalstudio and DM 'TOOLS'.",
-    "tags": [
-      "#aitools",
-      "#techhacks",
-      "#freelancer",
-      "#creatortools",
-      "#websites"
     ]
   }
 ]

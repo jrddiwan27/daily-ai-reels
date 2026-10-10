@@ -79,5 +79,32 @@
         "title": "Open-weights reasoning model matching closed commercial models at 95% lower infe"
       }
     ]
+  },
+  {
+    "slot_id": 4,
+    "slot_name": "Evening Toolkit (Secret Web AI Tools)",
+    "timestamp_utc": "2026-10-10T12:59:26.707652+00:00",
+    "date_ist": "2026-10-10 18:29:26 IST",
+    "buffer_post_id": "6aca3699b07d37ac97727288",
+    "items": [
+      {
+        "id": "stackblitz/bolt-new",
+        "name": "bolt-new",
+        "url": "https://bolt.new",
+        "title": "Full-stack web development directly in browser sandbox with one-click Netlify de"
+      },
+      {
+        "id": "lovable/lovable-dev",
+        "name": "lovable-dev",
+        "url": "https://lovable.dev",
+        "title": "Text-to-software builder creating production React and Supabase apps in 3 minute"
+      },
+      {
+        "id": "elevenlabs/reader",
+        "name": "elevenlabs-reader",
+        "url": "https://elevenlabs.io",
+        "title": "Ultra-realistic emotional voice cloning with dynamic accents and live text narra"
+      }
+    ]
   }
 ]
