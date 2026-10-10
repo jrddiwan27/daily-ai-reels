@@ -172,7 +172,7 @@ def dispatch_to_all_platforms(video_target: str, meta: dict, items: list) -> dic
         f"1. {item_titles[0]}\n2. {item_titles[1]}\n3. {item_titles[2]}\n\n"
         f"Comment '{meta['cta_keyword']}' and I'll DM you the blueprint & direct links!\n"
         f"All code & links in bio hub: {bio_hub_url}\n\n"
-        f"{' '.join(meta.get('hashtags', []))}"
+        f"{' '.join(meta.get('hashtags', [])[:5])}"
     )
     ig_meta = {"instagram": {"type": "reel", "shouldShareToFeed": True}}
     ig_id = dispatch_post_payload(CHANNELS["instagram"], ig_caption, public_video_url, ig_meta)
