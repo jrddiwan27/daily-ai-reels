@@ -1,6 +1,7 @@
 import os
 import sys
 import json
+import glob
 import argparse
 import subprocess
 from pipeline.slot_content_engine import detect_current_slot, fetch_content_for_slot
@@ -88,14 +89,49 @@ def run_pipeline(slot_id: int = None, dry_run: bool = False):
     print(f"[*] Multiplexing broadcast master audio (voice + SFX + ducked BGM)...")
     master_audio = produce_master_audio(voice_path=audio_path, duration=dur)
 
-    mux_cmd = f"ffmpeg -y -i {raw_mp4} -i {master_audio} -map 0:v:0 -map 1:a:0 -c:v copy -c:a aac -b:a 192k -shortest {out_mp4}"
+    temp_main = "out/temp_main.mp4"
+    mux_cmd = f"ffmpeg -y -i {raw_mp4} -i {master_audio} -map 0:v:0 -map 1:a:0 -c:v copy -c:a aac -b:a 192k -shortest {temp_main}"
     subprocess.check_call(mux_cmd, shell=True)
+
+    # 6b. Append Rotating Creator Face CTA Outro
+    cta_files = sorted(glob.glob("assets/cta/cta_*.mp4"))
+    if cta_files:
+        # Determine rotating index from deduplication history
+        history_path = "history/published_history.json"
+        run_count = 0
+        if os.path.exists(history_path):
+            try:
+                with open(history_path, "r") as hf:
+                    run_count = len(json.load(hf))
+            except Exception:
+                run_count = 0
+
+        cta_idx = run_count % len(cta_files)
+        chosen_cta = cta_files[cta_idx]
+        print(f"[*] Attaching Rotating Creator Face CTA: {os.path.basename(chosen_cta)} (Cycle #{cta_idx + 1}/{len(cta_files)})...")
+
+        concat_list = "out/concat_list.txt"
+        with open(concat_list, "w") as cf:
+            cf.write(f"file '{os.path.abspath(temp_main)}'\n")
+            cf.write(f"file '{os.path.abspath(chosen_cta)}'\n")
+
+        stitch_cmd = f"ffmpeg -y -f concat -safe 0 -i {concat_list} -c copy {out_mp4}"
+        subprocess.check_call(stitch_cmd, shell=True)
+        if os.path.exists(concat_list):
+            os.remove(concat_list)
+        if os.path.exists(temp_main):
+            os.remove(temp_main)
+    else:
+        print("[!] No CTA videos found in assets/cta/. Using main reel as final output.")
+        if os.path.exists(out_mp4):
+            os.remove(out_mp4)
+        os.rename(temp_main, out_mp4)
 
     if not os.path.exists(out_mp4):
         raise RuntimeError("Final video generation failed.")
 
     file_size = os.path.getsize(out_mp4)
-    print(f"[✓] Final Video Generated: {out_mp4} ({round(file_size/1024/1024, 2)} MB)")
+    print(f"[✓] Final Video Generated (Reel + Face CTA): {out_mp4} ({round(file_size/1024/1024, 2)} MB)")
 
     # 7. Auto-Publish to Buffer across Instagram, YouTube Shorts & X
     post_ids = {}

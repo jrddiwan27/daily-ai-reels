@@ -4,6 +4,7 @@ __pycache__/
 node_modules/
 out/
 *.mp4
+!assets/cta/*.mp4
 *.log
 .gemini_key
 .env
@@ -13,5 +14,6 @@ assets/slot_*/
 # Ignore runtime generated voice/master audio files
 assets/voice.mp3
 assets/master_audio.mp3
+assets/sample_voice.mp3
 welcome.mp3
 welcome_free.mp3
