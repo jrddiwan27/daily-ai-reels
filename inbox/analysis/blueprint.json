@@ -1,0 +1,40 @@
+{
+  "layout_style": "Vertical split layout (approx. 60/40) featuring animated UI/motion graphics in the upper portion and a masked presenter cutout anchored at the bottom center, toggling dynamically between light minimalist grid and dark HUD grid themes.",
+  "hook_technique": "Audacious AI capability claim ('Claude can now predict how viral your reels are') combined with a bizarre visual metaphor (a plant growing directly out of the presenter's head underground) to trigger instant pattern interrupt.",
+  "visual_elements": [
+    "Animated cross-section plant growth metaphor emerging from underground soil layers",
+    "Skeuomorphic browser URL window and dark-mode software interface cards with glowing bounding boxes",
+    "Futuristic glowing wireframe brain scan with video timeline playback scrubbers",
+    "Numbered pill badges and multi-card visual proof displays showing comparative MRI-style brain scans",
+    "Dark-mode analytics card featuring glowing orange retention drop-off curve and interactive progress slider"
+  ],
+  "caption_style": "Clean modern sans-serif (Inter/SF Pro) positioned in the upper third, alternating between neutral dark grey and crisp white with bold keyword emphasis and contextual emojis (\ud83c\udfac, \ud83c\udfa3, \ud83d\udcc9).",
+  "color_palette": {
+    "background": "#F5F5F7",
+    "accent": "#E45A24",
+    "card_dark": "#161618"
+  },
+  "narrative_structure": [
+    {
+      "timestamp": "0-3s",
+      "stage": "Hook",
+      "role": "Audacious capability claim with surreal plant visual interrupt"
+    },
+    {
+      "timestamp": "3-8s",
+      "stage": "Mechanism",
+      "role": "Tool reveal showing Higgsfield AI platform interface"
+    },
+    {
+      "timestamp": "8-18s",
+      "stage": "Proof/Feature",
+      "role": "Scientific scale demonstration showing 1,000+ dataset benchmarks and neural reaction visuals"
+    },
+    {
+      "timestamp": "18-30s",
+      "stage": "Practical Application",
+      "role": "Live test walkthrough breaking down hook strengths and predicted retention curves"
+    }
+  ],
+  "core_retention_takeaway": "Maintains elite retention by oscillating between clean light-mode UI and high-contrast dark sci-fi HUD graphics every 2-3 seconds, pairing high-status technical terminology with tangible, glowing data visualizations."
+}

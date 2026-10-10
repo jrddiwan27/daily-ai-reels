@@ -31,6 +31,9 @@ SLOT_VISUAL_THEMES = {
         "console_bg": "#0D1117",
         "console_border": "#30363D",
         "item_icons": ["⚡", "🧠", "✉️"],
+        "hook_title": "3 INSANE OPEN-SOURCE AI REPOS",
+        "hook_sub": "RUN 100% LOCALLY · ZERO MONTHLY FEES",
+        "initial_pose": "point",
         "t1_gauge_title": "⚡ HARDWARE COMPILER",
         "t1_gauge_val": "100% COMPILED",
         "t2_gauge_title": "🧠 MEMORY KERNEL OPTIMIZATION",
@@ -72,6 +75,9 @@ SLOT_VISUAL_THEMES = {
         "console_bg": "#111827",
         "console_border": "#10B981",
         "item_icons": ["🔄", "⚡", "🤖"],
+        "hook_title": "THE 20-HOUR AUTOMATION BLUEPRINT",
+        "hook_sub": "STOP WASTING HOURS ON MANUAL WORK",
+        "initial_pose": "thumbs-up",
         "t1_gauge_title": "🔄 WORKFLOW SYNCHRONIZER",
         "t1_gauge_val": "100% TASKS SYNCED",
         "t2_gauge_title": "⏱️ RECURRING HOURS SAVED",
@@ -113,6 +119,9 @@ SLOT_VISUAL_THEMES = {
         "console_bg": "#0B0717",
         "console_border": "#7C3AED",
         "item_icons": ["🧠", "📊", "🚀"],
+        "hook_title": "NEW SOTA MODEL BENCHMARKS",
+        "hook_sub": "WHY CLOSED FRONTIER AI JUST LOST",
+        "initial_pose": "point",
         "t1_gauge_title": "🧠 REASONING ENGINE",
         "t1_gauge_val": "100% TOKENS STREAMED",
         "t2_gauge_title": "⚡ INFERENCE THROUGHPUT",
@@ -154,6 +163,9 @@ SLOT_VISUAL_THEMES = {
         "console_bg": "#18181B",
         "console_border": "#EA580C",
         "item_icons": ["🛠️", "✨", "🎨"],
+        "hook_title": "3 SECRET NO-CODE AI WEBSITES",
+        "hook_sub": "REPLACE EXPENSIVE APPS IN 1 CLICK",
+        "initial_pose": "thumbs-up",
         "t1_gauge_title": "🚀 BROWSER CLOUD ENGINE",
         "t1_gauge_val": "100% RENDERED IN 1.2s",
         "t2_gauge_title": "🎨 ASSET GENERATION SPEED",
@@ -195,6 +207,9 @@ SLOT_VISUAL_THEMES = {
         "console_bg": "#09090B",
         "console_border": "#EF4444",
         "item_icons": ["🎯", "🛡️", "🔮"],
+        "hook_title": "SENIOR AI PROMPT ARCHITECTURE",
+        "hook_sub": "ELIMINATE 99% OF LLM HALLUCINATIONS",
+        "initial_pose": "point",
         "t1_gauge_title": "🎯 XML SCHEMA VALIDATOR",
         "t1_gauge_val": "100% CONSTRAINTS SATISFIED",
         "t2_gauge_title": "🛡️ HALLUCINATION SUPPRESSION",
@@ -417,6 +432,10 @@ def build_hyperframes_composition(
     hero_visual_1 = generate_hero_visual(repo_data[0], sid, 1, theme)
     hero_visual_2 = generate_hero_visual(repo_data[1], sid, 2, theme)
     hero_visual_3 = generate_hero_visual(repo_data[2], sid, 3, theme)
+
+    arm_point_op = "1" if theme.get("initial_pose") == "point" else "0"
+    arm_both_op = "1" if theme.get("initial_pose") == "both-up" else "0"
+    arm_thumbs_op = "1" if theme.get("initial_pose") == "thumbs-up" else "0"
 
     # Dynamic commands
     cmd_1 = f"git clone github.com/{repo_data[0]['full_name']} && make run" if sid == 1 else f"npx @flow/{repo_data[0]['name'].lower()} --deploy"
@@ -1252,7 +1271,7 @@ def build_hyperframes_composition(
         <!-- Arms -->
         <g id="arm-left">
           <!-- Pointing Arm (Default when presenting on right) -->
-          <g id="arm-point" opacity="0">
+          <g id="arm-point" opacity="{arm_point_op}">
             <path d="M340 330 C380 320, 390 260, 375 220" fill="none" stroke="#171819" stroke-width="44" stroke-linecap="round"/>
             <path d="M340 330 C380 320, 390 260, 375 220" fill="none" stroke="{theme['hoodie_color']}" stroke-width="36" stroke-linecap="round"/>
             <g transform="translate(365, 170)">
@@ -1262,7 +1281,7 @@ def build_hyperframes_composition(
           </g>
 
           <!-- Both Hands Up in Frustration (Hook Intro) -->
-          <g id="arm-both-up" opacity="1">
+          <g id="arm-both-up" opacity="{arm_both_op}">
             <path d="M140 330 C100 290, 90 220, 110 170" fill="none" stroke="#171819" stroke-width="44" stroke-linecap="round"/>
             <path d="M140 330 C100 290, 90 220, 110 170" fill="none" stroke="{theme['hoodie_color']}" stroke-width="36" stroke-linecap="round"/>
             <g transform="translate(90, 120)">
@@ -1283,7 +1302,7 @@ def build_hyperframes_composition(
           </g>
 
           <!-- Thumbs Up Arm (Outro) -->
-          <g id="arm-thumbs-up" opacity="0">
+          <g id="arm-thumbs-up" opacity="{arm_thumbs_op}">
             <path d="M340 330 C370 310, 370 240, 350 200" fill="none" stroke="#171819" stroke-width="44" stroke-linecap="round"/>
             <path d="M340 330 C370 310, 370 240, 350 200" fill="none" stroke="{theme['hoodie_color']}" stroke-width="36" stroke-linecap="round"/>
             <g transform="translate(330, 150)">
@@ -1341,8 +1360,11 @@ def build_hyperframes_composition(
         <div style="font-size: 15px; font-weight: 950; letter-spacing: 0.15em; color: {theme['accent_color']}; margin-bottom: 6px;">
           ⚡ {vis['strip']}
         </div>
-        <div style="font-size: 38px; font-weight: 950; line-height: 1.1; color: #171819; letter-spacing: -0.02em;">
-          STOP WASTING MONEY ON CLOSED AI
+        <div style="font-size: 34px; font-weight: 950; line-height: 1.1; color: #171819; letter-spacing: -0.02em;">
+          {theme['hook_title']}
+        </div>
+        <div style="font-size: 14px; font-weight: 800; color: {theme['accent_color']}; margin-top: 4px;">
+          {theme['hook_sub']}
         </div>
         <div style="margin-top: 12px; display: flex; gap: 8px; align-items: center;">
           <span style="font-size: 14px; font-weight: 800; color: #4B5563;">3 POWERFUL REPLACEMENTS:</span>
@@ -1637,7 +1659,9 @@ def build_hyperframes_composition(
     // ================= TIMELINE SCENE CHOREOGRAPHY =================
 
     // --- SCENE 1: HOOK (0 - {t_hook_end}s) ---
-    tl.set("#arm-both-up", {{ opacity: 1 }}, 0);
+    tl.set("#arm-point", {{ opacity: {arm_point_op} }}, 0);
+    tl.set("#arm-both-up", {{ opacity: {arm_both_op} }}, 0);
+    tl.set("#arm-thumbs-up", {{ opacity: {arm_thumbs_op} }}, 0);
     tl.fromTo("#hook-strip", {{ y: -160, opacity: 0 }}, {{ y: 0, opacity: 1, duration: 0.45, ease: "back.out(1.5)" }}, 0.1);
     tl.fromTo("#bill-1", {{ y: -30, opacity: 0 }}, {{ y: 0, opacity: 1, duration: 0.35, ease: "back.out(1.5)" }}, 0.6);
     tl.fromTo("#bill-2", {{ y: -30, opacity: 0 }}, {{ y: 0, opacity: 1, duration: 0.35, ease: "back.out(1.5)" }}, 0.9);
@@ -1651,6 +1675,7 @@ def build_hyperframes_composition(
     // Transition Avatar to Right side (presenter position) for all reviews
     tl.to("#avatar-wrap", {{ x: 180, y: 15, duration: 0.65, ease: "power2.inOut" }}, {t_hook_end});
     tl.set("#arm-both-up", {{ opacity: 0 }}, {t_hook_end});
+    tl.set("#arm-thumbs-up", {{ opacity: 0 }}, {t_hook_end});
     tl.set("#arm-point", {{ opacity: 1 }}, {t_hook_end});
 
     // --- SCENE 2: ITEM 1 ({t_hook_end} - {t_tool1_end}s) ---
