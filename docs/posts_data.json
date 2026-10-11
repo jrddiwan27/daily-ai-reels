@@ -1,5 +1,18 @@
 [
   {
+    "title": "Qwen Image 2.1: The Free Midjourney Killer",
+    "description": "20B parameter open-source image model running 100% offline on consumer hardware with photorealistic detail.",
+    "date": "Oct 11, 2026",
+    "cdn_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1791739387/daily-reel.mp4",
+    "repo_url": "https://huggingface.co/Qwen/Qwen-Image-2.1",
+    "tags": [
+      "Qwen",
+      "OpenSource",
+      "Text2Image",
+      "GGUF"
+    ]
+  },
+  {
     "id": "2026-10-11-slot-1",
     "title": "3 Insane Open-Source AI Developer Repos You Need Today",
     "date": "October 11, 2026",

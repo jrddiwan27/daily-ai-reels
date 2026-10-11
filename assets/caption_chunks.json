@@ -1,102 +1,300 @@
 [
   {
     "words": [
-      "Stop",
-      "scrolling"
+      "Midjourney",
+      "subscriptions"
     ],
     "active": 1,
     "start": 0.0,
-    "end": 0.79
+    "end": 0.8
   },
   {
     "words": [
-      "right",
-      "now."
+      "cost",
+      "thirty"
     ],
     "active": 1,
-    "start": 0.79,
-    "end": 1.58
+    "start": 0.8,
+    "end": 1.59
   },
   {
     "words": [
-      "Open",
-      "source"
+      "dollars",
+      "every"
     ],
     "active": 1,
-    "start": 1.58,
-    "end": 2.37
+    "start": 1.59,
+    "end": 2.39
   },
   {
     "words": [
-      "AI",
-      "video"
+      "single",
+      "month."
     ],
     "active": 1,
-    "start": 2.37,
-    "end": 3.17
+    "start": 2.39,
+    "end": 3.18
+  },
+  {
+    "words": [
+      "So",
+      "Qwen"
+    ],
+    "active": 1,
+    "start": 3.18,
+    "end": 3.98
   },
   {
     "words": [
       "just",
-      "changed"
+      "open-sourced"
     ],
     "active": 1,
-    "start": 3.17,
-    "end": 3.96
+    "start": 3.98,
+    "end": 4.77
   },
   {
     "words": [
-      "everything",
-      "forever."
+      "Image",
+      "2.1,"
     ],
     "active": 1,
-    "start": 3.96,
-    "end": 4.75
+    "start": 4.77,
+    "end": 5.57
   },
   {
     "words": [
-      "Lightricks",
-      "just"
+      "and",
+      "it"
     ],
     "active": 1,
-    "start": 4.75,
-    "end": 5.54
+    "start": 5.57,
+    "end": 6.36
   },
   {
     "words": [
-      "dropped",
-      "LTX-2.5,"
+      "is",
+      "completely"
     ],
     "active": 1,
-    "start": 5.54,
-    "end": 6.33
+    "start": 6.36,
+    "end": 7.16
   },
   {
     "words": [
-      "a",
-      "monster"
+      "free.",
+      "It"
     ],
     "active": 1,
-    "start": 6.33,
-    "end": 7.12
+    "start": 7.16,
+    "end": 7.96
   },
   {
     "words": [
-      "open-weights",
-      "model"
+      "beats",
+      "Flux"
     ],
     "active": 1,
-    "start": 7.12,
-    "end": 7.91
+    "start": 7.96,
+    "end": 8.75
   },
   {
     "words": [
-      "blowing",
-      "up"
+      "and",
+      "Midjourney"
     ],
     "active": 1,
-    "start": 7.91,
-    "end": 8.7
+    "start": 8.75,
+    "end": 9.55
+  },
+  {
+    "words": [
+      "with",
+      "twenty"
+    ],
+    "active": 1,
+    "start": 9.55,
+    "end": 10.34
+  },
+  {
+    "words": [
+      "billion",
+      "parameters."
+    ],
+    "active": 1,
+    "start": 10.34,
+    "end": 11.14
+  },
+  {
+    "words": [
+      "Photorealistic",
+      "textures,"
+    ],
+    "active": 1,
+    "start": 11.14,
+    "end": 11.93
+  },
+  {
+    "words": [
+      "insane",
+      "anatomy,"
+    ],
+    "active": 1,
+    "start": 11.93,
+    "end": 12.73
+  },
+  {
+    "words": [
+      "and",
+      "perfect"
+    ],
+    "active": 1,
+    "start": 12.73,
+    "end": 13.53
+  },
+  {
+    "words": [
+      "in-image",
+      "typography."
+    ],
+    "active": 1,
+    "start": 13.53,
+    "end": 14.32
+  },
+  {
+    "words": [
+      "The",
+      "best"
+    ],
+    "active": 1,
+    "start": 14.32,
+    "end": 15.12
+  },
+  {
+    "words": [
+      "part?",
+      "You"
+    ],
+    "active": 1,
+    "start": 15.12,
+    "end": 15.91
+  },
+  {
+    "words": [
+      "can",
+      "run"
+    ],
+    "active": 1,
+    "start": 15.91,
+    "end": 16.71
+  },
+  {
+    "words": [
+      "it",
+      "completely"
+    ],
+    "active": 1,
+    "start": 16.71,
+    "end": 17.5
+  },
+  {
+    "words": [
+      "offline",
+      "on"
+    ],
+    "active": 1,
+    "start": 17.5,
+    "end": 18.3
+  },
+  {
+    "words": [
+      "your",
+      "Mac"
+    ],
+    "active": 1,
+    "start": 18.3,
+    "end": 19.09
+  },
+  {
+    "words": [
+      "or",
+      "PC."
+    ],
+    "active": 1,
+    "start": 19.09,
+    "end": 19.89
+  },
+  {
+    "words": [
+      "No",
+      "cloud"
+    ],
+    "active": 1,
+    "start": 19.89,
+    "end": 20.69
+  },
+  {
+    "words": [
+      "queues,",
+      "no"
+    ],
+    "active": 1,
+    "start": 20.69,
+    "end": 21.48
+  },
+  {
+    "words": [
+      "credit",
+      "cards,"
+    ],
+    "active": 1,
+    "start": 21.48,
+    "end": 22.28
+  },
+  {
+    "words": [
+      "and",
+      "zero"
+    ],
+    "active": 1,
+    "start": 22.28,
+    "end": 23.07
+  },
+  {
+    "words": [
+      "censorship",
+      "filters."
+    ],
+    "active": 1,
+    "start": 23.07,
+    "end": 23.87
+  },
+  {
+    "words": [
+      "Download",
+      "the"
+    ],
+    "active": 1,
+    "start": 23.87,
+    "end": 24.66
+  },
+  {
+    "words": [
+      "GGUF",
+      "weights"
+    ],
+    "active": 1,
+    "start": 24.66,
+    "end": 25.46
+  },
+  {
+    "words": [
+      "directly",
+      "from"
+    ],
+    "active": 1,
+    "start": 25.46,
+    "end": 26.25
   },
   {
     "words": [
@@ -104,331 +302,151 @@
       "Face"
     ],
     "active": 1,
-    "start": 8.7,
-    "end": 9.5
+    "start": 26.25,
+    "end": 27.05
   },
   {
     "words": [
-      "with",
-      "over"
+      "or",
+      "Ollama."
     ],
     "active": 1,
-    "start": 9.5,
-    "end": 10.29
+    "start": 27.05,
+    "end": 27.85
   },
   {
     "words": [
-      "seven",
-      "thousand"
+      "Setup",
+      "takes"
     ],
     "active": 1,
-    "start": 10.29,
-    "end": 11.08
+    "start": 27.85,
+    "end": 28.64
   },
   {
     "words": [
-      "likes.",
-      "It"
+      "sixty",
+      "seconds."
     ],
     "active": 1,
-    "start": 11.08,
-    "end": 11.87
+    "start": 28.64,
+    "end": 29.44
   },
   {
     "words": [
-      "turns",
-      "still"
+      "Paste",
+      "one"
     ],
     "active": 1,
-    "start": 11.87,
-    "end": 12.66
+    "start": 29.44,
+    "end": 30.23
   },
   {
     "words": [
-      "images",
-      "into"
+      "terminal",
+      "command,"
     ],
     "active": 1,
-    "start": 12.66,
-    "end": 13.45
-  },
-  {
-    "words": [
-      "cinematic",
-      "motion"
-    ],
-    "active": 1,
-    "start": 13.45,
-    "end": 14.24
-  },
-  {
-    "words": [
-      "instantly.",
-      "The"
-    ],
-    "active": 1,
-    "start": 14.24,
-    "end": 15.03
-  },
-  {
-    "words": [
-      "superpower?",
-      "You"
-    ],
-    "active": 1,
-    "start": 15.03,
-    "end": 15.83
-  },
-  {
-    "words": [
-      "get",
-      "Hollywood-grade"
-    ],
-    "active": 1,
-    "start": 15.83,
-    "end": 16.62
-  },
-  {
-    "words": [
-      "physics",
-      "and"
-    ],
-    "active": 1,
-    "start": 16.62,
-    "end": 17.41
-  },
-  {
-    "words": [
-      "fluid",
-      "camera"
-    ],
-    "active": 1,
-    "start": 17.41,
-    "end": 18.2
-  },
-  {
-    "words": [
-      "control",
-      "running"
-    ],
-    "active": 1,
-    "start": 18.2,
-    "end": 18.99
-  },
-  {
-    "words": [
-      "locally",
-      "on"
-    ],
-    "active": 1,
-    "start": 18.99,
-    "end": 19.78
-  },
-  {
-    "words": [
-      "consumer",
-      "hardware."
-    ],
-    "active": 1,
-    "start": 19.78,
-    "end": 20.57
-  },
-  {
-    "words": [
-      "No",
-      "expensive"
-    ],
-    "active": 1,
-    "start": 20.57,
-    "end": 21.36
-  },
-  {
-    "words": [
-      "subscriptions",
-      "or"
-    ],
-    "active": 1,
-    "start": 21.36,
-    "end": 22.16
-  },
-  {
-    "words": [
-      "cloud",
-      "render"
-    ],
-    "active": 1,
-    "start": 22.16,
-    "end": 22.95
-  },
-  {
-    "words": [
-      "queues",
-      "needed."
-    ],
-    "active": 1,
-    "start": 22.95,
-    "end": 23.74
-  },
-  {
-    "words": [
-      "The",
-      "secret"
-    ],
-    "active": 1,
-    "start": 23.74,
-    "end": 24.53
-  },
-  {
-    "words": [
-      "advantage",
-      "is"
-    ],
-    "active": 1,
-    "start": 24.53,
-    "end": 25.32
-  },
-  {
-    "words": [
-      "complete",
-      "commercial"
-    ],
-    "active": 1,
-    "start": 25.32,
-    "end": 26.11
-  },
-  {
-    "words": [
-      "freedom.",
-      "Modify"
-    ],
-    "active": 1,
-    "start": 26.11,
-    "end": 26.9
-  },
-  {
-    "words": [
-      "the",
-      "weights,"
-    ],
-    "active": 1,
-    "start": 26.9,
-    "end": 27.7
-  },
-  {
-    "words": [
-      "train",
-      "custom"
-    ],
-    "active": 1,
-    "start": 27.7,
-    "end": 28.49
-  },
-  {
-    "words": [
-      "styles,",
-      "and"
-    ],
-    "active": 1,
-    "start": 28.49,
-    "end": 29.28
-  },
-  {
-    "words": [
-      "generate",
-      "unlimited"
-    ],
-    "active": 1,
-    "start": 29.28,
-    "end": 30.07
-  },
-  {
-    "words": [
-      "high-framerate",
-      "clips"
-    ],
-    "active": 1,
-    "start": 30.07,
-    "end": 30.86
-  },
-  {
-    "words": [
-      "straight",
-      "from"
-    ],
-    "active": 1,
-    "start": 30.86,
-    "end": 31.65
-  },
-  {
-    "words": [
-      "your",
-      "personal"
-    ],
-    "active": 1,
-    "start": 31.65,
-    "end": 32.44
-  },
-  {
-    "words": [
-      "rig.",
-      "Comment"
-    ],
-    "active": 1,
-    "start": 32.44,
-    "end": 33.23
-  },
-  {
-    "words": [
-      "the",
-      "word"
-    ],
-    "active": 1,
-    "start": 33.23,
-    "end": 34.03
-  },
-  {
-    "words": [
-      "BREAKING",
-      "below,"
-    ],
-    "active": 1,
-    "start": 34.03,
-    "end": 34.82
+    "start": 30.23,
+    "end": 31.03
   },
   {
     "words": [
       "and",
-      "I"
+      "you"
     ],
     "active": 1,
-    "start": 34.82,
-    "end": 35.61
+    "start": 31.03,
+    "end": 31.82
   },
   {
     "words": [
-      "will",
-      "DM"
+      "are",
+      "generating."
     ],
     "active": 1,
-    "start": 35.61,
-    "end": 36.4
+    "start": 31.82,
+    "end": 32.62
   },
   {
     "words": [
-      "you",
-      "the"
+      "Comment",
+      "QWEN"
     ],
     "active": 1,
-    "start": 36.4,
-    "end": 37.19
+    "start": 32.62,
+    "end": 33.42
   },
   {
     "words": [
-      "links",
-      "immediately."
+      "below,",
+      "and"
     ],
     "active": 1,
-    "start": 37.19,
-    "end": 37.98
+    "start": 33.42,
+    "end": 34.21
+  },
+  {
+    "words": [
+      "I",
+      "will"
+    ],
+    "active": 1,
+    "start": 34.21,
+    "end": 35.01
+  },
+  {
+    "words": [
+      "DM",
+      "you"
+    ],
+    "active": 1,
+    "start": 35.01,
+    "end": 35.8
+  },
+  {
+    "words": [
+      "the",
+      "direct"
+    ],
+    "active": 1,
+    "start": 35.8,
+    "end": 36.6
+  },
+  {
+    "words": [
+      "download",
+      "link"
+    ],
+    "active": 1,
+    "start": 36.6,
+    "end": 37.39
+  },
+  {
+    "words": [
+      "and",
+      "local"
+    ],
+    "active": 1,
+    "start": 37.39,
+    "end": 38.19
+  },
+  {
+    "words": [
+      "setup",
+      "guide"
+    ],
+    "active": 1,
+    "start": 38.19,
+    "end": 38.98
+  },
+  {
+    "words": [
+      "right",
+      "now."
+    ],
+    "active": 1,
+    "start": 38.98,
+    "end": 39.78
   }
 ]

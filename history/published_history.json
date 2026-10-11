@@ -364,5 +364,25 @@
         "title": "\ud83e\udd2f LobeHub is your Chief Agent Operator, organizing your agents into 7\u00d724 operati"
       }
     ]
+  },
+  {
+    "title": "Qwen Image 2.1 Open-Source Breakdown",
+    "timestamp_utc": "2026-10-11T17:27:07.090285+00:00",
+    "date_ist": "2026-10-11 22:57:07 IST",
+    "buffer_post_id": "6acbc65dea568e911a36173e",
+    "channel_results": {
+      "instagram": "6acbc65dea568e911a36173e",
+      "youtube": "6acbc6a6fa026cfb810c9aa4",
+      "twitter": "6acbc6e5a9411fbcc552de0f"
+    },
+    "cdn_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1791739387/daily-reel.mp4",
+    "items": [
+      {
+        "id": "Qwen/Qwen-Image-2.1",
+        "name": "Qwen-Image-2.1",
+        "url": "https://huggingface.co/Qwen/Qwen-Image-2.1",
+        "title": "20B Parameter Open-Source Photorealistic Text-to-Image Foundation Model"
+      }
+    ]
   }
 ]

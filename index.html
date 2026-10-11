@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=1080, height=1920, initial-scale=1">
-  <title>Jayant Digital Studio - Hyper-Motion Engine</title>
+  <title>Jayant Digital Studio - Qwen Image 2.1 Hyper-Motion</title>
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800;900&family=Instrument+Serif:ital@1&family=JetBrains+Mono:wght@600;800&display=swap" rel="stylesheet">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 
@@ -30,7 +30,7 @@
       position: relative;
     }
 
-    /* Engineering Paper Grid Background */
+    /* Stage Canvas */
     #stage {
       position: absolute;
       inset: 0;
@@ -52,7 +52,7 @@
       pointer-events: none;
     }
 
-    /* Ambient Drifting Blur Blobs (Always in motion) */
+    /* Drifting Blur Blobs */
     .blob {
       position: absolute;
       border-radius: 50%;
@@ -134,403 +134,258 @@
       pointer-events: auto;
     }
 
-    /* Reusable Motion Atoms */
+    /* Motion Components */
     .pill {
       font: 800 24px 'Bricolage Grotesque';
-      padding: 10px 26px;
+      padding: 10px 24px;
       border-radius: 99px;
       background: #1a1714;
       color: #fff;
       display: inline-flex;
       align-items: center;
-      gap: 12px;
-      box-shadow: 0 10px 26px rgba(0,0,0,0.12);
+      gap: 10px;
+      letter-spacing: 0.5px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.12);
     }
-    .pill.clay { background: var(--clay); color: #fff; }
-    .pill.red { background: #ef4444; color: #fff; }
-    .pill.green { background: #10b981; color: #fff; }
-
-    .step-pill {
-      font-size: 24px;
-      font-weight: 800;
-      letter-spacing: 2px;
-      background: #1a1714;
-      color: #ffffff;
-      padding: 12px 28px;
-      border-radius: 99px;
-      display: inline-flex;
-      align-items: center;
-      gap: 16px;
-      box-shadow: 0 10px 28px rgba(0,0,0,0.15);
-      margin-bottom: 24px;
-    }
-    .step-dashes {
-      display: flex;
-      gap: 6px;
-    }
-    .step-dash {
-      width: 20px;
-      height: 6px;
-      border-radius: 99px;
-      background: rgba(255,255,255,0.3);
-    }
-    .step-dash.active {
-      background: var(--clay);
-      width: 32px;
-    }
+    .pill.red { background: #ef4444; }
+    .pill.clay { background: var(--clay); }
+    .pill.blue { background: #2563eb; }
 
     .hero-title {
-      font-size: 68px;
+      font-size: 54px;
       font-weight: 900;
-      line-height: 1.05;
-      letter-spacing: -2px;
+      line-height: 1.15;
+      letter-spacing: -1.5px;
       text-align: center;
-      margin: 10px 0 24px;
+      margin-top: 18px;
     }
     .serif-accent {
       font-family: 'Instrument Serif', Georgia, serif;
       font-style: italic;
-      font-weight: 400;
       color: var(--clay);
-      font-size: 1.14em;
+      font-weight: 400;
+      font-size: 1.15em;
     }
+    #stage.dark .serif-accent { color: #a78bfa; }
 
     .card {
       background: var(--card-bg);
       border-radius: 28px;
-      box-shadow: 0 20px 48px rgba(70, 45, 20, 0.14);
+      box-shadow: 0 16px 48px rgba(70, 45, 20, 0.12);
       border: 1px solid var(--border);
-      position: relative;
+    }
+    #stage.dark .card {
+      background: #171315;
+      border: 1px solid #2b2528;
+      box-shadow: 0 16px 48px rgba(0, 0, 0, 0.45);
+      color: #fff;
     }
 
-    /* Strike-Through Animation */
+    /* Price Strike-through Component */
     .strike-wrap {
       position: relative;
       display: inline-block;
     }
     .strike {
       position: absolute;
-      left: -12px;
-      top: 50%;
+      left: -10px;
+      top: 52%;
       height: 14px;
       background: #ef4444;
       border-radius: 8px;
       width: 0;
-      rotate: -8deg;
-      animation: wipe 0.6s 0.6s ease-out forwards;
+      rotate: -7deg;
+      animation: strikethrough 0.6s 0.6s cubic-bezier(0.2, 0.9, 0.25, 1) forwards;
     }
-    @keyframes wipe {
-      to { width: calc(100% + 24px); }
+    @keyframes strikethrough {
+      to { width: calc(100% + 20px); }
     }
 
-    /* Animated Counter */
-    @property --n {
-      syntax: '<integer>';
-      inherits: false;
-      initial-value: 0;
-    }
-    .cnt {
-      font-size: 130px;
+    /* Bouncing Letters */
+    .bounce-word {
+      display: flex;
+      font-size: 120px;
       font-weight: 900;
-      color: var(--clay);
-      --n: 0;
-      animation: cn 1.4s 0.3s ease-out forwards;
-      counter-reset: n var(--n);
+      letter-spacing: -4px;
       line-height: 1;
+      margin: 16px 0;
     }
-    .cnt::after {
-      content: counter(n);
+    .bounce-word span {
+      display: inline-block;
+      animation: bounceIn 0.6s var(--d) cubic-bezier(0.2, 1.4, 0.4, 1) forwards;
+      opacity: 0;
+      transform: translateY(50px) rotate(14deg);
     }
-    @keyframes cn {
-      to { --n: 3; }
+    @keyframes bounceIn {
+      to { opacity: 1; transform: translateY(0) rotate(0deg); }
     }
 
-    /* 3D Fanning Cards Stack */
+    /* 3D Fanning Stack Cards */
     .stack {
       position: relative;
-      width: 440px;
-      height: 240px;
-      margin-top: 24px;
+      width: 620px;
+      height: 220px;
+      margin-top: 16px;
     }
-    .stack .fan-card {
+    .fan-card {
       position: absolute;
       inset: 0;
       background: #ffffff;
       border-radius: 22px;
-      box-shadow: 0 16px 36px rgba(70, 45, 20, 0.16);
-      padding: 24px 30px;
-      border: 1px solid rgba(26,23,20,0.08);
+      box-shadow: 0 14px 36px rgba(70, 45, 20, 0.16);
+      padding: 24px 32px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      border: 1px solid rgba(0,0,0,0.06);
+      animation: fanOut 0.7s var(--d) cubic-bezier(0.3, 1.4, 0.5, 1) forwards;
       opacity: 0;
-      animation: fan 0.65s var(--d) cubic-bezier(0.3, 1.4, 0.5, 1) forwards;
     }
-    @keyframes fan {
-      from { opacity: 0; transform: translateY(80px) rotate(0deg); }
-      to { opacity: 1; transform: translate(var(--x), 0) rotate(var(--r)); }
+    @keyframes fanOut {
+      from { opacity: 0; transform: translateY(60px) rotate(0deg); }
+      to { opacity: 1; transform: translateX(var(--x)) rotate(var(--r)); }
     }
 
-    /* Realistic Phone Device Mockup */
-    .phone-mockup {
-      width: 620px;
-      height: 480px;
-      background: #1a1714;
-      border-radius: 36px;
-      padding: 14px;
-      box-shadow: 0 24px 60px rgba(0,0,0,0.22);
-      border: 4px solid #332d29;
-      position: relative;
-      margin-top: 10px;
-    }
-    .phone-screen {
-      width: 100%;
-      height: 100%;
-      border-radius: 26px;
-      overflow: hidden;
-      background: #231f20;
-      position: relative;
-      display: flex;
-      flex-direction: column;
-    }
-    .phone-screen img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-    .phone-floating-pill {
-      position: absolute;
-      bottom: 24px;
-      left: 50%;
-      transform: translateX(-50%);
-      background: rgba(255,255,255,0.95);
-      color: #1a1714;
-      font-size: 24px;
+    /* Dynamic Rolling Counter */
+    .counter-display {
+      font-size: 110px;
       font-weight: 900;
-      padding: 10px 28px;
-      border-radius: 99px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-      white-space: nowrap;
+      color: var(--clay);
+      line-height: 1;
+      margin: 8px 0;
     }
 
-    /* Browser Window Mockup */
-    .browser-mockup {
+    /* Feature Row Component */
+    .feature-row {
       width: 820px;
-      height: 480px;
-      background: #ffffff;
-      border-radius: 24px;
-      box-shadow: 0 24px 60px rgba(70,45,20,0.18);
-      border: 1px solid rgba(26,23,20,0.1);
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      margin-top: 10px;
-    }
-    .browser-header {
-      background: #ede8df;
-      padding: 16px 24px;
+      padding: 20px 28px;
       display: flex;
       align-items: center;
-      gap: 14px;
-      border-bottom: 1px solid rgba(26,23,20,0.08);
+      gap: 24px;
+      margin-bottom: 16px;
+      border-radius: 20px;
+      background: #ffffff;
+      box-shadow: 0 8px 24px rgba(70, 45, 20, 0.08);
+      border: 1px solid rgba(0,0,0,0.05);
+      animation: slideInUp 0.5s var(--d) cubic-bezier(0.2, 0.9, 0.25, 1) forwards;
+      opacity: 0;
+    }
+    @keyframes slideInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Radar Sweep */
+    .radar-box {
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(167, 139, 250, 0.15) 0%, rgba(11, 8, 9, 0.8) 70%);
+      border: 2px solid rgba(167, 139, 250, 0.4);
+      position: relative;
+      overflow: hidden;
+      display: grid;
+      place-items: center;
+      margin: 20px auto;
+    }
+    .radar-beam {
+      position: absolute;
+      inset: 0;
+      background: conic-gradient(from 0deg, rgba(167, 139, 250, 0.6) 0deg, transparent 60deg);
+      animation: radarSpin 2.4s linear infinite;
+    }
+    @keyframes radarSpin { to { rotate: 360deg; } }
+
+    /* Flow Lines */
+    .flow-line {
+      width: 4px;
+      height: 0;
+      background: #8b5cf6;
+      animation: growLine 0.5s var(--d) forwards;
+    }
+    @keyframes growLine { to { height: 50px; } }
+
+    /* Browser Mockup */
+    .browser-frame {
+      width: 840px;
+      border-radius: 22px;
+      background: #ffffff;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.12);
+      overflow: hidden;
+      border: 1px solid rgba(0,0,0,0.08);
+      margin-top: 14px;
+    }
+    .browser-header {
+      background: #f1ede4;
+      padding: 16px 22px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      border-bottom: 1px solid rgba(0,0,0,0.06);
     }
     .browser-dots {
       display: flex;
       gap: 8px;
     }
-    .browser-dots span {
+    .browser-dots i {
       width: 14px;
       height: 14px;
       border-radius: 50%;
-      background: #d4cec3;
+      display: block;
     }
     .browser-bar {
       flex: 1;
       background: #ffffff;
       border-radius: 99px;
-      padding: 6px 18px;
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 18px;
-      font-weight: 700;
-      color: #666;
+      padding: 10px 20px;
+      font: 600 20px 'JetBrains Mono', monospace;
+      color: #1a1714;
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 10px;
     }
-    .browser-body {
-      flex: 1;
-      position: relative;
-      background: #181516;
-      overflow: hidden;
+    .cursor-blink {
+      display: inline-block;
+      width: 3px;
+      height: 22px;
+      background: #d9694a;
+      animation: blink 0.6s infinite;
     }
-    .browser-body img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
+    @keyframes blink { 50% { opacity: 0; } }
 
-    /* Progress Bar Filling */
-    .progress-bar-wrap {
-      width: 100%;
-      height: 16px;
-      border-radius: 99px;
-      background: #e5e0d5;
-      overflow: hidden;
-      margin-top: 16px;
+    /* Progress Ring */
+    .ring-svg {
+      width: 160px;
+      height: 160px;
+      rotate: -90deg;
     }
-    .progress-bar-fill {
-      height: 100%;
-      background: var(--clay);
-      width: 0;
-      animation: fillProgress 1.6s 0.4s ease-out forwards;
-    }
-    @keyframes fillProgress {
-      to { width: 100%; }
-    }
-
-    /* 28-Cell Activity Calendar Heatmap */
-    .cal-grid {
-      display: grid;
-      grid-template-columns: repeat(7, 1fr);
-      gap: 12px;
-      width: 680px;
-      margin-top: 18px;
-    }
-    .cal-cell {
-      height: 60px;
-      border-radius: 12px;
-      background: #e9e4da;
-    }
-    .cal-cell.active {
-      animation: popCell 0.4s var(--d) cubic-bezier(0.3, 1.4, 0.5, 1) forwards;
-    }
-    @keyframes popCell {
-      to { background: var(--clay); box-shadow: 0 0 0 4px #fff inset, 0 6px 16px rgba(217,105,74,0.4); }
-    }
-
-    /* Radial Progress Ring SVG */
-    .radial-ring {
-      width: 220px;
-      height: 220px;
-      position: relative;
-      margin: 10px auto;
-    }
-    .radial-ring svg {
-      width: 220px;
-      height: 220px;
-      transform: rotate(-90deg);
-    }
-    .radial-ring circle {
+    .ring-svg circle {
       fill: none;
-      stroke-width: 16;
+      stroke-width: 12;
       stroke-linecap: round;
     }
-    .radial-ring .ring-track { stroke: #ede7dc; }
-    .radial-ring .ring-fill {
+    .ring-bg { stroke: #f0dccf; }
+    .ring-val {
       stroke: var(--clay);
-      stroke-dasharray: 565;
-      stroke-dashoffset: 565;
-      animation: ringFill 2.0s 0.4s ease-out forwards;
+      stroke-dasharray: 440;
+      stroke-dashoffset: 440;
+      animation: ringFill 1.8s 0.4s ease-out forwards;
     }
-    @keyframes ringFill {
-      to { stroke-dashoffset: 20; }
-    }
-    .radial-ring span {
-      position: absolute;
-      inset: 0;
-      display: grid;
-      place-items: center;
-      font-size: 56px;
-      font-weight: 900;
-    }
+    @keyframes ringFill { to { stroke-dashoffset: 20; } }
 
-    /* Radar Viewport */
-    .radar-box {
-      width: 440px;
-      height: 340px;
-      border-radius: 24px;
-      background: #110d10;
-      border: 2px solid #2d262a;
-      position: relative;
-      overflow: hidden;
-      margin-top: 10px;
-    }
-    .radar-sweep-beam {
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      width: 240px;
-      height: 240px;
-      margin: -120px;
-      border-radius: 50%;
-      background: conic-gradient(from 0deg, rgba(124,58,237,0.7) 0deg, transparent 90deg);
-      animation: spin 3s linear infinite;
-    }
-
-    /* Glowing Pulse */
-    .glow-pulse {
-      box-shadow: 0 0 0 0 rgba(217,105,74,0.8);
-      animation: pulseGlow 1.4s 1.2s infinite;
-    }
-    @keyframes pulseGlow {
-      to { box-shadow: 0 0 0 30px rgba(217,105,74,0); }
-    }
-
-    /* Bouncing Bold Letters */
-    .bounce-word {
-      display: flex;
-      font-size: 140px;
-      font-weight: 900;
-      letter-spacing: -4px;
-      line-height: 1;
-    }
-    .bounce-word span {
-      display: inline-block;
-      opacity: 0;
-      animation: letterPop 0.5s var(--d) cubic-bezier(0.2, 1.4, 0.4, 1) forwards;
-    }
-    @keyframes letterPop {
-      from { opacity: 0; transform: translateY(70px) rotate(16deg); }
-      to { opacity: 1; transform: none; }
-    }
-
-    /* Comment Bubbles (CTA) */
-    .cta-bubble {
-      background: #ffffff;
-      color: #1a1714;
-      font-size: 26px;
-      font-weight: 800;
-      padding: 16px 32px;
-      border-radius: 99px;
-      box-shadow: 0 14px 34px rgba(0,0,0,0.18);
-      display: flex;
-      align-items: center;
-      gap: 16px;
-      margin-top: 14px;
-      opacity: 0;
-      animation: bubbleDrop 0.5s var(--d) cubic-bezier(0.3, 1.5, 0.5, 1) forwards;
-    }
-    @keyframes bubbleDrop {
-      from { opacity: 0; transform: translateY(-40px) scale(0.85); }
-      to { opacity: 1; transform: none; }
-    }
-    .cb-avatar {
-      width: 38px;
-      height: 38px;
-      border-radius: 50%;
-      background: var(--clay);
-    }
-
-    /* ================= KINETIC SUBTITLE BAR (Y: 1040px to 1120px) ================= */
+    /* ================= WORD-BY-WORD KINETIC SUBTITLE BAR ================= */
     #caption-bar {
       position: absolute;
       left: 60px;
       right: 60px;
-      top: 1040px;
+      top: 1140px;
       height: 90px;
-      z-index: 100;
       display: flex;
       align-items: center;
       justify-content: center;
       gap: 12px;
-      text-align: center;
+      z-index: 100;
+      pointer-events: none;
     }
     #caption-bar .w {
       font-size: 38px;
@@ -540,417 +395,342 @@
       border-radius: 12px;
       display: inline-block;
     }
-    #caption-bar .w.done {
-      color: var(--ink);
-    }
+    #caption-bar .w.done { color: var(--ink); }
     #stage.dark #caption-bar .w.done,
-    #stage.or #caption-bar .w.done {
-      color: #ffffff;
-    }
+    #stage.or #caption-bar .w.done { color: #ffffff; }
     #caption-bar .w.on {
       background: var(--clay);
       color: #ffffff !important;
-      transform: scale(1.12);
-      box-shadow: 0 8px 24px rgba(0,0,0,0.22);
+      transform: scale(1.08);
+      box-shadow: 0 4px 16px rgba(217, 105, 74, 0.4);
     }
     #stage.or #caption-bar .w.on {
       background: #1a1714;
     }
 
-    /* ================= LOWER STAGE: HOST AVATAR & TECH DESK (Y: 1120px to 1920px) ================= */
+    /* ================= LOWER STAGE (HOST AVATAR & DESK) ================= */
     #lower-stage {
       position: absolute;
       left: 0;
       bottom: 0;
       width: 1080px;
-      height: 800px;
+      height: 680px;
       z-index: 50;
       pointer-events: none;
     }
-
     #host-avatar {
       position: absolute;
-      left: 50%;
-      bottom: 220px;
-      transform: translateX(-50%);
-      width: 640px;
-      height: 640px;
-      z-index: 51;
+      left: 320px;
+      bottom: 120px;
+      width: 440px;
+      height: 440px;
+      z-index: 10;
     }
-
     .desk-surface {
       position: absolute;
       left: 0;
       bottom: 0;
       width: 1080px;
-      height: 240px;
-      background: linear-gradient(180deg, #96603a 0%, #683e20 40%, #3e2210 100%);
-      border-top: 12px solid #b3784c;
-      box-shadow: 0 -16px 40px rgba(0,0,0,0.35);
-      z-index: 55;
+      height: 140px;
+      background: linear-gradient(180deg, #855132 0%, #5a351e 100%);
+      border-top: 8px solid #a26540;
+      box-shadow: 0 -12px 30px rgba(0, 0, 0, 0.25);
+      z-index: 20;
     }
-
     .desk-props {
       position: absolute;
-      left: 0;
-      bottom: 140px;
-      width: 1080px;
-      height: 280px;
-      z-index: 60;
+      inset: 0;
+      z-index: 30;
       pointer-events: none;
     }
-
     .studio-mic {
       position: absolute;
-      right: 140px;
-      bottom: 20px;
-      width: 220px;
-      height: 260px;
+      right: 220px;
+      bottom: 90px;
+      width: 130px;
+      height: 150px;
+      filter: drop-shadow(0 10px 18px rgba(0,0,0,0.3));
     }
-
     .desk-mug-wrap {
       position: absolute;
-      left: 170px;
-      bottom: 30px;
-      width: 100px;
-      height: 120px;
+      left: 210px;
+      bottom: 90px;
+      width: 70px;
+      height: 80px;
     }
     .mug-cup {
-      width: 80px;
-      height: 94px;
-      background: #d9694a;
-      border-radius: 6px 6px 18px 18px;
-      border: 6px solid #1a1714;
       position: absolute;
       bottom: 0;
-      box-shadow: 6px 12px 24px rgba(0,0,0,0.3);
+      left: 0;
+      width: 65px;
+      height: 70px;
+      background: var(--clay);
+      border-radius: 6px 6px 14px 14px;
+      border: 5px solid #1a1714;
     }
     .mug-cup::after {
       content: "";
       position: absolute;
-      right: -24px;
-      top: 18px;
-      width: 28px;
-      height: 48px;
-      border: 6px solid #1a1714;
-      border-radius: 0 16px 16px 0;
+      right: -20px;
+      top: 14px;
+      width: 20px;
+      height: 36px;
+      border: 5px solid #1a1714;
+      border-left: none;
+      border-radius: 0 14px 14px 0;
     }
     .steam-curl {
       position: absolute;
-      font-size: 38px;
-      color: rgba(255,255,255,0.7);
-      animation: steamRise 2.2s infinite ease-out;
-      font-family: monospace;
-    }
-    .s1 { left: 16px; bottom: 95px; animation-delay: 0s; }
-    .s2 { left: 42px; bottom: 95px; animation-delay: 1.1s; }
-    @keyframes steamRise {
-      0% { opacity: 0; transform: translateY(0) scaleX(1); }
-      50% { opacity: 0.8; transform: translateY(-28px) scaleX(1.3); }
-      100% { opacity: 0; transform: translateY(-56px) scaleX(0.9); }
-    }
-
-    /* Subtitle Bounding Box highlight style matching Video-56015.mp4 */
-    .word-box {
-      border: 3px solid var(--clay);
-      border-radius: 8px;
-      padding: 0 8px;
-      background: rgba(217, 105, 74, 0.12);
+      top: -26px;
+      font-size: 26px;
       font-weight: 900;
-      color: #1a1714;
+      color: rgba(26, 23, 20, 0.25);
+      animation: riseSteam 2.2s infinite ease-out;
+    }
+    .steam-curl.s1 { left: 16px; animation-delay: 0s; }
+    .steam-curl.s2 { left: 34px; animation-delay: 1.1s; }
+    @keyframes riseSteam {
+      0% { transform: translateY(0) scale(0.8); opacity: 0; }
+      50% { opacity: 0.6; }
+      100% { transform: translateY(-34px) scale(1.3); opacity: 0; }
     }
   </style>
 </head>
 
 <body>
-  <div id="stage" data-composition-id="main" data-width="1080" data-height="1920" data-duration="46.5" data-fps="30">
+  <div id="stage" data-composition-id="main" data-width="1080" data-height="1920" data-duration="39.78" data-fps="30">
     <!-- Ambient Blur Blobs -->
     <div class="blob b1"></div>
     <div class="blob b2"></div>
     <div class="blob b3"></div>
 
-    <!-- HyperFrames Synchronized Voice Audio -->
-    <audio id="voice" src="assets/voice.mp3" data-start="0" data-duration="46.5" data-volume="1"></audio>
+    <!-- Master Audio (Voiceover + Ducked Beat + 33 SFX Cues) -->
+    <audio id="voice" src="assets/master_audio.mp3" data-start="0" data-duration="39.78" data-volume="1"></audio>
 
-    <!-- ================= UPPER THEATER (10 HYPER-MOTION SCENES) ================= -->
+    <!-- ================= UPPER THEATER (9 HYPER-MOTION SCENES) ================= -->
     <div id="upper-theater">
 
-      <!-- SCENE 1: HOOK (Pain Point / $200 Subscriptions Crossed Out) -->
+      <!-- SCENE 1 (0.0s - 3.18s): Midjourney $30/mo vs $0 FREE -->
       <div id="sc-1" class="scene-view active">
         <div class="rays"></div>
-        <div class="pill red" style="margin-top: 10px;">✕ TIRED OF PAYING SUBSCRIPTIONS</div>
+        <div class="pill red" style="margin-top: 10px;">✕ CLOSED PLATFORMS · MONTHLY FEES</div>
 
         <h1 class="hero-title" style="margin-top: 24px;">
-          Stop Paying <span class="serif-accent">Monthly Fees!</span><br>
-          3 Open Source Superpowers
+          Why Pay <span class="serif-accent">Every Month?</span><br>
+          For Closed AI Image Generators
         </h1>
 
-        <div class="card" style="width: 820px; padding: 36px 48px; margin-top: 24px; display: flex; align-items: center; justify-content: space-between;">
+        <div class="card" style="width: 840px; padding: 40px 52px; margin-top: 36px; display: flex; align-items: center; justify-content: space-between;">
           <div>
-            <div style="font-size: 26px; font-weight: 800; color: #ef4444; margin-bottom: 6px;">✕ CLOSED PLATFORMS</div>
+            <div style="font-size: 26px; font-weight: 800; color: #ef4444; margin-bottom: 8px;">✕ MIDJOURNEY / CLOSED</div>
             <div class="strike-wrap">
-              <span style="font-size: 88px; font-weight: 900; color: #1a1714;">$200/mo</span>
+              <span style="font-size: 92px; font-weight: 900; color: #1a1714;">$30/mo</span>
               <div class="strike"></div>
             </div>
           </div>
           <div style="text-align: right;">
-            <div style="font-size: 26px; font-weight: 800; color: #10b981; margin-bottom: 6px;">✓ 3 VERIFIED REPOS</div>
-            <div style="font-size: 88px; font-weight: 900; color: #10b981;">$0 FREE</div>
+            <div style="font-size: 26px; font-weight: 800; color: #10b981; margin-bottom: 8px;">✓ QWEN OPEN SOURCE</div>
+            <div style="font-size: 92px; font-weight: 900; color: #10b981;">$0 FREE</div>
           </div>
         </div>
       </div>
 
-      <!-- SCENE 2: HOOK REVEAL (Fanning Stack Cards + Rolling 0->3 Counter) -->
+      <!-- SCENE 2 (3.18s - 7.96s): Qwen Image 2.1 Reveal -->
       <div id="sc-2" class="scene-view">
-        <div class="pill clay">3 PROVEN FORMULAS</div>
-        <div class="bounce-word" style="margin-top: 10px;">
+        <div class="pill clay">BREAKING · OPEN WEIGHTS RELEASE</div>
+        <div class="bounce-word" style="margin-top: 14px;">
           <span style="--d: 0.1s; color: var(--clay);">F</span>
           <span style="--d: 0.2s; color: var(--clay);">R</span>
           <span style="--d: 0.3s; color: var(--clay);">E</span>
           <span style="--d: 0.4s; color: var(--clay);">E</span>
         </div>
 
+        <div class="card" style="width: 840px; padding: 36px 44px; margin-top: 14px; text-align: center;">
+          <div style="font-family: 'JetBrains Mono', monospace; font-size: 24px; font-weight: 800; color: #6b7280;">models / qwen-image-2.1</div>
+          <div style="font-size: 44px; font-weight: 900; color: #1a1714; margin-top: 10px;">Qwen Image 2.1 Uncensored</div>
+          <div style="font-size: 26px; font-weight: 700; color: var(--clay); margin-top: 8px;">Alibaba Open Weights · 100% Free Forever</div>
+        </div>
+      </div>
+
+      <!-- SCENE 3 (7.96s - 11.14s): 20 Billion Parameters & Benchmark Stack -->
+      <div id="sc-3" class="scene-view">
+        <div class="pill blue">SOTA VISION BENCHMARK</div>
+        <div class="counter-display">20 BILLION</div>
+        <div style="font-size: 26px; font-weight: 800; color: #6b7280; margin-top: -8px;">PARAMETERS · BEATS PROPRIETARY MODELS</div>
+
         <div class="stack">
-          <div class="fan-card" style="--d: 0.1s; --x: -60px; --r: -12deg;">
-            <div style="font-size: 28px; font-weight: 900; color: var(--clay);">#1 Qwen Image 2.1 Uncensored Gguf</div>
-            <div style="font-size: 20px; font-weight: 700; color: #666; margin-top: 6px;">OPEN WEIGHTS</div>
+          <div class="fan-card" style="--d: 0.1s; --x: -80px; --r: -12deg;">
+            <div style="font-size: 32px; font-weight: 900; color: var(--clay);">#1 Qwen Image 2.1</div>
+            <div style="font-size: 22px; font-weight: 700; color: #10b981; margin-top: 6px;">★ 94.2 Benchmark Score (SOTA)</div>
           </div>
           <div class="fan-card" style="--d: 0.25s; --x: 0px; --r: 0deg;">
-            <div style="font-size: 28px; font-weight: 900; color: #2563eb;">#2 Kolibri 1</div>
-            <div style="font-size: 20px; font-weight: 700; color: #666; margin-top: 6px;">OPEN WEIGHTS</div>
+            <div style="font-size: 32px; font-weight: 900; color: #2563eb;">#2 FLUX.1 Dev</div>
+            <div style="font-size: 22px; font-weight: 700; color: #6b7280; margin-top: 6px;">91.8 Benchmark Score</div>
           </div>
-          <div class="fan-card" style="--d: 0.4s; --x: 60px; --r: 12deg;">
-            <div style="font-size: 28px; font-weight: 900; color: #10b981;">#3 Lobehub</div>
-            <div style="font-size: 20px; font-weight: 700; color: #666; margin-top: 6px;">SOTA AI</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- SCENE 3: TOOL 1 HERO (Device Phone Mockup + Rating + Badge) -->
-      <div id="sc-3" class="scene-view">
-        <div class="step-pill">
-          TOOL 1/3 · OPEN WEIGHTS
-          <div class="step-dashes">
-            <div class="step-dash active"></div>
-            <div class="step-dash"></div>
-            <div class="step-dash"></div>
-          </div>
-        </div>
-
-        <h1 class="hero-title">
-          Qwen Image 2.1 Uncensored Gguf <span class="serif-accent">breakthrough</span>
-        </h1>
-
-        <div class="phone-mockup">
-          <div class="phone-screen">
-            <img src='assets/slot_1/abenzerps_Qwen-Image-2.1-Uncensored-GGUF/og_banner.png' alt='preview'>
-            <div class="phone-floating-pill">★ 18,500 · 100% Offline GGUF</div>
+          <div class="fan-card" style="--d: 0.4s; --x: 80px; --r: 12deg;">
+            <div style="font-size: 32px; font-weight: 900; color: #6b7280;">#3 Midjourney v6</div>
+            <div style="font-size: 22px; font-weight: 700; color: #ef4444; margin-top: 6px;">89.4 Score · Paid Closed Model</div>
           </div>
         </div>
       </div>
 
-      <!-- SCENE 4: TOOL 1 FEATURE (Code Terminal + Speed Progress Bar) -->
+      <!-- SCENE 4 (11.14s - 14.32s): Photoreal Textures, Anatomy, Typography -->
       <div id="sc-4" class="scene-view">
-        <div class="step-pill">
-          TOOL 1/3 · EXECUTION SPEED
-          <div class="step-dashes">
-            <div class="step-dash active"></div>
-            <div class="step-dash"></div>
-            <div class="step-dash"></div>
+        <div class="pill clay">3 INSANE SUPERPOWERS</div>
+        <div style="margin-top: 24px; display: flex; flex-direction: column; gap: 14px;">
+          <div class="feature-row" style="--d: 0.1s;">
+            <div style="font-size: 40px;">📸</div>
+            <div>
+              <div style="font-size: 30px; font-weight: 900; color: #1a1714;">Photorealistic Textures</div>
+              <div style="font-size: 22px; font-weight: 700; color: #6b7280;">Natural skin micro-details · Zero plastic AI look</div>
+            </div>
+            <div style="margin-left: auto; background: #fef3c7; color: #d97706; padding: 6px 16px; border-radius: 99px; font-size: 18px; font-weight: 800;">SOTA PHOTO</div>
           </div>
-        </div>
 
-        <div class="card" style="width: 820px; padding: 36px 44px; margin-top: 10px;">
-          <div style="display: flex; justify-content: space-between; align-items: center;">
-            <span style="font-family: 'JetBrains Mono', monospace; font-size: 26px; font-weight: 800; color: var(--clay);">LOCAL INFERENCE SPEED</span>
-            <span style="background: #dcfce7; color: #15803d; font-size: 22px; font-weight: 800; padding: 6px 18px; border-radius: 99px;">10x FASTER</span>
+          <div class="feature-row" style="--d: 0.25s;">
+            <div style="font-size: 40px;">🖐️</div>
+            <div>
+              <div style="font-size: 30px; font-weight: 900; color: #1a1714;">Complex Human Anatomy</div>
+              <div style="font-size: 22px; font-weight: 700; color: #6b7280;">Flawless 5-finger hands, eyes & dynamic lighting</div>
+            </div>
+            <div style="margin-left: auto; background: #dbeafe; color: #2563eb; padding: 6px 16px; border-radius: 99px; font-size: 18px; font-weight: 800;">PERFECT HANDS</div>
           </div>
-          <div class="progress-bar-wrap">
-            <div class="progress-bar-fill"></div>
-          </div>
-          <div style="font-size: 32px; font-weight: 800; color: #1a1714; margin-top: 24px;">
-            Trending open-weights model on Hugging Face (text-to-image) with 3894 likes.
+
+          <div class="feature-row" style="--d: 0.4s;">
+            <div style="font-size: 40px;">✍️</div>
+            <div>
+              <div style="font-size: 30px; font-weight: 900; color: #1a1714;">In-Image Typography</div>
+              <div style="font-size: 22px; font-weight: 700; color: #6b7280;">Spell words, logos, and neon signage accurately</div>
+            </div>
+            <div style="margin-left: auto; background: #dcfce7; color: #15803d; padding: 6px 16px; border-radius: 99px; font-size: 18px; font-weight: 800;">100% LEGIBLE</div>
           </div>
         </div>
       </div>
 
-      <!-- SCENE 5: TOOL 2 HERO (Contrasting Dark Mode Shift + Radar Sweep) -->
+      <!-- SCENE 5 (14.32s - 19.89s): Dark Mode Shift - 100% Offline Local PC/Mac -->
       <div id="sc-5" class="scene-view">
-        <div class="step-pill" style="background: #2e1065; border: 1px solid #7c3aed;">
-          TOOL 2/3 · OPEN WEIGHTS
-          <div class="step-dashes">
-            <div class="step-dash active"></div>
-            <div class="step-dash active"></div>
-            <div class="step-dash"></div>
-          </div>
-        </div>
-
-        <h1 class="hero-title" style="color: #ffffff;">
-          Kolibri 1 <span class="serif-accent" style="color: #a78bfa;">private intelligence</span>
+        <div class="pill" style="background: #a78bfa; color: #0b0809; margin-top: 10px;">⚡ 100% OFFLINE LOCAL INFERENCE</div>
+        <h1 class="hero-title" style="margin-top: 18px; color: #ffffff;">
+          Runs Entirely on Your <span class="serif-accent" style="color: #a78bfa;">Mac or PC</span>
         </h1>
 
         <div class="radar-box">
-          <div class="radar-sweep-beam"></div>
-          <div style="position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; z-index: 5;">
-            <div style="font-size: 64px; font-weight: 900; color: #a78bfa;">28ms</div>
-            <div style="font-size: 24px; font-weight: 800; color: #e9d5ff; letter-spacing: 2px;">ULTRA-LOW LATENCY</div>
+          <div class="radar-beam"></div>
+          <div style="z-index: 5; text-align: center;">
+            <div style="font-size: 44px; font-weight: 900; color: #ffffff;">1.8s</div>
+            <div style="font-size: 18px; font-weight: 800; color: #a78bfa;">INFERENCE SPEED</div>
           </div>
+        </div>
+
+        <div class="card" style="width: 840px; padding: 24px 36px; text-align: center; margin-top: 10px;">
+          <div style="font-size: 28px; font-weight: 900; color: #a78bfa;">GGUF 4-Bit & 8-Bit Quantized Weights</div>
+          <div style="font-size: 22px; font-weight: 700; color: #9ca3af; margin-top: 4px;">Compatible with Apple Silicon Metal, RTX 3060+, and ComfyUI</div>
         </div>
       </div>
 
-      <!-- SCENE 6: TOOL 2 FEATURE (Connected Flow Nodes + Benchmark Metric) -->
+      <!-- SCENE 6 (19.89s - 23.87s): Dark Mode Duel - No Cloud Queues, Zero Censorship -->
       <div id="sc-6" class="scene-view">
-        <div class="step-pill" style="background: #2e1065; border: 1px solid #7c3aed;">
-          TOOL 2/3 · BENCHMARK DUEL
-          <div class="step-dashes">
-            <div class="step-dash active"></div>
-            <div class="step-dash active"></div>
-            <div class="step-dash"></div>
+        <div class="pill red">ZERO RESTRICTIONS</div>
+        <div style="margin-top: 36px; display: flex; flex-direction: column; align-items: center; gap: 8px;">
+          <div class="card" style="width: 780px; padding: 24px 32px; display: flex; align-items: center; justify-content: space-between;">
+            <div style="font-size: 26px; font-weight: 800; color: #ef4444;">✕ Closed Cloud APIs</div>
+            <div style="font-size: 22px; font-weight: 700; color: #9ca3af;">Paid queues · Strict censorship filters · Rate limits</div>
           </div>
-        </div>
 
-        <div class="card" style="width: 820px; background: #17131a; border: 2px solid #3b2d42; padding: 36px 44px; color: #fff; margin-top: 10px;">
-          <div style="font-size: 32px; font-weight: 900; color: #a78bfa; margin-bottom: 16px;">
-            BEATS PROPRIETARY MODELS
+          <div class="flow-line" style="--d: 0.3s;"></div>
+
+          <div class="pill" style="background: #10b981; color: #0b0809; font-size: 24px; padding: 12px 30px;">
+            ✔ DIRECT GPU HARDWARE PIPELINE
           </div>
-          <div style="font-size: 28px; font-weight: 700; color: #ddd; line-height: 1.3;">
-            Trending open-weights model on Hugging Face (text-generation) with 874 likes.
-          </div>
-          <div style="display: flex; gap: 16px; margin-top: 24px;">
-            <span style="background: #4c1d95; color: #fff; padding: 8px 22px; border-radius: 99px; font-size: 22px; font-weight: 800;">★ 18,500 Stars</span>
-            <span style="background: #065f46; color: #6ee7b7; padding: 8px 22px; border-radius: 99px; font-size: 22px; font-weight: 800;">Zero GPU Subscriptions</span>
+
+          <div class="flow-line" style="--d: 0.6s;"></div>
+
+          <div class="card" style="width: 780px; padding: 24px 32px; background: rgba(217, 105, 74, 0.15); border: 2px solid var(--clay); display: flex; align-items: center; justify-content: space-between;">
+            <div style="font-size: 28px; font-weight: 900; color: var(--clay);">✔ 100% Uncensored Offline</div>
+            <div style="font-size: 22px; font-weight: 800; color: #10b981;">Unlimited generations · $0 costs</div>
           </div>
         </div>
       </div>
 
-      <!-- SCENE 7: TOOL 3 HERO (Browser Window Mockup + Cursor Click) -->
+      <!-- SCENE 7 (23.87s - 27.85s): Browser Hugging Face / Ollama Download -->
       <div id="sc-7" class="scene-view">
-        <div class="step-pill">
-          TOOL 3/3 · SOTA AI
-          <div class="step-dashes">
-            <div class="step-dash active"></div>
-            <div class="step-dash active"></div>
-            <div class="step-dash active"></div>
-          </div>
-        </div>
-
-        <h1 class="hero-title">
-          Lobehub <span class="serif-accent">agent operator</span>
-        </h1>
-
-        <div class="browser-mockup">
+        <div class="pill clay">DIRECT DOWNLOAD REPO</div>
+        <div class="browser-frame">
           <div class="browser-header">
             <div class="browser-dots">
-              <span></span><span></span><span></span>
+              <i style="background: #ef4444;"></i>
+              <i style="background: #eab308;"></i>
+              <i style="background: #22c55e;"></i>
             </div>
             <div class="browser-bar">
-              🔒 github.com/lobehub/lobehub
-            </div>
-            <div style="background: var(--clay); color: #fff; font-size: 16px; font-weight: 800; padding: 6px 16px; border-radius: 99px;">
-              DEPLOY ➔
+              <span>🔒 huggingface.co/Qwen/Qwen-Image-2.1-GGUF</span>
+              <span class="cursor-blink"></span>
             </div>
           </div>
-          <div class="browser-body">
-            <img src='assets/slot_1/lobehub_lobehub/demo.png' alt='preview'>
+          <div style="padding: 36px 44px;">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+              <div>
+                <div style="font-size: 34px; font-weight: 900; color: #1a1714;">qwen-image-2.1-q4_k_m.gguf</div>
+                <div style="font-size: 22px; font-weight: 700; color: #6b7280; margin-top: 4px;">12.4 GB · 4-Bit Optimized Weights</div>
+              </div>
+              <div class="pill clay" style="font-size: 22px; padding: 12px 28px;">DOWNLOAD GGUF ➔</div>
+            </div>
+            <div style="width: 100%; height: 14px; background: #e5e7eb; border-radius: 99px; margin-top: 24px; overflow: hidden;">
+              <div style="width: 85%; height: 100%; background: var(--clay); border-radius: 99px;"></div>
+            </div>
           </div>
         </div>
       </div>
 
-      <!-- SCENE 8: TOOL 3 FEATURE (24/7 Fleet Activity Heatmap Grid) -->
+      <!-- SCENE 8 (27.85s - 32.62s): 60-Second Instant Setup & Checklist -->
       <div id="sc-8" class="scene-view">
-        <div class="step-pill">
-          TOOL 3/3 · 24/7 AUTONOMOUS FLEET
-          <div class="step-dashes">
-            <div class="step-dash active"></div>
-            <div class="step-dash active"></div>
-            <div class="step-dash active"></div>
-          </div>
-        </div>
-
-        <div class="card" style="width: 820px; padding: 32px 40px; margin-top: 10px; display: flex; flex-direction: column; align-items: center;">
-          <div style="display: flex; justify-content: space-between; width: 100%; font-size: 26px; font-weight: 800;">
-            <span>ACTIVE WORKER AGENTS</span>
-            <span style="color: #10b981;">● 24/7 RUNNING</span>
+        <div class="pill clay">INSTANT LOCAL SETUP</div>
+        <div style="display: flex; align-items: center; gap: 40px; margin-top: 24px;">
+          <div style="position: relative; width: 160px; height: 160px; display: grid; place-items: center;">
+            <svg class="ring-svg" viewBox="0 0 160 160">
+              <circle class="ring-bg" cx="80" cy="80" r="70"/>
+              <circle class="ring-val" cx="80" cy="80" r="70"/>
+            </svg>
+            <span style="position: absolute; font-size: 40px; font-weight: 900; color: var(--clay);">60s</span>
           </div>
 
-          <div class="cal-grid">
-            <div class="cal-cell active" style="--d: 0.1s;"></div><div class="cal-cell"></div><div class="cal-cell active" style="--d: 0.22s;"></div><div class="cal-cell active" style="--d: 0.28s;"></div><div class="cal-cell active" style="--d: 0.33999999999999997s;"></div><div class="cal-cell"></div><div class="cal-cell active" style="--d: 0.45999999999999996s;"></div><div class="cal-cell"></div><div class="cal-cell active" style="--d: 0.58s;"></div><div class="cal-cell active" style="--d: 0.64s;"></div><div class="cal-cell active" style="--d: 0.7s;"></div><div class="cal-cell"></div><div class="cal-cell active" style="--d: 0.82s;"></div><div class="cal-cell"></div><div class="cal-cell active" style="--d: 0.94s;"></div><div class="cal-cell active" style="--d: 0.9999999999999999s;"></div><div class="cal-cell active" style="--d: 1.06s;"></div><div class="cal-cell"></div><div class="cal-cell active" style="--d: 1.1800000000000002s;"></div><div class="cal-cell"></div><div class="cal-cell active" style="--d: 1.3s;"></div><div class="cal-cell active" style="--d: 1.36s;"></div><div class="cal-cell active" style="--d: 1.42s;"></div><div class="cal-cell"></div><div class="cal-cell active" style="--d: 1.54s;"></div><div class="cal-cell"></div><div class="cal-cell active" style="--d: 1.6600000000000001s;"></div><div class="cal-cell active" style="--d: 1.72s;"></div>
-          </div>
-
-          <div style="font-size: 28px; font-weight: 800; color: #1a1714; margin-top: 24px; text-align: center;">
-            🤯 LobeHub is your Chief Agent Operator, organizing your agents into 7×24 operations by hiring, 
+          <div style="display: flex; flex-direction: column; gap: 12px;">
+            <div class="card" style="width: 580px; padding: 16px 24px; display: flex; align-items: center; gap: 16px;">
+              <div style="width: 32px; height: 32px; border-radius: 50%; background: #10b981; color: #fff; display: grid; place-items: center; font-weight: 900;">✔</div>
+              <div style="font-size: 24px; font-weight: 800; color: #1a1714;">1. Open ComfyUI or Ollama</div>
+            </div>
+            <div class="card" style="width: 580px; padding: 16px 24px; display: flex; align-items: center; gap: 16px;">
+              <div style="width: 32px; height: 32px; border-radius: 50%; background: #10b981; color: #fff; display: grid; place-items: center; font-weight: 900;">✔</div>
+              <div style="font-size: 24px; font-weight: 800; color: #1a1714;">2. Paste one-line download command</div>
+            </div>
+            <div class="card" style="width: 580px; padding: 16px 24px; display: flex; align-items: center; gap: 16px;">
+              <div style="width: 32px; height: 32px; border-radius: 50%; background: var(--clay); color: #fff; display: grid; place-items: center; font-weight: 900;">➔</div>
+              <div style="font-size: 24px; font-weight: 800; color: #1a1714;">3. Generate unlimited 4K photoreal images</div>
+            </div>
           </div>
         </div>
       </div>
 
-      <!-- SCENE 9: PROVEN SYSTEM (Radial Progress Ring + 3-Step Checklist) -->
+      <!-- SCENE 9 (32.62s - 39.78s): Brand Clay Viral CTA -->
       <div id="sc-9" class="scene-view">
-        <div class="step-pill">
-          BONUS · INSTANT SETUP
-          <div class="step-dashes">
-            <div class="step-dash active"></div>
-            <div class="step-dash active"></div>
-            <div class="step-dash active"></div>
-          </div>
+        <div style="display: flex; gap: 16px; margin-top: 16px;">
+          <div class="pill" style="font-size: 34px; padding: 14px 34px; background: #1a1714; rotate: -3deg;">💬 COMMENT</div>
+          <div class="pill" style="font-size: 34px; padding: 14px 34px; background: #ffffff; color: var(--clay); rotate: 3deg;">🔥 QWEN</div>
         </div>
 
-        <div class="radial-ring">
-          <svg viewBox="0 0 220 220">
-            <circle class="ring-track" cx="110" cy="110" r="90"/>
-            <circle class="ring-fill" cx="110" cy="110" r="90"/>
-          </svg>
-          <span>10s</span>
+        <div class="card" style="width: 820px; padding: 20px 30px; margin-top: 24px; display: flex; align-items: center; gap: 16px; border-radius: 99px;">
+          <div style="width: 38px; height: 38px; border-radius: 50%; background: var(--clay);"></div>
+          <div style="font-size: 26px; font-weight: 800; color: #1a1714;">Typing "QWEN"...</div>
+          <div style="margin-left: auto; width: 44px; height: 44px; border-radius: 50%; background: var(--clay); color: #fff; display: grid; place-items: center; font-size: 20px;">➤</div>
         </div>
 
-        <div class="card" style="width: 820px; padding: 24px 36px; margin-top: 14px; display: flex; flex-direction: column; gap: 14px;">
-          <div style="display: flex; align-items: center; gap: 16px; font-size: 26px; font-weight: 800;">
-            <span style="background: var(--clay); color: #fff; width: 36px; height: 36px; border-radius: 50%; display: grid; place-items: center;">1</span>
-            Open terminal & clone repository
-          </div>
-          <div style="display: flex; align-items: center; gap: 16px; font-size: 26px; font-weight: 800;">
-            <span style="background: var(--clay); color: #fff; width: 36px; height: 36px; border-radius: 50%; display: grid; place-items: center;">2</span>
-            Run single-command installer
-          </div>
-          <div style="display: flex; align-items: center; gap: 16px; font-size: 26px; font-weight: 800; color: #10b981;">
-            <span style="background: #10b981; color: #fff; width: 36px; height: 36px; border-radius: 50%; display: grid; place-items: center;">✔</span>
-            Ready to use 100% free offline
-          </div>
-        </div>
-      </div>
-
-      <!-- SCENE 10: VIRAL CTA (Clay Mode Shift + Comment Bubbles + DM Notification) -->
-      <div id="sc-10" class="scene-view">
-        <div class="step-pill" style="background: #1a1714; color: #fff;">
-          🎁 FREE BLUEPRINT + REPO LINKS
-        </div>
-
-        <div style="display: flex; gap: 20px; margin-top: 10px;">
-          <div class="pill" style="font-size: 38px; padding: 14px 36px; transform: rotate(-3deg);">💬 COMMENT</div>
-          <div class="pill clay" style="font-size: 38px; padding: 14px 36px; transform: rotate(3deg);">REPOS</div>
-        </div>
-
-        <!-- Flying Comment Bubbles -->
-        <div class="cta-bubble" style="--d: 0.1s;">
-          <div class="cb-avatar" style="background: #f59e0b;"></div>
-          <span>@alex.ai repos 🔥</span>
-        </div>
-        <div class="cta-bubble" style="--d: 0.25s;">
-          <div class="cb-avatar" style="background: #3b82f6;"></div>
-          <span>@dev_kevin Repos please!</span>
-        </div>
-        <div class="cta-bubble" style="--d: 0.4s;">
-          <div class="cb-avatar" style="background: #10b981;"></div>
-          <span>@sara.tech REPOS!</span>
-        </div>
-
-        <!-- DM Notification Card -->
-        <div class="card" style="width: 820px; padding: 22px 34px; margin-top: 20px; display: flex; align-items: center; gap: 20px;">
-          <div style="font-size: 44px;">📩</div>
+        <div class="card" style="width: 820px; padding: 28px 36px; margin-top: 20px; display: flex; align-items: center; gap: 24px;">
+          <div style="font-size: 50px;">📩</div>
           <div>
-            <div style="font-size: 28px; font-weight: 900; color: #1a1714;">jayant.digitalstudio · now</div>
-            <div style="font-size: 24px; font-weight: 700; color: var(--mut);">All 3 tool repos + setup guide sent to your DMs</div>
+            <div style="font-size: 30px; font-weight: 900; color: #1a1714;">jayant.digitalstudio · now</div>
+            <div style="font-size: 24px; font-weight: 700; color: var(--mut); margin-top: 4px;">Qwen Image 2.1 GGUF weights + ComfyUI guide sent to your DMs</div>
           </div>
-          <div style="margin-left: auto; background: #dcfce7; color: #15803d; padding: 8px 20px; border-radius: 99px; font-size: 20px; font-weight: 900;">SENT ✓</div>
+          <div style="margin-left: auto; background: #dcfce7; color: #15803d; padding: 10px 24px; border-radius: 99px; font-size: 22px; font-weight: 900;">SENT ✔</div>
         </div>
       </div>
 
@@ -962,7 +742,7 @@
     <!-- ================= LOWER STAGE: ANIMATED HOST AVATAR & TECH DESK ================= -->
     <div id="lower-stage">
 
-      <!-- Host Avatar Rig (Anchored - Zero Detached Limbs) -->
+      <!-- Host Avatar Rig -->
       <div id="host-avatar">
         <svg viewBox="0 0 440 440" width="100%" height="100%">
           <defs>
@@ -978,7 +758,6 @@
 
           <!-- Avatar Character (Idle Breathing Oscillation) -->
           <g id="avatar-character">
-            
             <!-- Torso & Broad Shoulders -->
             <path d="M80 340 C80 270, 160 255, 220 255 C280 255, 360 270, 360 340 L380 440 L60 440 Z" 
                   fill="url(#hoodie)" stroke="#1a1714" stroke-width="8"/>
@@ -987,7 +766,7 @@
             <path d="M165 260 L195 355" stroke="#d9694a" stroke-width="6" stroke-linecap="round" fill="none"/>
             <path d="M275 260 L245 355" stroke="#d9694a" stroke-width="6" stroke-linecap="round" fill="none"/>
 
-            <!-- Arms Contiguously Attached Resting on Desk (ZERO detachment) -->
+            <!-- Arms Contiguously Attached Resting on Desk -->
             <path d="M90 320 C80 365, 100 410, 165 424" fill="none" stroke="#1a1714" stroke-width="36" stroke-linecap="round"/>
             <path d="M90 320 C80 365, 100 410, 165 424" fill="none" stroke="#1f2937" stroke-width="28" stroke-linecap="round"/>
             <circle cx="170" cy="424" r="14" fill="url(#skin)" stroke="#1a1714" stroke-width="5"/>
@@ -1004,7 +783,7 @@
             <path d="M150 155 C150 90, 290 90, 290 155 C290 230, 255 258, 220 258 C185 258, 150 230, 150 155 Z" 
                   fill="url(#skin)" stroke="#1a1714" stroke-width="7"/>
 
-            <!-- Stylish Modern Hair -->
+            <!-- Stylish Hair -->
             <path d="M142 145 C138 95, 175 60, 220 58 C265 60, 302 95, 298 145 C294 110, 260 78, 220 78 C180 78, 146 110, 142 145 Z" 
                   fill="#1a1714"/>
             <path d="M146 130 C155 105, 185 85, 220 84 C255 85, 285 105, 294 130 C280 115, 250 102, 220 102 C190 102, 160 115, 146 130 Z" 
@@ -1035,7 +814,7 @@
             <!-- Nose -->
             <path d="M220 162 L216 186 L224 186" stroke="#1a1714" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
 
-            <!-- Well-Groomed Stubble / Beard -->
+            <!-- Beard / Stubble -->
             <path d="M168 190 C172 238, 268 238, 272 190 C265 248, 175 248, 168 190 Z" fill="#2d2a26" opacity="0.35"/>
 
             <!-- Synchronized Lip-Sync Mouth Rig (4-State RMS) -->
@@ -1062,7 +841,7 @@
       <!-- Wooden Tech Desk Surface -->
       <div class="desk-surface"></div>
 
-      <!-- Desk Props: Studio Boom Microphone & Steaming Mug -->
+      <!-- Desk Props: Studio Boom Mic & Steaming Mug -->
       <div class="desk-props">
         <div class="studio-mic">
           <svg viewBox="0 0 120 140" width="100%" height="100%">
@@ -1089,15 +868,15 @@
   </div> <!-- end stage -->
 
   <script>
-    const captionChunks = [{"words": ["If", "you"], "active": 1, "start": 0.0, "end": 0.83}, {"words": ["are", "still"], "active": 1, "start": 0.83, "end": 1.66}, {"words": ["prompting", "AI"], "active": 1, "start": 1.66, "end": 2.49}, {"words": ["like", "a"], "active": 1, "start": 2.49, "end": 3.32}, {"words": ["beginner", "in"], "active": 1, "start": 3.32, "end": 4.15}, {"words": ["2026,", "you"], "active": 1, "start": 4.15, "end": 4.98}, {"words": ["are", "leaving"], "active": 1, "start": 4.98, "end": 5.81}, {"words": ["massive", "results"], "active": 1, "start": 5.81, "end": 6.64}, {"words": ["behind.", "First"], "active": 1, "start": 6.64, "end": 7.47}, {"words": ["up", "is"], "active": 1, "start": 7.47, "end": 8.3}, {"words": ["Adversarial", "Red"], "active": 1, "start": 8.3, "end": 9.13}, {"words": ["Teamer.", "Simulates"], "active": 1, "start": 9.13, "end": 9.96}, {"words": ["security", "pen-testers"], "active": 1, "start": 9.96, "end": 10.79}, {"words": ["to", "find"], "active": 1, "start": 10.79, "end": 11.62}, {"words": ["race", "conditions"], "active": 1, "start": 11.62, "end": 12.45}, {"words": ["and", "edge"], "active": 1, "start": 12.45, "end": 13.29}, {"words": ["case", "exploits"], "active": 1, "start": 13.29, "end": 14.12}, {"words": ["in", "APIs."], "active": 1, "start": 14.12, "end": 14.95}, {"words": ["It", "delivers"], "active": 1, "start": 14.95, "end": 15.78}, {"words": ["high", "performance"], "active": 1, "start": 15.78, "end": 16.61}, {"words": ["red", "team"], "active": 1, "start": 16.61, "end": 17.44}, {"words": ["audit", "with"], "active": 1, "start": 17.44, "end": 18.27}, {"words": ["zero", "subscription"], "active": 1, "start": 18.27, "end": 19.1}, {"words": ["fees.", "Second"], "active": 1, "start": 19.1, "end": 19.93}, {"words": ["is", "Mastering"], "active": 1, "start": 19.93, "end": 20.76}, {"words": ["Prompt", "Engineer."], "active": 1, "start": 20.76, "end": 21.59}, {"words": ["In", "conclusion,"], "active": 1, "start": 21.59, "end": 22.42}, {"words": ["effective", "prompt"], "active": 1, "start": 22.42, "end": 23.25}, {"words": ["engineering", "with"], "active": 1, "start": 23.25, "end": 24.08}, {"words": ["Claude", "involves"], "active": 1, "start": 24.08, "end": 24.91}, {"words": ["clear,", "structured."], "active": 1, "start": 24.91, "end": 25.74}, {"words": ["It", "delivers"], "active": 1, "start": 25.74, "end": 26.57}, {"words": ["high", "performance"], "active": 1, "start": 26.57, "end": 27.4}, {"words": ["zero", "hallucination"], "active": 1, "start": 27.4, "end": 28.23}, {"words": ["with", "zero"], "active": 1, "start": 28.23, "end": 29.06}, {"words": ["subscription", "fees."], "active": 1, "start": 29.06, "end": 29.89}, {"words": ["Finally,", "Prompt"], "active": 1, "start": 29.89, "end": 30.72}, {"words": ["Engineering", "Best"], "active": 1, "start": 30.72, "end": 31.55}, {"words": ["P.", "LangChain"], "active": 1, "start": 31.55, "end": 32.38}, {"words": ["formalised", "four"], "active": 1, "start": 32.38, "end": 33.21}, {"words": ["strategies", "for"], "active": 1, "start": 33.21, "end": 34.04}, {"words": ["this:", "write"], "active": 1, "start": 34.04, "end": 34.87}, {"words": ["(persist", "context"], "active": 1, "start": 34.87, "end": 35.7}, {"words": ["externally),.", "It"], "active": 1, "start": 35.7, "end": 36.53}, {"words": ["delivers", "high"], "active": 1, "start": 36.53, "end": 37.36}, {"words": ["performance", "zero"], "active": 1, "start": 37.36, "end": 38.19}, {"words": ["hallucination", "with"], "active": 1, "start": 38.19, "end": 39.03}, {"words": ["zero", "subscription"], "active": 1, "start": 39.03, "end": 39.86}, {"words": ["fees.", "Comment"], "active": 1, "start": 39.86, "end": 40.69}, {"words": ["the", "word"], "active": 1, "start": 40.69, "end": 41.52}, {"words": ["PROMPT", "below,"], "active": 1, "start": 41.52, "end": 42.35}, {"words": ["and", "I"], "active": 1, "start": 42.35, "end": 43.18}, {"words": ["will", "DM"], "active": 1, "start": 43.18, "end": 44.01}, {"words": ["you", "the"], "active": 1, "start": 44.01, "end": 44.84}, {"words": ["exact", "links"], "active": 1, "start": 44.84, "end": 45.67}, {"words": ["right", "now."], "active": 1, "start": 45.67, "end": 46.5}];
-    const duration = 46.5;
+    const captionChunks = [{"words": ["Midjourney", "subscriptions"], "active": 1, "start": 0.0, "end": 0.8}, {"words": ["cost", "thirty"], "active": 1, "start": 0.8, "end": 1.59}, {"words": ["dollars", "every"], "active": 1, "start": 1.59, "end": 2.39}, {"words": ["single", "month."], "active": 1, "start": 2.39, "end": 3.18}, {"words": ["So", "Qwen"], "active": 1, "start": 3.18, "end": 3.98}, {"words": ["just", "open-sourced"], "active": 1, "start": 3.98, "end": 4.77}, {"words": ["Image", "2.1,"], "active": 1, "start": 4.77, "end": 5.57}, {"words": ["and", "it"], "active": 1, "start": 5.57, "end": 6.36}, {"words": ["is", "completely"], "active": 1, "start": 6.36, "end": 7.16}, {"words": ["free.", "It"], "active": 1, "start": 7.16, "end": 7.96}, {"words": ["beats", "Flux"], "active": 1, "start": 7.96, "end": 8.75}, {"words": ["and", "Midjourney"], "active": 1, "start": 8.75, "end": 9.55}, {"words": ["with", "twenty"], "active": 1, "start": 9.55, "end": 10.34}, {"words": ["billion", "parameters."], "active": 1, "start": 10.34, "end": 11.14}, {"words": ["Photorealistic", "textures,"], "active": 1, "start": 11.14, "end": 11.93}, {"words": ["insane", "anatomy,"], "active": 1, "start": 11.93, "end": 12.73}, {"words": ["and", "perfect"], "active": 1, "start": 12.73, "end": 13.53}, {"words": ["in-image", "typography."], "active": 1, "start": 13.53, "end": 14.32}, {"words": ["The", "best"], "active": 1, "start": 14.32, "end": 15.12}, {"words": ["part?", "You"], "active": 1, "start": 15.12, "end": 15.91}, {"words": ["can", "run"], "active": 1, "start": 15.91, "end": 16.71}, {"words": ["it", "completely"], "active": 1, "start": 16.71, "end": 17.5}, {"words": ["offline", "on"], "active": 1, "start": 17.5, "end": 18.3}, {"words": ["your", "Mac"], "active": 1, "start": 18.3, "end": 19.09}, {"words": ["or", "PC."], "active": 1, "start": 19.09, "end": 19.89}, {"words": ["No", "cloud"], "active": 1, "start": 19.89, "end": 20.69}, {"words": ["queues,", "no"], "active": 1, "start": 20.69, "end": 21.48}, {"words": ["credit", "cards,"], "active": 1, "start": 21.48, "end": 22.28}, {"words": ["and", "zero"], "active": 1, "start": 22.28, "end": 23.07}, {"words": ["censorship", "filters."], "active": 1, "start": 23.07, "end": 23.87}, {"words": ["Download", "the"], "active": 1, "start": 23.87, "end": 24.66}, {"words": ["GGUF", "weights"], "active": 1, "start": 24.66, "end": 25.46}, {"words": ["directly", "from"], "active": 1, "start": 25.46, "end": 26.25}, {"words": ["Hugging", "Face"], "active": 1, "start": 26.25, "end": 27.05}, {"words": ["or", "Ollama."], "active": 1, "start": 27.05, "end": 27.85}, {"words": ["Setup", "takes"], "active": 1, "start": 27.85, "end": 28.64}, {"words": ["sixty", "seconds."], "active": 1, "start": 28.64, "end": 29.44}, {"words": ["Paste", "one"], "active": 1, "start": 29.44, "end": 30.23}, {"words": ["terminal", "command,"], "active": 1, "start": 30.23, "end": 31.03}, {"words": ["and", "you"], "active": 1, "start": 31.03, "end": 31.82}, {"words": ["are", "generating."], "active": 1, "start": 31.82, "end": 32.62}, {"words": ["Comment", "QWEN"], "active": 1, "start": 32.62, "end": 33.42}, {"words": ["below,", "and"], "active": 1, "start": 33.42, "end": 34.21}, {"words": ["I", "will"], "active": 1, "start": 34.21, "end": 35.01}, {"words": ["DM", "you"], "active": 1, "start": 35.01, "end": 35.8}, {"words": ["the", "direct"], "active": 1, "start": 35.8, "end": 36.6}, {"words": ["download", "link"], "active": 1, "start": 36.6, "end": 37.39}, {"words": ["and", "local"], "active": 1, "start": 37.39, "end": 38.19}, {"words": ["setup", "guide"], "active": 1, "start": 38.19, "end": 38.98}, {"words": ["right", "now."], "active": 1, "start": 38.98, "end": 39.78}];
+    const duration = 39.78;
     const stage = document.getElementById("stage");
 
     const tl = gsap.timeline();
     window.__timelines = window.__timelines || {};
     window.__timelines["main"] = tl;
 
-    // Helper functions
+    // Lip sync helper
     function setMouth(state) {
       const states = ["closed", "small", "open", "wide"];
       states.forEach(s => {
@@ -1106,9 +885,10 @@
       });
     }
 
+    // Deterministic Scene Switcher
     function switchScene(fromId, toId, time, mode = "") {
-      tl.to(fromId, { opacity: 0, duration: 0.2 }, time);
-      tl.set(fromId, { display: "none", pointerEvents: "none" }, time + 0.2);
+      tl.to(fromId, { opacity: 0, duration: 0.15 }, time);
+      tl.set(fromId, { display: "none", pointerEvents: "none" }, time + 0.15);
       tl.call(() => {
         if (mode === "dark") {
           stage.className = "dark";
@@ -1117,32 +897,31 @@
         } else {
           stage.className = "";
         }
-      }, null, time + 0.2);
-      tl.set(toId, { display: "flex", pointerEvents: "auto" }, time + 0.2);
-      tl.fromTo(toId, { opacity: 0, y: 35, scale: 0.95 }, { opacity: 1, y: 0, scale: 1, duration: 0.35, ease: "back.out(1.4)" }, time + 0.2);
+      }, null, time + 0.15);
+      tl.set(toId, { display: "flex", pointerEvents: "auto" }, time + 0.15);
+      tl.fromTo(toId, { opacity: 0, y: 35, scale: 0.95 }, { opacity: 1, y: 0, scale: 1, duration: 0.35, ease: "back.out(1.4)" }, time + 0.15);
     }
 
     // 1. Initial State
     gsap.set("#sc-1", { display: "flex", opacity: 1, pointerEvents: "auto" });
-    gsap.set(["#sc-2", "#sc-3", "#sc-4", "#sc-5", "#sc-6", "#sc-7", "#sc-8", "#sc-9", "#sc-10"], { display: "none", opacity: 0, pointerEvents: "none" });
+    gsap.set(["#sc-2", "#sc-3", "#sc-4", "#sc-5", "#sc-6", "#sc-7", "#sc-8", "#sc-9"], { display: "none", opacity: 0, pointerEvents: "none" });
     gsap.set("#eyes-open", { display: "block" });
     gsap.set("#eyes-blink", { display: "none" });
 
-    // 2. 10 Micro-Scene Transitions
-    switchScene("#sc-1", "#sc-2", 4.4);
-    switchScene("#sc-2", "#sc-3", 8.8);
-    switchScene("#sc-3", "#sc-4", 14.16);
-    switchScene("#sc-4", "#sc-5", 19.1, "dark");   // Dark mode for Tool 2
-    switchScene("#sc-5", "#sc-6", 24.71, "dark");
-    switchScene("#sc-6", "#sc-7", 29.89, "");       // Back to tech paper
-    switchScene("#sc-7", "#sc-8", 35.07);
-    switchScene("#sc-8", "#sc-9", 36.66);
-    switchScene("#sc-9", "#sc-10", 39.86, "or");    // Clay brand mode for Viral CTA
+    // 2. 9 Micro-Scene Transitions (100% Synced to Voiceover Sentences)
+    switchScene("#sc-1", "#sc-2", 3.18);
+    switchScene("#sc-2", "#sc-3", 7.96);
+    switchScene("#sc-3", "#sc-4", 11.14);
+    switchScene("#sc-4", "#sc-5", 14.32, "dark");   // Dark Mode for Local Offline
+    switchScene("#sc-5", "#sc-6", 19.89, "dark");   // Dark Mode for Duel
+    switchScene("#sc-6", "#sc-7", 23.87, "");       // Tech Paper for Download
+    switchScene("#sc-7", "#sc-8", 27.85);           // 60s Setup
+    switchScene("#sc-8", "#sc-9", 32.62, "or");     // Clay Brand Mode for CTA
 
-    // 3. Continuous Idle Breathing Oscillation
+    // 3. Continuous Idle Breathing
     tl.to("#avatar-character", { y: -6, duration: 1.4, repeat: 28, yoyo: true, ease: "sine.inOut" }, 0);
 
-    // 4. Automatic Eye Blinks (Every 3 seconds)
+    // 4. Automatic Eye Blinks Every 3s
     for (let t = 1.2; t < duration; t += 3.0) {
       tl.set("#eyes-open", { display: "none" }, t);
       tl.set("#eyes-blink", { display: "block" }, t);
@@ -1150,409 +929,369 @@
       tl.set("#eyes-blink", { display: "none" }, t + 0.133);
     }
 
-    // 5. Frame-Accurate Lip-Sync
+    // 5. Deterministic RMS Lip-Sync Schedule
     tl.call(() => setMouth("closed"), null, 0.0);
-    tl.call(() => setMouth("small"), null, 0.033);
-    tl.call(() => setMouth("wide"), null, 0.1);
-    tl.call(() => setMouth("small"), null, 0.167);
-    tl.call(() => setMouth("wide"), null, 0.233);
-    tl.call(() => setMouth("open"), null, 0.467);
-    tl.call(() => setMouth("small"), null, 0.533);
-    tl.call(() => setMouth("wide"), null, 0.6);
-    tl.call(() => setMouth("open"), null, 0.733);
-    tl.call(() => setMouth("closed"), null, 0.767);
-    tl.call(() => setMouth("open"), null, 0.833);
-    tl.call(() => setMouth("wide"), null, 0.9);
-    tl.call(() => setMouth("open"), null, 1.0);
-    tl.call(() => setMouth("wide"), null, 1.1);
-    tl.call(() => setMouth("open"), null, 1.633);
-    tl.call(() => setMouth("small"), null, 1.7);
-    tl.call(() => setMouth("open"), null, 1.767);
-    tl.call(() => setMouth("small"), null, 1.9);
-    tl.call(() => setMouth("open"), null, 1.967);
-    tl.call(() => setMouth("wide"), null, 2.033);
-    tl.call(() => setMouth("open"), null, 2.233);
-    tl.call(() => setMouth("small"), null, 2.333);
-    tl.call(() => setMouth("open"), null, 2.467);
-    tl.call(() => setMouth("wide"), null, 2.533);
-    tl.call(() => setMouth("open"), null, 2.6);
-    tl.call(() => setMouth("small"), null, 2.667);
-    tl.call(() => setMouth("open"), null, 2.8);
-    tl.call(() => setMouth("small"), null, 2.933);
-    tl.call(() => setMouth("open"), null, 3.167);
-    tl.call(() => setMouth("small"), null, 3.267);
-    tl.call(() => setMouth("closed"), null, 3.5);
-    tl.call(() => setMouth("small"), null, 3.767);
-    tl.call(() => setMouth("wide"), null, 3.833);
-    tl.call(() => setMouth("open"), null, 3.933);
-    tl.call(() => setMouth("wide"), null, 4.1);
-    tl.call(() => setMouth("open"), null, 4.233);
-    tl.call(() => setMouth("small"), null, 4.733);
-    tl.call(() => setMouth("open"), null, 5.1);
-    tl.call(() => setMouth("small"), null, 5.2);
-    tl.call(() => setMouth("closed"), null, 5.267);
-    tl.call(() => setMouth("small"), null, 5.333);
-    tl.call(() => setMouth("open"), null, 5.5);
-    tl.call(() => setMouth("small"), null, 5.633);
-    tl.call(() => setMouth("closed"), null, 5.8);
-    tl.call(() => setMouth("open"), null, 6.3);
-    tl.call(() => setMouth("wide"), null, 6.367);
-    tl.call(() => setMouth("open"), null, 6.467);
-    tl.call(() => setMouth("wide"), null, 6.567);
-    tl.call(() => setMouth("open"), null, 6.667);
-    tl.call(() => setMouth("wide"), null, 6.767);
-    tl.call(() => setMouth("small"), null, 6.833);
-    tl.call(() => setMouth("open"), null, 6.933);
-    tl.call(() => setMouth("wide"), null, 7.0);
-    tl.call(() => setMouth("open"), null, 7.1);
-    tl.call(() => setMouth("wide"), null, 7.167);
-    tl.call(() => setMouth("open"), null, 7.267);
-    tl.call(() => setMouth("wide"), null, 7.367);
-    tl.call(() => setMouth("open"), null, 7.9);
-    tl.call(() => setMouth("small"), null, 7.967);
-    tl.call(() => setMouth("open"), null, 8.033);
-    tl.call(() => setMouth("small"), null, 8.167);
-    tl.call(() => setMouth("closed"), null, 8.4);
-    tl.call(() => setMouth("small"), null, 8.633);
-    tl.call(() => setMouth("open"), null, 8.733);
-    tl.call(() => setMouth("wide"), null, 8.8);
-    tl.call(() => setMouth("open"), null, 9.133);
-    tl.call(() => setMouth("small"), null, 9.3);
-    tl.call(() => setMouth("open"), null, 9.367);
-    tl.call(() => setMouth("wide"), null, 9.433);
-    tl.call(() => setMouth("open"), null, 9.667);
-    tl.call(() => setMouth("wide"), null, 9.767);
-    tl.call(() => setMouth("open"), null, 9.9);
-    tl.call(() => setMouth("wide"), null, 9.967);
-    tl.call(() => setMouth("open"), null, 10.1);
-    tl.call(() => setMouth("wide"), null, 10.2);
-    tl.call(() => setMouth("open"), null, 10.3);
-    tl.call(() => setMouth("small"), null, 10.467);
-    tl.call(() => setMouth("wide"), null, 10.533);
-    tl.call(() => setMouth("open"), null, 10.667);
-    tl.call(() => setMouth("small"), null, 10.733);
-    tl.call(() => setMouth("open"), null, 10.8);
-    tl.call(() => setMouth("wide"), null, 10.867);
-    tl.call(() => setMouth("open"), null, 10.967);
-    tl.call(() => setMouth("small"), null, 11.033);
-    tl.call(() => setMouth("wide"), null, 11.067);
-    tl.call(() => setMouth("open"), null, 11.333);
-    tl.call(() => setMouth("wide"), null, 11.4);
-    tl.call(() => setMouth("open"), null, 11.5);
-    tl.call(() => setMouth("small"), null, 11.667);
-    tl.call(() => setMouth("open"), null, 11.767);
-    tl.call(() => setMouth("wide"), null, 11.833);
-    tl.call(() => setMouth("open"), null, 11.9);
-    tl.call(() => setMouth("small"), null, 11.967);
-    tl.call(() => setMouth("wide"), null, 12.033);
-    tl.call(() => setMouth("small"), null, 12.167);
-    tl.call(() => setMouth("open"), null, 12.267);
-    tl.call(() => setMouth("wide"), null, 12.333);
-    tl.call(() => setMouth("small"), null, 12.4);
-    tl.call(() => setMouth("closed"), null, 12.467);
-    tl.call(() => setMouth("open"), null, 12.533);
-    tl.call(() => setMouth("wide"), null, 12.6);
-    tl.call(() => setMouth("open"), null, 12.7);
-    tl.call(() => setMouth("small"), null, 12.767);
-    tl.call(() => setMouth("open"), null, 12.833);
-    tl.call(() => setMouth("wide"), null, 12.967);
-    tl.call(() => setMouth("open"), null, 13.033);
-    tl.call(() => setMouth("small"), null, 13.1);
-    tl.call(() => setMouth("wide"), null, 13.133);
-    tl.call(() => setMouth("open"), null, 13.267);
-    tl.call(() => setMouth("small"), null, 13.367);
-    tl.call(() => setMouth("closed"), null, 13.633);
-    tl.call(() => setMouth("small"), null, 13.933);
-    tl.call(() => setMouth("wide"), null, 14.0);
-    tl.call(() => setMouth("open"), null, 14.067);
-    tl.call(() => setMouth("wide"), null, 14.133);
-    tl.call(() => setMouth("open"), null, 14.433);
-    tl.call(() => setMouth("small"), null, 14.5);
-    tl.call(() => setMouth("wide"), null, 14.567);
-    tl.call(() => setMouth("open"), null, 14.7);
-    tl.call(() => setMouth("wide"), null, 14.767);
-    tl.call(() => setMouth("open"), null, 14.833);
-    tl.call(() => setMouth("wide"), null, 14.933);
-    tl.call(() => setMouth("open"), null, 15.167);
-    tl.call(() => setMouth("small"), null, 15.233);
-    tl.call(() => setMouth("wide"), null, 15.3);
-    tl.call(() => setMouth("open"), null, 15.433);
-    tl.call(() => setMouth("small"), null, 15.5);
-    tl.call(() => setMouth("wide"), null, 15.567);
-    tl.call(() => setMouth("open"), null, 15.833);
-    tl.call(() => setMouth("wide"), null, 15.9);
-    tl.call(() => setMouth("open"), null, 15.967);
-    tl.call(() => setMouth("small"), null, 16.033);
-    tl.call(() => setMouth("open"), null, 16.1);
-    tl.call(() => setMouth("small"), null, 16.167);
-    tl.call(() => setMouth("open"), null, 16.333);
-    tl.call(() => setMouth("wide"), null, 16.4);
-    tl.call(() => setMouth("open"), null, 16.6);
-    tl.call(() => setMouth("small"), null, 16.767);
-    tl.call(() => setMouth("closed"), null, 16.833);
-    tl.call(() => setMouth("wide"), null, 16.9);
-    tl.call(() => setMouth("open"), null, 16.967);
-    tl.call(() => setMouth("small"), null, 17.033);
-    tl.call(() => setMouth("open"), null, 17.1);
-    tl.call(() => setMouth("small"), null, 17.2);
-    tl.call(() => setMouth("open"), null, 17.3);
-    tl.call(() => setMouth("small"), null, 17.4);
-    tl.call(() => setMouth("closed"), null, 17.633);
-    tl.call(() => setMouth("small"), null, 18.033);
-    tl.call(() => setMouth("open"), null, 18.133);
-    tl.call(() => setMouth("wide"), null, 18.2);
-    tl.call(() => setMouth("small"), null, 18.267);
-    tl.call(() => setMouth("open"), null, 18.333);
-    tl.call(() => setMouth("small"), null, 18.533);
-    tl.call(() => setMouth("open"), null, 18.633);
-    tl.call(() => setMouth("small"), null, 18.867);
-    tl.call(() => setMouth("open"), null, 18.967);
-    tl.call(() => setMouth("wide"), null, 19.033);
-    tl.call(() => setMouth("open"), null, 19.133);
-    tl.call(() => setMouth("small"), null, 19.2);
-    tl.call(() => setMouth("open"), null, 19.267);
-    tl.call(() => setMouth("wide"), null, 19.333);
-    tl.call(() => setMouth("open"), null, 19.4);
-    tl.call(() => setMouth("small"), null, 19.467);
-    tl.call(() => setMouth("open"), null, 19.533);
-    tl.call(() => setMouth("wide"), null, 19.733);
-    tl.call(() => setMouth("open"), null, 19.8);
-    tl.call(() => setMouth("small"), null, 19.933);
-    tl.call(() => setMouth("closed"), null, 20.1);
-    tl.call(() => setMouth("small"), null, 20.367);
-    tl.call(() => setMouth("wide"), null, 20.433);
-    tl.call(() => setMouth("open"), null, 20.533);
-    tl.call(() => setMouth("wide"), null, 20.633);
-    tl.call(() => setMouth("open"), null, 20.7);
-    tl.call(() => setMouth("wide"), null, 20.8);
-    tl.call(() => setMouth("open"), null, 20.967);
-    tl.call(() => setMouth("wide"), null, 21.033);
-    tl.call(() => setMouth("open"), null, 21.133);
-    tl.call(() => setMouth("closed"), null, 21.2);
-    tl.call(() => setMouth("small"), null, 21.3);
-    tl.call(() => setMouth("open"), null, 21.367);
-    tl.call(() => setMouth("closed"), null, 21.433);
-    tl.call(() => setMouth("open"), null, 21.5);
-    tl.call(() => setMouth("wide"), null, 21.567);
-    tl.call(() => setMouth("small"), null, 21.633);
-    tl.call(() => setMouth("wide"), null, 21.7);
-    tl.call(() => setMouth("small"), null, 21.767);
-    tl.call(() => setMouth("closed"), null, 21.833);
-    tl.call(() => setMouth("wide"), null, 21.9);
-    tl.call(() => setMouth("open"), null, 22.033);
-    tl.call(() => setMouth("wide"), null, 22.133);
-    tl.call(() => setMouth("open"), null, 22.233);
-    tl.call(() => setMouth("wide"), null, 22.3);
-    tl.call(() => setMouth("open"), null, 22.733);
-    tl.call(() => setMouth("small"), null, 22.8);
-    tl.call(() => setMouth("closed"), null, 22.867);
-    tl.call(() => setMouth("small"), null, 22.933);
-    tl.call(() => setMouth("wide"), null, 23.0);
-    tl.call(() => setMouth("open"), null, 23.1);
-    tl.call(() => setMouth("small"), null, 23.233);
-    tl.call(() => setMouth("closed"), null, 23.3);
-    tl.call(() => setMouth("small"), null, 23.467);
-    tl.call(() => setMouth("wide"), null, 23.533);
-    tl.call(() => setMouth("open"), null, 23.6);
-    tl.call(() => setMouth("wide"), null, 23.667);
-    tl.call(() => setMouth("open"), null, 23.767);
-    tl.call(() => setMouth("small"), null, 23.833);
-    tl.call(() => setMouth("closed"), null, 23.9);
-    tl.call(() => setMouth("small"), null, 24.033);
-    tl.call(() => setMouth("wide"), null, 24.1);
-    tl.call(() => setMouth("open"), null, 24.333);
-    tl.call(() => setMouth("small"), null, 24.4);
-    tl.call(() => setMouth("closed"), null, 24.467);
-    tl.call(() => setMouth("small"), null, 24.533);
-    tl.call(() => setMouth("open"), null, 24.667);
-    tl.call(() => setMouth("wide"), null, 24.733);
-    tl.call(() => setMouth("open"), null, 24.8);
-    tl.call(() => setMouth("small"), null, 24.867);
-    tl.call(() => setMouth("wide"), null, 24.933);
-    tl.call(() => setMouth("open"), null, 25.033);
-    tl.call(() => setMouth("closed"), null, 25.1);
-    tl.call(() => setMouth("small"), null, 25.367);
-    tl.call(() => setMouth("wide"), null, 25.433);
-    tl.call(() => setMouth("open"), null, 25.5);
-    tl.call(() => setMouth("wide"), null, 25.567);
-    tl.call(() => setMouth("open"), null, 25.733);
-    tl.call(() => setMouth("wide"), null, 25.8);
-    tl.call(() => setMouth("open"), null, 25.867);
-    tl.call(() => setMouth("small"), null, 25.933);
-    tl.call(() => setMouth("wide"), null, 26.0);
-    tl.call(() => setMouth("open"), null, 26.1);
-    tl.call(() => setMouth("wide"), null, 26.2);
-    tl.call(() => setMouth("small"), null, 26.267);
-    tl.call(() => setMouth("wide"), null, 26.333);
-    tl.call(() => setMouth("open"), null, 26.567);
-    tl.call(() => setMouth("small"), null, 26.633);
-    tl.call(() => setMouth("open"), null, 26.8);
-    tl.call(() => setMouth("wide"), null, 26.867);
-    tl.call(() => setMouth("small"), null, 27.333);
-    tl.call(() => setMouth("wide"), null, 27.4);
-    tl.call(() => setMouth("open"), null, 27.633);
-    tl.call(() => setMouth("wide"), null, 27.733);
-    tl.call(() => setMouth("open"), null, 27.833);
-    tl.call(() => setMouth("small"), null, 27.967);
-    tl.call(() => setMouth("open"), null, 28.167);
-    tl.call(() => setMouth("wide"), null, 28.233);
-    tl.call(() => setMouth("open"), null, 28.433);
-    tl.call(() => setMouth("small"), null, 28.6);
-    tl.call(() => setMouth("open"), null, 28.7);
-    tl.call(() => setMouth("wide"), null, 28.767);
-    tl.call(() => setMouth("small"), null, 28.833);
-    tl.call(() => setMouth("open"), null, 28.9);
-    tl.call(() => setMouth("small"), null, 29.0);
-    tl.call(() => setMouth("open"), null, 29.1);
-    tl.call(() => setMouth("small"), null, 29.233);
-    tl.call(() => setMouth("closed"), null, 29.433);
-    tl.call(() => setMouth("open"), null, 29.833);
-    tl.call(() => setMouth("wide"), null, 29.9);
-    tl.call(() => setMouth("open"), null, 30.3);
-    tl.call(() => setMouth("closed"), null, 30.367);
-    tl.call(() => setMouth("small"), null, 30.5);
-    tl.call(() => setMouth("wide"), null, 30.567);
-    tl.call(() => setMouth("open"), null, 30.733);
-    tl.call(() => setMouth("wide"), null, 30.833);
-    tl.call(() => setMouth("open"), null, 30.933);
-    tl.call(() => setMouth("wide"), null, 31.0);
-    tl.call(() => setMouth("open"), null, 31.333);
-    tl.call(() => setMouth("small"), null, 31.4);
-    tl.call(() => setMouth("wide"), null, 31.467);
-    tl.call(() => setMouth("open"), null, 31.533);
-    tl.call(() => setMouth("small"), null, 31.6);
-    tl.call(() => setMouth("closed"), null, 31.667);
-    tl.call(() => setMouth("small"), null, 31.733);
-    tl.call(() => setMouth("wide"), null, 31.8);
-    tl.call(() => setMouth("open"), null, 31.867);
-    tl.call(() => setMouth("small"), null, 31.933);
-    tl.call(() => setMouth("closed"), null, 32.033);
-    tl.call(() => setMouth("small"), null, 32.367);
-    tl.call(() => setMouth("open"), null, 32.433);
-    tl.call(() => setMouth("wide"), null, 32.5);
-    tl.call(() => setMouth("open"), null, 32.667);
-    tl.call(() => setMouth("wide"), null, 32.767);
-    tl.call(() => setMouth("open"), null, 32.967);
-    tl.call(() => setMouth("closed"), null, 33.033);
-    tl.call(() => setMouth("open"), null, 33.1);
-    tl.call(() => setMouth("wide"), null, 33.167);
-    tl.call(() => setMouth("open"), null, 33.533);
-    tl.call(() => setMouth("closed"), null, 33.6);
-    tl.call(() => setMouth("small"), null, 33.7);
-    tl.call(() => setMouth("wide"), null, 33.767);
-    tl.call(() => setMouth("open"), null, 33.9);
-    tl.call(() => setMouth("small"), null, 33.967);
-    tl.call(() => setMouth("wide"), null, 34.033);
-    tl.call(() => setMouth("open"), null, 34.133);
-    tl.call(() => setMouth("wide"), null, 34.367);
-    tl.call(() => setMouth("open"), null, 34.433);
-    tl.call(() => setMouth("small"), null, 34.5);
-    tl.call(() => setMouth("open"), null, 34.567);
-    tl.call(() => setMouth("small"), null, 34.667);
-    tl.call(() => setMouth("open"), null, 34.733);
-    tl.call(() => setMouth("small"), null, 34.8);
-    tl.call(() => setMouth("closed"), null, 35.0);
-    tl.call(() => setMouth("small"), null, 35.267);
-    tl.call(() => setMouth("wide"), null, 35.333);
-    tl.call(() => setMouth("open"), null, 35.5);
-    tl.call(() => setMouth("small"), null, 35.567);
-    tl.call(() => setMouth("closed"), null, 35.633);
-    tl.call(() => setMouth("small"), null, 35.767);
-    tl.call(() => setMouth("wide"), null, 35.833);
-    tl.call(() => setMouth("open"), null, 35.9);
-    tl.call(() => setMouth("small"), null, 35.967);
-    tl.call(() => setMouth("wide"), null, 36.033);
-    tl.call(() => setMouth("small"), null, 36.133);
-    tl.call(() => setMouth("closed"), null, 36.2);
-    tl.call(() => setMouth("open"), null, 36.267);
-    tl.call(() => setMouth("wide"), null, 36.333);
-    tl.call(() => setMouth("open"), null, 36.433);
-    tl.call(() => setMouth("wide"), null, 36.533);
-    tl.call(() => setMouth("open"), null, 36.633);
-    tl.call(() => setMouth("small"), null, 36.7);
-    tl.call(() => setMouth("closed"), null, 36.767);
-    tl.call(() => setMouth("open"), null, 36.833);
-    tl.call(() => setMouth("small"), null, 36.933);
-    tl.call(() => setMouth("open"), null, 37.033);
-    tl.call(() => setMouth("wide"), null, 37.1);
-    tl.call(() => setMouth("open"), null, 37.267);
-    tl.call(() => setMouth("small"), null, 37.433);
-    tl.call(() => setMouth("closed"), null, 37.5);
-    tl.call(() => setMouth("small"), null, 37.9);
-    tl.call(() => setMouth("open"), null, 37.967);
-    tl.call(() => setMouth("small"), null, 38.033);
-    tl.call(() => setMouth("open"), null, 38.1);
-    tl.call(() => setMouth("wide"), null, 38.167);
-    tl.call(() => setMouth("open"), null, 38.233);
-    tl.call(() => setMouth("wide"), null, 38.333);
-    tl.call(() => setMouth("open"), null, 38.4);
-    tl.call(() => setMouth("small"), null, 38.467);
-    tl.call(() => setMouth("wide"), null, 38.533);
-    tl.call(() => setMouth("open"), null, 38.6);
-    tl.call(() => setMouth("small"), null, 38.767);
-    tl.call(() => setMouth("open"), null, 38.833);
-    tl.call(() => setMouth("wide"), null, 38.9);
-    tl.call(() => setMouth("open"), null, 38.967);
-    tl.call(() => setMouth("small"), null, 39.1);
-    tl.call(() => setMouth("open"), null, 39.333);
-    tl.call(() => setMouth("wide"), null, 39.4);
-    tl.call(() => setMouth("open"), null, 39.8);
-    tl.call(() => setMouth("small"), null, 39.867);
-    tl.call(() => setMouth("wide"), null, 39.933);
-    tl.call(() => setMouth("open"), null, 40.033);
-    tl.call(() => setMouth("small"), null, 40.467);
-    tl.call(() => setMouth("open"), null, 40.667);
-    tl.call(() => setMouth("wide"), null, 40.733);
-    tl.call(() => setMouth("open"), null, 40.8);
-    tl.call(() => setMouth("small"), null, 40.933);
-    tl.call(() => setMouth("open"), null, 41.0);
-    tl.call(() => setMouth("small"), null, 41.067);
-    tl.call(() => setMouth("open"), null, 41.167);
-    tl.call(() => setMouth("wide"), null, 41.233);
-    tl.call(() => setMouth("small"), null, 41.3);
-    tl.call(() => setMouth("open"), null, 41.367);
-    tl.call(() => setMouth("small"), null, 41.467);
-    tl.call(() => setMouth("open"), null, 41.567);
-    tl.call(() => setMouth("small"), null, 41.7);
-    tl.call(() => setMouth("closed"), null, 41.9);
-    tl.call(() => setMouth("small"), null, 42.2);
-    tl.call(() => setMouth("wide"), null, 42.267);
-    tl.call(() => setMouth("open"), null, 42.467);
-    tl.call(() => setMouth("small"), null, 42.533);
-    tl.call(() => setMouth("wide"), null, 42.6);
-    tl.call(() => setMouth("open"), null, 42.8);
-    tl.call(() => setMouth("small"), null, 42.867);
-    tl.call(() => setMouth("closed"), null, 42.933);
-    tl.call(() => setMouth("small"), null, 43.0);
-    tl.call(() => setMouth("wide"), null, 43.067);
-    tl.call(() => setMouth("open"), null, 43.167);
-    tl.call(() => setMouth("closed"), null, 43.233);
-    tl.call(() => setMouth("open"), null, 43.3);
-    tl.call(() => setMouth("wide"), null, 43.367);
-    tl.call(() => setMouth("open"), null, 43.533);
-    tl.call(() => setMouth("small"), null, 43.7);
-    tl.call(() => setMouth("closed"), null, 43.767);
-    tl.call(() => setMouth("small"), null, 43.867);
-    tl.call(() => setMouth("open"), null, 43.933);
-    tl.call(() => setMouth("wide"), null, 44.067);
-    tl.call(() => setMouth("open"), null, 44.133);
-    tl.call(() => setMouth("small"), null, 44.233);
-    tl.call(() => setMouth("open"), null, 44.367);
-    tl.call(() => setMouth("wide"), null, 44.433);
-    tl.call(() => setMouth("open"), null, 44.8);
-    tl.call(() => setMouth("small"), null, 44.967);
-    tl.call(() => setMouth("open"), null, 45.167);
-    tl.call(() => setMouth("wide"), null, 45.233);
-    tl.call(() => setMouth("open"), null, 45.3);
-    tl.call(() => setMouth("small"), null, 45.367);
-    tl.call(() => setMouth("wide"), null, 45.433);
-    tl.call(() => setMouth("open"), null, 45.6);
-    tl.call(() => setMouth("small"), null, 45.667);
-    tl.call(() => setMouth("open"), null, 45.767);
-    tl.call(() => setMouth("small"), null, 45.933);
-    tl.call(() => setMouth("open"), null, 46.033);
-    tl.call(() => setMouth("small"), null, 46.133);
-    tl.call(() => setMouth("closed"), null, 46.333);
+tl.call(() => setMouth("open"), null, 0.033);
+tl.call(() => setMouth("wide"), null, 0.1);
+tl.call(() => setMouth("open"), null, 0.567);
+tl.call(() => setMouth("small"), null, 0.7);
+tl.call(() => setMouth("open"), null, 0.833);
+tl.call(() => setMouth("wide"), null, 0.9);
+tl.call(() => setMouth("small"), null, 0.967);
+tl.call(() => setMouth("open"), null, 1.033);
+tl.call(() => setMouth("small"), null, 1.167);
+tl.call(() => setMouth("open"), null, 1.233);
+tl.call(() => setMouth("wide"), null, 1.3);
+tl.call(() => setMouth("open"), null, 1.367);
+tl.call(() => setMouth("closed"), null, 1.433);
+tl.call(() => setMouth("open"), null, 1.533);
+tl.call(() => setMouth("wide"), null, 1.6);
+tl.call(() => setMouth("open"), null, 1.7);
+tl.call(() => setMouth("wide"), null, 1.833);
+tl.call(() => setMouth("open"), null, 1.967);
+tl.call(() => setMouth("wide"), null, 2.033);
+tl.call(() => setMouth("open"), null, 2.133);
+tl.call(() => setMouth("closed"), null, 2.2);
+tl.call(() => setMouth("small"), null, 2.3);
+tl.call(() => setMouth("wide"), null, 2.367);
+tl.call(() => setMouth("small"), null, 2.433);
+tl.call(() => setMouth("open"), null, 2.5);
+tl.call(() => setMouth("wide"), null, 2.567);
+tl.call(() => setMouth("small"), null, 2.633);
+tl.call(() => setMouth("open"), null, 2.7);
+tl.call(() => setMouth("wide"), null, 2.767);
+tl.call(() => setMouth("open"), null, 3.1);
+tl.call(() => setMouth("small"), null, 3.167);
+tl.call(() => setMouth("closed"), null, 3.233);
+tl.call(() => setMouth("small"), null, 3.633);
+tl.call(() => setMouth("wide"), null, 3.7);
+tl.call(() => setMouth("open"), null, 3.767);
+tl.call(() => setMouth("closed"), null, 3.833);
+tl.call(() => setMouth("wide"), null, 3.9);
+tl.call(() => setMouth("open"), null, 4.2);
+tl.call(() => setMouth("small"), null, 4.267);
+tl.call(() => setMouth("open"), null, 4.333);
+tl.call(() => setMouth("wide"), null, 4.4);
+tl.call(() => setMouth("open"), null, 4.467);
+tl.call(() => setMouth("wide"), null, 4.533);
+tl.call(() => setMouth("open"), null, 4.6);
+tl.call(() => setMouth("wide"), null, 4.7);
+tl.call(() => setMouth("small"), null, 4.833);
+tl.call(() => setMouth("open"), null, 4.933);
+tl.call(() => setMouth("wide"), null, 5.0);
+tl.call(() => setMouth("open"), null, 5.167);
+tl.call(() => setMouth("small"), null, 5.233);
+tl.call(() => setMouth("open"), null, 5.3);
+tl.call(() => setMouth("wide"), null, 5.367);
+tl.call(() => setMouth("small"), null, 5.433);
+tl.call(() => setMouth("open"), null, 5.5);
+tl.call(() => setMouth("wide"), null, 5.567);
+tl.call(() => setMouth("open"), null, 5.633);
+tl.call(() => setMouth("small"), null, 5.7);
+tl.call(() => setMouth("open"), null, 5.767);
+tl.call(() => setMouth("small"), null, 5.9);
+tl.call(() => setMouth("closed"), null, 5.967);
+tl.call(() => setMouth("small"), null, 6.3);
+tl.call(() => setMouth("wide"), null, 6.367);
+tl.call(() => setMouth("open"), null, 6.433);
+tl.call(() => setMouth("wide"), null, 6.5);
+tl.call(() => setMouth("open"), null, 6.567);
+tl.call(() => setMouth("small"), null, 6.7);
+tl.call(() => setMouth("open"), null, 6.8);
+tl.call(() => setMouth("small"), null, 6.867);
+tl.call(() => setMouth("closed"), null, 6.933);
+tl.call(() => setMouth("open"), null, 7.0);
+tl.call(() => setMouth("wide"), null, 7.067);
+tl.call(() => setMouth("small"), null, 7.133);
+tl.call(() => setMouth("open"), null, 7.2);
+tl.call(() => setMouth("wide"), null, 7.267);
+tl.call(() => setMouth("small"), null, 7.333);
+tl.call(() => setMouth("open"), null, 7.433);
+tl.call(() => setMouth("wide"), null, 7.5);
+tl.call(() => setMouth("open"), null, 7.567);
+tl.call(() => setMouth("small"), null, 7.633);
+tl.call(() => setMouth("closed"), null, 7.7);
+tl.call(() => setMouth("small"), null, 8.0);
+tl.call(() => setMouth("open"), null, 8.067);
+tl.call(() => setMouth("small"), null, 8.133);
+tl.call(() => setMouth("open"), null, 8.2);
+tl.call(() => setMouth("wide"), null, 8.267);
+tl.call(() => setMouth("open"), null, 8.333);
+tl.call(() => setMouth("small"), null, 8.4);
+tl.call(() => setMouth("closed"), null, 8.5);
+tl.call(() => setMouth("open"), null, 8.567);
+tl.call(() => setMouth("wide"), null, 8.633);
+tl.call(() => setMouth("open"), null, 8.7);
+tl.call(() => setMouth("small"), null, 8.767);
+tl.call(() => setMouth("open"), null, 8.833);
+tl.call(() => setMouth("wide"), null, 8.9);
+tl.call(() => setMouth("open"), null, 9.133);
+tl.call(() => setMouth("wide"), null, 9.3);
+tl.call(() => setMouth("open"), null, 9.367);
+tl.call(() => setMouth("small"), null, 9.633);
+tl.call(() => setMouth("closed"), null, 9.7);
+tl.call(() => setMouth("small"), null, 9.8);
+tl.call(() => setMouth("wide"), null, 9.867);
+tl.call(() => setMouth("open"), null, 10.033);
+tl.call(() => setMouth("small"), null, 10.1);
+tl.call(() => setMouth("wide"), null, 10.167);
+tl.call(() => setMouth("open"), null, 10.3);
+tl.call(() => setMouth("wide"), null, 10.4);
+tl.call(() => setMouth("small"), null, 10.467);
+tl.call(() => setMouth("open"), null, 10.533);
+tl.call(() => setMouth("wide"), null, 10.6);
+tl.call(() => setMouth("open"), null, 10.667);
+tl.call(() => setMouth("small"), null, 10.767);
+tl.call(() => setMouth("closed"), null, 10.967);
+tl.call(() => setMouth("small"), null, 11.033);
+tl.call(() => setMouth("closed"), null, 11.167);
+tl.call(() => setMouth("open"), null, 11.533);
+tl.call(() => setMouth("wide"), null, 11.6);
+tl.call(() => setMouth("open"), null, 12.167);
+tl.call(() => setMouth("wide"), null, 12.267);
+tl.call(() => setMouth("small"), null, 12.333);
+tl.call(() => setMouth("open"), null, 12.433);
+tl.call(() => setMouth("wide"), null, 12.5);
+tl.call(() => setMouth("small"), null, 12.567);
+tl.call(() => setMouth("closed"), null, 12.967);
+tl.call(() => setMouth("open"), null, 13.1);
+tl.call(() => setMouth("wide"), null, 13.167);
+tl.call(() => setMouth("small"), null, 13.233);
+tl.call(() => setMouth("open"), null, 13.367);
+tl.call(() => setMouth("wide"), null, 13.433);
+tl.call(() => setMouth("open"), null, 13.8);
+tl.call(() => setMouth("small"), null, 13.867);
+tl.call(() => setMouth("closed"), null, 14.033);
+tl.call(() => setMouth("small"), null, 14.3);
+tl.call(() => setMouth("wide"), null, 14.367);
+tl.call(() => setMouth("small"), null, 14.433);
+tl.call(() => setMouth("closed"), null, 14.5);
+tl.call(() => setMouth("wide"), null, 14.567);
+tl.call(() => setMouth("open"), null, 14.667);
+tl.call(() => setMouth("wide"), null, 14.733);
+tl.call(() => setMouth("open"), null, 14.8);
+tl.call(() => setMouth("small"), null, 14.867);
+tl.call(() => setMouth("wide"), null, 14.933);
+tl.call(() => setMouth("open"), null, 15.133);
+tl.call(() => setMouth("small"), null, 15.2);
+tl.call(() => setMouth("open"), null, 15.267);
+tl.call(() => setMouth("wide"), null, 15.333);
+tl.call(() => setMouth("small"), null, 15.4);
+tl.call(() => setMouth("open"), null, 15.467);
+tl.call(() => setMouth("wide"), null, 15.533);
+tl.call(() => setMouth("small"), null, 15.6);
+tl.call(() => setMouth("closed"), null, 15.733);
+tl.call(() => setMouth("small"), null, 15.8);
+tl.call(() => setMouth("closed"), null, 15.933);
+tl.call(() => setMouth("open"), null, 16.233);
+tl.call(() => setMouth("wide"), null, 16.3);
+tl.call(() => setMouth("open"), null, 16.367);
+tl.call(() => setMouth("small"), null, 16.433);
+tl.call(() => setMouth("wide"), null, 16.5);
+tl.call(() => setMouth("open"), null, 16.6);
+tl.call(() => setMouth("closed"), null, 16.667);
+tl.call(() => setMouth("open"), null, 16.733);
+tl.call(() => setMouth("wide"), null, 16.8);
+tl.call(() => setMouth("open"), null, 16.9);
+tl.call(() => setMouth("closed"), null, 16.967);
+tl.call(() => setMouth("small"), null, 17.467);
+tl.call(() => setMouth("wide"), null, 17.5);
+tl.call(() => setMouth("open"), null, 17.567);
+tl.call(() => setMouth("wide"), null, 17.667);
+tl.call(() => setMouth("open"), null, 17.733);
+tl.call(() => setMouth("wide"), null, 17.8);
+tl.call(() => setMouth("open"), null, 17.967);
+tl.call(() => setMouth("small"), null, 18.033);
+tl.call(() => setMouth("open"), null, 18.1);
+tl.call(() => setMouth("small"), null, 18.167);
+tl.call(() => setMouth("closed"), null, 18.233);
+tl.call(() => setMouth("open"), null, 18.3);
+tl.call(() => setMouth("small"), null, 18.4);
+tl.call(() => setMouth("open"), null, 18.467);
+tl.call(() => setMouth("wide"), null, 18.533);
+tl.call(() => setMouth("open"), null, 18.733);
+tl.call(() => setMouth("small"), null, 18.8);
+tl.call(() => setMouth("open"), null, 18.867);
+tl.call(() => setMouth("small"), null, 19.7);
+tl.call(() => setMouth("open"), null, 19.8);
+tl.call(() => setMouth("small"), null, 19.867);
+tl.call(() => setMouth("open"), null, 19.967);
+tl.call(() => setMouth("small"), null, 20.1);
+tl.call(() => setMouth("open"), null, 20.267);
+tl.call(() => setMouth("small"), null, 20.333);
+tl.call(() => setMouth("closed"), null, 20.4);
+tl.call(() => setMouth("small"), null, 20.733);
+tl.call(() => setMouth("wide"), null, 20.8);
+tl.call(() => setMouth("small"), null, 20.967);
+tl.call(() => setMouth("open"), null, 21.067);
+tl.call(() => setMouth("wide"), null, 21.133);
+tl.call(() => setMouth("open"), null, 21.233);
+tl.call(() => setMouth("small"), null, 21.3);
+tl.call(() => setMouth("open"), null, 21.4);
+tl.call(() => setMouth("wide"), null, 21.467);
+tl.call(() => setMouth("open"), null, 21.533);
+tl.call(() => setMouth("small"), null, 21.6);
+tl.call(() => setMouth("closed"), null, 21.733);
+tl.call(() => setMouth("small"), null, 21.833);
+tl.call(() => setMouth("wide"), null, 21.9);
+tl.call(() => setMouth("open"), null, 22.033);
+tl.call(() => setMouth("small"), null, 22.1);
+tl.call(() => setMouth("open"), null, 22.167);
+tl.call(() => setMouth("small"), null, 22.333);
+tl.call(() => setMouth("closed"), null, 22.4);
+tl.call(() => setMouth("open"), null, 22.467);
+tl.call(() => setMouth("small"), null, 22.567);
+tl.call(() => setMouth("closed"), null, 22.633);
+tl.call(() => setMouth("small"), null, 22.7);
+tl.call(() => setMouth("closed"), null, 22.8);
+tl.call(() => setMouth("small"), null, 22.933);
+tl.call(() => setMouth("open"), null, 23.0);
+tl.call(() => setMouth("small"), null, 23.1);
+tl.call(() => setMouth("open"), null, 23.2);
+tl.call(() => setMouth("wide"), null, 23.267);
+tl.call(() => setMouth("open"), null, 23.5);
+tl.call(() => setMouth("wide"), null, 23.6);
+tl.call(() => setMouth("open"), null, 23.667);
+tl.call(() => setMouth("wide"), null, 23.8);
+tl.call(() => setMouth("open"), null, 23.867);
+tl.call(() => setMouth("closed"), null, 24.0);
+tl.call(() => setMouth("open"), null, 24.1);
+tl.call(() => setMouth("wide"), null, 24.167);
+tl.call(() => setMouth("small"), null, 24.233);
+tl.call(() => setMouth("closed"), null, 24.567);
+tl.call(() => setMouth("small"), null, 24.867);
+tl.call(() => setMouth("wide"), null, 24.933);
+tl.call(() => setMouth("open"), null, 25.333);
+tl.call(() => setMouth("wide"), null, 25.4);
+tl.call(() => setMouth("open"), null, 25.467);
+tl.call(() => setMouth("wide"), null, 25.533);
+tl.call(() => setMouth("open"), null, 25.667);
+tl.call(() => setMouth("wide"), null, 25.767);
+tl.call(() => setMouth("open"), null, 25.867);
+tl.call(() => setMouth("wide"), null, 25.933);
+tl.call(() => setMouth("open"), null, 26.133);
+tl.call(() => setMouth("small"), null, 26.2);
+tl.call(() => setMouth("open"), null, 26.267);
+tl.call(() => setMouth("wide"), null, 26.333);
+tl.call(() => setMouth("open"), null, 26.433);
+tl.call(() => setMouth("small"), null, 26.5);
+tl.call(() => setMouth("open"), null, 26.633);
+tl.call(() => setMouth("wide"), null, 26.733);
+tl.call(() => setMouth("small"), null, 26.867);
+tl.call(() => setMouth("open"), null, 26.933);
+tl.call(() => setMouth("wide"), null, 27.0);
+tl.call(() => setMouth("open"), null, 27.067);
+tl.call(() => setMouth("wide"), null, 27.133);
+tl.call(() => setMouth("open"), null, 27.333);
+tl.call(() => setMouth("wide"), null, 27.4);
+tl.call(() => setMouth("open"), null, 27.5);
+tl.call(() => setMouth("small"), null, 27.567);
+tl.call(() => setMouth("wide"), null, 27.6);
+tl.call(() => setMouth("open"), null, 27.733);
+tl.call(() => setMouth("small"), null, 27.8);
+tl.call(() => setMouth("wide"), null, 27.867);
+tl.call(() => setMouth("open"), null, 28.167);
+tl.call(() => setMouth("small"), null, 28.3);
+tl.call(() => setMouth("closed"), null, 28.5);
+tl.call(() => setMouth("small"), null, 28.767);
+tl.call(() => setMouth("open"), null, 28.833);
+tl.call(() => setMouth("wide"), null, 28.9);
+tl.call(() => setMouth("open"), null, 29.067);
+tl.call(() => setMouth("closed"), null, 29.1);
+tl.call(() => setMouth("small"), null, 29.167);
+tl.call(() => setMouth("wide"), null, 29.2);
+tl.call(() => setMouth("open"), null, 29.267);
+tl.call(() => setMouth("small"), null, 29.333);
+tl.call(() => setMouth("open"), null, 29.433);
+tl.call(() => setMouth("small"), null, 29.567);
+tl.call(() => setMouth("open"), null, 29.667);
+tl.call(() => setMouth("small"), null, 29.767);
+tl.call(() => setMouth("open"), null, 29.833);
+tl.call(() => setMouth("wide"), null, 29.9);
+tl.call(() => setMouth("small"), null, 29.967);
+tl.call(() => setMouth("closed"), null, 30.267);
+tl.call(() => setMouth("small"), null, 30.533);
+tl.call(() => setMouth("wide"), null, 30.567);
+tl.call(() => setMouth("open"), null, 30.7);
+tl.call(() => setMouth("small"), null, 30.767);
+tl.call(() => setMouth("open"), null, 30.833);
+tl.call(() => setMouth("wide"), null, 30.9);
+tl.call(() => setMouth("open"), null, 31.0);
+tl.call(() => setMouth("small"), null, 31.067);
+tl.call(() => setMouth("open"), null, 31.133);
+tl.call(() => setMouth("wide"), null, 31.2);
+tl.call(() => setMouth("open"), null, 31.4);
+tl.call(() => setMouth("small"), null, 31.467);
+tl.call(() => setMouth("wide"), null, 31.533);
+tl.call(() => setMouth("open"), null, 31.633);
+tl.call(() => setMouth("small"), null, 31.733);
+tl.call(() => setMouth("closed"), null, 31.833);
+tl.call(() => setMouth("small"), null, 32.1);
+tl.call(() => setMouth("open"), null, 32.167);
+tl.call(() => setMouth("wide"), null, 32.3);
+tl.call(() => setMouth("open"), null, 32.567);
+tl.call(() => setMouth("wide"), null, 32.633);
+tl.call(() => setMouth("open"), null, 32.8);
+tl.call(() => setMouth("small"), null, 32.867);
+tl.call(() => setMouth("closed"), null, 33.133);
+tl.call(() => setMouth("small"), null, 33.667);
+tl.call(() => setMouth("wide"), null, 33.733);
+tl.call(() => setMouth("open"), null, 33.967);
+tl.call(() => setMouth("closed"), null, 34.033);
+tl.call(() => setMouth("small"), null, 34.1);
+tl.call(() => setMouth("open"), null, 34.167);
+tl.call(() => setMouth("wide"), null, 34.3);
+tl.call(() => setMouth("open"), null, 34.4);
+tl.call(() => setMouth("wide"), null, 34.467);
+tl.call(() => setMouth("open"), null, 34.533);
+tl.call(() => setMouth("wide"), null, 34.767);
+tl.call(() => setMouth("open"), null, 34.833);
+tl.call(() => setMouth("wide"), null, 35.0);
+tl.call(() => setMouth("open"), null, 35.067);
+tl.call(() => setMouth("small"), null, 35.133);
+tl.call(() => setMouth("closed"), null, 35.267);
+tl.call(() => setMouth("small"), null, 35.5);
+tl.call(() => setMouth("open"), null, 35.567);
+tl.call(() => setMouth("wide"), null, 35.667);
+tl.call(() => setMouth("open"), null, 35.733);
+tl.call(() => setMouth("small"), null, 35.867);
+tl.call(() => setMouth("open"), null, 36.0);
+tl.call(() => setMouth("wide"), null, 36.067);
+tl.call(() => setMouth("open"), null, 36.233);
+tl.call(() => setMouth("wide"), null, 36.3);
+tl.call(() => setMouth("open"), null, 36.4);
+tl.call(() => setMouth("small"), null, 36.533);
+tl.call(() => setMouth("open"), null, 36.633);
+tl.call(() => setMouth("wide"), null, 36.733);
+tl.call(() => setMouth("open"), null, 36.8);
+tl.call(() => setMouth("closed"), null, 36.867);
+tl.call(() => setMouth("small"), null, 36.933);
+tl.call(() => setMouth("wide"), null, 37.0);
+tl.call(() => setMouth("open"), null, 37.067);
+tl.call(() => setMouth("wide"), null, 37.2);
+tl.call(() => setMouth("open"), null, 37.267);
+tl.call(() => setMouth("small"), null, 37.333);
+tl.call(() => setMouth("open"), null, 37.4);
+tl.call(() => setMouth("small"), null, 37.5);
+tl.call(() => setMouth("closed"), null, 37.6);
+tl.call(() => setMouth("small"), null, 37.8);
+tl.call(() => setMouth("open"), null, 37.867);
+tl.call(() => setMouth("wide"), null, 38.033);
+tl.call(() => setMouth("open"), null, 38.133);
+tl.call(() => setMouth("wide"), null, 38.233);
+tl.call(() => setMouth("open"), null, 38.3);
+tl.call(() => setMouth("small"), null, 38.367);
+tl.call(() => setMouth("open"), null, 38.433);
+tl.call(() => setMouth("small"), null, 38.6);
+tl.call(() => setMouth("open"), null, 38.7);
+tl.call(() => setMouth("wide"), null, 38.767);
+tl.call(() => setMouth("open"), null, 38.833);
+tl.call(() => setMouth("small"), null, 38.933);
+tl.call(() => setMouth("open"), null, 39.033);
+tl.call(() => setMouth("small"), null, 39.2);
+tl.call(() => setMouth("open"), null, 39.267);
+tl.call(() => setMouth("small"), null, 39.4);
+tl.call(() => setMouth("closed"), null, 39.633);
 
     // 6. Word-by-Word Kinetic Subtitle Schedule
     captionChunks.forEach(chunk => {

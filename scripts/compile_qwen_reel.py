@@ -1,0 +1,1001 @@
+import os
+import json
+
+def compile_qwen_reel():
+    duration = 39.78
+    mouth_data = json.load(open("assets/mouth.json"))
+    caption_chunks = json.load(open("assets/caption_chunks.json"))
+
+    # Precise scene transition times
+    s1 = 0.0
+    s2 = 3.18
+    s3 = 7.96
+    s4 = 11.14
+    s5 = 14.32   # Dark mode
+    s6 = 19.89   # Dark mode
+    s7 = 23.87   # Tech paper
+    s8 = 27.85   # Tech paper
+    s9 = 32.62   # Clay brand mode
+
+    # Build mouth calls for GSAP
+    mouth_calls = []
+    last_m = None
+    for item in mouth_data:
+        m = item.get("mouth", "closed")
+        f = item.get("f", item.get("frame", 0))
+        t = round(f / 30.0, 3)
+        if m != last_m and t <= duration:
+            mouth_calls.append(f'tl.call(() => setMouth("{m}"), null, {t});')
+            last_m = m
+
+    # Update hyperframes.json
+    hf_config = {
+        "name": "daily-automation-engine",
+        "version": "3.0.0",
+        "fps": 30,
+        "width": 1080,
+        "height": 1920,
+        "duration": duration
+    }
+    with open("hyperframes.json", "w") as f:
+        json.dump(hf_config, f, indent=2)
+
+    html = f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=1080, height=1920, initial-scale=1">
+  <title>Jayant Digital Studio - Qwen Image 2.1 Hyper-Motion</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800;900&family=Instrument+Serif:ital@1&family=JetBrains+Mono:wght@600;800&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
+  <style>
+    :root {{
+      --page: #f4f1ea;
+      --bar: #1a1714;
+      --clay: #d9694a;
+      --ink: #1a1714;
+      --mut: #8c857b;
+      --card-bg: #ffffff;
+      --border: rgba(26, 23, 20, 0.09);
+    }}
+
+    * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+
+    body {{
+      width: 1080px;
+      height: 1920px;
+      overflow: hidden;
+      background: var(--page);
+      font-family: 'Bricolage Grotesque', system-ui, sans-serif;
+      color: var(--ink);
+      position: relative;
+    }}
+
+    /* Stage Canvas */
+    #stage {{
+      position: absolute;
+      inset: 0;
+      width: 1080px;
+      height: 1920px;
+      overflow: hidden;
+      background: #f4f1ea;
+    }}
+
+    #stage:not(.dark):not(.or)::before {{
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: 
+        linear-gradient(rgba(120, 100, 70, 0.08) 2px, transparent 2px),
+        linear-gradient(90deg, rgba(120, 100, 70, 0.08) 2px, transparent 2px);
+      background-size: 48px 48px;
+      z-index: 1;
+      pointer-events: none;
+    }}
+
+    /* Drifting Blur Blobs */
+    .blob {{
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(80px);
+      opacity: 0.65;
+      animation: drift 9s ease-in-out infinite alternate;
+      z-index: 1;
+    }}
+    .b1 {{ width: 540px; height: 540px; background: #f6c6b0; left: -140px; top: 120px; }}
+    .b2 {{ width: 480px; height: 480px; background: #cfd2f3; right: -160px; top: 60px; animation-delay: -4s; }}
+    .b3 {{ width: 560px; height: 420px; background: #f9d9c4; left: 80px; top: 580px; animation-delay: -2s; }}
+
+    @keyframes drift {{
+      to {{ transform: translate(50px, -45px) scale(1.18); }}
+    }}
+
+    /* Dark Mode Stage Shift */
+    #stage.dark {{
+      background: #0b0809;
+      color: #ffffff;
+    }}
+    #stage.dark::before {{
+      background-image: 
+        linear-gradient(rgba(255, 255, 255, 0.05) 2px, transparent 2px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.05) 2px, transparent 2px);
+    }}
+    #stage.dark .b1 {{ background: #5a1d2c; }}
+    #stage.dark .b2 {{ background: #2a1f55; }}
+    #stage.dark .b3 {{ background: #7a3a22; }}
+
+    /* Clay Mode Stage Shift (Viral CTA) */
+    #stage.or {{
+      background: #d9694a;
+      color: #ffffff;
+    }}
+    #stage.or .b1, #stage.or .b2, #stage.or .b3 {{ background: rgba(255, 255, 255, 0.25); }}
+
+    /* Spinning Rays Conic Mask */
+    .rays {{
+      position: absolute;
+      left: 50%;
+      top: 480px;
+      width: 820px;
+      height: 820px;
+      margin: -410px;
+      background: repeating-conic-gradient(rgba(217, 105, 74, 0.28) 0 3deg, transparent 3deg 12deg);
+      -webkit-mask: radial-gradient(circle, transparent 20%, #000 35%, transparent 72%);
+      mask: radial-gradient(circle, transparent 20%, #000 35%, transparent 72%);
+      animation: spin 20s linear infinite;
+      z-index: 1;
+      pointer-events: none;
+    }}
+    @keyframes spin {{ to {{ rotate: 360deg; }} }}
+
+    /* ================= UPPER THEATER (Y: 40px to 1120px) ================= */
+    #upper-theater {{
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 1080px;
+      height: 1120px;
+      z-index: 10;
+      overflow: hidden;
+      padding: 60px 54px;
+    }}
+
+    .scene-view {{
+      position: absolute;
+      inset: 60px 54px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      opacity: 0;
+      pointer-events: none;
+      transform-origin: center center;
+    }}
+    .scene-view.active {{
+      opacity: 1;
+      pointer-events: auto;
+    }}
+
+    /* Motion Components */
+    .pill {{
+      font: 800 24px 'Bricolage Grotesque';
+      padding: 10px 24px;
+      border-radius: 99px;
+      background: #1a1714;
+      color: #fff;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      letter-spacing: 0.5px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+    }}
+    .pill.red {{ background: #ef4444; }}
+    .pill.clay {{ background: var(--clay); }}
+    .pill.blue {{ background: #2563eb; }}
+
+    .hero-title {{
+      font-size: 54px;
+      font-weight: 900;
+      line-height: 1.15;
+      letter-spacing: -1.5px;
+      text-align: center;
+      margin-top: 18px;
+    }}
+    .serif-accent {{
+      font-family: 'Instrument Serif', Georgia, serif;
+      font-style: italic;
+      color: var(--clay);
+      font-weight: 400;
+      font-size: 1.15em;
+    }}
+    #stage.dark .serif-accent {{ color: #a78bfa; }}
+
+    .card {{
+      background: var(--card-bg);
+      border-radius: 28px;
+      box-shadow: 0 16px 48px rgba(70, 45, 20, 0.12);
+      border: 1px solid var(--border);
+    }}
+    #stage.dark .card {{
+      background: #171315;
+      border: 1px solid #2b2528;
+      box-shadow: 0 16px 48px rgba(0, 0, 0, 0.45);
+      color: #fff;
+    }}
+
+    /* Price Strike-through Component */
+    .strike-wrap {{
+      position: relative;
+      display: inline-block;
+    }}
+    .strike {{
+      position: absolute;
+      left: -10px;
+      top: 52%;
+      height: 14px;
+      background: #ef4444;
+      border-radius: 8px;
+      width: 0;
+      rotate: -7deg;
+      animation: strikethrough 0.6s 0.6s cubic-bezier(0.2, 0.9, 0.25, 1) forwards;
+    }}
+    @keyframes strikethrough {{
+      to {{ width: calc(100% + 20px); }}
+    }}
+
+    /* Bouncing Letters */
+    .bounce-word {{
+      display: flex;
+      font-size: 120px;
+      font-weight: 900;
+      letter-spacing: -4px;
+      line-height: 1;
+      margin: 16px 0;
+    }}
+    .bounce-word span {{
+      display: inline-block;
+      animation: bounceIn 0.6s var(--d) cubic-bezier(0.2, 1.4, 0.4, 1) forwards;
+      opacity: 0;
+      transform: translateY(50px) rotate(14deg);
+    }}
+    @keyframes bounceIn {{
+      to {{ opacity: 1; transform: translateY(0) rotate(0deg); }}
+    }}
+
+    /* 3D Fanning Stack Cards */
+    .stack {{
+      position: relative;
+      width: 620px;
+      height: 220px;
+      margin-top: 16px;
+    }}
+    .fan-card {{
+      position: absolute;
+      inset: 0;
+      background: #ffffff;
+      border-radius: 22px;
+      box-shadow: 0 14px 36px rgba(70, 45, 20, 0.16);
+      padding: 24px 32px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      border: 1px solid rgba(0,0,0,0.06);
+      animation: fanOut 0.7s var(--d) cubic-bezier(0.3, 1.4, 0.5, 1) forwards;
+      opacity: 0;
+    }}
+    @keyframes fanOut {{
+      from {{ opacity: 0; transform: translateY(60px) rotate(0deg); }}
+      to {{ opacity: 1; transform: translateX(var(--x)) rotate(var(--r)); }}
+    }}
+
+    /* Dynamic Rolling Counter */
+    .counter-display {{
+      font-size: 110px;
+      font-weight: 900;
+      color: var(--clay);
+      line-height: 1;
+      margin: 8px 0;
+    }}
+
+    /* Feature Row Component */
+    .feature-row {{
+      width: 820px;
+      padding: 20px 28px;
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      margin-bottom: 16px;
+      border-radius: 20px;
+      background: #ffffff;
+      box-shadow: 0 8px 24px rgba(70, 45, 20, 0.08);
+      border: 1px solid rgba(0,0,0,0.05);
+      animation: slideInUp 0.5s var(--d) cubic-bezier(0.2, 0.9, 0.25, 1) forwards;
+      opacity: 0;
+    }}
+    @keyframes slideInUp {{
+      from {{ opacity: 0; transform: translateY(30px); }}
+      to {{ opacity: 1; transform: translateY(0); }}
+    }}
+
+    /* Radar Sweep */
+    .radar-box {{
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(167, 139, 250, 0.15) 0%, rgba(11, 8, 9, 0.8) 70%);
+      border: 2px solid rgba(167, 139, 250, 0.4);
+      position: relative;
+      overflow: hidden;
+      display: grid;
+      place-items: center;
+      margin: 20px auto;
+    }}
+    .radar-beam {{
+      position: absolute;
+      inset: 0;
+      background: conic-gradient(from 0deg, rgba(167, 139, 250, 0.6) 0deg, transparent 60deg);
+      animation: radarSpin 2.4s linear infinite;
+    }}
+    @keyframes radarSpin {{ to {{ rotate: 360deg; }} }}
+
+    /* Flow Lines */
+    .flow-line {{
+      width: 4px;
+      height: 0;
+      background: #8b5cf6;
+      animation: growLine 0.5s var(--d) forwards;
+    }}
+    @keyframes growLine {{ to {{ height: 50px; }} }}
+
+    /* Browser Mockup */
+    .browser-frame {{
+      width: 840px;
+      border-radius: 22px;
+      background: #ffffff;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.12);
+      overflow: hidden;
+      border: 1px solid rgba(0,0,0,0.08);
+      margin-top: 14px;
+    }}
+    .browser-header {{
+      background: #f1ede4;
+      padding: 16px 22px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      border-bottom: 1px solid rgba(0,0,0,0.06);
+    }}
+    .browser-dots {{
+      display: flex;
+      gap: 8px;
+    }}
+    .browser-dots i {{
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      display: block;
+    }}
+    .browser-bar {{
+      flex: 1;
+      background: #ffffff;
+      border-radius: 99px;
+      padding: 10px 20px;
+      font: 600 20px 'JetBrains Mono', monospace;
+      color: #1a1714;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }}
+    .cursor-blink {{
+      display: inline-block;
+      width: 3px;
+      height: 22px;
+      background: #d9694a;
+      animation: blink 0.6s infinite;
+    }}
+    @keyframes blink {{ 50% {{ opacity: 0; }} }}
+
+    /* Progress Ring */
+    .ring-svg {{
+      width: 160px;
+      height: 160px;
+      rotate: -90deg;
+    }}
+    .ring-svg circle {{
+      fill: none;
+      stroke-width: 12;
+      stroke-linecap: round;
+    }}
+    .ring-bg {{ stroke: #f0dccf; }}
+    .ring-val {{
+      stroke: var(--clay);
+      stroke-dasharray: 440;
+      stroke-dashoffset: 440;
+      animation: ringFill 1.8s 0.4s ease-out forwards;
+    }}
+    @keyframes ringFill {{ to {{ stroke-dashoffset: 20; }} }}
+
+    /* ================= WORD-BY-WORD KINETIC SUBTITLE BAR ================= */
+    #caption-bar {{
+      position: absolute;
+      left: 60px;
+      right: 60px;
+      top: 1140px;
+      height: 90px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      z-index: 100;
+      pointer-events: none;
+    }}
+    #caption-bar .w {{
+      font-size: 38px;
+      font-weight: 800;
+      color: var(--mut);
+      padding: 6px 14px;
+      border-radius: 12px;
+      display: inline-block;
+    }}
+    #caption-bar .w.done {{ color: var(--ink); }}
+    #stage.dark #caption-bar .w.done,
+    #stage.or #caption-bar .w.done {{ color: #ffffff; }}
+    #caption-bar .w.on {{
+      background: var(--clay);
+      color: #ffffff !important;
+      transform: scale(1.08);
+      box-shadow: 0 4px 16px rgba(217, 105, 74, 0.4);
+    }}
+    #stage.or #caption-bar .w.on {{
+      background: #1a1714;
+    }}
+
+    /* ================= LOWER STAGE (HOST AVATAR & DESK) ================= */
+    #lower-stage {{
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 1080px;
+      height: 680px;
+      z-index: 50;
+      pointer-events: none;
+    }}
+    #host-avatar {{
+      position: absolute;
+      left: 320px;
+      bottom: 120px;
+      width: 440px;
+      height: 440px;
+      z-index: 10;
+    }}
+    .desk-surface {{
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 1080px;
+      height: 140px;
+      background: linear-gradient(180deg, #855132 0%, #5a351e 100%);
+      border-top: 8px solid #a26540;
+      box-shadow: 0 -12px 30px rgba(0, 0, 0, 0.25);
+      z-index: 20;
+    }}
+    .desk-props {{
+      position: absolute;
+      inset: 0;
+      z-index: 30;
+      pointer-events: none;
+    }}
+    .studio-mic {{
+      position: absolute;
+      right: 220px;
+      bottom: 90px;
+      width: 130px;
+      height: 150px;
+      filter: drop-shadow(0 10px 18px rgba(0,0,0,0.3));
+    }}
+    .desk-mug-wrap {{
+      position: absolute;
+      left: 210px;
+      bottom: 90px;
+      width: 70px;
+      height: 80px;
+    }}
+    .mug-cup {{
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 65px;
+      height: 70px;
+      background: var(--clay);
+      border-radius: 6px 6px 14px 14px;
+      border: 5px solid #1a1714;
+    }}
+    .mug-cup::after {{
+      content: "";
+      position: absolute;
+      right: -20px;
+      top: 14px;
+      width: 20px;
+      height: 36px;
+      border: 5px solid #1a1714;
+      border-left: none;
+      border-radius: 0 14px 14px 0;
+    }}
+    .steam-curl {{
+      position: absolute;
+      top: -26px;
+      font-size: 26px;
+      font-weight: 900;
+      color: rgba(26, 23, 20, 0.25);
+      animation: riseSteam 2.2s infinite ease-out;
+    }}
+    .steam-curl.s1 {{ left: 16px; animation-delay: 0s; }}
+    .steam-curl.s2 {{ left: 34px; animation-delay: 1.1s; }}
+    @keyframes riseSteam {{
+      0% {{ transform: translateY(0) scale(0.8); opacity: 0; }}
+      50% {{ opacity: 0.6; }}
+      100% {{ transform: translateY(-34px) scale(1.3); opacity: 0; }}
+    }}
+  </style>
+</head>
+
+<body>
+  <div id="stage" data-composition-id="main" data-width="1080" data-height="1920" data-duration="{duration}" data-fps="30">
+    <!-- Ambient Blur Blobs -->
+    <div class="blob b1"></div>
+    <div class="blob b2"></div>
+    <div class="blob b3"></div>
+
+    <!-- Master Audio (Voiceover + Ducked Beat + 33 SFX Cues) -->
+    <audio id="voice" src="assets/master_audio.mp3" data-start="0" data-duration="{duration}" data-volume="1"></audio>
+
+    <!-- ================= UPPER THEATER (9 HYPER-MOTION SCENES) ================= -->
+    <div id="upper-theater">
+
+      <!-- SCENE 1 (0.0s - 3.18s): Midjourney $30/mo vs $0 FREE -->
+      <div id="sc-1" class="scene-view active">
+        <div class="rays"></div>
+        <div class="pill red" style="margin-top: 10px;">✕ CLOSED PLATFORMS · MONTHLY FEES</div>
+
+        <h1 class="hero-title" style="margin-top: 24px;">
+          Why Pay <span class="serif-accent">Every Month?</span><br>
+          For Closed AI Image Generators
+        </h1>
+
+        <div class="card" style="width: 840px; padding: 40px 52px; margin-top: 36px; display: flex; align-items: center; justify-content: space-between;">
+          <div>
+            <div style="font-size: 26px; font-weight: 800; color: #ef4444; margin-bottom: 8px;">✕ MIDJOURNEY / CLOSED</div>
+            <div class="strike-wrap">
+              <span style="font-size: 92px; font-weight: 900; color: #1a1714;">$30/mo</span>
+              <div class="strike"></div>
+            </div>
+          </div>
+          <div style="text-align: right;">
+            <div style="font-size: 26px; font-weight: 800; color: #10b981; margin-bottom: 8px;">✓ QWEN OPEN SOURCE</div>
+            <div style="font-size: 92px; font-weight: 900; color: #10b981;">$0 FREE</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SCENE 2 (3.18s - 7.96s): Qwen Image 2.1 Reveal -->
+      <div id="sc-2" class="scene-view">
+        <div class="pill clay">BREAKING · OPEN WEIGHTS RELEASE</div>
+        <div class="bounce-word" style="margin-top: 14px;">
+          <span style="--d: 0.1s; color: var(--clay);">F</span>
+          <span style="--d: 0.2s; color: var(--clay);">R</span>
+          <span style="--d: 0.3s; color: var(--clay);">E</span>
+          <span style="--d: 0.4s; color: var(--clay);">E</span>
+        </div>
+
+        <div class="card" style="width: 840px; padding: 36px 44px; margin-top: 14px; text-align: center;">
+          <div style="font-family: 'JetBrains Mono', monospace; font-size: 24px; font-weight: 800; color: #6b7280;">models / qwen-image-2.1</div>
+          <div style="font-size: 44px; font-weight: 900; color: #1a1714; margin-top: 10px;">Qwen Image 2.1 Uncensored</div>
+          <div style="font-size: 26px; font-weight: 700; color: var(--clay); margin-top: 8px;">Alibaba Open Weights · 100% Free Forever</div>
+        </div>
+      </div>
+
+      <!-- SCENE 3 (7.96s - 11.14s): 20 Billion Parameters & Benchmark Stack -->
+      <div id="sc-3" class="scene-view">
+        <div class="pill blue">SOTA VISION BENCHMARK</div>
+        <div class="counter-display">20 BILLION</div>
+        <div style="font-size: 26px; font-weight: 800; color: #6b7280; margin-top: -8px;">PARAMETERS · BEATS PROPRIETARY MODELS</div>
+
+        <div class="stack">
+          <div class="fan-card" style="--d: 0.1s; --x: -80px; --r: -12deg;">
+            <div style="font-size: 32px; font-weight: 900; color: var(--clay);">#1 Qwen Image 2.1</div>
+            <div style="font-size: 22px; font-weight: 700; color: #10b981; margin-top: 6px;">★ 94.2 Benchmark Score (SOTA)</div>
+          </div>
+          <div class="fan-card" style="--d: 0.25s; --x: 0px; --r: 0deg;">
+            <div style="font-size: 32px; font-weight: 900; color: #2563eb;">#2 FLUX.1 Dev</div>
+            <div style="font-size: 22px; font-weight: 700; color: #6b7280; margin-top: 6px;">91.8 Benchmark Score</div>
+          </div>
+          <div class="fan-card" style="--d: 0.4s; --x: 80px; --r: 12deg;">
+            <div style="font-size: 32px; font-weight: 900; color: #6b7280;">#3 Midjourney v6</div>
+            <div style="font-size: 22px; font-weight: 700; color: #ef4444; margin-top: 6px;">89.4 Score · Paid Closed Model</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SCENE 4 (11.14s - 14.32s): Photoreal Textures, Anatomy, Typography -->
+      <div id="sc-4" class="scene-view">
+        <div class="pill clay">3 INSANE SUPERPOWERS</div>
+        <div style="margin-top: 24px; display: flex; flex-direction: column; gap: 14px;">
+          <div class="feature-row" style="--d: 0.1s;">
+            <div style="font-size: 40px;">📸</div>
+            <div>
+              <div style="font-size: 30px; font-weight: 900; color: #1a1714;">Photorealistic Textures</div>
+              <div style="font-size: 22px; font-weight: 700; color: #6b7280;">Natural skin micro-details · Zero plastic AI look</div>
+            </div>
+            <div style="margin-left: auto; background: #fef3c7; color: #d97706; padding: 6px 16px; border-radius: 99px; font-size: 18px; font-weight: 800;">SOTA PHOTO</div>
+          </div>
+
+          <div class="feature-row" style="--d: 0.25s;">
+            <div style="font-size: 40px;">🖐️</div>
+            <div>
+              <div style="font-size: 30px; font-weight: 900; color: #1a1714;">Complex Human Anatomy</div>
+              <div style="font-size: 22px; font-weight: 700; color: #6b7280;">Flawless 5-finger hands, eyes & dynamic lighting</div>
+            </div>
+            <div style="margin-left: auto; background: #dbeafe; color: #2563eb; padding: 6px 16px; border-radius: 99px; font-size: 18px; font-weight: 800;">PERFECT HANDS</div>
+          </div>
+
+          <div class="feature-row" style="--d: 0.4s;">
+            <div style="font-size: 40px;">✍️</div>
+            <div>
+              <div style="font-size: 30px; font-weight: 900; color: #1a1714;">In-Image Typography</div>
+              <div style="font-size: 22px; font-weight: 700; color: #6b7280;">Spell words, logos, and neon signage accurately</div>
+            </div>
+            <div style="margin-left: auto; background: #dcfce7; color: #15803d; padding: 6px 16px; border-radius: 99px; font-size: 18px; font-weight: 800;">100% LEGIBLE</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SCENE 5 (14.32s - 19.89s): Dark Mode Shift - 100% Offline Local PC/Mac -->
+      <div id="sc-5" class="scene-view">
+        <div class="pill" style="background: #a78bfa; color: #0b0809; margin-top: 10px;">⚡ 100% OFFLINE LOCAL INFERENCE</div>
+        <h1 class="hero-title" style="margin-top: 18px; color: #ffffff;">
+          Runs Entirely on Your <span class="serif-accent" style="color: #a78bfa;">Mac or PC</span>
+        </h1>
+
+        <div class="radar-box">
+          <div class="radar-beam"></div>
+          <div style="z-index: 5; text-align: center;">
+            <div style="font-size: 44px; font-weight: 900; color: #ffffff;">1.8s</div>
+            <div style="font-size: 18px; font-weight: 800; color: #a78bfa;">INFERENCE SPEED</div>
+          </div>
+        </div>
+
+        <div class="card" style="width: 840px; padding: 24px 36px; text-align: center; margin-top: 10px;">
+          <div style="font-size: 28px; font-weight: 900; color: #a78bfa;">GGUF 4-Bit & 8-Bit Quantized Weights</div>
+          <div style="font-size: 22px; font-weight: 700; color: #9ca3af; margin-top: 4px;">Compatible with Apple Silicon Metal, RTX 3060+, and ComfyUI</div>
+        </div>
+      </div>
+
+      <!-- SCENE 6 (19.89s - 23.87s): Dark Mode Duel - No Cloud Queues, Zero Censorship -->
+      <div id="sc-6" class="scene-view">
+        <div class="pill red">ZERO RESTRICTIONS</div>
+        <div style="margin-top: 36px; display: flex; flex-direction: column; align-items: center; gap: 8px;">
+          <div class="card" style="width: 780px; padding: 24px 32px; display: flex; align-items: center; justify-content: space-between;">
+            <div style="font-size: 26px; font-weight: 800; color: #ef4444;">✕ Closed Cloud APIs</div>
+            <div style="font-size: 22px; font-weight: 700; color: #9ca3af;">Paid queues · Strict censorship filters · Rate limits</div>
+          </div>
+
+          <div class="flow-line" style="--d: 0.3s;"></div>
+
+          <div class="pill" style="background: #10b981; color: #0b0809; font-size: 24px; padding: 12px 30px;">
+            ✔ DIRECT GPU HARDWARE PIPELINE
+          </div>
+
+          <div class="flow-line" style="--d: 0.6s;"></div>
+
+          <div class="card" style="width: 780px; padding: 24px 32px; background: rgba(217, 105, 74, 0.15); border: 2px solid var(--clay); display: flex; align-items: center; justify-content: space-between;">
+            <div style="font-size: 28px; font-weight: 900; color: var(--clay);">✔ 100% Uncensored Offline</div>
+            <div style="font-size: 22px; font-weight: 800; color: #10b981;">Unlimited generations · $0 costs</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SCENE 7 (23.87s - 27.85s): Browser Hugging Face / Ollama Download -->
+      <div id="sc-7" class="scene-view">
+        <div class="pill clay">DIRECT DOWNLOAD REPO</div>
+        <div class="browser-frame">
+          <div class="browser-header">
+            <div class="browser-dots">
+              <i style="background: #ef4444;"></i>
+              <i style="background: #eab308;"></i>
+              <i style="background: #22c55e;"></i>
+            </div>
+            <div class="browser-bar">
+              <span>🔒 huggingface.co/Qwen/Qwen-Image-2.1-GGUF</span>
+              <span class="cursor-blink"></span>
+            </div>
+          </div>
+          <div style="padding: 36px 44px;">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+              <div>
+                <div style="font-size: 34px; font-weight: 900; color: #1a1714;">qwen-image-2.1-q4_k_m.gguf</div>
+                <div style="font-size: 22px; font-weight: 700; color: #6b7280; margin-top: 4px;">12.4 GB · 4-Bit Optimized Weights</div>
+              </div>
+              <div class="pill clay" style="font-size: 22px; padding: 12px 28px;">DOWNLOAD GGUF ➔</div>
+            </div>
+            <div style="width: 100%; height: 14px; background: #e5e7eb; border-radius: 99px; margin-top: 24px; overflow: hidden;">
+              <div style="width: 85%; height: 100%; background: var(--clay); border-radius: 99px;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SCENE 8 (27.85s - 32.62s): 60-Second Instant Setup & Checklist -->
+      <div id="sc-8" class="scene-view">
+        <div class="pill clay">INSTANT LOCAL SETUP</div>
+        <div style="display: flex; align-items: center; gap: 40px; margin-top: 24px;">
+          <div style="position: relative; width: 160px; height: 160px; display: grid; place-items: center;">
+            <svg class="ring-svg" viewBox="0 0 160 160">
+              <circle class="ring-bg" cx="80" cy="80" r="70"/>
+              <circle class="ring-val" cx="80" cy="80" r="70"/>
+            </svg>
+            <span style="position: absolute; font-size: 40px; font-weight: 900; color: var(--clay);">60s</span>
+          </div>
+
+          <div style="display: flex; flex-direction: column; gap: 12px;">
+            <div class="card" style="width: 580px; padding: 16px 24px; display: flex; align-items: center; gap: 16px;">
+              <div style="width: 32px; height: 32px; border-radius: 50%; background: #10b981; color: #fff; display: grid; place-items: center; font-weight: 900;">✔</div>
+              <div style="font-size: 24px; font-weight: 800; color: #1a1714;">1. Open ComfyUI or Ollama</div>
+            </div>
+            <div class="card" style="width: 580px; padding: 16px 24px; display: flex; align-items: center; gap: 16px;">
+              <div style="width: 32px; height: 32px; border-radius: 50%; background: #10b981; color: #fff; display: grid; place-items: center; font-weight: 900;">✔</div>
+              <div style="font-size: 24px; font-weight: 800; color: #1a1714;">2. Paste one-line download command</div>
+            </div>
+            <div class="card" style="width: 580px; padding: 16px 24px; display: flex; align-items: center; gap: 16px;">
+              <div style="width: 32px; height: 32px; border-radius: 50%; background: var(--clay); color: #fff; display: grid; place-items: center; font-weight: 900;">➔</div>
+              <div style="font-size: 24px; font-weight: 800; color: #1a1714;">3. Generate unlimited 4K photoreal images</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SCENE 9 (32.62s - 39.78s): Brand Clay Viral CTA -->
+      <div id="sc-9" class="scene-view">
+        <div style="display: flex; gap: 16px; margin-top: 16px;">
+          <div class="pill" style="font-size: 34px; padding: 14px 34px; background: #1a1714; rotate: -3deg;">💬 COMMENT</div>
+          <div class="pill" style="font-size: 34px; padding: 14px 34px; background: #ffffff; color: var(--clay); rotate: 3deg;">🔥 QWEN</div>
+        </div>
+
+        <div class="card" style="width: 820px; padding: 20px 30px; margin-top: 24px; display: flex; align-items: center; gap: 16px; border-radius: 99px;">
+          <div style="width: 38px; height: 38px; border-radius: 50%; background: var(--clay);"></div>
+          <div style="font-size: 26px; font-weight: 800; color: #1a1714;">Typing "QWEN"...</div>
+          <div style="margin-left: auto; width: 44px; height: 44px; border-radius: 50%; background: var(--clay); color: #fff; display: grid; place-items: center; font-size: 20px;">➤</div>
+        </div>
+
+        <div class="card" style="width: 820px; padding: 28px 36px; margin-top: 20px; display: flex; align-items: center; gap: 24px;">
+          <div style="font-size: 50px;">📩</div>
+          <div>
+            <div style="font-size: 30px; font-weight: 900; color: #1a1714;">jayant.digitalstudio · now</div>
+            <div style="font-size: 24px; font-weight: 700; color: var(--mut); margin-top: 4px;">Qwen Image 2.1 GGUF weights + ComfyUI guide sent to your DMs</div>
+          </div>
+          <div style="margin-left: auto; background: #dcfce7; color: #15803d; padding: 10px 24px; border-radius: 99px; font-size: 22px; font-weight: 900;">SENT ✔</div>
+        </div>
+      </div>
+
+    </div> <!-- end upper-theater -->
+
+    <!-- ================= WORD-BY-WORD KINETIC SUBTITLE BAR ================= -->
+    <div id="caption-bar"></div>
+
+    <!-- ================= LOWER STAGE: ANIMATED HOST AVATAR & TECH DESK ================= -->
+    <div id="lower-stage">
+
+      <!-- Host Avatar Rig -->
+      <div id="host-avatar">
+        <svg viewBox="0 0 440 440" width="100%" height="100%">
+          <defs>
+            <linearGradient id="skin" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#fcd5b8"/>
+              <stop offset="100%" stop-color="#f5b890"/>
+            </linearGradient>
+            <linearGradient id="hoodie" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#1f2937"/>
+              <stop offset="100%" stop-color="#141312"/>
+            </linearGradient>
+          </defs>
+
+          <!-- Avatar Character (Idle Breathing Oscillation) -->
+          <g id="avatar-character">
+            <!-- Torso & Broad Shoulders -->
+            <path d="M80 340 C80 270, 160 255, 220 255 C280 255, 360 270, 360 340 L380 440 L60 440 Z" 
+                  fill="url(#hoodie)" stroke="#1a1714" stroke-width="8"/>
+            <path d="M190 255 C190 295, 250 295, 250 255 Z" fill="#ffffff" stroke="#1a1714" stroke-width="6"/>
+            <!-- Drawstrings -->
+            <path d="M165 260 L195 355" stroke="#d9694a" stroke-width="6" stroke-linecap="round" fill="none"/>
+            <path d="M275 260 L245 355" stroke="#d9694a" stroke-width="6" stroke-linecap="round" fill="none"/>
+
+            <!-- Arms Contiguously Attached Resting on Desk -->
+            <path d="M90 320 C80 365, 100 410, 165 424" fill="none" stroke="#1a1714" stroke-width="36" stroke-linecap="round"/>
+            <path d="M90 320 C80 365, 100 410, 165 424" fill="none" stroke="#1f2937" stroke-width="28" stroke-linecap="round"/>
+            <circle cx="170" cy="424" r="14" fill="url(#skin)" stroke="#1a1714" stroke-width="5"/>
+
+            <path d="M350 320 C360 365, 340 410, 275 424" fill="none" stroke="#1a1714" stroke-width="36" stroke-linecap="round"/>
+            <path d="M350 320 C360 365, 340 410, 275 424" fill="none" stroke="#1f2937" stroke-width="28" stroke-linecap="round"/>
+            <circle cx="270" cy="424" r="14" fill="url(#skin)" stroke="#1a1714" stroke-width="5"/>
+
+            <!-- Neck -->
+            <path d="M195 240 L195 275 C195 285, 245 285, 245 275 L245 240 Z" 
+                  fill="url(#skin)" stroke="#1a1714" stroke-width="6"/>
+
+            <!-- Head / Jaw -->
+            <path d="M150 155 C150 90, 290 90, 290 155 C290 230, 255 258, 220 258 C185 258, 150 230, 150 155 Z" 
+                  fill="url(#skin)" stroke="#1a1714" stroke-width="7"/>
+
+            <!-- Stylish Hair -->
+            <path d="M142 145 C138 95, 175 60, 220 58 C265 60, 302 95, 298 145 C294 110, 260 78, 220 78 C180 78, 146 110, 142 145 Z" 
+                  fill="#1a1714"/>
+            <path d="M146 130 C155 105, 185 85, 220 84 C255 85, 285 105, 294 130 C280 115, 250 102, 220 102 C190 102, 160 115, 146 130 Z" 
+                  fill="#2d2a26"/>
+
+            <!-- Ears -->
+            <ellipse cx="148" cy="170" rx="10" ry="16" fill="url(#skin)" stroke="#1a1714" stroke-width="5"/>
+            <ellipse cx="292" cy="170" rx="10" ry="16" fill="url(#skin)" stroke="#1a1714" stroke-width="5"/>
+
+            <!-- Eyebrows -->
+            <path d="M172 145 Q190 138 204 146" stroke="#1a1714" stroke-width="6" stroke-linecap="round" fill="none"/>
+            <path d="M236 146 Q250 138 268 145" stroke="#1a1714" stroke-width="6" stroke-linecap="round" fill="none"/>
+
+            <!-- Eyes (Blinking Group) -->
+            <g id="eyes-open">
+              <ellipse cx="188" cy="162" rx="11" ry="13" fill="#ffffff" stroke="#1a1714" stroke-width="4.5"/>
+              <ellipse cx="252" cy="162" rx="11" ry="13" fill="#ffffff" stroke="#1a1714" stroke-width="4.5"/>
+              <circle cx="189" cy="162" r="6" fill="#1a1714"/>
+              <circle cx="253" cy="162" r="6" fill="#1a1714"/>
+              <circle cx="191" cy="159" r="2.5" fill="#ffffff"/>
+              <circle cx="255" cy="159" r="2.5" fill="#ffffff"/>
+            </g>
+            <g id="eyes-blink" style="display:none;">
+              <path d="M177 163 Q188 171 199 163" stroke="#1a1714" stroke-width="6" stroke-linecap="round" fill="none"/>
+              <path d="M241 163 Q252 171 263 163" stroke="#1a1714" stroke-width="6" stroke-linecap="round" fill="none"/>
+            </g>
+
+            <!-- Nose -->
+            <path d="M220 162 L216 186 L224 186" stroke="#1a1714" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+
+            <!-- Beard / Stubble -->
+            <path d="M168 190 C172 238, 268 238, 272 190 C265 248, 175 248, 168 190 Z" fill="#2d2a26" opacity="0.35"/>
+
+            <!-- Synchronized Lip-Sync Mouth Rig (4-State RMS) -->
+            <g id="mouth-closed">
+              <path d="M205 210 Q220 215 235 210" stroke="#1a1714" stroke-width="5" stroke-linecap="round" fill="none"/>
+            </g>
+            <g id="mouth-small" style="display:none;">
+              <ellipse cx="220" cy="211" rx="8" ry="6" fill="#7a2e22" stroke="#1a1714" stroke-width="4"/>
+            </g>
+            <g id="mouth-open" style="display:none;">
+              <path d="M204 207 Q220 203 236 207 Q220 226 204 207 Z" fill="#7a2e22" stroke="#1a1714" stroke-width="4.5"/>
+              <path d="M208 208 Q220 211 232 208" stroke="#ffffff" stroke-width="3" fill="none"/>
+            </g>
+            <g id="mouth-wide" style="display:none;">
+              <path d="M200 206 Q220 200 240 206 Q220 235 200 206 Z" fill="#7a2e22" stroke="#1a1714" stroke-width="5"/>
+              <path d="M205 208 Q220 213 235 208" stroke="#ffffff" stroke-width="4" fill="none"/>
+              <path d="M210 224 Q220 220 230 224" stroke="#d97768" stroke-width="5" stroke-linecap="round" fill="none"/>
+            </g>
+
+          </g> <!-- end avatar-character -->
+        </svg>
+      </div> <!-- end host-avatar -->
+
+      <!-- Wooden Tech Desk Surface -->
+      <div class="desk-surface"></div>
+
+      <!-- Desk Props: Studio Boom Mic & Steaming Mug -->
+      <div class="desk-props">
+        <div class="studio-mic">
+          <svg viewBox="0 0 120 140" width="100%" height="100%">
+            <rect x="15" y="115" width="24" height="22" rx="4" fill="#1a1714"/>
+            <path d="M26 115 L50 55 L82 78" stroke="#1a1714" stroke-width="8" stroke-linecap="round" fill="none"/>
+            <path d="M30 115 L54 55 L86 78" stroke="#6b7280" stroke-width="3.5" stroke-linecap="round" fill="none"/>
+            <circle cx="26" cy="115" r="8" fill="#1a1714"/>
+            <circle cx="50" cy="55" r="8" fill="#1a1714"/>
+            <circle cx="86" cy="82" r="18" fill="none" stroke="#1a1714" stroke-width="4.5"/>
+            <rect x="76" y="66" width="22" height="34" rx="11" fill="#2d3748" stroke="#1a1714" stroke-width="4"/>
+            <path d="M79 78 L95 78 M79 84 L95 84" stroke="#4a5568" stroke-width="2.5"/>
+          </svg>
+        </div>
+
+        <div class="desk-mug-wrap">
+          <div class="steam-curl s1">~</div>
+          <div class="steam-curl s2">~</div>
+          <div class="mug-cup"></div>
+        </div>
+      </div>
+
+    </div> <!-- end lower-stage -->
+
+  </div> <!-- end stage -->
+
+  <script>
+    const captionChunks = {json.dumps(caption_chunks)};
+    const duration = {duration};
+    const stage = document.getElementById("stage");
+
+    const tl = gsap.timeline();
+    window.__timelines = window.__timelines || {{}};
+    window.__timelines["main"] = tl;
+
+    // Lip sync helper
+    function setMouth(state) {{
+      const states = ["closed", "small", "open", "wide"];
+      states.forEach(s => {{
+        const el = document.getElementById("mouth-" + s);
+        if (el) el.style.display = (s === state ? "block" : "none");
+      }});
+    }}
+
+    // Deterministic Scene Switcher
+    function switchScene(fromId, toId, time, mode = "") {{
+      tl.to(fromId, {{ opacity: 0, duration: 0.15 }}, time);
+      tl.set(fromId, {{ display: "none", pointerEvents: "none" }}, time + 0.15);
+      tl.call(() => {{
+        if (mode === "dark") {{
+          stage.className = "dark";
+        }} else if (mode === "or") {{
+          stage.className = "or";
+        }} else {{
+          stage.className = "";
+        }}
+      }}, null, time + 0.15);
+      tl.set(toId, {{ display: "flex", pointerEvents: "auto" }}, time + 0.15);
+      tl.fromTo(toId, {{ opacity: 0, y: 35, scale: 0.95 }}, {{ opacity: 1, y: 0, scale: 1, duration: 0.35, ease: "back.out(1.4)" }}, time + 0.15);
+    }}
+
+    // 1. Initial State
+    gsap.set("#sc-1", {{ display: "flex", opacity: 1, pointerEvents: "auto" }});
+    gsap.set(["#sc-2", "#sc-3", "#sc-4", "#sc-5", "#sc-6", "#sc-7", "#sc-8", "#sc-9"], {{ display: "none", opacity: 0, pointerEvents: "none" }});
+    gsap.set("#eyes-open", {{ display: "block" }});
+    gsap.set("#eyes-blink", {{ display: "none" }});
+
+    // 2. 9 Micro-Scene Transitions (100% Synced to Voiceover Sentences)
+    switchScene("#sc-1", "#sc-2", {s2});
+    switchScene("#sc-2", "#sc-3", {s3});
+    switchScene("#sc-3", "#sc-4", {s4});
+    switchScene("#sc-4", "#sc-5", {s5}, "dark");   // Dark Mode for Local Offline
+    switchScene("#sc-5", "#sc-6", {s6}, "dark");   // Dark Mode for Duel
+    switchScene("#sc-6", "#sc-7", {s7}, "");       // Tech Paper for Download
+    switchScene("#sc-7", "#sc-8", {s8});           // 60s Setup
+    switchScene("#sc-8", "#sc-9", {s9}, "or");     // Clay Brand Mode for CTA
+
+    // 3. Continuous Idle Breathing
+    tl.to("#avatar-character", {{ y: -6, duration: 1.4, repeat: 28, yoyo: true, ease: "sine.inOut" }}, 0);
+
+    // 4. Automatic Eye Blinks Every 3s
+    for (let t = 1.2; t < duration; t += 3.0) {{
+      tl.set("#eyes-open", {{ display: "none" }}, t);
+      tl.set("#eyes-blink", {{ display: "block" }}, t);
+      tl.set("#eyes-open", {{ display: "block" }}, t + 0.133);
+      tl.set("#eyes-blink", {{ display: "none" }}, t + 0.133);
+    }}
+
+    // 5. Deterministic RMS Lip-Sync Schedule
+    {chr(10).join(mouth_calls)}
+
+    // 6. Word-by-Word Kinetic Subtitle Schedule
+    captionChunks.forEach(chunk => {{
+      tl.call(() => {{
+        const bar = document.getElementById("caption-bar");
+        if (!bar) return;
+        bar.innerHTML = "";
+        chunk.words.forEach((w, wIdx) => {{
+          const span = document.createElement("span");
+          span.className = "w" + (wIdx === chunk.active ? " on" : (wIdx < chunk.active ? " done" : ""));
+          span.innerText = w;
+          bar.appendChild(span);
+        }});
+      }}, null, chunk.start);
+    }});
+  </script>
+</body>
+</html>
+"""
+
+    with open("index.html", "w") as f:
+        f.write(html)
+    print(f"[✓] Generated complete Qwen Image 2.1 composition in index.html ({len(html)} bytes)")
+
+if __name__ == "__main__":
+    compile_qwen_reel()
