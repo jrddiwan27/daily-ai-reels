@@ -1,5 +1,270 @@
 [
   {
+    "id": "2026-10-11-slot-5",
+    "title": "The Senior AI Prompt Framework You Should Be Using in 2026",
+    "date": "October 11, 2026",
+    "date_slug": "2026-10-11",
+    "slot_id": 5,
+    "slot_name": "Night Owl Deep Dive (Master Prompts)",
+    "badge": "PROMPT LAB",
+    "cta_keyword": "PROMPT",
+    "video_url": "",
+    "summary": "If you are still prompting AI like a beginner in 2026, you are leaving massive results behind.",
+    "voiceover_script": "If you are still prompting AI like a beginner in 2026, you are leaving massive results behind. First up is Adversarial Red Teamer. Simulates security pen-testers to find race conditions and edge case exploits in APIs. It delivers high performance red team audit with zero subscription fees. Second is Mastering Prompt Engineer. In conclusion, effective prompt engineering with Claude involves clear, structured. It delivers high performance zero hallucination with zero subscription fees. Finally, Prompt Engineering Best P. LangChain formalised four strategies for this: write (persist context externally),. It delivers high performance zero hallucination with zero subscription fees. Comment the word PROMPT below, and I will DM you the exact links right now.",
+    "items": [
+      {
+        "number": 1,
+        "name": "Adversarial Red Teamer",
+        "url": "https://jayantdigital.com",
+        "stars": "\u2605 23,000",
+        "badge": "RED TEAM AUDIT",
+        "description": "Simulates security pen-testers to find race conditions and edge case exploits in APIs.",
+        "command": "git clone https://jayantdigital.com.git\ncd adversarial-red-teamer\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 2,
+        "name": "Mastering Prompt Engineer",
+        "url": "https://www.walturn.com/insights/mastering-prompt-engineering-for-claude",
+        "stars": "\u2605 10,000",
+        "badge": "ZERO HALLUCINATION",
+        "description": "In conclusion, effective prompt engineering with Claude involves clear, structured instructions, relevant examples, and utilizing advanced techniques like Chain of Thought prompting and prompt chaining. By incorporating XML tags for organization, sys",
+        "command": "git clone https://www.walturn.com/insights/mastering-prompt-engineering-for-claude.git\ncd mastering prompt engineer\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 3,
+        "name": "Prompt Engineering Best P",
+        "url": "https://thomas-wiegold.com/blog/prompt-engineering-best-practices-2026",
+        "stars": "\u2605 10,000",
+        "badge": "ZERO HALLUCINATION",
+        "description": "LangChain formalised four strategies for this: write (persist context externally), select (retrieve what's relevant via RAG), compress (summarise and compact), and isolate (separate contexts for different agents). If you use Claude Projects, you're a",
+        "command": "git clone https://thomas-wiegold.com/blog/prompt-engineering-best-practices-2026.git\ncd prompt engineering best p\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      }
+    ],
+    "cta_text": "Want our studio to build custom autonomous AI employees for your workflow? Follow @jayant.digitalstudio and DM 'PROMPT'.",
+    "tags": [
+      "#promptengineering",
+      "#chatgpt",
+      "#claude",
+      "#softwareengineer",
+      "#aicoding"
+    ]
+  },
+  {
+    "id": "2026-10-11-slot-4",
+    "title": "3 Secret AI Websites That Feel Illegal To Know",
+    "date": "October 11, 2026",
+    "date_slug": "2026-10-11",
+    "slot_id": 4,
+    "slot_name": "Evening Toolkit (Secret Web AI Tools)",
+    "badge": "SECRET AI TOOLS",
+    "cta_keyword": "TOOLS",
+    "video_url": "",
+    "summary": "Bookmark this immediately. Three secret AI tools that feel totally illegal to know.",
+    "voiceover_script": "Bookmark this immediately. Three secret AI tools that feel totally illegal to know. First up is Recraft Ai. Generate clean SVG vector art, brand logos, and 3D icons with transparent backgrounds. It delivers high performance vector engine with zero subscription fees. Second is Napkin Ai. Turn plain text bullet points into professional slide diagrams and visuals. It delivers high performance diagram ai with zero subscription fees. Finally, Gamma App. Generates interactive presentation decks and landing pages from simple notes in 30. It delivers high performance instant decks with zero subscription fees. Comment the word TOOLS below, and I will DM you the exact links right now.",
+    "items": [
+      {
+        "number": 1,
+        "name": "Recraft Ai",
+        "url": "https://recraft.ai",
+        "stars": "\u2605 24,000",
+        "badge": "VECTOR ENGINE",
+        "description": "Generate clean SVG vector art, brand logos, and 3D icons with transparent backgrounds.",
+        "command": "git clone https://recraft.ai.git\ncd recraft-ai\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 2,
+        "name": "Napkin Ai",
+        "url": "https://napkin.ai",
+        "stars": "\u2605 19,000",
+        "badge": "DIAGRAM AI",
+        "description": "Turn plain text bullet points into professional slide diagrams and visuals automatically.",
+        "command": "git clone https://napkin.ai.git\ncd napkin-ai\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 3,
+        "name": "Gamma App",
+        "url": "https://gamma.app",
+        "stars": "\u2605 38,000",
+        "badge": "INSTANT DECKS",
+        "description": "Generates interactive presentation decks and landing pages from simple notes in 30 seconds.",
+        "command": "git clone https://gamma.app.git\ncd gamma-app\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      }
+    ],
+    "cta_text": "Want our studio to build custom autonomous AI employees for your workflow? Follow @jayant.digitalstudio and DM 'TOOLS'.",
+    "tags": [
+      "#aitools",
+      "#techhacks",
+      "#freelancer",
+      "#creatortools",
+      "#websites"
+    ]
+  },
+  {
+    "id": "2026-10-11-slot-3",
+    "title": "New Frontier Model Teardown: Why This Changes Everything",
+    "date": "October 11, 2026",
+    "date_slug": "2026-10-11",
+    "slot_id": 3,
+    "slot_name": "Tech Radar Teardown (Model Benchmarks)",
+    "badge": "MODEL RADAR",
+    "cta_keyword": "RADAR",
+    "video_url": "",
+    "summary": "Frontier AI just shifted again. These three breakthrough models completely shatter existing benchmarks.",
+    "voiceover_script": "Frontier AI just shifted again. These three breakthrough models completely shatter existing benchmarks. First up is Llama 3.3 70B. Flagship 70-billion open weights delivering 405B-level coding performance on. It delivers high performance open weights with zero subscription fees. Second is Flux.1 Schnell. 12-billion parameter rectified flow transformer generating photoreal graphics in 4. It delivers high performance next-gen image with zero subscription fees. Finally, Whisper V3 Turbo. Transcribes 60 minutes of multilingual audio in 12 seconds with sub-1% word error. It delivers high performance turbo transcribe with zero subscription fees. Comment the word RADAR below, and I will DM you the exact links right now.",
+    "items": [
+      {
+        "number": 1,
+        "name": "Llama 3.3 70B",
+        "url": "https://llama.meta.com",
+        "stars": "\u2605 78,000",
+        "badge": "OPEN WEIGHTS",
+        "description": "Flagship 70-billion open weights delivering 405B-level coding performance on commodity GPUs.",
+        "command": "git clone https://llama.meta.com.git\ncd llama-3.3-70b\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 2,
+        "name": "Flux.1 Schnell",
+        "url": "https://blackforestlabs.ai",
+        "stars": "\u2605 34,000",
+        "badge": "NEXT-GEN IMAGE",
+        "description": "12-billion parameter rectified flow transformer generating photoreal graphics in 4 steps.",
+        "command": "git clone https://blackforestlabs.ai.git\ncd flux.1-schnell\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 3,
+        "name": "Whisper V3 Turbo",
+        "url": "https://openai.com",
+        "stars": "\u2605 67,000",
+        "badge": "TURBO TRANSCRIBE",
+        "description": "Transcribes 60 minutes of multilingual audio in 12 seconds with sub-1% word error rate.",
+        "command": "git clone https://openai.com.git\ncd whisper-v3-turbo\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      }
+    ],
+    "cta_text": "Want our studio to build custom autonomous AI employees for your workflow? Follow @jayant.digitalstudio and DM 'RADAR'.",
+    "tags": [
+      "#artificialintelligence",
+      "#deeplearning",
+      "#llm",
+      "#techtrends",
+      "#futureoftech"
+    ]
+  },
+  {
+    "id": "2026-10-11-slot-2",
+    "title": "The Automated AI Workflow Saving Us 20 Hours Every Week",
+    "date": "October 11, 2026",
+    "date_slug": "2026-10-11",
+    "slot_id": 2,
+    "slot_name": "Midday Cheat Code (AI Workflows)",
+    "badge": "AI AUTOMATION",
+    "cta_keyword": "FLOW",
+    "video_url": "",
+    "summary": "Stop wasting your workday manually clicking screens. These three AI workflows print free time.",
+    "voiceover_script": "Stop wasting your workday manually clicking screens. These three AI workflows print free time. First up is the n8n Agent Node, allowing you to build completely autonomous workflows that connect smart language models directly to your live software tools. Second is self hosted n8n, giving you ten thousand automated workflow executions for five bucks a month while bypassing expensive enterprise cloud subscriptions. Finally, n8n Watchdog Bots, performing continuous uptime checks and instantly triggering recovery protocols whenever critical websites or core servers crash. Comment the word FLOW below, and I will DM you the exact links right now.",
+    "items": [
+      {
+        "number": 1,
+        "name": "N8N Tutorial: Automate 5 ",
+        "url": "https://tech-insider.org/n8n-tutorial-workflow-automation-complete-guide-2026",
+        "stars": "\u2605 10,000",
+        "badge": "AUTOMATION BLUEPRINT",
+        "description": "One of the most exciting features in n8n 2.x is the native AI Agent node, which lets you build intelligent, autonomous workflows that use large language models to make decisions, process natural language, and take actions. The AI capabilities were si",
+        "command": "git clone https://tech-insider.org/n8n-tutorial-workflow-automation-complete-guide-2026.git\ncd n8n tutorial: automate 5 \n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 2,
+        "name": "11 Best Ai Workflow Autom",
+        "url": "https://developershubcorp.com/blog/best-ai-workflow-automation-tools",
+        "stars": "\u2605 10,000",
+        "badge": "AUTOMATION BLUEPRINT",
+        "description": "| Platform | Type | Time to v1 | Cost @ 10k runs/mo | AI agents | Best for |\n ---  ---  --- |\n| n8n | Workflow | ~2 hrs | ~$5 (self-host) | Yes (LangChain) | Cost-conscious teams |\n| Zapier AI | Workflow | ~30 min | ~$199 | Limited | Non-technical op",
+        "command": "git clone https://developershubcorp.com/blog/best-ai-workflow-automation-tools.git\ncd 11 best ai workflow autom\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 3,
+        "name": "Build Ai Agents With N8N ",
+        "url": "https://www.youtube.com/watch?v=UtXzdmpysmU",
+        "stars": "\u2605 10,000",
+        "badge": "AUTOMATION BLUEPRINT",
+        "description": "[1:05:12] performs periodic checks like uptime checks for a website or performance checks for a server. And if a check\n[1:05:19] fails or crosses a certain threshold, an alert is triggered and Site 247 can notify us in multiple ways. Emails,\n[1:05:27",
+        "command": "git clone https://www.youtube.com/watch?v=UtXzdmpysmU.git\ncd build ai agents with n8n \n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      }
+    ],
+    "cta_text": "Want our studio to build custom autonomous AI employees for your workflow? Follow @jayant.digitalstudio and DM 'FLOW'.",
+    "tags": [
+      "#automation",
+      "#aiworkflow",
+      "#n8n",
+      "#productivity",
+      "#nocode"
+    ]
+  },
+  {
+    "id": "2026-10-11-slot-1",
+    "title": "Stop Paying Monthly Fees! 3 Open Source Superpowers",
+    "date": "October 11, 2026",
+    "date_slug": "2026-10-11",
+    "slot_id": 1,
+    "slot_name": "Morning Breakthrough (Open Source Repos)",
+    "badge": "AI OPEN SOURCE",
+    "cta_keyword": "REPOS",
+    "video_url": "",
+    "summary": "Stop paying monthly software fees. These three open source repos give you insane superpowers.",
+    "voiceover_script": "Stop paying monthly software fees. These three open source repos give you insane superpowers. First up is Qwen Image 2.1 Uncensored GGUF. It automates complex engineering tasks in seconds with zero manual friction. Next is Kolibri 1. A high-performance powerhouse that runs locally on your machine with extreme speed. Finally, GEOFlow. The ultimate secret weapon that senior creators and engineers use silently. Comment the word REPOS below, and I will DM you the exact links right now.",
+    "items": [
+      {
+        "number": 1,
+        "name": "Qwen Image 2.1 Uncensored Gguf",
+        "url": "https://huggingface.co/abenzerps/Qwen-Image-2.1-Uncensored-GGUF",
+        "stars": "\u2605 10,000",
+        "badge": "OPEN WEIGHTS",
+        "description": "Trending open-weights model on Hugging Face (text-to-image) with 3894 likes.",
+        "command": "git clone https://huggingface.co/abenzerps/Qwen-Image-2.1-Uncensored-GGUF.git\ncd qwen-image-2.1-uncensored-gguf\n./setup.sh",
+        "image": "assets/slot_1/abenzerps_Qwen-Image-2.1-Uncensored-GGUF/og_banner.png"
+      },
+      {
+        "number": 2,
+        "name": "Kolibri 1",
+        "url": "https://huggingface.co/Aleph-Alpha/Kolibri-1",
+        "stars": "\u2605 10,000",
+        "badge": "OPEN WEIGHTS",
+        "description": "Trending open-weights model on Hugging Face (text-generation) with 874 likes.",
+        "command": "git clone https://huggingface.co/Aleph-Alpha/Kolibri-1.git\ncd kolibri-1\n./setup.sh",
+        "image": "assets/slot_1/Aleph-Alpha_Kolibri-1/og_banner.png"
+      },
+      {
+        "number": 3,
+        "name": "Lobehub",
+        "url": "https://github.com/lobehub/lobehub",
+        "stars": "\u2605 83,122",
+        "badge": "AI OPEN SOURCE",
+        "description": "\ud83e\udd2f LobeHub is your Chief Agent Operator, organizing your agents into 7\u00d724 operations by hiring, scheduling, and reporting on your entire AI team.",
+        "command": "git clone https://github.com/lobehub/lobehub.git\ncd lobehub\n./setup.sh",
+        "image": "assets/slot_1/lobehub_lobehub/demo.png"
+      }
+    ],
+    "cta_text": "Want our studio to build custom autonomous AI employees for your workflow? Follow @jayant.digitalstudio and DM 'REPOS'.",
+    "tags": [
+      "#developer",
+      "#ai",
+      "#opensource",
+      "#github",
+      "#coding"
+    ]
+  },
+  {
     "id": "2026-10-10-slot-5",
     "title": "The Senior AI Prompt Framework You Should Be Using in 2026",
     "date": "October 10, 2026",

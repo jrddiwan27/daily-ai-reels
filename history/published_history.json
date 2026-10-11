@@ -175,5 +175,167 @@
         "title": "Trending open-weights model on Hugging Face (image-to-video) with 7155 likes."
       }
     ]
+  },
+  {
+    "slot_id": 1,
+    "slot_name": "Morning Breakthrough (Open Source Repos)",
+    "timestamp_utc": "2026-10-11T01:39:36.387722+00:00",
+    "date_ist": "2026-10-11 07:09:36 IST",
+    "buffer_post_id": "scheduled",
+    "items": [
+      {
+        "id": "google/embeddinggemma-2",
+        "name": "embeddinggemma-2",
+        "url": "https://huggingface.co/google/embeddinggemma-2",
+        "title": "Trending open-weights model on Hugging Face (feature-extraction) with 1519 likes"
+      },
+      {
+        "id": "jialinyyzz/humanizer",
+        "name": "humanizer",
+        "url": "https://huggingface.co/jialinyyzz/humanizer",
+        "title": "Trending open-weights model on Hugging Face (text-generation) with 966 likes."
+      },
+      {
+        "id": "Cloudflare/clef",
+        "name": "clef",
+        "url": "https://huggingface.co/Cloudflare/clef",
+        "title": "Trending open-weights model on Hugging Face (image-text-to-text) with 1998 likes"
+      }
+    ]
+  },
+  {
+    "slot_id": 1,
+    "slot_name": "Morning Breakthrough (Open Source Repos)",
+    "timestamp_utc": "2026-10-11T14:43:52.686479+00:00",
+    "date_ist": "2026-10-11 20:13:52 IST",
+    "buffer_post_id": "6acba065b07d37ac97ad0aa6",
+    "items": [
+      {
+        "id": "abenzerps/Qwen-Image-2.1-Uncensored-GGUF",
+        "name": "Qwen-Image-2.1-Uncensored-GGUF",
+        "url": "https://huggingface.co/abenzerps/Qwen-Image-2.1-Uncensored-GGUF",
+        "title": "Trending open-weights model on Hugging Face (text-to-image) with 3894 likes."
+      },
+      {
+        "id": "Aleph-Alpha/Kolibri-1",
+        "name": "Kolibri-1",
+        "url": "https://huggingface.co/Aleph-Alpha/Kolibri-1",
+        "title": "Trending open-weights model on Hugging Face (text-generation) with 874 likes."
+      },
+      {
+        "id": "lobehub/lobehub",
+        "name": "lobehub",
+        "url": "https://github.com/lobehub/lobehub",
+        "title": "\ud83e\udd2f LobeHub is your Chief Agent Operator, organizing your agents into 7\u00d724 operati"
+      }
+    ]
+  },
+  {
+    "slot_id": 2,
+    "slot_name": "Midday Cheat Code (AI Workflows)",
+    "timestamp_utc": "2026-10-11T14:55:21.244761+00:00",
+    "date_ist": "2026-10-11 20:25:21 IST",
+    "buffer_post_id": "6acba33eb07d37ac97ad80e1",
+    "items": [
+      {
+        "id": "n8n Tutorial: Automate 5 Workflows in 30 Min [2026]",
+        "name": "n8n Tutorial: Automate 5 ",
+        "url": "https://tech-insider.org/n8n-tutorial-workflow-automation-complete-guide-2026",
+        "title": "One of the most exciting features in n8n 2.x is the native AI Agent node, which "
+      },
+      {
+        "id": "11 Best AI Workflow Automation Tools in 2026 (Tested & Ranked for ROI) | DevelopersHub Corporation",
+        "name": "11 Best AI Workflow Autom",
+        "url": "https://developershubcorp.com/blog/best-ai-workflow-automation-tools",
+        "title": "| Platform | Type | Time to v1 | Cost @ 10k runs/mo | AI agents | Best for |\n --"
+      },
+      {
+        "id": "Build AI Agents with n8n | Complete Beginner\u2019s Automation Course 2026",
+        "name": "Build AI Agents with n8n ",
+        "url": "https://www.youtube.com/watch?v=UtXzdmpysmU",
+        "title": "[1:05:12] performs periodic checks like uptime checks for a website or performan"
+      }
+    ]
+  },
+  {
+    "slot_id": 3,
+    "slot_name": "Tech Radar Teardown (Model Benchmarks)",
+    "timestamp_utc": "2026-10-11T15:15:05.563883+00:00",
+    "date_ist": "2026-10-11 20:45:05 IST",
+    "buffer_post_id": "6acba7deb07d37ac97ae8e12",
+    "items": [
+      {
+        "id": "meta-llama/llama-3.3",
+        "name": "llama-3.3-70b",
+        "url": "https://llama.meta.com",
+        "title": "Flagship 70-billion open weights delivering 405B-level coding performance on com"
+      },
+      {
+        "id": "black-forest-labs/flux",
+        "name": "flux.1-schnell",
+        "url": "https://blackforestlabs.ai",
+        "title": "12-billion parameter rectified flow transformer generating photoreal graphics in"
+      },
+      {
+        "id": "openai/whisper-large-v3-turbo",
+        "name": "whisper-v3-turbo",
+        "url": "https://openai.com",
+        "title": "Transcribes 60 minutes of multilingual audio in 12 seconds with sub-1% word erro"
+      }
+    ]
+  },
+  {
+    "slot_id": 4,
+    "slot_name": "Evening Toolkit (Secret Web AI Tools)",
+    "timestamp_utc": "2026-10-11T15:23:57.969538+00:00",
+    "date_ist": "2026-10-11 20:53:57 IST",
+    "buffer_post_id": "6acba9f2f91f772d45d0de57",
+    "items": [
+      {
+        "id": "recraft/recraft-ai",
+        "name": "recraft-ai",
+        "url": "https://recraft.ai",
+        "title": "Generate clean SVG vector art, brand logos, and 3D icons with transparent backgr"
+      },
+      {
+        "id": "napkin/napkin-ai",
+        "name": "napkin-ai",
+        "url": "https://napkin.ai",
+        "title": "Turn plain text bullet points into professional slide diagrams and visuals autom"
+      },
+      {
+        "id": "gamma/gamma-app",
+        "name": "gamma-app",
+        "url": "https://gamma.app",
+        "title": "Generates interactive presentation decks and landing pages from simple notes in "
+      }
+    ]
+  },
+  {
+    "slot_id": 5,
+    "slot_name": "Night Owl Deep Dive (Master Prompts)",
+    "timestamp_utc": "2026-10-11T15:31:35.951218+00:00",
+    "date_ist": "2026-10-11 21:01:35 IST",
+    "buffer_post_id": "6acbabbeb07d37ac97af686f",
+    "items": [
+      {
+        "id": "prompt/adversarial-red-teamer",
+        "name": "adversarial-red-teamer",
+        "url": "https://jayantdigital.com",
+        "title": "Simulates security pen-testers to find race conditions and edge case exploits in"
+      },
+      {
+        "id": "Mastering Prompt Engineering for Claude",
+        "name": "Mastering Prompt Engineer",
+        "url": "https://www.walturn.com/insights/mastering-prompt-engineering-for-claude",
+        "title": "In conclusion, effective prompt engineering with Claude involves clear, structur"
+      },
+      {
+        "id": "Prompt Engineering Best Practices 2026 | Thomas Wiegold Blog",
+        "name": "Prompt Engineering Best P",
+        "url": "https://thomas-wiegold.com/blog/prompt-engineering-best-practices-2026",
+        "title": "LangChain formalised four strategies for this: write (persist context externally"
+      }
+    ]
   }
 ]

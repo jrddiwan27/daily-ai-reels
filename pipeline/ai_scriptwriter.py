@@ -61,10 +61,10 @@ def generate_viral_script_with_gemini(items: list, trending_samples: list = None
         f"3. HIGH ENERGY SPOKEN ENGLISH: Punchy, urgent, conversational.\n"
         f"4. STRUCTURE:\n"
         f"   - Hook (0-3s): Punchy curiosity statement (~12 words)\n"
-        f"   - Tool 1 (3-14s): What it does and why it's insane (~25 words)\n"
-        f"   - Tool 2 (14-25s): Unique superpower (~25 words)\n"
-        f"   - Tool 3 (25-35s): The ultimate secret tool (~25 words)\n"
-        f"   - CTA (35-40s): 'Comment the word {cta_keyword} below, and I will DM you the links immediately.' (~12 words)\n"
+        f"   - Tool 1 (3-14s): Must start with 'First up is [name]...' explaining what it does (~25 words)\n"
+        f"   - Tool 2 (14-25s): Must start with 'Second is [name]...' explaining unique superpower (~25 words)\n"
+        f"   - Tool 3 (25-35s): Must start with 'Finally, [name]...' explaining the ultimate capability (~25 words)\n"
+        f"   - CTA (35-40s): 'Comment the word {cta_keyword} below, and I will DM you the exact links right now.' (~12 words)\n"
         f"5. Output valid JSON only with keys: 'hook', 'tool_1_text', 'tool_2_text', 'tool_3_text', 'cta', 'full_script'."
     )
 
@@ -91,33 +91,46 @@ Write the viral reel script following the strict word count rules and ending wit
     script_data = None
     if api_key:
         try:
-            res = requests.post(url, headers={"Content-Type": "application/json"}, json=payload, timeout=40)
+            res = requests.post(url, headers={"Content-Type": "application/json"}, json=payload, timeout=6)
             if res.status_code == 200:
                 data = res.json()
                 raw_json = data["candidates"][0]["content"]["parts"][0]["text"]
                 script_data = json.loads(raw_json)
         except Exception as e:
-            print(f"[!] Primary Gemini API warning ({e}), falling back to slot template...")
+            print(f"[!] Primary Gemini API skipped ({e}), using autonomous domain script synthesizer...")
 
     if not script_data:
-        t1 = top_3[0]["name"].split("/")[-1].replace("-", " ")
-        t2 = top_3[1]["name"].split("/")[-1].replace("-", " ")
-        t3 = top_3[2]["name"].split("/")[-1].replace("-", " ")
-        
+        def get_item_summary(itm, prefix="First up is"):
+            name = itm["name"].split("/")[-1].replace("-", " ").title()
+            desc = itm.get("description", "")
+            badge = itm.get("badge", "powerhouse")
+            desc_clean = re.sub(r"https?://\S+", "", desc)
+            desc_clean = re.sub(r"Trending open-weights model on Hugging Face \([^)]+\) with \d+ likes\.?", "", desc_clean)
+            desc_clean = re.sub(r"\s+", " ", desc_clean).strip().rstrip(".").strip()
+            if not desc_clean:
+                desc_clean = f"An elite {badge.lower()} built for developers"
+            if len(desc_clean) > 85:
+                desc_clean = desc_clean[:85].rsplit(" ", 1)[0]
+            return f"{prefix} {name}. {desc_clean}. It delivers high performance {badge.lower()} with zero subscription fees."
+
+        t1_text = get_item_summary(top_3[0], prefix="First up is")
+        t2_text = get_item_summary(top_3[1], prefix="Second is")
+        t3_text = get_item_summary(top_3[2], prefix="Finally,")
+
         slot_hooks = {
             1: "Stop paying monthly software fees. These three open source repos give you insane superpowers.",
             2: "Most developers waste twenty hours every week doing manual work. Here is the automated loop.",
-            3: "Frontier AI just shifted again. These three breakthrough models completely break existing benchmarks.",
-            4: "Bookmark this immediately. Three secret AI websites that feel totally illegal to know.",
+            3: "Frontier AI just shifted again. These three breakthrough models completely shatter existing benchmarks.",
+            4: "Bookmark this immediately. Three secret AI tools that feel totally illegal to know.",
             5: "If you are still prompting AI like a beginner in 2026, you are leaving massive results behind."
         }
         
         hook = slot_hooks.get(slot_meta.get("slot_id", 1), slot_hooks[1])
         script_data = {
             "hook": hook,
-            "tool_1_text": f"First up is {t1}. It automates complex engineering tasks in seconds with zero manual friction.",
-            "tool_2_text": f"Next is {t2}. A high-performance powerhouse that runs locally on your machine with extreme speed.",
-            "tool_3_text": f"Finally, {t3}. The ultimate secret weapon that senior creators and engineers use silently.",
+            "tool_1_text": t1_text,
+            "tool_2_text": t2_text,
+            "tool_3_text": t3_text,
             "cta": f"Comment the word {cta_keyword} below, and I will DM you the exact links right now."
         }
 

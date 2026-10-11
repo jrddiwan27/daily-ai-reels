@@ -152,28 +152,33 @@ def fetch_content_for_slot(slot_id: int, count: int = 3) -> tuple:
     meta["slot_id"] = slot_id
     candidates = []
 
-    # 1. Try Live Omni Intelligence Radar first
+    # 1. Primary source: Elite curated catalog for this slot theme
+    catalog_items = SLOT_CATALOGS.get(slot_id, [])
+    candidates.extend(catalog_items)
+
+    # 2. Augmented with verified tech items from Omni Radar
     try:
         from pipeline.omni_intelligence_radar import fetch_slot_intelligence
-        live_items = fetch_slot_intelligence(slot_id, count=count + 2)
+        live_items = fetch_slot_intelligence(slot_id, count=count)
         if live_items:
-            print(f"[✓] Omni Radar fetched {len(live_items)} real-time items for Slot {slot_id}")
-            candidates.extend(live_items)
+            # Strict validation: exclude stocks, clinical, medical, finance, generic noise
+            forbidden_terms = ["nyse", "nasdaq", "stock", "shares", "clinical", "mucosal", "lesion", "spacex", "ihs"]
+            clean_live = []
+            for itm in live_items:
+                name_desc = ((itm.get("name", "") + " " + itm.get("description", ""))).lower()
+                if not any(f in name_desc for f in forbidden_terms):
+                    clean_live.append(itm)
+            if clean_live:
+                candidates.extend(clean_live)
     except Exception as e:
         print(f"[!] Omni Radar dynamic fetch warning: {e}")
 
     if slot_id == 1:
-        # Slot 1: Also include dynamic trending search from GitHub
         try:
-            dynamic_repos = search_trending_ai_repos(limit=8)
+            dynamic_repos = search_trending_ai_repos(limit=4)
             candidates.extend(dynamic_repos)
         except Exception as e:
             print(f"[!] Dynamic search fallback: {e}")
-        # Add catalog items
-        candidates.extend(SLOT_CATALOGS[1])
-    else:
-        # Slots 2-5: Fallback to specialized curated catalog
-        candidates.extend(SLOT_CATALOGS.get(slot_id, []))
 
     # Apply deduplication check (filter out anything used in last 60 days)
     fresh_items = filter_non_duplicates(candidates, key_field="full_name", max_days=60)

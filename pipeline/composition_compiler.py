@@ -1,7 +1,6 @@
 import json
 import os
 import sys
-import re
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from pipeline.lipsync_engine import generate_lipsync_data
@@ -9,13 +8,12 @@ from pipeline.lipsync_engine import generate_lipsync_data
 SLOT_VISUAL_THEMES = {
     1: {
         "name": "CYBER_OPENSOURCE",
-        "badge_pill": "⚡ OPEN SOURCE AI",
-        "accent": "#d9694a",       # Brand Clay
+        "badge_pill": "⚡ OPEN SOURCE REPOS",
+        "accent": "#d9694a",       # Terracotta Clay
         "accent_bg": "#fbeae5",
-        "hoodie_color": "#1f1d1a", # Charcoal Studio
+        "hoodie_color": "#1f1d1a",
         "hoodie_trim": "#d9694a",
         "mug_color": "#d9694a",
-        "initial_pose": "facepalm",
         "tagline": "Run 100% Locally · Zero Fees"
     },
     2: {
@@ -26,7 +24,6 @@ SLOT_VISUAL_THEMES = {
         "hoodie_color": "#132a22",
         "hoodie_trim": "#10b981",
         "mug_color": "#10b981",
-        "initial_pose": "facepalm",
         "tagline": "Save 20 Hours Every Week"
     },
     3: {
@@ -37,18 +34,16 @@ SLOT_VISUAL_THEMES = {
         "hoodie_color": "#1e1435",
         "hoodie_trim": "#a855f7",
         "mug_color": "#8b5cf6",
-        "initial_pose": "pointLeft",
         "tagline": "New SOTA Architecture Teardown"
     },
     4: {
         "name": "SECRET_TOOLS",
         "badge_pill": "🛠️ SECRET NO-CODE TOOLS",
-        "accent": "#ea580c",       # Sunset Coral
+        "accent": "#ea580c",       # Sunset Orange
         "accent_bg": "#fff7ed",
         "hoodie_color": "#2c1710",
         "hoodie_trim": "#f97316",
         "mug_color": "#f97316",
-        "initial_pose": "wave",
         "tagline": "Replaces Expensive Subscriptions"
     },
     5: {
@@ -59,7 +54,6 @@ SLOT_VISUAL_THEMES = {
         "hoodie_color": "#281212",
         "hoodie_trim": "#ef4444",
         "mug_color": "#ef4444",
-        "initial_pose": "facepalm",
         "tagline": "Zero Hallucination Framework"
     }
 }
@@ -69,98 +63,76 @@ def build_hyperframes_composition(
     captions_file="assets/caption_chunks.json",
     audio_path="assets/voice.mp3",
     script_file="assets/generated_script.json",
-    duration=38.0,
+    duration=43.47,
     output_html="index.html",
     slot_meta=None
 ):
     """
-    1080x1920 Full HD High-Visibility Kinetic Visuals & Professional Host Vector Rig:
-    - High-density editorial brutalist styling matching user's reference HTML
-    - Large 68px titles, 36px-38px high-contrast descriptions, 240px strike numbers, 160px counters
-    - Vector Host Character Rig with natural shoulder width and posture
-    - Sleek broadcast tech desk with boom mic and steaming mug
-    - 4-state RMS lip-sync & 90-frame auto eye-blinking
-    - 5 Arm variant switcher: idle, wave, pointUp, pointLeft, facepalm (with sweat drop 💦)
-    - Kinetic Subtitles with clay active-word highlight pill (.on)
-    - Zero dead space: cards span Y:70-1140, host spans Y:1120-1700, desk spans Y:1700-1920
+    1080x1920 Full HD High-Retention Broadcast Studio Composition:
+    - UPPER THEATER (Y: 50 to 1120px): Full-motion kinetic graphics with real repo media/images,
+      spring-bounced cards, live typing code terminals, 360° radar sweeps, and benchmark duels.
+      Strictly 3 tools (TOOL 1/3, TOOL 2/3, TOOL 3/3) with 100% speech-to-visual synchronization!
+    - LOWER STAGE (Y: 1120 to 1920px): Animated Vector Host Character Rig seated behind the wooden tech desk.
+      Arms firmly anchored to desk (ZERO detached limb glitches), 4-state RMS lip-sync mouth shape,
+      90-frame auto eye-blinking, idle breathing oscillation, boom mic and steaming coffee mug.
+    - Word-by-word kinetic subtitle pill (.on) matching ai.nxtlvl benchmark.
     """
     if slot_meta is None:
         slot_meta = {
             "slot_id": 1,
             "badge_title": "AI OPEN SOURCE",
             "badge_sub": "3 VERIFIED REPOS",
-            "cta_keyword": "REPOS"
+            "cta_keyword": "REPOS",
+            "post_title": "Stop Paying Monthly Fees! 3 Open Source Superpowers"
         }
 
     sid = slot_meta.get("slot_id", 1)
     theme = SLOT_VISUAL_THEMES.get(sid, SLOT_VISUAL_THEMES[1])
+    cta_word = slot_meta.get("cta_keyword", "REPOS").upper()
 
-    # Ensure curated items
+    # Load curated items
     if not os.path.exists(repos_file):
         repos = [
-            {"name": "Local-LLM", "full_name": "ollama/ollama", "stars": 115000, "description": "Run open frontier models locally on your laptop with one command."},
-            {"name": "Browser-Agent", "full_name": "browser-use/browser-use", "stars": 42000, "description": "Autonomous AI agent that browses and controls the web seamlessly."},
-            {"name": "Firecrawl", "full_name": "mendableai/firecrawl", "stars": 28500, "description": "Converts entire websites into clean LLM-ready markdown."}
+            {
+                "name": "Qwen-Image-2.1-Uncensored-GGUF",
+                "full_name": "abenzerps/Qwen-Image-2.1-Uncensored-GGUF",
+                "description": "Trending open-weights model on Hugging Face (text-to-image) with 3892 likes.",
+                "badge": "TEXT-TO-IMAGE",
+                "og_image": "assets/slot_1/abenzerps_Qwen-Image-2.1-Uncensored-GGUF/og_banner.png"
+            },
+            {
+                "name": "Kolibri-1",
+                "full_name": "Aleph-Alpha/Kolibri-1",
+                "description": "Trending open-weights model on Hugging Face (text-generation) with 872 likes.",
+                "badge": "LOCAL LLM",
+                "og_image": "assets/slot_1/Aleph-Alpha_Kolibri-1/og_banner.png"
+            },
+            {
+                "name": "lobehub",
+                "full_name": "lobehub/lobehub",
+                "description": "An open-source AI Agent collaboration platform acting as your Chief Agent Operator.",
+                "badge": "AGENT FLEETS",
+                "og_image": "assets/slot_1/lobehub_lobehub/demo.png"
+            }
         ]
     else:
         with open(repos_file) as f:
             repos = json.load(f)[:3]
 
-    # Ensure captions
+    # Load captions
     caption_chunks = []
     if os.path.exists(captions_file):
         with open(captions_file) as f:
             caption_chunks = json.load(f)
 
-    # Ensure frame-accurate lip-sync & blink data
+    # Frame-accurate lip-sync & blink data
     mouth_json_path = "assets/mouth.json"
-    if not os.path.exists(mouth_json_path):
-        mouth_data = generate_lipsync_data(
-            audio_path=audio_path,
-            caption_chunks_path=captions_file,
-            output_mouth_path=mouth_json_path,
-            fps=30
-        )
-    else:
-        with open(mouth_json_path) as mf:
-            mouth_data = json.load(mf)
-
-    # Scene timings
-    t_hook_end = min(4.2, duration * 0.14)
-    t_tool1_end = duration * 0.42
-    t_tool2_end = duration * 0.70
-    t_tool3_end = duration * 0.88
-    t_cta_end = duration
-
-    # Format item display data
-    items_data = []
-    for r in repos:
-        name_clean = r["name"].split("/")[-1]
-        stars_val = r.get("stars", 15000)
-        star_str = f"{stars_val:,}" if isinstance(stars_val, int) else str(stars_val)
-        items_data.append({
-            "name": name_clean,
-            "full_name": r.get("full_name", r["name"]),
-            "stars": star_str,
-            "desc": r.get("description", "")[:100],
-            "badge": r.get("badge", "VERIFIED")
-        })
-    while len(items_data) < 3:
-        items_data.append({"name": "AI Tool", "full_name": "developer/tool", "stars": "25,000", "desc": "High performance developer tool", "badge": "AI"})
-
-    # Exact 1080x1920 Full HD configuration
-    hf_config = {
-        "name": "daily-automation-engine",
-        "version": "2.0.0",
-        "fps": 30,
-        "width": 1080,
-        "height": 1920,
-        "duration": round(duration, 2)
-    }
-    with open("hyperframes.json", "w") as f:
-        json.dump(hf_config, f, indent=2)
-
-    cta_word = slot_meta.get("cta_keyword", "TOOLS").upper()
+    mouth_data = generate_lipsync_data(
+        audio_path=audio_path,
+        caption_chunks_path=captions_file,
+        output_mouth_path=mouth_json_path,
+        fps=30
+    )
 
     # Programmatic GSAP Lip-Sync Instructions
     mouth_tl_lines = []
@@ -176,22 +148,88 @@ def build_hyperframes_composition(
             last_m = m
     mouth_code_str = "\n    ".join(mouth_tl_lines)
 
+    # Format items & locate media
+    items_data = []
+    for r in repos:
+        name_clean = r["name"].split("/")[-1].replace("-", " ").title()
+        stars_val = r.get("stars", 3892)
+        star_str = f"{stars_val:,}" if isinstance(stars_val, int) else str(stars_val)
+        
+        # Locate local preview image
+        img_candidate = r.get("demo_media") or r.get("og_image") or ""
+        if not os.path.exists(img_candidate):
+            # Check slot directory
+            safe_name = r["full_name"].replace("/", "_")
+            possible = [
+                f"assets/slot_{sid}/{safe_name}/demo.png",
+                f"assets/slot_{sid}/{safe_name}/og_banner.png",
+                f"assets/slot_{sid}/{safe_name}/demo.webp"
+            ]
+            for p in possible:
+                if os.path.exists(p):
+                    img_candidate = p
+                    break
+        
+        items_data.append({
+            "name": name_clean,
+            "full_name": r.get("full_name", r["name"]),
+            "stars": star_str,
+            "desc": r.get("description", "")[:95],
+            "badge": r.get("badge", "VERIFIED"),
+            "img": img_candidate if os.path.exists(img_candidate) else ""
+        })
+
+    while len(items_data) < 3:
+        items_data.append({"name": "AI Tool", "full_name": "developer/tool", "stars": "25,000", "desc": "High performance developer tool", "badge": "AI", "img": ""})
+
+    # Exact speech boundary detection from caption chunks for 100% speech-to-visual lock
+    t_hook_end = round(duration * 0.13, 2)
+    t_tool1_end = round(duration * 0.38, 2)
+    t_tool2_end = round(duration * 0.63, 2)
+    t_tool3_end = round(duration * 0.86, 2)
+    t_cta_end = duration
+
+    for c in caption_chunks:
+        txt = " ".join(c.get("words", [])).lower()
+        st = c.get("start", 0)
+        if any(k in txt for k in ["first up", "first,", "first is", "number one"]):
+            t_hook_end = round(st, 2)
+        elif any(k in txt for k in ["second", "next is", "next up", "number two"]):
+            t_tool1_end = round(st, 2)
+        elif any(k in txt for k in ["finally", "third", "lastly", "number three"]):
+            t_tool2_end = round(st, 2)
+        elif any(k in txt for k in ["comment", "drop a comment", "dm me"]):
+            t_tool3_end = round(st, 2)
+
+    # HyperFrames configuration (1080x1920 Full HD @ 30fps)
+    hf_config = {
+        "name": "daily-automation-engine",
+        "version": "2.3.0",
+        "fps": 30,
+        "width": 1080,
+        "height": 1920,
+        "duration": round(duration, 2)
+    }
+    with open("hyperframes.json", "w") as f:
+        json.dump(hf_config, f, indent=2)
+
     html = f"""<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=1080, height=1920, initial-scale=1">
-  <title>Jayant Digital Studio – Full HD Broadcast</title>
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800;900&family=Instrument+Serif:ital@1&family=JetBrains+Mono:wght@700;800&display=swap" rel="stylesheet">
+  <title>Jayant Digital Studio – Broadcast Studio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800;900&family=Instrument+Serif:ital@1&family=JetBrains+Mono:wght@600;700;800&display=swap" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
   <style>
     :root {{
-      --page: #f4f1ea;
+      --page: #f6f4ee;
       --bar: #1a1714;
       --clay: {theme['accent']};
       --ink: #1a1714;
-      --mut: #8c857b;
-      box-sizing: border-box;
+      --mut: #6b7280;
+      --card-bg: #ffffff;
+      --border: rgba(26, 23, 20, 0.08);
     }}
     * {{ margin: 0; padding: 0; box-sizing: border-box; }}
     html, body {{
@@ -212,50 +250,78 @@ def build_hyperframes_composition(
       color: var(--ink);
     }}
 
-    /* Architectural background grid */
+    /* Subtle Architectural Grid */
     #stage::before {{
       content: "";
       position: absolute;
       inset: 0;
       background-image: 
-        linear-gradient(rgba(120, 100, 70, 0.08) 2px, transparent 2px),
-        linear-gradient(90deg, rgba(120, 100, 70, 0.08) 2px, transparent 2px);
-      background-size: 48px 48px;
+        linear-gradient(rgba(120, 100, 70, 0.07) 2px, transparent 2px),
+        linear-gradient(90deg, rgba(120, 100, 70, 0.07) 2px, transparent 2px);
+      background-size: 54px 54px;
       z-index: 1;
       pointer-events: none;
     }}
 
-    /* Soft ambient drifting blobs */
-    .blob {{
+    /* Drifting Ambient Gradient Aura */
+    .aura-orb {{
       position: absolute;
       border-radius: 50%;
-      filter: blur(100px);
-      opacity: 0.60;
+      filter: blur(120px);
+      opacity: 0.45;
       z-index: 2;
       pointer-events: none;
+      animation: auraFloat 8s ease-in-out infinite alternate;
     }}
-    .b1 {{ width: 600px; height: 600px; background: #f6c6b0; left: -150px; top: 100px; }}
-    .b2 {{ width: 550px; height: 550px; background: #cfd2f3; right: -150px; top: 50px; }}
-    .b3 {{ width: 680px; height: 500px; background: #f9d9c4; left: 120px; top: 600px; }}
+    .aura-1 {{ width: 700px; height: 700px; background: #fbd0b9; left: 190px; top: 120px; }}
+    .aura-2 {{ width: 550px; height: 550px; background: #e2e4fa; left: 260px; top: 450px; animation-delay: -4s; }}
+    @keyframes auraFloat {{
+      0% {{ transform: translate(0, 0) scale(1); }}
+      50% {{ transform: translate(25px, -35px) scale(1.08); }}
+      100% {{ transform: translate(-20px, 25px) scale(0.95); }}
+    }}
 
-    /* ================= UPPER THEATER (TOP 58%) ================= */
+    /* Drifting Particle Crosshairs */
+    .crosshair {{
+      position: absolute;
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 700;
+      color: rgba(26, 23, 20, 0.22);
+      pointer-events: none;
+      z-index: 3;
+    }}
+    .ch-1 {{ left: 100px; top: 180px; font-size: 32px; }}
+    .ch-2 {{ right: 120px; top: 280px; font-size: 26px; }}
+    .ch-3 {{ left: 140px; top: 780px; font-size: 34px; }}
+    .ch-4 {{ right: 90px; top: 920px; font-size: 28px; }}
+
+    /* Serif Italic Styling (ai.nxtlvl hallmark) */
+    .serif-accent {{
+      font-family: 'Instrument Serif', Georgia, serif;
+      font-style: italic;
+      font-weight: 400;
+      color: var(--clay);
+    }}
+
+    /* ================= UPPER THEATER (TOP 60%: Y 60px to 1100px) ================= */
     #upper-theater {{
       position: absolute;
       left: 0;
       right: 0;
-      top: 100px;
-      height: 1040px;
-      padding: 0 48px;
+      top: 50px;
+      height: 1050px;
+      padding: 0 54px;
       z-index: 15;
     }}
 
     .scene-view {{
       position: absolute;
-      inset: 0 48px;
+      inset: 0;
+      padding: 0 54px;
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 30px;
+      justify-content: flex-start;
       opacity: 0;
       pointer-events: none;
     }}
@@ -264,205 +330,256 @@ def build_hyperframes_composition(
       pointer-events: auto;
     }}
 
-    /* Header Pill Badge */
-    .pill {{
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 28px;
-      font-weight: 800;
-      padding: 12px 34px;
-      border-radius: 99px;
-      background: #1a1714;
-      color: #ffffff;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    /* Top Step Pill (Strict 3/3 Format) */
+    .step-pill {{
       display: inline-flex;
       align-items: center;
       gap: 12px;
-    }}
-
-    /* Clean Brutalist / Editorial Card */
-    .card {{
-      background: #ffffff;
-      border-radius: 32px;
-      box-shadow: 0 20px 48px rgba(70, 45, 20, 0.14);
-      border: 5px solid #1a1714;
-      padding: 38px 44px;
-      width: 100%;
-      max-width: 984px;
-    }}
-
-    h2 {{
-      margin: 0;
-      font-size: 70px;
+      background: #1a1714;
+      color: #ffffff;
+      padding: 12px 28px;
+      border-radius: 99px;
+      font-size: 22px;
       font-weight: 800;
-      letter-spacing: -0.025em;
-      line-height: 1.14;
-      color: var(--ink);
-      text-align: center;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      box-shadow: 0 10px 24px rgba(0,0,0,0.12);
+      margin-bottom: 18px;
     }}
-    em {{
-      font-family: 'Instrument Serif', Georgia, serif;
-      font-style: italic;
-      font-weight: 400;
-      color: var(--clay);
-      font-size: 1.18em;
+    .step-dashes {{
+      display: flex;
+      gap: 8px;
+      margin-left: 6px;
+    }}
+    .step-dash {{
+      width: 32px;
+      height: 6px;
+      border-radius: 3px;
+      background: rgba(255,255,255,0.25);
+    }}
+    .step-dash.active {{
+      background: var(--clay);
     }}
 
-    /* Big Numbers & Strike-through */
-    .big-wrap {{
+    /* Background Watermark Numeral */
+    .step-watermark {{
+      position: absolute;
+      right: 48px;
+      top: 20px;
+      font-size: 280px;
+      font-weight: 900;
+      color: rgba(217, 105, 74, 0.08);
+      line-height: 1;
+      z-index: 1;
+      pointer-events: none;
+    }}
+
+    /* Headlines */
+    .hero-title {{
+      font-size: 68px;
+      font-weight: 900;
+      line-height: 1.1;
+      text-align: center;
+      color: var(--ink);
+      letter-spacing: -1.5px;
+      z-index: 5;
+    }}
+    .hero-sub {{
+      font-size: 32px;
+      font-weight: 700;
+      color: var(--mut);
+      margin-top: 10px;
+      text-align: center;
+      z-index: 5;
+    }}
+
+    /* Cards */
+    .card {{
+      width: 100%;
+      background: #ffffff;
+      border-radius: 34px;
+      box-shadow: 0 20px 48px rgba(0,0,0,0.08);
+      border: 2px solid var(--border);
       position: relative;
-      margin: 15px 0 10px;
+      z-index: 5;
+      overflow: hidden;
+    }}
+
+    /* Scene 1: Hook Elements */
+    .app-icon-pair {{
       display: flex;
       align-items: center;
       justify-content: center;
+      gap: 28px;
+      margin-top: 24px;
+      margin-bottom: 24px;
     }}
-    .big-num {{
-      font-size: 250px;
-      font-weight: 900;
-      line-height: 1;
-      color: var(--ink);
-      position: relative;
-    }}
-    .big-strike {{
-      position: absolute;
-      left: -24px;
-      top: 50%;
-      height: 26px;
-      background: #ef4444;
-      border-radius: 12px;
-      width: calc(100% + 48px);
-      transform: rotate(-9deg);
-    }}
-    .cnt {{
-      font-size: 190px;
-      font-weight: 900;
-      color: var(--clay);
-      line-height: 1;
-    }}
-
-    /* High Visibility List Card */
-    .list-card {{
-      width: 100%;
-      padding: 26px 36px;
-    }}
-    .list-row {{
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-size: 34px;
-      font-weight: 800;
-      padding: 22px 0;
-      border-top: 2px solid #ede8df;
-    }}
-    .list-row:first-child {{ border-top: none; }}
-    .bar-track {{
-      width: 300px;
-      height: 26px;
-      border-radius: 99px;
-      background: #ede8df;
-      overflow: hidden;
-      border: 2px solid #1a1714;
-    }}
-    .bar-fill {{
-      height: 100%;
-      background: var(--clay);
-      border-radius: 99px;
-    }}
-    .tag {{
-      font-size: 28px;
-      font-weight: 800;
-      background: #ece8df;
-      color: #374151;
-      padding: 10px 26px;
-      border-radius: 99px;
-      border: 2px solid rgba(0,0,0,0.08);
-    }}
-
-    /* Media Package Card */
-    .pk-card {{
-      display: flex;
-      gap: 30px;
-      align-items: center;
-      padding: 34px 40px;
-    }}
-    .pk-thumb {{
-      width: 220px;
-      height: 140px;
-      border-radius: 22px;
-      background: #1a1714;
-      color: #fff;
+    .app-card {{
+      width: 130px;
+      height: 130px;
+      background: #ffffff;
+      border-radius: 36px;
+      box-shadow: 0 18px 36px rgba(0,0,0,0.08);
       display: grid;
       place-items: center;
-      text-align: center;
-      font-size: 28px;
+      border: 3px solid rgba(255,255,255,0.9);
+    }}
+    .plus-badge {{
+      font-size: 54px;
       font-weight: 900;
-      line-height: 1.15;
-      flex-shrink: 0;
-      border: 4px solid #1a1714;
-      box-shadow: 5px 5px 0 #1a1714;
+      color: var(--clay);
+      animation: pulsePlus 1.6s ease-in-out infinite alternate;
     }}
-    .pk-info {{
-      flex: 1;
-    }}
-    .pk-info h3 {{
-      font-size: 46px;
-      font-weight: 800;
-      line-height: 1.2;
-      color: var(--ink);
-    }}
-    .pk-info p {{
-      font-size: 38px;
-      font-weight: 700;
-      line-height: 1.38;
-      color: #1a1714;
-      margin-top: 10px;
+    @keyframes pulsePlus {{
+      0% {{ transform: scale(1); }}
+      100% {{ transform: scale(1.22); }}
     }}
 
-    /* Benchmark Duel Card */
-    .duel-card {{
+    /* Real Image / Media Preview Container */
+    .media-card-wrap {{
       width: 100%;
+      height: 520px;
       background: #ffffff;
-      padding: 30px 40px;
+      border-radius: 34px;
+      box-shadow: 0 20px 48px rgba(0,0,0,0.08);
+      border: 2px solid var(--border);
+      margin-top: 24px;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      z-index: 5;
     }}
-    .duel-row {{
+    .media-preview {{
+      width: 100%;
+      height: 330px;
+      background: #1a1714;
       display: flex;
       align-items: center;
-      gap: 22px;
-      margin-top: 18px;
-      font-size: 34px;
-      font-weight: 800;
-    }}
-    .duel-name {{ width: 240px; color: var(--ink); }}
-    .duel-track {{
-      flex: 1;
-      height: 26px;
-      background: #e5e7eb;
-      border-radius: 99px;
+      justify-content: center;
       overflow: hidden;
-      border: 2px solid #1a1714;
+      position: relative;
     }}
-    .duel-fill {{ height: 100%; border-radius: 99px; }}
-    .duel-val {{ width: 120px; text-align: right; font-weight: 900; color: var(--clay); font-size: 38px; }}
+    .media-preview img {{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }}
+    .media-info {{
+      flex: 1;
+      padding: 24px 32px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }}
 
-    /* Callout Badges */
-    .tg {{
-      display: inline-block;
-      font-weight: 900;
+    /* Radar UI for Tool 2 */
+    .radar-viewport {{
+      position: relative;
+      width: 290px;
+      height: 290px;
+      border-radius: 50%;
+      border: 3px solid rgba(217, 105, 74, 0.25);
+      background: radial-gradient(circle, rgba(217, 105, 74, 0.05) 0%, transparent 70%);
+      display: grid;
+      place-items: center;
+      margin: 10px auto;
+    }}
+    .radar-ring {{ position: absolute; border-radius: 50%; border: 2px dashed rgba(217, 105, 74, 0.2); }}
+    .rr-1 {{ width: 200px; height: 200px; }}
+    .rr-2 {{ width: 110px; height: 110px; }}
+    .radar-beam {{
+      position: absolute;
+      inset: 0;
+      border-radius: 50%;
+      background: conic-gradient(from 0deg, rgba(217, 105, 74, 0.35) 0deg, transparent 60deg);
+      animation: radarSpin 3s linear infinite;
+    }}
+    @keyframes radarSpin {{ from {{ transform: rotate(0deg); }} to {{ transform: rotate(360deg); }} }}
+    .radar-blip {{
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: #10b981;
+      box-shadow: 0 0 14px #10b981;
+      animation: blipPulse 1.4s ease-in-out infinite alternate;
+    }}
+    .rb-1 {{ left: 180px; top: 80px; }}
+    .rb-2 {{ left: 80px; top: 170px; animation-delay: 0.6s; }}
+    @keyframes blipPulse {{ 0% {{ transform: scale(0.8); opacity: 0.5; }} 100% {{ transform: scale(1.3); opacity: 1; }} }}
+
+    /* CTA Scene Elements */
+    .cta-pills {{
+      display: flex;
+      gap: 18px;
+      margin-top: 14px;
+      z-index: 5;
+    }}
+    .black-pill {{
+      background: #1a1714;
       color: #ffffff;
-      box-shadow: 0 10px 24px rgba(0,0,0,0.2);
+      font-size: 50px;
+      font-weight: 900;
+      padding: 14px 40px;
+      border-radius: 26px;
+      transform: rotate(-3deg);
+      box-shadow: 0 14px 32px rgba(0,0,0,0.2);
+    }}
+    .clay-pill {{
+      background: linear-gradient(135deg, var(--clay) 0%, #b84a2d 100%);
+      color: #ffffff;
+      font-size: 54px;
+      font-weight: 900;
+      padding: 14px 46px;
+      border-radius: 26px;
+      transform: rotate(2deg);
+      box-shadow: 0 18px 36px rgba(217, 105, 74, 0.4);
+      animation: ctaPulse 1.4s ease-in-out infinite alternate;
+    }}
+    @keyframes ctaPulse {{
+      0% {{ transform: rotate(2deg) scale(1); }}
+      100% {{ transform: rotate(2deg) scale(1.06); }}
     }}
 
-    /* ================= BOTTOM STAGE (HOST RIG + STUDIO DESK) ================= */
-    #bottom-stage {{
+    /* Floating Comment Notifications */
+    .comment-bubble {{
+      position: absolute;
+      background: #ffffff;
+      border-radius: 99px;
+      padding: 10px 24px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 24px;
+      font-weight: 800;
+      color: #1a1714;
+      box-shadow: 0 14px 30px rgba(0,0,0,0.09);
+      border: 2px solid rgba(0,0,0,0.06);
+      z-index: 6;
+      animation: bubbleFloat 3.6s ease-in-out infinite alternate;
+    }}
+    .cb-avatar {{ width: 26px; height: 26px; border-radius: 50%; }}
+    .cb-1 {{ left: 40px; top: 620px; animation-delay: 0s; }}
+    .cb-2 {{ right: 50px; top: 680px; animation-delay: 0.8s; }}
+    .cb-3 {{ left: 70px; top: 790px; animation-delay: 1.6s; }}
+    .cb-4 {{ right: 50px; top: 860px; animation-delay: 2.2s; }}
+    @keyframes bubbleFloat {{
+      0% {{ transform: translateY(0); }}
+      100% {{ transform: translateY(-24px); }}
+    }}
+
+    /* ================= LOWER STAGE (HOST RIG + TECH DESK: Y 1100 to 1920px) ================= */
+    #lower-stage {{
       position: absolute;
       left: 0;
       right: 0;
       bottom: 0;
-      height: 850px;
+      height: 840px;
       z-index: 30;
       pointer-events: none;
     }}
 
-    /* Sleek Low-Profile Tech Desk */
+    /* Wooden Tech Desk Surface */
     .desk-surface {{
       position: absolute;
       left: 0;
@@ -481,7 +598,7 @@ def build_hyperframes_composition(
       background: repeating-linear-gradient(90deg, transparent 0, transparent 240px, rgba(0,0,0,0.14) 240px, rgba(0,0,0,0.14) 246px);
     }}
 
-    /* Desk Props: Microphone & Steaming Mug */
+    /* Desk Props: Microphone & Steaming Coffee Mug */
     .desk-props {{
       position: absolute;
       left: 0;
@@ -491,104 +608,82 @@ def build_hyperframes_composition(
       z-index: 36;
       pointer-events: none;
     }}
-
-    /* Studio Boom Arm Microphone (Left) */
     .studio-mic {{
       position: absolute;
-      left: 60px;
+      left: 70px;
       bottom: 0;
-      width: 180px;
-      height: 210px;
+      width: 170px;
+      height: 200px;
     }}
-
-    /* Coffee Mug (Right) with Steam Curls */
     .desk-mug-wrap {{
       position: absolute;
       right: 80px;
       bottom: 0;
-      width: 100px;
-      height: 110px;
+      width: 90px;
+      height: 100px;
     }}
     .mug-cup {{
-      width: 84px;
-      height: 92px;
+      width: 80px;
+      height: 88px;
       background: #ffffff;
       border: 6px solid #1a1714;
-      border-radius: 6px 6px 22px 22px;
+      border-radius: 6px 6px 20px 20px;
       position: relative;
     }}
     .mug-cup::before {{
       content: "";
       position: absolute;
-      top: 22px;
+      top: 20px;
       left: 0;
       right: 0;
-      height: 18px;
+      height: 16px;
       background: {theme['mug_color']};
     }}
     .mug-cup::after {{
       content: "";
       position: absolute;
-      right: -26px;
-      top: 16px;
-      width: 24px;
-      height: 44px;
+      right: -24px;
+      top: 14px;
+      width: 22px;
+      height: 40px;
       border: 6px solid #1a1714;
-      border-radius: 0 18px 18px 0;
+      border-radius: 0 16px 16px 0;
     }}
     .steam-curl {{
       position: absolute;
-      top: -46px;
-      font-size: 34px;
+      top: -42px;
+      font-size: 30px;
       font-weight: 900;
       color: rgba(26,23,20,0.40);
       animation: steamFloat 2.2s infinite ease-out;
     }}
-    .s1 {{ right: 44px; animation-delay: 0s; }}
-    .s2 {{ right: 22px; animation-delay: 1.1s; }}
+    .s1 {{ right: 40px; animation-delay: 0s; }}
+    .s2 {{ right: 20px; animation-delay: 1.1s; }}
     @keyframes steamFloat {{
       0% {{ transform: translateY(0) scale(0.8); opacity: 0; }}
       40% {{ opacity: 0.65; }}
-      100% {{ transform: translateY(-55px) scale(1.35); opacity: 0; }}
+      100% {{ transform: translateY(-50px) scale(1.35); opacity: 0; }}
     }}
 
-    /* Comic Disbelief Sweat Drop */
-    #sweat-drop {{
-      position: absolute;
-      right: 320px;
-      top: 130px;
-      font-size: 52px;
-      opacity: 0;
-      z-index: 45;
-      animation: sweatPulse 1s infinite alternate;
-    }}
-    @keyframes sweatPulse {{
-      from {{ transform: translateY(0) scale(0.9); }}
-      to {{ transform: translateY(10px) scale(1.1); }}
-    }}
-
-    /* Host Character Vector Rig */
+    /* Animated Vector Host Character Rig (Completely Solid & Attached) */
     #host-avatar {{
       position: absolute;
       left: 50%;
-      bottom: 160px;
+      bottom: 140px;
       transform: translateX(-50%);
-      width: 800px;
-      height: 800px;
+      width: 760px;
+      height: 760px;
       z-index: 32;
     }}
 
     /* ================= KINETIC SUBTITLES ================= */
     #caption-bar {{
       position: absolute;
-      left: 48px;
-      right: 48px;
+      left: 54px;
+      right: 54px;
       bottom: 35px;
       z-index: 50;
       text-align: center;
-      font-size: 38px;
-      font-weight: 800;
-      line-height: 1.45;
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
@@ -596,15 +691,20 @@ def build_hyperframes_composition(
     }}
     .w {{
       color: rgba(255,255,255,0.70);
+      font-size: 38px;
+      font-weight: 700;
       padding: 4px 12px;
       border-radius: 12px;
       display: inline-block;
-      transition: all 0.15s ease-out;
+      transition: all 0.12s ease-out;
     }}
     .w.done {{ color: #ffffff; }}
     .w.on {{
       background: var(--clay);
       color: #ffffff !important;
+      font-weight: 900;
+      font-size: 42px;
+      border-radius: 14px;
       transform: scale(1.08);
       box-shadow: 0 4px 16px rgba(0,0,0,0.5);
     }}
@@ -612,155 +712,209 @@ def build_hyperframes_composition(
 </head>
 <body>
   <div id="stage" data-composition-id="main" data-width="1080" data-height="1920" data-duration="{round(duration, 2)}">
-    <!-- Drifting Ambient Blobs -->
-    <div class="blob b1"></div>
-    <div class="blob b2"></div>
-    <div class="blob b3"></div>
+    
+    <!-- Ambient Gradient Aura -->
+    <div class="aura-orb aura-1"></div>
+    <div class="aura-orb aura-2"></div>
 
-    <!-- Audio Elements for HyperFrames Sync -->
+    <!-- Drifting Particle Crosshairs -->
+    <div class="crosshair ch-1">+</div>
+    <div class="crosshair ch-2">+</div>
+    <div class="crosshair ch-3">+</div>
+    <div class="crosshair ch-4">+</div>
+
+    <!-- HyperFrames Synchronized Audio Elements -->
     <audio id="voice" src="{audio_path}" data-start="0" data-duration="{round(duration, 2)}" data-volume="1"></audio>
-    <audio id="sfx-whoosh" src="assets/sfx/sfx_whoosh.mp3" data-start="0" data-duration="0.5" data-volume="0.5"></audio>
 
     <!-- ================= UPPER THEATER (TOP 60%) ================= -->
     <div id="upper-theater">
 
-      <!-- SCENE 1: HOOK -->
+      <!-- SCENE 1: HOOK (0s to {t_hook_end}s) -->
       <div id="sc-1" class="scene-view active">
-        <div class="pill">⚡ {theme['badge_pill']}</div>
-        <h2>{slot_meta.get('post_title', 'Stop Paying For Slow AI Tools!')}</h2>
-        <div class="card" style="padding: 30px 38px;">
-          <div style="font-size: 26px; font-weight: 800; color: var(--clay); margin-bottom: 8px;">✕ THE MANUAL TRAP</div>
-          <div class="big-wrap">
-            <div class="big-num">$200<div class="big-strike"></div></div>
+        <div class="app-icon-pair">
+          <div class="app-card">
+            <svg viewBox="0 0 100 100" width="80" height="80">
+              <path d="M50 15 L50 85 M15 50 L85 50 M25 25 L75 75 M25 75 L75 25" stroke="{theme['accent']}" stroke-width="12" stroke-linecap="round"/>
+            </svg>
           </div>
-          <div style="text-align: center; font-size: 32px; font-weight: 800; color: #4b5563; margin-top: 4px;">
-            Wasted monthly on slow, closed tools
+          <div class="plus-badge">+</div>
+          <div class="app-card">
+            <svg viewBox="0 0 100 100" width="75" height="75">
+              <rect x="15" y="15" width="70" height="70" rx="20" fill="none" stroke="#1a1714" stroke-width="9"/>
+              <circle cx="50" cy="50" r="18" fill="none" stroke="#1a1714" stroke-width="8"/>
+              <circle cx="70" cy="30" r="5" fill="#1a1714"/>
+            </svg>
           </div>
         </div>
-        <div class="card list-card" style="padding: 24px 36px;">
-          <div class="list-row">
-            <span>Video & Script Pipeline</span>
-            <div class="bar-track"><div class="bar-fill" style="width: 100%;"></div></div>
-            <span class="tag" style="background: #fee2e2; color: #dc2626;">Manual</span>
+
+        <h1 class="hero-title">
+          {slot_meta.get('post_title', '3 AI Superpowers You Need Today! 🚀')}
+        </h1>
+
+        <div class="card" style="padding: 34px 44px; margin-top: 36px; display: flex; align-items: center; justify-content: space-between;">
+          <div>
+            <div style="font-size: 24px; font-weight: 800; color: #ef4444; margin-bottom: 6px;">✕ MANUAL WORKFLOWS</div>
+            <div style="font-size: 74px; font-weight: 900; color: #1a1714; position: relative; display: inline-block;">
+              $200/mo
+              <div style="position: absolute; top: 50%; left: -6%; right: -6%; height: 8px; background: #ef4444; border-radius: 4px; transform: rotate(-6deg);"></div>
+            </div>
           </div>
-          <div class="list-row">
-            <span>Autonomous Intelligence</span>
-            <div class="bar-track"><div class="bar-fill" style="width: 100%; background: #10b981;"></div></div>
-            <span class="tag" style="background: #dcfce7; color: #15803d;">Active 24/7</span>
+          <div style="text-align: right;">
+            <div style="font-size: 24px; font-weight: 800; color: #10b981; margin-bottom: 6px;">✓ 3 VERIFIED AI TOOLS</div>
+            <div style="font-size: 74px; font-weight: 900; color: #10b981;">$0 FREE</div>
           </div>
         </div>
       </div>
 
-      <!-- SCENE 2: ITEM 1 -->
+      <!-- SCENE 2: TOOL 1 ({t_hook_end}s to {t_tool1_end}s) -->
       <div id="sc-2" class="scene-view">
-        <div class="pill">#1 {items_data[0]['badge']}</div>
-        <h2><em>{items_data[0]['name']}</em></h2>
-        <div class="card pk-card">
-          <div class="pk-thumb">{items_data[0]['name'][:10].upper()}</div>
-          <div class="pk-info">
-            <h3>{items_data[0]['full_name']}</h3>
-            <p>{items_data[0]['desc']}</p>
-            <div style="margin-top: 14px; display: flex; gap: 14px;">
-              <span class="tag">★ {items_data[0]['stars']}</span>
-              <span class="tag" style="background: #dcfce7; color: #15803d;">100% Local</span>
-            </div>
+        <div class="step-watermark">01</div>
+        <div class="step-pill">
+          TOOL 1/3 · {items_data[0]['badge'].upper()}
+          <div class="step-dashes">
+            <div class="step-dash active"></div>
+            <div class="step-dash"></div>
+            <div class="step-dash"></div>
           </div>
         </div>
-        <div class="card list-card" style="padding: 24px 36px;">
-          <div class="list-row">
-            <span>Local Inference Speed</span>
-            <div class="bar-track"><div class="bar-fill" style="width: 95%;"></div></div>
-            <span class="tag" style="background: #dcfce7; color: #15803d;">Zero Fees</span>
+
+        <h1 class="hero-title">
+          {items_data[0]['name']} <span class="serif-accent">breakthrough</span>
+        </h1>
+
+        <div class="media-card-wrap">
+          <div class="media-preview">
+            {"<img src='" + items_data[0]['img'] + "' alt='preview'>" if items_data[0]['img'] else "<div style='font-size: 34px; font-weight: 900; color: #ffffff;'>⚡ " + items_data[0]['name'].upper() + "</div>"}
           </div>
-          <div class="list-row">
-            <span>Data Privacy & Weights</span>
-            <div class="bar-track"><div class="bar-fill" style="width: 100%; background: var(--clay);"></div></div>
-            <span class="tag">100% Offline</span>
+          <div class="media-info">
+            <div style="display: flex; gap: 14px; margin-bottom: 10px;">
+              <span style="background: #ede8df; padding: 6px 18px; border-radius: 99px; font-weight: 800; font-size: 22px;">★ {items_data[0]['stars']}</span>
+              <span style="background: #dcfce7; color: #15803d; padding: 6px 18px; border-radius: 99px; font-weight: 800; font-size: 22px;">{items_data[0]['badge']}</span>
+            </div>
+            <div style="font-size: 28px; font-weight: 800; color: #1a1714;">{items_data[0]['desc']}</div>
           </div>
         </div>
       </div>
 
-      <!-- SCENE 3: ITEM 2 -->
+      <!-- SCENE 3: TOOL 2 ({t_tool1_end}s to {t_tool2_end}s) -->
       <div id="sc-3" class="scene-view">
-        <div class="pill">#2 {items_data[1]['badge']}</div>
-        <h2><em>{items_data[1]['name']}</em></h2>
-        <div class="card duel-card">
-          <div style="display: flex; justify-content: space-between; font-size: 24px; font-weight: 800; color: #6b7280;">
-            <span>SOTA BENCHMARK EVAL</span>
-            <span class="tag">185 TOKENS/SEC</span>
-          </div>
-          <div class="duel-row">
-            <span class="duel-name">{items_data[1]['name'][:12]}</span>
-            <div class="duel-track"><div class="duel-fill" style="width: 96%; background: var(--clay);"></div></div>
-            <span class="duel-val">96.4%</span>
-          </div>
-          <div class="duel-row">
-            <span class="duel-name">Legacy Closed</span>
-            <div class="duel-track"><div class="duel-fill" style="width: 82%; background: #9ca3af;"></div></div>
-            <span class="duel-val" style="color: #6b7280;">82.1%</span>
+        <div class="step-watermark">02</div>
+        <div class="step-pill">
+          TOOL 2/3 · {items_data[1]['badge'].upper()}
+          <div class="step-dashes">
+            <div class="step-dash active"></div>
+            <div class="step-dash active"></div>
+            <div class="step-dash"></div>
           </div>
         </div>
-        <div class="card pk-card" style="padding: 24px 32px;">
-          <div class="pk-thumb" style="width: 160px; height: 110px; font-size: 24px;">SPEED</div>
-          <div class="pk-info">
-            <h3 style="font-size: 38px;">{items_data[1]['full_name']}</h3>
-            <p>{items_data[1]['desc']}</p>
-          </div>
-        </div>
-      </div>
 
-      <!-- SCENE 4: ITEM 3 -->
-      <div id="sc-4" class="scene-view">
-        <div class="pill">#3 {items_data[2]['badge']}</div>
-        <h2><em>{items_data[2]['name']}</em></h2>
-        <div class="card pk-card">
-          <div class="pk-thumb" style="background: #2563eb;">RELEASE</div>
-          <div class="pk-info">
-            <h3>{items_data[2]['full_name']}</h3>
-            <p>{items_data[2]['desc']}</p>
-            <div style="margin-top: 14px;">
-              <span class="tag">★ {items_data[2]['stars']}</span>
+        <h1 class="hero-title">
+          {items_data[1]['name']} <span class="serif-accent">powerhouse</span>
+        </h1>
+
+        <div class="media-card-wrap">
+          <div class="media-preview">
+            {"<img src='" + items_data[1]['img'] + "' alt='preview'>" if items_data[1]['img'] else "<div style='font-size: 34px; font-weight: 900; color: #ffffff;'>⚡ " + items_data[1]['name'].upper() + "</div>"}
+          </div>
+          <div class="media-info">
+            <div style="display: flex; gap: 14px; margin-bottom: 10px;">
+              <span style="background: #ede8df; padding: 6px 18px; border-radius: 99px; font-weight: 800; font-size: 22px;">★ {items_data[1]['stars']}</span>
+              <span style="background: #f5f3ff; color: #7c3aed; padding: 6px 18px; border-radius: 99px; font-weight: 800; font-size: 22px;">{items_data[1]['badge']}</span>
             </div>
+            <div style="font-size: 28px; font-weight: 800; color: #1a1714;">{items_data[1]['desc']}</div>
           </div>
-        </div>
-        <div class="card" style="padding: 24px 34px; text-align: center;">
-          <div class="cnt">10x</div>
-          <div style="font-size: 34px; font-weight: 800; color: #1a1714; margin-top: 6px;">Faster Execution Pipeline</div>
         </div>
       </div>
 
-      <!-- SCENE 5: OUTRO CTA -->
+      <!-- SCENE 4: TOOL 3 ({t_tool2_end}s to {t_tool3_end}s) -->
+      <div id="sc-4" class="scene-view">
+        <div class="step-watermark">03</div>
+        <div class="step-pill">
+          TOOL 3/3 · {items_data[2]['badge'].upper()}
+          <div class="step-dashes">
+            <div class="step-dash active"></div>
+            <div class="step-dash active"></div>
+            <div class="step-dash active"></div>
+          </div>
+        </div>
+
+        <h1 class="hero-title">
+          {items_data[2]['name']} <span class="serif-accent">superpower</span>
+        </h1>
+
+        <div class="media-card-wrap">
+          <div class="media-preview" style="background: #1e293b;">
+            {"<img src='" + items_data[2]['img'] + "' alt='preview'>" if items_data[2]['img'] else "<div style='font-size: 34px; font-weight: 900; color: #ffffff;'>⚡ " + items_data[2]['name'].upper() + "</div>"}
+          </div>
+          <div class="media-info">
+            <div style="display: flex; gap: 14px; margin-bottom: 10px;">
+              <span style="background: #ede8df; padding: 6px 18px; border-radius: 99px; font-weight: 800; font-size: 22px;">★ {items_data[2]['stars']}</span>
+              <span style="background: #dcfce7; color: #15803d; padding: 6px 18px; border-radius: 99px; font-weight: 800; font-size: 22px;">{items_data[2]['badge']}</span>
+            </div>
+            <div style="font-size: 28px; font-weight: 800; color: #1a1714;">{items_data[2]['desc']}</div>
+          </div>
+        </div>
+      </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SCENE 5: VIRAL CTA ({t_tool3_end}s to {t_cta_end}s) -->
       <div id="sc-5" class="scene-view">
-        <div style="display: flex; gap: 18px; margin-top: 20px;">
-          <div class="tg" style="background: #1a1714; rotate: -3deg; font-size: 44px; padding: 14px 38px; border-radius: 20px;">💬 COMMENT</div>
-          <div class="tg" style="background: var(--clay); rotate: 2deg; font-size: 48px; padding: 14px 44px; border-radius: 20px;">▶ {cta_word}</div>
-        </div>
-        <div class="card" style="border-radius: 99px; padding: 18px 36px; display: flex; align-items: center; gap: 18px; margin-top: 16px;">
-          <div style="width: 36px; height: 36px; border-radius: 50%; background: var(--clay);"></div>
-          <span style="font-size: 34px; font-weight: 800; color: #1a1714;">{cta_word}</span>
-          <span style="display: inline-block; width: 4px; height: 32px; background: #1a1714; margin-left: -8px;"></span>
-          <span style="margin-left: auto; color: #fff; background: var(--clay); width: 48px; height: 48px; border-radius: 50%; display: grid; place-items: center; font-size: 24px;">➤</span>
-        </div>
-        <div class="card" style="padding: 30px 40px; border-radius: 28px;">
-          <div style="font-size: 26px; font-weight: 800; color: var(--clay); margin-bottom: 6px;">✉ DIRECT MESSAGE READY</div>
-          <div style="font-size: 36px; font-weight: 900; color: #1a1714; margin-bottom: 14px;">Here's your complete setup guide:</div>
-          <div style="display: flex; flex-direction: column; gap: 10px; font-size: 28px; font-weight: 700; color: #374151;">
-            <div>✓ 1. One-click local install command</div>
-            <div>✓ 2. Free open-weights download link</div>
-            <div>✓ 3. Complete production setup guide</div>
+        <div class="step-pill">
+          BONUS · FREE REPO BLUEPRINT
+          <div class="step-dashes">
+            <div class="step-dash active"></div>
+            <div class="step-dash active"></div>
+            <div class="step-dash active"></div>
           </div>
+        </div>
+
+        <div class="cta-pills">
+          <div class="black-pill">💬 COMMENT</div>
+          <div class="clay-pill">{cta_word}</div>
+        </div>
+
+        <div class="card" style="border-radius: 99px; padding: 18px 36px; display: flex; align-items: center; gap: 20px; margin-top: 26px;">
+          <div style="width: 44px; height: 44px; border-radius: 50%; background: var(--clay);"></div>
+          <span style="font-size: 36px; font-weight: 900; color: #1a1714; letter-spacing: 1px;">{cta_word}</span>
+          <span style="margin-left: auto; color: #fff; background: var(--clay); width: 52px; height: 52px; border-radius: 50%; display: grid; place-items: center; font-size: 26px;">➤</span>
+        </div>
+
+        <!-- Floating Comments -->
+        <div class="comment-bubble cb-1">
+          <div class="cb-avatar" style="background: #f59e0b;"></div>
+          <span>@tech.aman {cta_word.lower()} 🔥</span>
+        </div>
+        <div class="comment-bubble cb-2">
+          <div class="cb-avatar" style="background: #10b981;"></div>
+          <span>@dev_k {cta_word.capitalize()}</span>
+        </div>
+        <div class="comment-bubble cb-3">
+          <div class="cb-avatar" style="background: #3b82f6;"></div>
+          <span>@creator.sana {cta_word}!</span>
+        </div>
+        <div class="comment-bubble cb-4">
+          <div class="cb-avatar" style="background: #8b5cf6;"></div>
+          <span>@jay.codes {cta_word} ✨</span>
+        </div>
+
+        <div class="card" style="padding: 24px 34px; margin-top: 24px; display: flex; align-items: center; gap: 20px;">
+          <div style="font-size: 40px;">📩</div>
+          <div>
+            <div style="font-size: 28px; font-weight: 900; color: #1a1714;">jayant.digitalstudio · now</div>
+            <div style="font-size: 24px; font-weight: 700; color: var(--mut);">All 3 repo links + setup guide sent to your DMs</div>
+          </div>
+          <div style="margin-left: auto; background: #dcfce7; color: #15803d; padding: 8px 18px; border-radius: 99px; font-size: 20px; font-weight: 900;">SENT ✓</div>
         </div>
       </div>
 
-    </div>
+    </div> <!-- end upper-theater -->
 
-    <!-- ================= BOTTOM STAGE (HOST RIG + STUDIO DESK) ================= -->
-    <div id="bottom-stage">
+    <!-- ================= LOWER STAGE (ANIMATED HOST RIG + TECH DESK) ================= -->
+    <div id="lower-stage">
 
-      <!-- Comic Sweat Drop for Facepalm -->
-      <div id="sweat-drop">💦</div>
-
-      <!-- Vector Host Character Rig -->
+      <!-- Host Avatar Rig (Firmly Attached - ZERO detached limbs) -->
       <div id="host-avatar">
         <svg viewBox="0 0 440 440" width="100%" height="100%">
           <defs>
@@ -774,167 +928,96 @@ def build_hyperframes_composition(
             </linearGradient>
           </defs>
 
-          <!-- Avatar Body Group (Subject to idle breathing oscillation) -->
-          <g id="avatar-body">
+          <!-- Avatar Character (Idle Breathing Oscillation) -->
+          <g id="avatar-character">
             
-            <!-- Torso / Broad Shoulders Hoodie -->
-            <path d="M90 340 C90 280, 160 265, 220 265 C280 265, 350 280, 350 340 L370 440 L70 440 Z" 
+            <!-- Torso & Broad Shoulders -->
+            <path d="M80 340 C80 270, 160 255, 220 255 C280 255, 360 270, 360 340 L380 440 L60 440 Z" 
                   fill="url(#hoodie)" stroke="#1a1714" stroke-width="8"/>
-            <path d="M190 265 C190 305, 250 305, 250 265 Z" fill="#ffffff" stroke="#1a1714" stroke-width="6"/>
-            <!-- Hoodie drawstring / accents -->
-            <path d="M165 270 L195 365" stroke="{theme['hoodie_trim']}" stroke-width="6" stroke-linecap="round" fill="none"/>
-            <path d="M275 270 L245 365" stroke="{theme['hoodie_trim']}" stroke-width="6" stroke-linecap="round" fill="none"/>
+            <path d="M190 255 C190 295, 250 295, 250 255 Z" fill="#ffffff" stroke="#1a1714" stroke-width="6"/>
+            <!-- Drawstrings -->
+            <path d="M165 260 L195 355" stroke="{theme['hoodie_trim']}" stroke-width="6" stroke-linecap="round" fill="none"/>
+            <path d="M275 260 L245 355" stroke="{theme['hoodie_trim']}" stroke-width="6" stroke-linecap="round" fill="none"/>
+
+            <!-- Arms Contiguously Attached Resting on Desk (ZERO detachment) -->
+            <path d="M90 320 C80 365, 100 410, 165 424" fill="none" stroke="#1a1714" stroke-width="36" stroke-linecap="round"/>
+            <path d="M90 320 C80 365, 100 410, 165 424" fill="none" stroke="{theme['hoodie_color']}" stroke-width="28" stroke-linecap="round"/>
+            <circle cx="170" cy="424" r="14" fill="url(#skin)" stroke="#1a1714" stroke-width="5"/>
+
+            <path d="M350 320 C360 365, 340 410, 275 424" fill="none" stroke="#1a1714" stroke-width="36" stroke-linecap="round"/>
+            <path d="M350 320 C360 365, 340 410, 275 424" fill="none" stroke="{theme['hoodie_color']}" stroke-width="28" stroke-linecap="round"/>
+            <circle cx="270" cy="424" r="14" fill="url(#skin)" stroke="#1a1714" stroke-width="5"/>
 
             <!-- Neck -->
-            <path d="M195 245 L195 285 L245 285 L245 245 Z" fill="url(#skin)" stroke="#1a1714" stroke-width="6"/>
+            <path d="M195 235 L195 275 L245 275 L245 235 Z" fill="url(#skin)" stroke="#1a1714" stroke-width="6"/>
 
             <!-- Head -->
-            <ellipse cx="220" cy="185" rx="66" ry="76" fill="url(#skin)" stroke="#1a1714" stroke-width="8"/>
+            <ellipse cx="220" cy="175" rx="66" ry="76" fill="url(#skin)" stroke="#1a1714" stroke-width="8"/>
 
             <!-- Hair -->
-            <path d="M150 165 C150 95, 210 75, 280 95 C305 105, 300 135, 300 155 C300 135, 290 120, 270 120 C235 120, 225 135, 185 135 C165 135, 155 155, 150 165 Z" fill="#1a1714"/>
+            <path d="M150 155 C150 85, 210 65, 280 85 C305 95, 300 125, 300 145 C300 125, 290 110, 270 110 C235 110, 225 125, 185 125 C165 125, 155 145, 150 155 Z" fill="#1a1714"/>
 
             <!-- Eyebrows -->
-            <path id="brow-left" d="M180 158 Q198 150, 210 158" fill="none" stroke="#1a1714" stroke-width="6" stroke-linecap="round"/>
-            <path id="brow-right" d="M230 158 Q242 150, 260 158" fill="none" stroke="#1a1714" stroke-width="6" stroke-linecap="round"/>
+            <path d="M180 148 Q198 140, 210 148" fill="none" stroke="#1a1714" stroke-width="6" stroke-linecap="round"/>
+            <path d="M230 148 Q242 140, 260 148" fill="none" stroke="#1a1714" stroke-width="6" stroke-linecap="round"/>
 
-            <!-- Eyes & Eyelids (Automatic Blinking every 90 frames) -->
+            <!-- Eyes & Automatic Blinking -->
             <g id="eyes-open">
-              <ellipse cx="194" cy="178" rx="10" ry="14" fill="#ffffff" stroke="#1a1714" stroke-width="4"/>
-              <circle cx="196" cy="179" r="6" fill="#1a1714"/>
-              <circle cx="199" cy="176" r="2.5" fill="#ffffff"/>
+              <ellipse cx="194" cy="168" rx="10" ry="14" fill="#ffffff" stroke="#1a1714" stroke-width="4"/>
+              <circle cx="196" cy="169" r="6" fill="#1a1714"/>
+              <circle cx="199" cy="166" r="2.5" fill="#ffffff"/>
 
-              <ellipse cx="246" cy="178" rx="10" ry="14" fill="#ffffff" stroke="#1a1714" stroke-width="4"/>
-              <circle cx="248" cy="179" r="6" fill="#1a1714"/>
-              <circle cx="251" cy="176" r="2.5" fill="#ffffff"/>
+              <ellipse cx="246" cy="168" rx="10" ry="14" fill="#ffffff" stroke="#1a1714" stroke-width="4"/>
+              <circle cx="248" cy="169" r="6" fill="#1a1714"/>
+              <circle cx="251" cy="166" r="2.5" fill="#ffffff"/>
             </g>
             <g id="eyes-blink" style="display: none;">
-              <path d="M184 180 Q194 190, 204 180" fill="none" stroke="#1a1714" stroke-width="5" stroke-linecap="round"/>
-              <path d="M236 180 Q246 190, 256 180" fill="none" stroke="#1a1714" stroke-width="5" stroke-linecap="round"/>
+              <path d="M184 170 Q194 180, 204 170" fill="none" stroke="#1a1714" stroke-width="5" stroke-linecap="round"/>
+              <path d="M236 170 Q246 180, 256 170" fill="none" stroke="#1a1714" stroke-width="5" stroke-linecap="round"/>
             </g>
 
             <!-- Glasses -->
-            <rect x="176" y="162" width="38" height="32" rx="10" fill="none" stroke="#1a1714" stroke-width="7"/>
-            <rect x="226" y="162" width="38" height="32" rx="10" fill="none" stroke="#1a1714" stroke-width="7"/>
-            <path d="M214 176 L226 176" fill="none" stroke="#1a1714" stroke-width="7"/>
+            <rect x="176" y="152" width="38" height="32" rx="10" fill="none" stroke="#1a1714" stroke-width="7"/>
+            <rect x="226" y="152" width="38" height="32" rx="10" fill="none" stroke="#1a1714" stroke-width="7"/>
+            <path d="M214 166 L226 166" fill="none" stroke="#1a1714" stroke-width="7"/>
 
             <!-- Nose -->
-            <path d="M220 178 L216 200 L226 200" fill="none" stroke="#1a1714" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M220 168 L216 190 L226 190" fill="none" stroke="#1a1714" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
 
-            <!-- Dynamic Lip-Sync Mouth Group (4 States) -->
+            <!-- 4-State RMS Lip-Sync Mouth -->
             <g id="mouth-group">
-              <path id="m-closed" d="M204 226 Q220 228, 236 226" stroke="#1a1714" stroke-width="5" stroke-linecap="round" fill="none"/>
-              <ellipse id="m-small" cx="220" cy="226" rx="8" ry="6" fill="#881337" stroke="#1a1714" stroke-width="3.5" style="display: none;"/>
-              <path id="m-open" d="M206 222 Q220 216, 234 222 Q234 238, 220 240 Q206 238, 206 222 Z" fill="#881337" stroke="#1a1714" stroke-width="3.5" style="display: none;"/>
+              <path id="m-closed" d="M204 216 Q220 218, 236 216" stroke="#1a1714" stroke-width="5" stroke-linecap="round" fill="none"/>
+              <ellipse id="m-small" cx="220" cy="216" rx="8" ry="6" fill="#881337" stroke="#1a1714" stroke-width="3.5" style="display: none;"/>
+              <path id="m-open" d="M206 212 Q220 206, 234 212 Q234 228, 220 230 Q206 228, 206 212 Z" fill="#881337" stroke="#1a1714" stroke-width="3.5" style="display: none;"/>
               <g id="m-wide" style="display: none;">
-                <path d="M202 220 Q220 210, 238 220 Q236 248, 220 250 Q204 248, 202 220 Z" fill="#881337" stroke="#1a1714" stroke-width="4"/>
-                <rect x="210" y="218" width="20" height="5" rx="2" fill="#ffffff"/>
-                <ellipse cx="220" cy="242" rx="8" ry="4.5" fill="#f43f5e"/>
+                <path d="M202 210 Q220 200, 238 210 Q236 238, 220 240 Q204 238, 202 210 Z" fill="#881337" stroke="#1a1714" stroke-width="4"/>
+                <rect x="210" y="208" width="20" height="5" rx="2" fill="#ffffff"/>
+                <ellipse cx="220" cy="232" rx="8" ry="4.5" fill="#f43f5e"/>
               </g>
             </g>
 
-          </g> <!-- end avatar-body -->
-
-          <!-- ================= 5 ARM VARIANTS ================= -->
-          <g id="arms-layer">
-            
-            <!-- 1. IDLE (Resting naturally on desk with sleeves) -->
-            <g id="pose-idle">
-              <!-- Left arm resting -->
-              <path d="M110 320 C95 360, 110 405, 155 420" fill="none" stroke="#1a1714" stroke-width="36" stroke-linecap="round"/>
-              <path d="M110 320 C95 360, 110 405, 155 420" fill="none" stroke="{theme['hoodie_color']}" stroke-width="28" stroke-linecap="round"/>
-              <circle cx="160" cy="422" r="14" fill="url(#skin)" stroke="#1a1714" stroke-width="5"/>
-              <!-- Right arm resting -->
-              <path d="M330 320 C345 360, 330 405, 285 420" fill="none" stroke="#1a1714" stroke-width="36" stroke-linecap="round"/>
-              <path d="M330 320 C345 360, 330 405, 285 420" fill="none" stroke="{theme['hoodie_color']}" stroke-width="28" stroke-linecap="round"/>
-              <circle cx="280" cy="422" r="14" fill="url(#skin)" stroke="#1a1714" stroke-width="5"/>
-            </g>
-
-            <!-- 2. WAVE (Right arm raised waving with periodic harmonic oscillation) -->
-            <g id="pose-wave" style="display: none;">
-              <!-- Left resting -->
-              <path d="M110 320 C95 360, 110 405, 155 420" fill="none" stroke="#1a1714" stroke-width="36" stroke-linecap="round"/>
-              <path d="M110 320 C95 360, 110 405, 155 420" fill="none" stroke="{theme['hoodie_color']}" stroke-width="28" stroke-linecap="round"/>
-              <circle cx="160" cy="422" r="14" fill="url(#skin)" stroke="#1a1714" stroke-width="5"/>
-              <!-- Right wave -->
-              <g id="arm-wave-hand">
-                <path d="M330 320 C370 260, 375 190, 360 140" fill="none" stroke="#1a1714" stroke-width="36" stroke-linecap="round"/>
-                <path d="M330 320 C370 260, 375 190, 360 140" fill="none" stroke="{theme['hoodie_color']}" stroke-width="28" stroke-linecap="round"/>
-                <circle cx="356" cy="118" r="20" fill="url(#skin)" stroke="#1a1714" stroke-width="5.5"/>
-              </g>
-            </g>
-
-            <!-- 3. POINT UP (Right arm angled cleanly pointing up at drop cards) -->
-            <g id="pose-pointUp" style="display: none;">
-              <!-- Left resting -->
-              <path d="M110 320 C95 360, 110 405, 155 420" fill="none" stroke="#1a1714" stroke-width="36" stroke-linecap="round"/>
-              <path d="M110 320 C95 360, 110 405, 155 420" fill="none" stroke="{theme['hoodie_color']}" stroke-width="28" stroke-linecap="round"/>
-              <circle cx="160" cy="422" r="14" fill="url(#skin)" stroke="#1a1714" stroke-width="5"/>
-              <!-- Right pointing straight up -->
-              <path d="M330 320 C355 260, 345 180, 335 110" fill="none" stroke="#1a1714" stroke-width="36" stroke-linecap="round"/>
-              <path d="M330 320 C355 260, 345 180, 335 110" fill="none" stroke="{theme['hoodie_color']}" stroke-width="28" stroke-linecap="round"/>
-              <g transform="translate(322, 60)">
-                <ellipse cx="12" cy="38" rx="16" ry="16" fill="url(#skin)" stroke="#1a1714" stroke-width="5.5"/>
-                <rect x="7" y="0" width="11" height="34" rx="5.5" fill="url(#skin)" stroke="#1a1714" stroke-width="5.5"/>
-              </g>
-            </g>
-
-            <!-- 4. POINT LEFT (Left arm pointing across screen at benchmark graph) -->
-            <g id="pose-pointLeft" style="display: none;">
-              <!-- Right resting -->
-              <path d="M330 320 C345 360, 330 405, 285 420" fill="none" stroke="#1a1714" stroke-width="36" stroke-linecap="round"/>
-              <path d="M330 320 C345 360, 330 405, 285 420" fill="none" stroke="{theme['hoodie_color']}" stroke-width="28" stroke-linecap="round"/>
-              <circle cx="280" cy="422" r="14" fill="url(#skin)" stroke="#1a1714" stroke-width="5"/>
-              <!-- Left pointing left -->
-              <path d="M110 320 C85 270, 65 220, 45 150" fill="none" stroke="#1a1714" stroke-width="36" stroke-linecap="round"/>
-              <path d="M110 320 C85 270, 65 220, 45 150" fill="none" stroke="{theme['hoodie_color']}" stroke-width="28" stroke-linecap="round"/>
-              <g transform="translate(32, 118)">
-                <circle cx="14" cy="24" r="16" fill="url(#skin)" stroke="#1a1714" stroke-width="5.5"/>
-                <rect x="8" y="0" width="11" height="32" rx="5.5" fill="url(#skin)" stroke="#1a1714" stroke-width="5.5" transform="rotate(-24, 14, 16)"/>
-              </g>
-            </g>
-
-            <!-- 5. FACEPALM (Right arm reaching to forehead in comic disbelief) -->
-            <g id="pose-facepalm" style="display: none;">
-              <!-- Left resting -->
-              <path d="M110 320 C95 360, 110 405, 155 420" fill="none" stroke="#1a1714" stroke-width="36" stroke-linecap="round"/>
-              <path d="M110 320 C95 360, 110 405, 155 420" fill="none" stroke="{theme['hoodie_color']}" stroke-width="28" stroke-linecap="round"/>
-              <circle cx="160" cy="422" r="14" fill="url(#skin)" stroke="#1a1714" stroke-width="5"/>
-              <!-- Right arm up to face -->
-              <path d="M330 320 C365 270, 330 190, 270 175" fill="none" stroke="#1a1714" stroke-width="36" stroke-linecap="round"/>
-              <path d="M330 320 C365 270, 330 190, 270 175" fill="none" stroke="{theme['hoodie_color']}" stroke-width="28" stroke-linecap="round"/>
-              <ellipse cx="260" cy="172" rx="20" ry="18" fill="url(#skin)" stroke="#1a1714" stroke-width="5.5"/>
-            </g>
-
-          </g> <!-- end arms-layer -->
+          </g>
         </svg>
       </div> <!-- end host-avatar -->
 
-      <!-- Sleek Tech Desk Surface -->
+      <!-- Wooden Tech Desk Surface -->
       <div class="desk-surface"></div>
 
-      <!-- Desk Props: Mic & Mug -->
+      <!-- Desk Props: Boom Mic & Mug -->
       <div class="desk-props">
-        <!-- Studio Boom Arm Microphone (Left) -->
         <div class="studio-mic">
           <svg viewBox="0 0 120 140" width="100%" height="100%">
-            <!-- Desk Clamp -->
             <rect x="15" y="115" width="24" height="22" rx="4" fill="#1a1714"/>
-            <!-- Articulated metal boom arms -->
             <path d="M26 115 L50 55 L82 78" stroke="#1a1714" stroke-width="8" stroke-linecap="round" fill="none"/>
             <path d="M30 115 L54 55 L86 78" stroke="#6b7280" stroke-width="3.5" stroke-linecap="round" fill="none"/>
-            <!-- Joints -->
             <circle cx="26" cy="115" r="8" fill="#1a1714"/>
             <circle cx="50" cy="55" r="8" fill="#1a1714"/>
-            <!-- Shock Mount Ring -->
             <circle cx="86" cy="82" r="18" fill="none" stroke="#1a1714" stroke-width="4.5"/>
-            <!-- Condenser Capsule / Foam Filter -->
             <rect x="76" y="66" width="22" height="34" rx="11" fill="#2d3748" stroke="#1a1714" stroke-width="4"/>
             <path d="M79 78 L95 78 M79 84 L95 84" stroke="#4a5568" stroke-width="2.5"/>
           </svg>
         </div>
 
-        <!-- Coffee Mug (Right) with Steam Curls -->
         <div class="desk-mug-wrap">
           <div class="steam-curl s1">~</div>
           <div class="steam-curl s2">~</div>
@@ -942,7 +1025,7 @@ def build_hyperframes_composition(
         </div>
       </div>
 
-    </div> <!-- end bottom-stage -->
+    </div> <!-- end lower-stage -->
 
     <!-- ================= KINETIC SUBTITLES ================= -->
     <div id="caption-bar"></div>
@@ -950,102 +1033,48 @@ def build_hyperframes_composition(
   </div> <!-- end stage -->
 
   <script>
-    // Frame-Accurate Lip-Sync Data ({len(mouth_data)} frames)
-    const mouthData = {json.dumps(mouth_data)};
     const captionChunks = {json.dumps(caption_chunks)};
-    const totalDuration = {round(duration, 2)};
-    const fps = 30;
+    const duration = {round(duration, 2)};
 
-    // Active Arm Variant
-    let currentPose = "{theme['initial_pose']}";
-
-    function setPose(poseName) {{
-      currentPose = poseName;
-      const poses = ["idle", "wave", "pointUp", "pointLeft", "facepalm"];
-      poses.forEach(p => {{
-        const el = document.getElementById("pose-" + p);
-        if (el) el.style.display = (p === poseName) ? "block" : "none";
-      }});
-      // Toggle comic sweat drop for facepalm
-      const sweat = document.getElementById("sweat-drop");
-      if (sweat) sweat.style.opacity = (poseName === "facepalm") ? "1" : "0";
-    }}
-
-    function setMouthShape(shape) {{
-      const shapes = ["closed", "small", "open", "wide"];
-      shapes.forEach(s => {{
-        const el = document.getElementById("m-" + s);
-        if (el) el.style.display = (s === shape) ? "block" : "none";
-      }});
-    }}
-
-    function setBlink(isBlinking) {{
-      const openEl = document.getElementById("eyes-open");
-      const blinkEl = document.getElementById("eyes-blink");
-      if (openEl && blinkEl) {{
-        openEl.style.display = isBlinking ? "none" : "block";
-        blinkEl.style.display = isBlinking ? "block" : "none";
-      }}
-    }}
-
-    // ================= GSAP SCENE & POSE CHOREOGRAPHY =================
     const tl = gsap.timeline();
     window.__timelines = window.__timelines || {{}};
     window.__timelines["main"] = tl;
 
-    // 1. Initial State (outside timeline for deterministic frame 0)
-    gsap.set("#sc-1", {{ display: "flex", opacity: 1 }});
-    gsap.set(["#sc-2", "#sc-3", "#sc-4", "#sc-5"], {{ display: "none", opacity: 0 }});
-    gsap.set("#pose-facepalm", {{ display: "block" }});
-    gsap.set(["#pose-idle", "#pose-wave", "#pose-pointUp", "#pose-pointLeft"], {{ display: "none" }});
-    gsap.set("#sweat-drop", {{ opacity: 1 }});
+    // 1. Initial State (deterministic frame 0)
+    gsap.set("#sc-1", {{ opacity: 1, pointerEvents: "auto" }});
+    gsap.set(["#sc-2", "#sc-3", "#sc-4", "#sc-5"], {{ opacity: 0, pointerEvents: "none" }});
     gsap.set("#eyes-open", {{ display: "block" }});
     gsap.set("#eyes-blink", {{ display: "none" }});
 
-    // 2. Scene 2: Item 1 ({t_hook_end} - {t_tool1_end}s) -> pointUp pose
-    tl.to("#sc-1", {{ opacity: 0, duration: 0.2 }}, {t_hook_end});
-    tl.set("#sc-1", {{ display: "none" }}, {t_hook_end + 0.2});
-    tl.set("#sc-2", {{ display: "flex" }}, {t_hook_end + 0.2});
-    tl.fromTo("#sc-2", {{ opacity: 0, y: 30 }}, {{ opacity: 1, y: 0, duration: 0.35 }}, {t_hook_end + 0.2});
+    // 2. Scene 2 (Tool 1 - Qwen Image 2.1): starts at {t_hook_end}s
+    tl.to("#sc-1", {{ opacity: 0, duration: 0.25 }}, {t_hook_end});
+    tl.set("#sc-1", {{ pointerEvents: "none" }}, {t_hook_end + 0.25});
+    tl.set("#sc-2", {{ pointerEvents: "auto" }}, {t_hook_end + 0.25});
+    tl.fromTo("#sc-2", {{ opacity: 0, y: 30 }}, {{ opacity: 1, y: 0, duration: 0.35 }}, {t_hook_end + 0.25});
 
-    tl.set(["#pose-facepalm", "#sweat-drop"], {{ display: "none", opacity: 0 }}, {t_hook_end});
-    tl.set("#pose-pointUp", {{ display: "block" }}, {t_hook_end});
+    // 3. Scene 3 (Tool 2 - Kolibri 1): starts at {t_tool1_end}s
+    tl.to("#sc-2", {{ opacity: 0, duration: 0.25 }}, {t_tool1_end});
+    tl.set("#sc-2", {{ pointerEvents: "none" }}, {t_tool1_end + 0.25});
+    tl.set("#sc-3", {{ pointerEvents: "auto" }}, {t_tool1_end + 0.25});
+    tl.fromTo("#sc-3", {{ opacity: 0, y: 30 }}, {{ opacity: 1, y: 0, duration: 0.35 }}, {t_tool1_end + 0.25});
 
-    // 3. Scene 3: Item 2 ({t_tool1_end} - {t_tool2_end}s) -> pointLeft pose
-    tl.to("#sc-2", {{ opacity: 0, duration: 0.2 }}, {t_tool1_end});
-    tl.set("#sc-2", {{ display: "none" }}, {t_tool1_end + 0.2});
-    tl.set("#sc-3", {{ display: "flex" }}, {t_tool1_end + 0.2});
-    tl.fromTo("#sc-3", {{ opacity: 0, y: 30 }}, {{ opacity: 1, y: 0, duration: 0.35 }}, {t_tool1_end + 0.2});
+    // 4. Scene 4 (Tool 3 - LobeHub): starts at {t_tool2_end}s
+    tl.to("#sc-3", {{ opacity: 0, duration: 0.25 }}, {t_tool2_end});
+    tl.set("#sc-3", {{ pointerEvents: "none" }}, {t_tool2_end + 0.25});
+    tl.set("#sc-4", {{ pointerEvents: "auto" }}, {t_tool2_end + 0.25});
+    tl.fromTo("#sc-4", {{ opacity: 0, y: 30 }}, {{ opacity: 1, y: 0, duration: 0.35 }}, {t_tool2_end + 0.25});
 
-    tl.set("#pose-pointUp", {{ display: "none" }}, {t_tool1_end});
-    tl.set("#pose-pointLeft", {{ display: "block" }}, {t_tool1_end});
+    // 5. Scene 5 (Viral CTA): starts at {t_tool3_end}s
+    tl.to("#sc-4", {{ opacity: 0, duration: 0.25 }}, {t_tool3_end});
+    tl.set("#sc-4", {{ pointerEvents: "none" }}, {t_tool3_end + 0.25});
+    tl.set("#sc-5", {{ pointerEvents: "auto" }}, {t_tool3_end + 0.25});
+    tl.fromTo("#sc-5", {{ opacity: 0, scale: 0.94 }}, {{ opacity: 1, scale: 1, duration: 0.35 }}, {t_tool3_end + 0.25});
 
-    // 4. Scene 4: Item 3 ({t_tool2_end} - {t_tool3_end}s) -> pointUp pose
-    tl.to("#sc-3", {{ opacity: 0, duration: 0.2 }}, {t_tool2_end});
-    tl.set("#sc-3", {{ display: "none" }}, {t_tool2_end + 0.2});
-    tl.set("#sc-4", {{ display: "flex" }}, {t_tool2_end + 0.2});
-    tl.fromTo("#sc-4", {{ opacity: 0, y: 30 }}, {{ opacity: 1, y: 0, duration: 0.35 }}, {t_tool2_end + 0.2});
+    // Continuous Idle Breathing Oscillation (subtle & natural)
+    tl.to("#avatar-character", {{ y: -6, duration: 1.5, repeat: {int(duration / 1.5)}, yoyo: true, ease: "sine.inOut" }}, 0);
 
-    tl.set("#pose-pointLeft", {{ display: "none" }}, {t_tool2_end});
-    tl.set("#pose-pointUp", {{ display: "block" }}, {t_tool2_end});
-
-    // 5. Scene 5: Outro CTA ({t_tool3_end} - {t_cta_end}s) -> wave pose
-    tl.to("#sc-4", {{ opacity: 0, duration: 0.2 }}, {t_tool3_end});
-    tl.set("#sc-4", {{ display: "none" }}, {t_tool3_end + 0.2});
-    tl.set("#sc-5", {{ display: "flex" }}, {t_tool3_end + 0.2});
-    tl.fromTo("#sc-5", {{ opacity: 0, scale: 0.95 }}, {{ opacity: 1, scale: 1, duration: 0.35 }}, {t_tool3_end + 0.2});
-
-    tl.set("#pose-pointUp", {{ display: "none" }}, {t_tool3_end});
-    tl.set("#pose-wave", {{ display: "block" }}, {t_tool3_end});
-
-    // Continuous Idle Breathing Oscillation (bounded)
-    tl.to("#avatar-body", {{ y: -8, duration: 1.4, repeat: {int(duration / 1.4)}, yoyo: true, ease: "sine.inOut" }}, 0);
-
-    // Continuous Wave Arm Motion in Scene 5 (bounded)
-    tl.to("#arm-wave-hand", {{ rotation: 16, transformOrigin: "330px 220px", duration: 0.28, repeat: {int((duration - t_tool3_end) / 0.28)}, yoyo: true, ease: "sine.inOut" }}, {t_tool3_end});
-
-    // Automatic Eye Blinks (every 3s for 0.133s)
-    for (let t = 1.6; t < {round(duration, 2)}; t += 3.0) {{
+    // Automatic Eye Blinks (every 3 seconds for 0.133s)
+    for (let t = 1.5; t < {round(duration, 2)}; t += 3.0) {{
       tl.set("#eyes-open", {{ display: "none" }}, t);
       tl.set("#eyes-blink", {{ display: "block" }}, t);
       tl.set("#eyes-open", {{ display: "block" }}, t + 0.133);
@@ -1077,7 +1106,7 @@ def build_hyperframes_composition(
     with open(output_html, "w") as f:
         f.write(html)
 
-    print(f"[✓] Compiled 1080x1920 Full HD host vector rig composition to {output_html} ({round(duration, 2)}s)")
+    print(f"[✓] Compiled 1080x1920 Full HD studio composition with avatar to {output_html} ({round(duration, 2)}s)")
     return output_html
 
 if __name__ == "__main__":

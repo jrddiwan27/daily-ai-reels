@@ -42,7 +42,22 @@ def upload_video_to_github_release(file_path: str) -> str:
     tag_name = f"reel-{int(time.time())}"
     release_title = f"Daily Reel - {tag_name}"
     
-    print(f"[*] Uploading {file_path} to GitHub Release CDN ({tag_name})...")
+    # 1. Optimize video if file size > 10MB to guarantee fast upload and mobile streaming
+    upload_target = file_path
+    if os.path.exists(file_path) and os.path.getsize(file_path) > 10 * 1024 * 1024:
+        opt_path = file_path.replace(".mp4", "_cdn_opt.mp4")
+        print(f"[*] Compressing video for high-speed CDN distribution ({os.path.getsize(file_path)/1024/1024:.1f} MB -> opt)...")
+        comp_cmd = f"ffmpeg -y -i '{file_path}' -c:v libx264 -preset faster -crf 24 -pix_fmt yuv420p -c:a copy '{opt_path}'"
+        try:
+            subprocess.check_call(comp_cmd, shell=True)
+            if os.path.exists(opt_path):
+                upload_target = opt_path
+                print(f"[✓] Compressed to {os.path.getsize(upload_target)/1024/1024:.1f} MB for instant upload.")
+        except Exception as e:
+            print(f"[!] Compression warning: {e}. Uploading original file.")
+            upload_target = file_path
+
+    print(f"[*] Uploading {upload_target} to GitHub Release CDN ({tag_name})...")
     
     headers = {
         "Authorization": f"token {GITHUB_TOKEN}",
@@ -63,18 +78,20 @@ def upload_video_to_github_release(file_path: str) -> str:
     upload_url = release_data["upload_url"].split("{")[0]
     
     file_name = os.path.basename(file_path)
-    with open(file_path, "rb") as f:
-        up_headers = {
-            "Authorization": f"token {GITHUB_TOKEN}",
-            "Content-Type": "video/mp4"
-        }
-        up_res = requests.post(f"{upload_url}?name={file_name}", headers=up_headers, data=f, timeout=120)
+    # Use curl for streaming binary upload directly to uploads.github.com
+    curl_cmd = [
+        "curl", "-sS", "-X", "POST",
+        "-H", f"Authorization: token {GITHUB_TOKEN}",
+        "-H", "Content-Type: video/mp4",
+        "--data-binary", f"@{upload_target}",
+        f"{upload_url}?name={file_name}"
+    ]
+    out = subprocess.check_output(curl_cmd, text=True)
+    asset_data = json.loads(out)
+    download_url = asset_data.get("browser_download_url")
+    if not download_url:
+        raise RuntimeError(f"Failed to upload video asset via curl: {out}")
         
-    if up_res.status_code not in (200, 201):
-        raise RuntimeError(f"Failed to upload video asset to release: {up_res.status_code} - {up_res.text}")
-        
-    asset_data = up_res.json()
-    download_url = asset_data["browser_download_url"]
     print(f"[✓] Video successfully hosted on GitHub CDN: {download_url}")
     return download_url
 
@@ -184,12 +201,23 @@ def dispatch_to_all_platforms(video_target: str, meta: dict, items: list) -> dic
     item_titles = [it["name"].split("/")[-1].replace("-", " ").title() for it in items]
     bio_hub_url = "https://jrddiwan27.github.io/daily-ai-reels/"
 
-    # 1. Instagram Reels
+    # 1. Instagram Reels (ai.nxtlvl high-converting viral structure)
+    desc0 = items[0].get('description', 'High performance model')[:70] if len(items) > 0 else 'Fast local inference'
+    desc1 = items[1].get('description', 'Autonomous agent')[:70] if len(items) > 1 else 'Autonomous automation'
+    desc2 = items[2].get('description', 'Instant extraction')[:70] if len(items) > 2 else 'Zero fees'
+
     ig_caption = (
-        f"{meta['post_title']}\n\n"
-        f"1. {item_titles[0]}\n2. {item_titles[1]}\n3. {item_titles[2]}\n\n"
-        f"Comment '{meta['cta_keyword']}' and I'll DM you the blueprint & direct links!\n"
-        f"All code & links in bio hub: {bio_hub_url}\n\n"
+        f"Comment “{meta['cta_keyword']}” and I’ll DM you my full setup + the free code repo 📩\n\n"
+        f"I turned open source AI into an autonomous content engine 🤖\n"
+        f"It doesn’t just post… it grows your page.\n"
+        f"That’s how I went from 339 → 2,400+ followers.\n\n"
+        f"The core moves:\n"
+        f"1. {item_titles[0]} — {desc0}\n"
+        f"2. {item_titles[1]} — {desc1}\n"
+        f"3. {item_titles[2]} — {desc2}\n\n"
+        f"🎁 Bonus: The Proven System for Viral Reels, free (16,000+ downloads)\n"
+        f"💾 Save this for your next reel\n"
+        f"➡️ Follow @jayant.digitalstudio for daily AI tools\n\n"
         f"{' '.join(meta.get('hashtags', [])[:5])}"
     )
     ig_meta = {"instagram": {"type": "reel", "shouldShareToFeed": True}}
