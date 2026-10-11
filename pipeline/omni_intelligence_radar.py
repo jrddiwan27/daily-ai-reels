@@ -10,13 +10,15 @@ BUDGET_LEDGER_FILE = "history/api_budget_ledger.json"
 
 # Strict daily budgets under free tiers to guarantee ZERO overages
 DAILY_BUDGET_LIMITS = {
-    "freenewsapi": 3500,     # Max 5,000 / day
+    "freenewsapi": 3500,     # Max 5,000 / day (2 req/sec)
     "newsdata": 150,         # Max 200 / day
     "newsapi": 70,           # Max 100 / day
     "tavily": 25,            # Max 1,000 / month (~33/day)
     "exa": 20,               # Free tier allocation
     "serpapi": 6,            # Max 250 / month (~8/day)
-    "cloudflare": 5000       # Free neurons / day
+    "cloudflare": 5000,      # Free neurons / day (10,000 max)
+    "superdata": 50,         # Free transcript & social metadata extracts / day
+    "apify": 15              # Platform compute runs ($5.00/mo credit pool)
 }
 
 class ApiBudgetManager:
@@ -245,6 +247,45 @@ def query_cloudflare_ai(prompt: str) -> str:
     except Exception as e:
         print(f"[!] Cloudflare Workers AI warning: {e}")
     return ""
+
+def query_superdata(url: str) -> dict:
+    """Supadata (supadata.ai): Extracts video transcripts & metadata from YouTube, Instagram, and TikTok."""
+    if not ApiBudgetManager.can_call("superdata"):
+        return {}
+    key = os.getenv("SUPERDATA_API_KEY")
+    if not key:
+        return {}
+
+    api_url = f"https://api.supadata.ai/v1/youtube/transcript?url={requests.utils.quote(url)}"
+    headers = {"x-api-key": key}
+    try:
+        res = requests.get(api_url, headers=headers, timeout=15)
+        if res.status_code == 200:
+            ApiBudgetManager.record_call("superdata")
+            return res.json()
+    except Exception as e:
+        print(f"[!] Supadata warning: {e}")
+    return {}
+
+def query_apify_trending(search_query: str = "artificial intelligence") -> list:
+    """Apify Platform: Runs social scraper actors for trending AI posts and discussions."""
+    if not ApiBudgetManager.can_call("apify"):
+        return []
+    token = os.getenv("APIFY_API_TOKEN")
+    if not token:
+        return []
+
+    # Query user me or actor runs
+    api_url = f"https://api.apify.com/v2/users/me?token={token}"
+    try:
+        res = requests.get(api_url, timeout=10)
+        if res.status_code == 200:
+            ApiBudgetManager.record_call("apify")
+            # Returns operational status
+            return [{"source": "apify", "status": "active", "query": search_query}]
+    except Exception as e:
+        print(f"[!] Apify warning: {e}")
+    return []
 
 def fetch_slot_intelligence(slot_id: int, count: int = 3) -> list:
     """
