@@ -337,5 +337,32 @@
         "title": "LangChain formalised four strategies for this: write (persist context externally"
       }
     ]
+  },
+  {
+    "slot_id": 1,
+    "slot_name": "Morning Breakthrough (Open Source Repos)",
+    "timestamp_utc": "2026-10-11T16:48:52.748103+00:00",
+    "date_ist": "2026-10-11 22:18:52 IST",
+    "buffer_post_id": "6acbbd6263ff33d8c98be435",
+    "items": [
+      {
+        "id": "abenzerps/Qwen-Image-2.1-Uncensored-GGUF",
+        "name": "Qwen-Image-2.1-Uncensored-GGUF",
+        "url": "https://huggingface.co/abenzerps/Qwen-Image-2.1-Uncensored-GGUF",
+        "title": "Trending open-weights model on Hugging Face (text-to-image) with 3894 likes."
+      },
+      {
+        "id": "Aleph-Alpha/Kolibri-1",
+        "name": "Kolibri-1",
+        "url": "https://huggingface.co/Aleph-Alpha/Kolibri-1",
+        "title": "Trending open-weights model on Hugging Face (text-generation) with 874 likes."
+      },
+      {
+        "id": "lobehub/lobehub",
+        "name": "lobehub",
+        "url": "https://github.com/lobehub/lobehub",
+        "title": "\ud83e\udd2f LobeHub is your Chief Agent Operator, organizing your agents into 7\u00d724 operati"
+      }
+    ]
   }
 ]

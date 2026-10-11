@@ -18,7 +18,20 @@ def produce_master_audio(
     boom_path = "assets/sfx/sfx_bass_boom.wav"
     bgm_path = "assets/bg_music.wav"
 
-    # Default cues timed to scene changes & kinetic events
+    # Load frame-accurate cues if available from composition engine
+    if scene_transitions is None:
+        cues_file = "assets/sfx_cues.json"
+        if os.path.exists(cues_file):
+            try:
+                import json
+                with open(cues_file) as f:
+                    raw_cues = json.load(f)
+                    scene_transitions = [(c["type"], float(c["time"])) for c in raw_cues]
+                    print(f"[✓] Loaded {len(scene_transitions)} frame-accurate SFX cues from {cues_file}")
+            except Exception as e:
+                print(f"[!] Warning reading {cues_file}: {e}")
+                scene_transitions = None
+
     if scene_transitions is None:
         t_hook_end = min(4.2, duration * 0.14)
         t_trans_end = min(8.5, duration * 0.28)
