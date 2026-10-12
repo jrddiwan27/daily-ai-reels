@@ -384,5 +384,149 @@
         "title": "20B Parameter Open-Source Photorealistic Text-to-Image Foundation Model"
       }
     ]
+  },
+  {
+    "slot_id": 1,
+    "slot_name": "Morning Breakthrough (Open Source Repos)",
+    "timestamp_utc": "2026-10-12T08:52:53.457909+00:00",
+    "date_ist": "2026-10-12 09:00:00 IST (Dispatched)",
+    "buffer_post_id": "6acc9f11a2941ce8176934ca",
+    "channel_results": {
+      "instagram": "6acc9f11a2941ce8176934ca",
+      "youtube": "6acc9f4c712ba82086b30dab",
+      "twitter": "6acc9f805feb3462de98b1a0"
+    },
+    "cdn_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1791794697/daily-reel.mp4",
+    "items": [
+      {
+        "id": "openclaw/openclaw",
+        "name": "openclaw",
+        "title": "Releases \u00b7 openclaw/openclaw"
+      },
+      {
+        "id": "github/gh-aw",
+        "name": "gh-aw",
+        "title": "GitHub Agentic Workflows"
+      },
+      {
+        "id": "agnostic-ai/agnostic-ai",
+        "name": "agnostic-ai",
+        "title": "agnostic-ai v0.82.0"
+      }
+    ]
+  },
+  {
+    "slot_id": 1,
+    "slot_name": "Morning Breakthrough (Open Source Repos)",
+    "timestamp_utc": "2026-10-12T10:09:01.155616+00:00",
+    "date_ist": "2026-10-12 09:00 AM IST (Posted Live)",
+    "status": "POSTED_LIVE",
+    "buffer_post_id": "6acc9f11a2941ce8176934ca",
+    "channel_results": {
+      "instagram": "6acc9f11a2941ce8176934ca",
+      "youtube": "6acc9f4c712ba82086b30dab",
+      "twitter": "6acc9f805feb3462de98b1a0"
+    },
+    "cdn_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1791794697/daily-reel.mp4",
+    "video_path": "out/daily-reel.mp4"
+  },
+  {
+    "slot_id": 2,
+    "slot_name": "Midday Cheat Code (AI Workflows)",
+    "timestamp_utc": "2026-10-12T10:09:01.156013+00:00",
+    "date_ist": "2026-10-12 12:00 PM IST (Posted Live)",
+    "status": "POSTED_LIVE",
+    "buffer_post_id": "6acca6b25ed0a74562a9f256",
+    "channel_results": {
+      "instagram": "6acca6b25ed0a74562a9f256",
+      "youtube": "6acca6eae2deefbfcdae4af7",
+      "twitter": "6acca71a04be3441f5bdf258"
+    },
+    "cdn_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1791796593/slot_2_daily_reel.mp4",
+    "video_path": "out/slot_2_daily_reel.mp4"
+  },
+  {
+    "slot_id": 3,
+    "slot_name": "Tech Radar Teardown (Model Benchmarks)",
+    "timestamp_utc": "2026-10-12T10:09:01.156016+00:00",
+    "date_ist": "2026-10-12 03:00 PM IST (Posted Live)",
+    "status": "POSTED_LIVE",
+    "buffer_post_id": "6accafb504be3441f5bf796a",
+    "channel_results": {
+      "instagram": "6accafb504be3441f5bf796a",
+      "youtube": "6accaff1e2deefbfcdb02394",
+      "twitter": "6accb0213cf8dc33d1d1b59a"
+    },
+    "cdn_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1791797607/slot_3_daily_reel.mp4",
+    "video_path": "out/slot_3_daily_reel.mp4"
+  },
+  {
+    "slot_id": 4,
+    "slot_name": "Evening Toolkit (Secret Web AI Tools)",
+    "timestamp_utc": "2026-10-12T10:09:01.156018+00:00",
+    "date_ist": "2026-10-12 06:00 PM IST (Scheduled in Buffer)",
+    "status": "SCHEDULED",
+    "buffer_post_id": "6accb05304be3441f5bfc503",
+    "channel_results": {
+      "instagram": "6accb05304be3441f5bfc503",
+      "youtube": "6accb0575ed0a74562abdf34",
+      "twitter": "6accb05db4c6a9782a0f746f"
+    },
+    "cdn_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1791798711/slot_4_daily_reel.mp4",
+    "video_path": "out/slot_4_daily_reel.mp4"
+  },
+  {
+    "slot_id": 5,
+    "slot_name": "Night Owl Deep Dive (Master Prompts)",
+    "timestamp_utc": "2026-10-12T10:09:01.156019+00:00",
+    "date_ist": "2026-10-12 09:00 PM IST (Scheduled in Buffer)",
+    "status": "SCHEDULED",
+    "buffer_post_id": "6accb1863cf8dc33d1d21b45",
+    "channel_results": {
+      "instagram": "6accb1863cf8dc33d1d21b45",
+      "youtube": "6accb18a3cf8dc33d1d21c1a",
+      "twitter": "6accb191a0f0173687a88264"
+    },
+    "cdn_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1791799483/slot_5_daily_reel.mp4",
+    "video_path": "out/slot_5_daily_reel.mp4"
+  },
+  {
+    "slot_id": 5,
+    "slot_name": "Night Owl Deep Dive (Slot 5)",
+    "timestamp_utc": "2026-10-12T10:09:07.325097+00:00",
+    "date_ist": "2026-10-12 9:00 PM IST",
+    "buffer_post_id": null,
+    "channel_results": {
+      "instagram": null,
+      "youtube": null,
+      "twitter": null
+    },
+    "video_path": "out/slot_5_daily_reel.mp4",
+    "items": [
+      {
+        "title": "Claude Prompt Optimization Strategies from Anthropic - Geeky Gadgets",
+        "description": "# Claude Prompt Optimization Strategies from Anthropic - Geeky Gadgets  Author: Julian Horsey Published: 2026-10-12T07:13:00Z Source: geeky-gadgets.com Language: en  ## Story  Claude Prompt Optimizati",
+        "url": "https://www.geeky-gadgets.com/claude-prompt-optimization/",
+        "published_date": "2026-10-12T07:13:00.000Z",
+        "source": "Exa (24h AI Index)",
+        "name": "Claude Prompt Optimization Strategies from Anthropic - Geeky Gadgets"
+      },
+      {
+        "title": "What is Decision 3.0? vLLM Semantic Router\u2019s New Open Decision Models - MarkTechPost",
+        "description": "# What is Decision 3.0? vLLM Semantic Router\u2019s New Open Decision Models - MarkTechPost  Author: Michal Sutter Published: 2026-10-11T21:43:41Z Source: marktechpost.com Language: en",
+        "url": "https://www.marktechpost.com/2026/10/11/what-is-decision-3-0-vllm-semantic-routers-new-open-decision-models/",
+        "published_date": "2026-10-11T21:43:41.000Z",
+        "source": "Exa (24h AI Index)",
+        "name": "What is Decision 3.0? vLLM Semantic Router\u2019s New Open Decision Models - MarkTechPost"
+      },
+      {
+        "title": "Genkit Dart 1.0: Build production-ready agentic apps with Dart and Flutter \u2014 Web Pulse",
+        "description": "Genkit Dart 1.0: Build production-ready agentic apps with Dart and Flutter \u2014 Web Pulse  # Genkit Dart 1.0: Build production-ready agentic apps with Dart and Flutter  Google released Genkit Dart 1.0, t",
+        "url": "https://wpnews.pro/news/genkit-dart-1-0-build-production-ready-agentic-apps-with-dart-and-flutter",
+        "published_date": "2026-10-11T00:00:00.000Z",
+        "source": "Exa (24h AI Index)",
+        "name": "Genkit Dart 1.0"
+      }
+    ]
   }
 ]

@@ -114,7 +114,7 @@ def _to_graphql_literal(val):
         return json.dumps(val)
     return "null"
 
-def dispatch_post_payload(channel_id: str, text: str, public_video_url: str, metadata: dict = None) -> str:
+def dispatch_post_payload(channel_id: str, text: str, public_video_url: str, metadata: dict = None, due_at_utc: str = None) -> str:
     url = "https://api.buffer.com"
     headers = {
         "Authorization": f"Bearer {BUFFER_ACCESS_TOKEN}",
@@ -125,7 +125,7 @@ def dispatch_post_payload(channel_id: str, text: str, public_video_url: str, met
         "channelId": channel_id,
         "text": text,
         "schedulingType": "automatic",
-        "mode": "shareNow",
+        "mode": "customScheduled" if due_at_utc else "shareNow",
         "needsApproval": False,
         "assets": [
             {
@@ -135,6 +135,8 @@ def dispatch_post_payload(channel_id: str, text: str, public_video_url: str, met
             }
         ]
     }
+    if due_at_utc:
+        input_payload["dueAt"] = due_at_utc
     if metadata:
         input_payload["metadata"] = metadata
 
@@ -148,23 +150,39 @@ def dispatch_post_payload(channel_id: str, text: str, public_video_url: str, met
         "} }"
     )
 
-    res = requests.post(url, headers=headers, json={"query": mutation}, timeout=60)
-    if res.status_code == 200:
-        data = res.json()
-        if "errors" in data:
-            print(f"[!] Buffer GraphQL Error ({channel_id}): {json.dumps(data['errors'])}")
+    data = None
+    try:
+        res = requests.post(url, headers=headers, json={"query": mutation}, timeout=3)
+        if res.status_code == 200:
+            data = res.json()
+    except Exception:
+        pass
+
+    if data is None:
+        try:
+            curl_cmd = [
+                "curl", "-s", "-X", "POST", url,
+                "-H", f"Authorization: Bearer {BUFFER_ACCESS_TOKEN}",
+                "-H", "Content-Type: application/json",
+                "-d", json.dumps({"query": mutation})
+            ]
+            curl_out = subprocess.check_output(curl_cmd).decode("utf-8")
+            data = json.loads(curl_out)
+        except Exception as ce:
+            print(f"[!] Curl to Buffer failed: {ce}")
             return None
-        action_res = data.get("data", {}).get("createPost", {})
-        typename = action_res.get("__typename")
-        if typename == "PostActionSuccess":
-            post_id = action_res.get("post", {}).get("id") or "scheduled"
-            return post_id
-        else:
-            err_msg = action_res.get("message", "Unknown buffer error")
-            print(f"[!] Buffer Mutation Error ({channel_id}): {err_msg}")
-            return None
+
+    if "errors" in data:
+        print(f"[!] Buffer GraphQL Error ({channel_id}): {json.dumps(data['errors'])}")
+        return None
+    action_res = data.get("data", {}).get("createPost", {})
+    typename = action_res.get("__typename")
+    if typename == "PostActionSuccess":
+        post_id = action_res.get("post", {}).get("id") or "scheduled"
+        return post_id
     else:
-        print(f"[!] Buffer HTTP Error {res.status_code}: {res.text}")
+        err_msg = action_res.get("message", "Unknown buffer error")
+        print(f"[!] Buffer Mutation Error ({channel_id}): {err_msg}")
         return None
 
 def dispatch_to_buffer(video_target: str, caption: str, channel_id: str = None):
@@ -188,7 +206,7 @@ def dispatch_to_buffer(video_target: str, caption: str, channel_id: str = None):
         print(f"[✓] Successfully queued in Buffer (Post ID: {post_id})")
     return post_id
 
-def dispatch_to_all_platforms(video_target: str, meta: dict, items: list) -> dict:
+def dispatch_to_all_platforms(video_target: str, meta: dict, items: list, due_at_utc: str = None) -> dict:
     """
     Dispatches the rendered video to Instagram Reels, YouTube Shorts, and X (Twitter).
     """
@@ -221,7 +239,7 @@ def dispatch_to_all_platforms(video_target: str, meta: dict, items: list) -> dic
         f"{' '.join(meta.get('hashtags', [])[:5])}"
     )
     ig_meta = {"instagram": {"type": "reel", "shouldShareToFeed": True}}
-    ig_id = dispatch_post_payload(CHANNELS["instagram"], ig_caption, public_video_url, ig_meta)
+    ig_id = dispatch_post_payload(CHANNELS["instagram"], ig_caption, public_video_url, ig_meta, due_at_utc=due_at_utc)
     results["instagram"] = ig_id
     print(f"[✓ INSTAGRAM] Scheduled Reel: Post ID {ig_id}")
 
@@ -241,7 +259,7 @@ def dispatch_to_all_platforms(video_target: str, meta: dict, items: list) -> dic
             "madeForKids": False
         }
     }
-    yt_id = dispatch_post_payload(CHANNELS["youtube"], yt_description, public_video_url, yt_meta)
+    yt_id = dispatch_post_payload(CHANNELS["youtube"], yt_description, public_video_url, yt_meta, due_at_utc=due_at_utc)
     results["youtube"] = yt_id
     print(f"[✓ YOUTUBE] Scheduled Shorts: Post ID {yt_id}")
 
@@ -259,7 +277,7 @@ def dispatch_to_all_platforms(video_target: str, meta: dict, items: list) -> dic
     if len(tw_text) > 270:
         tw_text = tw_text[:267] + "..."
 
-    tw_id = dispatch_post_payload(CHANNELS["twitter"], tw_text, public_video_url)
+    tw_id = dispatch_post_payload(CHANNELS["twitter"], tw_text, public_video_url, due_at_utc=due_at_utc)
     results["twitter"] = tw_id
     print(f"[✓ X/TWITTER] Scheduled Post: Post ID {tw_id} ({len(tw_text)} chars)")
 

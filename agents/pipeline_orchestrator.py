@@ -23,11 +23,27 @@ from agents.editor_agent import run_editor_agent
 from agents.quality_agent import QualityAgent
 from agents.boss_agent import BossAgent
 
-def run_production_pipeline(max_retries=2):
+SLOT_CONFIGS = {
+    1: {"theme": "open source AI agents GitHub", "cta": "REPOS", "name": "Morning Breakthrough"},
+    2: {"theme": "autonomous AI automation workflows 2026", "cta": "WORKFLOW", "name": "Midday Cheat Code"},
+    3: {"theme": "new open weights multimodal reasoning AI models", "cta": "MODELS", "name": "Tech Radar Teardown"},
+    4: {"theme": "secret web AI developer productivity tools 2026", "cta": "TOOLS", "name": "Evening Toolkit"},
+    5: {"theme": "advanced prompt engineering frameworks architectures 2026", "cta": "PROMPT", "name": "Night Owl Deep Dive"}
+}
+
+def run_production_pipeline(slot_id: int = 1, theme_focus: str = None, cta_keyword: str = None, max_retries: int = 2):
     start_total = time.time()
+    slot_cfg = SLOT_CONFIGS.get(slot_id, SLOT_CONFIGS[1])
+    theme = theme_focus or slot_cfg["theme"]
+    cta = cta_keyword or slot_cfg["cta"]
+    slot_name = slot_cfg["name"]
+
     print("################################################################################")
-    print("🚀 LAUNCHING 7-AGENT AUTONOMOUS VIDEO PRODUCTION PIPELINE")
+    print(f"🚀 LAUNCHING 7-AGENT PRODUCTION PIPELINE — SLOT {slot_id} ({slot_name})")
     print("################################################################################")
+
+    final_video = f"out/slot_{slot_id}_daily_reel.mp4"
+    raw_video = f"out/slot_{slot_id}_raw_video.mp4"
 
     for attempt in range(1, max_retries + 1):
         print(f"\n--- [PRODUCTION RUN ATTEMPT {attempt}/{max_retries}] ---")
@@ -36,7 +52,7 @@ def run_production_pipeline(max_retries=2):
         # AGENT 1: RESEARCH AGENT
         # -------------------------------------------------------------------------
         print("\n[STEP 1/7] Initializing Research Agent...")
-        research_dossier = run_research_agent()
+        research_dossier = run_research_agent(slot_id=slot_id, theme_focus=theme)
         top_topic = research_dossier.get("items", [{}])[0].get("title", "Fresh AI News")
         print(f"-> Topic Locked: {top_topic}")
 
@@ -44,7 +60,7 @@ def run_production_pipeline(max_retries=2):
         # AGENT 2: SCRIPT AGENT
         # -------------------------------------------------------------------------
         print("\n[STEP 2/7] Initializing Script Agent...")
-        script_data = run_script_agent(research_dossier=research_dossier)
+        script_data = run_script_agent(research_dossier=research_dossier, cta_keyword=cta)
         hook_display = script_data.get("hook") or script_data.get("hook_text") or "Viral Hook"
         print(f"-> Script Drafted: {script_data.get('word_count')} words | Hook: {hook_display}")
 
@@ -71,8 +87,11 @@ def run_production_pipeline(max_retries=2):
         # AGENT 5: EDITOR AGENT
         # -------------------------------------------------------------------------
         print("\n[STEP 5/7] Initializing Editor Agent...")
-        editor_manifest = run_editor_agent(duration=duration)
-        final_video = editor_manifest.get("final_video_path", "out/daily-reel.mp4")
+        editor_manifest = run_editor_agent(
+            raw_video_path=raw_video,
+            output_final_path=final_video,
+            duration=duration
+        )
         print(f"-> Master Render & Audio Assembly Complete: {final_video}")
 
         # -------------------------------------------------------------------------
@@ -80,7 +99,7 @@ def run_production_pipeline(max_retries=2):
         # -------------------------------------------------------------------------
         print("\n[STEP 6/7] Initializing Quality Agent (Strict Non-Cheating Audit)...")
         qa = QualityAgent()
-        qa_summary = qa.run_full_audit(video_path=final_video, raw_video_path="out/raw_video.mp4")
+        qa_summary = qa.run_full_audit(video_path=final_video, raw_video_path=raw_video)
 
         if qa_summary["status"] != "PASS":
             print(f"[!] Quality Agent audit rejected production (Score: {qa_summary['total_score']}/100).")
