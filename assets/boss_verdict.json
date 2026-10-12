@@ -1,0 +1,80 @@
+{
+  "boss_decision": "READY_FOR_USER_CONFIRMATION",
+  "quality_score": 98,
+  "quality_audit": {
+    "status": "PASS",
+    "total_score": 98,
+    "max_score": 100,
+    "gates": {
+      "research": {
+        "passed": true,
+        "score": 20,
+        "reason": "Fresh, non-blacklisted viral AI topic."
+      },
+      "script": {
+        "passed": true,
+        "score": 20,
+        "reason": "Optimal cadence (100 words) with full 5-beat architecture."
+      },
+      "voiceover": {
+        "passed": true,
+        "score": 20,
+        "duration": 48.48,
+        "reason": "High-density speech timeline & audio pacing."
+      },
+      "motion": {
+        "passed": true,
+        "score": 20,
+        "avg_motion": 29.1,
+        "static_seconds": [],
+        "reason": "Passed strict non-static kinetic motion requirements."
+      },
+      "vision": {
+        "passed": true,
+        "score": 18,
+        "feedback": "Deterministic validation: Keyframes populated with cards and character rig."
+      }
+    },
+    "timestamp": 1791790986.425514
+  },
+  "video_path": "out/daily-reel.mp4",
+  "dimensions": "1080x1920",
+  "duration_seconds": 58.37,
+  "topic": "Releases \u00b7 openclaw/openclaw",
+  "hook": "",
+  "sfx_cues_count": 29,
+  "keyframes": [
+    {
+      "label": "01_hook",
+      "timestamp": 2.0,
+      "path": "out/boss_review/01_hook_2s.jpg"
+    },
+    {
+      "label": "02_setup",
+      "timestamp": 7.0,
+      "path": "out/boss_review/02_setup_7s.jpg"
+    },
+    {
+      "label": "03_showcase_1",
+      "timestamp": 23.35,
+      "path": "out/boss_review/03_showcase_1_23s.jpg"
+    },
+    {
+      "label": "04_showcase_2",
+      "timestamp": 37.94,
+      "path": "out/boss_review/04_showcase_2_37s.jpg"
+    },
+    {
+      "label": "05_character_reaction",
+      "timestamp": 47.86,
+      "path": "out/boss_review/05_character_reaction_47s.jpg"
+    },
+    {
+      "label": "06_creator_cta",
+      "timestamp": 55.87,
+      "path": "out/boss_review/06_creator_cta_55s.jpg"
+    }
+  ],
+  "can_auto_publish": false,
+  "timestamp": 1791790995.0271559
+}

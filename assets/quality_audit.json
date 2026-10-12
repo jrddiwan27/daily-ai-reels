@@ -1,0 +1,36 @@
+{
+  "status": "PASS",
+  "total_score": 98,
+  "max_score": 100,
+  "gates": {
+    "research": {
+      "passed": true,
+      "score": 20,
+      "reason": "Fresh, non-blacklisted viral AI topic."
+    },
+    "script": {
+      "passed": true,
+      "score": 20,
+      "reason": "Optimal cadence (100 words) with full 5-beat architecture."
+    },
+    "voiceover": {
+      "passed": true,
+      "score": 20,
+      "duration": 48.48,
+      "reason": "High-density speech timeline & audio pacing."
+    },
+    "motion": {
+      "passed": true,
+      "score": 20,
+      "avg_motion": 29.1,
+      "static_seconds": [],
+      "reason": "Passed strict non-static kinetic motion requirements."
+    },
+    "vision": {
+      "passed": true,
+      "score": 18,
+      "feedback": "Deterministic validation: Keyframes populated with cards and character rig."
+    }
+  },
+  "timestamp": 1791790986.425514
+}

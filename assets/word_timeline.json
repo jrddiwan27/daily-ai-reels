@@ -1,0 +1,602 @@
+[
+  {
+    "word": "Still",
+    "start": 0.1,
+    "end": 0.6,
+    "second": 0
+  },
+  {
+    "word": "manually",
+    "start": 0.6,
+    "end": 1.11,
+    "second": 0
+  },
+  {
+    "word": "managing",
+    "start": 1.11,
+    "end": 1.62,
+    "second": 1
+  },
+  {
+    "word": "your",
+    "start": 1.62,
+    "end": 2.12,
+    "second": 1
+  },
+  {
+    "word": "dev",
+    "start": 2.12,
+    "end": 2.62,
+    "second": 2
+  },
+  {
+    "word": "environment?",
+    "start": 2.62,
+    "end": 3.13,
+    "second": 2
+  },
+  {
+    "word": "That's",
+    "start": 3.08,
+    "end": 3.74,
+    "second": 3
+  },
+  {
+    "word": "ancient",
+    "start": 3.74,
+    "end": 4.4,
+    "second": 3
+  },
+  {
+    "word": "history.",
+    "start": 4.4,
+    "end": 5.05,
+    "second": 4
+  },
+  {
+    "word": "You",
+    "start": 5.05,
+    "end": 5.47,
+    "second": 5
+  },
+  {
+    "word": "need",
+    "start": 5.47,
+    "end": 5.89,
+    "second": 5
+  },
+  {
+    "word": "these",
+    "start": 5.89,
+    "end": 6.31,
+    "second": 5
+  },
+  {
+    "word": "three",
+    "start": 6.31,
+    "end": 6.73,
+    "second": 6
+  },
+  {
+    "word": "tools!",
+    "start": 6.73,
+    "end": 7.15,
+    "second": 6
+  },
+  {
+    "word": "First,",
+    "start": 7.15,
+    "end": 7.65,
+    "second": 7
+  },
+  {
+    "word": "openclaw",
+    "start": 7.65,
+    "end": 8.14,
+    "second": 7
+  },
+  {
+    "word": "just",
+    "start": 8.14,
+    "end": 8.63,
+    "second": 8
+  },
+  {
+    "word": "dropped",
+    "start": 8.63,
+    "end": 9.13,
+    "second": 8
+  },
+  {
+    "word": "its",
+    "start": 9.13,
+    "end": 9.62,
+    "second": 9
+  },
+  {
+    "word": "beta.",
+    "start": 9.62,
+    "end": 10.11,
+    "second": 9
+  },
+  {
+    "word": "This",
+    "start": 10.11,
+    "end": 10.49,
+    "second": 10
+  },
+  {
+    "word": "beast",
+    "start": 10.49,
+    "end": 10.87,
+    "second": 10
+  },
+  {
+    "word": "ensures",
+    "start": 10.87,
+    "end": 11.24,
+    "second": 10
+  },
+  {
+    "word": "safer",
+    "start": 11.24,
+    "end": 11.62,
+    "second": 11
+  },
+  {
+    "word": "updates",
+    "start": 11.62,
+    "end": 12.0,
+    "second": 11
+  },
+  {
+    "word": "for",
+    "start": 12.0,
+    "end": 12.37,
+    "second": 12
+  },
+  {
+    "word": "your",
+    "start": 12.37,
+    "end": 12.75,
+    "second": 12
+  },
+  {
+    "word": "entire",
+    "start": 12.75,
+    "end": 13.13,
+    "second": 12
+  },
+  {
+    "word": "stack.",
+    "start": 13.13,
+    "end": 13.5,
+    "second": 13
+  },
+  {
+    "word": "No",
+    "start": 13.5,
+    "end": 14.1,
+    "second": 13
+  },
+  {
+    "word": "more",
+    "start": 14.1,
+    "end": 14.69,
+    "second": 14
+  },
+  {
+    "word": "broken",
+    "start": 14.69,
+    "end": 15.28,
+    "second": 14
+  },
+  {
+    "word": "dependencies.",
+    "start": 15.28,
+    "end": 15.87,
+    "second": 15
+  },
+  {
+    "word": "It's",
+    "start": 15.87,
+    "end": 16.33,
+    "second": 15
+  },
+  {
+    "word": "your",
+    "start": 16.33,
+    "end": 16.79,
+    "second": 16
+  },
+  {
+    "word": "code's",
+    "start": 16.79,
+    "end": 17.25,
+    "second": 16
+  },
+  {
+    "word": "guardian",
+    "start": 17.25,
+    "end": 17.71,
+    "second": 17
+  },
+  {
+    "word": "angel.",
+    "start": 17.71,
+    "end": 18.17,
+    "second": 17
+  },
+  {
+    "word": "Next,",
+    "start": 18.17,
+    "end": 18.72,
+    "second": 18
+  },
+  {
+    "word": "GitHub",
+    "start": 18.72,
+    "end": 19.26,
+    "second": 18
+  },
+  {
+    "word": "Agentic",
+    "start": 19.26,
+    "end": 19.81,
+    "second": 19
+  },
+  {
+    "word": "Workflows",
+    "start": 19.81,
+    "end": 20.36,
+    "second": 19
+  },
+  {
+    "word": "are",
+    "start": 20.36,
+    "end": 20.9,
+    "second": 20
+  },
+  {
+    "word": "exploding.",
+    "start": 20.9,
+    "end": 21.45,
+    "second": 20
+  },
+  {
+    "word": "Copilot",
+    "start": 21.45,
+    "end": 22.0,
+    "second": 21
+  },
+  {
+    "word": "isn't",
+    "start": 22.0,
+    "end": 22.54,
+    "second": 22
+  },
+  {
+    "word": "just",
+    "start": 22.54,
+    "end": 23.09,
+    "second": 22
+  },
+  {
+    "word": "coding.",
+    "start": 23.09,
+    "end": 23.64,
+    "second": 23
+  },
+  {
+    "word": "It's",
+    "start": 23.64,
+    "end": 24.2,
+    "second": 23
+  },
+  {
+    "word": "automating",
+    "start": 24.2,
+    "end": 24.76,
+    "second": 24
+  },
+  {
+    "word": "entire",
+    "start": 24.76,
+    "end": 25.32,
+    "second": 24
+  },
+  {
+    "word": "release",
+    "start": 25.32,
+    "end": 25.88,
+    "second": 25
+  },
+  {
+    "word": "cycles.",
+    "start": 25.88,
+    "end": 26.44,
+    "second": 25
+  },
+  {
+    "word": "Five",
+    "start": 26.44,
+    "end": 26.81,
+    "second": 26
+  },
+  {
+    "word": "updates",
+    "start": 26.81,
+    "end": 27.18,
+    "second": 26
+  },
+  {
+    "word": "in",
+    "start": 27.18,
+    "end": 27.56,
+    "second": 27
+  },
+  {
+    "word": "a",
+    "start": 27.56,
+    "end": 27.93,
+    "second": 27
+  },
+  {
+    "word": "week,",
+    "start": 27.93,
+    "end": 28.3,
+    "second": 27
+  },
+  {
+    "word": "no",
+    "start": 28.3,
+    "end": 28.67,
+    "second": 28
+  },
+  {
+    "word": "manual",
+    "start": 28.67,
+    "end": 29.05,
+    "second": 28
+  },
+  {
+    "word": "work.",
+    "start": 29.05,
+    "end": 29.42,
+    "second": 29
+  },
+  {
+    "word": "Total",
+    "start": 29.42,
+    "end": 30.05,
+    "second": 29
+  },
+  {
+    "word": "game",
+    "start": 30.05,
+    "end": 30.68,
+    "second": 30
+  },
+  {
+    "word": "changer!",
+    "start": 30.68,
+    "end": 31.3,
+    "second": 30
+  },
+  {
+    "word": "Finally,",
+    "start": 31.3,
+    "end": 32.17,
+    "second": 31
+  },
+  {
+    "word": "agnostic-ai",
+    "start": 32.17,
+    "end": 33.03,
+    "second": 32
+  },
+  {
+    "word": "v0.82.0",
+    "start": 33.03,
+    "end": 33.89,
+    "second": 33
+  },
+  {
+    "word": "just",
+    "start": 33.89,
+    "end": 34.75,
+    "second": 33
+  },
+  {
+    "word": "launched.",
+    "start": 34.75,
+    "end": 35.61,
+    "second": 34
+  },
+  {
+    "word": "It",
+    "start": 35.61,
+    "end": 36.0,
+    "second": 35
+  },
+  {
+    "word": "provides",
+    "start": 36.0,
+    "end": 36.4,
+    "second": 36
+  },
+  {
+    "word": "guided",
+    "start": 36.4,
+    "end": 36.79,
+    "second": 36
+  },
+  {
+    "word": "upgrades",
+    "start": 36.79,
+    "end": 37.18,
+    "second": 36
+  },
+  {
+    "word": "and",
+    "start": 37.18,
+    "end": 37.57,
+    "second": 37
+  },
+  {
+    "word": "hooks",
+    "start": 37.57,
+    "end": 37.96,
+    "second": 37
+  },
+  {
+    "word": "matching",
+    "start": 37.96,
+    "end": 38.36,
+    "second": 37
+  },
+  {
+    "word": "every",
+    "start": 38.36,
+    "end": 38.75,
+    "second": 38
+  },
+  {
+    "word": "tool.",
+    "start": 38.75,
+    "end": 39.14,
+    "second": 38
+  },
+  {
+    "word": "This",
+    "start": 39.14,
+    "end": 39.72,
+    "second": 39
+  },
+  {
+    "word": "makes",
+    "start": 39.72,
+    "end": 40.3,
+    "second": 39
+  },
+  {
+    "word": "complex",
+    "start": 40.3,
+    "end": 40.87,
+    "second": 40
+  },
+  {
+    "word": "integrations",
+    "start": 40.87,
+    "end": 41.45,
+    "second": 40
+  },
+  {
+    "word": "painless.",
+    "start": 41.45,
+    "end": 42.03,
+    "second": 41
+  },
+  {
+    "word": "It's",
+    "start": 42.03,
+    "end": 42.55,
+    "second": 42
+  },
+  {
+    "word": "the",
+    "start": 42.55,
+    "end": 43.06,
+    "second": 42
+  },
+  {
+    "word": "ultimate",
+    "start": 43.06,
+    "end": 43.58,
+    "second": 43
+  },
+  {
+    "word": "AI",
+    "start": 43.58,
+    "end": 44.09,
+    "second": 43
+  },
+  {
+    "word": "orchestrator.",
+    "start": 44.09,
+    "end": 44.61,
+    "second": 44
+  },
+  {
+    "word": "Comment",
+    "start": 44.61,
+    "end": 44.93,
+    "second": 44
+  },
+  {
+    "word": "REPOS",
+    "start": 44.93,
+    "end": 45.25,
+    "second": 44
+  },
+  {
+    "word": "below,",
+    "start": 45.25,
+    "end": 45.57,
+    "second": 45
+  },
+  {
+    "word": "and",
+    "start": 45.57,
+    "end": 45.88,
+    "second": 45
+  },
+  {
+    "word": "I",
+    "start": 45.88,
+    "end": 46.2,
+    "second": 45
+  },
+  {
+    "word": "will",
+    "start": 46.2,
+    "end": 46.52,
+    "second": 46
+  },
+  {
+    "word": "DM",
+    "start": 46.52,
+    "end": 46.84,
+    "second": 46
+  },
+  {
+    "word": "you",
+    "start": 46.84,
+    "end": 47.16,
+    "second": 46
+  },
+  {
+    "word": "the",
+    "start": 47.16,
+    "end": 47.48,
+    "second": 47
+  },
+  {
+    "word": "links",
+    "start": 47.48,
+    "end": 47.8,
+    "second": 47
+  },
+  {
+    "word": "right",
+    "start": 47.8,
+    "end": 48.12,
+    "second": 47
+  },
+  {
+    "word": "now.",
+    "start": 48.12,
+    "end": 48.44,
+    "second": 48
+  }
+]
