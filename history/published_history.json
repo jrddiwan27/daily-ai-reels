@@ -528,5 +528,329 @@
         "name": "Genkit Dart 1.0"
       }
     ]
+  },
+  {
+    "slot_id": 2,
+    "slot_name": "Midday Cheat Code (Slot 2)",
+    "timestamp_utc": "2026-10-12T11:36:57.114216+00:00",
+    "date_ist": "2026-10-12 12:00 PM (Instant Makeup Post)",
+    "buffer_post_id": "6accc6325e5ffb1101e4f69b",
+    "channel_results": {
+      "instagram": "6accc6325e5ffb1101e4f69b",
+      "youtube": "6accc6425e5ffb1101e4faea",
+      "twitter": "6accc64f1d99033b8d1fa589"
+    },
+    "video_path": "out/slot_2_daily_reel_opt.mp4",
+    "items": [
+      {
+        "title": "\ud83d\udcc8 AI Open Source Trends 2026-10-10",
+        "name": "\ud83d\udcc8 AI Open Source Trends 2026-10-10",
+        "description": "### 1. Today's Highlights  The open-source AI ecosystem is witnessing explosive momentum in AI agent frameworks and agent-enabling infrastructure, driven by demand for autonomous, self-improving workflows. _affaan-m/ECC_",
+        "url": "https://github.com/Qyii22/agents-radar/issues/32",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "AI Agents News \u2014 Week of October 12, 2026 (Daily Updates)",
+        "name": "AI Agents News \u2014 Week of October 12",
+        "description": "What changed: HackerRank made Chakra generally available on October 5, 2026 \u2014 an AI interviewing agent that conducts hands-on coding interviews, observes candidates working in a real repo canvas, asks follow-ups and deli",
+        "url": "https://aiagentstore.ai/ai-agent-news/this-week",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "Claude Managed Agents can now write their own workflows: when to turn it on and when not to",
+        "name": "Claude Managed Agents can now write",
+        "description": "Claude Managed Agents can now write their own workflows: when to turn it on and when not to  # Claude Managed Agents can now write their own workflows: when to turn it on and when not to  Anthropic put dynamic workflows",
+        "url": "https://kryptonforge.in/blog/2026-10-12-claude-managed-agents-dynamic-workflows-when-to-enable",
+        "source": "Exa (24h Index)"
+      }
+    ]
+  },
+  {
+    "slot_id": 3,
+    "slot_name": "Tech Radar Teardown (Slot 3)",
+    "timestamp_utc": "2026-10-12T11:40:53.942679+00:00",
+    "date_ist": "2026-10-12 5:30 PM IST (3 PM Makeup)",
+    "buffer_post_id": "6accc73d5e5ffb1101e52f17",
+    "channel_results": {
+      "instagram": "6accc73d5e5ffb1101e52f17",
+      "youtube": "6accc7411d99033b8d1fe7d8",
+      "twitter": "6accc745c1658fce94d6a117"
+    },
+    "video_path": "out/slot_3_daily_reel_opt.mp4",
+    "items": [
+      {
+        "title": "Open Source AI News | Hermes AI",
+        "name": "Open Source AI News | Hermes AI",
+        "description": "newsInfraOpen SourcevLLM \u00b7  ## vLLM 0.31 Speeds Up DeepSeek and Slashes Engine Restart Times  The latest vLLM release lands DeepSeek-V4.1-Flash kernels, hot-restart weight caching, Model Runner V2 speculative decoding, a",
+        "url": "https://hermes-ai.net/news/topic/open_source",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "Congratulations to the vllm-sr team on releasing Decision 3.0, a SOTA multimodal Jev model with weights now open-sourced on HF. \ud83c\udf89\ud83c\udf89\ud83c\udf89 | vLLM",
+        "name": "Congratulations to the vllm-sr team",
+        "description": "Congratulations to the vllm-sr team on releasing Decision 3.0, a SOTA multimodal Jev model with weights now open-sourced on HF. \ud83c\udf89\ud83c\udf89\ud83c\udf89 | vLLM  # vLLM\u2019s Post  Congratulations to the vllm-sr team on releasing Decision 3.0, a",
+        "url": "https://site-c53526a0b5fc.proxynsfw.com/linkedin-com/posts/vllm-project_congratulations-to-the-vllm-sr-team-on-releasing-activity-7514976283077001216-XWa_",
+        "source": "Exa (24h Index)"
+      },
+      {
+        "title": "Mistral Large 4 Le Chonk: 1.05T Multimodal Model Public Preview",
+        "name": "Mistral Large 4 Le Chonk: 1.05T Mul",
+        "description": "Mistral Large 4 Le Chonk: 1.05T Multimodal Model Public Preview  # Mistral Large 4 Le Chonk: 1.05T Multimodal Model Public Preview  October 12, 2026\u2022 By Christopher Ort  ## Summary  Mistral has unveiled Mistral Large 4 (",
+        "url": "https://i10x.ai/news/mistral-large-4-le-chonk-1-05t-multimodal-model-preview",
+        "source": "Exa (24h Index)"
+      }
+    ]
+  },
+  {
+    "slot_id": 4,
+    "slot_name": "Evening Toolkit (Slot 4)",
+    "timestamp_utc": "2026-10-12T11:44:27.104972+00:00",
+    "date_ist": "2026-10-12 6:00 PM IST",
+    "buffer_post_id": "6accc810c1658fce94d6ceff",
+    "channel_results": {
+      "instagram": "6accc810c1658fce94d6ceff",
+      "youtube": "6accc816c1658fce94d6d022",
+      "twitter": "6accc81b1d99033b8d201c53"
+    },
+    "video_path": "out/slot_4_daily_reel_opt.mp4",
+    "items": [
+      {
+        "title": "anthropic \u00b7 GitHub Topics \u00b7 GitHub",
+        "name": "anthropic",
+        "description": "### affaan-m / ECC  Sponsor   Star  271k  The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.  produ",
+        "url": "https://github.com/topics/anthropic",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "17 Best Free AI Coding Agents in 2026 | Agentic.ai",
+        "name": "17 Best Free AI Coding Agents in 20",
+        "description": "Agenticness22/36\u00b7Domain Specialist  Orbi is an open-source, self-hostable AI coding agent that takes GitHub Issues from implementation through independent review, merge, and release. It can run against your own model end",
+        "url": "https://agentic.ai/best/free-coding-agents",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "Hands-on agentic development with Google's Antigravity IDE",
+        "name": "Hands-on agentic development with G",
+        "description": "Hands-on agentic development with Google\u2019s Antigravity IDE | InfoWorld   by Matthew Tyson Contributing Writer   # Hands-on agentic development with Google\u2019s Antigravity IDE   feature Oct 12, 2026 11 mins  ## With Antigra",
+        "url": "https://www.infoworld.com/article/4231494/hands-on-agentic-development-with-googles-antigravity-ide.html",
+        "source": "Exa (24h Index)"
+      }
+    ]
+  },
+  {
+    "slot_id": 5,
+    "slot_name": "Night Owl Deep Dive (Slot 5)",
+    "timestamp_utc": "2026-10-12T11:48:09.850242+00:00",
+    "date_ist": "2026-10-12 9:00 PM IST",
+    "buffer_post_id": "6accc8eebc52bd4504d97f17",
+    "channel_results": {
+      "instagram": "6accc8eebc52bd4504d97f17",
+      "youtube": "6accc8f51d99033b8d20455e",
+      "twitter": "6accc8f9bc52bd4504d98191"
+    },
+    "video_path": "out/slot_5_daily_reel_opt.mp4",
+    "items": [
+      {
+        "title": "anthropic \u00b7 GitHub Topics \u00b7 GitHub",
+        "name": "anthropic",
+        "description": "Star  147k  The agent engineering platform.  python open-source enterprise framework typescript ai gemini openai multiagent agents ai-agents rag pydantic llm generative-ai chatgpt langchain anthropic langgraph deepagents",
+        "url": "https://github.com/topics/anthropic",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "AI Agents Resources: Complete PDF and Guide Collection",
+        "name": "AI Agents Resources: Complete PDF a",
+        "description": "00:49. Coming from Senior PM: ... Aug 23, 2026 \u00b7 36K views. Stop memorizing AI frameworks. ... /m.coto.testeoes ttps://github.c Prompt Engineering Guide: Hands-O",
+        "url": "https://www.facebook.com/groups/pythondeveloper.usa/posts/2551208358714441",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "codebase-mapping \u00b7 GitHub Topics \u00b7 GitHub",
+        "name": "codebase-mapping",
+        "description": "template documentation code-audit project-mapping prompt-engineering ai-workflow claude-code project-blueprint codebase-mapping claude-code-template clean-room-documentation behavior-docs   Updated May 29, 2026  Python",
+        "url": "https://github.com/topics/codebase-mapping",
+        "source": "Tavily (Real-Time)"
+      }
+    ]
+  },
+  {
+    "slot_id": 1,
+    "slot_name": "Morning Breakthrough (Slot 1)",
+    "timestamp_utc": "2026-10-12T13:20:11.242370+00:00",
+    "date_ist": "2026-10-12 9:00 AM (Morning Makeup Post)",
+    "buffer_post_id": "6accde646ca198afcba6ed9e",
+    "channel_results": {
+      "instagram": "6accde646ca198afcba6ed9e",
+      "youtube": "6accde75eec5647ea2993dec",
+      "twitter": "6accde816ca198afcba6f5a5"
+    },
+    "video_path": "out/slot_1_daily_reel_opt.mp4",
+    "items": [
+      {
+        "title": "Radar brief \u2014 2026-10-10 \u00b7 DevAgentRadar",
+        "name": "Radar brief \u2014 2026-10-10",
+        "description": "Radar brief \u2014 2026-10-10 \u00b7 DevAgentRadar  digest everyone digest evidence radar model cli 12 min read \u00b7 Oct 10, 2026  # Radar brief \u2014 2026-10-10  A busy 36 hours: 22 releases from 11 tools. The signal that should change",
+        "url": "https://www.devagentradar.com/insights/radar-brief-2026-10-10",
+        "source": "Exa (24h Index)"
+      },
+      {
+        "title": "ag-ui-protocol/ag-ui release/2026-10-10 on GitHub",
+        "name": "ag-ui-protocol/ag-ui release/2026-1",
+        "description": "ag-ui-protocol/ag-ui release/2026-10-10 on GitHub   release/2026-10-10   Release 2026-10-10  one day ago  ### Python (PyPI) - published at 02:54:38 UTC  | Package | Version | Install | | --- | --- | --- | | ag_ui_adk | 0",
+        "url": "https://newreleases.io/project/github/ag-ui-protocol/ag-ui/release/release%2F2026-10-10",
+        "source": "Exa (24h Index)"
+      },
+      {
+        "title": "New controls and chat improvements in... (Oct 10, 2026)",
+        "name": "New controls and chat improvements",
+        "description": "New controls and chat improvements in... (Oct 10, 2026)  # New controls and chat improvements in Copilot for JetBrains  Update Oct 10, 2026 2d 2 days ago\u00b7 Unverified\u00b7 Added Oct 11, 2026  This update brings more control o",
+        "url": "https://releases.fru.dev/releases/github-copilot-2026-10-10-new-controls-and-chat-improvements-in-copilot-for-jetbrains",
+        "source": "Exa (24h Index)"
+      }
+    ]
+  },
+  {
+    "slot_id": 2,
+    "slot_name": "Midday Cheat Code (Slot 2)",
+    "timestamp_utc": "2026-10-12T13:24:36.127312+00:00",
+    "date_ist": "2026-10-12 12:00 PM (Midday Makeup Post)",
+    "buffer_post_id": "6accdf737659eb754b710eb3",
+    "channel_results": {
+      "instagram": "6accdf737659eb754b710eb3",
+      "youtube": "6accdf83ddeaf8c524ecef76",
+      "twitter": "6accdf8a8130a0adb8eef486"
+    },
+    "video_path": "out/slot_2_daily_reel_opt.mp4",
+    "items": [
+      {
+        "title": "Workflows News | AI Agents Directory",
+        "name": "Workflows News | AI Agents Director",
+        "description": "The Daily Star\u00b7 Sunday, October 11, 2026  OpenAI has unveiled dots, a new category of always-on AI agents. These agents run on GPT-6 Astra and are designed to pursue user goals across applications with minimal supervisio",
+        "url": "https://aiagentsdirectory.com/news/topic/workflows",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "Flozic Launches Autonomous AI Agents and Agentic Workflows Across Thousands of Apps",
+        "name": "Flozic Launches Autonomous AI Agent",
+        "description": "# Flozic Launches Autonomous AI Agents and Agentic Workflows Across Thousands of Apps  Author: Snappy LLC Published: 2026-10-12T12:06:00Z Source: prnewswire.com Language: en",
+        "url": "https://www.prnewswire.com/news-releases/flozic-launches-autonomous-ai-agents-and-agentic-workflows-across-thousands-of-apps-302905565.html",
+        "source": "Exa (24h Index)"
+      },
+      {
+        "title": "SAP Puts the Autonomous Enterprise to Work",
+        "name": "SAP Puts the Autonomous Enterprise",
+        "description": "SAP Puts the Autonomous Enterprise to Work  # SAP Puts the Autonomous Enterprise to Work   BY Soko Directory Team \u00b7 October 12, 2026 01:10 pm  ### KEY POINTS  Joule Work, Joule Assistants, and SAP Business AI Platform he",
+        "url": "https://sokodirectory.com/2026/10/sap-puts-the-autonomous-enterprise-to-work/",
+        "source": "Exa (24h Index)"
+      }
+    ]
+  },
+  {
+    "slot_id": 3,
+    "slot_name": "Tech Radar Teardown (Slot 3)",
+    "timestamp_utc": "2026-10-12T13:28:57.618284+00:00",
+    "date_ist": "2026-10-12 3:00 PM (Afternoon Makeup Post)",
+    "buffer_post_id": "6acce07f8130a0adb8ef15db",
+    "channel_results": {
+      "instagram": "6acce07f8130a0adb8ef15db",
+      "youtube": "6acce08a8aaa2e31caa7c957",
+      "twitter": "6acce0908130a0adb8ef18a2"
+    },
+    "video_path": "out/slot_3_daily_reel_opt.mp4",
+    "items": [
+      {
+        "title": "Best AI Chatbots for Multimodal Tasks",
+        "name": "Best AI Chatbots for Multimodal Tas",
+        "description": "Workspace) \u2728 Best for: Multimodal copilots and large-scale data analysis \u2e3b 6. Llama 3 (Meta) \ud83d\uddd3\ufe0f 70B (April 2024 refresh), 405B (November 2024) \ud83e\udde0 Max context: 128K tokens \ud83d\udee0\ufe0f Modalities: Text (+ Code) \u2699\ufe0f Built-in tools: Op",
+        "url": "https://www.linkedin.com/top-content/artificial-intelligence/multimodal-ai-developments/best-ai-chatbots-for-multimodal-tasks",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "Open Source AI News | Hermes AI",
+        "name": "Open Source AI News | Hermes AI",
+        "description": "newsInfraOpen SourcevLLM \u00b7  ## vLLM 0.31 Speeds Up DeepSeek and Slashes Engine Restart Times  The latest vLLM release lands DeepSeek-V4.1-Flash kernels, hot-restart weight caching, Model Runner V2 speculative decoding, a",
+        "url": "https://hermes-ai.net/news/topic/open_source",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "Mistral Large 4 Le Chonk: 1.05T Multimodal Model Public Preview",
+        "name": "Mistral Large 4 Le Chonk: 1.05T Mul",
+        "description": "Mistral Large 4 Le Chonk: 1.05T Multimodal Model Public Preview  # Mistral Large 4 Le Chonk: 1.05T Multimodal Model Public Preview  October 12, 2026\u2022 By Christopher Ort  ## Summary  Mistral has unveiled Mistral Large 4 (",
+        "url": "https://i10x.ai/news/mistral-large-4-le-chonk-1-05t-multimodal-model-preview",
+        "source": "Exa (24h Index)"
+      }
+    ]
+  },
+  {
+    "slot_id": 4,
+    "slot_name": "Evening Toolkit (Slot 4)",
+    "timestamp_utc": "2026-10-12T13:33:34.906833+00:00",
+    "date_ist": "2026-10-12 6:00 PM (Evening Post)",
+    "buffer_post_id": "6acce1954dc05e79cb374dfa",
+    "channel_results": {
+      "instagram": "6acce1954dc05e79cb374dfa",
+      "youtube": "6acce1a024301f624687792f",
+      "twitter": "6acce1a616ed22750bc680f7"
+    },
+    "video_path": "out/slot_4_daily_reel_opt.mp4",
+    "items": [
+      {
+        "title": "anthropic \u00b7 GitHub Topics \u00b7 GitHub",
+        "name": "anthropic",
+        "description": "### affaan-m / ECC  Sponsor   Star  271k  The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.  produ",
+        "url": "https://github.com/topics/anthropic",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "Open Source Startups funded by Y Combinator (YC) 2026 | Y Combinator",
+        "name": "Open Source Startups funded by Y Co",
+        "description": "open-source    developer-tools](/companies/graphify-labs) [OneCLI    OneCLI    S2026     \u2022 Active0 \u2022 San Francisco    OneCLI (YC S26) is an open-source AI teammates platform for teams. Like Grok Bot, but self-hostable, l",
+        "url": "https://www.ycombinator.com/companies/industry/open-source",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "Launch YC: Expand Fetch: Reading glasses for your AI agent | Y Combinator",
+        "name": "Launch YC: Expand Fetch: Reading gl",
+        "description": "Launch YC: Expand Fetch: Reading glasses for your AI agent | Y Combinator  # Expand Fetch: Reading glasses for your AI agent  Send a URL. Get accurate Markdown, the hidden JSON and a snapshot you can cite.  Tim Suchanek",
+        "url": "https://www.ycombinator.com/launches/Vc2-expand-fetch-reading-glasses-for-your-ai-agent",
+        "source": "Exa (24h Index)"
+      }
+    ]
+  },
+  {
+    "slot_id": 5,
+    "slot_name": "Night Owl Deep Dive (Slot 5)",
+    "timestamp_utc": "2026-10-12T13:37:18.478803+00:00",
+    "date_ist": "2026-10-12 9:00 PM IST (Scheduled)",
+    "buffer_post_id": "6acce28a4dc05e79cb37834f",
+    "channel_results": {
+      "instagram": "6acce28a4dc05e79cb37834f",
+      "youtube": "6acce28c4dc05e79cb378382",
+      "twitter": "6acce28e52725e494b45f51c"
+    },
+    "video_path": "out/slot_5_daily_reel_opt.mp4",
+    "items": [
+      {
+        "title": "anthropic \u00b7 GitHub Topics \u00b7 GitHub",
+        "name": "anthropic",
+        "description": "Star  147k  The agent engineering platform.  python open-source enterprise framework typescript ai gemini openai multiagent agents ai-agents rag pydantic llm generative-ai chatgpt langchain anthropic langgraph deepagents",
+        "url": "https://github.com/topics/anthropic",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "Claude Prompt Optimization Strategies from Anthropic - Geeky Gadgets",
+        "name": "Claude Prompt Optimization Strategi",
+        "description": "# Claude Prompt Optimization Strategies from Anthropic - Geeky Gadgets  Author: Julian Horsey Published: 2026-10-12T07:13:00Z Source: geeky-gadgets.com Language: en  ## Story  Claude Prompt Optimization Strategies from A",
+        "url": "https://www.geeky-gadgets.com/claude-prompt-optimization/",
+        "source": "Exa (24h Index)"
+      },
+      {
+        "title": "Migrating Production System Prompts Across LLM Architectures: A Step-by-Step Refactoring Protocol",
+        "name": "Migrating Production System Prompts",
+        "description": "Migrating Production System Prompts Across LLM Architectures: A Step-by-Step Refactoring Protocol  # Migrating Production System Prompts Across LLM Architectures: A Step-by-Step Refactoring Protocol  October 9, 2026 No C",
+        "url": "https://devstacktips.com/ai-for-developers/2026/10/09/migrating-production-system-prompts-across-llm-architectures-a-step-by-step-refactoring-protocol/",
+        "source": "Exa (24h Index)"
+      }
+    ]
   }
 ]

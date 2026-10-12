@@ -21,6 +21,17 @@ def fetch_creator_trending_transcripts(limit_creators=4) -> list:
     and downloads the first 45 seconds of their transcripts to serve as viral few-shot samples.
     """
     print("[*] Creator Radar: Scanning top creators for latest viral topics & scripts...")
+    cache_file = "assets/creator_trends.json"
+    if os.path.exists(cache_file):
+        try:
+            with open(cache_file, "r") as f:
+                cached = json.load(f)
+                if cached and len(cached) >= limit_creators:
+                    print(f"[✓] Loaded {len(cached)} cached viral reference trends instantly.")
+                    return cached[:limit_creators]
+        except Exception:
+            pass
+
     samples = []
     
     for creator in TOP_CREATORS[:limit_creators]:

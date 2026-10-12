@@ -2,1311 +2,761 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=1080, height=1920, initial-scale=1">
-  <title>Jayant Digital Studio - Qwen Image 2.1 Hyper-Motion</title>
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800;900&family=Instrument+Serif:ital@1&family=JetBrains+Mono:wght@600;800&display=swap" rel="stylesheet">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-
+  <title>Daily AI Explainer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800;900&family=IBM+Plex+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
   <style>
     :root {
-      --page: #f4f1ea;
-      --bar: #1a1714;
+      --page: #e9e5dc;
       --clay: #d9694a;
-      --ink: #1a1714;
-      --mut: #8c857b;
-      --card-bg: #ffffff;
-      --border: rgba(26, 23, 20, 0.09);
     }
-
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-
-    body {
+    html, body {
+      margin: 0;
+      padding: 0;
       width: 1080px;
       height: 1920px;
       overflow: hidden;
-      background: var(--page);
+      background: #0f0e0d;
       font-family: 'Bricolage Grotesque', system-ui, sans-serif;
-      color: var(--ink);
-      position: relative;
     }
 
-    /* Stage Canvas */
-    #stage {
-      position: absolute;
-      inset: 0;
-      width: 1080px;
-      height: 1920px;
-      overflow: hidden;
-      background: #f4f1ea;
-    }
-
-    #stage:not(.dark):not(.or)::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background-image: 
-        linear-gradient(rgba(120, 100, 70, 0.08) 2px, transparent 2px),
-        linear-gradient(90deg, rgba(120, 100, 70, 0.08) 2px, transparent 2px);
-      background-size: 48px 48px;
-      z-index: 1;
-      pointer-events: none;
-    }
-
-    /* Drifting Blur Blobs */
-    .blob {
-      position: absolute;
-      border-radius: 50%;
-      filter: blur(80px);
-      opacity: 0.65;
-      animation: drift 9s ease-in-out infinite alternate;
-      z-index: 1;
-    }
-    .b1 { width: 540px; height: 540px; background: #f6c6b0; left: -140px; top: 120px; }
-    .b2 { width: 480px; height: 480px; background: #cfd2f3; right: -160px; top: 60px; animation-delay: -4s; }
-    .b3 { width: 560px; height: 420px; background: #f9d9c4; left: 80px; top: 580px; animation-delay: -2s; }
-
-    @keyframes drift {
-      to { transform: translate(50px, -45px) scale(1.18); }
-    }
-
-    /* Dark Mode Stage Shift */
-    #stage.dark {
-      background: #0b0809;
-      color: #ffffff;
-    }
-    #stage.dark::before {
-      background-image: 
-        linear-gradient(rgba(255, 255, 255, 0.05) 2px, transparent 2px),
-        linear-gradient(90deg, rgba(255, 255, 255, 0.05) 2px, transparent 2px);
-    }
-    #stage.dark .b1 { background: #5a1d2c; }
-    #stage.dark .b2 { background: #2a1f55; }
-    #stage.dark .b3 { background: #7a3a22; }
-
-    /* Clay Mode Stage Shift (Viral CTA) */
-    #stage.or {
-      background: #d9694a;
-      color: #ffffff;
-    }
-    #stage.or .b1, #stage.or .b2, #stage.or .b3 { background: rgba(255, 255, 255, 0.25); }
-
-    /* Spinning Rays Conic Mask */
-    .rays {
-      position: absolute;
-      left: 50%;
-      top: 480px;
-      width: 820px;
-      height: 820px;
-      margin: -410px;
-      background: repeating-conic-gradient(rgba(217, 105, 74, 0.28) 0 3deg, transparent 3deg 12deg);
-      -webkit-mask: radial-gradient(circle, transparent 20%, #000 35%, transparent 72%);
-      mask: radial-gradient(circle, transparent 20%, #000 35%, transparent 72%);
-      animation: spin 20s linear infinite;
-      z-index: 1;
-      pointer-events: none;
-    }
-    @keyframes spin { to { rotate: 360deg; } }
-
-    /* ================= UPPER THEATER (Y: 40px to 1120px) ================= */
-    #upper-theater {
+    /* Scaler: Native 3x rendering into 1080x1920 Full HD */
+    #scaler {
+      width: 360px;
+      height: 640px;
+      transform: scale(3);
+      transform-origin: 0 0;
       position: absolute;
       left: 0;
       top: 0;
-      width: 1080px;
-      height: 1120px;
-      z-index: 10;
-      overflow: hidden;
-      padding: 60px 54px;
     }
 
-    .scene-view {
-      position: absolute;
-      inset: 60px 54px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      opacity: 0;
-      pointer-events: none;
-      transform-origin: center center;
-    }
-    .scene-view.active {
-      opacity: 1;
-      pointer-events: auto;
-    }
-
-    /* Motion Components */
-    .pill {
-      font: 800 24px 'Bricolage Grotesque';
-      padding: 10px 24px;
-      border-radius: 99px;
-      background: #1a1714;
-      color: #fff;
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      letter-spacing: 0.5px;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.12);
-    }
-    .pill.red { background: #ef4444; }
-    .pill.clay { background: var(--clay); }
-    .pill.blue { background: #2563eb; }
-
-    .hero-title {
-      font-size: 54px;
-      font-weight: 900;
-      line-height: 1.15;
-      letter-spacing: -1.5px;
-      text-align: center;
-      margin-top: 18px;
-    }
-    .serif-accent {
-      font-family: 'Instrument Serif', Georgia, serif;
-      font-style: italic;
-      color: var(--clay);
-      font-weight: 400;
-      font-size: 1.15em;
-    }
-    #stage.dark .serif-accent { color: #a78bfa; }
-
-    .card {
-      background: var(--card-bg);
-      border-radius: 28px;
-      box-shadow: 0 16px 48px rgba(70, 45, 20, 0.12);
-      border: 1px solid var(--border);
-    }
-    #stage.dark .card {
-      background: #171315;
-      border: 1px solid #2b2528;
-      box-shadow: 0 16px 48px rgba(0, 0, 0, 0.45);
-      color: #fff;
-    }
-
-    /* Price Strike-through Component */
-    .strike-wrap {
-      position: relative;
-      display: inline-block;
-    }
-    .strike {
-      position: absolute;
-      left: -10px;
-      top: 52%;
-      height: 14px;
-      background: #ef4444;
-      border-radius: 8px;
-      width: 0;
-      rotate: -7deg;
-      animation: strikethrough 0.6s 0.6s cubic-bezier(0.2, 0.9, 0.25, 1) forwards;
-    }
-    @keyframes strikethrough {
-      to { width: calc(100% + 20px); }
-    }
-
-    /* Bouncing Letters */
-    .bounce-word {
-      display: flex;
-      font-size: 120px;
-      font-weight: 900;
-      letter-spacing: -4px;
-      line-height: 1;
-      margin: 16px 0;
-    }
-    .bounce-word span {
-      display: inline-block;
-      animation: bounceIn 0.6s var(--d) cubic-bezier(0.2, 1.4, 0.4, 1) forwards;
-      opacity: 0;
-      transform: translateY(50px) rotate(14deg);
-    }
-    @keyframes bounceIn {
-      to { opacity: 1; transform: translateY(0) rotate(0deg); }
-    }
-
-    /* 3D Fanning Stack Cards */
-    .stack {
-      position: relative;
-      width: 620px;
-      height: 220px;
-      margin-top: 16px;
-    }
-    .fan-card {
-      position: absolute;
-      inset: 0;
-      background: #ffffff;
-      border-radius: 22px;
-      box-shadow: 0 14px 36px rgba(70, 45, 20, 0.16);
-      padding: 24px 32px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      border: 1px solid rgba(0,0,0,0.06);
-      animation: fanOut 0.7s var(--d) cubic-bezier(0.3, 1.4, 0.5, 1) forwards;
-      opacity: 0;
-    }
-    @keyframes fanOut {
-      from { opacity: 0; transform: translateY(60px) rotate(0deg); }
-      to { opacity: 1; transform: translateX(var(--x)) rotate(var(--r)); }
-    }
-
-    /* Dynamic Rolling Counter */
-    .counter-display {
-      font-size: 110px;
-      font-weight: 900;
-      color: var(--clay);
-      line-height: 1;
-      margin: 8px 0;
-    }
-
-    /* Feature Row Component */
-    .feature-row {
-      width: 820px;
-      padding: 20px 28px;
-      display: flex;
-      align-items: center;
-      gap: 24px;
-      margin-bottom: 16px;
-      border-radius: 20px;
-      background: #ffffff;
-      box-shadow: 0 8px 24px rgba(70, 45, 20, 0.08);
-      border: 1px solid rgba(0,0,0,0.05);
-      animation: slideInUp 0.5s var(--d) cubic-bezier(0.2, 0.9, 0.25, 1) forwards;
-      opacity: 0;
-    }
-    @keyframes slideInUp {
-      from { opacity: 0; transform: translateY(30px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    /* Radar Sweep */
-    .radar-box {
-      width: 220px;
-      height: 220px;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(167, 139, 250, 0.15) 0%, rgba(11, 8, 9, 0.8) 70%);
-      border: 2px solid rgba(167, 139, 250, 0.4);
-      position: relative;
-      overflow: hidden;
-      display: grid;
-      place-items: center;
-      margin: 20px auto;
-    }
-    .radar-beam {
-      position: absolute;
-      inset: 0;
-      background: conic-gradient(from 0deg, rgba(167, 139, 250, 0.6) 0deg, transparent 60deg);
-      animation: radarSpin 2.4s linear infinite;
-    }
-    @keyframes radarSpin { to { rotate: 360deg; } }
-
-    /* Flow Lines */
-    .flow-line {
-      width: 4px;
-      height: 0;
-      background: #8b5cf6;
-      animation: growLine 0.5s var(--d) forwards;
-    }
-    @keyframes growLine { to { height: 50px; } }
-
-    /* Browser Mockup */
-    .browser-frame {
-      width: 840px;
-      border-radius: 22px;
-      background: #ffffff;
-      box-shadow: 0 20px 50px rgba(0,0,0,0.12);
-      overflow: hidden;
-      border: 1px solid rgba(0,0,0,0.08);
-      margin-top: 14px;
-    }
-    .browser-header {
-      background: #f1ede4;
-      padding: 16px 22px;
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      border-bottom: 1px solid rgba(0,0,0,0.06);
-    }
-    .browser-dots {
-      display: flex;
-      gap: 8px;
-    }
-    .browser-dots i {
-      width: 14px;
-      height: 14px;
-      border-radius: 50%;
-      display: block;
-    }
-    .browser-bar {
-      flex: 1;
-      background: #ffffff;
-      border-radius: 99px;
-      padding: 10px 20px;
-      font: 600 20px 'JetBrains Mono', monospace;
-      color: #1a1714;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-    .cursor-blink {
-      display: inline-block;
-      width: 3px;
-      height: 22px;
-      background: #d9694a;
-      animation: blink 0.6s infinite;
-    }
-    @keyframes blink { 50% { opacity: 0; } }
-
-    /* Progress Ring */
-    .ring-svg {
-      width: 160px;
-      height: 160px;
-      rotate: -90deg;
-    }
-    .ring-svg circle {
-      fill: none;
-      stroke-width: 12;
-      stroke-linecap: round;
-    }
-    .ring-bg { stroke: #f0dccf; }
-    .ring-val {
-      stroke: var(--clay);
-      stroke-dasharray: 440;
-      stroke-dashoffset: 440;
-      animation: ringFill 1.8s 0.4s ease-out forwards;
-    }
-    @keyframes ringFill { to { stroke-dashoffset: 20; } }
-
-    /* ================= WORD-BY-WORD KINETIC SUBTITLE BAR ================= */
-    #caption-bar {
-      position: absolute;
-      left: 60px;
-      right: 60px;
-      top: 1140px;
-      height: 90px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 12px;
-      z-index: 100;
-      pointer-events: none;
-    }
-    #caption-bar .w {
-      font-size: 38px;
-      font-weight: 800;
-      color: var(--mut);
-      padding: 6px 14px;
-      border-radius: 12px;
-      display: inline-block;
-    }
-    #caption-bar .w.done { color: var(--ink); }
-    #stage.dark #caption-bar .w.done,
-    #stage.or #caption-bar .w.done { color: #ffffff; }
-    #caption-bar .w.on {
-      background: var(--clay);
-      color: #ffffff !important;
-      transform: scale(1.08);
-      box-shadow: 0 4px 16px rgba(217, 105, 74, 0.4);
-    }
-    #stage.or #caption-bar .w.on {
-      background: #1a1714;
-    }
-
-    /* ================= LOWER STAGE (HOST AVATAR & DESK) ================= */
-    #lower-stage {
+    #stage {
+      --b: #e8695c;
+      --d: #b8352b;
       position: absolute;
       left: 0;
-      bottom: 0;
-      width: 1080px;
-      height: 680px;
-      z-index: 50;
-      pointer-events: none;
+      top: 0;
+      width: 360px;
+      height: 640px;
+      overflow: hidden;
+      background: var(--b);
+      transition: background 0.25s ease;
+      color: #111;
     }
-    #host-avatar {
-      position: absolute;
-      left: 320px;
-      bottom: 120px;
-      width: 440px;
-      height: 440px;
-      z-index: 10;
-    }
-    .desk-surface {
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      width: 1080px;
-      height: 140px;
-      background: linear-gradient(180deg, #855132 0%, #5a351e 100%);
-      border-top: 8px solid #a26540;
-      box-shadow: 0 -12px 30px rgba(0, 0, 0, 0.25);
-      z-index: 20;
-    }
-    .desk-props {
-      position: absolute;
-      inset: 0;
-      z-index: 30;
-      pointer-events: none;
-    }
-    .studio-mic {
-      position: absolute;
-      right: 220px;
-      bottom: 90px;
-      width: 130px;
-      height: 150px;
-      filter: drop-shadow(0 10px 18px rgba(0,0,0,0.3));
-    }
-    .desk-mug-wrap {
-      position: absolute;
-      left: 210px;
-      bottom: 90px;
-      width: 70px;
-      height: 80px;
-    }
-    .mug-cup {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 65px;
-      height: 70px;
-      background: var(--clay);
-      border-radius: 6px 6px 14px 14px;
-      border: 5px solid #1a1714;
-    }
-    .mug-cup::after {
+
+    #stage.rd { --b: #e8695c; --d: #b8352b; }
+    #stage.bl { --b: #6f9ee8; --d: #2147b8; }
+    #stage.gr { --b: #7fcfb3; --d: #0f7a5c; }
+    #stage.yl { --b: #f6c85a; --d: #d97a14; }
+    #stage.pk { --b: #f3a6c8; --d: #b3407a; }
+    #stage.dk { --b: #17141f; --d: #3a2f5c; color: #fff; }
+
+    /* Background kinetic moving scanlines */
+    #stage::before {
       content: "";
       position: absolute;
-      right: -20px;
-      top: 14px;
-      width: 20px;
-      height: 36px;
-      border: 5px solid #1a1714;
-      border-left: none;
-      border-radius: 0 14px 14px 0;
+      inset: 0;
+      background: repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.12) 0 22px, transparent 22px 44px);
+      animation: gs 1.6s linear infinite;
+      pointer-events: none;
+      z-index: 1;
     }
-    .steam-curl {
+    @keyframes gs {
+      to { background-position: 44px 0; }
+    }
+
+    #scene-container {
       position: absolute;
-      top: -26px;
-      font-size: 26px;
-      font-weight: 900;
-      color: rgba(26, 23, 20, 0.25);
-      animation: riseSteam 2.2s infinite ease-out;
+      inset: 0;
+      z-index: 2;
     }
-    .steam-curl.s1 { left: 16px; animation-delay: 0s; }
-    .steam-curl.s2 { left: 34px; animation-delay: 1.1s; }
-    @keyframes riseSteam {
-      0% { transform: translateY(0) scale(0.8); opacity: 0; }
-      50% { opacity: 0.6; }
-      100% { transform: translateY(-34px) scale(1.3); opacity: 0; }
+
+    .sc {
+      position: absolute;
+      inset: 0;
+      padding-top: 54px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .a {
+      animation: bob 1.5s ease-in-out infinite alternate;
+    }
+    .pop {
+      animation: pop 0.45s cubic-bezier(0.3, 1.7, 0.5, 1) forwards, bob 1.2s ease-in-out infinite alternate;
+    }
+    @keyframes pop {
+      from { opacity: 0; transform: scale(0.6) rotate(-6deg); }
+      to { opacity: 1; transform: none; }
+    }
+    @keyframes bob {
+      from { translate: 0 -4px; }
+      to { translate: 0 5px; }
+    }
+
+    /* Rising ambient particles */
+    #pt {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+      pointer-events: none;
+      z-index: 2;
+    }
+    #pt i {
+      position: absolute;
+      bottom: -10px;
+      width: var(--s);
+      height: var(--s);
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.65);
+      animation: rise var(--t) var(--dl) linear infinite;
+    }
+    @keyframes rise {
+      to { transform: translate(20px, -680px); }
+    }
+
+    /* Screen flash cut */
+    #fl {
+      position: absolute;
+      inset: 0;
+      background: #111;
+      transform: translateX(-101%);
+      pointer-events: none;
+      z-index: 60;
+    }
+    @keyframes fl {
+      0% { transform: translateX(-101%); }
+      50% { transform: translateX(0); }
+      100% { transform: translateX(101%); }
+    }
+
+    /* Top navigation badges */
+    .lab {
+      position: absolute;
+      top: 14px;
+      left: 12px;
+      background: #111;
+      color: #fff;
+      font: 700 10px 'IBM Plex Mono', monospace;
+      padding: 5px 9px;
+      rotate: -1.5deg;
+      z-index: 10;
+    }
+    .pr {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      display: flex;
+      gap: 4px;
+      align-items: center;
+      background: #fff;
+      border: 3px solid #111;
+      border-radius: 99px;
+      padding: 3px 8px;
+      font: 700 9px 'IBM Plex Mono', monospace;
+      color: #111;
+      z-index: 10;
+    }
+    .pr i {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      border: 2px solid #111;
+      background: #fff;
+    }
+    .pr i.on {
+      background: #ff3b30;
+    }
+
+    /* Mac / Terminal windows */
+    .win {
+      width: 300px;
+      background: #14121a;
+      color: #fff;
+      border: 3px solid #111;
+      border-radius: 12px;
+      box-shadow: 5px 5px 0 #111;
+      font: 500 11px 'IBM Plex Mono', monospace;
+      overflow: hidden;
+      margin-top: 6px;
+      text-align: left;
+    }
+    .win .hd {
+      background: #2a2633;
+      padding: 6px 10px;
+      display: flex;
+      gap: 5px;
+      align-items: center;
+      font-size: 9px;
+      color: #aaa;
+      border-bottom: 2px solid #111;
+    }
+    .win .hd i {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #ff5f57;
+      display: inline-block;
+    }
+    .win .hd i:nth-child(2) { background: #febc2e; }
+    .win .hd i:nth-child(3) { background: #28c840; margin-right: 6px; }
+    .win .bd {
+      padding: 10px;
+      line-height: 1.6;
+    }
+    .ty {
+      display: block;
+      overflow: hidden;
+      white-space: nowrap;
+      color: #fff;
+    }
+    .ty.g { color: #f6c85a; }
+
+    .st {
+      position: absolute;
+      font: 800 24px 'Bricolage Grotesque';
+      border: 4px solid;
+      padding: 2px 10px;
+      rotate: -10deg;
+      border-radius: 6px;
+    }
+    .big {
+      font: 800 48px/0.95 'Bricolage Grotesque';
+      color: #fff;
+      -webkit-text-stroke: 3px #111;
+      paint-order: stroke fill;
+      text-shadow: 5px 5px 0 #111;
+      text-align: center;
+      margin-top: 14px;
+    }
+
+    .bars {
+      display: flex;
+      gap: 8px;
+      align-items: flex-end;
+      height: 70px;
+      margin-top: 8px;
+    }
+    .bars i {
+      width: 20px;
+      height: var(--h);
+      background: #fff;
+      border: 3px solid #111;
+      transform-origin: bottom;
+      animation: bar 0.45s infinite alternate;
+    }
+    @keyframes bar {
+      to { scale: 1 0.55; }
+    }
+
+    .slot {
+      width: 70px;
+      height: 70px;
+      border: 4px solid #111;
+      border-radius: 12px;
+      background: #fff;
+      font: 800 36px/62px 'Bricolage Grotesque';
+      text-align: center;
+      box-shadow: 4px 4px 0 #111;
+    }
+    .row3 {
+      display: flex;
+      gap: 12px;
+      margin-top: 6px;
+    }
+
+    /* Checklist */
+    .chk {
+      width: 280px;
+      background: #fff;
+      border: 4px solid #111;
+      border-radius: 12px;
+      box-shadow: 5px 5px 0 #111;
+      padding: 6px 14px;
+      margin-top: 6px;
+      text-align: left;
+    }
+    .ck {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 800;
+      font-size: 14px;
+      padding: 5px 0;
+      color: #111;
+      border-bottom: 2px dashed #ccc;
+    }
+    .ck:last-child { border-bottom: none; }
+    .ck u {
+      width: 20px;
+      height: 20px;
+      border-radius: 6px;
+      background: #22c55e;
+      color: #fff;
+      text-decoration: none;
+      font-size: 13px;
+      display: grid;
+      place-items: center;
+      border: 2px solid #111;
+      flex-shrink: 0;
+    }
+
+    .stamp {
+      font: 800 24px 'Bricolage Grotesque';
+      border: 4px solid #111;
+      border-radius: 10px;
+      padding: 4px 18px;
+      box-shadow: 5px 5px 0 #111;
+      margin-top: 6px;
+      display: inline-block;
+    }
+
+    .fol {
+      background: #ff2d55;
+      color: #fff;
+      border: 4px solid #fff;
+      border-radius: 99px;
+      font: 800 28px 'Bricolage Grotesque';
+      padding: 6px 30px;
+      margin-top: 24px;
+      animation: pu 1s infinite;
+      box-shadow: 5px 5px 0 #111;
+    }
+    @keyframes pu {
+      0% { box-shadow: 0 0 0 0 rgba(255, 45, 85, 0.7), 5px 5px 0 #111; }
+      100% { box-shadow: 0 0 0 20px transparent, 5px 5px 0 #111; }
+    }
+
+    .ic {
+      width: 48px;
+      height: 48px;
+      border-radius: 14px;
+      background: #fff;
+      color: #111;
+      display: grid;
+      place-items: center;
+      font-size: 22px;
+      border: 3px solid #111;
+      box-shadow: 4px 4px 0 #111;
+    }
+
+    /* Host Avatar + Tech Desk */
+    #desk {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 112px;
+      background: repeating-linear-gradient(90deg, rgba(0, 0, 0, 0.14) 0 3px, transparent 3px 120px), var(--d);
+      border-top: 5px solid #111;
+      z-index: 3;
+      transition: background 0.25s;
+    }
+
+    #ch {
+      position: absolute;
+      right: 4px;
+      bottom: 100px;
+      width: 178px;
+      z-index: 4;
+      animation: bnc 0.5s ease-in-out infinite alternate;
+    }
+    @keyframes bnc {
+      to { translate: 0 -5px; }
+    }
+
+    #hd {
+      transform-origin: 100px 150px;
+      animation: nod 0.6s ease-in-out infinite alternate;
+    }
+    @keyframes nod {
+      from { rotate: -3deg; }
+      to { rotate: 3deg; }
+    }
+
+    .arm {
+      transform-origin: 52px 172px;
+      animation: wave 0.9s ease-in-out infinite alternate;
+    }
+    @keyframes wave {
+      from { rotate: -20deg; }
+      to { rotate: 12deg; }
+    }
+
+    .eye {
+      transform-box: fill-box;
+      transform-origin: center;
+      animation: blink 2.8s infinite;
+    }
+    @keyframes blink {
+      0%, 93%, 100% { scale: 1; }
+      96% { scale: 1 0.1; }
+    }
+
+    .mouth {
+      transform-box: fill-box;
+      transform-origin: center;
+      scale: 1 0.4;
+      animation: talk 0.18s infinite alternate;
+    }
+    @keyframes talk {
+      to { scale: 1.1 1.5; }
+    }
+
+    .brow {
+      animation: brw 1.3s infinite alternate;
+    }
+    @keyframes brw {
+      to { translate: 0 -3px; }
+    }
+
+    /* Caption Word Pill */
+    #cap {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 30px;
+      text-align: center;
+      z-index: 10;
+      pointer-events: none;
+    }
+    #cap .w {
+      display: inline-block;
+      font: 800 28px 'Bricolage Grotesque';
+      background: #ffd23f;
+      color: #111;
+      border: 4px solid #111;
+      border-radius: 10px;
+      padding: 2px 16px;
+      box-shadow: 5px 5px 0 #111;
+      animation: cp 0.2s cubic-bezier(0.3, 1.8, 0.5, 1);
+    }
+    @keyframes cp {
+      from { scale: 0.7; rotate: -5deg; }
     }
   </style>
 </head>
-
 <body>
-  <div id="stage" data-composition-id="main" data-width="1080" data-height="1920" data-duration="39.78" data-fps="30">
-    <!-- Ambient Blur Blobs -->
-    <div class="blob b1"></div>
-    <div class="blob b2"></div>
-    <div class="blob b3"></div>
 
-    <!-- Master Audio (Voiceover + Ducked Beat + 33 SFX Cues) -->
-    <audio id="voice" src="assets/master_audio.mp3" data-start="0" data-duration="39.78" data-volume="1"></audio>
+  <div id="scaler">
+    <div id="stage" class="rd">
+      <div id="pt"></div>
+      <div id="fl"></div>
 
-    <!-- ================= UPPER THEATER (9 HYPER-MOTION SCENES) ================= -->
-    <div id="upper-theater">
+      <!-- Persistent Top Navigation -->
+      <div id="top-label" class="lab">BEFORE YOU PROMPT</div>
+      <div id="top-pr" class="pr"><i></i><i></i><i></i> 0/3</div>
 
-      <!-- SCENE 1 (0.0s - 3.18s): Midjourney $30/mo vs $0 FREE -->
-      <div id="sc-1" class="scene-view active">
-        <div class="rays"></div>
-        <div class="pill red" style="margin-top: 10px;">✕ CLOSED PLATFORMS · MONTHLY FEES</div>
-
-        <h1 class="hero-title" style="margin-top: 24px;">
-          Why Pay <span class="serif-accent">Every Month?</span><br>
-          For Closed AI Image Generators
-        </h1>
-
-        <div class="card" style="width: 840px; padding: 40px 52px; margin-top: 36px; display: flex; align-items: center; justify-content: space-between;">
-          <div>
-            <div style="font-size: 26px; font-weight: 800; color: #ef4444; margin-bottom: 8px;">✕ MIDJOURNEY / CLOSED</div>
-            <div class="strike-wrap">
-              <span style="font-size: 92px; font-weight: 900; color: #1a1714;">$30/mo</span>
-              <div class="strike"></div>
+      <!-- Kinetic Scenes Container -->
+      <div id="scene-container">
+        <!-- Scene 0: Hook -->
+        <div id="sc-0" class="sc">
+          <div class="win a">
+            <div class="hd"><i></i><i></i><i></i>terminal</div>
+            <div class="bd">
+              <span class="ty">> stop paying expensive SaaS</span>
+              <span class="ty g">> open-source AI does this now</span>
             </div>
           </div>
-          <div style="text-align: right;">
-            <div style="font-size: 26px; font-weight: 800; color: #10b981; margin-bottom: 8px;">✓ QWEN OPEN SOURCE</div>
-            <div style="font-size: 92px; font-weight: 900; color: #10b981;">$0 FREE</div>
+          <div class="big pop">STOP<br>WASTING<br>HOURS</div>
+          <div class="bars">
+            <i style="--h:45px; animation-delay:-0.1s;"></i>
+            <i style="--h:70px; animation-delay:-0.3s; background:#ff3b30;"></i>
+            <i style="--h:50px; animation-delay:-0.5s;"></i>
+            <i style="--h:65px; animation-delay:-0.2s; background:#ff3b30;"></i>
+            <i style="--h:40px; animation-delay:-0.4s;"></i>
+          </div>
+        </div>
+
+        <!-- Scene 1: Shift -->
+        <div id="sc-1" class="sc" style="display:none; opacity:0;">
+          <div class="big pop" style="font-size:110px; margin-top:8px;">3</div>
+          <div class="stamp pop" style="background:#22c55e; color:#fff; rotate:2deg;">NEW AI TOOLS</div>
+          <div class="row3">
+            <div class="slot pop">1</div>
+            <div class="slot pop">2</div>
+            <div class="slot pop">3</div>
+          </div>
+        </div>
+
+        <!-- Scene 2: Tool 1 -->
+        <div id="sc-2" class="sc" style="display:none; opacity:0;">
+          <div class="win a">
+            <div class="hd"><i></i><i></i><i></i>anthropic</div>
+            <div class="bd">
+              <span class="ty">> Star  147k  The agent engineering pl</span>
+              <span class="ty g">> Sub-millisecond response</span>
+            </div>
+          </div>
+          <div class="chk a">
+            <div class="ck"><u>✔</u>Zero Monthly Fees</div>
+            <div class="ck"><u>✔</u>100% Local Inference</div>
+            <div class="ck"><u>✔</u>Open Source Weights</div>
+          </div>
+        </div>
+
+        <!-- Scene 3: Tool 2 -->
+        <div id="sc-3" class="sc" style="display:none; opacity:0;">
+          <div class="win a">
+            <div class="hd"><i></i><i></i><i></i>claude prompt opti</div>
+            <div class="bd">
+              <span class="ty">> # Claude Prompt Optimization Strateg</span>
+              <span class="ty g">> Executes complex workflows</span>
+            </div>
+          </div>
+          <div class="chk a">
+            <div class="ck"><u>✔</u>Autonomous Pipelines</div>
+            <div class="ck"><u>✔</u>Zero Cloud Lock-in</div>
+            <div class="ck"><u>✔</u>Deterministic Speed</div>
+          </div>
+        </div>
+
+        <!-- Scene 4: Tool 3 -->
+        <div id="sc-4" class="sc" style="display:none; opacity:0;">
+          <div class="win a">
+            <div class="hd"><i></i><i></i><i></i>migrating producti</div>
+            <div class="bd">
+              <span class="ty">> Migrating Production System Prompts </span>
+              <span class="ty g">> WebAssembly Runtime</span>
+            </div>
+          </div>
+          <div class="chk a">
+            <div class="ck"><u>✔</u>Browser & Local Execution</div>
+            <div class="ck"><u>✔</u>Zero API Latency</div>
+            <div class="ck"><u>✔</u>Production Ready</div>
+          </div>
+        </div>
+
+        <!-- Scene 5: Viral CTA -->
+        <div id="sc-5" class="sc" style="display:none; opacity:0;">
+          <div class="stamp pop" style="background:#ffd23f; rotate:-3deg; margin-top:12px;">COMMENT "PROMPT"</div>
+          <div class="fol">FOLLOW @JAYANT</div>
+          <div style="display:flex; gap:14px; margin-top:14px;">
+            <div class="ic pop">♥</div>
+            <div class="ic pop">🔖</div>
+            <div class="ic pop">↗</div>
           </div>
         </div>
       </div>
 
-      <!-- SCENE 2 (3.18s - 7.96s): Qwen Image 2.1 Reveal -->
-      <div id="sc-2" class="scene-view">
-        <div class="pill clay">BREAKING · OPEN WEIGHTS RELEASE</div>
-        <div class="bounce-word" style="margin-top: 14px;">
-          <span style="--d: 0.1s; color: var(--clay);">F</span>
-          <span style="--d: 0.2s; color: var(--clay);">R</span>
-          <span style="--d: 0.3s; color: var(--clay);">E</span>
-          <span style="--d: 0.4s; color: var(--clay);">E</span>
-        </div>
+      <!-- Wooden Tech Desk -->
+      <div id="desk"></div>
 
-        <div class="card" style="width: 840px; padding: 36px 44px; margin-top: 14px; text-align: center;">
-          <div style="font-family: 'JetBrains Mono', monospace; font-size: 24px; font-weight: 800; color: #6b7280;">models / qwen-image-2.1</div>
-          <div style="font-size: 44px; font-weight: 900; color: #1a1714; margin-top: 10px;">Qwen Image 2.1 Uncensored</div>
-          <div style="font-size: 26px; font-weight: 700; color: var(--clay); margin-top: 8px;">Alibaba Open Weights · 100% Free Forever</div>
-        </div>
+      <!-- Animated Host Character SVG -->
+      <svg id="ch" viewBox="0 0 200 220">
+        <g class="arm">
+          <path d="M52 176Q18 156 18 114" stroke="#2b2f45" stroke-width="24" fill="none" stroke-linecap="round"/>
+          <circle cx="18" cy="104" r="13" fill="#f0c19b"/>
+        </g>
+        <path d="M26 220Q28 160 100 154Q172 160 174 220Z" fill="#2b2f45"/>
+        <path d="M84 156Q100 178 116 156Z" fill="#e0ad86"/>
+        <path d="M92 172v28M108 172v28" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+        <g id="hd">
+          <rect x="88" y="128" width="24" height="30" fill="#e0ad86"/>
+          <ellipse cx="100" cy="98" rx="46" ry="50" fill="#f0c19b"/>
+          <path d="M54 94Q54 44 100 44Q146 44 146 94Q130 68 100 68Q70 68 54 94Z" fill="#2a1d1a"/>
+          <path d="M50 98Q48 34 100 34Q152 34 150 98" fill="none" stroke="#d9694a" stroke-width="8"/>
+          <rect x="40" y="86" width="16" height="32" rx="8" fill="#d9694a"/>
+          <rect x="144" y="86" width="16" height="32" rx="8" fill="#d9694a"/>
+          <g class="eye">
+            <circle cx="82" cy="101" r="5" fill="#222"/>
+            <circle cx="118" cy="101" r="5" fill="#222"/>
+          </g>
+          <g fill="none" stroke="#222" stroke-width="3">
+            <circle cx="82" cy="101" r="15"/>
+            <circle cx="118" cy="101" r="15"/>
+            <path d="M97 101h6"/>
+          </g>
+          <path class="brow" d="M70 80q12-7 24 0M106 80q12-7 24 0" stroke="#2a1d1a" stroke-width="4" fill="none" stroke-linecap="round"/>
+          <ellipse class="mouth" cx="100" cy="130" rx="11" ry="8" fill="#7a2a2a"/>
+          <circle cx="66" cy="120" r="6" fill="#f08a7a" opacity=".5"/>
+          <circle cx="134" cy="120" r="6" fill="#f08a7a" opacity=".5"/>
+        </g>
+      </svg>
+
+      <!-- Active Kinetic Caption Bar -->
+      <div id="cap">
+        <span id="cap-word" class="w">WATCH THIS</span>
       </div>
-
-      <!-- SCENE 3 (7.96s - 11.14s): 20 Billion Parameters & Benchmark Stack -->
-      <div id="sc-3" class="scene-view">
-        <div class="pill blue">SOTA VISION BENCHMARK</div>
-        <div class="counter-display">20 BILLION</div>
-        <div style="font-size: 26px; font-weight: 800; color: #6b7280; margin-top: -8px;">PARAMETERS · BEATS PROPRIETARY MODELS</div>
-
-        <div class="stack">
-          <div class="fan-card" style="--d: 0.1s; --x: -80px; --r: -12deg;">
-            <div style="font-size: 32px; font-weight: 900; color: var(--clay);">#1 Qwen Image 2.1</div>
-            <div style="font-size: 22px; font-weight: 700; color: #10b981; margin-top: 6px;">★ 94.2 Benchmark Score (SOTA)</div>
-          </div>
-          <div class="fan-card" style="--d: 0.25s; --x: 0px; --r: 0deg;">
-            <div style="font-size: 32px; font-weight: 900; color: #2563eb;">#2 FLUX.1 Dev</div>
-            <div style="font-size: 22px; font-weight: 700; color: #6b7280; margin-top: 6px;">91.8 Benchmark Score</div>
-          </div>
-          <div class="fan-card" style="--d: 0.4s; --x: 80px; --r: 12deg;">
-            <div style="font-size: 32px; font-weight: 900; color: #6b7280;">#3 Midjourney v6</div>
-            <div style="font-size: 22px; font-weight: 700; color: #ef4444; margin-top: 6px;">89.4 Score · Paid Closed Model</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- SCENE 4 (11.14s - 14.32s): Photoreal Textures, Anatomy, Typography -->
-      <div id="sc-4" class="scene-view">
-        <div class="pill clay">3 INSANE SUPERPOWERS</div>
-        <div style="margin-top: 24px; display: flex; flex-direction: column; gap: 14px;">
-          <div class="feature-row" style="--d: 0.1s;">
-            <div style="font-size: 40px;">📸</div>
-            <div>
-              <div style="font-size: 30px; font-weight: 900; color: #1a1714;">Photorealistic Textures</div>
-              <div style="font-size: 22px; font-weight: 700; color: #6b7280;">Natural skin micro-details · Zero plastic AI look</div>
-            </div>
-            <div style="margin-left: auto; background: #fef3c7; color: #d97706; padding: 6px 16px; border-radius: 99px; font-size: 18px; font-weight: 800;">SOTA PHOTO</div>
-          </div>
-
-          <div class="feature-row" style="--d: 0.25s;">
-            <div style="font-size: 40px;">🖐️</div>
-            <div>
-              <div style="font-size: 30px; font-weight: 900; color: #1a1714;">Complex Human Anatomy</div>
-              <div style="font-size: 22px; font-weight: 700; color: #6b7280;">Flawless 5-finger hands, eyes & dynamic lighting</div>
-            </div>
-            <div style="margin-left: auto; background: #dbeafe; color: #2563eb; padding: 6px 16px; border-radius: 99px; font-size: 18px; font-weight: 800;">PERFECT HANDS</div>
-          </div>
-
-          <div class="feature-row" style="--d: 0.4s;">
-            <div style="font-size: 40px;">✍️</div>
-            <div>
-              <div style="font-size: 30px; font-weight: 900; color: #1a1714;">In-Image Typography</div>
-              <div style="font-size: 22px; font-weight: 700; color: #6b7280;">Spell words, logos, and neon signage accurately</div>
-            </div>
-            <div style="margin-left: auto; background: #dcfce7; color: #15803d; padding: 6px 16px; border-radius: 99px; font-size: 18px; font-weight: 800;">100% LEGIBLE</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- SCENE 5 (14.32s - 19.89s): Dark Mode Shift - 100% Offline Local PC/Mac -->
-      <div id="sc-5" class="scene-view">
-        <div class="pill" style="background: #a78bfa; color: #0b0809; margin-top: 10px;">⚡ 100% OFFLINE LOCAL INFERENCE</div>
-        <h1 class="hero-title" style="margin-top: 18px; color: #ffffff;">
-          Runs Entirely on Your <span class="serif-accent" style="color: #a78bfa;">Mac or PC</span>
-        </h1>
-
-        <div class="radar-box">
-          <div class="radar-beam"></div>
-          <div style="z-index: 5; text-align: center;">
-            <div style="font-size: 44px; font-weight: 900; color: #ffffff;">1.8s</div>
-            <div style="font-size: 18px; font-weight: 800; color: #a78bfa;">INFERENCE SPEED</div>
-          </div>
-        </div>
-
-        <div class="card" style="width: 840px; padding: 24px 36px; text-align: center; margin-top: 10px;">
-          <div style="font-size: 28px; font-weight: 900; color: #a78bfa;">GGUF 4-Bit & 8-Bit Quantized Weights</div>
-          <div style="font-size: 22px; font-weight: 700; color: #9ca3af; margin-top: 4px;">Compatible with Apple Silicon Metal, RTX 3060+, and ComfyUI</div>
-        </div>
-      </div>
-
-      <!-- SCENE 6 (19.89s - 23.87s): Dark Mode Duel - No Cloud Queues, Zero Censorship -->
-      <div id="sc-6" class="scene-view">
-        <div class="pill red">ZERO RESTRICTIONS</div>
-        <div style="margin-top: 36px; display: flex; flex-direction: column; align-items: center; gap: 8px;">
-          <div class="card" style="width: 780px; padding: 24px 32px; display: flex; align-items: center; justify-content: space-between;">
-            <div style="font-size: 26px; font-weight: 800; color: #ef4444;">✕ Closed Cloud APIs</div>
-            <div style="font-size: 22px; font-weight: 700; color: #9ca3af;">Paid queues · Strict censorship filters · Rate limits</div>
-          </div>
-
-          <div class="flow-line" style="--d: 0.3s;"></div>
-
-          <div class="pill" style="background: #10b981; color: #0b0809; font-size: 24px; padding: 12px 30px;">
-            ✔ DIRECT GPU HARDWARE PIPELINE
-          </div>
-
-          <div class="flow-line" style="--d: 0.6s;"></div>
-
-          <div class="card" style="width: 780px; padding: 24px 32px; background: rgba(217, 105, 74, 0.15); border: 2px solid var(--clay); display: flex; align-items: center; justify-content: space-between;">
-            <div style="font-size: 28px; font-weight: 900; color: var(--clay);">✔ 100% Uncensored Offline</div>
-            <div style="font-size: 22px; font-weight: 800; color: #10b981;">Unlimited generations · $0 costs</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- SCENE 7 (23.87s - 27.85s): Browser Hugging Face / Ollama Download -->
-      <div id="sc-7" class="scene-view">
-        <div class="pill clay">DIRECT DOWNLOAD REPO</div>
-        <div class="browser-frame">
-          <div class="browser-header">
-            <div class="browser-dots">
-              <i style="background: #ef4444;"></i>
-              <i style="background: #eab308;"></i>
-              <i style="background: #22c55e;"></i>
-            </div>
-            <div class="browser-bar">
-              <span>🔒 huggingface.co/Qwen/Qwen-Image-2.1-GGUF</span>
-              <span class="cursor-blink"></span>
-            </div>
-          </div>
-          <div style="padding: 36px 44px;">
-            <div style="display: flex; justify-content: space-between; align-items: center;">
-              <div>
-                <div style="font-size: 34px; font-weight: 900; color: #1a1714;">qwen-image-2.1-q4_k_m.gguf</div>
-                <div style="font-size: 22px; font-weight: 700; color: #6b7280; margin-top: 4px;">12.4 GB · 4-Bit Optimized Weights</div>
-              </div>
-              <div class="pill clay" style="font-size: 22px; padding: 12px 28px;">DOWNLOAD GGUF ➔</div>
-            </div>
-            <div style="width: 100%; height: 14px; background: #e5e7eb; border-radius: 99px; margin-top: 24px; overflow: hidden;">
-              <div style="width: 85%; height: 100%; background: var(--clay); border-radius: 99px;"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- SCENE 8 (27.85s - 32.62s): 60-Second Instant Setup & Checklist -->
-      <div id="sc-8" class="scene-view">
-        <div class="pill clay">INSTANT LOCAL SETUP</div>
-        <div style="display: flex; align-items: center; gap: 40px; margin-top: 24px;">
-          <div style="position: relative; width: 160px; height: 160px; display: grid; place-items: center;">
-            <svg class="ring-svg" viewBox="0 0 160 160">
-              <circle class="ring-bg" cx="80" cy="80" r="70"/>
-              <circle class="ring-val" cx="80" cy="80" r="70"/>
-            </svg>
-            <span style="position: absolute; font-size: 40px; font-weight: 900; color: var(--clay);">60s</span>
-          </div>
-
-          <div style="display: flex; flex-direction: column; gap: 12px;">
-            <div class="card" style="width: 580px; padding: 16px 24px; display: flex; align-items: center; gap: 16px;">
-              <div style="width: 32px; height: 32px; border-radius: 50%; background: #10b981; color: #fff; display: grid; place-items: center; font-weight: 900;">✔</div>
-              <div style="font-size: 24px; font-weight: 800; color: #1a1714;">1. Open ComfyUI or Ollama</div>
-            </div>
-            <div class="card" style="width: 580px; padding: 16px 24px; display: flex; align-items: center; gap: 16px;">
-              <div style="width: 32px; height: 32px; border-radius: 50%; background: #10b981; color: #fff; display: grid; place-items: center; font-weight: 900;">✔</div>
-              <div style="font-size: 24px; font-weight: 800; color: #1a1714;">2. Paste one-line download command</div>
-            </div>
-            <div class="card" style="width: 580px; padding: 16px 24px; display: flex; align-items: center; gap: 16px;">
-              <div style="width: 32px; height: 32px; border-radius: 50%; background: var(--clay); color: #fff; display: grid; place-items: center; font-weight: 900;">➔</div>
-              <div style="font-size: 24px; font-weight: 800; color: #1a1714;">3. Generate unlimited 4K photoreal images</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- SCENE 9 (32.62s - 39.78s): Brand Clay Viral CTA -->
-      <div id="sc-9" class="scene-view">
-        <div style="display: flex; gap: 16px; margin-top: 16px;">
-          <div class="pill" style="font-size: 34px; padding: 14px 34px; background: #1a1714; rotate: -3deg;">💬 COMMENT</div>
-          <div class="pill" style="font-size: 34px; padding: 14px 34px; background: #ffffff; color: var(--clay); rotate: 3deg;">🔥 QWEN</div>
-        </div>
-
-        <div class="card" style="width: 820px; padding: 20px 30px; margin-top: 24px; display: flex; align-items: center; gap: 16px; border-radius: 99px;">
-          <div style="width: 38px; height: 38px; border-radius: 50%; background: var(--clay);"></div>
-          <div style="font-size: 26px; font-weight: 800; color: #1a1714;">Typing "QWEN"...</div>
-          <div style="margin-left: auto; width: 44px; height: 44px; border-radius: 50%; background: var(--clay); color: #fff; display: grid; place-items: center; font-size: 20px;">➤</div>
-        </div>
-
-        <div class="card" style="width: 820px; padding: 28px 36px; margin-top: 20px; display: flex; align-items: center; gap: 24px;">
-          <div style="font-size: 50px;">📩</div>
-          <div>
-            <div style="font-size: 30px; font-weight: 900; color: #1a1714;">jayant.digitalstudio · now</div>
-            <div style="font-size: 24px; font-weight: 700; color: var(--mut); margin-top: 4px;">Qwen Image 2.1 GGUF weights + ComfyUI guide sent to your DMs</div>
-          </div>
-          <div style="margin-left: auto; background: #dcfce7; color: #15803d; padding: 10px 24px; border-radius: 99px; font-size: 22px; font-weight: 900;">SENT ✔</div>
-        </div>
-      </div>
-
-    </div> <!-- end upper-theater -->
-
-    <!-- ================= WORD-BY-WORD KINETIC SUBTITLE BAR ================= -->
-    <div id="caption-bar"></div>
-
-    <!-- ================= LOWER STAGE: ANIMATED HOST AVATAR & TECH DESK ================= -->
-    <div id="lower-stage">
-
-      <!-- Host Avatar Rig -->
-      <div id="host-avatar">
-        <svg viewBox="0 0 440 440" width="100%" height="100%">
-          <defs>
-            <linearGradient id="skin" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%" stop-color="#fcd5b8"/>
-              <stop offset="100%" stop-color="#f5b890"/>
-            </linearGradient>
-            <linearGradient id="hoodie" x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0%" stop-color="#1f2937"/>
-              <stop offset="100%" stop-color="#141312"/>
-            </linearGradient>
-          </defs>
-
-          <!-- Avatar Character (Idle Breathing Oscillation) -->
-          <g id="avatar-character">
-            <!-- Torso & Broad Shoulders -->
-            <path d="M80 340 C80 270, 160 255, 220 255 C280 255, 360 270, 360 340 L380 440 L60 440 Z" 
-                  fill="url(#hoodie)" stroke="#1a1714" stroke-width="8"/>
-            <path d="M190 255 C190 295, 250 295, 250 255 Z" fill="#ffffff" stroke="#1a1714" stroke-width="6"/>
-            <!-- Drawstrings -->
-            <path d="M165 260 L195 355" stroke="#d9694a" stroke-width="6" stroke-linecap="round" fill="none"/>
-            <path d="M275 260 L245 355" stroke="#d9694a" stroke-width="6" stroke-linecap="round" fill="none"/>
-
-            <!-- Arms Contiguously Attached Resting on Desk -->
-            <path d="M90 320 C80 365, 100 410, 165 424" fill="none" stroke="#1a1714" stroke-width="36" stroke-linecap="round"/>
-            <path d="M90 320 C80 365, 100 410, 165 424" fill="none" stroke="#1f2937" stroke-width="28" stroke-linecap="round"/>
-            <circle cx="170" cy="424" r="14" fill="url(#skin)" stroke="#1a1714" stroke-width="5"/>
-
-            <path d="M350 320 C360 365, 340 410, 275 424" fill="none" stroke="#1a1714" stroke-width="36" stroke-linecap="round"/>
-            <path d="M350 320 C360 365, 340 410, 275 424" fill="none" stroke="#1f2937" stroke-width="28" stroke-linecap="round"/>
-            <circle cx="270" cy="424" r="14" fill="url(#skin)" stroke="#1a1714" stroke-width="5"/>
-
-            <!-- Neck -->
-            <path d="M195 240 L195 275 C195 285, 245 285, 245 275 L245 240 Z" 
-                  fill="url(#skin)" stroke="#1a1714" stroke-width="6"/>
-
-            <!-- Head / Jaw -->
-            <path d="M150 155 C150 90, 290 90, 290 155 C290 230, 255 258, 220 258 C185 258, 150 230, 150 155 Z" 
-                  fill="url(#skin)" stroke="#1a1714" stroke-width="7"/>
-
-            <!-- Stylish Hair -->
-            <path d="M142 145 C138 95, 175 60, 220 58 C265 60, 302 95, 298 145 C294 110, 260 78, 220 78 C180 78, 146 110, 142 145 Z" 
-                  fill="#1a1714"/>
-            <path d="M146 130 C155 105, 185 85, 220 84 C255 85, 285 105, 294 130 C280 115, 250 102, 220 102 C190 102, 160 115, 146 130 Z" 
-                  fill="#2d2a26"/>
-
-            <!-- Ears -->
-            <ellipse cx="148" cy="170" rx="10" ry="16" fill="url(#skin)" stroke="#1a1714" stroke-width="5"/>
-            <ellipse cx="292" cy="170" rx="10" ry="16" fill="url(#skin)" stroke="#1a1714" stroke-width="5"/>
-
-            <!-- Eyebrows -->
-            <path d="M172 145 Q190 138 204 146" stroke="#1a1714" stroke-width="6" stroke-linecap="round" fill="none"/>
-            <path d="M236 146 Q250 138 268 145" stroke="#1a1714" stroke-width="6" stroke-linecap="round" fill="none"/>
-
-            <!-- Eyes (Blinking Group) -->
-            <g id="eyes-open">
-              <ellipse cx="188" cy="162" rx="11" ry="13" fill="#ffffff" stroke="#1a1714" stroke-width="4.5"/>
-              <ellipse cx="252" cy="162" rx="11" ry="13" fill="#ffffff" stroke="#1a1714" stroke-width="4.5"/>
-              <circle cx="189" cy="162" r="6" fill="#1a1714"/>
-              <circle cx="253" cy="162" r="6" fill="#1a1714"/>
-              <circle cx="191" cy="159" r="2.5" fill="#ffffff"/>
-              <circle cx="255" cy="159" r="2.5" fill="#ffffff"/>
-            </g>
-            <g id="eyes-blink" style="display:none;">
-              <path d="M177 163 Q188 171 199 163" stroke="#1a1714" stroke-width="6" stroke-linecap="round" fill="none"/>
-              <path d="M241 163 Q252 171 263 163" stroke="#1a1714" stroke-width="6" stroke-linecap="round" fill="none"/>
-            </g>
-
-            <!-- Nose -->
-            <path d="M220 162 L216 186 L224 186" stroke="#1a1714" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-
-            <!-- Beard / Stubble -->
-            <path d="M168 190 C172 238, 268 238, 272 190 C265 248, 175 248, 168 190 Z" fill="#2d2a26" opacity="0.35"/>
-
-            <!-- Synchronized Lip-Sync Mouth Rig (4-State RMS) -->
-            <g id="mouth-closed">
-              <path d="M205 210 Q220 215 235 210" stroke="#1a1714" stroke-width="5" stroke-linecap="round" fill="none"/>
-            </g>
-            <g id="mouth-small" style="display:none;">
-              <ellipse cx="220" cy="211" rx="8" ry="6" fill="#7a2e22" stroke="#1a1714" stroke-width="4"/>
-            </g>
-            <g id="mouth-open" style="display:none;">
-              <path d="M204 207 Q220 203 236 207 Q220 226 204 207 Z" fill="#7a2e22" stroke="#1a1714" stroke-width="4.5"/>
-              <path d="M208 208 Q220 211 232 208" stroke="#ffffff" stroke-width="3" fill="none"/>
-            </g>
-            <g id="mouth-wide" style="display:none;">
-              <path d="M200 206 Q220 200 240 206 Q220 235 200 206 Z" fill="#7a2e22" stroke="#1a1714" stroke-width="5"/>
-              <path d="M205 208 Q220 213 235 208" stroke="#ffffff" stroke-width="4" fill="none"/>
-              <path d="M210 224 Q220 220 230 224" stroke="#d97768" stroke-width="5" stroke-linecap="round" fill="none"/>
-            </g>
-
-          </g> <!-- end avatar-character -->
-        </svg>
-      </div> <!-- end host-avatar -->
-
-      <!-- Wooden Tech Desk Surface -->
-      <div class="desk-surface"></div>
-
-      <!-- Desk Props: Studio Boom Mic & Steaming Mug -->
-      <div class="desk-props">
-        <div class="studio-mic">
-          <svg viewBox="0 0 120 140" width="100%" height="100%">
-            <rect x="15" y="115" width="24" height="22" rx="4" fill="#1a1714"/>
-            <path d="M26 115 L50 55 L82 78" stroke="#1a1714" stroke-width="8" stroke-linecap="round" fill="none"/>
-            <path d="M30 115 L54 55 L86 78" stroke="#6b7280" stroke-width="3.5" stroke-linecap="round" fill="none"/>
-            <circle cx="26" cy="115" r="8" fill="#1a1714"/>
-            <circle cx="50" cy="55" r="8" fill="#1a1714"/>
-            <circle cx="86" cy="82" r="18" fill="none" stroke="#1a1714" stroke-width="4.5"/>
-            <rect x="76" y="66" width="22" height="34" rx="11" fill="#2d3748" stroke="#1a1714" stroke-width="4"/>
-            <path d="M79 78 L95 78 M79 84 L95 84" stroke="#4a5568" stroke-width="2.5"/>
-          </svg>
-        </div>
-
-        <div class="desk-mug-wrap">
-          <div class="steam-curl s1">~</div>
-          <div class="steam-curl s2">~</div>
-          <div class="mug-cup"></div>
-        </div>
-      </div>
-
-    </div> <!-- end lower-stage -->
-
-  </div> <!-- end stage -->
+    </div>
+  </div>
 
   <script>
-    const captionChunks = [{"words": ["Midjourney", "subscriptions"], "active": 1, "start": 0.0, "end": 0.8}, {"words": ["cost", "thirty"], "active": 1, "start": 0.8, "end": 1.59}, {"words": ["dollars", "every"], "active": 1, "start": 1.59, "end": 2.39}, {"words": ["single", "month."], "active": 1, "start": 2.39, "end": 3.18}, {"words": ["So", "Qwen"], "active": 1, "start": 3.18, "end": 3.98}, {"words": ["just", "open-sourced"], "active": 1, "start": 3.98, "end": 4.77}, {"words": ["Image", "2.1,"], "active": 1, "start": 4.77, "end": 5.57}, {"words": ["and", "it"], "active": 1, "start": 5.57, "end": 6.36}, {"words": ["is", "completely"], "active": 1, "start": 6.36, "end": 7.16}, {"words": ["free.", "It"], "active": 1, "start": 7.16, "end": 7.96}, {"words": ["beats", "Flux"], "active": 1, "start": 7.96, "end": 8.75}, {"words": ["and", "Midjourney"], "active": 1, "start": 8.75, "end": 9.55}, {"words": ["with", "twenty"], "active": 1, "start": 9.55, "end": 10.34}, {"words": ["billion", "parameters."], "active": 1, "start": 10.34, "end": 11.14}, {"words": ["Photorealistic", "textures,"], "active": 1, "start": 11.14, "end": 11.93}, {"words": ["insane", "anatomy,"], "active": 1, "start": 11.93, "end": 12.73}, {"words": ["and", "perfect"], "active": 1, "start": 12.73, "end": 13.53}, {"words": ["in-image", "typography."], "active": 1, "start": 13.53, "end": 14.32}, {"words": ["The", "best"], "active": 1, "start": 14.32, "end": 15.12}, {"words": ["part?", "You"], "active": 1, "start": 15.12, "end": 15.91}, {"words": ["can", "run"], "active": 1, "start": 15.91, "end": 16.71}, {"words": ["it", "completely"], "active": 1, "start": 16.71, "end": 17.5}, {"words": ["offline", "on"], "active": 1, "start": 17.5, "end": 18.3}, {"words": ["your", "Mac"], "active": 1, "start": 18.3, "end": 19.09}, {"words": ["or", "PC."], "active": 1, "start": 19.09, "end": 19.89}, {"words": ["No", "cloud"], "active": 1, "start": 19.89, "end": 20.69}, {"words": ["queues,", "no"], "active": 1, "start": 20.69, "end": 21.48}, {"words": ["credit", "cards,"], "active": 1, "start": 21.48, "end": 22.28}, {"words": ["and", "zero"], "active": 1, "start": 22.28, "end": 23.07}, {"words": ["censorship", "filters."], "active": 1, "start": 23.07, "end": 23.87}, {"words": ["Download", "the"], "active": 1, "start": 23.87, "end": 24.66}, {"words": ["GGUF", "weights"], "active": 1, "start": 24.66, "end": 25.46}, {"words": ["directly", "from"], "active": 1, "start": 25.46, "end": 26.25}, {"words": ["Hugging", "Face"], "active": 1, "start": 26.25, "end": 27.05}, {"words": ["or", "Ollama."], "active": 1, "start": 27.05, "end": 27.85}, {"words": ["Setup", "takes"], "active": 1, "start": 27.85, "end": 28.64}, {"words": ["sixty", "seconds."], "active": 1, "start": 28.64, "end": 29.44}, {"words": ["Paste", "one"], "active": 1, "start": 29.44, "end": 30.23}, {"words": ["terminal", "command,"], "active": 1, "start": 30.23, "end": 31.03}, {"words": ["and", "you"], "active": 1, "start": 31.03, "end": 31.82}, {"words": ["are", "generating."], "active": 1, "start": 31.82, "end": 32.62}, {"words": ["Comment", "QWEN"], "active": 1, "start": 32.62, "end": 33.42}, {"words": ["below,", "and"], "active": 1, "start": 33.42, "end": 34.21}, {"words": ["I", "will"], "active": 1, "start": 34.21, "end": 35.01}, {"words": ["DM", "you"], "active": 1, "start": 35.01, "end": 35.8}, {"words": ["the", "direct"], "active": 1, "start": 35.8, "end": 36.6}, {"words": ["download", "link"], "active": 1, "start": 36.6, "end": 37.39}, {"words": ["and", "local"], "active": 1, "start": 37.39, "end": 38.19}, {"words": ["setup", "guide"], "active": 1, "start": 38.19, "end": 38.98}, {"words": ["right", "now."], "active": 1, "start": 38.98, "end": 39.78}];
-    const duration = 39.78;
-    const stage = document.getElementById("stage");
+    // Particle dots
+    const pt = document.getElementById("pt");
+    for (let i = 0; i < 20; i++) {
+      const dot = document.createElement("i");
+      dot.style.cssText = `left: ${Math.random() * 100}%; --s: ${3 + Math.random() * 6}px; --t: ${2.5 + Math.random() * 3}s; --dl: -${Math.random() * 5}s;`;
+      pt.appendChild(dot);
+    }
 
-    const tl = gsap.timeline();
+    const scenes = [{"id": 0, "start": 0.0, "theme": "rd", "label": "BEFORE YOU PROMPT", "pr": 0}, {"id": 1, "start": 5.02, "theme": "yl", "label": "THE FIX \u00b7 3 TOOLS", "pr": 0}, {"id": 2, "start": 8.85, "theme": "bl", "label": "01 \u00b7 ANTHROPIC", "pr": 1}, {"id": 3, "start": 14.57, "theme": "gr", "label": "02 \u00b7 CLAUDE PROMPT OP", "pr": 2}, {"id": 4, "start": 22.54, "theme": "pk", "label": "03 \u00b7 MIGRATING PRODUC", "pr": 3}, {"id": 5, "start": 30.5, "theme": "dk", "label": "FREE GITHUB REPOS", "pr": 3}];
+    const stage = document.getElementById("stage");
+    const topLabel = document.getElementById("top-label");
+    const topPr = document.getElementById("top-pr");
+    const capWord = document.getElementById("cap-word");
+    const fl = document.getElementById("fl");
+
+    function mountScene(id) {
+      const s = scenes[id];
+      if (!s) return;
+
+      // Update stage theme
+      stage.className = s.theme;
+      topLabel.textContent = s.label;
+
+      // Update progress dots
+      const p = s.pr;
+      topPr.innerHTML = `
+        <i class="${p >= 1 ? 'on' : ''}"></i>
+        <i class="${p >= 2 ? 'on' : ''}"></i>
+        <i class="${p >= 3 ? 'on' : ''}"></i>
+        ${p}/3
+      `;
+
+      // Switch visible scene div
+      for (let i = 0; i < scenes.length; i++) {
+        const el = document.getElementById("sc-" + i);
+        if (el) {
+          if (i === id) {
+            el.style.display = "flex";
+            el.style.opacity = 1;
+          } else {
+            el.style.display = "none";
+            el.style.opacity = 0;
+          }
+        }
+      }
+
+      // Flash transition cut
+      fl.style.animation = "none";
+      void fl.offsetWidth;
+      fl.style.animation = "fl 0.28s ease-out";
+    }
+
+    function setWord(w) {
+      if (!w) {
+        capWord.style.display = "none";
+        return;
+      }
+      capWord.textContent = w;
+      capWord.style.display = "inline-block";
+    }
+
+    // GSAP master timeline driving HyperFrames
+    const tl = gsap.timeline({ paused: true });
     window.__timelines = window.__timelines || {};
     window.__timelines["main"] = tl;
 
-    // Lip sync helper
-    function setMouth(state) {
-      const states = ["closed", "small", "open", "wide"];
-      states.forEach(s => {
-        const el = document.getElementById("mouth-" + s);
-        if (el) el.style.display = (s === state ? "block" : "none");
-      });
-    }
+    // Initial mount
+    mountScene(0);
 
-    // Deterministic Scene Switcher
-    function switchScene(fromId, toId, time, mode = "") {
-      tl.to(fromId, { opacity: 0, duration: 0.15 }, time);
-      tl.set(fromId, { display: "none", pointerEvents: "none" }, time + 0.15);
-      tl.call(() => {
-        if (mode === "dark") {
-          stage.className = "dark";
-        } else if (mode === "or") {
-          stage.className = "or";
-        } else {
-          stage.className = "";
-        }
-      }, null, time + 0.15);
-      tl.set(toId, { display: "flex", pointerEvents: "auto" }, time + 0.15);
-      tl.fromTo(toId, { opacity: 0, y: 35, scale: 0.95 }, { opacity: 1, y: 0, scale: 1, duration: 0.35, ease: "back.out(1.4)" }, time + 0.15);
-    }
+    // Call schedule
+        tl.call(() => mountScene(0), null, 0.0);
+    tl.call(() => mountScene(1), null, 5.02);
+    tl.call(() => mountScene(2), null, 8.85);
+    tl.call(() => mountScene(3), null, 14.57);
+    tl.call(() => mountScene(4), null, 22.54);
+    tl.call(() => mountScene(5), null, 30.5);
+        tl.call(() => setWord("Stop"), null, 0.0);
+    tl.call(() => setWord("wasting"), null, 0.38);
+    tl.call(() => setWord("hours"), null, 0.76);
+    tl.call(() => setWord("paying"), null, 1.14);
+    tl.call(() => setWord("for"), null, 1.52);
+    tl.call(() => setWord("expensive"), null, 1.9);
+    tl.call(() => setWord("SaaS"), null, 2.28);
+    tl.call(() => setWord("when"), null, 2.66);
+    tl.call(() => setWord("open-source"), null, 3.04);
+    tl.call(() => setWord("AI"), null, 3.42);
+    tl.call(() => setWord("does"), null, 3.8);
+    tl.call(() => setWord("this"), null, 4.18);
+    tl.call(() => setWord("automatically."), null, 4.56);
+    tl.call(() => setWord("Three"), null, 5.02);
+    tl.call(() => setWord("brand-new"), null, 5.33);
+    tl.call(() => setWord("developer"), null, 5.64);
+    tl.call(() => setWord("tools"), null, 5.96);
+    tl.call(() => setWord("just"), null, 6.27);
+    tl.call(() => setWord("dropped"), null, 6.58);
+    tl.call(() => setWord("on"), null, 6.89);
+    tl.call(() => setWord("GitHub"), null, 7.2);
+    tl.call(() => setWord("that"), null, 7.52);
+    tl.call(() => setWord("change"), null, 7.83);
+    tl.call(() => setWord("the"), null, 8.14);
+    tl.call(() => setWord("game."), null, 8.45);
+    tl.call(() => setWord("First"), null, 8.85);
+    tl.call(() => setWord("is"), null, 9.25);
+    tl.call(() => setWord("anthropic,"), null, 9.66);
+    tl.call(() => setWord("an"), null, 10.06);
+    tl.call(() => setWord("open-source"), null, 10.46);
+    tl.call(() => setWord("powerhouse"), null, 10.86);
+    tl.call(() => setWord("that"), null, 11.27);
+    tl.call(() => setWord("eliminates"), null, 11.67);
+    tl.call(() => setWord("manual"), null, 12.07);
+    tl.call(() => setWord("workflows"), null, 12.48);
+    tl.call(() => setWord("with"), null, 12.88);
+    tl.call(() => setWord("local"), null, 13.28);
+    tl.call(() => setWord("model"), null, 13.68);
+    tl.call(() => setWord("execution."), null, 14.09);
+    tl.call(() => setWord("Second"), null, 14.57);
+    tl.call(() => setWord("is"), null, 15.03);
+    tl.call(() => setWord("Claude"), null, 15.5);
+    tl.call(() => setWord("Prompt"), null, 15.96);
+    tl.call(() => setWord("Optimization"), null, 16.43);
+    tl.call(() => setWord("Strategi,"), null, 16.89);
+    tl.call(() => setWord("an"), null, 17.36);
+    tl.call(() => setWord("autonomous"), null, 17.82);
+    tl.call(() => setWord("engine"), null, 18.29);
+    tl.call(() => setWord("running"), null, 18.75);
+    tl.call(() => setWord("deterministic"), null, 19.21);
+    tl.call(() => setWord("pipelines"), null, 19.68);
+    tl.call(() => setWord("with"), null, 20.14);
+    tl.call(() => setWord("lightning-fast"), null, 20.61);
+    tl.call(() => setWord("sub-millisecond"), null, 21.07);
+    tl.call(() => setWord("response"), null, 21.54);
+    tl.call(() => setWord("times."), null, 22.0);
+    tl.call(() => setWord("Third"), null, 22.54);
+    tl.call(() => setWord("is"), null, 22.95);
+    tl.call(() => setWord("Migrating"), null, 23.37);
+    tl.call(() => setWord("Production"), null, 23.78);
+    tl.call(() => setWord("System"), null, 24.2);
+    tl.call(() => setWord("Prompts,"), null, 24.61);
+    tl.call(() => setWord("a"), null, 25.03);
+    tl.call(() => setWord("zero-latency"), null, 25.44);
+    tl.call(() => setWord("runtime"), null, 25.85);
+    tl.call(() => setWord("executing"), null, 26.27);
+    tl.call(() => setWord("complex"), null, 26.68);
+    tl.call(() => setWord("workflows"), null, 27.1);
+    tl.call(() => setWord("directly"), null, 27.51);
+    tl.call(() => setWord("in"), null, 27.93);
+    tl.call(() => setWord("WebAssembly"), null, 28.34);
+    tl.call(() => setWord("with"), null, 28.75);
+    tl.call(() => setWord("zero"), null, 29.17);
+    tl.call(() => setWord("cloud"), null, 29.58);
+    tl.call(() => setWord("lock-in."), null, 30.0);
+    tl.call(() => setWord("Comment"), null, 30.5);
+    tl.call(() => setWord("PROMPT"), null, 30.78);
+    tl.call(() => setWord("below,"), null, 31.07);
+    tl.call(() => setWord("and"), null, 31.35);
+    tl.call(() => setWord("I"), null, 31.64);
+    tl.call(() => setWord("will"), null, 31.92);
+    tl.call(() => setWord("DM"), null, 32.2);
+    tl.call(() => setWord("you"), null, 32.49);
+    tl.call(() => setWord("the"), null, 32.77);
+    tl.call(() => setWord("full"), null, 33.05);
+    tl.call(() => setWord("setup"), null, 33.34);
+    tl.call(() => setWord("code"), null, 33.62);
+    tl.call(() => setWord("and"), null, 33.91);
+    tl.call(() => setWord("GitHub"), null, 34.19);
+    tl.call(() => setWord("repos"), null, 34.47);
+    tl.call(() => setWord("right"), null, 34.76);
+    tl.call(() => setWord("now."), null, 35.04);
+    tl.call(() => setWord(""), null, 34.72);
 
-    // 1. Initial State
-    gsap.set("#sc-1", { display: "flex", opacity: 1, pointerEvents: "auto" });
-    gsap.set(["#sc-2", "#sc-3", "#sc-4", "#sc-5", "#sc-6", "#sc-7", "#sc-8", "#sc-9"], { display: "none", opacity: 0, pointerEvents: "none" });
-    gsap.set("#eyes-open", { display: "block" });
-    gsap.set("#eyes-blink", { display: "none" });
-
-    // 2. 9 Micro-Scene Transitions (100% Synced to Voiceover Sentences)
-    switchScene("#sc-1", "#sc-2", 3.18);
-    switchScene("#sc-2", "#sc-3", 7.96);
-    switchScene("#sc-3", "#sc-4", 11.14);
-    switchScene("#sc-4", "#sc-5", 14.32, "dark");   // Dark Mode for Local Offline
-    switchScene("#sc-5", "#sc-6", 19.89, "dark");   // Dark Mode for Duel
-    switchScene("#sc-6", "#sc-7", 23.87, "");       // Tech Paper for Download
-    switchScene("#sc-7", "#sc-8", 27.85);           // 60s Setup
-    switchScene("#sc-8", "#sc-9", 32.62, "or");     // Clay Brand Mode for CTA
-
-    // 3. Continuous Idle Breathing
-    tl.to("#avatar-character", { y: -6, duration: 1.4, repeat: 28, yoyo: true, ease: "sine.inOut" }, 0);
-
-    // 4. Automatic Eye Blinks Every 3s
-    for (let t = 1.2; t < duration; t += 3.0) {
-      tl.set("#eyes-open", { display: "none" }, t);
-      tl.set("#eyes-blink", { display: "block" }, t);
-      tl.set("#eyes-open", { display: "block" }, t + 0.133);
-      tl.set("#eyes-blink", { display: "none" }, t + 0.133);
-    }
-
-    // 5. Deterministic RMS Lip-Sync Schedule
-    tl.call(() => setMouth("closed"), null, 0.0);
-tl.call(() => setMouth("open"), null, 0.033);
-tl.call(() => setMouth("wide"), null, 0.1);
-tl.call(() => setMouth("open"), null, 0.567);
-tl.call(() => setMouth("small"), null, 0.7);
-tl.call(() => setMouth("open"), null, 0.833);
-tl.call(() => setMouth("wide"), null, 0.9);
-tl.call(() => setMouth("small"), null, 0.967);
-tl.call(() => setMouth("open"), null, 1.033);
-tl.call(() => setMouth("small"), null, 1.167);
-tl.call(() => setMouth("open"), null, 1.233);
-tl.call(() => setMouth("wide"), null, 1.3);
-tl.call(() => setMouth("open"), null, 1.367);
-tl.call(() => setMouth("closed"), null, 1.433);
-tl.call(() => setMouth("open"), null, 1.533);
-tl.call(() => setMouth("wide"), null, 1.6);
-tl.call(() => setMouth("open"), null, 1.7);
-tl.call(() => setMouth("wide"), null, 1.833);
-tl.call(() => setMouth("open"), null, 1.967);
-tl.call(() => setMouth("wide"), null, 2.033);
-tl.call(() => setMouth("open"), null, 2.133);
-tl.call(() => setMouth("closed"), null, 2.2);
-tl.call(() => setMouth("small"), null, 2.3);
-tl.call(() => setMouth("wide"), null, 2.367);
-tl.call(() => setMouth("small"), null, 2.433);
-tl.call(() => setMouth("open"), null, 2.5);
-tl.call(() => setMouth("wide"), null, 2.567);
-tl.call(() => setMouth("small"), null, 2.633);
-tl.call(() => setMouth("open"), null, 2.7);
-tl.call(() => setMouth("wide"), null, 2.767);
-tl.call(() => setMouth("open"), null, 3.1);
-tl.call(() => setMouth("small"), null, 3.167);
-tl.call(() => setMouth("closed"), null, 3.233);
-tl.call(() => setMouth("small"), null, 3.633);
-tl.call(() => setMouth("wide"), null, 3.7);
-tl.call(() => setMouth("open"), null, 3.767);
-tl.call(() => setMouth("closed"), null, 3.833);
-tl.call(() => setMouth("wide"), null, 3.9);
-tl.call(() => setMouth("open"), null, 4.2);
-tl.call(() => setMouth("small"), null, 4.267);
-tl.call(() => setMouth("open"), null, 4.333);
-tl.call(() => setMouth("wide"), null, 4.4);
-tl.call(() => setMouth("open"), null, 4.467);
-tl.call(() => setMouth("wide"), null, 4.533);
-tl.call(() => setMouth("open"), null, 4.6);
-tl.call(() => setMouth("wide"), null, 4.7);
-tl.call(() => setMouth("small"), null, 4.833);
-tl.call(() => setMouth("open"), null, 4.933);
-tl.call(() => setMouth("wide"), null, 5.0);
-tl.call(() => setMouth("open"), null, 5.167);
-tl.call(() => setMouth("small"), null, 5.233);
-tl.call(() => setMouth("open"), null, 5.3);
-tl.call(() => setMouth("wide"), null, 5.367);
-tl.call(() => setMouth("small"), null, 5.433);
-tl.call(() => setMouth("open"), null, 5.5);
-tl.call(() => setMouth("wide"), null, 5.567);
-tl.call(() => setMouth("open"), null, 5.633);
-tl.call(() => setMouth("small"), null, 5.7);
-tl.call(() => setMouth("open"), null, 5.767);
-tl.call(() => setMouth("small"), null, 5.9);
-tl.call(() => setMouth("closed"), null, 5.967);
-tl.call(() => setMouth("small"), null, 6.3);
-tl.call(() => setMouth("wide"), null, 6.367);
-tl.call(() => setMouth("open"), null, 6.433);
-tl.call(() => setMouth("wide"), null, 6.5);
-tl.call(() => setMouth("open"), null, 6.567);
-tl.call(() => setMouth("small"), null, 6.7);
-tl.call(() => setMouth("open"), null, 6.8);
-tl.call(() => setMouth("small"), null, 6.867);
-tl.call(() => setMouth("closed"), null, 6.933);
-tl.call(() => setMouth("open"), null, 7.0);
-tl.call(() => setMouth("wide"), null, 7.067);
-tl.call(() => setMouth("small"), null, 7.133);
-tl.call(() => setMouth("open"), null, 7.2);
-tl.call(() => setMouth("wide"), null, 7.267);
-tl.call(() => setMouth("small"), null, 7.333);
-tl.call(() => setMouth("open"), null, 7.433);
-tl.call(() => setMouth("wide"), null, 7.5);
-tl.call(() => setMouth("open"), null, 7.567);
-tl.call(() => setMouth("small"), null, 7.633);
-tl.call(() => setMouth("closed"), null, 7.7);
-tl.call(() => setMouth("small"), null, 8.0);
-tl.call(() => setMouth("open"), null, 8.067);
-tl.call(() => setMouth("small"), null, 8.133);
-tl.call(() => setMouth("open"), null, 8.2);
-tl.call(() => setMouth("wide"), null, 8.267);
-tl.call(() => setMouth("open"), null, 8.333);
-tl.call(() => setMouth("small"), null, 8.4);
-tl.call(() => setMouth("closed"), null, 8.5);
-tl.call(() => setMouth("open"), null, 8.567);
-tl.call(() => setMouth("wide"), null, 8.633);
-tl.call(() => setMouth("open"), null, 8.7);
-tl.call(() => setMouth("small"), null, 8.767);
-tl.call(() => setMouth("open"), null, 8.833);
-tl.call(() => setMouth("wide"), null, 8.9);
-tl.call(() => setMouth("open"), null, 9.133);
-tl.call(() => setMouth("wide"), null, 9.3);
-tl.call(() => setMouth("open"), null, 9.367);
-tl.call(() => setMouth("small"), null, 9.633);
-tl.call(() => setMouth("closed"), null, 9.7);
-tl.call(() => setMouth("small"), null, 9.8);
-tl.call(() => setMouth("wide"), null, 9.867);
-tl.call(() => setMouth("open"), null, 10.033);
-tl.call(() => setMouth("small"), null, 10.1);
-tl.call(() => setMouth("wide"), null, 10.167);
-tl.call(() => setMouth("open"), null, 10.3);
-tl.call(() => setMouth("wide"), null, 10.4);
-tl.call(() => setMouth("small"), null, 10.467);
-tl.call(() => setMouth("open"), null, 10.533);
-tl.call(() => setMouth("wide"), null, 10.6);
-tl.call(() => setMouth("open"), null, 10.667);
-tl.call(() => setMouth("small"), null, 10.767);
-tl.call(() => setMouth("closed"), null, 10.967);
-tl.call(() => setMouth("small"), null, 11.033);
-tl.call(() => setMouth("closed"), null, 11.167);
-tl.call(() => setMouth("open"), null, 11.533);
-tl.call(() => setMouth("wide"), null, 11.6);
-tl.call(() => setMouth("open"), null, 12.167);
-tl.call(() => setMouth("wide"), null, 12.267);
-tl.call(() => setMouth("small"), null, 12.333);
-tl.call(() => setMouth("open"), null, 12.433);
-tl.call(() => setMouth("wide"), null, 12.5);
-tl.call(() => setMouth("small"), null, 12.567);
-tl.call(() => setMouth("closed"), null, 12.967);
-tl.call(() => setMouth("open"), null, 13.1);
-tl.call(() => setMouth("wide"), null, 13.167);
-tl.call(() => setMouth("small"), null, 13.233);
-tl.call(() => setMouth("open"), null, 13.367);
-tl.call(() => setMouth("wide"), null, 13.433);
-tl.call(() => setMouth("open"), null, 13.8);
-tl.call(() => setMouth("small"), null, 13.867);
-tl.call(() => setMouth("closed"), null, 14.033);
-tl.call(() => setMouth("small"), null, 14.3);
-tl.call(() => setMouth("wide"), null, 14.367);
-tl.call(() => setMouth("small"), null, 14.433);
-tl.call(() => setMouth("closed"), null, 14.5);
-tl.call(() => setMouth("wide"), null, 14.567);
-tl.call(() => setMouth("open"), null, 14.667);
-tl.call(() => setMouth("wide"), null, 14.733);
-tl.call(() => setMouth("open"), null, 14.8);
-tl.call(() => setMouth("small"), null, 14.867);
-tl.call(() => setMouth("wide"), null, 14.933);
-tl.call(() => setMouth("open"), null, 15.133);
-tl.call(() => setMouth("small"), null, 15.2);
-tl.call(() => setMouth("open"), null, 15.267);
-tl.call(() => setMouth("wide"), null, 15.333);
-tl.call(() => setMouth("small"), null, 15.4);
-tl.call(() => setMouth("open"), null, 15.467);
-tl.call(() => setMouth("wide"), null, 15.533);
-tl.call(() => setMouth("small"), null, 15.6);
-tl.call(() => setMouth("closed"), null, 15.733);
-tl.call(() => setMouth("small"), null, 15.8);
-tl.call(() => setMouth("closed"), null, 15.933);
-tl.call(() => setMouth("open"), null, 16.233);
-tl.call(() => setMouth("wide"), null, 16.3);
-tl.call(() => setMouth("open"), null, 16.367);
-tl.call(() => setMouth("small"), null, 16.433);
-tl.call(() => setMouth("wide"), null, 16.5);
-tl.call(() => setMouth("open"), null, 16.6);
-tl.call(() => setMouth("closed"), null, 16.667);
-tl.call(() => setMouth("open"), null, 16.733);
-tl.call(() => setMouth("wide"), null, 16.8);
-tl.call(() => setMouth("open"), null, 16.9);
-tl.call(() => setMouth("closed"), null, 16.967);
-tl.call(() => setMouth("small"), null, 17.467);
-tl.call(() => setMouth("wide"), null, 17.5);
-tl.call(() => setMouth("open"), null, 17.567);
-tl.call(() => setMouth("wide"), null, 17.667);
-tl.call(() => setMouth("open"), null, 17.733);
-tl.call(() => setMouth("wide"), null, 17.8);
-tl.call(() => setMouth("open"), null, 17.967);
-tl.call(() => setMouth("small"), null, 18.033);
-tl.call(() => setMouth("open"), null, 18.1);
-tl.call(() => setMouth("small"), null, 18.167);
-tl.call(() => setMouth("closed"), null, 18.233);
-tl.call(() => setMouth("open"), null, 18.3);
-tl.call(() => setMouth("small"), null, 18.4);
-tl.call(() => setMouth("open"), null, 18.467);
-tl.call(() => setMouth("wide"), null, 18.533);
-tl.call(() => setMouth("open"), null, 18.733);
-tl.call(() => setMouth("small"), null, 18.8);
-tl.call(() => setMouth("open"), null, 18.867);
-tl.call(() => setMouth("small"), null, 19.7);
-tl.call(() => setMouth("open"), null, 19.8);
-tl.call(() => setMouth("small"), null, 19.867);
-tl.call(() => setMouth("open"), null, 19.967);
-tl.call(() => setMouth("small"), null, 20.1);
-tl.call(() => setMouth("open"), null, 20.267);
-tl.call(() => setMouth("small"), null, 20.333);
-tl.call(() => setMouth("closed"), null, 20.4);
-tl.call(() => setMouth("small"), null, 20.733);
-tl.call(() => setMouth("wide"), null, 20.8);
-tl.call(() => setMouth("small"), null, 20.967);
-tl.call(() => setMouth("open"), null, 21.067);
-tl.call(() => setMouth("wide"), null, 21.133);
-tl.call(() => setMouth("open"), null, 21.233);
-tl.call(() => setMouth("small"), null, 21.3);
-tl.call(() => setMouth("open"), null, 21.4);
-tl.call(() => setMouth("wide"), null, 21.467);
-tl.call(() => setMouth("open"), null, 21.533);
-tl.call(() => setMouth("small"), null, 21.6);
-tl.call(() => setMouth("closed"), null, 21.733);
-tl.call(() => setMouth("small"), null, 21.833);
-tl.call(() => setMouth("wide"), null, 21.9);
-tl.call(() => setMouth("open"), null, 22.033);
-tl.call(() => setMouth("small"), null, 22.1);
-tl.call(() => setMouth("open"), null, 22.167);
-tl.call(() => setMouth("small"), null, 22.333);
-tl.call(() => setMouth("closed"), null, 22.4);
-tl.call(() => setMouth("open"), null, 22.467);
-tl.call(() => setMouth("small"), null, 22.567);
-tl.call(() => setMouth("closed"), null, 22.633);
-tl.call(() => setMouth("small"), null, 22.7);
-tl.call(() => setMouth("closed"), null, 22.8);
-tl.call(() => setMouth("small"), null, 22.933);
-tl.call(() => setMouth("open"), null, 23.0);
-tl.call(() => setMouth("small"), null, 23.1);
-tl.call(() => setMouth("open"), null, 23.2);
-tl.call(() => setMouth("wide"), null, 23.267);
-tl.call(() => setMouth("open"), null, 23.5);
-tl.call(() => setMouth("wide"), null, 23.6);
-tl.call(() => setMouth("open"), null, 23.667);
-tl.call(() => setMouth("wide"), null, 23.8);
-tl.call(() => setMouth("open"), null, 23.867);
-tl.call(() => setMouth("closed"), null, 24.0);
-tl.call(() => setMouth("open"), null, 24.1);
-tl.call(() => setMouth("wide"), null, 24.167);
-tl.call(() => setMouth("small"), null, 24.233);
-tl.call(() => setMouth("closed"), null, 24.567);
-tl.call(() => setMouth("small"), null, 24.867);
-tl.call(() => setMouth("wide"), null, 24.933);
-tl.call(() => setMouth("open"), null, 25.333);
-tl.call(() => setMouth("wide"), null, 25.4);
-tl.call(() => setMouth("open"), null, 25.467);
-tl.call(() => setMouth("wide"), null, 25.533);
-tl.call(() => setMouth("open"), null, 25.667);
-tl.call(() => setMouth("wide"), null, 25.767);
-tl.call(() => setMouth("open"), null, 25.867);
-tl.call(() => setMouth("wide"), null, 25.933);
-tl.call(() => setMouth("open"), null, 26.133);
-tl.call(() => setMouth("small"), null, 26.2);
-tl.call(() => setMouth("open"), null, 26.267);
-tl.call(() => setMouth("wide"), null, 26.333);
-tl.call(() => setMouth("open"), null, 26.433);
-tl.call(() => setMouth("small"), null, 26.5);
-tl.call(() => setMouth("open"), null, 26.633);
-tl.call(() => setMouth("wide"), null, 26.733);
-tl.call(() => setMouth("small"), null, 26.867);
-tl.call(() => setMouth("open"), null, 26.933);
-tl.call(() => setMouth("wide"), null, 27.0);
-tl.call(() => setMouth("open"), null, 27.067);
-tl.call(() => setMouth("wide"), null, 27.133);
-tl.call(() => setMouth("open"), null, 27.333);
-tl.call(() => setMouth("wide"), null, 27.4);
-tl.call(() => setMouth("open"), null, 27.5);
-tl.call(() => setMouth("small"), null, 27.567);
-tl.call(() => setMouth("wide"), null, 27.6);
-tl.call(() => setMouth("open"), null, 27.733);
-tl.call(() => setMouth("small"), null, 27.8);
-tl.call(() => setMouth("wide"), null, 27.867);
-tl.call(() => setMouth("open"), null, 28.167);
-tl.call(() => setMouth("small"), null, 28.3);
-tl.call(() => setMouth("closed"), null, 28.5);
-tl.call(() => setMouth("small"), null, 28.767);
-tl.call(() => setMouth("open"), null, 28.833);
-tl.call(() => setMouth("wide"), null, 28.9);
-tl.call(() => setMouth("open"), null, 29.067);
-tl.call(() => setMouth("closed"), null, 29.1);
-tl.call(() => setMouth("small"), null, 29.167);
-tl.call(() => setMouth("wide"), null, 29.2);
-tl.call(() => setMouth("open"), null, 29.267);
-tl.call(() => setMouth("small"), null, 29.333);
-tl.call(() => setMouth("open"), null, 29.433);
-tl.call(() => setMouth("small"), null, 29.567);
-tl.call(() => setMouth("open"), null, 29.667);
-tl.call(() => setMouth("small"), null, 29.767);
-tl.call(() => setMouth("open"), null, 29.833);
-tl.call(() => setMouth("wide"), null, 29.9);
-tl.call(() => setMouth("small"), null, 29.967);
-tl.call(() => setMouth("closed"), null, 30.267);
-tl.call(() => setMouth("small"), null, 30.533);
-tl.call(() => setMouth("wide"), null, 30.567);
-tl.call(() => setMouth("open"), null, 30.7);
-tl.call(() => setMouth("small"), null, 30.767);
-tl.call(() => setMouth("open"), null, 30.833);
-tl.call(() => setMouth("wide"), null, 30.9);
-tl.call(() => setMouth("open"), null, 31.0);
-tl.call(() => setMouth("small"), null, 31.067);
-tl.call(() => setMouth("open"), null, 31.133);
-tl.call(() => setMouth("wide"), null, 31.2);
-tl.call(() => setMouth("open"), null, 31.4);
-tl.call(() => setMouth("small"), null, 31.467);
-tl.call(() => setMouth("wide"), null, 31.533);
-tl.call(() => setMouth("open"), null, 31.633);
-tl.call(() => setMouth("small"), null, 31.733);
-tl.call(() => setMouth("closed"), null, 31.833);
-tl.call(() => setMouth("small"), null, 32.1);
-tl.call(() => setMouth("open"), null, 32.167);
-tl.call(() => setMouth("wide"), null, 32.3);
-tl.call(() => setMouth("open"), null, 32.567);
-tl.call(() => setMouth("wide"), null, 32.633);
-tl.call(() => setMouth("open"), null, 32.8);
-tl.call(() => setMouth("small"), null, 32.867);
-tl.call(() => setMouth("closed"), null, 33.133);
-tl.call(() => setMouth("small"), null, 33.667);
-tl.call(() => setMouth("wide"), null, 33.733);
-tl.call(() => setMouth("open"), null, 33.967);
-tl.call(() => setMouth("closed"), null, 34.033);
-tl.call(() => setMouth("small"), null, 34.1);
-tl.call(() => setMouth("open"), null, 34.167);
-tl.call(() => setMouth("wide"), null, 34.3);
-tl.call(() => setMouth("open"), null, 34.4);
-tl.call(() => setMouth("wide"), null, 34.467);
-tl.call(() => setMouth("open"), null, 34.533);
-tl.call(() => setMouth("wide"), null, 34.767);
-tl.call(() => setMouth("open"), null, 34.833);
-tl.call(() => setMouth("wide"), null, 35.0);
-tl.call(() => setMouth("open"), null, 35.067);
-tl.call(() => setMouth("small"), null, 35.133);
-tl.call(() => setMouth("closed"), null, 35.267);
-tl.call(() => setMouth("small"), null, 35.5);
-tl.call(() => setMouth("open"), null, 35.567);
-tl.call(() => setMouth("wide"), null, 35.667);
-tl.call(() => setMouth("open"), null, 35.733);
-tl.call(() => setMouth("small"), null, 35.867);
-tl.call(() => setMouth("open"), null, 36.0);
-tl.call(() => setMouth("wide"), null, 36.067);
-tl.call(() => setMouth("open"), null, 36.233);
-tl.call(() => setMouth("wide"), null, 36.3);
-tl.call(() => setMouth("open"), null, 36.4);
-tl.call(() => setMouth("small"), null, 36.533);
-tl.call(() => setMouth("open"), null, 36.633);
-tl.call(() => setMouth("wide"), null, 36.733);
-tl.call(() => setMouth("open"), null, 36.8);
-tl.call(() => setMouth("closed"), null, 36.867);
-tl.call(() => setMouth("small"), null, 36.933);
-tl.call(() => setMouth("wide"), null, 37.0);
-tl.call(() => setMouth("open"), null, 37.067);
-tl.call(() => setMouth("wide"), null, 37.2);
-tl.call(() => setMouth("open"), null, 37.267);
-tl.call(() => setMouth("small"), null, 37.333);
-tl.call(() => setMouth("open"), null, 37.4);
-tl.call(() => setMouth("small"), null, 37.5);
-tl.call(() => setMouth("closed"), null, 37.6);
-tl.call(() => setMouth("small"), null, 37.8);
-tl.call(() => setMouth("open"), null, 37.867);
-tl.call(() => setMouth("wide"), null, 38.033);
-tl.call(() => setMouth("open"), null, 38.133);
-tl.call(() => setMouth("wide"), null, 38.233);
-tl.call(() => setMouth("open"), null, 38.3);
-tl.call(() => setMouth("small"), null, 38.367);
-tl.call(() => setMouth("open"), null, 38.433);
-tl.call(() => setMouth("small"), null, 38.6);
-tl.call(() => setMouth("open"), null, 38.7);
-tl.call(() => setMouth("wide"), null, 38.767);
-tl.call(() => setMouth("open"), null, 38.833);
-tl.call(() => setMouth("small"), null, 38.933);
-tl.call(() => setMouth("open"), null, 39.033);
-tl.call(() => setMouth("small"), null, 39.2);
-tl.call(() => setMouth("open"), null, 39.267);
-tl.call(() => setMouth("small"), null, 39.4);
-tl.call(() => setMouth("closed"), null, 39.633);
-
-    // 6. Word-by-Word Kinetic Subtitle Schedule
-    captionChunks.forEach(chunk => {
-      tl.call(() => {
-        const bar = document.getElementById("caption-bar");
-        if (!bar) return;
-        bar.innerHTML = "";
-        chunk.words.forEach((w, wIdx) => {
-          const span = document.createElement("span");
-          span.className = "w" + (wIdx === chunk.active ? " on" : (wIdx < chunk.active ? " done" : ""));
-          span.innerText = w;
-          bar.appendChild(span);
-        });
-      }, null, chunk.start);
-    });
+    // Final timeline boundary
+    tl.to({}, { duration: 0.01 }, 34.92);
   </script>
 </body>
 </html>

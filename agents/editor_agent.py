@@ -1,13 +1,5 @@
-"""
-Editor Agent:
-Responsible for frame-accurate rendering, studio audio mastering, SFX synchronization,
-and creator outro stitching.
-"""
-
 import os
-import glob
 import json
-import random
 import subprocess
 import time
 from pipeline.audio_enhancer import produce_master_audio
@@ -16,17 +8,23 @@ def run_editor_agent(
     raw_video_path="out/raw_video.mp4",
     voice_path="assets/voice.mp3",
     output_final_path="out/daily-reel.mp4",
-    cta_dir="assets/cta",
-    duration=None
+    duration=None,
+    slot_id=1
 ):
-    print("================================================================================")
-    print("🎬 [EDITOR AGENT] Commencing Broadcast Assembly & SFX Synchronization...")
-    print("================================================================================")
+    """
+    EDITOR AGENT:
+    Renders kinetic HyperFrames composition to MP4,
+    masters broadcast audio with looping music & dynamic SFX,
+    and multiplexes final broadcast 1080x1920 video with rotating creator face CTA.
+    """
+    print("=" * 65)
+    print("🎬 [AGENT 5: EDITOR AGENT] Commencing Broadcast Assembly & SFX Synchronization...")
+    print("=" * 65)
     start_time = time.time()
     os.makedirs("out", exist_ok=True)
-    os.makedirs("assets/cta_normalized", exist_ok=True)
+    os.makedirs(os.path.dirname(output_final_path) or ".", exist_ok=True)
 
-    # 1. Determine duration from voiceover or hyperframes.json
+    # 1. Determine duration
     if duration is None:
         if os.path.exists("hyperframes.json"):
             try:
@@ -44,34 +42,34 @@ def run_editor_agent(
         else:
             duration = 30.0
 
-    print(f"[✓] Target visual duration locked: {duration:.2f} seconds")
+    print(f"[✓] Target duration locked: {duration:.2f}s")
 
-    # 2. Render HyperFrames HTML composition to MP4
-    print("[1/4] Rendering kinetic Neo-Brutalist HTML composition with HyperFrames...")
-    render_cmd = f"echo '' | npx --yes hyperframes render -o {raw_video_path}"
+    # 2. Render HyperFrames HTML composition
+    print("[1/3] Rendering kinetic Neo-Brutalist HTML composition with HyperFrames...")
+    render_cmd = f"echo '' | npx --yes hyperframes render -o '{raw_video_path}'"
     res = subprocess.run(render_cmd, shell=True, capture_output=True, text=True)
     if res.returncode != 0:
-        print(f"[!] HyperFrames render warning/error:\n{res.stderr}")
+        print(f"[!] HyperFrames render warning:\n{res.stderr}")
         if not os.path.exists(raw_video_path):
             raise RuntimeError(f"HyperFrames render failed: {res.stderr}")
 
     if not os.path.exists(raw_video_path):
         raise FileNotFoundError(f"Render output missing: {raw_video_path}")
-    print(f"[✓] Raw video rendered successfully: {raw_video_path}")
+    print(f"[✓] Raw kinetic video rendered successfully: {raw_video_path}")
 
-    # 3. Master broadcast audio with ducked music and frame-accurate SFX
-    print("[2/4] Mixing broadcast audio with dynamic sound design (sub-bass boom, swooshes, pops, dings)...")
+    # 3. Master broadcast audio with ducked looping beat and frame-accurate SFX
+    print("[2/3] Mastering broadcast audio with looping beat and frame-accurate SFX...")
     master_audio_path = "assets/master_audio.mp3"
     produce_master_audio(
         voice_path=voice_path,
         output_audio=master_audio_path,
         duration=duration
     )
-    print(f"[✓] Audio mastered and enhanced: {master_audio_path}")
+    print(f"[✓] Audio mastered: {master_audio_path}")
 
-    # 4. Multiplex video and audio
-    print("[3/4] Muxing video and studio master audio...")
-    temp_main = "out/temp_main.mp4"
+    # 4. Multiplex video and audio into intermediate main reel
+    temp_main = f"out/temp_main_reel_{slot_id}.mp4"
+    print("[3/4] Muxing video and studio master audio into main reel...")
     mux_cmd = [
         "ffmpeg", "-y",
         "-i", raw_video_path,
@@ -86,58 +84,42 @@ def run_editor_agent(
         "-shortest",
         temp_main
     ]
-    subprocess.check_call(mux_cmd)
-    print(f"[✓] Multiplexed core reel: {temp_main}")
+    subprocess.check_call(mux_cmd, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
 
-    # 5. Seamlessly append rotating creator CTA
-    print("[4/4] Normalizing and appending creator face CTA outro...")
-    cta_files = sorted(glob.glob(os.path.join(cta_dir, "*.mp4")))
-    if cta_files:
-        chosen_cta = random.choice(cta_files)
-        normalized_cta = os.path.join("assets/cta_normalized", os.path.basename(chosen_cta))
-        
-        # Normalize CTA to 1080x1920 @ 30fps and 44100Hz stereo AAC
-        norm_cmd = [
-            "ffmpeg", "-y",
-            "-i", chosen_cta,
-            "-vf", "scale=1080:1920:force_original_aspect_ratio=decrease,pad=1080:1920:(ow-iw)/2:(oh-ih)/2,fps=30",
-            "-c:v", "libx264",
-            "-preset", "fast",
-            "-crf", "18",
-            "-pix_fmt", "yuv420p",
-            "-c:a", "aac",
-            "-ar", "44100",
-            "-ac", "2",
-            "-b:a", "192k",
-            normalized_cta
-        ]
-        subprocess.check_call(norm_cmd)
+    # 5. Concatenate with Creator Face CTA Outro
+    cta_idx = ((slot_id - 1) % 7) + 1
+    norm_cta_path = f"assets/cta/norm_cta_{cta_idx}.mp4"
+    print(f"[4/4] Stitching creator face CTA outro (Rotation #{cta_idx}: {norm_cta_path})...")
 
-        concat_list = "out/concat_list.txt"
-        with open(concat_list, "w") as f:
-            f.write(f"file '{os.path.abspath(temp_main)}'\n")
-            f.write(f"file '{os.path.abspath(normalized_cta)}'\n")
-
+    if os.path.exists(norm_cta_path):
         concat_cmd = [
             "ffmpeg", "-y",
-            "-f", "concat",
-            "-safe", "0",
-            "-i", concat_list,
+            "-i", temp_main,
+            "-i", norm_cta_path,
+            "-filter_complex", "[0:v:0][0:a:0][1:v:0][1:a:0]concat=n=2:v=1:a=1[v][a]",
+            "-map", "[v]",
+            "-map", "[a]",
             "-c:v", "libx264",
             "-preset", "fast",
-            "-crf", "18",
+            "-crf", "22",
+            "-pix_fmt", "yuv420p",
             "-c:a", "aac",
             "-b:a", "192k",
             "-ar", "44100",
             "-ac", "2",
             output_final_path
         ]
-        subprocess.check_call(concat_cmd)
-        print(f"[✓] Creator outro appended smoothly: {output_final_path}")
+        subprocess.check_call(concat_cmd, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+        if os.path.exists(temp_main):
+            try:
+                os.remove(temp_main)
+            except Exception:
+                pass
+        print(f"[✓] Assembled master reel with creator face CTA: {output_final_path}")
     else:
-        print("[!] No creator CTA found in assets/cta, keeping temp_main as final output.")
-        import shutil
-        shutil.copyfile(temp_main, output_final_path)
+        print(f"[!] Warning: {norm_cta_path} not found. Keeping main animated reel.")
+        if os.path.exists(temp_main):
+            os.replace(temp_main, output_final_path)
 
     elapsed = time.time() - start_time
 
@@ -148,18 +130,22 @@ def run_editor_agent(
 
     manifest = {
         "status": "COMPLETED",
-        "final_video_path": output_final_path,
-        "width": int(stream_info.get("width", 1080)),
-        "height": int(stream_info.get("height", 1920)),
+        "video_path": output_final_path,
+        "width": stream_info.get("width"),
+        "height": stream_info.get("height"),
         "duration": float(stream_info.get("duration", duration)),
-        "render_time_seconds": round(elapsed, 2)
+        "fps": stream_info.get("r_frame_rate"),
+        "master_audio": master_audio_path,
+        "cta_appended": os.path.exists(norm_cta_path),
+        "cta_file": norm_cta_path if os.path.exists(norm_cta_path) else None,
+        "render_elapsed_seconds": round(elapsed, 2)
     }
 
     with open("assets/editor_manifest.json", "w") as f:
         json.dump(manifest, f, indent=2)
 
-    print(f"🎬 [EDITOR AGENT] Finished assembly in {elapsed:.1f}s -> {output_final_path}")
     return manifest
 
 if __name__ == "__main__":
     run_editor_agent()
+

@@ -1,10 +1,10 @@
 """
 Multi-Slot Production & Scheduling Coordinator:
-Executes the 7-Agent Engine for each pending/upcoming slot:
-- Slot 2 (12:00 PM IST): Post Now
-- Slot 3 (3:00 PM IST): Schedule for 09:30 UTC
-- Slot 4 (6:00 PM IST): Schedule for 12:30 UTC
-- Slot 5 (9:00 PM IST): Schedule for 15:30 UTC
+Executes the upgraded 7-Agent Production Engine for each pending slot:
+- Slot 2 (12:00 PM IST): Post Now (Instant Makeup Post)
+- Slot 3 (3:00 PM IST): Schedule for 5:30 PM IST (12:00 UTC)
+- Slot 4 (6:00 PM IST): Schedule for 6:00 PM IST (12:30 UTC)
+- Slot 5 (9:00 PM IST): Schedule for 9:00 PM IST (15:30 UTC)
 """
 
 import os
@@ -12,39 +12,47 @@ import sys
 import json
 import time
 import datetime
+import subprocess
 
-# Ensure project root is in python path
 ROOT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 if ROOT_DIR not in sys.path:
     sys.path.insert(0, ROOT_DIR)
 
-from agents.pipeline_orchestrator import run_production_pipeline, SLOT_CONFIGS
+from agents.pipeline_orchestrator import run_production_pipeline
 from pipeline.buffer_dispatcher import dispatch_to_all_platforms
 
 SCHEDULE_PLAN = [
+    {
+        "slot_id": 1,
+        "name": "Morning Breakthrough",
+        "theme": "open source AI developer tools GitHub 2026",
+        "cta": "REPOS",
+        "due_at_utc": None, # Post immediately
+        "time_ist": "9:00 AM (Morning Makeup Post)"
+    },
     {
         "slot_id": 2,
         "name": "Midday Cheat Code",
         "theme": "autonomous AI automation workflows 2026",
         "cta": "WORKFLOW",
-        "due_at_utc": None, # Post immediately (Makeup for 12 PM)
-        "time_ist": "12:00 PM (Instant Makeup Post)"
+        "due_at_utc": None, # Post immediately
+        "time_ist": "12:00 PM (Midday Makeup Post)"
     },
     {
         "slot_id": 3,
         "name": "Tech Radar Teardown",
         "theme": "new open weights multimodal reasoning AI models",
         "cta": "MODELS",
-        "due_at_utc": "2026-10-12T09:30:00.000Z", # 3:00 PM IST
-        "time_ist": "3:00 PM IST"
+        "due_at_utc": None, # Post immediately
+        "time_ist": "3:00 PM (Afternoon Makeup Post)"
     },
     {
         "slot_id": 4,
         "name": "Evening Toolkit",
         "theme": "secret web AI developer productivity tools 2026",
         "cta": "TOOLS",
-        "due_at_utc": "2026-10-12T12:30:00.000Z", # 6:00 PM IST
-        "time_ist": "6:00 PM IST"
+        "due_at_utc": None, # Post immediately
+        "time_ist": "6:00 PM (Evening Post)"
     },
     {
         "slot_id": 5,
@@ -52,7 +60,7 @@ SCHEDULE_PLAN = [
         "theme": "advanced prompt engineering frameworks architectures 2026",
         "cta": "PROMPT",
         "due_at_utc": "2026-10-12T15:30:00.000Z", # 9:00 PM IST
-        "time_ist": "9:00 PM IST"
+        "time_ist": "9:00 PM IST (Scheduled)"
     }
 ]
 
@@ -67,9 +75,31 @@ def produce_and_dispatch_slot(plan_item):
     print(f"🎬 PROCESSING SLOT {slot_id}: {plan_item['name']} ({time_ist})")
     print("================================================================================")
 
-    # 1. Run full 7-agent pipeline
-    verdict = run_production_pipeline(slot_id=slot_id, theme_focus=theme, cta_keyword=cta)
-    video_path = verdict["video_path"]
+    # 1. Run full 7-agent pipeline (or reuse recent render if fresh)
+    final_reel = f"out/slot_{slot_id}_daily_reel.mp4"
+    if os.path.exists(final_reel) and (time.time() - os.path.getmtime(final_reel) < 1800):
+        print(f"[*] Found fresh existing reel for Slot {slot_id} ({final_reel}), reusing verified render...")
+        raw_video = final_reel
+    else:
+        verdict = run_production_pipeline(slot_id=slot_id, theme_focus=theme, cta_keyword=cta)
+        raw_video = verdict["video_path"]
+
+    # Optimize video for high-speed CDN and mobile streaming
+    opt_video = raw_video.replace(".mp4", "_opt.mp4")
+    print(f"[*] Optimizing video for mobile delivery: {opt_video}...")
+    opt_cmd = [
+        "ffmpeg", "-y",
+        "-i", raw_video,
+        "-c:v", "libx264",
+        "-preset", "fast",
+        "-crf", "23",
+        "-pix_fmt", "yuv420p",
+        "-c:a", "aac",
+        "-b:a", "192k",
+        opt_video
+    ]
+    subprocess.run(opt_cmd, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, check=True)
+    video_to_dispatch = opt_video if os.path.exists(opt_video) else raw_video
 
     # 2. Load generated dossier & script
     with open("assets/research_dossier.json") as f:
@@ -92,7 +122,7 @@ def produce_and_dispatch_slot(plan_item):
 
     # 3. Dispatch to Buffer across all platforms
     print(f"\n[*] Dispatching to all platforms (Scheduled: {due_at or 'SHARE NOW'})...")
-    results = dispatch_to_all_platforms(video_path, meta, items, due_at_utc=due_at)
+    results = dispatch_to_all_platforms(video_to_dispatch, meta, items, due_at_utc=due_at)
 
     # 4. Record in published history
     hist_entry = {
@@ -102,7 +132,7 @@ def produce_and_dispatch_slot(plan_item):
         "date_ist": f"2026-10-12 {time_ist}",
         "buffer_post_id": results.get("instagram", "scheduled"),
         "channel_results": results,
-        "video_path": video_path,
+        "video_path": video_to_dispatch,
         "items": items
     }
 
