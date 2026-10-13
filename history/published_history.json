@@ -1032,5 +1032,185 @@
         "source": "Tavily (Real-Time)"
       }
     ]
+  },
+  {
+    "slot_id": 1,
+    "slot_name": "Morning Breakthrough (Slot 1)",
+    "timestamp_utc": "2026-10-13T19:35:46.329589+00:00",
+    "date_ist": "2026-10-14 9:00 AM IST (Scheduled for 03:30 UTC)",
+    "buffer_post_id": "6ace8810cb3665561f638dea",
+    "channel_results": {
+      "instagram": "6ace8810cb3665561f638dea",
+      "youtube": "6ace8811cb3665561f638e27",
+      "twitter": "6ace8812eaea728d3caeb8a5"
+    },
+    "video_path": "out/slot_1_daily_reel_opt.mp4",
+    "items": [
+      {
+        "title": "REA, the Reverse Engineering Tool for AI Agents, Hits 140,000 GitHub Stars in Five Days | by Alex Carter | Oct, 2026 | Medium",
+        "name": "REA, the Reverse Engineering Tool f",
+        "description": "## The momentum came from promotion more than from demos  Third-party GitHub trending data cited by a Medium writer put REA at 9,658 stars on October 7. On October 8, Matthew Berman posted about it on X, calling the mome",
+        "url": "https://medium.com/@info.booststash/rea-the-reverse-engineering-tool-for-ai-agents-hits-140-000-github-stars-in-five-days-d30fa52d8650",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "17 Best Free AI Coding Agents in 2026 | Agentic.ai",
+        "name": "17 Best Free AI Coding Agents in 20",
+        "description": "Agenticness22/36\u00b7Domain Specialist  Orbi is an open-source, self-hostable AI coding agent that takes GitHub Issues from implementation through independent review, merge, and release. It can run against your own model end",
+        "url": "https://agentic.ai/best/free-coding-agents",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "Releases \u00b7 github/copilot-cli",
+        "name": "Releases",
+        "description": "Releases \u00b7 github/copilot-cli \u00b7 GitHub  ## 1.0.97-2  1.0.97-2  Pre-release  copilot-cli-release-app released this    13 Oct 01:09    v1.0.97-2    `a3f560e`   Fixed  - Discover all custom agents even when repositories def",
+        "url": "https://github.com/github/copilot-cli/releases",
+        "source": "Exa (24h Index)"
+      }
+    ]
+  },
+  {
+    "slot_id": 2,
+    "slot_name": "Midday Cheat Code (Slot 2)",
+    "timestamp_utc": "2026-10-13T19:43:09.188244+00:00",
+    "date_ist": "2026-10-14 12:00 PM IST (Scheduled for 06:30 UTC)",
+    "buffer_post_id": "6ace89cb9abb1755a4731202",
+    "channel_results": {
+      "instagram": "6ace89cb9abb1755a4731202",
+      "youtube": "6ace89cc9abb1755a473125c",
+      "twitter": "6ace89cdeaea728d3caf098e"
+    },
+    "video_path": "out/slot_2_daily_reel_opt.mp4",
+    "items": [
+      {
+        "title": "personal-ai \u00b7 GitHub Topics \u00b7 GitHub",
+        "name": "personal-ai",
+        "description": "windows opensource ai open-source-project autonomous-agents ai-agents ai-os local-first ai-tools personal-ai llm aiden ai-skills agentskills aiden-agent   Updated Sep 13, 2026  TypeScript  ### rome-os / rome  Star  671",
+        "url": "https://github.com/topics/personal-ai?l=typescript",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "17 Best Free AI Coding Agents in 2026 | Agentic.ai",
+        "name": "17 Best Free AI Coding Agents in 20",
+        "description": "Agenticness22/36\u00b7Domain Specialist  Orbi is an open-source, self-hostable AI coding agent that takes GitHub Issues from implementation through independent review, merge, and release. It can run against your own model end",
+        "url": "https://agentic.ai/best/free-coding-agents",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "Workday Launches Autopilot Agents That Get Real Work Done Across HR, Finance, and IT",
+        "name": "Workday Launches Autopilot Agents T",
+        "description": "Workday Launches Autopilot Agents That Get Real Work Done Across HR, Finance, and IT  # Workday Launches Autopilot Agents That Get Real Work Done Across HR, Finance, and IT   Workday Inc.   Oct 13, 2026, 09:00 ET  New Ag",
+        "url": "https://www.prnewswire.com/news-releases/workday-launches-autopilot-agents-that-get-real-work-done-across-hr-finance-and-it-302906706.html",
+        "source": "Exa (24h Index)"
+      }
+    ]
+  },
+  {
+    "slot_id": 3,
+    "slot_name": "Tech Radar Teardown (Slot 3)",
+    "timestamp_utc": "2026-10-13T19:47:31.792463+00:00",
+    "date_ist": "2026-10-14 3:00 PM IST (Scheduled for 09:30 UTC)",
+    "buffer_post_id": "6ace8ad1134248a19784fa92",
+    "channel_results": {
+      "instagram": "6ace8ad1134248a19784fa92",
+      "youtube": "6ace8ad2eaea728d3caf33ce",
+      "twitter": "6ace8ad39abb1755a473450a"
+    },
+    "video_path": "out/slot_3_daily_reel_opt.mp4",
+    "items": [
+      {
+        "title": "rising repo",
+        "name": "rising repo",
+        "description": "| stas00avatar ml-engineering  Machine Learning Engineering Open Book  ai  debugging  gpus  inference  large-language-models  llm  machine-learning  machine-learning-engineering  mlops  network  pytorch  scalability  slu",
+        "url": "https://yanggggjie.github.io/rising-repo",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "Perplexity pplx-embed-v2-late: Open Multimodal Models",
+        "name": "Perplexity pplx-embed-v2-late: Open",
+        "description": "Perplexity pplx-embed-v2-late: Open Multimodal Models  Model release 11 Oct 2026  # Perplexity Opens pplx-embed-v2-late Retrieval Models  Perplexity publishes MIT-licensed 0.6B and 9B late-interaction embeddings for text",
+        "url": "https://openmodelweights.com/news/perplexity-pplx-embed-v2-late-open-multimodal-retrieval/",
+        "source": "Exa (24h Index)"
+      },
+      {
+        "title": "Cloudflare Clef-omni: Open Multimodal Decision Model",
+        "name": "Cloudflare Clef-omni: Open Multimod",
+        "description": "Cloudflare Clef-omni: Open Multimodal Decision Model  Model release 11 Oct 2026  # Cloudflare Releases Clef-omni Open Multimodal Weights  Cloudflare's new Apache-2.0 Clef-omni checkpoint scores structured decisions acros",
+        "url": "https://openmodelweights.com/news/cloudflare-clef-omni-open-multimodal-decision-weights/",
+        "source": "Exa (24h Index)"
+      }
+    ]
+  },
+  {
+    "slot_id": 4,
+    "slot_name": "Evening Toolkit (Slot 4)",
+    "timestamp_utc": "2026-10-13T19:50:48.101873+00:00",
+    "date_ist": "2026-10-14 6:00 PM IST (Scheduled for 12:30 UTC)",
+    "buffer_post_id": "6ace8b964a3bafcd1301404d",
+    "channel_results": {
+      "instagram": "6ace8b964a3bafcd1301404d",
+      "youtube": "6ace8b97cb3665561f641ee8",
+      "twitter": "6ace8b97eaea728d3caf5287"
+    },
+    "video_path": "out/slot_4_daily_reel_opt.mp4",
+    "items": [
+      {
+        "title": "personal-ai \u00b7 GitHub Topics \u00b7 GitHub",
+        "name": "personal-ai",
+        "description": "electron desktop-app macos security telegram mcp discord-bot self-hosted gemini openai slack-bot whatsapp-bot ai-assistants claude guardrails local-first personal-ai ai-automation llm model-context-protocol   Updated Oct",
+        "url": "https://github.com/topics/personal-ai?l=typescript",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "REA, the Reverse Engineering Tool for AI Agents, Hits 140,000 GitHub Stars in Five Days | by Alex Carter | Oct, 2026 | Medium",
+        "name": "REA, the Reverse Engineering Tool f",
+        "description": "Sitemap  Open in app  Sign in  Sign in  AI  AI Agent  Software Development  Web Development  DevOps  # REA, the Reverse Engineering Tool for AI Agents, Hits 140,000 GitHub Stars in Five Days  ## An MIT-licensed project t",
+        "url": "https://medium.com/@info.booststash/rea-the-reverse-engineering-tool-for-ai-agents-hits-140-000-github-stars-in-five-days-d30fa52d8650",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "17 Best Free AI Coding Agents in 2026 | Agentic.ai",
+        "name": "17 Best Free AI Coding Agents in 20",
+        "description": "Agenticness22/36\u00b7Domain Specialist  Orbi is an open-source, self-hostable AI coding agent that takes GitHub Issues from implementation through independent review, merge, and release. It can run against your own model end",
+        "url": "https://agentic.ai/best/free-coding-agents",
+        "source": "Tavily (Real-Time)"
+      }
+    ]
+  },
+  {
+    "slot_id": 5,
+    "slot_name": "Night Owl Deep Dive (Slot 5)",
+    "timestamp_utc": "2026-10-13T19:54:53.623440+00:00",
+    "date_ist": "2026-10-14 9:00 PM IST (Scheduled for 15:30 UTC)",
+    "buffer_post_id": "6ace8c8beaea728d3caf76ef",
+    "channel_results": {
+      "instagram": "6ace8c8beaea728d3caf76ef",
+      "youtube": "6ace8c8c68dde0527aa058e5",
+      "twitter": "6ace8c8d9abb1755a4738d5e"
+    },
+    "video_path": "out/slot_5_daily_reel_opt.mp4",
+    "items": [
+      {
+        "title": "LLM vs RAG vs AI Agent vs Agentic AI: 2026 Architecture",
+        "name": "LLM vs RAG vs AI Agent vs Agentic A",
+        "description": "An analysis of real production deployments found that 80% (16 of 20) used predefined structured workflows rather than open-ended autonomous planning, prioritizing controllability and human oversight over autonomy (arXiv:",
+        "url": "https://www.taskade.com/blog/llm-rag-agent-agentic",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "AgenticDev 2026 Call for Papers & Deadline | Munich, Germany (Oct 2026)",
+        "name": "AgenticDev 2026 Call for Papers & D",
+        "description": "Topics of Interest        We invite original research papers, vision papers, and real-world application studies addressing related aspects including, but not limited to:        Architectures for Agentic AI systems in sof",
+        "url": "https://callforpaper.org/cfp/call-for-papers-agenticdev-2026",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "APAC Self-Hosted TTS 2026: Kokoro, Piper, Coqui for Local Voice Synthesis | AIMenta",
+        "name": "APAC Self-Hosted TTS 2026: Kokoro,",
+        "description": "Title: APAC Self-Hosted TTS 2026: Kokoro, Piper, Coqui for Local Voice Synthesis | AIMenta End-to-end AI adoption across strategy, talent, software, and infrastructure. AI Strategy & Advisory AI Training & Enablement AI",
+        "url": "https://aimenta.ai/insights/apac-self-hosted-tts-guide-kokoro-piper-coqui-2026",
+        "source": "Tavily (Real-Time)"
+      }
+    ]
   }
 ]
