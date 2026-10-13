@@ -6,9 +6,13 @@
     "newsapi": 1
   },
   "2026-10-11": {
-    "tavily": 3,
-    "freenewsapi": 3,
-    "newsdata": 3,
+    "tavily": 4,
+    "freenewsapi": 4,
+    "newsdata": 4,
     "newsapi": 2
+  },
+  "2026-10-12": {
+    "newsapi": 1,
+    "tavily": 1
   }
 }

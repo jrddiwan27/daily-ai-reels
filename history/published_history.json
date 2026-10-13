@@ -852,5 +852,185 @@
         "source": "Exa (24h Index)"
       }
     ]
+  },
+  {
+    "slot_id": 1,
+    "slot_name": "Morning Breakthrough (Slot 1)",
+    "timestamp_utc": "2026-10-13T13:00:01.054135+00:00",
+    "date_ist": "2026-10-13 9:00 AM IST (Immediate / Makeup)",
+    "buffer_post_id": "6ace2b2ee8f9a3e0b68f5c91",
+    "channel_results": {
+      "instagram": "6ace2b2ee8f9a3e0b68f5c91",
+      "youtube": "6ace2b3d4413c2c99716ca64",
+      "twitter": "6ace2b46a5670ad01c4cf5eb"
+    },
+    "video_path": "out/slot_1_daily_reel_opt.mp4",
+    "items": [
+      {
+        "title": "open-source \u00b7 GitHub Topics \u00b7 GitHub",
+        "name": "open-source",
+        "description": "Updated Oct 9, 2026  HTML  langchain  ### langchain-ai / langchain  Star  148k  The agent engineering platform.  python open-source enterprise framework typescript ai gemini openai multiagent agents ai-agents rag pydanti",
+        "url": "https://github.com/topics/open-source",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "REA, the Reverse Engineering Tool for AI Agents, Hits 140,000 GitHub Stars in Five Days | by Alex Carter | Oct, 2026 | Medium",
+        "name": "REA, the Reverse Engineering Tool f",
+        "description": "## The momentum came from promotion more than from demos  Third-party GitHub trending data cited by a Medium writer put REA at 9,658 stars on October 7. On October 8, Matthew Berman posted about it on X, calling the mome",
+        "url": "https://medium.com/@info.booststash/rea-the-reverse-engineering-tool-for-ai-agents-hits-140-000-github-stars-in-five-days-d30fa52d8650",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "17 Best Free AI Coding Agents in 2026 | Agentic.ai",
+        "name": "17 Best Free AI Coding Agents in 20",
+        "description": "Agenticness22/36\u00b7Domain Specialist  Orbi is an open-source, self-hostable AI coding agent that takes GitHub Issues from implementation through independent review, merge, and release. It can run against your own model end",
+        "url": "https://agentic.ai/best/free-coding-agents",
+        "source": "Tavily (Real-Time)"
+      }
+    ]
+  },
+  {
+    "slot_id": 2,
+    "slot_name": "Midday Cheat Code (Slot 2)",
+    "timestamp_utc": "2026-10-13T13:06:45.009447+00:00",
+    "date_ist": "2026-10-13 12:00 PM IST (Immediate / Makeup)",
+    "buffer_post_id": "6ace2cc44413c2c9971766f1",
+    "channel_results": {
+      "instagram": "6ace2cc44413c2c9971766f1",
+      "youtube": "6ace2cd342d44c06a0698b3e",
+      "twitter": "6ace2cdca5670ad01c4db049"
+    },
+    "video_path": "out/slot_2_daily_reel_opt.mp4",
+    "items": [
+      {
+        "title": "agenta \u00b7 GitHub",
+        "name": "agenta",
+        "description": "A curated list of open-source AI agent platforms: AI coworkers and teammates, agent builders and frameworks, workflow automation platforms, browser agents, and coding agents, with licenses.    Agenta-AI/awesome-ai-agent-",
+        "url": "https://github.com/agenta-ai",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "17 Best Free AI Coding Agents in 2026 | Agentic.ai",
+        "name": "17 Best Free AI Coding Agents in 20",
+        "description": "Agenticness22/36\u00b7Domain Specialist  Orbi is an open-source, self-hostable AI coding agent that takes GitHub Issues from implementation through independent review, merge, and release. It can run against your own model end",
+        "url": "https://agentic.ai/best/free-coding-agents",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "AI Agents News \u2014 Week of October 13, 2026 (Daily Updates)",
+        "name": "AI Agents News \u2014 Week of October 13",
+        "description": "What changed: Realtor.com added RealAssist AI to its Realtor.com+ workspace on Oct. 6, 2026; the feature automates client and search setup, surfaces a single Daily Digest of client activity, and proposes \u201cAgentic Actions",
+        "url": "https://aiagentstore.ai/ai-agent-news/this-week",
+        "source": "Tavily (Real-Time)"
+      }
+    ]
+  },
+  {
+    "slot_id": 3,
+    "slot_name": "Tech Radar Teardown (Slot 3)",
+    "timestamp_utc": "2026-10-13T13:22:28.252765+00:00",
+    "date_ist": "2026-10-13 3:00 PM IST (Immediate / Makeup)",
+    "buffer_post_id": "6ace306de8f9a3e0b690e83d",
+    "channel_results": {
+      "instagram": "6ace306de8f9a3e0b690e83d",
+      "youtube": "6ace30806e3956a78304b8b5",
+      "twitter": "6ace308a6e3956a78304bcac"
+    },
+    "video_path": "out/slot_3_daily_reel_opt.mp4",
+    "items": [
+      {
+        "title": "AI Models for Multi-Step Reasoning Tasks",
+        "name": "AI Models for Multi-Step Reasoning",
+        "description": "OpenAI's latest models introduce a new standard for open-source reasoning systems. gpt-oss-20b and gpt-oss-120b. These models are fully open-weight and match",
+        "url": "https://www.linkedin.com/top-content/artificial-intelligence/ai-model-development/ai-models-for-multi-step-reasoning-tasks",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "OpenBMB on X: \"\ud83d\ude80 Introducing MiniCPM-V 4.7, our new open-source MLLM series! Advancing the Performance\u2013Efficiency Pareto Frontier. It brings strong multimodal capabilities to iOS and Android devices with extreme efficiency. Two new models: \ud83d\udd39 MiniCPM-V 4.7 35B-A3B \u2014 Bring SOTA performance to loca\u2026 / X",
+        "name": "OpenBMB on X: \"\ud83d\ude80 Introducing MiniCP",
+        "description": "yet. \ud83d\udc40\ud83d\udc47 \ud83d\udd17 GitHub: github.com/OpenBMB/MiniCP\u2026 \ud83e\udd17 Hugging Face: huggingface.co/collections/op\u2026 [...] yet. \ud83d\udc40\ud83d\udc47 \ud83d\udd17 GitHub: github.com/OpenBMB/MiniCP\u2026 \ud83e\udd17 Hugging Face: huggingface.co/collections/op\u2026 [...] @OpenBMB  @OpenBMB",
+        "url": "https://x.com/OpenBMB/status/2109694573408866351",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "AI Model Comparison 2026: LLM Benchmarks, Rankings & API Costs | AI Agent Store",
+        "name": "AI Model Comparison 2026: LLM Bench",
+        "description": "|  | 39 Gemini 3.6 Flash \u2197Google \u00b7 high | 70.3 | 67.1 | 11.12 sources | 73.6 | 1,482\u00b14 | $15 | 1.05M | $0.75 / $3.75OpenRouter catalog | |  | 40 GPT-5.2 Codex \u2197OpenAI \u00b7 source default | 69.9 | 56.0 | \u2014 | 74.0 | \u2014 | $45.5",
+        "url": "https://aiagentstore.ai/ai-models",
+        "source": "Tavily (Real-Time)"
+      }
+    ]
+  },
+  {
+    "slot_id": 4,
+    "slot_name": "Evening Toolkit (Slot 4)",
+    "timestamp_utc": "2026-10-13T13:33:55.896526+00:00",
+    "date_ist": "2026-10-13 6:00 PM IST (Immediate / Makeup)",
+    "buffer_post_id": "6ace331d6e3956a783055261",
+    "channel_results": {
+      "instagram": "6ace331d6e3956a783055261",
+      "youtube": "6ace332f1d4f40b3492a5dcb",
+      "twitter": "6ace33391d4f40b3492a605d"
+    },
+    "video_path": "out/slot_4_daily_reel_opt.mp4",
+    "items": [
+      {
+        "title": "open-source \u00b7 GitHub Topics \u00b7 GitHub",
+        "name": "open-source",
+        "description": "Updated Oct 9, 2026  C++  crawl4ai  ### unclecode / crawl4ai  Sponsor   Star  85.1k  Open-source web crawler and scraper for LLMs and AI agents: any website into clean, LLM-ready Markdown. Run it yourself, or use Crawl4A",
+        "url": "https://github.com/topics/open-source",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "REA, the Reverse Engineering Tool for AI Agents, Hits 140,000 GitHub Stars in Five Days | by Alex Carter | Oct, 2026 | Medium",
+        "name": "REA, the Reverse Engineering Tool f",
+        "description": "Sitemap  Open in app  Sign in  Sign in  AI  AI Agent  Software Development  Web Development  DevOps  # REA, the Reverse Engineering Tool for AI Agents, Hits 140,000 GitHub Stars in Five Days  ## An MIT-licensed project t",
+        "url": "https://medium.com/@info.booststash/rea-the-reverse-engineering-tool-for-ai-agents-hits-140-000-github-stars-in-five-days-d30fa52d8650",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "17 Best Free AI Coding Agents in 2026 | Agentic.ai",
+        "name": "17 Best Free AI Coding Agents in 20",
+        "description": "Agenticness22/36\u00b7Domain Specialist  Orbi is an open-source, self-hostable AI coding agent that takes GitHub Issues from implementation through independent review, merge, and release. It can run against your own model end",
+        "url": "https://agentic.ai/best/free-coding-agents",
+        "source": "Tavily (Real-Time)"
+      }
+    ]
+  },
+  {
+    "slot_id": 5,
+    "slot_name": "Night Owl Deep Dive (Slot 5)",
+    "timestamp_utc": "2026-10-13T13:47:42.046438+00:00",
+    "date_ist": "2026-10-13 9:00 PM IST (Scheduled for 15:30 UTC)",
+    "buffer_post_id": "6ace36796e3956a78305fad4",
+    "channel_results": {
+      "instagram": "6ace36796e3956a78305fad4",
+      "youtube": "6ace367be66b409d53fa726c",
+      "twitter": "6ace367e8c4d573c4e5600ee"
+    },
+    "video_path": "out/slot_5_daily_reel_opt.mp4",
+    "items": [
+      {
+        "title": "decision-record \u00b7 GitHub Topics \u00b7 GitHub",
+        "name": "decision-record",
+        "description": "mcp adr architecture-decision-records ai-agents decision-records decision-intelligence decision-record model-context-protocol mcp-server context-engineering decision-log claude-code-plugin ai-agents-mcp claude-plugin dec",
+        "url": "https://github.com/topics/decision-record",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "Coding Ninjas Data Science with GenAI Course Review 2026",
+        "name": "Coding Ninjas Data Science with Gen",
+        "description": "Module 7: Deep Learning & Neural Architectures \u2192 Future-proof your workflows with deep neural networks. Master feedforward architectures, backpropagation, and optimization algorithms like Adam using TensorFlow and Keras.",
+        "url": "https://www.codingninjas.com/blog/program-details/data-science-with-genai-course-review",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "rising repo",
+        "name": "rising repo",
+        "description": "| xiaomoBoyavatar pi-durable-assistant  \u53ef\u81ea\u6258\u7ba1\u7684\u6301\u4e45\u5316\u4e2a\u4eba Agent\uff1a\u8fdb\u7a0b\u91cd\u542f\u540e\u6062\u590d\u4efb\u52a1\uff0c\u652f\u6301\u5b50 Agent\u3001\u5b9a\u65f6\u8ba1\u5212\u3001\u957f\u671f\u8bb0\u5fc6\u3001\u7f51\u9875\u754c\u9762\u4e0e\u5fae\u4fe1\u901a\u9053  ai-agent  durable-execution  pi-agent  pi-durable  self-hosted  sqlite | +3 | 2 Day | JavaScript | | yhan-sunavatar p2wlan",
+        "url": "https://yanggggjie.github.io/rising-repo",
+        "source": "Tavily (Real-Time)"
+      }
+    ]
   }
 ]

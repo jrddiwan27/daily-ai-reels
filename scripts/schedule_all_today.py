@@ -21,48 +21,105 @@ if ROOT_DIR not in sys.path:
 from agents.pipeline_orchestrator import run_production_pipeline
 from pipeline.buffer_dispatcher import dispatch_to_all_platforms
 
-SCHEDULE_PLAN = [
-    {
-        "slot_id": 1,
-        "name": "Morning Breakthrough",
-        "theme": "open source AI developer tools GitHub 2026",
-        "cta": "REPOS",
-        "due_at_utc": None, # Post immediately
-        "time_ist": "9:00 AM (Morning Makeup Post)"
-    },
-    {
-        "slot_id": 2,
-        "name": "Midday Cheat Code",
-        "theme": "autonomous AI automation workflows 2026",
-        "cta": "WORKFLOW",
-        "due_at_utc": None, # Post immediately
-        "time_ist": "12:00 PM (Midday Makeup Post)"
-    },
-    {
-        "slot_id": 3,
-        "name": "Tech Radar Teardown",
-        "theme": "new open weights multimodal reasoning AI models",
-        "cta": "MODELS",
-        "due_at_utc": None, # Post immediately
-        "time_ist": "3:00 PM (Afternoon Makeup Post)"
-    },
-    {
-        "slot_id": 4,
-        "name": "Evening Toolkit",
-        "theme": "secret web AI developer productivity tools 2026",
-        "cta": "TOOLS",
-        "due_at_utc": None, # Post immediately
-        "time_ist": "6:00 PM (Evening Post)"
-    },
-    {
-        "slot_id": 5,
-        "name": "Night Owl Deep Dive",
-        "theme": "advanced prompt engineering frameworks architectures 2026",
-        "cta": "PROMPT",
-        "due_at_utc": "2026-10-12T15:30:00.000Z", # 9:00 PM IST
-        "time_ist": "9:00 PM IST (Scheduled)"
-    }
-]
+def get_daily_schedule_plan():
+    now_utc = datetime.datetime.now(datetime.timezone.utc)
+    ist_offset = datetime.timedelta(hours=5, minutes=30)
+    now_ist = now_utc + ist_offset
+    today_ist_str = now_ist.strftime("%Y-%m-%d")
+
+    slots_def = [
+        {
+            "slot_id": 1,
+            "name": "Morning Breakthrough",
+            "theme": "open source AI developer tools GitHub 2026",
+            "cta": "REPOS",
+            "hour_ist": 9,
+            "minute_ist": 0,
+            "time_ist": "9:00 AM IST"
+        },
+        {
+            "slot_id": 2,
+            "name": "Midday Cheat Code",
+            "theme": "autonomous AI automation workflows 2026",
+            "cta": "WORKFLOW",
+            "hour_ist": 12,
+            "minute_ist": 0,
+            "time_ist": "12:00 PM IST"
+        },
+        {
+            "slot_id": 3,
+            "name": "Tech Radar Teardown",
+            "theme": "new open weights multimodal reasoning AI models",
+            "cta": "MODELS",
+            "hour_ist": 15,
+            "minute_ist": 0,
+            "time_ist": "3:00 PM IST"
+        },
+        {
+            "slot_id": 4,
+            "name": "Evening Toolkit",
+            "theme": "secret web AI developer productivity tools 2026",
+            "cta": "TOOLS",
+            "hour_ist": 18,
+            "minute_ist": 0,
+            "time_ist": "6:00 PM IST"
+        },
+        {
+            "slot_id": 5,
+            "name": "Night Owl Deep Dive",
+            "theme": "advanced prompt engineering frameworks architectures 2026",
+            "cta": "PROMPT",
+            "hour_ist": 21,
+            "minute_ist": 0,
+            "time_ist": "9:00 PM IST"
+        }
+    ]
+
+    plan = []
+    for s in slots_def:
+        target_ist = datetime.datetime(
+            now_ist.year, now_ist.month, now_ist.day,
+            s["hour_ist"], s["minute_ist"], 0,
+            tzinfo=datetime.timezone(ist_offset)
+        )
+        target_utc = target_ist.astimezone(datetime.timezone.utc)
+
+        # Allow a 15-minute grace window for scheduling
+        if now_utc >= (target_utc - datetime.timedelta(minutes=10)):
+            due_at_utc = None
+            status_desc = f"{s['time_ist']} (Immediate / Makeup)"
+        else:
+            due_at_utc = target_utc.strftime("%Y-%m-%dT%H:%M:%S.000Z")
+            status_desc = f"{s['time_ist']} (Scheduled for {target_utc.strftime('%H:%M')} UTC)"
+
+        plan.append({
+            "slot_id": s["slot_id"],
+            "name": s["name"],
+            "theme": s["theme"],
+            "cta": s["cta"],
+            "due_at_utc": due_at_utc,
+            "time_ist": status_desc,
+            "today_date": today_ist_str
+        })
+    return plan
+
+def is_slot_already_published_today(slot_id, today_date_str):
+    hist_path = "history/published_history.json"
+    if not os.path.exists(hist_path):
+        return False
+    try:
+        with open(hist_path) as f:
+            hist = json.load(f)
+        for h in hist:
+            h_date = str(h.get("date_ist", ""))
+            h_time = str(h.get("timestamp_utc", ""))
+            if h.get("slot_id") == slot_id and (today_date_str in h_date or today_date_str in h_time):
+                # Verify that it was successfully dispatched
+                if h.get("buffer_post_id") or h.get("channel_results"):
+                    return True
+    except Exception:
+        pass
+    return False
 
 def produce_and_dispatch_slot(plan_item):
     slot_id = plan_item["slot_id"]
@@ -125,11 +182,12 @@ def produce_and_dispatch_slot(plan_item):
     results = dispatch_to_all_platforms(video_to_dispatch, meta, items, due_at_utc=due_at)
 
     # 4. Record in published history
+    today_str = plan_item.get("today_date", datetime.date.today().isoformat())
     hist_entry = {
         "slot_id": slot_id,
         "slot_name": meta["slot_name"],
         "timestamp_utc": datetime.datetime.now(datetime.timezone.utc).isoformat(),
-        "date_ist": f"2026-10-12 {time_ist}",
+        "date_ist": f"{today_str} {time_ist}",
         "buffer_post_id": results.get("instagram", "scheduled"),
         "channel_results": results,
         "video_path": video_to_dispatch,
@@ -153,5 +211,14 @@ def produce_and_dispatch_slot(plan_item):
     return hist_entry
 
 if __name__ == "__main__":
-    for item in SCHEDULE_PLAN:
+    plan = get_daily_schedule_plan()
+    print("=" * 80)
+    print(f"🚀 EXECUTING DAILY AUTOMATION ENGINE — {plan[0]['today_date']}")
+    print("=" * 80)
+    for item in plan:
+        slot_id = item["slot_id"]
+        today_date = item["today_date"]
+        if is_slot_already_published_today(slot_id, today_date):
+            print(f"[*] Slot {slot_id} ({item['name']}) has already been dispatched today ({today_date}). Skipping.")
+            continue
         produce_and_dispatch_slot(item)

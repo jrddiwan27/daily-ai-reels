@@ -1,36 +1,21 @@
-name: Autonomous 5x Daily Reel Engine
+name: Autonomous 5x Daily Reel Cloud Engine
 
 on:
   schedule:
-    # 9:00 AM IST (Slot 1: Morning Breakthrough - Open Source Repos)
-    - cron: '30 3 * * *'
-    # 12:00 PM IST (Slot 2: Midday Cheat Code - AI Workflows)
-    - cron: '30 6 * * *'
-    # 3:00 PM IST (Slot 3: Tech Radar Teardown - Model Releases)
-    - cron: '30 9 * * *'
-    # 6:00 PM IST (Slot 4: Evening Toolkit - Secret Web Tools)
-    - cron: '30 12 * * *'
-    # 9:00 PM IST (Slot 5: Night Owl Deep Dive - Master Prompts)
-    - cron: '30 15 * * *'
+    # 8:00 AM IST (02:30 UTC): Daily Master Run - Produces & Schedules all 5 slots for the day
+    - cron: '30 2 * * *'
+    # Regular slot checks throughout the day in case of makeups
+    - cron: '30 3 * * *'  # 9:00 AM IST (Slot 1)
+    - cron: '30 6 * * *'  # 12:00 PM IST (Slot 2)
+    - cron: '30 9 * * *'  # 3:00 PM IST (Slot 3)
+    - cron: '30 12 * * *' # 6:00 PM IST (Slot 4)
+    - cron: '30 15 * * *' # 9:00 PM IST (Slot 5)
   workflow_dispatch:
-    inputs:
-      slot:
-        description: 'Select Reel Slot (1-5) or leave empty for auto-detection'
-        required: false
-        default: ''
-        type: choice
-        options:
-          - ''
-          - '1'
-          - '2'
-          - '3'
-          - '4'
-          - '5'
 
 jobs:
-  build-and-publish:
+  run-daily-production:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 45
     permissions:
       contents: write
 
@@ -44,54 +29,57 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
+          cache: 'pip'
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '22'
 
-      - name: Install System Dependencies & FFmpeg
+      - name: Install System FFmpeg & Audio Libraries
         run: |
           sudo apt-get update
-          sudo apt-get install -y ffmpeg libasound2t64 || true
+          sudo apt-get install -y ffmpeg libasound2t64 || sudo apt-get install -y ffmpeg libasound2
 
       - name: Install Python Dependencies
         run: |
+          pip install --upgrade pip
           pip install -r requirements.txt
+          pip install pynacl
 
-      - name: Install HyperFrames CLI & Browser
+      - name: Install HyperFrames CLI & Headless Browser
         run: |
           npm install -g hyperframes
           npx hyperframes browser ensure
 
-      - name: Run Master 5x Pipeline
+      - name: Execute Autonomous Daily Production & Scheduling Engine
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-          FISH_API_KEY: ${{ secrets.FISH_API_KEY }}
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
           BUFFER_ACCESS_TOKEN: ${{ secrets.BUFFER_ACCESS_TOKEN }}
           BUFFER_CHANNEL_ID: ${{ secrets.BUFFER_CHANNEL_ID }}
+          BUFFER_CHANNEL_IG: ${{ secrets.BUFFER_CHANNEL_IG }}
+          BUFFER_CHANNEL_YT: ${{ secrets.BUFFER_CHANNEL_YT }}
+          BUFFER_CHANNEL_TW: ${{ secrets.BUFFER_CHANNEL_TW }}
+          TAVILY_API_KEY: ${{ secrets.TAVILY_API_KEY }}
+          EXA_API_KEY: ${{ secrets.EXA_API_KEY }}
+          NEWSDATA_API_KEY: ${{ secrets.NEWSDATA_API_KEY }}
+          NEWSAPI_KEY: ${{ secrets.NEWSAPI_KEY }}
+          SERPAPI_API_KEY: ${{ secrets.SERPAPI_API_KEY }}
+          APIFY_API_TOKEN: ${{ secrets.APIFY_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
         run: |
-          if [ -n "${{ github.event.inputs.slot }}" ]; then
-            python master_runner.py --slot ${{ github.event.inputs.slot }}
-          else
-            python master_runner.py
-          fi
+          python scripts/schedule_all_today.py
 
-      - name: Persist Deduplication History & Blog
+      - name: Commit & Push Publication History
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add history/published_history.json docs/posts_data.json
-          git commit -m "chore(hub): update published reel ledger & blog [skip ci]" || echo "No history changes to commit"
+          git add history/published_history.json history/api_budget_ledger.json history/quality_ledger.json || true
+          git commit -m "chore: record autonomous daily publications [skip ci]" || echo "No changes to commit"
           git pull --rebase origin main || true
-          git push origin main || echo "History push succeeded or no changes"
-
-      - name: Upload Video Artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: daily-reel-mp4
-          path: out/daily-reel.mp4
-          retention-days: 7
+          git push origin main || echo "History push completed"
