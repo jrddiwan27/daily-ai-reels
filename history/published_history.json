@@ -1392,5 +1392,185 @@
         "source": "Tavily (Real-Time)"
       }
     ]
+  },
+  {
+    "slot_id": 1,
+    "slot_name": "Morning Breakthrough (Slot 1)",
+    "timestamp_utc": "2026-10-14T19:38:33.943276+00:00",
+    "date_ist": "2026-10-15 9:00 AM IST (Scheduled for 03:30 UTC)",
+    "buffer_post_id": "6acfda37a94addd88cd2abdb",
+    "channel_results": {
+      "instagram": "6acfda37a94addd88cd2abdb",
+      "youtube": "6acfda380b61877d1316ed6d",
+      "twitter": "6acfda39edcab17b812a63f3"
+    },
+    "video_path": "out/slot_1_daily_reel_opt.mp4",
+    "items": [
+      {
+        "title": "The State of AI Agents: Mid-October 2026 \u2014 What 30 Days of GitHub Trending Reveals About the Future",
+        "name": "The State of AI Agents: Mid-October",
+        "description": "After analyzing 30 days of GitHub Trending data covering 100+ repositories and millions of stars, we've identified the five transformative shifts reshaping software development in late 2026. From 294K-star agent skills f",
+        "url": "https://www.coddykit.com/pages/blog-detail?id=5129981&slug=the-state-of-ai-agents-mid-october-2026-what-30-days-of-github-trending-reveals-",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "open-source-alternative \u00b7 GitHub Topics \u00b7 GitHub",
+        "name": "open-source-alternative",
+        "description": "Updated Sep 29, 2026  ### xAmirHamza77 / Poka-Bot  Star  4  Open-source, self-hosted AI agent workspace and alternative to OpenAI Dots, Meta Muse, Grok Bot, Instinct, Manus Cue, Claude Cowork, and ChatGPT agent. MIT-lice",
+        "url": "https://github.com/topics/open-source-alternative?o=desc&s=stars",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "agenta \u00b7 GitHub",
+        "name": "agenta",
+        "description": "A curated list of open-source AI agent platforms: AI coworkers and teammates, agent builders and frameworks, workflow automation platforms, browser agents, and coding agents, with licenses.    Agenta-AI/awesome-ai-agent-",
+        "url": "https://github.com/agenta-ai",
+        "source": "Tavily (Real-Time)"
+      }
+    ]
+  },
+  {
+    "slot_id": 2,
+    "slot_name": "Midday Cheat Code (Slot 2)",
+    "timestamp_utc": "2026-10-14T19:42:55.577935+00:00",
+    "date_ist": "2026-10-15 12:00 PM IST (Scheduled for 06:30 UTC)",
+    "buffer_post_id": "6acfdb3deab29caa1e5cb059",
+    "channel_results": {
+      "instagram": "6acfdb3deab29caa1e5cb059",
+      "youtube": "6acfdb3e78837c11176b4061",
+      "twitter": "6acfdb3f78837c11176b408c"
+    },
+    "video_path": "out/slot_2_daily_reel_opt.mp4",
+    "items": [
+      {
+        "title": "open-source-alternative \u00b7 GitHub Topics \u00b7 GitHub",
+        "name": "open-source-alternative",
+        "description": "Updated Sep 29, 2026  ### xAmirHamza77 / Poka-Bot  Star  4  Open-source, self-hosted AI agent workspace and alternative to OpenAI Dots, Meta Muse, Grok Bot, Instinct, Manus Cue, Claude Cowork, and ChatGPT agent. MIT-lice",
+        "url": "https://github.com/topics/open-source-alternative?o=desc&s=stars",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "hermes-agent \u00b7 GitHub Topics \u00b7 GitHub",
+        "name": "hermes-agent",
+        "description": "Star  68  Secure on device personal agents  self-improvement multi-agent-systems autonomous-agents on-device-ai ai-assistant ai-agent llm-agent ai-agents-framework open-source-ai agentos rust-ai-agent personal-ai-assista",
+        "url": "https://github.com/topics/hermes-agent?l=rust",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "28 Best AI Coding Agents in 2026 | Agentic.ai",
+        "name": "28 Best AI Coding Agents in 2026 |",
+        "description": "Factory AI  Agenticness19/36\u00b7Domain Specialist  Factory provides Droid, an AI agent you can use in coding workflows and IDE integrations like Zed. It connects through login or API key setup and charges usage with Standar",
+        "url": "https://agentic.ai/best/coding-agents",
+        "source": "Tavily (Real-Time)"
+      }
+    ]
+  },
+  {
+    "slot_id": 3,
+    "slot_name": "Tech Radar Teardown (Slot 3)",
+    "timestamp_utc": "2026-10-14T19:51:04.265311+00:00",
+    "date_ist": "2026-10-15 3:00 PM IST (Scheduled for 09:30 UTC)",
+    "buffer_post_id": "6acfdd26eab29caa1e5cfe48",
+    "channel_results": {
+      "instagram": "6acfdd26eab29caa1e5cfe48",
+      "youtube": "6acfdd273166073688d3372b",
+      "twitter": "6acfdd2866fe8729d5900313"
+    },
+    "video_path": "out/slot_3_daily_reel_opt.mp4",
+    "items": [
+      {
+        "title": "I Compared 8 AI Agent Platforms. Here's What Running a ...",
+        "name": "I Compared 8 AI Agent Platforms. He",
+        "description": "36. Qwen3.8-27B official model card \u2014   37. Ollama: Qwen3.8 tags and sizes \u2014   38. OpenSourceForU: Poolside's open-weight Laguna models \u2014   39. Ollama: Laguna XS 2.1 model page \u2014   40. MacRumors: Apple's June 2026 price",
+        "url": "https://hackernoon.com/i-compared-8-ai-agent-platforms-heres-what-running-a-team-actually-costs",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "Zuckerberg didn't know if Meta's $200B AI bet would work ...",
+        "name": "Zuckerberg didn't know if Meta's $2",
+        "description": "Meta's launch of Muse Spark packages multimodal reasoning into a smaller, faster model built first for the Meta AI app \u2026 new open source models.",
+        "url": "https://www.facebook.com/quartznews/posts/zuckerberg-didnt-know-if-metas-200b-ai-bet-would-work-he-bet-anywaymetas-ceo-and/1465252968803850",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "GamsGo on Reels",
+        "name": "GamsGo on Reels",
+        "description": "This post announces a major update on the open-weight multimodal AI model, \"Mistral Large 4,\" developed by Mistral AI. The video displays a static image of the",
+        "url": "https://www.facebook.com/GamsGo/videos/1129771106176167",
+        "source": "Tavily (Real-Time)"
+      }
+    ]
+  },
+  {
+    "slot_id": 4,
+    "slot_name": "Evening Toolkit (Slot 4)",
+    "timestamp_utc": "2026-10-14T19:55:50.219818+00:00",
+    "date_ist": "2026-10-15 6:00 PM IST (Scheduled for 12:30 UTC)",
+    "buffer_post_id": "6acfde4466fe8729d59035b1",
+    "channel_results": {
+      "instagram": "6acfde4466fe8729d59035b1",
+      "youtube": "6acfde45a0a1bd470f495c51",
+      "twitter": "6acfde4678837c11176bcded"
+    },
+    "video_path": "out/slot_4_daily_reel_opt.mp4",
+    "items": [
+      {
+        "title": "AI dev tool power rankings & comparison [July 2026] - LogRocket Blog",
+        "name": "AI dev tool power rankings & compar",
+        "description": "Performance summary: OpenCode holds #1 with no serious challenger to its open infrastructure thesis. At 160K+ GitHub stars and 7.5M monthly active developers, it remains the most-adopted open-source coding agent ever bui",
+        "url": "https://blog.logrocket.com/ai-dev-tool-power-rankings",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "The best AI tools of 2026 - Digital Trends",
+        "name": "The best AI tools of 2026",
+        "description": "Cursor feels more natural when the editor is the center of the job. Copilot has the stronger argument when GitHub itself is.  ### Claude Code  Best AI coding agent for complex development work  Claude Code Extension for",
+        "url": "https://www.digitaltrends.com/computing/best-ai-tools",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "headless-browser \u00b7 GitHub Topics \u00b7 GitHub",
+        "name": "headless-browser",
+        "description": "### oxylabs / agent-browser  Star  661  Execute complex automation scripts via remote cloud sessions , featuring integrated residential proxies , automated CAPTCHA solving , and native JavaScript rendering for the toughe",
+        "url": "https://github.com/topics/headless-browser",
+        "source": "Tavily (Real-Time)"
+      }
+    ]
+  },
+  {
+    "slot_id": 5,
+    "slot_name": "Night Owl Deep Dive (Slot 5)",
+    "timestamp_utc": "2026-10-14T20:00:39.669144+00:00",
+    "date_ist": "2026-10-15 9:00 PM IST (Scheduled for 15:30 UTC)",
+    "buffer_post_id": "6acfdf6578837c11176c0d9c",
+    "channel_results": {
+      "instagram": "6acfdf6578837c11176c0d9c",
+      "youtube": "6acfdf6666fe8729d5908422",
+      "twitter": "6acfdf673166073688d3a1b5"
+    },
+    "video_path": "out/slot_5_daily_reel_opt.mp4",
+    "items": [
+      {
+        "title": "28 Best AI Coding Agents in 2026 | Agentic.ai",
+        "name": "28 Best AI Coding Agents in 2026 |",
+        "description": "Agenticness22/36\u00b7Domain Specialist  Hyper is a cloud-based autonomous software engineering platform for turning product objectives into tested code in your GitHub repositories. It plans work, runs parallel agent sessions",
+        "url": "https://agentic.ai/best/coding-agents",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "llmops \u00b7 GitHub Topics \u00b7 GitHub",
+        "name": "llmops",
+        "description": "SuperAGI  ### TransformerOptimus / SuperAGI  <\u26a1\ufe0f> SuperAGI - A dev-first open source autonomous AI agent framework. Enabling developers to build, manage & run useful autonomous agents quickly and reliably.  ### raga-ai-h",
+        "url": "https://github.com/topics/llmops",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "CONTRA Released: Selective Clarification Framework for Coding Agents Lifts F1 by 13.88% with Open-Source Claude Code Plugin \u2014 AICoder",
+        "name": "CONTRA Released: Selective Clarific",
+        "description": "CONTRA Released: Selective Clarification Framework for Coding Agents Lifts F1 by 13.88% with Open-Source Claude Code Plugin \u2014 AICoder  Tooling\u00b7 1d ago  # CONTRA Released: Selective Clarification Framework for Coding Agen",
+        "url": "https://aicoder.com/news/news-20261013-contra-selective-clarification-coding-agents",
+        "source": "Exa (24h Index)"
+      }
+    ]
   }
 ]
