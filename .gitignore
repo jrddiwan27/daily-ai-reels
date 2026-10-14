@@ -16,5 +16,15 @@ assets/slot_*/
 assets/voice.mp3
 assets/master_audio.mp3
 assets/sample_voice.mp3
+assets/chunks/
+assets/test_*
+assets/*_iphone*
+assets/voice_*.mp3
+assets/voice*.vtt
+assets/voice_text.txt
 welcome.mp3
 welcome_free.mp3
+.hyperframes/
+test_*
+template_user.html
+reference_claude_template.html

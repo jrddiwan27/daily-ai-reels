@@ -12,75 +12,75 @@
     "type": "pop"
   },
   {
-    "time": 4.9,
+    "time": 4.65,
     "type": "whoosh"
   },
   {
-    "time": 5.2,
+    "time": 4.95,
     "type": "pop"
   },
   {
-    "time": 5.7,
+    "time": 5.45,
     "type": "ding"
   },
   {
-    "time": 9.95,
+    "time": 7.81,
     "type": "whoosh"
   },
   {
-    "time": 10.2,
+    "time": 8.06,
     "type": "pop"
   },
   {
-    "time": 10.65,
+    "time": 8.51,
     "type": "ding"
   },
   {
-    "time": 11.15,
+    "time": 9.01,
     "type": "click"
   },
   {
-    "time": 17.9,
+    "time": 13.24,
     "type": "whoosh"
   },
   {
-    "time": 18.15,
+    "time": 13.49,
     "type": "pop"
   },
   {
-    "time": 18.6,
+    "time": 13.94,
     "type": "ding"
   },
   {
-    "time": 19.1,
+    "time": 14.44,
     "type": "click"
   },
   {
-    "time": 25.63,
+    "time": 19.46,
     "type": "whoosh"
   },
   {
-    "time": 25.88,
+    "time": 19.71,
     "type": "pop"
   },
   {
-    "time": 26.33,
+    "time": 20.16,
     "type": "ding"
   },
   {
-    "time": 26.83,
+    "time": 20.66,
     "type": "click"
   },
   {
-    "time": 33.05,
+    "time": 27.58,
     "type": "boom"
   },
   {
-    "time": 33.25,
+    "time": 27.78,
     "type": "ding"
   },
   {
-    "time": 33.55,
+    "time": 28.08,
     "type": "pop"
   }
 ]

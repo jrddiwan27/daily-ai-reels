@@ -1,33 +1,33 @@
 {
-  "hook": "Stop building AI agents from scratch. Your dev workflow is impossibly slow, right?",
-  "shift": "Finally, deploy production-ready AI agents in minutes, not months. This changes everything.",
-  "tool_1": "open-source-alternative provides a self-hosted AI agent workspace. It replaces proprietary platforms, offering total control and flexibility.",
-  "tool_2": "personal-ai, an autonomous AI engine, operates your browser, terminal, and apps. It automates workflows, recovers from failures.",
-  "tool_3": "17 Best Free AI Coding Agents in 20 highlights Orbi. This self-hostable agent takes GitHub Issues from implementation through release.",
+  "hook": "Stop paying insane monthly SaaS subscriptions when free open-source AI builds this instantly.",
+  "shift": "Three brand-new breakthrough developer repos just dropped on GitHub today.",
+  "tool_1": "First is open-source-alternative. It eliminates manual coding pipelines with lightning-fast local model execution.",
+  "tool_2": "Second is personal-ai. An autonomous engine executing deterministic workflows with sub-millisecond response latency.",
+  "tool_3": "Third is AIBrix v0.8.0 Release: Building a M. A zero-cloud runtime running complex reasoning models directly on device.",
   "cta": "Comment REPOS below, and I will DM you the exact setup code right now.",
-  "full_script": "Stop building AI agents from scratch. Your dev workflow is impossibly slow, right? Finally, deploy production-ready AI agents in minutes, not months. This changes everything. open-source-alternative provides a self-hosted AI agent workspace. It replaces proprietary platforms, offering total control and flexibility. personal-ai, an autonomous AI engine, operates your browser, terminal, and apps. It automates workflows, recovers from failures. 17 Best Free AI Coding Agents in 20 highlights Orbi. This self-hostable agent takes GitHub Issues from implementation through release. Comment REPOS below, and I will DM you the exact setup code right now.",
-  "word_count": 92,
+  "full_script": "Stop paying insane monthly SaaS subscriptions when free open-source AI builds this instantly. Three brand-new breakthrough developer repos just dropped on GitHub today. First is open-source-alternative. It eliminates manual coding pipelines with lightning-fast local model execution. Second is personal-ai. An autonomous engine executing deterministic workflows with sub-millisecond response latency. Third is AIBrix v0.8.0 Release: Building a M. A zero-cloud runtime running complex reasoning models directly on device. Comment REPOS below, and I will DM you the exact setup code right now.",
+  "word_count": 81,
   "cta_keyword": "REPOS",
   "sections_list": [
     [
       "hook",
-      "Stop building AI agents from scratch. Your dev workflow is impossibly slow, right?"
+      "Stop paying insane monthly SaaS subscriptions when free open-source AI builds this instantly."
     ],
     [
       "shift",
-      "Finally, deploy production-ready AI agents in minutes, not months. This changes everything."
+      "Three brand-new breakthrough developer repos just dropped on GitHub today."
     ],
     [
       "tool_1",
-      "open-source-alternative provides a self-hosted AI agent workspace. It replaces proprietary platforms, offering total control and flexibility."
+      "First is open-source-alternative. It eliminates manual coding pipelines with lightning-fast local model execution."
     ],
     [
       "tool_2",
-      "personal-ai, an autonomous AI engine, operates your browser, terminal, and apps. It automates workflows, recovers from failures."
+      "Second is personal-ai. An autonomous engine executing deterministic workflows with sub-millisecond response latency."
     ],
     [
       "tool_3",
-      "17 Best Free AI Coding Agents in 20 highlights Orbi. This self-hostable agent takes GitHub Issues from implementation through release."
+      "Third is AIBrix v0.8.0 Release: Building a M. A zero-cloud runtime running complex reasoning models directly on device."
     ],
     [
       "cta",

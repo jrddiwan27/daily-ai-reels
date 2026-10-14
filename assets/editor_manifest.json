@@ -1,8 +1,12 @@
 {
   "status": "COMPLETED",
-  "final_video_path": "out/daily-reel.mp4",
+  "video_path": "out/slot_1_daily_reel.mp4",
   "width": 1080,
   "height": 1920,
-  "duration": 58.366667,
-  "render_time_seconds": 121.82
+  "duration": 40.6,
+  "fps": "30/1",
+  "master_audio": "assets/master_audio.mp3",
+  "cta_appended": true,
+  "cta_file": "assets/cta/norm_cta_1.mp4",
+  "render_elapsed_seconds": 76.75
 }

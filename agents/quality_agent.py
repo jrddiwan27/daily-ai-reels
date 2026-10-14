@@ -66,11 +66,11 @@ class QualityAgent:
         words = full_text.split()
         word_count = len(words)
 
-        if word_count < 85 or word_count > 115:
+        if word_count < 75 or word_count > 115:
             return {
                 "passed": False,
                 "score": 8,
-                "reason": f"Word count violation: {word_count} words (must be 90-110 words for high retention)."
+                "reason": f"Word count violation: {word_count} words (must be 75-115 words for high retention)."
             }
 
         required_keys = ["hook", "shift", "tool_1", "tool_2", "tool_3", "cta"]

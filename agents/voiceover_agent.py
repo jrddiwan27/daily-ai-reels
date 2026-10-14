@@ -1,26 +1,70 @@
 import os
 import re
 import json
+import time
 import asyncio
 import subprocess
+import requests
 import edge_tts
 from dotenv import load_dotenv
 
 load_dotenv()
 
-async def synthesize_chunk(text: str, out_file: str, voice_name: str = "en-US-ChristopherNeural", rate: str = "+10%"):
+DEFAULT_FISH_VOICE_ID = "c85fb11f91f84312a4bd16756f298ae2"
+
+def synthesize_chunk_fish(text: str, out_file: str, voice_id: str, api_key: str) -> bool:
+    """
+    Synthesize audio using the user's authentic cloned voice model via Fish Audio s2.1-pro-free.
+    """
+    url = "https://api.fish.audio/v1/tts"
+    headers = {
+        "Authorization": f"Bearer {api_key.strip()}",
+        "Content-Type": "application/json",
+        "model": "s2.1-pro-free"
+    }
+    data = {
+        "text": text,
+        "reference_id": voice_id.strip(),
+        "format": "mp3"
+    }
+    for attempt in range(1, 3):
+        try:
+            resp = requests.post(url, headers=headers, json=data, timeout=35)
+            if resp.status_code == 200 and len(resp.content) > 1000:
+                with open(out_file, "wb") as f:
+                    f.write(resp.content)
+                return True
+            else:
+                print(f"    [Fish Audio Attempt {attempt} HTTP {resp.status_code}]: {resp.text[:120]}")
+                time.sleep(1)
+        except Exception as e:
+            print(f"    [Fish Audio Attempt {attempt} Exception]: {e}")
+            time.sleep(1)
+    return False
+
+async def synthesize_chunk_edge(text: str, out_file: str, voice_name: str = "en-US-ChristopherNeural", rate: str = "+10%"):
+    """
+    Fallback TTS synthesis via Edge-TTS in case of network/API downtime.
+    """
     comm = edge_tts.Communicate(text, voice_name, rate=rate)
     await comm.save(out_file)
 
 def run_voiceover_agent(script_path: str = "assets/viral_script.json", script_data: dict = None) -> dict:
     """
     VOICEOVER AGENT:
-    Synthesizes studio broadcast narration section-by-section,
-    eliminates all interior dead air, produces exact frame-accurate
-    section timings and word timelines.
+    Synthesizes studio broadcast narration section-by-section using the user's cloned
+    Fish Audio voice (voice_id: c85fb11f91f84312a4bd16756f298ae2), eliminates all interior
+    dead air, applies high-energy tempo compression, and produces frame-accurate section timings.
     """
+    fish_api_key = os.getenv("FISH_API_KEY", "").strip()
+    fish_voice_id = os.getenv("FISH_VOICE_ID", DEFAULT_FISH_VOICE_ID).strip()
+
     print("=" * 65)
-    print(f"🎙️ [AGENT 3: VOICEOVER AGENT] Synthesizing Zero-Dead-Air Seamless Voiceover (Rate: +10%)...")
+    print(f"🎙️ [AGENT 3: VOICEOVER AGENT] Synthesizing Hyper-Paced Voiceover")
+    if fish_api_key and fish_voice_id:
+        print(f"    Primary Engine: Fish Audio (Cloned Voice ID: {fish_voice_id[:8]}... | Model: s2.1-pro-free)")
+    else:
+        print(f"    Primary Engine: Edge-TTS Fallback (No FISH_API_KEY configured)")
     print("=" * 65)
 
     if script_data:
@@ -44,7 +88,6 @@ def run_voiceover_agent(script_path: str = "assets/viral_script.json", script_da
 
     chunks_dir = "assets/chunks"
     os.makedirs(chunks_dir, exist_ok=True)
-    voice_name = "en-US-ChristopherNeural"
 
     concat_entries = []
     section_timings = []
@@ -54,7 +97,7 @@ def run_voiceover_agent(script_path: str = "assets/viral_script.json", script_da
     async def build_chunks():
         nonlocal current_time
         for idx, (label, text) in enumerate(sections):
-            # Clean punctuation that introduces awkward 1-second pauses in TTS
+            # Clean punctuation that introduces awkward pauses in TTS
             clean_text = re.sub(r'[*_#`]', '', text).strip()
             # Replace internal colons and semicolons with commas for smooth forward momentum
             spoken_text = re.sub(r'[:;]', ',', clean_text)
@@ -63,15 +106,32 @@ def run_voiceover_agent(script_path: str = "assets/viral_script.json", script_da
             raw_chunk = os.path.join(chunks_dir, f"raw_{idx}.mp3")
             trimmed_chunk = os.path.join(chunks_dir, f"trimmed_{idx}.mp3")
 
-            # 1. Synthesize audio chunk (+10% rate for energetic, high-retention cadence)
-            await synthesize_chunk(spoken_text, raw_chunk, voice_name=voice_name, rate="+10%")
+            synthesized_with_fish = False
+            if fish_api_key and fish_voice_id:
+                synthesized_with_fish = synthesize_chunk_fish(spoken_text, raw_chunk, fish_voice_id, fish_api_key)
+
+            if synthesized_with_fish:
+                print(f"    [Fish Audio ✓] Chunk {idx} ({label.upper()}): Cloned Voice synthesized")
+                # Fish speaks at natural tempo (~155 WPM). Accelerate with atempo=1.12 + aggressive silence compression
+                audio_filter = (
+                    "atempo=1.12,"
+                    "silenceremove=start_periods=1:start_duration=0.01:start_threshold=-38dB,"
+                    "silenceremove=stop_periods=-1:stop_duration=0.15:stop_threshold=-38dB,"
+                    "areverse,silenceremove=start_periods=1:start_duration=0.01:start_threshold=-38dB,areverse"
+                )
+            else:
+                print(f"    [Edge-TTS ⚠️] Chunk {idx} ({label.upper()}): Using fallback synthesis")
+                await synthesize_chunk_edge(spoken_text, raw_chunk, voice_name="en-US-ChristopherNeural", rate="+10%")
+                audio_filter = (
+                    "silenceremove=start_periods=1:start_duration=0.01:start_threshold=-38dB,"
+                    "silenceremove=stop_periods=-1:stop_duration=0.15:stop_threshold=-38dB,"
+                    "areverse,silenceremove=start_periods=1:start_duration=0.01:start_threshold=-38dB,areverse"
+                )
 
             # 2. Trim leading, trailing, and interior silence (> 0.20s) to guarantee zero dead air
             trim_cmd = [
                 "ffmpeg", "-y", "-i", raw_chunk,
-                "-af", "silenceremove=start_periods=1:start_duration=0.01:start_threshold=-38dB,"
-                       "silenceremove=stop_periods=-1:stop_duration=0.20:stop_threshold=-38dB,"
-                       "areverse,silenceremove=start_periods=1:start_duration=0.01:start_threshold=-38dB,areverse",
+                "-af", audio_filter,
                 trimmed_chunk
             ]
             subprocess.run(trim_cmd, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, check=True)
@@ -110,8 +170,8 @@ def run_voiceover_agent(script_path: str = "assets/viral_script.json", script_da
                     })
 
             concat_entries.append(f"file '{os.path.abspath(trimmed_chunk)}'")
-            # 30ms ultra-tight micro-breath between sections for fast pacing
-            current_time += dur + 0.03
+            # 25ms ultra-tight micro-breath between sections for fast pacing
+            current_time += dur + 0.025
 
     asyncio.run(build_chunks())
 
