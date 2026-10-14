@@ -1212,5 +1212,185 @@
         "source": "Tavily (Real-Time)"
       }
     ]
+  },
+  {
+    "slot_id": 1,
+    "slot_name": "Morning Breakthrough (Slot 1)",
+    "timestamp_utc": "2026-10-14T05:02:37.584979+00:00",
+    "date_ist": "2026-10-14 9:00 AM IST (Immediate / Makeup)",
+    "buffer_post_id": "6acf0ccbb610c3011f9fdd01",
+    "channel_results": {
+      "instagram": "6acf0ccbb610c3011f9fdd01",
+      "youtube": "6acf0cdc0d20fd15277e5ca2",
+      "twitter": "6acf0ce6b610c3011f9fe2cb"
+    },
+    "video_path": "out/slot_1_daily_reel_opt.mp4",
+    "items": [
+      {
+        "title": "open-source-alternative \u00b7 GitHub Topics \u00b7 GitHub",
+        "name": "open-source-alternative",
+        "description": "Updated Sep 29, 2026  ### xAmirHamza77 / Poka-Bot  Star  4  Open-source, self-hosted AI agent workspace and alternative to OpenAI Dots, Meta Muse, Grok Bot, Instinct, Manus Cue, Claude Cowork, and ChatGPT agent. MIT-lice",
+        "url": "https://github.com/topics/open-source-alternative?o=desc&s=stars",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "personal-ai \u00b7 GitHub Topics \u00b7 GitHub",
+        "name": "personal-ai",
+        "description": "### taracodlabs / aiden  Aiden \u2014 an autonomous AI agent and work engine built solo. It can operate your browser, terminal, files, apps, APIs, skills and tools, remember context, recover from failures, automate workflows,",
+        "url": "https://github.com/topics/personal-ai?l=typescript",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "AIBrix v0.8.0 Release: Building a More Dynamic Inference Platform | AIBrix Blogs",
+        "name": "AIBrix v0.8.0 Release: Building a M",
+        "description": "AIBrix v0.8.0 Release: Building a More Dynamic Inference Platform | AIBrix Blogs  # AIBrix v0.8.0 Release: Building a More Dynamic Inference Platform  October 12, 2026 \u00b7 The AIBrix Team | Suggest Changes  Table of Conten",
+        "url": "https://aibrix.github.io/posts/2026-10-12-v0.8.0-release/",
+        "source": "Exa (24h Index)"
+      }
+    ]
+  },
+  {
+    "slot_id": 2,
+    "slot_name": "Midday Cheat Code (Slot 2)",
+    "timestamp_utc": "2026-10-14T05:14:01.356432+00:00",
+    "date_ist": "2026-10-14 12:00 PM IST (Scheduled for 06:30 UTC)",
+    "buffer_post_id": "6acf0f8f0d20fd15277f1721",
+    "channel_results": {
+      "instagram": "6acf0f8f0d20fd15277f1721",
+      "youtube": "6acf0f940d20fd15277f17db",
+      "twitter": "6acf0f991f3f10bcb7b25445"
+    },
+    "video_path": "out/slot_2_daily_reel_opt.mp4",
+    "items": [
+      {
+        "title": "17 Best Free AI Coding Agents in 2026 | Agentic.ai",
+        "name": "17 Best Free AI Coding Agents in 20",
+        "description": "Agenticness22/36\u00b7Domain Specialist  Orbi is an open-source, self-hostable AI coding agent that takes GitHub Issues from implementation through independent review, merge, and release. It can run against your own model end",
+        "url": "https://agentic.ai/best/free-coding-agents",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "90% of developers use AI coding agents weekly by mid-2026",
+        "name": "90% of developers use AI coding age",
+        "description": "What started as inline autocomplete has evolved into fully autonomous systems that read GitHub issues, navigate multi-file codebases, write fixes, execute tests",
+        "url": "https://www.facebook.com/codechum/posts/ai-agent-era-source/1648672460603379",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "agentic-runtime \u00b7 GitHub Topics \u00b7 GitHub",
+        "name": "agentic-runtime",
+        "description": "automation mcp workflow-engine petri-net multi-agent-systems harness-framework graph-engine bipartite-graph agentops llmops distributed-execution agentic-ai graph-ai agent-orchestration agent-governance agent-harness gra",
+        "url": "https://github.com/topics/agentic-runtime",
+        "source": "Tavily (Real-Time)"
+      }
+    ]
+  },
+  {
+    "slot_id": 3,
+    "slot_name": "Tech Radar Teardown (Slot 3)",
+    "timestamp_utc": "2026-10-14T05:25:49.807731+00:00",
+    "date_ist": "2026-10-14 3:00 PM IST (Scheduled for 09:30 UTC)",
+    "buffer_post_id": "6acf1255848c31c8095f03d1",
+    "channel_results": {
+      "instagram": "6acf1255848c31c8095f03d1",
+      "youtube": "6acf1259848c31c8095f053a",
+      "twitter": "6acf125d0ab87a16c8e3d3d9"
+    },
+    "video_path": "out/slot_3_daily_reel_opt.mp4",
+    "items": [
+      {
+        "title": "Rathnakumar Udayakumar's Post",
+        "name": "Rathnakumar Udayakumar's Post",
+        "description": "ChatGPT: Research, reasoning, and coding. 2. Gemini: Multimodal AI capabilities. 3. Claude: Complex. Meta Llama: Open-weight AI models.",
+        "url": "https://www.linkedin.com/posts/rathanuday_stop-collecting-ai-tools-start-building-activity-7515813287104770048-a5sj",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "The models build upon the Muse Spark AI model, launched ...",
+        "name": "The models build upon the Muse Spar",
+        "description": "Muse Spark is a natively multimodal reasoning model with support for tool-use, visual chain of thought, and multi-agent orchestration.",
+        "url": "https://www.facebook.com/cnet/posts/the-models-build-upon-the-muse-spark-ai-model-launched-earlier-this-year/1490999079556613",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "Run fast, private agents on-device with LFM2.5-24B-A2B",
+        "name": "Run fast, private agents on-device",
+        "description": "# Run fast, private agents on-device with LFM2.5-24B-A2B  Author: Raahul Vignesh, Song Duong, Akhilesh Deepak Gotmare, Fernando Fernandes Neto, Jiahui Wang Published: 2026-10-13T17:05:48Z Source: huggingface.co Language:",
+        "url": "https://huggingface.co/blog/LiquidAI/lfm25-24b-a2b",
+        "source": "Exa (24h Index)"
+      }
+    ]
+  },
+  {
+    "slot_id": 4,
+    "slot_name": "Evening Toolkit (Slot 4)",
+    "timestamp_utc": "2026-10-14T05:36:35.616862+00:00",
+    "date_ist": "2026-10-14 6:00 PM IST (Scheduled for 12:30 UTC)",
+    "buffer_post_id": "6acf14da0ab87a16c8e44654",
+    "channel_results": {
+      "instagram": "6acf14da0ab87a16c8e44654",
+      "youtube": "6acf14df0ab87a16c8e446b6",
+      "twitter": "6acf14e30ab87a16c8e44726"
+    },
+    "video_path": "out/slot_4_daily_reel_opt.mp4",
+    "items": [
+      {
+        "title": "17 Best Free AI Coding Agents in 2026 | Agentic.ai",
+        "name": "17 Best Free AI Coding Agents in 20",
+        "description": "Agenticness22/36\u00b7Domain Specialist  Orbi is an open-source, self-hostable AI coding agent that takes GitHub Issues from implementation through independent review, merge, and release. It can run against your own model end",
+        "url": "https://agentic.ai/best/free-coding-agents",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "Top AI apps and tools for 2026 productivity and automation",
+        "name": "Top AI apps and tools for 2026 prod",
+        "description": "Public 7 AI tools dominating 2026: ChatGPT Writing, scripts, automation, and content planning. Claude Long-form writing + deep reasoning. Perplexity AI Research",
+        "url": "https://www.facebook.com/groups/1953444125189828/posts/2399021607298742",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "agentic-runtime \u00b7 GitHub Topics \u00b7 GitHub",
+        "name": "agentic-runtime",
+        "description": "Updated Oct 14, 2026  Rust  ### kdcube / kdcube  Star  25  Open-source, self-hosted runtime and SDK for AI applications. One tenant/project deployment serves many users and apps with governed tools, scoped credentials, i",
+        "url": "https://github.com/topics/agentic-runtime",
+        "source": "Tavily (Real-Time)"
+      }
+    ]
+  },
+  {
+    "slot_id": 5,
+    "slot_name": "Night Owl Deep Dive (Slot 5)",
+    "timestamp_utc": "2026-10-14T05:51:55.511029+00:00",
+    "date_ist": "2026-10-14 9:00 PM IST (Scheduled for 15:30 UTC)",
+    "buffer_post_id": "6acf1873f847f2ad9ec4c055",
+    "channel_results": {
+      "instagram": "6acf1873f847f2ad9ec4c055",
+      "youtube": "6acf1877848c31c8095fe986",
+      "twitter": "6acf187b0d20fd1527807a0c"
+    },
+    "video_path": "out/slot_5_daily_reel_opt.mp4",
+    "items": [
+      {
+        "title": "90% of developers use AI coding agents weekly by mid-2026",
+        "name": "90% of developers use AI coding age",
+        "description": "Open-source frameworks like AutoGPT have enabled new levels of automation and autonomy. Businesses now leverage AutoGPT for tasks including code generation,",
+        "url": "https://www.facebook.com/codechum/posts/ai-agent-era-source/1648672460603379",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "SwarmClaw AI \u00b7 GitHub",
+        "name": "SwarmClaw AI",
+        "description": "Open-source self-hosted AI agent runtime and multi-agent framework for autonomous agent swarms. Agent memory, MCP tools, schedules, delegation, and 23+ LLM providers (Claude, GPT, Gemini, OpenRouter, Ollama). A practical",
+        "url": "https://github.com/swarmclawai",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "Best Open-Source AI Coding Agents in 2026 | Agentic.ai",
+        "name": "Best Open-Source AI Coding Agents i",
+        "description": "### What's the best open-source AI coding agent?  Aider is the strongest all-around open-source coding agent in 2026 \u2014 multi-file editing, git integration, supports any LLM, and has been actively developed since 2023. Cl",
+        "url": "https://agentic.ai/best/open-source-coding-agents",
+        "source": "Tavily (Real-Time)"
+      }
+    ]
   }
 ]

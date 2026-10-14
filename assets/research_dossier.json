@@ -1,28 +1,28 @@
 {
-  "timestamp": "2026-10-14T04:32:27.892822+00:00",
-  "slot_id": 1,
-  "theme_focus": "open source AI developer tools GitHub",
+  "timestamp": "2026-10-14T05:43:06.208416+00:00",
+  "slot_id": 5,
+  "theme_focus": "advanced prompt engineering frameworks architectures 2026",
   "items": [
     {
-      "title": "open-source-alternative \u00b7 GitHub Topics \u00b7 GitHub",
-      "name": "open-source-alternative",
-      "description": "Updated Sep 29, 2026  ### xAmirHamza77 / Poka-Bot  Star  4  Open-source, self-hosted AI agent workspace and alternative to OpenAI Dots, Meta Muse, Grok Bot, Instinct, Manus Cue, Claude Cowork, and ChatGPT agent. MIT-lice",
-      "url": "https://github.com/topics/open-source-alternative?o=desc&s=stars",
+      "title": "90% of developers use AI coding agents weekly by mid-2026",
+      "name": "90% of developers use AI coding age",
+      "description": "Open-source frameworks like AutoGPT have enabled new levels of automation and autonomy. Businesses now leverage AutoGPT for tasks including code generation,",
+      "url": "https://www.facebook.com/codechum/posts/ai-agent-era-source/1648672460603379",
       "source": "Tavily (Real-Time)"
     },
     {
-      "title": "personal-ai \u00b7 GitHub Topics \u00b7 GitHub",
-      "name": "personal-ai",
-      "description": "### taracodlabs / aiden  Aiden \u2014 an autonomous AI agent and work engine built solo. It can operate your browser, terminal, files, apps, APIs, skills and tools, remember context, recover from failures, automate workflows,",
-      "url": "https://github.com/topics/personal-ai?l=typescript",
+      "title": "SwarmClaw AI \u00b7 GitHub",
+      "name": "SwarmClaw AI",
+      "description": "Open-source self-hosted AI agent runtime and multi-agent framework for autonomous agent swarms. Agent memory, MCP tools, schedules, delegation, and 23+ LLM providers (Claude, GPT, Gemini, OpenRouter, Ollama). A practical",
+      "url": "https://github.com/swarmclawai",
       "source": "Tavily (Real-Time)"
     },
     {
-      "title": "AIBrix v0.8.0 Release: Building a More Dynamic Inference Platform | AIBrix Blogs",
-      "name": "AIBrix v0.8.0 Release: Building a M",
-      "description": "AIBrix v0.8.0 Release: Building a More Dynamic Inference Platform | AIBrix Blogs  # AIBrix v0.8.0 Release: Building a More Dynamic Inference Platform  October 12, 2026 \u00b7 The AIBrix Team | Suggest Changes  Table of Conten",
-      "url": "https://aibrix.github.io/posts/2026-10-12-v0.8.0-release/",
-      "source": "Exa (24h Index)"
+      "title": "Best Open-Source AI Coding Agents in 2026 | Agentic.ai",
+      "name": "Best Open-Source AI Coding Agents i",
+      "description": "### What's the best open-source AI coding agent?  Aider is the strongest all-around open-source coding agent in 2026 \u2014 multi-file editing, git integration, supports any LLM, and has been actively developed since 2023. Cl",
+      "url": "https://agentic.ai/best/open-source-coding-agents",
+      "source": "Tavily (Real-Time)"
     }
   ]
 }

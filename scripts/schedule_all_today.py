@@ -211,14 +211,25 @@ def produce_and_dispatch_slot(plan_item):
     return hist_entry
 
 if __name__ == "__main__":
+    force = "--force" in sys.argv or os.environ.get("FORCE_RESCHEDULE") == "1"
+    target_slot = None
+    for arg in sys.argv:
+        if arg.startswith("--slot="):
+            try:
+                target_slot = int(arg.split("=")[1])
+            except ValueError:
+                pass
+
     plan = get_daily_schedule_plan()
     print("=" * 80)
-    print(f"🚀 EXECUTING DAILY AUTOMATION ENGINE — {plan[0]['today_date']}")
+    print(f"🚀 EXECUTING DAILY AUTOMATION ENGINE — {plan[0]['today_date']} (Force: {force})")
     print("=" * 80)
     for item in plan:
         slot_id = item["slot_id"]
+        if target_slot is not None and slot_id != target_slot:
+            continue
         today_date = item["today_date"]
-        if is_slot_already_published_today(slot_id, today_date):
+        if not force and is_slot_already_published_today(slot_id, today_date):
             print(f"[*] Slot {slot_id} ({item['name']}) has already been dispatched today ({today_date}). Skipping.")
             continue
         produce_and_dispatch_slot(item)

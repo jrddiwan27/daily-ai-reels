@@ -1,27 +1,27 @@
 {
-  "status": "PASS",
-  "total_score": 100,
+  "status": "FAIL",
+  "total_score": 80,
   "gates": {
     "gate_1_research": {
-      "passed": true,
-      "score": 20,
-      "reason": "Fresh, non-blacklisted tool: open-source-alternative"
+      "passed": false,
+      "score": 0,
+      "reason": "CRITICAL REJECTION: Outdated/Forbidden topic 'ollama' detected. Must be fresh <24h AI tool."
     },
     "gate_2_script": {
       "passed": true,
       "score": 20,
-      "reason": "Optimal cadence (81 words) with full 6-beat architecture."
+      "reason": "Optimal cadence (88 words) with full 6-beat architecture."
     },
     "gate_3_audio_pacing": {
       "passed": true,
       "score": 20,
-      "duration": 31.007347,
+      "duration": 31.738776,
       "reason": "Seamless audio with zero awkward dead air."
     },
     "gate_4_kinetic_motion": {
       "passed": true,
       "score": 20,
-      "avg_motion": 30.23,
+      "avg_motion": 29.68,
       "reason": "Continuous kinetic motion confirmed across all frames."
     },
     "gate_5_av_sync": {

@@ -3,486 +3,528 @@
     "word": "Stop",
     "section": "hook",
     "start": 0.0,
-    "end": 0.36
+    "end": 0.35
   },
   {
     "word": "paying",
     "section": "hook",
-    "start": 0.36,
-    "end": 0.71
+    "start": 0.35,
+    "end": 0.7
   },
   {
     "word": "insane",
     "section": "hook",
-    "start": 0.71,
-    "end": 1.07
+    "start": 0.7,
+    "end": 1.05
   },
   {
     "word": "monthly",
     "section": "hook",
-    "start": 1.07,
-    "end": 1.42
+    "start": 1.05,
+    "end": 1.41
   },
   {
     "word": "SaaS",
     "section": "hook",
-    "start": 1.42,
-    "end": 1.78
+    "start": 1.41,
+    "end": 1.76
   },
   {
     "word": "subscriptions",
     "section": "hook",
-    "start": 1.78,
-    "end": 2.13
+    "start": 1.76,
+    "end": 2.11
   },
   {
     "word": "when",
     "section": "hook",
-    "start": 2.13,
-    "end": 2.49
+    "start": 2.11,
+    "end": 2.46
   },
   {
     "word": "free",
     "section": "hook",
-    "start": 2.49,
-    "end": 2.85
+    "start": 2.46,
+    "end": 2.81
   },
   {
     "word": "open-source",
     "section": "hook",
-    "start": 2.85,
-    "end": 3.2
+    "start": 2.81,
+    "end": 3.16
   },
   {
     "word": "AI",
     "section": "hook",
-    "start": 3.2,
-    "end": 3.56
+    "start": 3.16,
+    "end": 3.52
   },
   {
     "word": "builds",
     "section": "hook",
-    "start": 3.56,
-    "end": 3.91
+    "start": 3.52,
+    "end": 3.87
   },
   {
     "word": "this",
     "section": "hook",
-    "start": 3.91,
-    "end": 4.27
+    "start": 3.87,
+    "end": 4.22
   },
   {
     "word": "instantly.",
     "section": "hook",
-    "start": 4.27,
-    "end": 4.62
+    "start": 4.22,
+    "end": 4.57
   },
   {
     "word": "Three",
     "section": "shift",
-    "start": 4.65,
-    "end": 4.96
+    "start": 4.6,
+    "end": 4.95
   },
   {
     "word": "brand-new",
     "section": "shift",
-    "start": 4.96,
-    "end": 5.28
+    "start": 4.95,
+    "end": 5.31
   },
   {
     "word": "breakthrough",
     "section": "shift",
-    "start": 5.28,
-    "end": 5.59
+    "start": 5.31,
+    "end": 5.66
   },
   {
     "word": "developer",
     "section": "shift",
-    "start": 5.59,
-    "end": 5.9
+    "start": 5.66,
+    "end": 6.01
   },
   {
     "word": "repos",
     "section": "shift",
-    "start": 5.9,
-    "end": 6.22
+    "start": 6.01,
+    "end": 6.36
   },
   {
     "word": "just",
     "section": "shift",
-    "start": 6.22,
-    "end": 6.53
+    "start": 6.36,
+    "end": 6.72
   },
   {
     "word": "dropped",
     "section": "shift",
-    "start": 6.53,
-    "end": 6.84
+    "start": 6.72,
+    "end": 7.07
   },
   {
     "word": "on",
     "section": "shift",
-    "start": 6.84,
-    "end": 7.16
+    "start": 7.07,
+    "end": 7.42
   },
   {
     "word": "GitHub",
     "section": "shift",
-    "start": 7.16,
-    "end": 7.47
+    "start": 7.42,
+    "end": 7.77
   },
   {
     "word": "today.",
     "section": "shift",
-    "start": 7.47,
-    "end": 7.78
+    "start": 7.77,
+    "end": 8.13
   },
   {
     "word": "First",
     "section": "tool_1",
-    "start": 7.81,
-    "end": 8.23
+    "start": 8.15,
+    "end": 8.52
   },
   {
     "word": "is",
     "section": "tool_1",
-    "start": 8.23,
-    "end": 8.64
+    "start": 8.52,
+    "end": 8.89
   },
   {
-    "word": "open-source-alternative.",
+    "word": "90%",
     "section": "tool_1",
-    "start": 8.64,
-    "end": 9.06
+    "start": 8.89,
+    "end": 9.26
   },
   {
-    "word": "It",
+    "word": "of",
     "section": "tool_1",
-    "start": 9.06,
-    "end": 9.47
+    "start": 9.26,
+    "end": 9.62
   },
   {
-    "word": "eliminates",
+    "word": "developers",
     "section": "tool_1",
-    "start": 9.47,
-    "end": 9.89
+    "start": 9.62,
+    "end": 9.99
   },
   {
-    "word": "manual",
+    "word": "use",
     "section": "tool_1",
-    "start": 9.89,
-    "end": 10.31
+    "start": 9.99,
+    "end": 10.36
+  },
+  {
+    "word": "AI",
+    "section": "tool_1",
+    "start": 10.36,
+    "end": 10.73
   },
   {
     "word": "coding",
     "section": "tool_1",
-    "start": 10.31,
-    "end": 10.72
+    "start": 10.73,
+    "end": 11.1
+  },
+  {
+    "word": "age.",
+    "section": "tool_1",
+    "start": 11.1,
+    "end": 11.47
+  },
+  {
+    "word": "It",
+    "section": "tool_1",
+    "start": 11.47,
+    "end": 11.83
+  },
+  {
+    "word": "eliminates",
+    "section": "tool_1",
+    "start": 11.83,
+    "end": 12.2
+  },
+  {
+    "word": "manual",
+    "section": "tool_1",
+    "start": 12.2,
+    "end": 12.57
+  },
+  {
+    "word": "coding",
+    "section": "tool_1",
+    "start": 12.57,
+    "end": 12.94
   },
   {
     "word": "pipelines",
     "section": "tool_1",
-    "start": 10.72,
-    "end": 11.14
+    "start": 12.94,
+    "end": 13.31
   },
   {
     "word": "with",
     "section": "tool_1",
-    "start": 11.14,
-    "end": 11.55
+    "start": 13.31,
+    "end": 13.68
   },
   {
     "word": "lightning-fast",
     "section": "tool_1",
-    "start": 11.55,
-    "end": 11.97
+    "start": 13.68,
+    "end": 14.05
   },
   {
     "word": "local",
     "section": "tool_1",
-    "start": 11.97,
-    "end": 12.39
+    "start": 14.05,
+    "end": 14.41
   },
   {
     "word": "model",
     "section": "tool_1",
-    "start": 12.39,
-    "end": 12.8
+    "start": 14.41,
+    "end": 14.78
   },
   {
     "word": "execution.",
     "section": "tool_1",
-    "start": 12.8,
-    "end": 13.22
+    "start": 14.78,
+    "end": 15.15
   },
   {
     "word": "Second",
     "section": "tool_2",
-    "start": 13.24,
-    "end": 13.72
+    "start": 15.17,
+    "end": 15.61
   },
   {
     "word": "is",
     "section": "tool_2",
-    "start": 13.72,
-    "end": 14.19
+    "start": 15.61,
+    "end": 16.05
   },
   {
-    "word": "personal-ai.",
+    "word": "SwarmClaw",
     "section": "tool_2",
-    "start": 14.19,
-    "end": 14.67
+    "start": 16.05,
+    "end": 16.49
+  },
+  {
+    "word": "AI.",
+    "section": "tool_2",
+    "start": 16.49,
+    "end": 16.93
   },
   {
     "word": "An",
     "section": "tool_2",
-    "start": 14.67,
-    "end": 15.14
+    "start": 16.93,
+    "end": 17.37
   },
   {
     "word": "autonomous",
     "section": "tool_2",
-    "start": 15.14,
-    "end": 15.62
+    "start": 17.37,
+    "end": 17.81
   },
   {
     "word": "engine",
     "section": "tool_2",
-    "start": 15.62,
-    "end": 16.1
+    "start": 17.81,
+    "end": 18.25
   },
   {
     "word": "executing",
     "section": "tool_2",
-    "start": 16.1,
-    "end": 16.57
+    "start": 18.25,
+    "end": 18.69
   },
   {
     "word": "deterministic",
     "section": "tool_2",
-    "start": 16.57,
-    "end": 17.05
+    "start": 18.69,
+    "end": 19.13
   },
   {
     "word": "workflows",
     "section": "tool_2",
-    "start": 17.05,
-    "end": 17.53
+    "start": 19.13,
+    "end": 19.57
   },
   {
     "word": "with",
     "section": "tool_2",
-    "start": 17.53,
-    "end": 18.0
+    "start": 19.57,
+    "end": 20.01
   },
   {
     "word": "sub-millisecond",
     "section": "tool_2",
-    "start": 18.0,
-    "end": 18.48
+    "start": 20.01,
+    "end": 20.45
   },
   {
     "word": "response",
     "section": "tool_2",
-    "start": 18.48,
-    "end": 18.95
+    "start": 20.45,
+    "end": 20.89
   },
   {
     "word": "latency.",
     "section": "tool_2",
-    "start": 18.95,
-    "end": 19.43
+    "start": 20.89,
+    "end": 21.33
   },
   {
     "word": "Third",
     "section": "tool_3",
-    "start": 19.46,
-    "end": 19.91
+    "start": 21.36,
+    "end": 21.74
   },
   {
     "word": "is",
     "section": "tool_3",
-    "start": 19.91,
-    "end": 20.36
+    "start": 21.74,
+    "end": 22.11
   },
   {
-    "word": "AIBrix",
+    "word": "Best",
     "section": "tool_3",
-    "start": 20.36,
-    "end": 20.81
+    "start": 22.11,
+    "end": 22.49
   },
   {
-    "word": "v0.8.0",
+    "word": "Open-Source",
     "section": "tool_3",
-    "start": 20.81,
-    "end": 21.26
+    "start": 22.49,
+    "end": 22.87
   },
   {
-    "word": "Release:",
+    "word": "AI",
     "section": "tool_3",
-    "start": 21.26,
-    "end": 21.71
+    "start": 22.87,
+    "end": 23.25
   },
   {
-    "word": "Building",
+    "word": "Coding",
     "section": "tool_3",
-    "start": 21.71,
-    "end": 22.16
+    "start": 23.25,
+    "end": 23.62
   },
   {
-    "word": "a",
+    "word": "Agents",
     "section": "tool_3",
-    "start": 22.16,
-    "end": 22.61
+    "start": 23.62,
+    "end": 24.0
   },
   {
-    "word": "M.",
+    "word": "i.",
     "section": "tool_3",
-    "start": 22.61,
-    "end": 23.06
+    "start": 24.0,
+    "end": 24.38
   },
   {
     "word": "A",
     "section": "tool_3",
-    "start": 23.06,
-    "end": 23.51
+    "start": 24.38,
+    "end": 24.76
   },
   {
     "word": "zero-cloud",
     "section": "tool_3",
-    "start": 23.51,
-    "end": 23.96
+    "start": 24.76,
+    "end": 25.13
   },
   {
     "word": "runtime",
     "section": "tool_3",
-    "start": 23.96,
-    "end": 24.41
+    "start": 25.13,
+    "end": 25.51
   },
   {
     "word": "running",
     "section": "tool_3",
-    "start": 24.41,
-    "end": 24.86
+    "start": 25.51,
+    "end": 25.89
   },
   {
     "word": "complex",
     "section": "tool_3",
-    "start": 24.86,
-    "end": 25.31
+    "start": 25.89,
+    "end": 26.27
   },
   {
     "word": "reasoning",
     "section": "tool_3",
-    "start": 25.31,
-    "end": 25.76
+    "start": 26.27,
+    "end": 26.64
   },
   {
     "word": "models",
     "section": "tool_3",
-    "start": 25.76,
-    "end": 26.21
+    "start": 26.64,
+    "end": 27.02
   },
   {
     "word": "directly",
     "section": "tool_3",
-    "start": 26.21,
-    "end": 26.66
+    "start": 27.02,
+    "end": 27.4
   },
   {
     "word": "on",
     "section": "tool_3",
-    "start": 26.66,
-    "end": 27.11
+    "start": 27.4,
+    "end": 27.77
   },
   {
     "word": "device.",
     "section": "tool_3",
-    "start": 27.11,
-    "end": 27.56
+    "start": 27.77,
+    "end": 28.15
   },
   {
     "word": "Comment",
     "section": "cta",
-    "start": 27.58,
-    "end": 27.83
+    "start": 28.18,
+    "end": 28.44
   },
   {
-    "word": "REPOS",
+    "word": "PROMPT",
     "section": "cta",
-    "start": 27.83,
-    "end": 28.09
+    "start": 28.44,
+    "end": 28.71
   },
   {
     "word": "below,",
     "section": "cta",
-    "start": 28.09,
-    "end": 28.34
+    "start": 28.71,
+    "end": 28.97
   },
   {
     "word": "and",
     "section": "cta",
-    "start": 28.34,
-    "end": 28.6
+    "start": 28.97,
+    "end": 29.23
   },
   {
     "word": "I",
     "section": "cta",
-    "start": 28.6,
-    "end": 28.85
+    "start": 29.23,
+    "end": 29.5
   },
   {
     "word": "will",
     "section": "cta",
-    "start": 28.85,
-    "end": 29.1
+    "start": 29.5,
+    "end": 29.76
   },
   {
     "word": "DM",
     "section": "cta",
-    "start": 29.1,
-    "end": 29.36
+    "start": 29.76,
+    "end": 30.02
   },
   {
     "word": "you",
     "section": "cta",
-    "start": 29.36,
-    "end": 29.61
+    "start": 30.02,
+    "end": 30.28
   },
   {
     "word": "the",
     "section": "cta",
-    "start": 29.61,
-    "end": 29.86
+    "start": 30.28,
+    "end": 30.55
   },
   {
     "word": "exact",
     "section": "cta",
-    "start": 29.86,
-    "end": 30.12
+    "start": 30.55,
+    "end": 30.81
   },
   {
     "word": "setup",
     "section": "cta",
-    "start": 30.12,
-    "end": 30.37
+    "start": 30.81,
+    "end": 31.07
   },
   {
     "word": "code",
     "section": "cta",
-    "start": 30.37,
-    "end": 30.63
+    "start": 31.07,
+    "end": 31.34
   },
   {
     "word": "right",
     "section": "cta",
-    "start": 30.63,
-    "end": 30.88
+    "start": 31.34,
+    "end": 31.6
   },
   {
     "word": "now.",
     "section": "cta",
-    "start": 30.88,
-    "end": 31.13
+    "start": 31.6,
+    "end": 31.86
   }
 ]

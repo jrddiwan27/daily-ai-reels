@@ -4,47 +4,47 @@
     "label": "hook",
     "text": "Stop paying insane monthly SaaS subscriptions when free open-source AI builds this instantly.",
     "start": 0.0,
-    "duration": 4.62,
-    "end": 4.62
+    "duration": 4.57,
+    "end": 4.57
   },
   {
     "id": 1,
     "label": "shift",
     "text": "Three brand-new breakthrough developer repos just dropped on GitHub today.",
-    "start": 4.65,
-    "duration": 3.13,
-    "end": 7.78
+    "start": 4.6,
+    "duration": 3.53,
+    "end": 8.12
   },
   {
     "id": 2,
     "label": "tool_1",
-    "text": "First is open-source-alternative. It eliminates manual coding pipelines with lightning-fast local model execution.",
-    "start": 7.81,
-    "duration": 5.41,
-    "end": 13.22
+    "text": "First is 90% of developers use AI coding age. It eliminates manual coding pipelines with lightning-fast local model execution.",
+    "start": 8.15,
+    "duration": 7.0,
+    "end": 15.15
   },
   {
     "id": 3,
     "label": "tool_2",
-    "text": "Second is personal-ai. An autonomous engine executing deterministic workflows with sub-millisecond response latency.",
-    "start": 13.24,
-    "duration": 6.19,
-    "end": 19.43
+    "text": "Second is SwarmClaw AI. An autonomous engine executing deterministic workflows with sub-millisecond response latency.",
+    "start": 15.17,
+    "duration": 6.16,
+    "end": 21.34
   },
   {
     "id": 4,
     "label": "tool_3",
-    "text": "Third is AIBrix v0.8.0 Release: Building a M. A zero-cloud runtime running complex reasoning models directly on device.",
-    "start": 19.46,
-    "duration": 8.1,
-    "end": 27.55
+    "text": "Third is Best Open-Source AI Coding Agents i. A zero-cloud runtime running complex reasoning models directly on device.",
+    "start": 21.36,
+    "duration": 6.79,
+    "end": 28.16
   },
   {
     "id": 5,
     "label": "cta",
-    "text": "Comment REPOS below, and I will DM you the exact setup code right now.",
-    "start": 27.58,
-    "duration": 3.55,
-    "end": 31.13
+    "text": "Comment PROMPT below, and I will DM you the exact setup code right now.",
+    "start": 28.18,
+    "duration": 3.68,
+    "end": 31.86
   }
 ]
