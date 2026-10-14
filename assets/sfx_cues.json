@@ -1,134 +1,86 @@
 [
   {
-    "type": "boom",
-    "time": 0.0
+    "time": 0.0,
+    "type": "boom"
   },
   {
-    "type": "whoosh",
-    "time": 0.05
+    "time": 0.1,
+    "type": "whoosh"
   },
   {
-    "type": "ding",
-    "time": 1.1
+    "time": 0.4,
+    "type": "pop"
   },
   {
-    "type": "whoosh",
-    "time": 3.18
+    "time": 4.9,
+    "type": "whoosh"
   },
   {
-    "type": "pop",
-    "time": 3.55
+    "time": 5.2,
+    "type": "pop"
   },
   {
-    "type": "pop",
-    "time": 4.1
+    "time": 5.7,
+    "type": "ding"
   },
   {
-    "type": "ding",
-    "time": 4.8
+    "time": 9.95,
+    "type": "whoosh"
   },
   {
-    "type": "whoosh",
-    "time": 7.96
+    "time": 10.2,
+    "type": "pop"
   },
   {
-    "type": "click",
-    "time": 8.35
+    "time": 10.65,
+    "type": "ding"
   },
   {
-    "type": "ding",
-    "time": 9.2
+    "time": 11.15,
+    "type": "click"
   },
   {
-    "type": "whoosh",
-    "time": 11.14
+    "time": 17.9,
+    "type": "whoosh"
   },
   {
-    "type": "pop",
-    "time": 11.6
+    "time": 18.15,
+    "type": "pop"
   },
   {
-    "type": "pop",
-    "time": 12.3
+    "time": 18.6,
+    "type": "ding"
   },
   {
-    "type": "ding",
-    "time": 13.0
+    "time": 19.1,
+    "type": "click"
   },
   {
-    "type": "boom",
-    "time": 14.32
+    "time": 25.63,
+    "type": "whoosh"
   },
   {
-    "type": "whoosh",
-    "time": 14.4
+    "time": 25.88,
+    "type": "pop"
   },
   {
-    "type": "ding",
-    "time": 15.6
+    "time": 26.33,
+    "type": "ding"
   },
   {
-    "type": "whoosh",
-    "time": 19.89
+    "time": 26.83,
+    "type": "click"
   },
   {
-    "type": "click",
-    "time": 20.5
+    "time": 33.05,
+    "type": "boom"
   },
   {
-    "type": "pop",
-    "time": 21.2
+    "time": 33.25,
+    "type": "ding"
   },
   {
-    "type": "ding",
-    "time": 22.0
-  },
-  {
-    "type": "whoosh",
-    "time": 23.87
-  },
-  {
-    "type": "click",
-    "time": 24.5
-  },
-  {
-    "type": "ding",
-    "time": 25.8
-  },
-  {
-    "type": "whoosh",
-    "time": 27.85
-  },
-  {
-    "type": "pop",
-    "time": 28.5
-  },
-  {
-    "type": "pop",
-    "time": 29.2
-  },
-  {
-    "type": "ding",
-    "time": 30.1
-  },
-  {
-    "type": "boom",
-    "time": 32.62
-  },
-  {
-    "type": "whoosh",
-    "time": 32.7
-  },
-  {
-    "type": "pop",
-    "time": 33.3
-  },
-  {
-    "type": "pop",
-    "time": 33.9
-  },
-  {
-    "type": "ding",
-    "time": 35.0
+    "time": 33.55,
+    "type": "pop"
   }
 ]

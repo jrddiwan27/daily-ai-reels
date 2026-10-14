@@ -36,18 +36,18 @@ def run_script_agent(dossier_path: str = "assets/research_dossier.json", cta_key
     t3_desc = items[2].get("description", "")
 
     system_prompt = (
-        "You are an elite viral tech short-form video creator for developers and AI builders (fast-paced, high retention, zero fluff).\n"
-        "Your task: Write an electrifying, spoken script for an Instagram Reel and YouTube Short.\n\n"
+        "You are an elite viral tech short-form video creator for developers and AI builders.\n"
+        "Your style: hyper-fast paced, high energy, punchy hooks, zero filler words, rapid-fire value delivery.\n\n"
         "STRICT CONSTRAINTS:\n"
         "1. EXACT 6-BEAT STRUCTURE (Output valid JSON only):\n"
-        "   - 'hook': Curiosity punch or painful bottleneck (~12 words)\n"
-        "   - 'shift': The new solution overview (~10 words)\n"
-        f"   - 'tool_1': Name '{t1_name}' and explain its breakthrough capability (~20 words)\n"
-        f"   - 'tool_2': Name '{t2_name}' and explain its breakthrough capability (~20 words)\n"
-        f"   - 'tool_3': Name '{t3_name}' and explain its breakthrough capability (~20 words)\n"
-        f"   - 'cta': Urgent call to action: 'Comment {cta_keyword} below, and I will DM you the setup code right now.' (~14 words)\n"
-        "2. TOTAL WORD COUNT: Exactly between 95 and 105 words total across all 6 sections combined.\n"
-        "3. SPOKEN NATURAL LANGUAGE: No markdown asterisks, no URLs, no hashtags, no parentheses.\n"
+        "   - 'hook': Immediate high-voltage shock or bottleneck (~10-12 words)\n"
+        "   - 'shift': The instant breakthrough reveal (~8-10 words)\n"
+        f"   - 'tool_1': Name '{t1_name}' and explain its breakthrough capability with punchy active verbs (~18 words)\n"
+        f"   - 'tool_2': Name '{t2_name}' and explain its breakthrough capability with punchy active verbs (~18 words)\n"
+        f"   - 'tool_3': Name '{t3_name}' and explain its breakthrough capability with punchy active verbs (~18 words)\n"
+        f"   - 'cta': Urgent call to action: 'Comment {cta_keyword} below, and I will DM you the exact setup code right now.' (~14 words)\n"
+        "2. TOTAL WORD COUNT: Exactly between 90 and 100 words total across all 6 sections combined.\n"
+        "3. SPOKEN NATURAL LANGUAGE: No markdown asterisks, no URLs, no hashtags, no parentheses, short punchy sentences.\n"
         "4. Return ONLY valid JSON with keys: 'hook', 'shift', 'tool_1', 'tool_2', 'tool_3', 'cta'."
     )
 
@@ -85,12 +85,12 @@ def run_script_agent(dossier_path: str = "assets/research_dossier.json", cta_key
 
     if not script_data or "tool_1" not in script_data:
         script_data = {
-            "hook": "Stop wasting hours paying for expensive SaaS when open-source AI does this automatically.",
-            "shift": "Three brand-new developer tools just dropped on GitHub that change the game.",
-            "tool_1": f"First is {t1_name}, an open-source powerhouse that eliminates manual workflows with local model execution.",
-            "tool_2": f"Second is {t2_name}, an autonomous engine running deterministic pipelines with lightning-fast sub-millisecond response times.",
-            "tool_3": f"Third is {t3_name}, a zero-latency runtime executing complex workflows directly in WebAssembly with zero cloud lock-in.",
-            "cta": f"Comment {cta_keyword} below, and I will DM you the full setup code and GitHub repos right now."
+            "hook": "Stop paying insane monthly SaaS subscriptions when free open-source AI builds this instantly.",
+            "shift": "Three brand-new breakthrough developer repos just dropped on GitHub today.",
+            "tool_1": f"First is {t1_name}. It eliminates manual coding pipelines with lightning-fast local model execution.",
+            "tool_2": f"Second is {t2_name}. An autonomous engine executing deterministic workflows with sub-millisecond response latency.",
+            "tool_3": f"Third is {t3_name}. A zero-cloud runtime running complex reasoning models directly on device.",
+            "cta": f"Comment {cta_keyword} below, and I will DM you the exact setup code right now."
         }
 
     sections = [

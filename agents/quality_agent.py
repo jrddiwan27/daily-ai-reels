@@ -150,22 +150,22 @@ class QualityAgent:
             stat = ImageStat.Stat(diff)
             avg_diff = stat.mean[0]
             motion_scores.append(avg_diff)
-            if avg_diff < 1.5:
+            if avg_diff < 2.5:
                 static_windows.append(i + 1)
 
         avg_motion = sum(motion_scores) / len(motion_scores)
 
-        if len(static_windows) >= 3:
+        if len(static_windows) >= 1:
             return {
                 "passed": False,
                 "score": 8,
                 "static_seconds": static_windows,
-                "reason": f"Static visual frames detected at seconds {static_windows}. Continuous kinetic motion required."
+                "reason": f"Static visual frames detected at seconds {static_windows}. Continuous kinetic motion required across every second."
             }
 
         score = 20
-        print(f"[✓] Kinetic Motion Passed Gate 4 (Score: {score}/20) - Avg Pixel Motion: {avg_motion:.2f}, Static Gaps: {len(static_windows)}")
-        return {"passed": True, "score": score, "avg_motion": round(avg_motion, 2), "reason": "Continuous kinetic motion confirmed."}
+        print(f"[✓] Kinetic Motion Passed Gate 4 (Score: {score}/20) - Avg Pixel Motion: {avg_motion:.2f}, Static Gaps: 0 (ZERO STATIC FRAMES)")
+        return {"passed": True, "score": score, "avg_motion": round(avg_motion, 2), "reason": "Continuous kinetic motion confirmed across all frames."}
 
     def audit_av_sync(self, timings_path="assets/section_timings.json", sfx_path="assets/sfx_cues.json"):
         print("[Quality Gate 5/5] Auditing Audio-Visual Synchronization & Sound Design...")

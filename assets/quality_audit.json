@@ -1,36 +1,33 @@
 {
   "status": "PASS",
-  "total_score": 98,
-  "max_score": 100,
+  "total_score": 100,
   "gates": {
-    "research": {
+    "gate_1_research": {
       "passed": true,
       "score": 20,
-      "reason": "Fresh, non-blacklisted viral AI topic."
+      "reason": "Fresh, non-blacklisted tool: open-source-alternative"
     },
-    "script": {
+    "gate_2_script": {
       "passed": true,
       "score": 20,
-      "reason": "Optimal cadence (100 words) with full 5-beat architecture."
+      "reason": "Optimal cadence (92 words) with full 6-beat architecture."
     },
-    "voiceover": {
+    "gate_3_audio_pacing": {
       "passed": true,
       "score": 20,
-      "duration": 48.48,
-      "reason": "High-density speech timeline & audio pacing."
+      "duration": 36.672,
+      "reason": "Seamless audio with zero awkward dead air."
     },
-    "motion": {
+    "gate_4_kinetic_motion": {
       "passed": true,
       "score": 20,
-      "avg_motion": 29.1,
-      "static_seconds": [],
-      "reason": "Passed strict non-static kinetic motion requirements."
+      "avg_motion": 28.3,
+      "reason": "Continuous kinetic motion confirmed across all frames."
     },
-    "vision": {
+    "gate_5_av_sync": {
       "passed": true,
-      "score": 18,
-      "feedback": "Deterministic validation: Keyframes populated with cards and character rig."
+      "score": 20,
+      "reason": "Frame-accurate audio-visual synchronization verified."
     }
-  },
-  "timestamp": 1791790986.425514
+  }
 }

@@ -8,7 +8,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-async def synthesize_chunk(text: str, out_file: str, voice_name: str = "en-US-ChristopherNeural", rate: str = "+5%"):
+async def synthesize_chunk(text: str, out_file: str, voice_name: str = "en-US-ChristopherNeural", rate: str = "+10%"):
     comm = edge_tts.Communicate(text, voice_name, rate=rate)
     await comm.save(out_file)
 
@@ -20,7 +20,7 @@ def run_voiceover_agent(script_path: str = "assets/viral_script.json", script_da
     section timings and word timelines.
     """
     print("=" * 65)
-    print(f"🎙️ [AGENT 3: VOICEOVER AGENT] Synthesizing Zero-Dead-Air Seamless Voiceover...")
+    print(f"🎙️ [AGENT 3: VOICEOVER AGENT] Synthesizing Zero-Dead-Air Seamless Voiceover (Rate: +10%)...")
     print("=" * 65)
 
     if script_data:
@@ -54,18 +54,24 @@ def run_voiceover_agent(script_path: str = "assets/viral_script.json", script_da
     async def build_chunks():
         nonlocal current_time
         for idx, (label, text) in enumerate(sections):
+            # Clean punctuation that introduces awkward 1-second pauses in TTS
             clean_text = re.sub(r'[*_#`]', '', text).strip()
+            # Replace internal colons and semicolons with commas for smooth forward momentum
+            spoken_text = re.sub(r'[:;]', ',', clean_text)
+            spoken_text = re.sub(r'\s+', ' ', spoken_text)
+
             raw_chunk = os.path.join(chunks_dir, f"raw_{idx}.mp3")
             trimmed_chunk = os.path.join(chunks_dir, f"trimmed_{idx}.mp3")
 
-            # 1. Synthesize audio chunk
-            await synthesize_chunk(clean_text, raw_chunk, voice_name=voice_name, rate="+5%")
+            # 1. Synthesize audio chunk (+10% rate for energetic, high-retention cadence)
+            await synthesize_chunk(spoken_text, raw_chunk, voice_name=voice_name, rate="+10%")
 
-            # 2. Trim leading & trailing silence (< -40dB) to guarantee zero dead air
+            # 2. Trim leading, trailing, and interior silence (> 0.20s) to guarantee zero dead air
             trim_cmd = [
                 "ffmpeg", "-y", "-i", raw_chunk,
-                "-af", "silenceremove=start_periods=1:start_duration=0.01:start_threshold=-40dB,"
-                       "areverse,silenceremove=start_periods=1:start_duration=0.01:start_threshold=-40dB,areverse",
+                "-af", "silenceremove=start_periods=1:start_duration=0.01:start_threshold=-38dB,"
+                       "silenceremove=stop_periods=-1:stop_duration=0.20:stop_threshold=-38dB,"
+                       "areverse,silenceremove=start_periods=1:start_duration=0.01:start_threshold=-38dB,areverse",
                 trimmed_chunk
             ]
             subprocess.run(trim_cmd, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, check=True)
@@ -104,8 +110,8 @@ def run_voiceover_agent(script_path: str = "assets/viral_script.json", script_da
                     })
 
             concat_entries.append(f"file '{os.path.abspath(trimmed_chunk)}'")
-            # 80ms micro-breath between sections
-            current_time += dur + 0.08
+            # 30ms ultra-tight micro-breath between sections for fast pacing
+            current_time += dur + 0.03
 
     asyncio.run(build_chunks())
 

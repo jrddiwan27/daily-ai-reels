@@ -87,26 +87,29 @@ def run_visual_agent(
         {"id": 5, "start": t_cta, "theme": "dk", "label": "FREE GITHUB REPOS", "pr": 3}
     ]
 
-    # Generate frame-accurate SFX cues
+    # Generate frame-accurate SFX cues for rapid-fire beat cuts & reveals
     sfx_cues = [
         {"time": round(t_hook, 2), "type": "boom"},
         {"time": round(t_hook + 0.1, 2), "type": "whoosh"},
-        {"time": round(t_hook + 0.5, 2), "type": "pop"},
+        {"time": round(t_hook + 0.4, 2), "type": "pop"},
         {"time": round(t_shift, 2), "type": "whoosh"},
-        {"time": round(t_shift + 0.4, 2), "type": "pop"},
-        {"time": round(t_shift + 1.0, 2), "type": "ding"},
+        {"time": round(t_shift + 0.3, 2), "type": "pop"},
+        {"time": round(t_shift + 0.8, 2), "type": "ding"},
         {"time": round(t_tool1, 2), "type": "whoosh"},
-        {"time": round(t_tool1 + 0.3, 2), "type": "pop"},
-        {"time": round(t_tool1 + 0.8, 2), "type": "ding"},
+        {"time": round(t_tool1 + 0.25, 2), "type": "pop"},
+        {"time": round(t_tool1 + 0.7, 2), "type": "ding"},
+        {"time": round(t_tool1 + 1.2, 2), "type": "click"},
         {"time": round(t_tool2, 2), "type": "whoosh"},
-        {"time": round(t_tool2 + 0.3, 2), "type": "pop"},
-        {"time": round(t_tool2 + 0.8, 2), "type": "ding"},
+        {"time": round(t_tool2 + 0.25, 2), "type": "pop"},
+        {"time": round(t_tool2 + 0.7, 2), "type": "ding"},
+        {"time": round(t_tool2 + 1.2, 2), "type": "click"},
         {"time": round(t_tool3, 2), "type": "whoosh"},
-        {"time": round(t_tool3 + 0.3, 2), "type": "pop"},
-        {"time": round(t_tool3 + 0.8, 2), "type": "ding"},
+        {"time": round(t_tool3 + 0.25, 2), "type": "pop"},
+        {"time": round(t_tool3 + 0.7, 2), "type": "ding"},
+        {"time": round(t_tool3 + 1.2, 2), "type": "click"},
         {"time": round(t_cta, 2), "type": "boom"},
         {"time": round(t_cta + 0.2, 2), "type": "ding"},
-        {"time": round(t_cta + 0.6, 2), "type": "pop"}
+        {"time": round(t_cta + 0.5, 2), "type": "pop"}
     ]
 
     with open("assets/sfx_cues.json", "w") as f:
@@ -128,7 +131,7 @@ def run_visual_agent(
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Daily AI Explainer</title>
+  <title>Daily AI Explainer - Hyper-Paced</title>
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800;900&family=IBM+Plex+Mono:wght@500;700&display=swap" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
   <style>
@@ -157,6 +160,7 @@ def run_visual_agent(
       top: 0;
     }}
 
+    /* Continuous camera micro-sway and push: ZERO static frames */
     #stage {{
       --b: #e8695c;
       --d: #b8352b;
@@ -169,6 +173,15 @@ def run_visual_agent(
       background: var(--b);
       transition: background 0.25s ease;
       color: #111;
+      animation: camDrift 4.5s ease-in-out infinite alternate;
+      transform-origin: center center;
+    }}
+    @keyframes camDrift {{
+      0%   {{ transform: scale(1.0) translate(0px, 0px) rotate(0deg); }}
+      25%  {{ transform: scale(1.02) translate(-1.5px, -1.5px) rotate(0.15deg); }}
+      50%  {{ transform: scale(1.035) translate(1.5px, -1.0px) rotate(-0.12deg); }}
+      75%  {{ transform: scale(1.018) translate(-1.0px, 1.5px) rotate(0.08deg); }}
+      100% {{ transform: scale(1.028) translate(1.2px, 0.5px) rotate(-0.15deg); }}
     }}
 
     #stage.rd {{ --b: #e8695c; --d: #b8352b; }}
@@ -178,18 +191,18 @@ def run_visual_agent(
     #stage.pk {{ --b: #f3a6c8; --d: #b3407a; }}
     #stage.dk {{ --b: #17141f; --d: #3a2f5c; color: #fff; }}
 
-    /* Background kinetic moving scanlines */
+    /* Continuous animated diagonal moving grid lines */
     #stage::before {{
       content: "";
       position: absolute;
-      inset: 0;
-      background: repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.12) 0 22px, transparent 22px 44px);
-      animation: gs 1.6s linear infinite;
+      inset: -40px;
+      background: repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.09) 0 16px, transparent 16px 32px);
+      animation: gridSlide 1.2s linear infinite;
       pointer-events: none;
       z-index: 1;
     }}
-    @keyframes gs {{
-      to {{ background-position: 44px 0; }}
+    @keyframes gridSlide {{
+      to {{ transform: translate(32px, 32px); }}
     }}
 
     #scene-container {{
@@ -209,21 +222,21 @@ def run_visual_agent(
     }}
 
     .a {{
-      animation: bob 1.5s ease-in-out infinite alternate;
+      animation: bob 1.2s ease-in-out infinite alternate;
     }}
     .pop {{
-      animation: pop 0.45s cubic-bezier(0.3, 1.7, 0.5, 1) forwards, bob 1.2s ease-in-out infinite alternate;
+      animation: pop 0.4s cubic-bezier(0.3, 1.7, 0.5, 1) forwards, bob 1.0s ease-in-out infinite alternate;
     }}
     @keyframes pop {{
-      from {{ opacity: 0; transform: scale(0.6) rotate(-6deg); }}
-      to {{ opacity: 1; transform: none; }}
+      from {{ opacity: 0; transform: scale(0.65) rotate(-5deg); }}
+      to {{ opacity: 1; transform: scale(1.0) rotate(0deg); }}
     }}
     @keyframes bob {{
-      from {{ translate: 0 -4px; }}
-      to {{ translate: 0 5px; }}
+      from {{ transform: translateY(-4px); }}
+      to {{ transform: translateY(4px); }}
     }}
 
-    /* Rising ambient particles */
+    /* Rising ambient glowing particles */
     #pt {{
       position: absolute;
       inset: 0;
@@ -233,15 +246,16 @@ def run_visual_agent(
     }}
     #pt i {{
       position: absolute;
-      bottom: -10px;
+      bottom: -15px;
       width: var(--s);
       height: var(--s);
       border-radius: 50%;
-      background: rgba(255, 255, 255, 0.65);
+      background: rgba(255, 255, 255, 0.7);
+      box-shadow: 0 0 6px rgba(255, 255, 255, 0.8);
       animation: rise var(--t) var(--dl) linear infinite;
     }}
     @keyframes rise {{
-      to {{ transform: translate(20px, -680px); }}
+      to {{ transform: translate(25px, -700px); }}
     }}
 
     /* Screen flash cut */
@@ -304,7 +318,7 @@ def run_visual_agent(
       color: #fff;
       border: 3px solid #111;
       border-radius: 12px;
-      box-shadow: 5px 5px 0 #111;
+      box-shadow: 6px 6px 0 #111;
       font: 500 11px 'IBM Plex Mono', monospace;
       overflow: hidden;
       margin-top: 6px;
@@ -329,6 +343,30 @@ def run_visual_agent(
     }}
     .win .hd i:nth-child(2) {{ background: #febc2e; }}
     .win .hd i:nth-child(3) {{ background: #28c840; margin-right: 6px; }}
+    .win .hd .live-badge {{
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      font: 800 8px 'IBM Plex Mono', monospace;
+      color: #4ade80;
+      background: rgba(74, 222, 128, 0.15);
+      border: 1.5px solid #4ade80;
+      border-radius: 99px;
+      padding: 1px 6px;
+    }}
+    .win .hd .live-dot {{
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: #4ade80;
+      box-shadow: 0 0 5px #4ade80;
+      animation: livePing 0.7s ease-in-out infinite alternate;
+    }}
+    @keyframes livePing {{
+      from {{ opacity: 0.3; transform: scale(0.7); }}
+      to {{ opacity: 1; transform: scale(1.3); }}
+    }}
     .win .bd {{
       padding: 10px;
       line-height: 1.6;
@@ -340,6 +378,18 @@ def run_visual_agent(
       color: #fff;
     }}
     .ty.g {{ color: #f6c85a; }}
+    .cur {{
+      display: inline-block;
+      width: 7px;
+      height: 12px;
+      background: #f6c85a;
+      margin-left: 3px;
+      vertical-align: middle;
+      animation: blinkCur 0.35s steps(1) infinite;
+    }}
+    @keyframes blinkCur {{
+      50% {{ opacity: 0; }}
+    }}
 
     .st {{
       position: absolute;
@@ -372,10 +422,10 @@ def run_visual_agent(
       background: #fff;
       border: 3px solid #111;
       transform-origin: bottom;
-      animation: bar 0.45s infinite alternate;
+      animation: bar 0.35s infinite alternate;
     }}
     @keyframes bar {{
-      to {{ scale: 1 0.55; }}
+      to {{ transform: scaleY(0.45); }}
     }}
 
     .slot {{
@@ -400,7 +450,7 @@ def run_visual_agent(
       background: #fff;
       border: 4px solid #111;
       border-radius: 12px;
-      box-shadow: 5px 5px 0 #111;
+      box-shadow: 6px 6px 0 #111;
       padding: 6px 14px;
       margin-top: 6px;
       text-align: left;
@@ -414,6 +464,14 @@ def run_visual_agent(
       padding: 5px 0;
       color: #111;
       border-bottom: 2px dashed #ccc;
+      animation: ckFloat 1.8s ease-in-out infinite alternate;
+    }}
+    .ck:nth-child(1) {{ animation-delay: 0s; }}
+    .ck:nth-child(2) {{ animation-delay: -0.6s; }}
+    .ck:nth-child(3) {{ animation-delay: -1.2s; }}
+    @keyframes ckFloat {{
+      from {{ transform: translateX(0px); }}
+      to {{ transform: translateX(3px); }}
     }}
     .ck:last-child {{ border-bottom: none; }}
     .ck u {{
@@ -448,7 +506,7 @@ def run_visual_agent(
       font: 800 28px 'Bricolage Grotesque';
       padding: 6px 30px;
       margin-top: 24px;
-      animation: pu 1s infinite;
+      animation: pu 0.9s infinite;
       box-shadow: 5px 5px 0 #111;
     }}
     @keyframes pu {{
@@ -482,64 +540,94 @@ def run_visual_agent(
       transition: background 0.25s;
     }}
 
+    /* Continuous animated desktop Audio EQ Visualizer */
+    #desk-eq {{
+      position: absolute;
+      left: 18px;
+      bottom: 16px;
+      display: flex;
+      gap: 6px;
+      align-items: flex-end;
+      height: 52px;
+      z-index: 5;
+    }}
+    #desk-eq i {{
+      width: 9px;
+      border-radius: 5px;
+      background: #fff;
+      border: 2px solid #111;
+      box-shadow: 2px 2px 0 #111;
+      transform-origin: bottom;
+      animation: eqPulse 0.22s ease-in-out infinite alternate;
+    }}
+    #desk-eq i:nth-child(1) {{ height: 22px; background: #22c55e; animation-delay: -0.04s; }}
+    #desk-eq i:nth-child(2) {{ height: 42px; background: #38bdf8; animation-delay: -0.16s; }}
+    #desk-eq i:nth-child(3) {{ height: 28px; background: #eab308; animation-delay: -0.22s; }}
+    #desk-eq i:nth-child(4) {{ height: 48px; background: #f43f5e; animation-delay: -0.09s; }}
+    #desk-eq i:nth-child(5) {{ height: 34px; background: #a855f7; animation-delay: -0.18s; }}
+    #desk-eq i:nth-child(6) {{ height: 20px; background: #22c55e; animation-delay: -0.12s; }}
+    @keyframes eqPulse {{
+      to {{ transform: scaleY(0.35); }}
+    }}
+
     #ch {{
       position: absolute;
       right: 4px;
-      bottom: 100px;
+      bottom: 96px;
       width: 178px;
       z-index: 4;
-      animation: bnc 0.5s ease-in-out infinite alternate;
+      animation: bnc 0.32s ease-in-out infinite alternate;
     }}
     @keyframes bnc {{
-      to {{ translate: 0 -5px; }}
+      to {{ transform: translateY(-7px); }}
     }}
 
     #hd {{
       transform-origin: 100px 150px;
-      animation: nod 0.6s ease-in-out infinite alternate;
+      animation: nod 0.42s ease-in-out infinite alternate;
     }}
     @keyframes nod {{
-      from {{ rotate: -3deg; }}
-      to {{ rotate: 3deg; }}
+      from {{ transform: rotate(-4deg); }}
+      to {{ transform: rotate(4deg); }}
     }}
 
     .arm {{
       transform-origin: 52px 172px;
-      animation: wave 0.9s ease-in-out infinite alternate;
+      animation: wave 0.52s ease-in-out infinite alternate;
     }}
     @keyframes wave {{
-      from {{ rotate: -20deg; }}
-      to {{ rotate: 12deg; }}
+      from {{ transform: rotate(-24deg); }}
+      to {{ transform: rotate(14deg); }}
     }}
 
     .eye {{
       transform-box: fill-box;
       transform-origin: center;
-      animation: blink 2.8s infinite;
+      animation: blink 2.0s infinite;
     }}
     @keyframes blink {{
-      0%, 93%, 100% {{ scale: 1; }}
-      96% {{ scale: 1 0.1; }}
+      0%, 92%, 100% {{ transform: scale(1); }}
+      96% {{ transform: scale(1, 0.08); }}
     }}
 
     .mouth {{
       transform-box: fill-box;
       transform-origin: center;
-      scale: 1 0.4;
-      animation: talk 0.18s infinite alternate;
+      transform: scale(1, 0.35);
+      animation: talk 0.12s infinite alternate;
     }}
     @keyframes talk {{
-      to {{ scale: 1.1 1.5; }}
+      to {{ transform: scale(1.15, 1.6); }}
     }}
 
     .brow {{
-      animation: brw 1.3s infinite alternate;
+      animation: brw 0.8s infinite alternate;
     }}
     @keyframes brw {{
-      to {{ translate: 0 -3px; }}
+      to {{ transform: translateY(-4px); }}
     }}
 
-    /* Caption Word Pill */
+    /* Kinetic Caption Word Pill */
     #cap {{
       position: absolute;
       left: 0;
@@ -551,17 +639,19 @@ def run_visual_agent(
     }}
     #cap .w {{
       display: inline-block;
-      font: 800 28px 'Bricolage Grotesque';
+      font: 900 28px 'Bricolage Grotesque';
       background: #ffd23f;
       color: #111;
       border: 4px solid #111;
-      border-radius: 10px;
-      padding: 2px 16px;
-      box-shadow: 5px 5px 0 #111;
-      animation: cp 0.2s cubic-bezier(0.3, 1.8, 0.5, 1);
+      border-radius: 12px;
+      padding: 3px 18px;
+      box-shadow: 6px 6px 0 #111;
+      animation: cp 0.15s cubic-bezier(0.34, 1.56, 0.64, 1);
+      transform-origin: center;
     }}
     @keyframes cp {{
-      from {{ scale: 0.7; rotate: -5deg; }}
+      from {{ transform: scale(0.65) rotate(-6deg); }}
+      to {{ transform: scale(1.0) rotate(0deg); }}
     }}
   </style>
 </head>
@@ -581,10 +671,13 @@ def run_visual_agent(
         <!-- Scene 0: Hook -->
         <div id="sc-0" class="sc">
           <div class="win a">
-            <div class="hd"><i></i><i></i><i></i>terminal</div>
+            <div class="hd">
+              <i></i><i></i><i></i>terminal
+              <span class="live-badge"><i class="live-dot"></i>LIVE</span>
+            </div>
             <div class="bd">
               <span class="ty">> stop paying expensive SaaS</span>
-              <span class="ty g">> open-source AI does this now</span>
+              <span class="ty g">> open-source AI builds this now<span class="cur"></span></span>
             </div>
           </div>
           <div class="big pop">STOP<br>WASTING<br>HOURS</div>
@@ -611,10 +704,13 @@ def run_visual_agent(
         <!-- Scene 2: Tool 1 -->
         <div id="sc-2" class="sc" style="display:none; opacity:0;">
           <div class="win a">
-            <div class="hd"><i></i><i></i><i></i>{name1.lower()[:18]}</div>
+            <div class="hd">
+              <i></i><i></i><i></i>{name1.lower()[:18]}
+              <span class="live-badge"><i class="live-dot"></i>ACTIVE</span>
+            </div>
             <div class="bd">
               <span class="ty">> {it1.get('description', 'High performance model')[:36]}</span>
-              <span class="ty g">> Sub-millisecond response</span>
+              <span class="ty g">> Sub-millisecond response<span class="cur"></span></span>
             </div>
           </div>
           <div class="chk a">
@@ -627,10 +723,13 @@ def run_visual_agent(
         <!-- Scene 3: Tool 2 -->
         <div id="sc-3" class="sc" style="display:none; opacity:0;">
           <div class="win a">
-            <div class="hd"><i></i><i></i><i></i>{name2.lower()[:18]}</div>
+            <div class="hd">
+              <i></i><i></i><i></i>{name2.lower()[:18]}
+              <span class="live-badge"><i class="live-dot"></i>ACTIVE</span>
+            </div>
             <div class="bd">
               <span class="ty">> {it2.get('description', 'Autonomous agent')[:36]}</span>
-              <span class="ty g">> Executes complex workflows</span>
+              <span class="ty g">> Executes complex workflows<span class="cur"></span></span>
             </div>
           </div>
           <div class="chk a">
@@ -643,10 +742,13 @@ def run_visual_agent(
         <!-- Scene 4: Tool 3 -->
         <div id="sc-4" class="sc" style="display:none; opacity:0;">
           <div class="win a">
-            <div class="hd"><i></i><i></i><i></i>{name3.lower()[:18]}</div>
+            <div class="hd">
+              <i></i><i></i><i></i>{name3.lower()[:18]}
+              <span class="live-badge"><i class="live-dot"></i>ACTIVE</span>
+            </div>
             <div class="bd">
               <span class="ty">> {it3.get('description', 'Instant extraction')[:36]}</span>
-              <span class="ty g">> WebAssembly Runtime</span>
+              <span class="ty g">> WebAssembly Runtime<span class="cur"></span></span>
             </div>
           </div>
           <div class="chk a">
@@ -668,8 +770,12 @@ def run_visual_agent(
         </div>
       </div>
 
-      <!-- Wooden Tech Desk -->
-      <div id="desk"></div>
+      <!-- Wooden Tech Desk with Live Audio Visualizer -->
+      <div id="desk">
+        <div id="desk-eq">
+          <i></i><i></i><i></i><i></i><i></i><i></i>
+        </div>
+      </div>
 
       <!-- Animated Host Character SVG -->
       <svg id="ch" viewBox="0 0 200 220">
@@ -713,9 +819,9 @@ def run_visual_agent(
   <script>
     // Particle dots
     const pt = document.getElementById("pt");
-    for (let i = 0; i < 20; i++) {{
+    for (let i = 0; i < 24; i++) {{
       const dot = document.createElement("i");
-      dot.style.cssText = `left: ${{Math.random() * 100}}%; --s: ${{3 + Math.random() * 6}}px; --t: ${{2.5 + Math.random() * 3}}s; --dl: -${{Math.random() * 5}}s;`;
+      dot.style.cssText = `left: ${{Math.random() * 100}}%; --s: ${{3 + Math.random() * 6}}px; --t: ${{2.2 + Math.random() * 2.8}}s; --dl: -${{Math.random() * 5}}s;`;
       pt.appendChild(dot);
     }}
 
@@ -760,7 +866,7 @@ def run_visual_agent(
       // Flash transition cut
       fl.style.animation = "none";
       void fl.offsetWidth;
-      fl.style.animation = "fl 0.28s ease-out";
+      fl.style.animation = "fl 0.22s ease-out";
     }}
 
     function setWord(w) {{
@@ -776,6 +882,15 @@ def run_visual_agent(
     const tl = gsap.timeline({{ paused: true }});
     window.__timelines = window.__timelines || {{}};
     window.__timelines["main"] = tl;
+
+    // Master continuous camera slow push & sway in GSAP: guarantees continuous motion across every frame
+    tl.to("#stage", {{
+      scale: 1.05,
+      x: -6,
+      y: -8,
+      duration: {duration},
+      ease: "none"
+    }}, 0);
 
     // Initial mount
     mountScene(0);

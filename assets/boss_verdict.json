@@ -1,80 +1,82 @@
 {
   "boss_decision": "READY_FOR_USER_CONFIRMATION",
-  "quality_score": 98,
+  "quality_score": 100,
   "quality_audit": {
     "status": "PASS",
-    "total_score": 98,
-    "max_score": 100,
+    "total_score": 100,
     "gates": {
-      "research": {
+      "gate_1_research": {
         "passed": true,
         "score": 20,
-        "reason": "Fresh, non-blacklisted viral AI topic."
+        "reason": "Fresh, non-blacklisted tool: open-source-alternative"
       },
-      "script": {
+      "gate_2_script": {
         "passed": true,
         "score": 20,
-        "reason": "Optimal cadence (100 words) with full 5-beat architecture."
+        "reason": "Optimal cadence (92 words) with full 6-beat architecture."
       },
-      "voiceover": {
+      "gate_3_audio_pacing": {
         "passed": true,
         "score": 20,
-        "duration": 48.48,
-        "reason": "High-density speech timeline & audio pacing."
+        "duration": 36.672,
+        "reason": "Seamless audio with zero awkward dead air."
       },
-      "motion": {
+      "gate_4_kinetic_motion": {
         "passed": true,
         "score": 20,
-        "avg_motion": 29.1,
-        "static_seconds": [],
-        "reason": "Passed strict non-static kinetic motion requirements."
+        "avg_motion": 28.3,
+        "reason": "Continuous kinetic motion confirmed across all frames."
       },
-      "vision": {
+      "gate_5_av_sync": {
         "passed": true,
-        "score": 18,
-        "feedback": "Deterministic validation: Keyframes populated with cards and character rig."
+        "score": 20,
+        "reason": "Frame-accurate audio-visual synchronization verified."
       }
-    },
-    "timestamp": 1791790986.425514
+    }
   },
-  "video_path": "out/daily-reel.mp4",
+  "video_path": "out/slot_1_daily_reel.mp4",
   "dimensions": "1080x1920",
-  "duration_seconds": 58.37,
-  "topic": "Releases \u00b7 openclaw/openclaw",
-  "hook": "",
-  "sfx_cues_count": 29,
+  "duration_seconds": 46.27,
+  "lead_topic": "open-source-alternative",
+  "hook": "Stop building AI agents from scratch. Your dev workflow is impossibly slow, right?",
+  "cta_keyword": "REPOS",
   "keyframes": [
     {
       "label": "01_hook",
-      "timestamp": 2.0,
-      "path": "out/boss_review/01_hook_2s.jpg"
+      "timestamp": 1.5,
+      "path": "out/boss_review/01_hook_1s.jpg"
     },
     {
-      "label": "02_setup",
-      "timestamp": 7.0,
-      "path": "out/boss_review/02_setup_7s.jpg"
+      "label": "02_shift",
+      "timestamp": 5.5,
+      "path": "out/boss_review/02_shift_5s.jpg"
     },
     {
-      "label": "03_showcase_1",
-      "timestamp": 23.35,
-      "path": "out/boss_review/03_showcase_1_23s.jpg"
+      "label": "03_tool_1",
+      "timestamp": 14.91,
+      "path": "out/boss_review/03_tool_1_14s.jpg"
     },
     {
-      "label": "04_showcase_2",
-      "timestamp": 37.94,
-      "path": "out/boss_review/04_showcase_2_37s.jpg"
+      "label": "04_tool_2",
+      "timestamp": 24.22,
+      "path": "out/boss_review/04_tool_2_24s.jpg"
     },
     {
-      "label": "05_character_reaction",
-      "timestamp": 47.86,
-      "path": "out/boss_review/05_character_reaction_47s.jpg"
+      "label": "05_tool_3",
+      "timestamp": 31.68,
+      "path": "out/boss_review/05_tool_3_31s.jpg"
     },
     {
-      "label": "06_creator_cta",
-      "timestamp": 55.87,
-      "path": "out/boss_review/06_creator_cta_55s.jpg"
+      "label": "06_explainer_cta",
+      "timestamp": 35.27,
+      "path": "out/boss_review/06_explainer_cta_35s.jpg"
+    },
+    {
+      "label": "07_creator_face_cta",
+      "timestamp": 42.27,
+      "path": "out/boss_review/07_creator_face_cta_42s.jpg"
     }
   ],
   "can_auto_publish": false,
-  "timestamp": 1791790995.0271559
+  "timestamp": 1791945707.845398
 }

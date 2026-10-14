@@ -15,6 +15,10 @@ import sys
 import time
 import json
 
+ROOT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+if ROOT_DIR not in sys.path:
+    sys.path.insert(0, ROOT_DIR)
+
 from agents.research_agent import run_research_agent
 from agents.script_agent import run_script_agent
 from agents.voiceover_agent import run_voiceover_agent
