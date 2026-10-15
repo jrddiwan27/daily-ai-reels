@@ -1572,5 +1572,185 @@
         "source": "Exa (24h Index)"
       }
     ]
+  },
+  {
+    "slot_id": 1,
+    "slot_name": "Morning Breakthrough (Slot 1)",
+    "timestamp_utc": "2026-10-15T19:21:17.486621+00:00",
+    "date_ist": "2026-10-16 9:00 AM IST (Scheduled for 03:30 UTC)",
+    "buffer_post_id": "6ad127ab7132b787718ecf0a",
+    "channel_results": {
+      "instagram": "6ad127ab7132b787718ecf0a",
+      "youtube": "6ad127ac8fb2c19f54de3cfc",
+      "twitter": "6ad127ad7132b787718ecf57"
+    },
+    "video_path": "out/slot_1_daily_reel_opt.mp4",
+    "items": [
+      {
+        "title": "Top 10 Open-Source AI Tools You're Missing Out On - Top 10 GitHub Repos (2026)",
+        "name": "Top 10 Open-Source AI Tools You're",
+        "description": "[0:50] built with C++. It has already gathered over 22,727 stars from developers looking for a fast [0:59] subscriptionfree alternative. Coming in at number eight is iFix AI independent [1:05] auditing of AI agents run b",
+        "url": "https://www.youtube.com/watch?v=gSj6tONmZnI",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "17 Best Free AI Coding Agents in 2026 | Agentic.ai",
+        "name": "17 Best Free AI Coding Agents in 20",
+        "description": "Agenticness22/36\u00b7Domain Specialist  Orbi is an open-source, self-hostable AI coding agent that takes GitHub Issues from implementation through independent review, merge, and release. It can run against your own model end",
+        "url": "https://agentic.ai/best/free-coding-agents",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "goose Tutorial 2026 \u2014 Install the Open-Source AI Agent That Runs on Your Machine (Desktop + CLI)",
+        "name": "goose Tutorial 2026 \u2014 Install the O",
+        "description": "NOTES goose is Apache 2.0 licensed, governed by the Agentic AI Foundation at the Linux Foundation since April 2026, with 55,000+ GitHub stars and 500+ contributors Everything shown works on the free tier of at least one",
+        "url": "https://www.youtube.com/watch?v=VRw4Fb5uE5M&vl=pa",
+        "source": "Tavily (Real-Time)"
+      }
+    ]
+  },
+  {
+    "slot_id": 2,
+    "slot_name": "Midday Cheat Code (Slot 2)",
+    "timestamp_utc": "2026-10-15T19:24:39.320185+00:00",
+    "date_ist": "2026-10-16 12:00 PM IST (Scheduled for 06:30 UTC)",
+    "buffer_post_id": "6ad128757e8b8d6b8c806207",
+    "channel_results": {
+      "instagram": "6ad128757e8b8d6b8c806207",
+      "youtube": "6ad128767132b787718f0853",
+      "twitter": "6ad128777e8b8d6b8c806252"
+    },
+    "video_path": "out/slot_2_daily_reel_opt.mp4",
+    "items": [
+      {
+        "title": "Top 10 Open-Source AI Tools You're Missing Out On - Top 10 GitHub Repos (2026)",
+        "name": "Top 10 Open-Source AI Tools You're",
+        "description": "[1:43] Run any coding agent with your own subscription available on desktop, mobile, and remote runtime. Over 9096 [1:51] engineers rely on it for local speed, complete privacy, and zero monthly fees. [1:57] At number si",
+        "url": "https://www.youtube.com/watch?v=gSj6tONmZnI",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "Best AI Agents in 2026 (and How to Use Them in Your Workflow)",
+        "name": "Best AI Agents in 2026 (and How to",
+        "description": "### Recommended Udemy course  AutoGPT \u2013 An open-source platform for building, deploying, and running AI agents that automate complex, multi-step tasks. It enables developers to create customizable agents that use externa",
+        "url": "https://blog.udemy.com/best-ai-agents",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "AI Agents News \u2014 Week of October 15, 2026 (Daily Updates)",
+        "name": "AI Agents News \u2014 Week of October 15",
+        "description": "What changed: Kaspersky released a report on securing autonomous AI agents in enterprise infrastructures, framing language models as untrusted components and applying its Cyber Immunity design principles\u2014such as strict i",
+        "url": "https://aiagentstore.ai/ai-agent-news/this-week",
+        "source": "Tavily (Real-Time)"
+      }
+    ]
+  },
+  {
+    "slot_id": 3,
+    "slot_name": "Tech Radar Teardown (Slot 3)",
+    "timestamp_utc": "2026-10-15T19:28:06.782967+00:00",
+    "date_ist": "2026-10-16 3:00 PM IST (Scheduled for 09:30 UTC)",
+    "buffer_post_id": "6ad129457e8b8d6b8c808877",
+    "channel_results": {
+      "instagram": "6ad129457e8b8d6b8c808877",
+      "youtube": "6ad12945e8f41b92261f2591",
+      "twitter": "6ad129467132b787718f3049"
+    },
+    "video_path": "out/slot_3_daily_reel_opt.mp4",
+    "items": [
+      {
+        "title": "Meta\u2019s 816B-Parameter Muse Spark Open Weights Are Now Public \u2013 Unite.AI",
+        "name": "Meta\u2019s 816B-Parameter Muse Spark Op",
+        "description": "My Feed  ### AI Models & Platforms  # Meta\u2019s 816B-Parameter Muse Spark Open Weights Are Now Public  Published  By   Jonas Reeve, Cognitive AI & AGI AI Research Agent  Add Unite.AI to your preferred sources on Google   Me",
+        "url": "https://www.unite.ai/metas-816b-parameter-muse-spark-open-weights-are-now-public",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "AI News for Agent Builders \u2014 Page 4 | Hermes AI",
+        "name": "AI News for Agent Builders \u2014 Page 4",
+        "description": "repoRetrievalOpen SourceAlphaSignal \u00b7  ## DigUp Brings On-Device Multimodal File Search to Apple Silicon Macs  A free, open-source Mac app uses Google DeepMind's new multimodal embedding model to search inside photos, PD",
+        "url": "https://hermes-ai.net/news/page/4",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "Introducing Muse Spark Open, The Most Capable US Open\u2011Weight Model to Date | Meta AI Research",
+        "name": "Introducing Muse Spark Open, The Mo",
+        "description": "Introducing Muse Spark Open, The Most Capable US Open\u2011Weight Model to Date | Meta AI Research  # Introducing Muse Spark Open, The Most Capable US Open\u2011Weight Model to Date  October 15, 2026\u00b7 4 minute read  Muse Spark Ope",
+        "url": "https://research.meta.ai/blog/muse-spark-open",
+        "source": "Exa (24h Index)"
+      }
+    ]
+  },
+  {
+    "slot_id": 4,
+    "slot_name": "Evening Toolkit (Slot 4)",
+    "timestamp_utc": "2026-10-15T19:31:30.158351+00:00",
+    "date_ist": "2026-10-16 6:00 PM IST (Scheduled for 12:30 UTC)",
+    "buffer_post_id": "6ad12a1029e9cdc489e1b2e4",
+    "channel_results": {
+      "instagram": "6ad12a1029e9cdc489e1b2e4",
+      "youtube": "6ad12a118fb2c19f54decfc3",
+      "twitter": "6ad12a128fb2c19f54decff6"
+    },
+    "video_path": "out/slot_4_daily_reel_opt.mp4",
+    "items": [
+      {
+        "title": "17 Best Free AI Coding Agents in 2026 | Agentic.ai",
+        "name": "17 Best Free AI Coding Agents in 20",
+        "description": "Agenticness22/36\u00b7Domain Specialist  Orbi is an open-source, self-hostable AI coding agent that takes GitHub Issues from implementation through independent review, merge, and release. It can run against your own model end",
+        "url": "https://agentic.ai/best/free-coding-agents",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "Anthropic built its own git replacement for AI-scale coding. But you can\u2019t have it. - The New Stack",
+        "name": "Anthropic built its own git replace",
+        "description": "Sep 1st 2026 3:44pm, by   Meredith Shubel  Astro's GitHub issue backlog is heading to zero for the first time in 5 years. Now Cloudflare is open-sourcing the tool that did it.   Aug 4th 2026 9:00am, by   Paul Sawers  You",
+        "url": "https://thenewstack.io/anthropic-scion-git-replacement",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "Best AI Agents in 2026 (and How to Use Them in Your Workflow)",
+        "name": "Best AI Agents in 2026 (and How to",
+        "description": "### Recommended Udemy course  AutoGPT \u2013 An open-source platform for building, deploying, and running AI agents that automate complex, multi-step tasks. It enables developers to create customizable agents that use externa",
+        "url": "https://blog.udemy.com/best-ai-agents",
+        "source": "Tavily (Real-Time)"
+      }
+    ]
+  },
+  {
+    "slot_id": 5,
+    "slot_name": "Night Owl Deep Dive (Slot 5)",
+    "timestamp_utc": "2026-10-15T19:34:41.709600+00:00",
+    "date_ist": "2026-10-16 9:00 PM IST (Scheduled for 15:30 UTC)",
+    "buffer_post_id": "6ad12acf7132b787718f9873",
+    "channel_results": {
+      "instagram": "6ad12acf7132b787718f9873",
+      "youtube": "6ad12ad07e8b8d6b8c80e7d8",
+      "twitter": "6ad12ad129e9cdc489e1d8d8"
+    },
+    "video_path": "out/slot_5_daily_reel_opt.mp4",
+    "items": [
+      {
+        "title": "AI-First Engineer Lead SCM- AI-Fueled SDLC & ...",
+        "name": "AI-First Engineer Lead SCM- AI-Fuel",
+        "description": "Experience with GitHub Copilot, Agentic AI frameworks, prompt engineering ... 2026 Dice. All Rights Reserved. Dice is a DHI service. Terms & Conditions",
+        "url": "https://www.dice.com/job-detail/5455f57e-94b3-46d0-892e-97ac71ce4ca0",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "How to Become an AI-Native Software Engineer in 2026: A Step-by-Step Guide to Agentic AI and Intelligent Automation - Codegnan",
+        "name": "How to Become an AI-Native Software",
+        "description": "### What frameworks should you explore?  Useful for learning how to connect language models with prompts, tools, retrieval components, and other application services. Start here if you want to understand the building blo",
+        "url": "https://codegnan.com/blogs/how-to-become-an-ai-native-software-engineer",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "Best AI Agents in 2026 (and How to Use Them in Your Workflow)",
+        "name": "Best AI Agents in 2026 (and How to",
+        "description": "### Recommended Udemy course  AutoGPT \u2013 An open-source platform for building, deploying, and running AI agents that automate complex, multi-step tasks. It enables developers to create customizable agents that use externa",
+        "url": "https://blog.udemy.com/best-ai-agents",
+        "source": "Tavily (Real-Time)"
+      }
+    ]
   }
 ]
