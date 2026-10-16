@@ -1752,5 +1752,185 @@
         "source": "Tavily (Real-Time)"
       }
     ]
+  },
+  {
+    "slot_id": 1,
+    "slot_name": "Morning Breakthrough (Slot 1)",
+    "timestamp_utc": "2026-10-16T18:57:48.725657+00:00",
+    "date_ist": "2026-10-17 9:00 AM IST (Scheduled for 03:30 UTC)",
+    "buffer_post_id": "6ad273abcf2d03853eeb5ee5",
+    "channel_results": {
+      "instagram": "6ad273abcf2d03853eeb5ee5",
+      "youtube": "6ad273ab93503c7a0a5ac8f8",
+      "twitter": "6ad273accf2d03853eeb5f21"
+    },
+    "video_path": "out/slot_1_daily_reel_opt.mp4",
+    "items": [
+      {
+        "title": "Daily AI & Product Digest \u2014 What Shipped Today | IndiaNIC",
+        "name": "Daily AI & Product Digest \u2014 What Sh",
+        "description": "Daily Digest \u00b7 AI & Tech \u00b7 Signal over noise  The day in AI, delivered feather-light.  We read the whole field so you don't have to \u2014 models, money, chips and policy \u2014 then hand you the few stories that actually move thi",
+        "url": "https://www.indianic.com/digest",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "Best AI Agents in 2026: 30 Tools Compared",
+        "name": "Best AI Agents in 2026: 30 Tools Co",
+        "description": "How widely it is used: a SemiAnalysis report from February 2026, Claude Code is the Inflection Point, found that 4% of all public GitHub commits were being authored by Claude Code, and projected it could reach 20% of dai",
+        "url": "https://felloai.com/best-ai-agents",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "vibe-coding-friendly \u00b7 GitHub Topics \u00b7 GitHub",
+        "name": "vibe-coding-friendly",
+        "description": "open-source ai templates open-source-project ai-agents claude ai-tools claude-ai vibe-coding claude-code vibe-coding-assistant vibe-coding-friendly vibe-coding-guide   Updated Mar 27, 2026  ### Khalid-Moukhtar / motif  S",
+        "url": "https://github.com/topics/vibe-coding-friendly",
+        "source": "Tavily (Real-Time)"
+      }
+    ]
+  },
+  {
+    "slot_id": 2,
+    "slot_name": "Midday Cheat Code (Slot 2)",
+    "timestamp_utc": "2026-10-16T19:02:12.238579+00:00",
+    "date_ist": "2026-10-17 12:00 PM IST (Scheduled for 06:30 UTC)",
+    "buffer_post_id": "6ad274b2cf2d03853eebbad5",
+    "channel_results": {
+      "instagram": "6ad274b2cf2d03853eebbad5",
+      "youtube": "6ad274b3e038e7a747d15e1b",
+      "twitter": "6ad274b4d3034350e471266a"
+    },
+    "video_path": "out/slot_2_daily_reel_opt.mp4",
+    "items": [
+      {
+        "title": "Autonomous \u2014 AI hardware workshop",
+        "name": "Autonomous \u2014 AI hardware workshop",
+        "description": "How to build your Personal Robot  How to build your Personal RobotBuild Log\u00b7Jun 4, 2026Autonomous Robot  read all \u2192  Open Source.The whole stack, in the open.  all repos \u2192  autonomous-computer  autonomous-computerBuild y",
+        "url": "https://www.autonomous.ai",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "Best AI Agents in 2026: 30 Tools Compared",
+        "name": "Best AI Agents in 2026: 30 Tools Co",
+        "description": "How widely it is used: a SemiAnalysis report from February 2026, Claude Code is the Inflection Point, found that 4% of all public GitHub commits were being authored by Claude Code, and projected it could reach 20% of dai",
+        "url": "https://felloai.com/best-ai-agents",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "Amazon Managed Workflows for Apache Airflow now offers AI agent skills - AWS",
+        "name": "Amazon Managed Workflows for Apache",
+        "description": "# Amazon Managed Workflows for Apache Airflow now offers AI agent skills - AWS  Published: 2026-10-15T08:00:00Z Source: aws.amazon.com Language: en  ## Story  Amazon Managed Workflows for Apache Airflow (MWAA) now integr",
+        "url": "https://aws.amazon.com/about-aws/whats-new/2026/10/amazon-mwaa-ai-agent-skills/",
+        "source": "Exa (24h Index)"
+      }
+    ]
+  },
+  {
+    "slot_id": 3,
+    "slot_name": "Tech Radar Teardown (Slot 3)",
+    "timestamp_utc": "2026-10-16T19:06:36.891769+00:00",
+    "date_ist": "2026-10-17 3:00 PM IST (Scheduled for 09:30 UTC)",
+    "buffer_post_id": "6ad275bb93503c7a0a5b6302",
+    "channel_results": {
+      "instagram": "6ad275bb93503c7a0a5b6302",
+      "youtube": "6ad275bbcf2d03853eebfac7",
+      "twitter": "6ad275bca060272a757c06e5"
+    },
+    "video_path": "out/slot_3_daily_reel_opt.mp4",
+    "items": [
+      {
+        "title": "Meta says Muse excels at 'multi-step reasoning' and ' ...",
+        "name": "Meta says Muse excels at 'multi-ste",
+        "description": "Meta releases Muse Spark Open, a new 'open-weight' AI model \u2026 a multimodal reasoning model built for advanced agents and complex workflows.",
+        "url": "https://www.facebook.com/GuardianUs/posts/meta-says-muse-excels-at-multi-step-reasoning-and-complex-software-engineering-a/1519365946882979",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "Meta Muse Spark Open model weights now available",
+        "name": "Meta Muse Spark Open model weights",
+        "description": "Meta introduced Muse Spark, a multimodal reasoning model built for advanced agents and complex workflows.",
+        "url": "https://www.facebook.com/groups/595424764221375/posts/2633050050458826",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "Meta unveils Muse Spark Open to compete with Chinese open-weights",
+        "name": "Meta unveils Muse Spark Open to com",
+        "description": "Meta has unveiled Muse Spark Open, calling it the \u201cmost capable\u201d US open-weight model to date. The company said that the new model is the first in its class to be able to run on a desktop computer using Apple\u2019s M5 Ultra",
+        "url": "https://www.siliconrepublic.com/machines/meta-unveils-most-capable-us-open-weight-model-muse-spark-open",
+        "source": "Tavily (Real-Time)"
+      }
+    ]
+  },
+  {
+    "slot_id": 4,
+    "slot_name": "Evening Toolkit (Slot 4)",
+    "timestamp_utc": "2026-10-16T19:11:13.509599+00:00",
+    "date_ist": "2026-10-17 6:00 PM IST (Scheduled for 12:30 UTC)",
+    "buffer_post_id": "6ad276cfe038e7a747d1f2f0",
+    "channel_results": {
+      "instagram": "6ad276cfe038e7a747d1f2f0",
+      "youtube": "6ad276d0cf2d03853eec4407",
+      "twitter": "6ad276d1e038e7a747d1f422"
+    },
+    "video_path": "out/slot_4_daily_reel_opt.mp4",
+    "items": [
+      {
+        "title": "Best AI Agents in 2026: 30 Tools Compared",
+        "name": "Best AI Agents in 2026: 30 Tools Co",
+        "description": "Best for: developers who want project-wide AI assistance inside a familiar editor.  Limitations: real costs can exceed the headline subscription if you lean on frontier models. Budgeting is genuinely harder than with a f",
+        "url": "https://felloai.com/best-ai-agents",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "50 Latest Web Development Trends [Jan 2026 Updated]",
+        "name": "50 Latest Web Development Trends [J",
+        "description": "Here are some common uses of AI in web development:   Code generation: GitHub and Copilot are popular real-time coding tools that are integrated with Natural language Processing capabilities. These provide the ability to",
+        "url": "https://www.globalmediainsight.com/blog/web-development-trends",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "Product on Purpose \u00b7 GitHub",
+        "name": "Product on Purpose",
+        "description": "Recent releases:   v0.17.0 (Sep 2026): In Claude Code, you can hand a decision stress test or a reasoning audit to a subagent. It runs the whole chain in its own context and returns only the finished brief.  v0.16.0 (Sep",
+        "url": "https://github.com/product-on-purpose",
+        "source": "Tavily (Real-Time)"
+      }
+    ]
+  },
+  {
+    "slot_id": 5,
+    "slot_name": "Night Owl Deep Dive (Slot 5)",
+    "timestamp_utc": "2026-10-16T19:15:15.867100+00:00",
+    "date_ist": "2026-10-17 9:00 PM IST (Scheduled for 15:30 UTC)",
+    "buffer_post_id": "6ad277c193503c7a0a5bcf0f",
+    "channel_results": {
+      "instagram": "6ad277c193503c7a0a5bcf0f",
+      "youtube": "6ad277c2d3034350e471cdb5",
+      "twitter": "6ad277c3cf2d03853eec6aa2"
+    },
+    "video_path": "out/slot_5_daily_reel_opt.mp4",
+    "items": [
+      {
+        "title": "Vstorm \u00b7 GitHub",
+        "name": "Vstorm",
+        "description": "Python   129  MIT   27  2  3  Updated Sep 24, 2026  summarization-pydantic-ai  Public     Context Management processor for Pydantic AI agents, providing LLM-powered summarization or zero-cost sliding window trimming to h",
+        "url": "https://github.com/vstorm-co",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "4 hours of prompt engineering and \u201cBRO\u201d is what finally ...",
+        "name": "4 hours of prompt engineering and \u201c",
+        "description": "Expectation: Advanced prompt engineering. Reality: \"Just fix it please ... 2026, dev tools, open source AI tools, free AI tools, GitHub project, indie",
+        "url": "https://www.instagram.com/reel/DeifGi_O1JY",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "Daily AI & Product Digest \u2014 What Shipped Today | IndiaNIC",
+        "name": "Daily AI & Product Digest \u2014 What Sh",
+        "description": "Daily Digest \u00b7 AI & Tech \u00b7 Signal over noise  The day in AI, delivered feather-light.  We read the whole field so you don't have to \u2014 models, money, chips and policy \u2014 then hand you the few stories that actually move thi",
+        "url": "https://www.indianic.com/digest",
+        "source": "Tavily (Real-Time)"
+      }
+    ]
   }
 ]
