@@ -27,53 +27,76 @@ def get_daily_schedule_plan():
     now_ist = now_utc + ist_offset
     today_ist_str = now_ist.strftime("%Y-%m-%d")
 
-    slots_def = [
-        {
-            "slot_id": 1,
-            "name": "Morning Breakthrough",
-            "theme": "open source AI developer tools GitHub 2026",
-            "cta": "REPOS",
-            "hour_ist": 9,
-            "minute_ist": 0,
-            "time_ist": "9:00 AM IST"
-        },
-        {
-            "slot_id": 2,
-            "name": "Midday Cheat Code",
-            "theme": "autonomous AI automation workflows 2026",
-            "cta": "WORKFLOW",
-            "hour_ist": 12,
-            "minute_ist": 0,
-            "time_ist": "12:00 PM IST"
-        },
-        {
-            "slot_id": 3,
-            "name": "Tech Radar Teardown",
-            "theme": "new open weights multimodal reasoning AI models",
-            "cta": "MODELS",
-            "hour_ist": 15,
-            "minute_ist": 0,
-            "time_ist": "3:00 PM IST"
-        },
-        {
-            "slot_id": 4,
-            "name": "Evening Toolkit",
-            "theme": "secret web AI developer productivity tools 2026",
-            "cta": "TOOLS",
-            "hour_ist": 18,
-            "minute_ist": 0,
-            "time_ist": "6:00 PM IST"
-        },
-        {
-            "slot_id": 5,
-            "name": "Night Owl Deep Dive",
-            "theme": "advanced prompt engineering frameworks architectures 2026",
-            "cta": "PROMPT",
-            "hour_ist": 21,
-            "minute_ist": 0,
-            "time_ist": "9:00 PM IST"
-        }
-    ]
+    mode = os.environ.get("DAILY_SLOTS_MODE", "2")
+    if mode == "2":
+        slots_def = [
+            {
+                "slot_id": 1,
+                "name": "Morning Breakthrough",
+                "theme": "open source AI developer tools GitHub 2026",
+                "cta": "REPOS",
+                "hour_ist": 9,
+                "minute_ist": 0,
+                "time_ist": "9:00 AM IST"
+            },
+            {
+                "slot_id": 2,
+                "name": "Evening AI Toolkit",
+                "theme": "autonomous AI automation workflows 2026",
+                "cta": "WORKFLOW",
+                "hour_ist": 19,
+                "minute_ist": 0,
+                "time_ist": "7:00 PM IST"
+            }
+        ]
+    else:
+        slots_def = [
+            {
+                "slot_id": 1,
+                "name": "Morning Breakthrough",
+                "theme": "open source AI developer tools GitHub 2026",
+                "cta": "REPOS",
+                "hour_ist": 9,
+                "minute_ist": 0,
+                "time_ist": "9:00 AM IST"
+            },
+            {
+                "slot_id": 2,
+                "name": "Midday Cheat Code",
+                "theme": "autonomous AI automation workflows 2026",
+                "cta": "WORKFLOW",
+                "hour_ist": 12,
+                "minute_ist": 0,
+                "time_ist": "12:00 PM IST"
+            },
+            {
+                "slot_id": 3,
+                "name": "Tech Radar Teardown",
+                "theme": "new open weights multimodal reasoning AI models",
+                "cta": "MODELS",
+                "hour_ist": 15,
+                "minute_ist": 0,
+                "time_ist": "3:00 PM IST"
+            },
+            {
+                "slot_id": 4,
+                "name": "Evening Toolkit",
+                "theme": "secret web AI developer productivity tools 2026",
+                "cta": "TOOLS",
+                "hour_ist": 18,
+                "minute_ist": 0,
+                "time_ist": "6:00 PM IST"
+            },
+            {
+                "slot_id": 5,
+                "name": "Night Owl Deep Dive",
+                "theme": "advanced prompt engineering frameworks architectures 2026",
+                "cta": "PROMPT",
+                "hour_ist": 21,
+                "minute_ist": 0,
+                "time_ist": "9:00 PM IST"
+            }
+        ]
 
     plan = []
     for s in slots_def:
@@ -180,6 +203,14 @@ def produce_and_dispatch_slot(plan_item):
     # 3. Dispatch to Buffer across all platforms
     print(f"\n[*] Dispatching to all platforms (Scheduled: {due_at or 'SHARE NOW'})...")
     results = dispatch_to_all_platforms(video_to_dispatch, meta, items, due_at_utc=due_at)
+
+    # 3b. Automatically publish comprehensive technical article to Blog Hub
+    try:
+        from pipeline.blog_engine import generate_blog_article
+        pub_url = results.get("public_video_url", "")
+        generate_blog_article(slot_id, meta, items, script, video_url=pub_url)
+    except Exception as be:
+        print(f"[!] Automatic blog publishing warning: {be}")
 
     # 4. Record in published history
     today_str = plan_item.get("today_date", datetime.date.today().isoformat())

@@ -81,7 +81,7 @@ jobs:
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add history/published_history.json history/api_budget_ledger.json history/quality_ledger.json || true
+          git add history/published_history.json history/api_budget_ledger.json history/quality_ledger.json docs/posts_data.json || true
           git commit -m "chore: record autonomous daily publications [skip ci]" || echo "No changes to commit"
           git pull --rebase origin main || true
           git push origin main || echo "History push completed"

@@ -263,22 +263,25 @@ def dispatch_to_all_platforms(video_target: str, meta: dict, items: list, due_at
     results["youtube"] = yt_id
     print(f"[✓ YOUTUBE] Scheduled Shorts: Post ID {yt_id}")
 
-    # 3. Twitter / X (Strict Standard Non-Premium <= 280 Chars, Zero Links)
-    tw_title = meta['post_title'].rstrip('! 🚀⚡🧠🤫🎯')
+    # 3. Twitter / X (High-Converting Value Post with Direct Bio-Hub Link)
+    t1 = item_titles[0][:22] if len(item_titles) > 0 else "Tool 1"
+    t2 = item_titles[1][:22] if len(item_titles) > 1 else "Tool 2"
+    t3 = item_titles[2][:22] if len(item_titles) > 2 else "Tool 3"
+
     tw_text = (
-        f"⚡ {tw_title}\n\n"
-        f"1. {item_titles[0]}\n"
-        f"2. {item_titles[1]}\n"
-        f"3. {item_titles[2]}\n\n"
-        f"Drop a comment below to get the setup code.\n"
-        f"#AI #Tech #Developers"
+        f"⚡ 3 New Open-Source AI Tools Just Dropped on GitHub:\n\n"
+        f"1. {t1}\n"
+        f"2. {t2}\n"
+        f"3. {t3}\n\n"
+        f"Full code, benchmarks & setup guides ⬇️\n"
+        f"{bio_hub_url}\n\n"
+        f"Bookmark for your next build 🔖\n"
+        f"#opensource #ai #dev"
     )
-    # Hard clamp to 270 characters to guarantee non-premium compliance
-    if len(tw_text) > 270:
-        tw_text = tw_text[:267] + "..."
 
     tw_id = dispatch_post_payload(CHANNELS["twitter"], tw_text, public_video_url, due_at_utc=due_at_utc)
     results["twitter"] = tw_id
+    results["public_video_url"] = public_video_url
     print(f"[✓ X/TWITTER] Scheduled Post: Post ID {tw_id} ({len(tw_text)} chars)")
 
     return results

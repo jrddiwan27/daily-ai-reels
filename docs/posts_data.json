@@ -1,5 +1,260 @@
 [
   {
+    "id": "2026-10-18-slot-5",
+    "title": "Night Owl Deep Dive (Slot 5)",
+    "date": "October 18, 2026",
+    "date_slug": "2026-10-18",
+    "slot_id": 5,
+    "slot_name": "Night Owl Deep Dive (Slot 5)",
+    "badge": "OPEN SOURCE",
+    "cta_keyword": "REPOS",
+    "video_url": "out/slot_5_daily_reel_opt.mp4",
+    "summary": "Breakthrough tools for Night Owl Deep Dive (Slot 5)",
+    "voiceover_script": "",
+    "items": [
+      {
+        "number": 1,
+        "name": "Vstorm",
+        "url": "https://github.com/vstorm-co",
+        "stars": "\u2605 10,000",
+        "badge": "OPEN SOURCE",
+        "description": "Python   129  MIT   27  2  3  Updated Sep 24, 2026  summarization-pydantic-ai  Public     Context Management processor for Pydantic AI agents, providing LLM-powered summarization or zero-cost sliding window trimming to h",
+        "command": "pip install vstorm",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 2,
+        "name": "4 Hours Of Prompt Engineering And \u201c",
+        "url": "https://www.instagram.com/reel/DeifGi_O1JY",
+        "stars": "\u2605 10,000",
+        "badge": "OPEN SOURCE",
+        "description": "Expectation: Advanced prompt engineering. Reality: \"Just fix it please ... 2026, dev tools, open source AI tools, free AI tools, GitHub project, indie",
+        "command": "git clone https://www.instagram.com/reel/DeifGi_O1JY.git\ncd 4 hours of prompt engineering and \u201c\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 3,
+        "name": "Daily Ai & Product Digest \u2014 What Sh",
+        "url": "https://www.indianic.com/digest",
+        "stars": "\u2605 10,000",
+        "badge": "OPEN SOURCE",
+        "description": "Daily Digest \u00b7 AI & Tech \u00b7 Signal over noise  The day in AI, delivered feather-light.  We read the whole field so you don't have to \u2014 models, money, chips and policy \u2014 then hand you the few stories that actually move thi",
+        "command": "git clone https://www.indianic.com/digest.git\ncd daily ai & product digest \u2014 what sh\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      }
+    ],
+    "cta_text": "Want our studio to build custom autonomous AI employees for your workflow? Follow @jayant.digitalstudio and DM 'REPOS'.",
+    "tags": [
+      "#ai",
+      "#developer",
+      "#automation"
+    ]
+  },
+  {
+    "id": "2026-10-18-slot-4",
+    "title": "Evening Toolkit (Slot 4)",
+    "date": "October 18, 2026",
+    "date_slug": "2026-10-18",
+    "slot_id": 4,
+    "slot_name": "Evening Toolkit (Slot 4)",
+    "badge": "OPEN SOURCE",
+    "cta_keyword": "REPOS",
+    "video_url": "out/slot_4_daily_reel_opt.mp4",
+    "summary": "Breakthrough tools for Evening Toolkit (Slot 4)",
+    "voiceover_script": "",
+    "items": [
+      {
+        "number": 1,
+        "name": "Best Ai Agents In 2026: 30 Tools Co",
+        "url": "https://felloai.com/best-ai-agents",
+        "stars": "\u2605 10,000",
+        "badge": "OPEN SOURCE",
+        "description": "Best for: developers who want project-wide AI assistance inside a familiar editor.  Limitations: real costs can exceed the headline subscription if you lean on frontier models. Budgeting is genuinely harder than with a f",
+        "command": "git clone https://felloai.com/best-ai-agents.git\ncd best ai agents in 2026: 30 tools co\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 2,
+        "name": "50 Latest Web Development Trends [J",
+        "url": "https://www.globalmediainsight.com/blog/web-development-trends",
+        "stars": "\u2605 10,000",
+        "badge": "OPEN SOURCE",
+        "description": "Here are some common uses of AI in web development:   Code generation: GitHub and Copilot are popular real-time coding tools that are integrated with Natural language Processing capabilities. These provide the ability to",
+        "command": "git clone https://www.globalmediainsight.com/blog/web-development-trends.git\ncd 50 latest web development trends [j\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 3,
+        "name": "Product On Purpose",
+        "url": "https://github.com/product-on-purpose",
+        "stars": "\u2605 10,000",
+        "badge": "OPEN SOURCE",
+        "description": "Recent releases:   v0.17.0 (Sep 2026): In Claude Code, you can hand a decision stress test or a reasoning audit to a subagent. It runs the whole chain in its own context and returns only the finished brief.  v0.16.0 (Sep",
+        "command": "git clone https://github.com/product-on-purpose.git\ncd product on purpose\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      }
+    ],
+    "cta_text": "Want our studio to build custom autonomous AI employees for your workflow? Follow @jayant.digitalstudio and DM 'REPOS'.",
+    "tags": [
+      "#ai",
+      "#developer",
+      "#automation"
+    ]
+  },
+  {
+    "id": "2026-10-18-slot-3",
+    "title": "Tech Radar Teardown (Slot 3)",
+    "date": "October 18, 2026",
+    "date_slug": "2026-10-18",
+    "slot_id": 3,
+    "slot_name": "Tech Radar Teardown (Slot 3)",
+    "badge": "OPEN SOURCE",
+    "cta_keyword": "REPOS",
+    "video_url": "out/slot_3_daily_reel_opt.mp4",
+    "summary": "Breakthrough tools for Tech Radar Teardown (Slot 3)",
+    "voiceover_script": "",
+    "items": [
+      {
+        "number": 1,
+        "name": "Meta Says Muse Excels At 'Multi Ste",
+        "url": "https://www.facebook.com/GuardianUs/posts/meta-says-muse-excels-at-multi-step-reasoning-and-complex-software-engineering-a/1519365946882979",
+        "stars": "\u2605 10,000",
+        "badge": "OPEN SOURCE",
+        "description": "Meta releases Muse Spark Open, a new 'open-weight' AI model \u2026 a multimodal reasoning model built for advanced agents and complex workflows.",
+        "command": "git clone https://www.facebook.com/GuardianUs/posts/meta-says-muse-excels-at-multi-step-reasoning-and-complex-software-engineering-a/1519365946882979.git\ncd meta says muse excels at 'multi-ste\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 2,
+        "name": "Meta Muse Spark Open Model Weights",
+        "url": "https://www.facebook.com/groups/595424764221375/posts/2633050050458826",
+        "stars": "\u2605 10,000",
+        "badge": "OPEN SOURCE",
+        "description": "Meta introduced Muse Spark, a multimodal reasoning model built for advanced agents and complex workflows.",
+        "command": "git clone https://www.facebook.com/groups/595424764221375/posts/2633050050458826.git\ncd meta muse spark open model weights\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 3,
+        "name": "Meta Unveils Muse Spark Open To Com",
+        "url": "https://www.siliconrepublic.com/machines/meta-unveils-most-capable-us-open-weight-model-muse-spark-open",
+        "stars": "\u2605 10,000",
+        "badge": "OPEN SOURCE",
+        "description": "Meta has unveiled Muse Spark Open, calling it the \u201cmost capable\u201d US open-weight model to date. The company said that the new model is the first in its class to be able to run on a desktop computer using Apple\u2019s M5 Ultra",
+        "command": "git clone https://www.siliconrepublic.com/machines/meta-unveils-most-capable-us-open-weight-model-muse-spark-open.git\ncd meta unveils muse spark open to com\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      }
+    ],
+    "cta_text": "Want our studio to build custom autonomous AI employees for your workflow? Follow @jayant.digitalstudio and DM 'REPOS'.",
+    "tags": [
+      "#ai",
+      "#developer",
+      "#automation"
+    ]
+  },
+  {
+    "id": "2026-10-18-slot-2",
+    "title": "Midday Cheat Code (Slot 2)",
+    "date": "October 18, 2026",
+    "date_slug": "2026-10-18",
+    "slot_id": 2,
+    "slot_name": "Midday Cheat Code (Slot 2)",
+    "badge": "OPEN SOURCE",
+    "cta_keyword": "REPOS",
+    "video_url": "out/slot_2_daily_reel_opt.mp4",
+    "summary": "Breakthrough tools for Midday Cheat Code (Slot 2)",
+    "voiceover_script": "",
+    "items": [
+      {
+        "number": 1,
+        "name": "Autonomous \u2014 Ai Hardware Workshop",
+        "url": "https://www.autonomous.ai",
+        "stars": "\u2605 10,000",
+        "badge": "OPEN SOURCE",
+        "description": "How to build your Personal Robot  How to build your Personal RobotBuild Log\u00b7Jun 4, 2026Autonomous Robot  read all \u2192  Open Source.The whole stack, in the open.  all repos \u2192  autonomous-computer  autonomous-computerBuild y",
+        "command": "git clone https://www.autonomous.ai.git\ncd autonomous \u2014 ai hardware workshop\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 2,
+        "name": "Best Ai Agents In 2026: 30 Tools Co",
+        "url": "https://felloai.com/best-ai-agents",
+        "stars": "\u2605 10,000",
+        "badge": "OPEN SOURCE",
+        "description": "How widely it is used: a SemiAnalysis report from February 2026, Claude Code is the Inflection Point, found that 4% of all public GitHub commits were being authored by Claude Code, and projected it could reach 20% of dai",
+        "command": "git clone https://felloai.com/best-ai-agents.git\ncd best ai agents in 2026: 30 tools co\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 3,
+        "name": "Amazon Managed Workflows For Apache",
+        "url": "https://aws.amazon.com/about-aws/whats-new/2026/10/amazon-mwaa-ai-agent-skills/",
+        "stars": "\u2605 10,000",
+        "badge": "OPEN SOURCE",
+        "description": "# Amazon Managed Workflows for Apache Airflow now offers AI agent skills - AWS  Published: 2026-10-15T08:00:00Z Source: aws.amazon.com Language: en  ## Story  Amazon Managed Workflows for Apache Airflow (MWAA) now integr",
+        "command": "git clone https://aws.amazon.com/about-aws/whats-new/2026/10/amazon-mwaa-ai-agent-skills/.git\ncd amazon managed workflows for apache\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      }
+    ],
+    "cta_text": "Want our studio to build custom autonomous AI employees for your workflow? Follow @jayant.digitalstudio and DM 'REPOS'.",
+    "tags": [
+      "#ai",
+      "#developer",
+      "#automation"
+    ]
+  },
+  {
+    "id": "2026-10-18-slot-1",
+    "title": "Morning Breakthrough (Slot 1)",
+    "date": "October 18, 2026",
+    "date_slug": "2026-10-18",
+    "slot_id": 1,
+    "slot_name": "Morning Breakthrough (Slot 1)",
+    "badge": "OPEN SOURCE",
+    "cta_keyword": "REPOS",
+    "video_url": "out/slot_1_daily_reel_opt.mp4",
+    "summary": "Breakthrough tools for Morning Breakthrough (Slot 1)",
+    "voiceover_script": "",
+    "items": [
+      {
+        "number": 1,
+        "name": "Daily Ai & Product Digest \u2014 What Sh",
+        "url": "https://www.indianic.com/digest",
+        "stars": "\u2605 10,000",
+        "badge": "OPEN SOURCE",
+        "description": "Daily Digest \u00b7 AI & Tech \u00b7 Signal over noise  The day in AI, delivered feather-light.  We read the whole field so you don't have to \u2014 models, money, chips and policy \u2014 then hand you the few stories that actually move thi",
+        "command": "git clone https://www.indianic.com/digest.git\ncd daily ai & product digest \u2014 what sh\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 2,
+        "name": "Best Ai Agents In 2026: 30 Tools Co",
+        "url": "https://felloai.com/best-ai-agents",
+        "stars": "\u2605 10,000",
+        "badge": "OPEN SOURCE",
+        "description": "How widely it is used: a SemiAnalysis report from February 2026, Claude Code is the Inflection Point, found that 4% of all public GitHub commits were being authored by Claude Code, and projected it could reach 20% of dai",
+        "command": "git clone https://felloai.com/best-ai-agents.git\ncd best ai agents in 2026: 30 tools co\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 3,
+        "name": "Vibe Coding Friendly",
+        "url": "https://github.com/topics/vibe-coding-friendly",
+        "stars": "\u2605 10,000",
+        "badge": "OPEN SOURCE",
+        "description": "open-source ai templates open-source-project ai-agents claude ai-tools claude-ai vibe-coding claude-code vibe-coding-assistant vibe-coding-friendly vibe-coding-guide   Updated Mar 27, 2026  ### Khalid-Moukhtar / motif  S",
+        "command": "git clone https://github.com/topics/vibe-coding-friendly.git\ncd vibe-coding-friendly\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      }
+    ],
+    "cta_text": "Want our studio to build custom autonomous AI employees for your workflow? Follow @jayant.digitalstudio and DM 'REPOS'.",
+    "tags": [
+      "#ai",
+      "#developer",
+      "#automation"
+    ]
+  },
+  {
     "title": "Qwen Image 2.1: The Free Midjourney Killer",
     "description": "20B parameter open-source image model running 100% offline on consumer hardware with photorealistic detail.",
     "date": "Oct 11, 2026",
