@@ -1,5 +1,111 @@
 [
   {
+    "id": "2026-10-18-slot-2",
+    "title": "Your AI projects are crawling. Manual workflows are crushing innovation. You need this breakthrough.",
+    "date": "October 18, 2026",
+    "date_slug": "2026-10-18",
+    "slot_id": 2,
+    "slot_name": "Evening AI Toolkit (Slot 2)",
+    "badge": "AI RADAR",
+    "cta_keyword": "WORKFLOW",
+    "video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1792308801/slot_2_daily_reel_opt.mp4",
+    "summary": "Your AI projects are crawling. Manual workflows are crushing innovation. You need this breakthrough.",
+    "voiceover_script": "Your AI projects are crawling. Manual workflows are crushing innovation. You need this breakthrough. Autonomous AI agents build, automate, and optimize themselves. Your workflow transforms. Build Your Own Autonomous AI Agent automates 1500+ apps and workflows. Deploy smarter. Build faster. It transforms your pipeline. 28 Best AI Coding Agents in 2026 | Hyper converts outcomes into tested code. It automates deployments and pull requests. Fast. AI Agents News \u2014 Week of October 17 features Kaspersky. It secures autonomous AI agents in enterprise infrastructure. Protect your systems. Comment WORKFLOW below, and I will DM you the exact setup code right now.",
+    "items": [
+      {
+        "number": 1,
+        "name": "Build Your Own Autonomous Ai Agent",
+        "url": "https://www.youtube.com/watch?v=mALgeetWP-0",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "# Build Your Own Autonomous AI Agent \ud83e\udd16 Automate 1,500+ Apps & Workflows | Next.js ## Channel: Daulat Hussain 53.1K subscribers 17 likes  ### Description 304 views Posted: 2026-10-17 Source Code:   Blockchain Course:   Pr",
+        "command": "git clone https://www.youtube.com/watch?v=mALgeetWP-0.git\ncd build your own autonomous ai agent\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 2,
+        "name": "28 Best Ai Coding Agents In 2026 |",
+        "url": "https://agentic.ai/best/coding-agents",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "Agenticness22/36\u00b7Domain Specialist  Hyper is a cloud-hosted autonomous software engineering platform for turning a stated outcome into tested code, deployments, and pull requests. It works with real repositories, uses ap",
+        "command": "git clone https://agentic.ai/best/coding-agents.git\ncd 28 best ai coding agents in 2026 |\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 3,
+        "name": "Ai Agents News \u2014 Week Of October 17",
+        "url": "https://aiagentstore.ai/ai-agent-news/this-week",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "What changed: Kaspersky released a report on securing autonomous AI agents in enterprise infrastructures, framing language models as untrusted components and applying its Cyber Immunity design principles\u2014such as strict i",
+        "command": "git clone https://aiagentstore.ai/ai-agent-news/this-week.git\ncd ai agents news \u2014 week of october 17\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      }
+    ],
+    "cta_text": "Want our studio to build custom autonomous AI employees for your workflow? Follow @jayant.digitalstudio and DM 'WORKFLOW'.",
+    "tags": [
+      "#ai",
+      "#automation",
+      "#tech",
+      "#softwareengineer",
+      "#workflow"
+    ]
+  },
+  {
+    "id": "2026-10-18-slot-1",
+    "title": "Manually reviewing GitHub issues? Your AI agent workflow is broken, costing precious hours daily.",
+    "date": "October 18, 2026",
+    "date_slug": "2026-10-18",
+    "slot_id": 1,
+    "slot_name": "Morning Breakthrough (Slot 1)",
+    "badge": "AI RADAR",
+    "cta_keyword": "REPOS",
+    "video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1792308481/slot_1_daily_reel_opt.mp4",
+    "summary": "Manually reviewing GitHub issues? Your AI agent workflow is broken, costing precious hours daily.",
+    "voiceover_script": "Manually reviewing GitHub issues? Your AI agent workflow is broken, costing precious hours daily. Automate everything now. AI agents handle entire development cycles, completely independently. 17 Best Free AI Coding Agents in 20: Orbi takes GitHub Issues, implements, reviews, merges, and releases code autonomously. Releases: Copilot CLI centralizes project updates. It streamlines monitoring and simplifies version management for your entire workflow. Newsletter \u2014 The AI Toolchain: Daily release firehoses keep you updated on the latest AI development tools instantly, without effort. Comment REPOS below, and I will DM you the exact setup code right now.",
+    "items": [
+      {
+        "number": 1,
+        "name": "17 Best Free Ai Coding Agents In 20",
+        "url": "https://agentic.ai/best/free-coding-agents",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "Agenticness22/36\u00b7Domain Specialist  Orbi is an open-source, self-hostable AI coding agent that takes GitHub Issues from implementation through independent review, merge, and release. It can run against your own model end",
+        "command": "git clone https://agentic.ai/best/free-coding-agents.git\ncd 17 best free ai coding agents in 20\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 2,
+        "name": "Releases",
+        "url": "https://github.com/github/copilot-cli/releases",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "Releases \u00b7 github/copilot-cli \u00b7 GitHub  ## Release list  ## 1.0.100-1  1.0.100-1  Pre-release  copilot-cli-release-app released this    16 Oct 22:41    v1.0.100-1    `c01c663`   Improved  - Use the unified Sessions brows",
+        "command": "git clone https://github.com/github/copilot-cli/releases.git\ncd releases\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 3,
+        "name": "Newsletter \u2014 The Ai Toolchain",
+        "url": "https://aitoolchain.io/newsletter/",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "Newsletter \u2014 The AI Toolchain  # The AI Toolchain \u2014 issue 065, October 17, 2026   THE AI TOOLCHAIN NO. 065   THE DAILY RELEASE FIREHOSE   PUBLISHED OCTOBER 17, 2026 \u00b7 EVERY DAY    EDITIONS tail | grep | head | ls | diff",
+        "command": "git clone https://aitoolchain.io/newsletter/.git\ncd newsletter \u2014 the ai toolchain\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      }
+    ],
+    "cta_text": "Want our studio to build custom autonomous AI employees for your workflow? Follow @jayant.digitalstudio and DM 'REPOS'.",
+    "tags": [
+      "#ai",
+      "#automation",
+      "#tech",
+      "#softwareengineer",
+      "#workflow"
+    ]
+  },
+  {
     "id": "2026-10-18-slot-5",
     "title": "Night Owl Deep Dive (Slot 5)",
     "date": "October 18, 2026",
@@ -142,108 +248,6 @@
         "badge": "OPEN SOURCE",
         "description": "Meta has unveiled Muse Spark Open, calling it the \u201cmost capable\u201d US open-weight model to date. The company said that the new model is the first in its class to be able to run on a desktop computer using Apple\u2019s M5 Ultra",
         "command": "git clone https://www.siliconrepublic.com/machines/meta-unveils-most-capable-us-open-weight-model-muse-spark-open.git\ncd meta unveils muse spark open to com\n./setup.sh",
-        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
-      }
-    ],
-    "cta_text": "Want our studio to build custom autonomous AI employees for your workflow? Follow @jayant.digitalstudio and DM 'REPOS'.",
-    "tags": [
-      "#ai",
-      "#developer",
-      "#automation"
-    ]
-  },
-  {
-    "id": "2026-10-18-slot-2",
-    "title": "Midday Cheat Code (Slot 2)",
-    "date": "October 18, 2026",
-    "date_slug": "2026-10-18",
-    "slot_id": 2,
-    "slot_name": "Midday Cheat Code (Slot 2)",
-    "badge": "OPEN SOURCE",
-    "cta_keyword": "REPOS",
-    "video_url": "out/slot_2_daily_reel_opt.mp4",
-    "summary": "Breakthrough tools for Midday Cheat Code (Slot 2)",
-    "voiceover_script": "",
-    "items": [
-      {
-        "number": 1,
-        "name": "Autonomous \u2014 Ai Hardware Workshop",
-        "url": "https://www.autonomous.ai",
-        "stars": "\u2605 10,000",
-        "badge": "OPEN SOURCE",
-        "description": "How to build your Personal Robot  How to build your Personal RobotBuild Log\u00b7Jun 4, 2026Autonomous Robot  read all \u2192  Open Source.The whole stack, in the open.  all repos \u2192  autonomous-computer  autonomous-computerBuild y",
-        "command": "git clone https://www.autonomous.ai.git\ncd autonomous \u2014 ai hardware workshop\n./setup.sh",
-        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
-      },
-      {
-        "number": 2,
-        "name": "Best Ai Agents In 2026: 30 Tools Co",
-        "url": "https://felloai.com/best-ai-agents",
-        "stars": "\u2605 10,000",
-        "badge": "OPEN SOURCE",
-        "description": "How widely it is used: a SemiAnalysis report from February 2026, Claude Code is the Inflection Point, found that 4% of all public GitHub commits were being authored by Claude Code, and projected it could reach 20% of dai",
-        "command": "git clone https://felloai.com/best-ai-agents.git\ncd best ai agents in 2026: 30 tools co\n./setup.sh",
-        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
-      },
-      {
-        "number": 3,
-        "name": "Amazon Managed Workflows For Apache",
-        "url": "https://aws.amazon.com/about-aws/whats-new/2026/10/amazon-mwaa-ai-agent-skills/",
-        "stars": "\u2605 10,000",
-        "badge": "OPEN SOURCE",
-        "description": "# Amazon Managed Workflows for Apache Airflow now offers AI agent skills - AWS  Published: 2026-10-15T08:00:00Z Source: aws.amazon.com Language: en  ## Story  Amazon Managed Workflows for Apache Airflow (MWAA) now integr",
-        "command": "git clone https://aws.amazon.com/about-aws/whats-new/2026/10/amazon-mwaa-ai-agent-skills/.git\ncd amazon managed workflows for apache\n./setup.sh",
-        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
-      }
-    ],
-    "cta_text": "Want our studio to build custom autonomous AI employees for your workflow? Follow @jayant.digitalstudio and DM 'REPOS'.",
-    "tags": [
-      "#ai",
-      "#developer",
-      "#automation"
-    ]
-  },
-  {
-    "id": "2026-10-18-slot-1",
-    "title": "Morning Breakthrough (Slot 1)",
-    "date": "October 18, 2026",
-    "date_slug": "2026-10-18",
-    "slot_id": 1,
-    "slot_name": "Morning Breakthrough (Slot 1)",
-    "badge": "OPEN SOURCE",
-    "cta_keyword": "REPOS",
-    "video_url": "out/slot_1_daily_reel_opt.mp4",
-    "summary": "Breakthrough tools for Morning Breakthrough (Slot 1)",
-    "voiceover_script": "",
-    "items": [
-      {
-        "number": 1,
-        "name": "Daily Ai & Product Digest \u2014 What Sh",
-        "url": "https://www.indianic.com/digest",
-        "stars": "\u2605 10,000",
-        "badge": "OPEN SOURCE",
-        "description": "Daily Digest \u00b7 AI & Tech \u00b7 Signal over noise  The day in AI, delivered feather-light.  We read the whole field so you don't have to \u2014 models, money, chips and policy \u2014 then hand you the few stories that actually move thi",
-        "command": "git clone https://www.indianic.com/digest.git\ncd daily ai & product digest \u2014 what sh\n./setup.sh",
-        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
-      },
-      {
-        "number": 2,
-        "name": "Best Ai Agents In 2026: 30 Tools Co",
-        "url": "https://felloai.com/best-ai-agents",
-        "stars": "\u2605 10,000",
-        "badge": "OPEN SOURCE",
-        "description": "How widely it is used: a SemiAnalysis report from February 2026, Claude Code is the Inflection Point, found that 4% of all public GitHub commits were being authored by Claude Code, and projected it could reach 20% of dai",
-        "command": "git clone https://felloai.com/best-ai-agents.git\ncd best ai agents in 2026: 30 tools co\n./setup.sh",
-        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
-      },
-      {
-        "number": 3,
-        "name": "Vibe Coding Friendly",
-        "url": "https://github.com/topics/vibe-coding-friendly",
-        "stars": "\u2605 10,000",
-        "badge": "OPEN SOURCE",
-        "description": "open-source ai templates open-source-project ai-agents claude ai-tools claude-ai vibe-coding claude-code vibe-coding-assistant vibe-coding-friendly vibe-coding-guide   Updated Mar 27, 2026  ### Khalid-Moukhtar / motif  S",
-        "command": "git clone https://github.com/topics/vibe-coding-friendly.git\ncd vibe-coding-friendly\n./setup.sh",
         "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
       }
     ],

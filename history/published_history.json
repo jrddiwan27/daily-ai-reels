@@ -1932,5 +1932,79 @@
         "source": "Tavily (Real-Time)"
       }
     ]
+  },
+  {
+    "slot_id": 1,
+    "slot_name": "Morning Breakthrough (Slot 1)",
+    "timestamp_utc": "2026-10-18T07:29:04.531367+00:00",
+    "date_ist": "2026-10-18 9:00 AM IST (Immediate / Makeup)",
+    "buffer_post_id": "6ad47522769b457934b111d0",
+    "channel_results": {
+      "instagram": "6ad47522769b457934b111d0",
+      "youtube": "6ad47530ae173d6e00eeeeaa",
+      "twitter": "6ad47536769b457934b1135c",
+      "public_video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1792308481/slot_1_daily_reel_opt.mp4"
+    },
+    "video_path": "out/slot_1_daily_reel_opt.mp4",
+    "items": [
+      {
+        "title": "17 Best Free AI Coding Agents in 2026 | Agentic.ai",
+        "name": "17 Best Free AI Coding Agents in 20",
+        "description": "Agenticness22/36\u00b7Domain Specialist  Orbi is an open-source, self-hostable AI coding agent that takes GitHub Issues from implementation through independent review, merge, and release. It can run against your own model end",
+        "url": "https://agentic.ai/best/free-coding-agents",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "Releases \u00b7 github/copilot-cli",
+        "name": "Releases",
+        "description": "Releases \u00b7 github/copilot-cli \u00b7 GitHub  ## Release list  ## 1.0.100-1  1.0.100-1  Pre-release  copilot-cli-release-app released this    16 Oct 22:41    v1.0.100-1    `c01c663`   Improved  - Use the unified Sessions brows",
+        "url": "https://github.com/github/copilot-cli/releases",
+        "source": "Exa (24h Index)"
+      },
+      {
+        "title": "Newsletter \u2014 The AI Toolchain",
+        "name": "Newsletter \u2014 The AI Toolchain",
+        "description": "Newsletter \u2014 The AI Toolchain  # The AI Toolchain \u2014 issue 065, October 17, 2026   THE AI TOOLCHAIN NO. 065   THE DAILY RELEASE FIREHOSE   PUBLISHED OCTOBER 17, 2026 \u00b7 EVERY DAY    EDITIONS tail | grep | head | ls | diff",
+        "url": "https://aitoolchain.io/newsletter/",
+        "source": "Exa (24h Index)"
+      }
+    ]
+  },
+  {
+    "slot_id": 2,
+    "slot_name": "Evening AI Toolkit (Slot 2)",
+    "timestamp_utc": "2026-10-18T07:33:54.555929+00:00",
+    "date_ist": "2026-10-18 7:00 PM IST (Scheduled for 13:30 UTC)",
+    "buffer_post_id": "6ad476600a208cb32355a2d3",
+    "channel_results": {
+      "instagram": "6ad476600a208cb32355a2d3",
+      "youtube": "6ad47661769b457934b1537d",
+      "twitter": "6ad47662ae173d6e00ef2131",
+      "public_video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1792308801/slot_2_daily_reel_opt.mp4"
+    },
+    "video_path": "out/slot_2_daily_reel_opt.mp4",
+    "items": [
+      {
+        "title": "Build Your Own Autonomous AI Agent \ud83e\udd16 Automate 1,500+ Apps & Workflows | Next.js",
+        "name": "Build Your Own Autonomous AI Agent",
+        "description": "# Build Your Own Autonomous AI Agent \ud83e\udd16 Automate 1,500+ Apps & Workflows | Next.js ## Channel: Daulat Hussain 53.1K subscribers 17 likes  ### Description 304 views Posted: 2026-10-17 Source Code:   Blockchain Course:   Pr",
+        "url": "https://www.youtube.com/watch?v=mALgeetWP-0",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "28 Best AI Coding Agents in 2026 | Agentic.ai",
+        "name": "28 Best AI Coding Agents in 2026 |",
+        "description": "Agenticness22/36\u00b7Domain Specialist  Hyper is a cloud-hosted autonomous software engineering platform for turning a stated outcome into tested code, deployments, and pull requests. It works with real repositories, uses ap",
+        "url": "https://agentic.ai/best/coding-agents",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "AI Agents News \u2014 Week of October 17, 2026 (Daily Updates)",
+        "name": "AI Agents News \u2014 Week of October 17",
+        "description": "What changed: Kaspersky released a report on securing autonomous AI agents in enterprise infrastructures, framing language models as untrusted components and applying its Cyber Immunity design principles\u2014such as strict i",
+        "url": "https://aiagentstore.ai/ai-agent-news/this-week",
+        "source": "Tavily (Real-Time)"
+      }
+    ]
   }
 ]
