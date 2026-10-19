@@ -1,5 +1,111 @@
 [
   {
+    "id": "2026-10-20-slot-2",
+    "title": "Still manually coding everything? AI agents are here, but deployment complexity crushes your productivity.",
+    "date": "October 20, 2026",
+    "date_slug": "2026-10-20",
+    "slot_id": 2,
+    "slot_name": "Evening AI Toolkit (Slot 2)",
+    "badge": "AI RADAR",
+    "cta_keyword": "WORKFLOW",
+    "video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1792436205/slot_2_daily_reel_opt.mp4",
+    "summary": "Still manually coding everything? AI agents are here, but deployment complexity crushes your productivity.",
+    "voiceover_script": "Still manually coding everything? AI agents are here, but deployment complexity crushes your productivity. Unlock hyper-efficiency. Automate your entire dev workflow now, effortlessly. ai-agent-framework self-hosts n8n on Google Cloud. Eliminate fees, banish server headaches. Build powerful, cost-effective automation workflows affordably. 28 Best AI Coding Agents in 2026 | Hyper autonomously engineers software. Convert outcomes to tested code, deployments, pull requests quickly. Browser automation tool in Microsof empowers AI agents. Reason over browser interactions. Automate complex web tasks with intelligent precision. Comment WORKFLOW below, and I will DM you the exact setup code right now.",
+    "items": [
+      {
+        "number": 1,
+        "name": "Ai Agent Framework",
+        "url": "https://github.com/topics/ai-agent-framework",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "### datawranglerai / self-host-n8n-on-gcr  Star  619  Self-host n8n on Google Cloud without the subscription fees or server headaches - because your automation workflows shouldn't cost more than your coffee budget  redis",
+        "command": "git clone https://github.com/topics/ai-agent-framework.git\ncd ai-agent-framework\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 2,
+        "name": "28 Best Ai Coding Agents In 2026 |",
+        "url": "https://agentic.ai/best/coding-agents",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "Agenticness22/36\u00b7Domain Specialist  Hyper is a cloud-hosted autonomous software engineering platform for turning a stated outcome into tested code, deployments, and pull requests. It works with real repositories, uses ap",
+        "command": "git clone https://agentic.ai/best/coding-agents.git\ncd 28 best ai coding agents in 2026 |\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 3,
+        "name": "Browser Automation Tool In Microsof",
+        "url": "https://devblogs.microsoft.com/foundry/browser-automation-tool-ga/",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "Browser automation tool in Microsoft Foundry is now GA | Microsoft Foundry Blog   October 19th, 2026 0 reactions   # Browser automation tool in Microsoft Foundry is now GA   Nandini Muralidharan   AI agents can reason ov",
+        "command": "git clone https://devblogs.microsoft.com/foundry/browser-automation-tool-ga/.git\ncd browser automation tool in microsof\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      }
+    ],
+    "cta_text": "Want our studio to build custom autonomous AI employees for your workflow? Follow @jayant.digitalstudio and DM 'WORKFLOW'.",
+    "tags": [
+      "#ai",
+      "#automation",
+      "#tech",
+      "#softwareengineer",
+      "#workflow"
+    ]
+  },
+  {
+    "id": "2026-10-20-slot-1",
+    "title": "Stop paying insane monthly SaaS subscriptions when free open-source AI builds this instantly.",
+    "date": "October 20, 2026",
+    "date_slug": "2026-10-20",
+    "slot_id": 1,
+    "slot_name": "Morning Breakthrough (Slot 1)",
+    "badge": "AI RADAR",
+    "cta_keyword": "REPOS",
+    "video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1792435919/slot_1_daily_reel_opt.mp4",
+    "summary": "Stop paying insane monthly SaaS subscriptions when free open-source AI builds this instantly.",
+    "voiceover_script": "Stop paying insane monthly SaaS subscriptions when free open-source AI builds this instantly. Three brand-new breakthrough developer repos just dropped on GitHub today. First is 10 Best AI Coding Agents in 2026. It eliminates manual coding pipelines with lightning-fast local model execution. Second is ai-agent-framework. An autonomous engine executing deterministic workflows with sub-millisecond response latency. Third is Releases. A zero-cloud runtime running complex reasoning models directly on device. Comment REPOS below, and I will DM you the exact setup code right now.",
+    "items": [
+      {
+        "number": 1,
+        "name": "10 Best Ai Coding Agents In 2026",
+        "url": "https://www.labellerr.com/blog/10-best-ai-coding-agents",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "### 7. OpenCode    OpenCode  OpenCode is a free, open-source terminal agent released under the MIT license. It supports almost any model provider, so you can use your own API keys or run local models.  It ranks among the",
+        "command": "git clone https://www.labellerr.com/blog/10-best-ai-coding-agents.git\ncd 10 best ai coding agents in 2026\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 2,
+        "name": "Ai Agent Framework",
+        "url": "https://github.com/topics/ai-agent-framework",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "python ai blockchain intents web3 agent-framework ai-agent agentic ai-agent-framework   Updated Sep 16, 2026  Python  ### Intelligent-Internet / ii-agent  Star  3.4k  II-Agent: a new open-source framework to build and de",
+        "command": "pip install ai-agent-framework",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 3,
+        "name": "Releases",
+        "url": "https://github.com/github/copilot-cli/releases",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "Releases \u00b7 github/copilot-cli \u00b7 GitHub  ## Release list  ## 1.0.100-1  1.0.100-1  Pre-release  copilot-cli-release-app released this    16 Oct 22:41    v1.0.100-1    `c01c663`   Improved  - Use the unified Sessions brows",
+        "command": "git clone https://github.com/github/copilot-cli/releases.git\ncd releases\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      }
+    ],
+    "cta_text": "Want our studio to build custom autonomous AI employees for your workflow? Follow @jayant.digitalstudio and DM 'REPOS'.",
+    "tags": [
+      "#ai",
+      "#automation",
+      "#tech",
+      "#softwareengineer",
+      "#workflow"
+    ]
+  },
+  {
     "id": "2026-10-19-slot-2",
     "title": "Your AI agents are stuck. Manual data updates? Slow, painful, crushing your productivity.",
     "date": "October 19, 2026",

@@ -2080,5 +2080,79 @@
         "source": "Exa (24h Index)"
       }
     ]
+  },
+  {
+    "slot_id": 1,
+    "slot_name": "Morning Breakthrough (Slot 1)",
+    "timestamp_utc": "2026-10-19T18:52:28.686918+00:00",
+    "date_ist": "2026-10-20 9:00 AM IST (Scheduled for 03:30 UTC)",
+    "buffer_post_id": "6ad666ea2be0d5775d52c30a",
+    "channel_results": {
+      "instagram": "6ad666ea2be0d5775d52c30a",
+      "youtube": "6ad666eb37a3bee8ce012d33",
+      "twitter": "6ad666eca443b466be71babb",
+      "public_video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1792435919/slot_1_daily_reel_opt.mp4"
+    },
+    "video_path": "out/slot_1_daily_reel_opt.mp4",
+    "items": [
+      {
+        "title": "10 Best AI Coding Agents in 2026",
+        "name": "10 Best AI Coding Agents in 2026",
+        "description": "### 7. OpenCode    OpenCode  OpenCode is a free, open-source terminal agent released under the MIT license. It supports almost any model provider, so you can use your own API keys or run local models.  It ranks among the",
+        "url": "https://www.labellerr.com/blog/10-best-ai-coding-agents",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "ai-agent-framework \u00b7 GitHub Topics \u00b7 GitHub",
+        "name": "ai-agent-framework",
+        "description": "python ai blockchain intents web3 agent-framework ai-agent agentic ai-agent-framework   Updated Sep 16, 2026  Python  ### Intelligent-Internet / ii-agent  Star  3.4k  II-Agent: a new open-source framework to build and de",
+        "url": "https://github.com/topics/ai-agent-framework",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "Releases \u00b7 github/copilot-cli",
+        "name": "Releases",
+        "description": "Releases \u00b7 github/copilot-cli \u00b7 GitHub  ## Release list  ## 1.0.100-1  1.0.100-1  Pre-release  copilot-cli-release-app released this    16 Oct 22:41    v1.0.100-1    `c01c663`   Improved  - Use the unified Sessions brows",
+        "url": "https://github.com/github/copilot-cli/releases",
+        "source": "Exa (24h Index)"
+      }
+    ]
+  },
+  {
+    "slot_id": 2,
+    "slot_name": "Evening AI Toolkit (Slot 2)",
+    "timestamp_utc": "2026-10-19T18:57:17.251606+00:00",
+    "date_ist": "2026-10-20 7:00 PM IST (Scheduled for 13:30 UTC)",
+    "buffer_post_id": "6ad6680b0c1eee88e2f1e959",
+    "channel_results": {
+      "instagram": "6ad6680b0c1eee88e2f1e959",
+      "youtube": "6ad6680c0c1eee88e2f1e983",
+      "twitter": "6ad6680d642abc3846c172f6",
+      "public_video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1792436205/slot_2_daily_reel_opt.mp4"
+    },
+    "video_path": "out/slot_2_daily_reel_opt.mp4",
+    "items": [
+      {
+        "title": "ai-agent-framework \u00b7 GitHub Topics \u00b7 GitHub",
+        "name": "ai-agent-framework",
+        "description": "### datawranglerai / self-host-n8n-on-gcr  Star  619  Self-host n8n on Google Cloud without the subscription fees or server headaches - because your automation workflows shouldn't cost more than your coffee budget  redis",
+        "url": "https://github.com/topics/ai-agent-framework",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "28 Best AI Coding Agents in 2026 | Agentic.ai",
+        "name": "28 Best AI Coding Agents in 2026 |",
+        "description": "Agenticness22/36\u00b7Domain Specialist  Hyper is a cloud-hosted autonomous software engineering platform for turning a stated outcome into tested code, deployments, and pull requests. It works with real repositories, uses ap",
+        "url": "https://agentic.ai/best/coding-agents",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "Browser automation tool in Microsoft Foundry is now GA | Microsoft Foundry Blog",
+        "name": "Browser automation tool in Microsof",
+        "description": "Browser automation tool in Microsoft Foundry is now GA | Microsoft Foundry Blog   October 19th, 2026 0 reactions   # Browser automation tool in Microsoft Foundry is now GA   Nandini Muralidharan   AI agents can reason ov",
+        "url": "https://devblogs.microsoft.com/foundry/browser-automation-tool-ga/",
+        "source": "Exa (24h Index)"
+      }
+    ]
   }
 ]
