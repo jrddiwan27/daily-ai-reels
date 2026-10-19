@@ -1,5 +1,111 @@
 [
   {
+    "id": "2026-10-19-slot-2",
+    "title": "Your AI agents are stuck. Manual data updates? Slow, painful, crushing your productivity.",
+    "date": "October 19, 2026",
+    "date_slug": "2026-10-19",
+    "slot_id": 2,
+    "slot_name": "Evening AI Toolkit (Slot 2)",
+    "badge": "AI RADAR",
+    "cta_keyword": "WORKFLOW",
+    "video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1792397502/slot_2_daily_reel_opt.mp4",
+    "summary": "Your AI agents are stuck. Manual data updates? Slow, painful, crushing your productivity.",
+    "voiceover_script": "Your AI agents are stuck. Manual data updates? Slow, painful, crushing your productivity. Instantly unlock autonomous agent power. Automate everything, right now. AI Agents News \u2014 Week of October 18 unveils Floqer's autonomous agents. It discovers, enriches, updates customer data from 100+ sources. Open-source. Dan Kornas on X: \"Browser tasks don\" reveals agents automating browser tasks. It executes web workflows, scrapes data, interacts with any UI. Product update No. 01: What\u2019s new i enables agent deployment across teams. Schedule or trigger. Visualize process diagrams directly. Comment WORKFLOW below, and I will DM you the exact setup code right now.",
+    "items": [
+      {
+        "number": 1,
+        "name": "Ai Agents News \u2014 Week Of October 18",
+        "url": "https://aiagentstore.ai/ai-agent-news/this-week",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "What changed: Floqer unveiled an autonomous customer-knowledge product that runs agent fleets to discover, enrich and continuously update account and contact records from 100+ sources, and said it will open-source the un",
+        "command": "git clone https://aiagentstore.ai/ai-agent-news/this-week.git\ncd ai agents news \u2014 week of october 18\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 2,
+        "name": "Dan Kornas On X: \"Browser Tasks Don",
+        "url": "https://x.com/DanKornas/status/2111841986013499605",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "03:29:00 PM \u00b7 10/18/2026\u00b71,055    Views    6  @DanKornas    Dan Kornas@DanKornas    6h    \ud83d\udd17 GitHub: github.com/nanobrowser/na\u2026 --- \u2709\ufe0f If you\u2019re into AI, ML, agents, and building real systems, join my newsletter (it\u2019s fre",
+        "command": "git clone https://x.com/DanKornas/status/2111841986013499605.git\ncd dan kornas on x: \"browser tasks don\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 3,
+        "name": "Product Update No. 01: What\u2019S New I",
+        "url": "https://tulina.ai/updates/01",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "Product update No. 01: What\u2019s new in Tulina | Tulina  Product update \u00b7 No. 01 \u00b7 19 October 2026  # What\u2019s new in Tulina  Deploy agents across your team on a schedule or a trigger. See your process diagrams right inside C",
+        "command": "git clone https://tulina.ai/updates/01.git\ncd product update no. 01: what\u2019s new i\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      }
+    ],
+    "cta_text": "Want our studio to build custom autonomous AI employees for your workflow? Follow @jayant.digitalstudio and DM 'WORKFLOW'.",
+    "tags": [
+      "#ai",
+      "#automation",
+      "#tech",
+      "#softwareengineer",
+      "#workflow"
+    ]
+  },
+  {
+    "id": "2026-10-19-slot-1",
+    "title": "Stop paying insane monthly SaaS subscriptions when free open-source AI builds this instantly.",
+    "date": "October 19, 2026",
+    "date_slug": "2026-10-19",
+    "slot_id": 1,
+    "slot_name": "Morning Breakthrough (Slot 1)",
+    "badge": "AI RADAR",
+    "cta_keyword": "REPOS",
+    "video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1792397182/slot_1_daily_reel_opt.mp4",
+    "summary": "Stop paying insane monthly SaaS subscriptions when free open-source AI builds this instantly.",
+    "voiceover_script": "Stop paying insane monthly SaaS subscriptions when free open-source AI builds this instantly. Three brand-new breakthrough developer repos just dropped on GitHub today. First is free-ai. It eliminates manual coding pipelines with lightning-fast local model execution. Second is Releases. An autonomous engine executing deterministic workflows with sub-millisecond response latency. Third is Open Source Radar. A zero-cloud runtime running complex reasoning models directly on device. Comment REPOS below, and I will DM you the exact setup code right now.",
+    "items": [
+      {
+        "number": 1,
+        "name": "Free Ai",
+        "url": "https://github.com/topics/free-ai?l=python",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "### lamwon / hermes-image-generation-skill  Star  3  DeepSeek V4 Flash prompt engineering + Flux free image generation. Zero cost, no GPU, China-friendly AI image workflow.  flux image-generation no-gpu ai-art free-ai de",
+        "command": "git clone https://github.com/topics/free-ai?l=python.git\ncd free-ai\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 2,
+        "name": "Releases",
+        "url": "https://github.com/github/copilot-cli/releases",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "Releases \u00b7 github/copilot-cli \u00b7 GitHub  ## Release list  ## 1.0.100-1  1.0.100-1  Pre-release  copilot-cli-release-app released this    16 Oct 22:41    v1.0.100-1    `c01c663`   Improved  - Use the unified Sessions brows",
+        "command": "git clone https://github.com/github/copilot-cli/releases.git\ncd releases\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 3,
+        "name": "Open Source Radar",
+        "url": "https://widechaos.cn/blog/oss-radar-2026-10-18-en",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "Open Source Radar \u00b7 2026-10-18: The Agent Operations Layer, Not the Model  \u5341\u65b9\u5fd7 \u00b7 2026-10-18  # Open Source Radar \u00b7 2026-10-18: The Agent Operations Layer, Not the Model  Each day I pick five projects that are rising on G",
+        "command": "git clone https://widechaos.cn/blog/oss-radar-2026-10-18-en.git\ncd open source radar\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      }
+    ],
+    "cta_text": "Want our studio to build custom autonomous AI employees for your workflow? Follow @jayant.digitalstudio and DM 'REPOS'.",
+    "tags": [
+      "#ai",
+      "#automation",
+      "#tech",
+      "#softwareengineer",
+      "#workflow"
+    ]
+  },
+  {
     "id": "2026-10-18-slot-2",
     "title": "Your AI projects are crawling. Manual workflows are crushing innovation. You need this breakthrough.",
     "date": "October 18, 2026",
