@@ -1,5 +1,111 @@
 [
   {
+    "id": "2026-10-21-slot-2",
+    "title": "Stop wrestling with complex AI agent environments. Your AI dev workflow is bottlenecked hard.",
+    "date": "October 21, 2026",
+    "date_slug": "2026-10-21",
+    "slot_id": 2,
+    "slot_name": "Evening AI Toolkit (Slot 2)",
+    "badge": "AI RADAR",
+    "cta_keyword": "WORKFLOW",
+    "video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1792525164/slot_2_daily_reel_opt.mp4",
+    "summary": "Stop wrestling with complex AI agent environments. Your AI dev workflow is bottlenecked hard.",
+    "voiceover_script": "Stop wrestling with complex AI agent environments. Your AI dev workflow is bottlenecked hard. Breakthrough tools now automate setup, sandboxing, and testing. Ship faster! VS Code 1.137 AI Agents in Dev Cont: Precisely manage agent containers, sandbox access, and execution. Gain granular control instantly. Most-Starred Open-Source AI Agent P: Discover top 25 agents like OpenClaw and REA. Leverage proven, community-backed AI power. ai-qa: Generate structured unit, integration, and e2e test cases from plain text. Accelerate LLM testing dramatically. Comment WORKFLOW below, and I will DM you the exact setup code right now.",
+    "items": [
+      {
+        "number": 1,
+        "name": "Vs Code 1.137 Ai Agents In Dev Cont",
+        "url": "https://shattered.io/vs-code-1-137-agent-host-dev-containers-2026",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "Container and sandbox management for AI agents will likely spin off into its own tooling category, separate from general-purpose Dev Containers, as teams need finer-grained controls over what an autonomous agent can acce",
+        "command": "git clone https://shattered.io/vs-code-1-137-agent-host-dev-containers-2026.git\ncd vs code 1.137 ai agents in dev cont\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 2,
+        "name": "Most Starred Open Source Ai Agent P",
+        "url": "https://agentscouthq.com/best/most-starred-open-source-ai-agents.html",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "Most-Starred Open-Source AI Agent Projects (2026): top 25, including OpenClaw, REA, Hermes Agent (Nous Research). Ranking method stated; pricing as stated.",
+        "command": "git clone https://agentscouthq.com/best/most-starred-open-source-ai-agents.html.git\ncd most-starred open-source ai agent p\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 3,
+        "name": "Ai Qa",
+        "url": "https://github.com/topics/ai-qa?l=python",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "### sabrinajohanson / llm-test-case-generator  Star  1  Generates structured test cases (unit, integration, and e2e) from a plain-text feature description, using the OpenAI API (GPT-4o).  python openai test-case-generati",
+        "command": "pip install ai-qa",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      }
+    ],
+    "cta_text": "Want our studio to build custom autonomous AI employees for your workflow? Follow @jayant.digitalstudio and DM 'WORKFLOW'.",
+    "tags": [
+      "#ai",
+      "#automation",
+      "#tech",
+      "#softwareengineer",
+      "#workflow"
+    ]
+  },
+  {
+    "id": "2026-10-21-slot-1",
+    "title": "Developers, are you stuck in endless GitHub project setup and repetitive coding tasks?",
+    "date": "October 21, 2026",
+    "date_slug": "2026-10-21",
+    "slot_id": 1,
+    "slot_name": "Morning Breakthrough (Slot 1)",
+    "badge": "AI RADAR",
+    "cta_keyword": "REPOS",
+    "video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1792524647/slot_1_daily_reel_opt.mp4",
+    "summary": "Developers, are you stuck in endless GitHub project setup and repetitive coding tasks?",
+    "voiceover_script": "Developers, are you stuck in endless GitHub project setup and repetitive coding tasks? Break free. AI now builds, QA's, and maintains your code. agentic-coding autonomously builds GitHub projects. It generates, tests, reviews code, accelerating your entire development workflow. repo-maintenance is your AI GitHub overseer. It automates health checks, manages dependencies, keeps repos pristine, updated always. K-Dense transforms your desktop into an AI co-scientist. It runs complex simulations, analyzes data, and generates insights rapidly. Comment REPOS below, and I will DM you the exact setup code right now.",
+    "items": [
+      {
+        "number": 1,
+        "name": "Agentic Coding",
+        "url": "https://github.com/topics/agentic-coding?l=css",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "cli productivity ai developer-tools claude claude-ai claude-code agentic-coding agentic-coding-tool   Updated Oct 17, 2026  CSS  ### SusanneHendriks76 / super-board  Star  0  Autonomous GitHub Project build \u2192 QA \u2192 review",
+        "command": "git clone https://github.com/topics/agentic-coding?l=css.git\ncd agentic-coding\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 2,
+        "name": "Repo Maintenance",
+        "url": "https://github.com/topics/repo-maintenance",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "automation ai devtools developer-tools ai-agents claude github-actions repo-maintenance   Updated Apr 23, 2026  TypeScript  ### Venukaranam98 / ai-repo-maintenance-agent  Star  5  AI-powered GitHub repository maintenance",
+        "command": "npx repo-maintenance --latest",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 3,
+        "name": "K Dense",
+        "url": "https://github.com/K-Dense-AI",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "Python   35  MIT   4  0  1  Updated Oct 5, 2026  k-dense-byok  Public     An AI co-scientist running on your desktop. Claude Science but better.    K-Dense-AI/k-dense-byok's past year of commit activity    TypeScript   1",
+        "command": "pip install k-dense",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      }
+    ],
+    "cta_text": "Want our studio to build custom autonomous AI employees for your workflow? Follow @jayant.digitalstudio and DM 'REPOS'.",
+    "tags": [
+      "#ai",
+      "#automation",
+      "#tech",
+      "#softwareengineer",
+      "#workflow"
+    ]
+  },
+  {
     "id": "2026-10-20-slot-2",
     "title": "Still manually coding everything? AI agents are here, but deployment complexity crushes your productivity.",
     "date": "October 20, 2026",

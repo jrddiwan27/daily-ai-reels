@@ -2154,5 +2154,79 @@
         "source": "Exa (24h Index)"
       }
     ]
+  },
+  {
+    "slot_id": 1,
+    "slot_name": "Morning Breakthrough (Slot 1)",
+    "timestamp_utc": "2026-10-20T19:31:18.166380+00:00",
+    "date_ist": "2026-10-21 9:00 AM IST (Scheduled for 03:30 UTC)",
+    "buffer_post_id": "6ad7c1847f4365d4df45b477",
+    "channel_results": {
+      "instagram": "6ad7c1847f4365d4df45b477",
+      "youtube": "6ad7c185d0c8e9932ba442f5",
+      "twitter": "6ad7c18664a2e76528e17988",
+      "public_video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1792524647/slot_1_daily_reel_opt.mp4"
+    },
+    "video_path": "out/slot_1_daily_reel_opt.mp4",
+    "items": [
+      {
+        "title": "agentic-coding \u00b7 GitHub Topics \u00b7 GitHub",
+        "name": "agentic-coding",
+        "description": "cli productivity ai developer-tools claude claude-ai claude-code agentic-coding agentic-coding-tool   Updated Oct 17, 2026  CSS  ### SusanneHendriks76 / super-board  Star  0  Autonomous GitHub Project build \u2192 QA \u2192 review",
+        "url": "https://github.com/topics/agentic-coding?l=css",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "repo-maintenance \u00b7 GitHub Topics \u00b7 GitHub",
+        "name": "repo-maintenance",
+        "description": "automation ai devtools developer-tools ai-agents claude github-actions repo-maintenance   Updated Apr 23, 2026  TypeScript  ### Venukaranam98 / ai-repo-maintenance-agent  Star  5  AI-powered GitHub repository maintenance",
+        "url": "https://github.com/topics/repo-maintenance",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "K-Dense \u00b7 GitHub",
+        "name": "K-Dense",
+        "description": "Python   35  MIT   4  0  1  Updated Oct 5, 2026  k-dense-byok  Public     An AI co-scientist running on your desktop. Claude Science but better.    K-Dense-AI/k-dense-byok's past year of commit activity    TypeScript   1",
+        "url": "https://github.com/K-Dense-AI",
+        "source": "Tavily (Real-Time)"
+      }
+    ]
+  },
+  {
+    "slot_id": 2,
+    "slot_name": "Evening AI Toolkit (Slot 2)",
+    "timestamp_utc": "2026-10-20T19:39:56.864044+00:00",
+    "date_ist": "2026-10-21 7:00 PM IST (Scheduled for 13:30 UTC)",
+    "buffer_post_id": "6ad7c38b7f4365d4df46230f",
+    "channel_results": {
+      "instagram": "6ad7c38b7f4365d4df46230f",
+      "youtube": "6ad7c38cd0c8e9932ba49fa8",
+      "twitter": "6ad7c38cd0c8e9932ba49fd4",
+      "public_video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1792525164/slot_2_daily_reel_opt.mp4"
+    },
+    "video_path": "out/slot_2_daily_reel_opt.mp4",
+    "items": [
+      {
+        "title": "VS Code 1.137 AI Agents in Dev Containers [2026]",
+        "name": "VS Code 1.137 AI Agents in Dev Cont",
+        "description": "Container and sandbox management for AI agents will likely spin off into its own tooling category, separate from general-purpose Dev Containers, as teams need finer-grained controls over what an autonomous agent can acce",
+        "url": "https://shattered.io/vs-code-1-137-agent-host-dev-containers-2026",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "Most-Starred Open-Source AI Agent Projects in 2026",
+        "name": "Most-Starred Open-Source AI Agent P",
+        "description": "Most-Starred Open-Source AI Agent Projects (2026): top 25, including OpenClaw, REA, Hermes Agent (Nous Research). Ranking method stated; pricing as stated.",
+        "url": "https://agentscouthq.com/best/most-starred-open-source-ai-agents.html",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "ai-qa \u00b7 GitHub Topics \u00b7 GitHub",
+        "name": "ai-qa",
+        "description": "### sabrinajohanson / llm-test-case-generator  Star  1  Generates structured test cases (unit, integration, and e2e) from a plain-text feature description, using the OpenAI API (GPT-4o).  python openai test-case-generati",
+        "url": "https://github.com/topics/ai-qa?l=python",
+        "source": "Tavily (Real-Time)"
+      }
+    ]
   }
 ]
