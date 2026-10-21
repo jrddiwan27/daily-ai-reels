@@ -2228,5 +2228,79 @@
         "source": "Tavily (Real-Time)"
       }
     ]
+  },
+  {
+    "slot_id": 1,
+    "slot_name": "Morning Breakthrough (Slot 1)",
+    "timestamp_utc": "2026-10-21T19:31:35.196843+00:00",
+    "date_ist": "2026-10-22 9:00 AM IST (Scheduled for 03:30 UTC)",
+    "buffer_post_id": "6ad91315199855ce0d3b80a5",
+    "channel_results": {
+      "instagram": "6ad91315199855ce0d3b80a5",
+      "youtube": "6ad91316781f7f37fb9fe9dd",
+      "twitter": "6ad913177d80fe56e7304b47",
+      "public_video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1792611060/slot_1_daily_reel_opt.mp4"
+    },
+    "video_path": "out/slot_1_daily_reel_opt.mp4",
+    "items": [
+      {
+        "title": "Cursor - AI Systems & Infrastructure - Rost Glukhov",
+        "name": "Cursor",
+        "description": "Tiered Context: A Knowledge Hierarchy for AI Agents \u00b7 Trending Open Source AI Projects on GitHub, October 2026 \u00b7 Hindsight for Hermes Agent: Self-Hosted Memory",
+        "url": "https://www.glukhov.org/tags/cursor",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "Releases \u00b7 github/copilot-cli",
+        "name": "Releases",
+        "description": "Releases \u00b7 github/copilot-cli \u00b7 GitHub  ## Release list  ## 1.0.102-1  1.0.102-1  Pre-release  copilot-cli-release-app released this    21 Oct 04:45    v1.0.102-1    `c66d206`   Fixed  - Prompt mode now honors managed Au",
+        "url": "https://github.com/github/copilot-cli/releases",
+        "source": "Exa (24h Index)"
+      },
+      {
+        "title": "New AI dev tool releases this week | StackPick",
+        "name": "New AI dev tool releases this week",
+        "description": "New AI dev tool releases this week | StackPick  # New this week  Recent AI dev tool releases, with sources.  ### GitHub Copilot CLI v1.0.101 adds Assisted Permissions guidance  A new assistedApprovalInstructions setting",
+        "url": "https://usestackpick.com/new",
+        "source": "Exa (24h Index)"
+      }
+    ]
+  },
+  {
+    "slot_id": 2,
+    "slot_name": "Evening AI Toolkit (Slot 2)",
+    "timestamp_utc": "2026-10-21T19:36:27.157100+00:00",
+    "date_ist": "2026-10-22 7:00 PM IST (Scheduled for 13:30 UTC)",
+    "buffer_post_id": "6ad91439199855ce0d3bb850",
+    "channel_results": {
+      "instagram": "6ad91439199855ce0d3bb850",
+      "youtube": "6ad9143a10f3165f4b73e394",
+      "twitter": "6ad9143b6f7e62fb4f153854",
+      "public_video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1792611354/slot_2_daily_reel_opt.mp4"
+    },
+    "video_path": "out/slot_2_daily_reel_opt.mp4",
+    "items": [
+      {
+        "title": "AI Agents News \u2014 Week of October 21, 2026 (Daily Updates)",
+        "name": "AI Agents News \u2014 Week of October 21",
+        "description": "What changed: Floqer unveiled an autonomous customer-knowledge product that runs agent fleets to discover, enrich and continuously update account and contact records from 100+ sources, and said it will open-source the un",
+        "url": "https://aiagentstore.ai/ai-agent-news/this-week",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "ai-security-tool \u00b7 GitHub Topics \u00b7 GitHub",
+        "name": "ai-security-tool",
+        "description": "automation web-security rbi ai-agents remote-browser ai-security-tool remote-browser-agents sa2web   Updated Jul 25, 2026  TypeScript  ### intutic / intutic  Star  9  The open source circuit breaker for AI agents. Real-t",
+        "url": "https://github.com/topics/ai-security-tool?l=typescript",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "Open Source Infrastructure Archives  - hyperight.com",
+        "name": "Open Source Infrastructure Archives",
+        "description": "# Open Source Infrastructure. ### More Filters. ## Swirl. ## SurrealDB. ## Superset. ## SuperAGI. ## Supabase. ## Storm. ## StarRocks. ## Stable Diffusion. ## SQLite. ## SpiceDB. ## Spark Streaming. ## Sonnet. ## Sonic.",
+        "url": "https://hyperight.com/single-category/open-source-infrastructure/page/2",
+        "source": "Tavily (Real-Time)"
+      }
+    ]
   }
 ]

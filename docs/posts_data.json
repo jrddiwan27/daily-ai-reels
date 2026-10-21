@@ -1,5 +1,111 @@
 [
   {
+    "id": "2026-10-22-slot-2",
+    "title": "Stop wasting endless hours manually updating customer data. Your CRM is outdated instantly.",
+    "date": "October 22, 2026",
+    "date_slug": "2026-10-22",
+    "slot_id": 2,
+    "slot_name": "Evening AI Toolkit (Slot 2)",
+    "badge": "AI RADAR",
+    "cta_keyword": "WORKFLOW",
+    "video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1792611354/slot_2_daily_reel_opt.mp4",
+    "summary": "Stop wasting endless hours manually updating customer data. Your CRM is outdated instantly.",
+    "voiceover_script": "Stop wasting endless hours manually updating customer data. Your CRM is outdated instantly. Autonomous AI agents now automate all your data discovery and enrichment. AI Agents News \u2014 Week of October 21 unveils Floqer's autonomous agents. They discover, enrich, and update contact records from 100+ sources constantly. ai-security-tool is your open-source circuit breaker for AI agents. It provides real-time protection, instantly preventing malicious agent actions. Open Source Infrastructure Archives is your ultimate hub. It curates a massive collection of critical open-source infrastructure tools, instantly available. Comment WORKFLOW below, and I will DM you the exact setup code right now.",
+    "items": [
+      {
+        "number": 1,
+        "name": "Ai Agents News \u2014 Week Of October 21",
+        "url": "https://aiagentstore.ai/ai-agent-news/this-week",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "What changed: Floqer unveiled an autonomous customer-knowledge product that runs agent fleets to discover, enrich and continuously update account and contact records from 100+ sources, and said it will open-source the un",
+        "command": "git clone https://aiagentstore.ai/ai-agent-news/this-week.git\ncd ai agents news \u2014 week of october 21\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 2,
+        "name": "Ai Security Tool",
+        "url": "https://github.com/topics/ai-security-tool?l=typescript",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "automation web-security rbi ai-agents remote-browser ai-security-tool remote-browser-agents sa2web   Updated Jul 25, 2026  TypeScript  ### intutic / intutic  Star  9  The open source circuit breaker for AI agents. Real-t",
+        "command": "npx ai-security-tool --latest",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 3,
+        "name": "Open Source Infrastructure Archives",
+        "url": "https://hyperight.com/single-category/open-source-infrastructure/page/2",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "# Open Source Infrastructure. ### More Filters. ## Swirl. ## SurrealDB. ## Superset. ## SuperAGI. ## Supabase. ## Storm. ## StarRocks. ## Stable Diffusion. ## SQLite. ## SpiceDB. ## Spark Streaming. ## Sonnet. ## Sonic.",
+        "command": "git clone https://hyperight.com/single-category/open-source-infrastructure/page/2.git\ncd open source infrastructure archives\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      }
+    ],
+    "cta_text": "Want our studio to build custom autonomous AI employees for your workflow? Follow @jayant.digitalstudio and DM 'WORKFLOW'.",
+    "tags": [
+      "#ai",
+      "#automation",
+      "#tech",
+      "#softwareengineer",
+      "#workflow"
+    ]
+  },
+  {
+    "id": "2026-10-22-slot-1",
+    "title": "Developers, are your AI agents drowning in scattered context? Your dev workflow is bottlenecked.",
+    "date": "October 22, 2026",
+    "date_slug": "2026-10-22",
+    "slot_id": 1,
+    "slot_name": "Morning Breakthrough (Slot 1)",
+    "badge": "AI RADAR",
+    "cta_keyword": "REPOS",
+    "video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1792611060/slot_1_daily_reel_opt.mp4",
+    "summary": "Developers, are your AI agents drowning in scattered context? Your dev workflow is bottlenecked.",
+    "voiceover_script": "Developers, are your AI agents drowning in scattered context? Your dev workflow is bottlenecked. Breakthrough: Tiered context revolutionizes AI agent memory. Unlock instant knowledge. Cursor implements tiered context, building a knowledge hierarchy for AI agents. It organizes memory, boosts agent performance, enhancing recall instantly. Releases from GitHub Copilot CLI deliver vital updates. It fixes prompt mode issues, honors managed authentication, optimizing dev workflows. New AI dev tool releases this week feature Copilot CLI v1.0.101. It adds assisted permissions, streamlining approval instructions for devs. Comment REPOS below, and I will DM you the exact setup code right now.",
+    "items": [
+      {
+        "number": 1,
+        "name": "Cursor",
+        "url": "https://www.glukhov.org/tags/cursor",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "Tiered Context: A Knowledge Hierarchy for AI Agents \u00b7 Trending Open Source AI Projects on GitHub, October 2026 \u00b7 Hindsight for Hermes Agent: Self-Hosted Memory",
+        "command": "git clone https://www.glukhov.org/tags/cursor.git\ncd cursor\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 2,
+        "name": "Releases",
+        "url": "https://github.com/github/copilot-cli/releases",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "Releases \u00b7 github/copilot-cli \u00b7 GitHub  ## Release list  ## 1.0.102-1  1.0.102-1  Pre-release  copilot-cli-release-app released this    21 Oct 04:45    v1.0.102-1    `c66d206`   Fixed  - Prompt mode now honors managed Au",
+        "command": "git clone https://github.com/github/copilot-cli/releases.git\ncd releases\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 3,
+        "name": "New Ai Dev Tool Releases This Week",
+        "url": "https://usestackpick.com/new",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "New AI dev tool releases this week | StackPick  # New this week  Recent AI dev tool releases, with sources.  ### GitHub Copilot CLI v1.0.101 adds Assisted Permissions guidance  A new assistedApprovalInstructions setting",
+        "command": "git clone https://usestackpick.com/new.git\ncd new ai dev tool releases this week\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      }
+    ],
+    "cta_text": "Want our studio to build custom autonomous AI employees for your workflow? Follow @jayant.digitalstudio and DM 'REPOS'.",
+    "tags": [
+      "#ai",
+      "#automation",
+      "#tech",
+      "#softwareengineer",
+      "#workflow"
+    ]
+  },
+  {
     "id": "2026-10-21-slot-2",
     "title": "Stop wrestling with complex AI agent environments. Your AI dev workflow is bottlenecked hard.",
     "date": "October 21, 2026",
