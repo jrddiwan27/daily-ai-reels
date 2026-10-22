@@ -1,5 +1,111 @@
 [
   {
+    "id": "2026-10-23-slot-2",
+    "title": "Stuck manually coding complex AI workflows? Your development speed is about to explode.",
+    "date": "October 23, 2026",
+    "date_slug": "2026-10-23",
+    "slot_id": 2,
+    "slot_name": "Evening AI Toolkit (Slot 2)",
+    "badge": "AI RADAR",
+    "cta_keyword": "WORKFLOW",
+    "video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1792697264/slot_2_daily_reel_opt.mp4",
+    "summary": "Stuck manually coding complex AI workflows? Your development speed is about to explode.",
+    "voiceover_script": "Stuck manually coding complex AI workflows? Your development speed is about to explode. Automate everything. These new AI agents are game-changers for builders. deep-agents builds self-improving AI workflows, automating complex tasks. It crafts, modifies, and evolves agents, delivering unparalleled speed. ai-calling powers autonomous voice AI. It bridges Android SIMs directly to LLMs, enabling real-time inbound and outbound conversations instantly. 17 Best Free AI Coding Agents in 20 showcases Orbi. It autonomously manages GitHub Issues: implementation, review, merge, and release. Comment WORKFLOW below, and I will DM you the exact setup code right now.",
+    "items": [
+      {
+        "number": 1,
+        "name": "Deep Agents",
+        "url": "https://github.com/topics/deep-agents",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "open-source autonomous-agents ai-agents ai-agent llms agentic-ai coding-agent self-improving-agent deep-agents workflow-automation-ai self-modifying-ai self-evolving-agent   Updated Sep 3, 2026  Python  agent-studio-star",
+        "command": "pip install deep-agents",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 2,
+        "name": "Ai Calling",
+        "url": "https://github.com/topics/ai-calling",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "Updated Sep 7, 2026  Python  ### Magraa / SIMVox-AI  Star  9  \ud83d\udcf1\u26a1 Autonomous, zero-VoIP AI voice calling system bridging Android SIM cards directly to Google Gemini LLM & Microsoft Edge Neural TTS over ADB. Real-time inbo",
+        "command": "pip install ai-calling",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 3,
+        "name": "17 Best Free Ai Coding Agents In 20",
+        "url": "https://agentic.ai/best/free-coding-agents",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "Agenticness22/36\u00b7Domain Specialist  Orbi is an open-source, self-hostable AI coding agent that takes GitHub Issues from implementation through independent review, merge, and release. It can run against your own model end",
+        "command": "git clone https://agentic.ai/best/free-coding-agents.git\ncd 17 best free ai coding agents in 20\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      }
+    ],
+    "cta_text": "Want our studio to build custom autonomous AI employees for your workflow? Follow @jayant.digitalstudio and DM 'WORKFLOW'.",
+    "tags": [
+      "#ai",
+      "#automation",
+      "#tech",
+      "#softwareengineer",
+      "#workflow"
+    ]
+  },
+  {
+    "id": "2026-10-23-slot-1",
+    "title": "Stuck debugging endless code? Your AI agents are failing you. Stop wasting precious dev time",
+    "date": "October 23, 2026",
+    "date_slug": "2026-10-23",
+    "slot_id": 1,
+    "slot_name": "Morning Breakthrough (Slot 1)",
+    "badge": "AI RADAR",
+    "cta_keyword": "REPOS",
+    "video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1792697024/slot_1_daily_reel_opt.mp4",
+    "summary": "Stuck debugging endless code? Your AI agents are failing you. Stop wasting precious dev time!",
+    "voiceover_script": "Stuck debugging endless code? Your AI agents are failing you. Stop wasting precious dev time! Unleash true autonomous coding! AI agents now handle entire dev workflows. 17 Best Free AI Coding Agents in 20: It autonomously processes GitHub Issues, implements, reviews, merges, and releases. Complete dev automation! deep-agents: This open-source platform builds self-improving, self-modifying, self-evolving AI coding agents. Automates complex workflows now. ai-calling: This open-source CRM with autodialer unifies voice, SMS, WhatsApp, email, and chat. Powerful omnichannel solution! Comment REPOS below, and I will DM you the exact setup code right now.",
+    "items": [
+      {
+        "number": 1,
+        "name": "17 Best Free Ai Coding Agents In 20",
+        "url": "https://agentic.ai/best/free-coding-agents",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "Agenticness22/36\u00b7Domain Specialist  Orbi is an open-source, self-hostable AI coding agent that takes GitHub Issues from implementation through independent review, merge, and release. It can run against your own model end",
+        "command": "git clone https://agentic.ai/best/free-coding-agents.git\ncd 17 best free ai coding agents in 20\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 2,
+        "name": "Deep Agents",
+        "url": "https://github.com/topics/deep-agents",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "open-source autonomous-agents ai-agents ai-agent llms agentic-ai coding-agent self-improving-agent deep-agents workflow-automation-ai self-modifying-ai self-evolving-agent   Updated Sep 3, 2026  Python  agent-studio-star",
+        "command": "pip install deep-agents",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 3,
+        "name": "Ai Calling",
+        "url": "https://github.com/topics/ai-calling",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "Updated May 12, 2026  Python  ### mylinehub / omnichannel-crm  Star  19  Open-Source Omnichannel CRM with Premium Autodialer Description: bring all features together\u2014voice, SMS, WhatsApp, email, and chat\u2014inside a single",
+        "command": "pip install ai-calling",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      }
+    ],
+    "cta_text": "Want our studio to build custom autonomous AI employees for your workflow? Follow @jayant.digitalstudio and DM 'REPOS'.",
+    "tags": [
+      "#ai",
+      "#automation",
+      "#tech",
+      "#softwareengineer",
+      "#workflow"
+    ]
+  },
+  {
     "id": "2026-10-22-slot-2",
     "title": "Stop wasting endless hours manually updating customer data. Your CRM is outdated instantly.",
     "date": "October 22, 2026",

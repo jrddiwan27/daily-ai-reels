@@ -2302,5 +2302,79 @@
         "source": "Tavily (Real-Time)"
       }
     ]
+  },
+  {
+    "slot_id": 1,
+    "slot_name": "Morning Breakthrough (Slot 1)",
+    "timestamp_utc": "2026-10-22T19:24:12.192875+00:00",
+    "date_ist": "2026-10-23 9:00 AM IST (Scheduled for 03:30 UTC)",
+    "buffer_post_id": "6ada62da2f4faf5f79635620",
+    "channel_results": {
+      "instagram": "6ada62da2f4faf5f79635620",
+      "youtube": "6ada62db80b62e657501cb43",
+      "twitter": "6ada62dce374ecc982212fe9",
+      "public_video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1792697024/slot_1_daily_reel_opt.mp4"
+    },
+    "video_path": "out/slot_1_daily_reel_opt.mp4",
+    "items": [
+      {
+        "title": "17 Best Free AI Coding Agents in 2026 | Agentic.ai",
+        "name": "17 Best Free AI Coding Agents in 20",
+        "description": "Agenticness22/36\u00b7Domain Specialist  Orbi is an open-source, self-hostable AI coding agent that takes GitHub Issues from implementation through independent review, merge, and release. It can run against your own model end",
+        "url": "https://agentic.ai/best/free-coding-agents",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "deep-agents \u00b7 GitHub Topics \u00b7 GitHub",
+        "name": "deep-agents",
+        "description": "open-source autonomous-agents ai-agents ai-agent llms agentic-ai coding-agent self-improving-agent deep-agents workflow-automation-ai self-modifying-ai self-evolving-agent   Updated Sep 3, 2026  Python  agent-studio-star",
+        "url": "https://github.com/topics/deep-agents",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "ai-calling \u00b7 GitHub Topics \u00b7 GitHub",
+        "name": "ai-calling",
+        "description": "Updated May 12, 2026  Python  ### mylinehub / omnichannel-crm  Star  19  Open-Source Omnichannel CRM with Premium Autodialer Description: bring all features together\u2014voice, SMS, WhatsApp, email, and chat\u2014inside a single",
+        "url": "https://github.com/topics/ai-calling",
+        "source": "Tavily (Real-Time)"
+      }
+    ]
+  },
+  {
+    "slot_id": 2,
+    "slot_name": "Evening AI Toolkit (Slot 2)",
+    "timestamp_utc": "2026-10-22T19:28:11.706082+00:00",
+    "date_ist": "2026-10-23 7:00 PM IST (Scheduled for 13:30 UTC)",
+    "buffer_post_id": "6ada63ca80b62e6575020703",
+    "channel_results": {
+      "instagram": "6ada63ca80b62e6575020703",
+      "youtube": "6ada63cae374ecc982215fe7",
+      "twitter": "6ada63cb43a2d9ebee14d0a0",
+      "public_video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1792697264/slot_2_daily_reel_opt.mp4"
+    },
+    "video_path": "out/slot_2_daily_reel_opt.mp4",
+    "items": [
+      {
+        "title": "deep-agents \u00b7 GitHub Topics \u00b7 GitHub",
+        "name": "deep-agents",
+        "description": "open-source autonomous-agents ai-agents ai-agent llms agentic-ai coding-agent self-improving-agent deep-agents workflow-automation-ai self-modifying-ai self-evolving-agent   Updated Sep 3, 2026  Python  agent-studio-star",
+        "url": "https://github.com/topics/deep-agents",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "ai-calling \u00b7 GitHub Topics \u00b7 GitHub",
+        "name": "ai-calling",
+        "description": "Updated Sep 7, 2026  Python  ### Magraa / SIMVox-AI  Star  9  \ud83d\udcf1\u26a1 Autonomous, zero-VoIP AI voice calling system bridging Android SIM cards directly to Google Gemini LLM & Microsoft Edge Neural TTS over ADB. Real-time inbo",
+        "url": "https://github.com/topics/ai-calling",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "17 Best Free AI Coding Agents in 2026 | Agentic.ai",
+        "name": "17 Best Free AI Coding Agents in 20",
+        "description": "Agenticness22/36\u00b7Domain Specialist  Orbi is an open-source, self-hostable AI coding agent that takes GitHub Issues from implementation through independent review, merge, and release. It can run against your own model end",
+        "url": "https://agentic.ai/best/free-coding-agents",
+        "source": "Tavily (Real-Time)"
+      }
+    ]
   }
 ]
