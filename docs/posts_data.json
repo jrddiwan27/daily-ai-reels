@@ -1,5 +1,111 @@
 [
   {
+    "id": "2026-10-24-slot-2",
+    "title": "AI agents just generate text? They're useless without real-world action. Big bottleneck.",
+    "date": "October 24, 2026",
+    "date_slug": "2026-10-24",
+    "slot_id": 2,
+    "slot_name": "Evening AI Toolkit (Slot 2)",
+    "badge": "AI RADAR",
+    "cta_keyword": "WORKFLOW",
+    "video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1792783960/slot_2_daily_reel_opt.mp4",
+    "summary": "AI agents just generate text? They're useless without real-world action. Big bottleneck.",
+    "voiceover_script": "AI agents just generate text? They're useless without real-world action. Big bottleneck. Breakthroughs let agents interact, automate, execute. Real-world impact now unlocked. 92 Best AI Agents (2026) [Ranked & automates GitHub PRs, executes terminal commands, interacts with the digital world. Oracle AI Agent Studio for Industry accelerates business outcomes. Build powerful industry-specific AI agents. Deploy solutions rapidly. Introducing IBM Pipeline Automation for Z accelerates enterprise delivery. Scale AI-driven pipelines, automate complex workflows. Boost speed. Comment WORKFLOW below, and I will DM you the exact setup code right now.",
+    "items": [
+      {
+        "number": 1,
+        "name": "92 Best Ai Agents (2026) [Ranked &",
+        "url": "https://aitoolshaven.com/category/ai-agents",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "+ Installed Skill: GitHub PR Automation  ##### Extensible Tool Calling & Terminal Execution  Modern agents don't just generate text\u2014they interact with the physical and digital world. Through standardized registries like",
+        "command": "git clone https://aitoolshaven.com/category/ai-agents.git\ncd 92 best ai agents (2026) [ranked &\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 2,
+        "name": "Oracle Ai Agent Studio For Industry",
+        "url": "https://www.oracle.com/news/announcement/oracle-ai-agent-studio-for-industry-applications-helps-accelerate-business-outcomes-2026-10-21/",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "Oracle AI Agent Studio for Industry Applications Helps Accelerate Business Outcomes  # Oracle AI Agent Studio for Industry Applications Helps Accelerate Business Outcomes  New platform enables customers and partners to e",
+        "command": "git clone https://www.oracle.com/news/announcement/oracle-ai-agent-studio-for-industry-applications-helps-accelerate-business-outcomes-2026-10-21/.git\ncd oracle ai agent studio for industry\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 3,
+        "name": "Introducing Ibm Pipeline Automation",
+        "url": "https://www.ibm.com/new/announcements/introducing-ibm-pipeline-automation-for-z-accelerate-enterprise-delivery-with-scalable-automated-ai-driven-pipelines",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "Introducing IBM Pipeline Automation for Z: Accelerate enterprise delivery with scalable, automated AI-driven pipelines  # Introducing IBM Pipeline Automation for Z: Accelerate enterprise delivery with scalable, automated",
+        "command": "pip install introducing ibm pipeline automation",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      }
+    ],
+    "cta_text": "Want our studio to build custom autonomous AI employees for your workflow? Follow @jayant.digitalstudio and DM 'WORKFLOW'.",
+    "tags": [
+      "#ai",
+      "#automation",
+      "#tech",
+      "#softwareengineer",
+      "#workflow"
+    ]
+  },
+  {
+    "id": "2026-10-24-slot-1",
+    "title": "Your AI agents drown in data, context overload killing performance. Stop the chaos now",
+    "date": "October 24, 2026",
+    "date_slug": "2026-10-24",
+    "slot_id": 1,
+    "slot_name": "Morning Breakthrough (Slot 1)",
+    "badge": "AI RADAR",
+    "cta_keyword": "REPOS",
+    "video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1792783699/slot_1_daily_reel_opt.mp4",
+    "summary": "Your AI agents drown in data, context overload killing performance. Stop the chaos now!",
+    "voiceover_script": "Your AI agents drown in data, context overload killing performance. Stop the chaos now! New agent architectures now manage knowledge hierarchy. Unlock true intelligence. Qwen revolutionizes AI agents with tiered context. It structures knowledge hierarchically, preventing overload, empowering faster, smarter decisions. Boost agent efficiency now. Sales delivers an open-source CRM. Native AI agents integrate 37 tools, streamline sales tasks, and offer self-hosting. Boost revenue now. The AI coding conversation has move. Focus: agent setup, not models. GitHub Trending explodes with agent tooling. Master powerful agent orchestration. Comment REPOS below, and I will DM you the exact setup code right now.",
+    "items": [
+      {
+        "number": 1,
+        "name": "Qwen",
+        "url": "https://www.glukhov.org/tags/qwen",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "Tiered Context: A Knowledge Hierarchy for AI Agents \u00b7 Trending Open Source AI Projects on GitHub, October 2026 \u00b7 Hindsight for Hermes Agent: Self-Hosted Memory",
+        "command": "git clone https://www.glukhov.org/tags/qwen.git\ncd qwen\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 2,
+        "name": "Sales",
+        "url": "https://github.com/topics/sales",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "Updated Sep 29, 2026  Vue  ### relaticle / relaticle  Sponsor   Star  1.7k  Open-source CRM with native AI agent support. 37 MCP tools, REST API, self-hosted. Built with Laravel & Filament  tracking sales task laravel co",
+        "command": "git clone https://github.com/topics/sales.git\ncd sales\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 3,
+        "name": "The Ai Coding Conversation Has Move",
+        "url": "https://www.instagram.com/p/De1KN7llYZE",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "The AI coding conversation has moved from \"which model?\" to \"which agent setup?\" GitHub Trending today (19 Oct 2026) is full of agent tooling: opencode,",
+        "command": "git clone https://www.instagram.com/p/De1KN7llYZE.git\ncd the ai coding conversation has move\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      }
+    ],
+    "cta_text": "Want our studio to build custom autonomous AI employees for your workflow? Follow @jayant.digitalstudio and DM 'REPOS'.",
+    "tags": [
+      "#ai",
+      "#automation",
+      "#tech",
+      "#softwareengineer",
+      "#workflow"
+    ]
+  },
+  {
     "id": "2026-10-23-slot-2",
     "title": "Stuck manually coding complex AI workflows? Your development speed is about to explode.",
     "date": "October 23, 2026",

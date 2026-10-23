@@ -2376,5 +2376,79 @@
         "source": "Tavily (Real-Time)"
       }
     ]
+  },
+  {
+    "slot_id": 1,
+    "slot_name": "Morning Breakthrough (Slot 1)",
+    "timestamp_utc": "2026-10-23T19:28:52.873538+00:00",
+    "date_ist": "2026-10-24 9:00 AM IST (Scheduled for 03:30 UTC)",
+    "buffer_post_id": "6adbb5738b3d437ddc825e51",
+    "channel_results": {
+      "instagram": "6adbb5738b3d437ddc825e51",
+      "youtube": "6adbb574e4be8a4d8621c401",
+      "twitter": "6adbb574e4be8a4d8621c42d",
+      "public_video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1792783699/slot_1_daily_reel_opt.mp4"
+    },
+    "video_path": "out/slot_1_daily_reel_opt.mp4",
+    "items": [
+      {
+        "title": "Qwen - Rost Glukhov | AI Systems & Infrastructure",
+        "name": "Qwen",
+        "description": "Tiered Context: A Knowledge Hierarchy for AI Agents \u00b7 Trending Open Source AI Projects on GitHub, October 2026 \u00b7 Hindsight for Hermes Agent: Self-Hosted Memory",
+        "url": "https://www.glukhov.org/tags/qwen",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "sales \u00b7 GitHub Topics \u00b7 GitHub",
+        "name": "sales",
+        "description": "Updated Sep 29, 2026  Vue  ### relaticle / relaticle  Sponsor   Star  1.7k  Open-source CRM with native AI agent support. 37 MCP tools, REST API, self-hosted. Built with Laravel & Filament  tracking sales task laravel co",
+        "url": "https://github.com/topics/sales",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "The AI coding conversation has moved from \"which model? ...",
+        "name": "The AI coding conversation has move",
+        "description": "The AI coding conversation has moved from \"which model?\" to \"which agent setup?\" GitHub Trending today (19 Oct 2026) is full of agent tooling: opencode,",
+        "url": "https://www.instagram.com/p/De1KN7llYZE",
+        "source": "Tavily (Real-Time)"
+      }
+    ]
+  },
+  {
+    "slot_id": 2,
+    "slot_name": "Evening AI Toolkit (Slot 2)",
+    "timestamp_utc": "2026-10-23T19:33:10.362885+00:00",
+    "date_ist": "2026-10-24 7:00 PM IST (Scheduled for 13:30 UTC)",
+    "buffer_post_id": "6adbb6740b5343d070497acf",
+    "channel_results": {
+      "instagram": "6adbb6740b5343d070497acf",
+      "youtube": "6adbb6759acae620d815a1ec",
+      "twitter": "6adbb6763d5b27036b4c439f",
+      "public_video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1792783960/slot_2_daily_reel_opt.mp4"
+    },
+    "video_path": "out/slot_2_daily_reel_opt.mp4",
+    "items": [
+      {
+        "title": "92 Best AI Agents (2026) [Ranked & Tested]",
+        "name": "92 Best AI Agents (2026) [Ranked &",
+        "description": "+ Installed Skill: GitHub PR Automation  ##### Extensible Tool Calling & Terminal Execution  Modern agents don't just generate text\u2014they interact with the physical and digital world. Through standardized registries like",
+        "url": "https://aitoolshaven.com/category/ai-agents",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "Oracle AI Agent Studio for Industry Applications Helps Accelerate Business Outcomes",
+        "name": "Oracle AI Agent Studio for Industry",
+        "description": "Oracle AI Agent Studio for Industry Applications Helps Accelerate Business Outcomes  # Oracle AI Agent Studio for Industry Applications Helps Accelerate Business Outcomes  New platform enables customers and partners to e",
+        "url": "https://www.oracle.com/news/announcement/oracle-ai-agent-studio-for-industry-applications-helps-accelerate-business-outcomes-2026-10-21/",
+        "source": "Exa (24h Index)"
+      },
+      {
+        "title": "Introducing IBM Pipeline Automation for Z: Accelerate enterprise delivery with scalable, automated AI-driven pipelines",
+        "name": "Introducing IBM Pipeline Automation",
+        "description": "Introducing IBM Pipeline Automation for Z: Accelerate enterprise delivery with scalable, automated AI-driven pipelines  # Introducing IBM Pipeline Automation for Z: Accelerate enterprise delivery with scalable, automated",
+        "url": "https://www.ibm.com/new/announcements/introducing-ibm-pipeline-automation-for-z-accelerate-enterprise-delivery-with-scalable-automated-ai-driven-pipelines",
+        "source": "Exa (24h Index)"
+      }
+    ]
   }
 ]
