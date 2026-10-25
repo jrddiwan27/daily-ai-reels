@@ -2450,5 +2450,79 @@
         "source": "Exa (24h Index)"
       }
     ]
+  },
+  {
+    "slot_id": 1,
+    "slot_name": "Morning Breakthrough (Slot 1)",
+    "timestamp_utc": "2026-10-25T07:51:43.209532+00:00",
+    "date_ist": "2026-10-25 9:00 AM IST (Immediate / Makeup)",
+    "buffer_post_id": "6addb4f6bd33ce99c35f1ff5",
+    "channel_results": {
+      "instagram": "6addb4f6bd33ce99c35f1ff5",
+      "youtube": "6addb501bd33ce99c35f22d6",
+      "twitter": "6addb506e4be8a4d869800e8",
+      "public_video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1792914650/slot_1_daily_reel_opt.mp4"
+    },
+    "video_path": "out/slot_1_daily_reel_opt.mp4",
+    "items": [
+      {
+        "title": "deep-agents \u00b7 GitHub Topics \u00b7 GitHub",
+        "name": "deep-agents",
+        "description": "open-source autonomous-agents ai-agents ai-agent llms agentic-ai coding-agent self-improving-agent deep-agents workflow-automation-ai self-modifying-ai self-evolving-agent   Updated Sep 3, 2026  Python  agent-studio-star",
+        "url": "https://github.com/topics/deep-agents",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "RepoCloud | OpenHands",
+        "name": "RepoCloud | OpenHands",
+        "description": "With over 14,000 GitHub stars and 41 releases since its May 2026 launch, Prime Agent delivers a fundamentally different approach to AI coding agents by treating the agent's own operating environment as programmable state",
+        "url": "https://repocloud.io/details/OpenHands",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "17 AI Coding Tools Startups Should Try in 2026",
+        "name": "17 AI Coding Tools Startups Should",
+        "description": "GitHub Copilot has grown well beyond its original autocomplete role. It now works across the IDE, CLI, GitHub.com, and cloud development workflows, allowing developers to generate code, use agent mode, work through repos",
+        "url": "https://www.orbix.studio/blogs/best-ai-coding-tools",
+        "source": "Tavily (Real-Time)"
+      }
+    ]
+  },
+  {
+    "slot_id": 2,
+    "slot_name": "Evening AI Toolkit (Slot 2)",
+    "timestamp_utc": "2026-10-25T07:55:44.055832+00:00",
+    "date_ist": "2026-10-25 7:00 PM IST (Scheduled for 13:30 UTC)",
+    "buffer_post_id": "6addb5fee4be8a4d8698265f",
+    "channel_results": {
+      "instagram": "6addb5fee4be8a4d8698265f",
+      "youtube": "6addb5ff6887a2efc1f41aa8",
+      "twitter": "6addb5ffe4be8a4d869826b2",
+      "public_video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1792914916/slot_2_daily_reel_opt.mp4"
+    },
+    "video_path": "out/slot_2_daily_reel_opt.mp4",
+    "items": [
+      {
+        "title": "deep-agents \u00b7 GitHub Topics \u00b7 GitHub",
+        "name": "deep-agents",
+        "description": "open-source autonomous-agents ai-agents ai-agent llms agentic-ai coding-agent self-improving-agent deep-agents workflow-automation-ai self-modifying-ai self-evolving-agent   Updated Sep 3, 2026  Python  agent-studio-star",
+        "url": "https://github.com/topics/deep-agents",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "cold-calling \u00b7 GitHub Topics \u00b7 GitHub",
+        "name": "cold-calling",
+        "description": "Sponsor   Star  30  Autonomous AI call agent for GoHighLevel: calls leads, qualifies them, books appointments, and updates your CRM on autopilot. ~300 calls a day, unattended. Built in n8n with Vapi, Twilio & OpenAI.  au",
+        "url": "https://github.com/topics/cold-calling",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "Introducing IBM Pipeline Automation for Z: Accelerate enterprise delivery with scalable, automated AI-driven pipelines",
+        "name": "Introducing IBM Pipeline Automation",
+        "description": "Introducing IBM Pipeline Automation for Z: Accelerate enterprise delivery with scalable, automated AI-driven pipelines  # Introducing IBM Pipeline Automation for Z: Accelerate enterprise delivery with scalable, automated",
+        "url": "https://www.ibm.com/new/announcements/introducing-ibm-pipeline-automation-for-z-accelerate-enterprise-delivery-with-scalable-automated-ai-driven-pipelines",
+        "source": "Exa (24h Index)"
+      }
+    ]
   }
 ]

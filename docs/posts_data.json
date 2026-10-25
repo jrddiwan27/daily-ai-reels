@@ -1,5 +1,111 @@
 [
   {
+    "id": "2026-10-25-slot-2",
+    "title": "Devs, crushed by boilerplate, slow deployments, and complex AI agent workflows? Stop now",
+    "date": "October 25, 2026",
+    "date_slug": "2026-10-25",
+    "slot_id": 2,
+    "slot_name": "Evening AI Toolkit (Slot 2)",
+    "badge": "AI RADAR",
+    "cta_keyword": "WORKFLOW",
+    "video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1792914916/slot_2_daily_reel_opt.mp4",
+    "summary": "Devs, crushed by boilerplate, slow deployments, and complex AI agent workflows? Stop now!",
+    "voiceover_script": "Devs, crushed by boilerplate, slow deployments, and complex AI agent workflows? Stop now! Automate everything. Unleash autonomous agents. Build faster, smarter, instantly. deep-agents: Unleash self-evolving AI agents. They code, learn, and optimize workflows autonomously, accelerating your development cycles instantly. cold-calling: Autonomous AI agents call leads, qualify prospects, book appointments, update CRM on autopilot. Scale outreach fast. Introducing IBM Pipeline Automation: Accelerate enterprise delivery with scalable, automated, AI-driven pipelines. Boost throughput and efficiency fast. Comment WORKFLOW below, and I will DM you the exact setup code right now.",
+    "items": [
+      {
+        "number": 1,
+        "name": "Deep Agents",
+        "url": "https://github.com/topics/deep-agents",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "open-source autonomous-agents ai-agents ai-agent llms agentic-ai coding-agent self-improving-agent deep-agents workflow-automation-ai self-modifying-ai self-evolving-agent   Updated Sep 3, 2026  Python  agent-studio-star",
+        "command": "pip install deep-agents",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 2,
+        "name": "Cold Calling",
+        "url": "https://github.com/topics/cold-calling",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "Sponsor   Star  30  Autonomous AI call agent for GoHighLevel: calls leads, qualifies them, books appointments, and updates your CRM on autopilot. ~300 calls a day, unattended. Built in n8n with Vapi, Twilio & OpenAI.  au",
+        "command": "git clone https://github.com/topics/cold-calling.git\ncd cold-calling\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 3,
+        "name": "Introducing Ibm Pipeline Automation",
+        "url": "https://www.ibm.com/new/announcements/introducing-ibm-pipeline-automation-for-z-accelerate-enterprise-delivery-with-scalable-automated-ai-driven-pipelines",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "Introducing IBM Pipeline Automation for Z: Accelerate enterprise delivery with scalable, automated AI-driven pipelines  # Introducing IBM Pipeline Automation for Z: Accelerate enterprise delivery with scalable, automated",
+        "command": "pip install introducing ibm pipeline automation",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      }
+    ],
+    "cta_text": "Want our studio to build custom autonomous AI employees for your workflow? Follow @jayant.digitalstudio and DM 'WORKFLOW'.",
+    "tags": [
+      "#ai",
+      "#automation",
+      "#tech",
+      "#softwareengineer",
+      "#workflow"
+    ]
+  },
+  {
+    "id": "2026-10-25-slot-1",
+    "title": "AI agents promise autonomy. They still fail. Your code bottlenecks are crushing productivity.",
+    "date": "October 25, 2026",
+    "date_slug": "2026-10-25",
+    "slot_id": 1,
+    "slot_name": "Morning Breakthrough (Slot 1)",
+    "badge": "AI RADAR",
+    "cta_keyword": "REPOS",
+    "video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1792914650/slot_1_daily_reel_opt.mp4",
+    "summary": "AI agents promise autonomy. They still fail. Your code bottlenecks are crushing productivity.",
+    "voiceover_script": "AI agents promise autonomy. They still fail. Your code bottlenecks are crushing productivity. Not anymore. Breakthrough tools unlock true self-improving AI. Code smarter, faster. deep-agents builds self-evolving AI. It automates workflows, modifies its own code, and self-improves. Revolutionize your coding automation. RepoCloud | OpenHands redefines AI agents. It treats their environment as programmable state, boosting control and adaptability. Unleash power. 17 AI Coding Tools Startups Should reveals Copilot's power. It generates code, uses agent mode, navigates repos across your dev workflow. Comment REPOS below, and I will DM you the exact setup code right now.",
+    "items": [
+      {
+        "number": 1,
+        "name": "Deep Agents",
+        "url": "https://github.com/topics/deep-agents",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "open-source autonomous-agents ai-agents ai-agent llms agentic-ai coding-agent self-improving-agent deep-agents workflow-automation-ai self-modifying-ai self-evolving-agent   Updated Sep 3, 2026  Python  agent-studio-star",
+        "command": "pip install deep-agents",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 2,
+        "name": "Repocloud | Openhands",
+        "url": "https://repocloud.io/details/OpenHands",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "With over 14,000 GitHub stars and 41 releases since its May 2026 launch, Prime Agent delivers a fundamentally different approach to AI coding agents by treating the agent's own operating environment as programmable state",
+        "command": "git clone https://repocloud.io/details/OpenHands.git\ncd repocloud | openhands\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 3,
+        "name": "17 Ai Coding Tools Startups Should",
+        "url": "https://www.orbix.studio/blogs/best-ai-coding-tools",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "GitHub Copilot has grown well beyond its original autocomplete role. It now works across the IDE, CLI, GitHub.com, and cloud development workflows, allowing developers to generate code, use agent mode, work through repos",
+        "command": "git clone https://www.orbix.studio/blogs/best-ai-coding-tools.git\ncd 17 ai coding tools startups should\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      }
+    ],
+    "cta_text": "Want our studio to build custom autonomous AI employees for your workflow? Follow @jayant.digitalstudio and DM 'REPOS'.",
+    "tags": [
+      "#ai",
+      "#automation",
+      "#tech",
+      "#softwareengineer",
+      "#workflow"
+    ]
+  },
+  {
     "id": "2026-10-24-slot-2",
     "title": "AI agents just generate text? They're useless without real-world action. Big bottleneck.",
     "date": "October 24, 2026",
