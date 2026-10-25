@@ -2524,5 +2524,79 @@
         "source": "Exa (24h Index)"
       }
     ]
+  },
+  {
+    "slot_id": 1,
+    "slot_name": "Morning Breakthrough (Slot 1)",
+    "timestamp_utc": "2026-10-25T18:35:39.324577+00:00",
+    "date_ist": "2026-10-26 9:00 AM IST (Scheduled for 03:30 UTC)",
+    "buffer_post_id": "6ade4bf90b5343d070e7710c",
+    "channel_results": {
+      "instagram": "6ade4bf90b5343d070e7710c",
+      "youtube": "6ade4bfa6887a2efc11c3de6",
+      "twitter": "6ade4bfb0b5343d070e7716b",
+      "public_video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1792953307/slot_1_daily_reel_opt.mp4"
+    },
+    "video_path": "out/slot_1_daily_reel_opt.mp4",
+    "items": [
+      {
+        "title": "Local AI toolkits dominate the week\u2019s star surge \u00b7 Early Signal weekly",
+        "name": "Local AI toolkits dominate the week",
+        "description": "Open-source AI tools go local, debloat, and reverse-engineer \u00b7 Early Signal weekly  The week in AI launches \u00b7 October 25, 2026  # Open-source AI tools go local, debloat, and reverse-engineer  Developers gravitated toward",
+        "url": "https://earlysignal.news/weekly/2026-w43",
+        "source": "Exa (24h Index)"
+      },
+      {
+        "title": "Open Source Radar \u00b7 2026-10-24: Skill files become deliverables with a spec",
+        "name": "Open Source Radar",
+        "description": "Open Source Radar \u00b7 2026-10-24: Skill files become deliverables with a spec  \u5f00\u6e90\u96f7\u8fbe \u00b7 2026-10-24  # Open Source Radar \u00b7 2026-10-24: Skill files become deliverables with a spec  Each day I pick five projects that are rising",
+        "url": "https://widechaos.cn/blog/oss-radar-2026-10-24-en",
+        "source": "Exa (24h Index)"
+      },
+      {
+        "title": "GenAICode Lets Developers Embed Claude in Any Application",
+        "name": "GenAICode Lets Developers Embed Cla",
+        "description": "GenAICode Lets Developers Embed Claude in Any Application  # GenAICode Lets Developers Embed Claude in Any Application  Anmol  Oct 25, 2026 3:50 AM  #### \ud83d\udca1 TL;DR  - GenAICode is now an open-source wrapper library that em",
+        "url": "https://emergent.sh/news/genaicode-lets-developers-embed-claude-any",
+        "source": "Exa (24h Index)"
+      }
+    ]
+  },
+  {
+    "slot_id": 2,
+    "slot_name": "Evening AI Toolkit (Slot 2)",
+    "timestamp_utc": "2026-10-25T18:39:49.508646+00:00",
+    "date_ist": "2026-10-26 7:00 PM IST (Scheduled for 13:30 UTC)",
+    "buffer_post_id": "6ade4cf33d5b27036be8650b",
+    "channel_results": {
+      "instagram": "6ade4cf33d5b27036be8650b",
+      "youtube": "6ade4cf4bd33ce99c386a983",
+      "twitter": "6ade4cf50b5343d070e7a038",
+      "public_video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1792953557/slot_2_daily_reel_opt.mp4"
+    },
+    "video_path": "out/slot_2_daily_reel_opt.mp4",
+    "items": [
+      {
+        "title": "92 Best AI Agents (2026) [Ranked & Tested]",
+        "name": "92 Best AI Agents (2026) [Ranked &",
+        "description": "+ Installed Skill: GitHub PR Automation  ##### Extensible Tool Calling & Terminal Execution  Modern agents don't just generate text\u2014they interact with the physical and digital world. Through standardized registries like",
+        "url": "https://aitoolshaven.com/category/ai-agents",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "sub-agents \u00b7 GitHub Topics \u00b7 GitHub",
+        "name": "sub-agents",
+        "description": "### ErwanLorteau / BMAD\\_Openclaw  Star  309  Bridging the BMad Method to OpenClaw \u2014 Structured AI-driven development workflows.  software-development ai-agents ai-orchestration bmad-method sub-agents openclaw   Updated",
+        "url": "https://github.com/topics/sub-agents",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "BlockRun.ai \u00b7 GitHub",
+        "name": "BlockRun.ai",
+        "description": "Python   22  MIT   8  0  0  Updated Oct 13, 2026  ClawRouter  Public     The agent-native LLM router for autonomous agents. Every frontier model behind one wallet, <1ms local routing, USDC payments on Base & Solana via x",
+        "url": "https://github.com/BlockRunAI",
+        "source": "Tavily (Real-Time)"
+      }
+    ]
   }
 ]
