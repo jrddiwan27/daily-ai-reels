@@ -2598,5 +2598,79 @@
         "source": "Tavily (Real-Time)"
       }
     ]
+  },
+  {
+    "slot_id": 1,
+    "slot_name": "Morning Breakthrough (Slot 1)",
+    "timestamp_utc": "2026-10-26T19:08:42.951251+00:00",
+    "date_ist": "2026-10-27 9:00 AM IST (Scheduled for 03:30 UTC)",
+    "buffer_post_id": "6adfa539188ed7b8726b864a",
+    "channel_results": {
+      "instagram": "6adfa539188ed7b8726b864a",
+      "youtube": "6adfa539fbfb299b1ae975ad",
+      "twitter": "6adfa53ae0ae5134fabb2993",
+      "public_video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1793041688/slot_1_daily_reel_opt.mp4"
+    },
+    "video_path": "out/slot_1_daily_reel_opt.mp4",
+    "items": [
+      {
+        "title": "Codex Alternatives (Oct 2026): 7 AI Agents Compared",
+        "name": "Codex Alternatives (Oct 2026): 7 AI",
+        "description": "4. OpenCode. OpenCode is \u201cThe open source AI coding agent\u201d, MIT licensed, in the terminal and as a desktop app in beta, with release v1.19.4 on 22 Oct 2026. Its site says you can \u201cconnect any model from any provider, inc",
+        "url": "https://munderdiffl.in/blog/codex-alternatives",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "computer-agent \u00b7 GitHub Topics \u00b7 GitHub",
+        "name": "computer-agent",
+        "description": "### pradipNP / agent-racchha  Star  0  Open-source Windows computer-use AI agent built with Python, FastAPI, Electron & React. Learn by building real AI agents, desktop automation, UI perception, planning, verification a",
+        "url": "https://github.com/topics/computer-agent",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "Building Your First AI Agent in Python with the OpenAI Agents SDK - KDnuggets",
+        "name": "Building Your First AI Agent in Pyt",
+        "description": "| Top Posts |       5 Docker Containers for Devs  5 Best GitHub Repositories for AI Agent Skills  7 Open-Source AI Tools That Can Replace Paid Subscriptions  5 Free AI Coding Agents You Should Try in 2026  The Rise of AI",
+        "url": "https://www.kdnuggets.com/building-your-first-ai-agent-in-python-with-the-openai-agents-sdk",
+        "source": "Tavily (Real-Time)"
+      }
+    ]
+  },
+  {
+    "slot_id": 2,
+    "slot_name": "Evening AI Toolkit (Slot 2)",
+    "timestamp_utc": "2026-10-26T19:13:22.488697+00:00",
+    "date_ist": "2026-10-27 7:00 PM IST (Scheduled for 13:30 UTC)",
+    "buffer_post_id": "6adfa6506610bf7130cb71af",
+    "channel_results": {
+      "instagram": "6adfa6506610bf7130cb71af",
+      "youtube": "6adfa651e0ae5134fabbb6f5",
+      "twitter": "6adfa652e0ae5134fabbb7dd",
+      "public_video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1793041969/slot_2_daily_reel_opt.mp4"
+    },
+    "video_path": "out/slot_2_daily_reel_opt.mp4",
+    "items": [
+      {
+        "title": "Are Open Source AI Coding Agents Better than Claude and Copilot? \u00b7 community \u00b7 Discussion #211303 \u00b7 GitHub",
+        "name": "Are Open Source AI Coding Agents Be",
+        "description": "| Yes, the gap has closed significantly, and in some workflows, open-source AI coding agents actually match or outperform proprietary models, primarily due to their flexibility and control.  Here is a quick breakdown of",
+        "url": "https://github.com/orgs/community/discussions/211303",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "Introducing Oracle AI Database Agent Engine\u00a0 | database",
+        "name": "Introducing Oracle AI Database Agen",
+        "description": "Introducing Oracle AI Database Agent Engine | database  # Introducing Oracle AI Database Agent Engine    October 26, 2026 3 minute read   Tirthankar Lahiri  Senior Vice President, Mission-Critical Data and AI Engines  ##",
+        "url": "https://blogs.oracle.com/database/introducing-oracle-ai-database-agent-engine",
+        "source": "Exa (24h Index)"
+      },
+      {
+        "title": "IBM Integration Intelligence Hub gives AI the context to act, not just access",
+        "name": "IBM Integration Intelligence Hub gi",
+        "description": "IBM Integration Intelligence Hub gives AI the context to act, not just access   # IBM Integration Intelligence Hub gives AI the context to act, not just access   IBM Integration Intelligence Hub turns enterprise integrat",
+        "url": "https://www.ibm.com/new/announcements/ibm-integration-intelligence-hub-gives-ai-the-context-to-act-not-just-access",
+        "source": "Exa (24h Index)"
+      }
+    ]
   }
 ]

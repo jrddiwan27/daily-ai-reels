@@ -1,5 +1,111 @@
 [
   {
+    "id": "2026-10-27-slot-2",
+    "title": "Struggling with slow, disconnected AI workflows? Your build process is grinding to a halt.",
+    "date": "October 27, 2026",
+    "date_slug": "2026-10-27",
+    "slot_id": 2,
+    "slot_name": "Evening AI Toolkit (Slot 2)",
+    "badge": "AI RADAR",
+    "cta_keyword": "WORKFLOW",
+    "video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1793041969/slot_2_daily_reel_opt.mp4",
+    "summary": "Struggling with slow, disconnected AI workflows? Your build process is grinding to a halt.",
+    "voiceover_script": "Struggling with slow, disconnected AI workflows? Your build process is grinding to a halt. Forget the old ways. New AI tools are exploding your productivity. Are Open Source AI Coding Agents Be now matching proprietary models? They absolutely close the gap, outperform, and offer unmatched flexibility and control. Introducing Oracle AI Database Agen Engine. It revolutionizes data interaction, automates complex queries, and optimizes performance with intelligent AI agents. IBM Integration Intelligence Hub gi AI crucial context. It transforms enterprise integration, enabling smarter actions beyond mere data access. Comment WORKFLOW below, and I will DM you the exact setup code right now.",
+    "items": [
+      {
+        "number": 1,
+        "name": "Are Open Source Ai Coding Agents Be",
+        "url": "https://github.com/orgs/community/discussions/211303",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "| Yes, the gap has closed significantly, and in some workflows, open-source AI coding agents actually match or outperform proprietary models, primarily due to their flexibility and control.  Here is a quick breakdown of",
+        "command": "git clone https://github.com/orgs/community/discussions/211303.git\ncd are open source ai coding agents be\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 2,
+        "name": "Introducing Oracle Ai Database Agen",
+        "url": "https://blogs.oracle.com/database/introducing-oracle-ai-database-agent-engine",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "Introducing Oracle AI Database Agent Engine | database  # Introducing Oracle AI Database Agent Engine    October 26, 2026 3 minute read   Tirthankar Lahiri  Senior Vice President, Mission-Critical Data and AI Engines  ##",
+        "command": "git clone https://blogs.oracle.com/database/introducing-oracle-ai-database-agent-engine.git\ncd introducing oracle ai database agen\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 3,
+        "name": "Ibm Integration Intelligence Hub Gi",
+        "url": "https://www.ibm.com/new/announcements/ibm-integration-intelligence-hub-gives-ai-the-context-to-act-not-just-access",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "IBM Integration Intelligence Hub gives AI the context to act, not just access   # IBM Integration Intelligence Hub gives AI the context to act, not just access   IBM Integration Intelligence Hub turns enterprise integrat",
+        "command": "git clone https://www.ibm.com/new/announcements/ibm-integration-intelligence-hub-gives-ai-the-context-to-act-not-just-access.git\ncd ibm integration intelligence hub gi\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      }
+    ],
+    "cta_text": "Want our studio to build custom autonomous AI employees for your workflow? Follow @jayant.digitalstudio and DM 'WORKFLOW'.",
+    "tags": [
+      "#ai",
+      "#automation",
+      "#tech",
+      "#softwareengineer",
+      "#workflow"
+    ]
+  },
+  {
+    "id": "2026-10-27-slot-1",
+    "title": "Still coding manually? Your productivity is stuck in 2023. This severely cripples your output.",
+    "date": "October 27, 2026",
+    "date_slug": "2026-10-27",
+    "slot_id": 1,
+    "slot_name": "Morning Breakthrough (Slot 1)",
+    "badge": "AI RADAR",
+    "cta_keyword": "REPOS",
+    "video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1793041688/slot_1_daily_reel_opt.mp4",
+    "summary": "Still coding manually? Your productivity is stuck in 2023. This severely cripples your output.",
+    "voiceover_script": "Still coding manually? Your productivity is stuck in 2023. This severely cripples your output. Forget old methods. AI agents automate tasks, write code, supercharge development. Codex Alternatives (Oct 2026): 7 AI features OpenCode. Open-source AI agent connects any model, writes code, automates tasks instantly. computer-agent (agent-racchha) is open-source. It automates Windows desktop. Perceives UI, plans actions, verifies outcomes. Builds real agents. Building Your First AI Agent in Pyt reveals top GitHub repos. Master AI agent skills. Build intelligent agents fast, automate workflows. Comment REPOS below, and I will DM you the exact setup code right now.",
+    "items": [
+      {
+        "number": 1,
+        "name": "Codex Alternatives (Oct 2026): 7 Ai",
+        "url": "https://munderdiffl.in/blog/codex-alternatives",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "4. OpenCode. OpenCode is \u201cThe open source AI coding agent\u201d, MIT licensed, in the terminal and as a desktop app in beta, with release v1.19.4 on 22 Oct 2026. Its site says you can \u201cconnect any model from any provider, inc",
+        "command": "git clone https://munderdiffl.in/blog/codex-alternatives.git\ncd codex alternatives (oct 2026): 7 ai\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 2,
+        "name": "Computer Agent",
+        "url": "https://github.com/topics/computer-agent",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "### pradipNP / agent-racchha  Star  0  Open-source Windows computer-use AI agent built with Python, FastAPI, Electron & React. Learn by building real AI agents, desktop automation, UI perception, planning, verification a",
+        "command": "pip install computer-agent",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 3,
+        "name": "Building Your First Ai Agent In Pyt",
+        "url": "https://www.kdnuggets.com/building-your-first-ai-agent-in-python-with-the-openai-agents-sdk",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "| Top Posts |       5 Docker Containers for Devs  5 Best GitHub Repositories for AI Agent Skills  7 Open-Source AI Tools That Can Replace Paid Subscriptions  5 Free AI Coding Agents You Should Try in 2026  The Rise of AI",
+        "command": "docker run -d -p 8080:8080 building your first ai agent in pyt",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      }
+    ],
+    "cta_text": "Want our studio to build custom autonomous AI employees for your workflow? Follow @jayant.digitalstudio and DM 'REPOS'.",
+    "tags": [
+      "#ai",
+      "#automation",
+      "#tech",
+      "#softwareengineer",
+      "#workflow"
+    ]
+  },
+  {
     "id": "2026-10-26-slot-2",
     "title": "AI agents just chat? No action? You're missing out on insane automation power.",
     "date": "October 26, 2026",
