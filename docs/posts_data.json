@@ -1,5 +1,111 @@
 [
   {
+    "id": "2026-10-28-slot-2",
+    "title": "Agent development is chaos. Debugging, scaling, deployment headaches crush your progress daily.",
+    "date": "October 28, 2026",
+    "date_slug": "2026-10-28",
+    "slot_id": 2,
+    "slot_name": "Evening AI Toolkit (Slot 2)",
+    "badge": "AI RADAR",
+    "cta_keyword": "WORKFLOW",
+    "video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1793132357/slot_2_daily_reel_opt.mp4",
+    "summary": "Agent development is chaos. Debugging, scaling, deployment headaches crush your progress daily.",
+    "voiceover_script": "Agent development is chaos. Debugging, scaling, deployment headaches crush your progress daily. Stop the struggle. New agent tools just dropped, revolutionizing your workflows now. AI Agents News \u2014 Week of October 27: GitHub Agentic Workflows hardens agent platforms with six releases. Boost stability, deploy faster. desktop-agent: Orkas delivers a local-first AI team to your desktop. Commander coordinates 16 specialist agents. Automate goals fast. ai-agent-orchestration: This control plane manages multi-agent systems. Automate complex workflows, ensure governance, integrate human-in-the-loop oversight. Comment WORKFLOW below, and I will DM you the exact setup code right now.",
+    "items": [
+      {
+        "number": 1,
+        "name": "Ai Agents News \u2014 Week Of October 27",
+        "url": "https://aiagentstore.ai/ai-agent-news/this-week",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "AI Agent Store Logo  AI Agent Store  # AI Agents News \u2014 Week of October 27, 2026  Tuesday, October 27, 2026  ### GitHub Agentic Workflows hardens agent platform with six releases  What changed: GitHub published a weekly",
+        "command": "git clone https://aiagentstore.ai/ai-agent-news/this-week.git\ncd ai agents news \u2014 week of october 27\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 2,
+        "name": "Desktop Agent",
+        "url": "https://github.com/topics/desktop-agent?o=desc&s=updated",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "Updated Oct 27, 2026  C  ### Orkas-AI / Orkas  Star  2.2k  Orkas is an open-source (MIT), local-first AI team for your desktop: a Commander turns your goal into to-dos and coordinates 16 built-in specialist agents plus C",
+        "command": "git clone https://github.com/topics/desktop-agent?o=desc&s=updated.git\ncd desktop-agent\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 3,
+        "name": "Ai Agent Orchestration",
+        "url": "https://github.com/topics/ai-agent-orchestration",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "mcp control-plane multi-agent-systems workflow-automation autonomous-agents human-in-the-loop ai-agents fastapi agent-observability agent-governance agent-infrastructure ai-agent-orchestration   Updated Sep 30, 2026  Pyt",
+        "command": "git clone https://github.com/topics/ai-agent-orchestration.git\ncd ai-agent-orchestration\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      }
+    ],
+    "cta_text": "Want our studio to build custom autonomous AI employees for your workflow? Follow @jayant.digitalstudio and DM 'WORKFLOW'.",
+    "tags": [
+      "#ai",
+      "#automation",
+      "#tech",
+      "#softwareengineer",
+      "#workflow"
+    ]
+  },
+  {
+    "id": "2026-10-28-slot-1",
+    "title": "Struggling to manage your sprawling AI agent ecosystem? Overwhelmed by new models daily?",
+    "date": "October 28, 2026",
+    "date_slug": "2026-10-28",
+    "slot_id": 1,
+    "slot_name": "Morning Breakthrough (Slot 1)",
+    "badge": "AI RADAR",
+    "cta_keyword": "REPOS",
+    "video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1793132071/slot_1_daily_reel_opt.mp4",
+    "summary": "Struggling to manage your sprawling AI agent ecosystem? Overwhelmed by new models daily?",
+    "voiceover_script": "Struggling to manage your sprawling AI agent ecosystem? Overwhelmed by new models daily? Discover the ultimate AI tool stack that cuts through the noise instantly. 10 Open-Source AI Agent Tools Trend: Streamlines agent orchestration. Manages multiple agents effortlessly. Understands binaries. Boosts your AI workflow. Latest in AI: New Models, Projects: AstrBot integrates platforms, LLMs, plugins. Develops AI agents fast. Replaces openclaw. Accelerates your project builds. hotin: what's hot in AI today, rank: Tracks trending open-source projects. Ranks daily AI innovations. Identifies top repos. Keeps your tech stack cutting-edge. Comment REPOS below, and I will DM you the exact setup code right now.",
+    "items": [
+      {
+        "number": 1,
+        "name": "10 Open Source Ai Agent Tools Trend",
+        "url": "https://medium.com/@info.booststash/10-open-source-ai-agent-tools-trending-on-github-right-now-what-each-one-does-and-where-it-breaks-028e4ff3bb65",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "If you want a place to start, Orca fits anyone already juggling several agents, Cloudflare\u2019s skill suits a repo you maintain, and REA is worth a look if you have a legitimate need to understand a binary. Everything else",
+        "command": "git clone https://medium.com/@info.booststash/10-open-source-ai-agent-tools-trending-on-github-right-now-what-each-one-does-and-where-it-breaks-028e4ff3bb65.git\ncd 10 open-source ai agent tools trend\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 2,
+        "name": "Latest In Ai: New Models, Projects",
+        "url": "https://olud.ai/latest.html",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "\u25b2 +446\u2605 61k  AstrBot  by AstrBotDevs  AI Agent Assistant & development framework that integrates lots of IM platforms, LLMs, plugins and AI feature, and can be your openclaw alternative. \u2728  \u25b2 +390\u2605 44k  ## \ud83d\ude80 Trending new",
+        "command": "git clone https://olud.ai/latest.html.git\ncd latest in ai: new models, projects\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 3,
+        "name": "Hotin: What'S Hot In Ai Today, Rank",
+        "url": "https://hotin.ai",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "trending  php/php-src - Trending Open-Source Github Projects: php-src, Impeccable, claude-mem, SPACE, DeepInfer & Filee #303  +1.2k in 7d1.1k pts  nandhakishorm/laya - GitHub Trending monthly #11\uff082026.09\uff09  \u2605 jph00 +1 ins",
+        "command": "git clone https://hotin.ai.git\ncd hotin: what's hot in ai today, rank\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      }
+    ],
+    "cta_text": "Want our studio to build custom autonomous AI employees for your workflow? Follow @jayant.digitalstudio and DM 'REPOS'.",
+    "tags": [
+      "#ai",
+      "#automation",
+      "#tech",
+      "#softwareengineer",
+      "#workflow"
+    ]
+  },
+  {
     "id": "2026-10-27-slot-2",
     "title": "Struggling with slow, disconnected AI workflows? Your build process is grinding to a halt.",
     "date": "October 27, 2026",

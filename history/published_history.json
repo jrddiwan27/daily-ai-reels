@@ -2672,5 +2672,79 @@
         "source": "Exa (24h Index)"
       }
     ]
+  },
+  {
+    "slot_id": 1,
+    "slot_name": "Morning Breakthrough (Slot 1)",
+    "timestamp_utc": "2026-10-27T20:15:05.454084+00:00",
+    "date_ist": "2026-10-28 9:00 AM IST (Scheduled for 03:30 UTC)",
+    "buffer_post_id": "6ae106472d6ce6e7b6e16330",
+    "channel_results": {
+      "instagram": "6ae106472d6ce6e7b6e16330",
+      "youtube": "6ae106482d6ce6e7b6e164f4",
+      "twitter": "6ae106490add83c2778fcb84",
+      "public_video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1793132071/slot_1_daily_reel_opt.mp4"
+    },
+    "video_path": "out/slot_1_daily_reel_opt.mp4",
+    "items": [
+      {
+        "title": "10 Open-Source AI Agent Tools Trending on GitHub Right Now: What Each One Does and Where It Breaks",
+        "name": "10 Open-Source AI Agent Tools Trend",
+        "description": "If you want a place to start, Orca fits anyone already juggling several agents, Cloudflare\u2019s skill suits a repo you maintain, and REA is worth a look if you have a legitimate need to understand a binary. Everything else",
+        "url": "https://medium.com/@info.booststash/10-open-source-ai-agent-tools-trending-on-github-right-now-what-each-one-does-and-where-it-breaks-028e4ff3bb65",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "Latest in AI: New Models, Projects & Releases (2026) | olud.ai",
+        "name": "Latest in AI: New Models, Projects",
+        "description": "\u25b2 +446\u2605 61k  AstrBot  by AstrBotDevs  AI Agent Assistant & development framework that integrates lots of IM platforms, LLMs, plugins and AI feature, and can be your openclaw alternative. \u2728  \u25b2 +390\u2605 44k  ## \ud83d\ude80 Trending new",
+        "url": "https://olud.ai/latest.html",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "hotin: what's hot in AI today, ranked with receipts",
+        "name": "hotin: what's hot in AI today, rank",
+        "description": "trending  php/php-src - Trending Open-Source Github Projects: php-src, Impeccable, claude-mem, SPACE, DeepInfer & Filee #303  +1.2k in 7d1.1k pts  nandhakishorm/laya - GitHub Trending monthly #11\uff082026.09\uff09  \u2605 jph00 +1 ins",
+        "url": "https://hotin.ai",
+        "source": "Tavily (Real-Time)"
+      }
+    ]
+  },
+  {
+    "slot_id": 2,
+    "slot_name": "Evening AI Toolkit (Slot 2)",
+    "timestamp_utc": "2026-10-27T20:19:48.391710+00:00",
+    "date_ist": "2026-10-28 7:00 PM IST (Scheduled for 13:30 UTC)",
+    "buffer_post_id": "6ae10762bdb7bfdd3424a4f3",
+    "channel_results": {
+      "instagram": "6ae10762bdb7bfdd3424a4f3",
+      "youtube": "6ae10763dec875ec958937ac",
+      "twitter": "6ae10764dec875ec958937ed",
+      "public_video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1793132357/slot_2_daily_reel_opt.mp4"
+    },
+    "video_path": "out/slot_2_daily_reel_opt.mp4",
+    "items": [
+      {
+        "title": "AI Agents News \u2014 Week of October 27, 2026 (Daily Updates)",
+        "name": "AI Agents News \u2014 Week of October 27",
+        "description": "AI Agent Store Logo  AI Agent Store  # AI Agents News \u2014 Week of October 27, 2026  Tuesday, October 27, 2026  ### GitHub Agentic Workflows hardens agent platform with six releases  What changed: GitHub published a weekly",
+        "url": "https://aiagentstore.ai/ai-agent-news/this-week",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "desktop-agent \u00b7 GitHub Topics \u00b7 GitHub",
+        "name": "desktop-agent",
+        "description": "Updated Oct 27, 2026  C  ### Orkas-AI / Orkas  Star  2.2k  Orkas is an open-source (MIT), local-first AI team for your desktop: a Commander turns your goal into to-dos and coordinates 16 built-in specialist agents plus C",
+        "url": "https://github.com/topics/desktop-agent?o=desc&s=updated",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "ai-agent-orchestration \u00b7 GitHub Topics \u00b7 GitHub",
+        "name": "ai-agent-orchestration",
+        "description": "mcp control-plane multi-agent-systems workflow-automation autonomous-agents human-in-the-loop ai-agents fastapi agent-observability agent-governance agent-infrastructure ai-agent-orchestration   Updated Sep 30, 2026  Pyt",
+        "url": "https://github.com/topics/ai-agent-orchestration",
+        "source": "Tavily (Real-Time)"
+      }
+    ]
   }
 ]
