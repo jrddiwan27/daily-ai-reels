@@ -2746,5 +2746,79 @@
         "source": "Tavily (Real-Time)"
       }
     ]
+  },
+  {
+    "slot_id": 1,
+    "slot_name": "Morning Breakthrough (Slot 1)",
+    "timestamp_utc": "2026-10-28T20:30:15.123608+00:00",
+    "date_ist": "2026-10-29 9:00 AM IST (Scheduled for 03:30 UTC)",
+    "buffer_post_id": "6ae25b533e779512a885b866",
+    "channel_results": {
+      "instagram": "6ae25b533e779512a885b866",
+      "youtube": "6ae25b55a5c5e21e3b070e13",
+      "twitter": "6ae25b5644c308f29b547e14",
+      "public_video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1793219379/slot_1_daily_reel_opt.mp4"
+    },
+    "video_path": "out/slot_1_daily_reel_opt.mp4",
+    "items": [
+      {
+        "title": "Cognitum One Unveils MetaHarness, the Open-Source Factory for Branded, Governed AI Agent Harnesses, in Conjunction with GitHub Universe 2026 | Morningstar",
+        "name": "Cognitum One Unveils MetaHarness, t",
+        "description": "MetaHarness comes from the developer behind some of the most widely used open-source AI infrastructure on GitHub. Cohen's ruvnet projects, including RuView\u2122, Ruflo\u2122 and RuVector\u2122, have passed 100 million downloads across",
+        "url": "https://www.morningstar.com/news/accesswire/1242525msn/cognitum-one-unveils-metaharness-the-open-source-factory-for-branded-governed-ai-agent-harnesses-in-conjunction-with-github-universe-2026",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "ai-dev-tools \u00b7 GitHub Topics \u00b7 GitHub",
+        "name": "ai-dev-tools",
+        "description": "### tiennm99 / awesome-ai-dev-tools  Star  4  Daily-refreshed ranking of open-source AI developer tools \u2014 coding agents, ADEs, AI editors and code-review tools \u2014 by GitHub stars, with 7-day deltas, star-history charts an",
+        "url": "https://github.com/topics/ai-dev-tools",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "Introducing Replica, an open-source AI prototyping tool - GitHub Changelog",
+        "name": "Introducing Replica, an open-source",
+        "description": "Introducing Replica, an open-source AI prototyping tool - GitHub Changelog   October 28, 2026 \u2022 2 minute read   # Introducing Replica, an open-source AI prototyping tool     We\u2019re open sourcing Replica, an AI-powered pro",
+        "url": "https://github.blog/changelog/2026-10-28-introducing-replica-an-open-source-ai-prototyping-tool/",
+        "source": "Exa (24h Index)"
+      }
+    ]
+  },
+  {
+    "slot_id": 2,
+    "slot_name": "Evening AI Toolkit (Slot 2)",
+    "timestamp_utc": "2026-10-28T20:35:43.422358+00:00",
+    "date_ist": "2026-10-29 7:00 PM IST (Scheduled for 13:30 UTC)",
+    "buffer_post_id": "6ae25c9d3e779512a8860dfc",
+    "channel_results": {
+      "instagram": "6ae25c9d3e779512a8860dfc",
+      "youtube": "6ae25c9e1aa86012f897de6d",
+      "twitter": "6ae25c9f44c308f29b54ed87",
+      "public_video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1793219708/slot_2_daily_reel_opt.mp4"
+    },
+    "video_path": "out/slot_2_daily_reel_opt.mp4",
+    "items": [
+      {
+        "title": "ai-agent-orchestration \u00b7 GitHub Topics \u00b7 GitHub",
+        "name": "ai-agent-orchestration",
+        "description": "mcp control-plane multi-agent-systems workflow-automation autonomous-agents human-in-the-loop ai-agents fastapi agent-observability agent-governance agent-infrastructure ai-agent-orchestration   Updated Sep 30, 2026  Pyt",
+        "url": "https://github.com/topics/ai-agent-orchestration",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "agent-harness \u00b7 GitHub Topics \u00b7 GitHub",
+        "name": "agent-harness",
+        "description": "### Orkas-AI / Orkas  Star  2.2k  Orkas is an open-source (MIT), local-first AI team for your desktop: a Commander turns your goal into to-dos and coordinates 16 built-in specialist agents plus Claude Code, Codex, OpenCo",
+        "url": "https://github.com/topics/agent-harness",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "92 Best AI Agents (2026) [Ranked & Tested]",
+        "name": "92 Best AI Agents (2026) [Ranked &",
+        "description": "+ Installed Skill: GitHub PR Automation  ##### Extensible Tool Calling & Terminal Execution  Modern agents don't just generate text\u2014they interact with the physical and digital world. Through standardized registries like",
+        "url": "https://aitoolshaven.com/category/ai-agents",
+        "source": "Tavily (Real-Time)"
+      }
+    ]
   }
 ]

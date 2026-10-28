@@ -1,5 +1,111 @@
 [
   {
+    "id": "2026-10-29-slot-2",
+    "title": "Is your multi-agent AI system a chaotic mess? Managing complex workflows feels impossible now.",
+    "date": "October 29, 2026",
+    "date_slug": "2026-10-29",
+    "slot_id": 2,
+    "slot_name": "Evening AI Toolkit (Slot 2)",
+    "badge": "AI RADAR",
+    "cta_keyword": "WORKFLOW",
+    "video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1793219708/slot_2_daily_reel_opt.mp4",
+    "summary": "Is your multi-agent AI system a chaotic mess? Managing complex workflows feels impossible now.",
+    "voiceover_script": "Is your multi-agent AI system a chaotic mess? Managing complex workflows feels impossible now. Unlock autonomous agent power. Orchestrate intelligence, automate everything, regain control instantly. ai-agent-orchestration: Your AI control plane. It commands multi-agent systems, automates workflows, governs agents, provides observability, ensuring seamless operations. agent-harness: Orkas-AI. This open-source, local-first AI team transforms goals into tasks, coordinating 16 specialist agents, boosting desktop AI productivity. 92 Best AI Agents (2026) [Ranked &: Explore top agents. They execute terminal commands, leverage extensible tool calling, interacting directly with the digital world. Comment WORKFLOW below, and I will DM you the exact setup code right now.",
+    "items": [
+      {
+        "number": 1,
+        "name": "Ai Agent Orchestration",
+        "url": "https://github.com/topics/ai-agent-orchestration",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "mcp control-plane multi-agent-systems workflow-automation autonomous-agents human-in-the-loop ai-agents fastapi agent-observability agent-governance agent-infrastructure ai-agent-orchestration   Updated Sep 30, 2026  Pyt",
+        "command": "git clone https://github.com/topics/ai-agent-orchestration.git\ncd ai-agent-orchestration\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 2,
+        "name": "Agent Harness",
+        "url": "https://github.com/topics/agent-harness",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "### Orkas-AI / Orkas  Star  2.2k  Orkas is an open-source (MIT), local-first AI team for your desktop: a Commander turns your goal into to-dos and coordinates 16 built-in specialist agents plus Claude Code, Codex, OpenCo",
+        "command": "git clone https://github.com/topics/agent-harness.git\ncd agent-harness\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 3,
+        "name": "92 Best Ai Agents (2026) [Ranked &",
+        "url": "https://aitoolshaven.com/category/ai-agents",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "+ Installed Skill: GitHub PR Automation  ##### Extensible Tool Calling & Terminal Execution  Modern agents don't just generate text\u2014they interact with the physical and digital world. Through standardized registries like",
+        "command": "git clone https://aitoolshaven.com/category/ai-agents.git\ncd 92 best ai agents (2026) [ranked &\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      }
+    ],
+    "cta_text": "Want our studio to build custom autonomous AI employees for your workflow? Follow @jayant.digitalstudio and DM 'WORKFLOW'.",
+    "tags": [
+      "#ai",
+      "#automation",
+      "#tech",
+      "#softwareengineer",
+      "#workflow"
+    ]
+  },
+  {
+    "id": "2026-10-29-slot-1",
+    "title": "Your AI agent deployments are slow, expensive, and constantly breaking. Stop the painful struggle.",
+    "date": "October 29, 2026",
+    "date_slug": "2026-10-29",
+    "slot_id": 1,
+    "slot_name": "Morning Breakthrough (Slot 1)",
+    "badge": "AI RADAR",
+    "cta_keyword": "REPOS",
+    "video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1793219379/slot_1_daily_reel_opt.mp4",
+    "summary": "Your AI agent deployments are slow, expensive, and constantly breaking. Stop the painful struggle.",
+    "voiceover_script": "Your AI agent deployments are slow, expensive, and constantly breaking. Stop the painful struggle. Unleash hyper-efficient, production-ready AI agents instantly. Your game just changed. Cognitum One Unveils MetaHarness, tames complex AI infrastructure. It deploys, scales, optimizes agents with battle-tested, proven components fast. ai-dev-tools tracks top open-source AI tools. It ranks coding agents, editors, and review tools by GitHub stars, revealing daily trends. Introducing Replica, an open-source AI prototyping tool. It accelerates iteration, tests agent behavior, validates concepts rapidly. Build faster now. Comment REPOS below, and I will DM you the exact setup code right now.",
+    "items": [
+      {
+        "number": 1,
+        "name": "Cognitum One Unveils Metaharness, T",
+        "url": "https://www.morningstar.com/news/accesswire/1242525msn/cognitum-one-unveils-metaharness-the-open-source-factory-for-branded-governed-ai-agent-harnesses-in-conjunction-with-github-universe-2026",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "MetaHarness comes from the developer behind some of the most widely used open-source AI infrastructure on GitHub. Cohen's ruvnet projects, including RuView\u2122, Ruflo\u2122 and RuVector\u2122, have passed 100 million downloads across",
+        "command": "git clone https://www.morningstar.com/news/accesswire/1242525msn/cognitum-one-unveils-metaharness-the-open-source-factory-for-branded-governed-ai-agent-harnesses-in-conjunction-with-github-universe-2026.git\ncd cognitum one unveils metaharness, t\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 2,
+        "name": "Ai Dev Tools",
+        "url": "https://github.com/topics/ai-dev-tools",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "### tiennm99 / awesome-ai-dev-tools  Star  4  Daily-refreshed ranking of open-source AI developer tools \u2014 coding agents, ADEs, AI editors and code-review tools \u2014 by GitHub stars, with 7-day deltas, star-history charts an",
+        "command": "git clone https://github.com/topics/ai-dev-tools.git\ncd ai-dev-tools\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 3,
+        "name": "Introducing Replica, An Open Source",
+        "url": "https://github.blog/changelog/2026-10-28-introducing-replica-an-open-source-ai-prototyping-tool/",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "Introducing Replica, an open-source AI prototyping tool - GitHub Changelog   October 28, 2026 \u2022 2 minute read   # Introducing Replica, an open-source AI prototyping tool     We\u2019re open sourcing Replica, an AI-powered pro",
+        "command": "git clone https://github.blog/changelog/2026-10-28-introducing-replica-an-open-source-ai-prototyping-tool/.git\ncd introducing replica, an open-source\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      }
+    ],
+    "cta_text": "Want our studio to build custom autonomous AI employees for your workflow? Follow @jayant.digitalstudio and DM 'REPOS'.",
+    "tags": [
+      "#ai",
+      "#automation",
+      "#tech",
+      "#softwareengineer",
+      "#workflow"
+    ]
+  },
+  {
     "id": "2026-10-28-slot-2",
     "title": "Agent development is chaos. Debugging, scaling, deployment headaches crush your progress daily.",
     "date": "October 28, 2026",
