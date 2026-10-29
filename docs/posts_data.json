@@ -1,5 +1,111 @@
 [
   {
+    "id": "2026-10-30-slot-2",
+    "title": "Stuck building AI agents? Your workflows are slow, disjointed, and costing a fortune.",
+    "date": "October 30, 2026",
+    "date_slug": "2026-10-30",
+    "slot_id": 2,
+    "slot_name": "Evening AI Toolkit (Slot 2)",
+    "badge": "AI RADAR",
+    "cta_keyword": "WORKFLOW",
+    "video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1793299555/slot_2_daily_reel_opt.mp4",
+    "summary": "Stuck building AI agents? Your workflows are slow, disjointed, and costing a fortune.",
+    "voiceover_script": "Stuck building AI agents? Your workflows are slow, disjointed, and costing a fortune. Unleash agentic power! Breakthrough tools now revolutionize your development speed. Whale delivers ready-made agents. It centralizes company knowledge, streamlines processes, connects all agents effortlessly. Boosts efficiency instantly. AI Agent Store introduces persistent Copilot cloud sessions. Enjoy cross-device continuity, self-improving agents. Your workflow never stops. GitHub Changelog reveals new Copilot Automations tools. Gain fine-grained triggers, powerful cost controls. Optimize performance, slash expenses now. Comment WORKFLOW below, and I will DM you the exact setup code right now.",
+    "items": [
+      {
+        "number": 1,
+        "name": "8 Best Agentic Workflow Tools And A",
+        "url": "https://usewhale.io/blog/best-agentic-workflow-tools",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "The best agentic workflow tools in 2026 are   Whale for ready-made agents that keep your company knowledge and processes current, and connect every other agent to them. Our page on how Whale helps you train AI agents on",
+        "command": "git clone https://usewhale.io/blog/best-agentic-workflow-tools.git\ncd 8 best agentic workflow tools and a\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 2,
+        "name": "Ai Agents News \u2014 Week Of October 29",
+        "url": "https://aiagentstore.ai/ai-agent-news/this-week",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "AI Agent Store Logo  AI Agent Store  # AI Agents News \u2014 Week of October 29, 2026  Thursday, October 29, 2026  ### Copilot cloud sessions and Automations: persistent agent sessions, cross-device continuity, and self-impro",
+        "command": "git clone https://aiagentstore.ai/ai-agent-news/this-week.git\ncd ai agents news \u2014 week of october 29\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 3,
+        "name": "New Tools, Triggers, And Cost Contr",
+        "url": "https://github.blog/changelog/2026-10-28-new-tools-triggers-and-cost-controls-for-copilot-automations/",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "New tools, triggers, and cost controls for Copilot Automations - GitHub Changelog   October 28, 2026 \u2022 3 minute read   # New tools, triggers, and cost controls for Copilot Automations     With Copilot Automations, you ca",
+        "command": "git clone https://github.blog/changelog/2026-10-28-new-tools-triggers-and-cost-controls-for-copilot-automations/.git\ncd new tools, triggers, and cost contr\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      }
+    ],
+    "cta_text": "Want our studio to build custom autonomous AI employees for your workflow? Follow @jayant.digitalstudio and DM 'WORKFLOW'.",
+    "tags": [
+      "#ai",
+      "#automation",
+      "#tech",
+      "#softwareengineer",
+      "#workflow"
+    ]
+  },
+  {
+    "id": "2026-10-30-slot-1",
+    "title": "Tired of AI models drifting, failing to deliver, or saying 'should be fixed'?",
+    "date": "October 30, 2026",
+    "date_slug": "2026-10-30",
+    "slot_id": 1,
+    "slot_name": "Morning Breakthrough (Slot 1)",
+    "badge": "AI RADAR",
+    "cta_keyword": "REPOS",
+    "video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1793299264/slot_1_daily_reel_opt.mp4",
+    "summary": "Tired of AI models drifting, failing to deliver, or saying 'should be fixed'?",
+    "voiceover_script": "Tired of AI models drifting, failing to deliver, or saying 'should be fixed'? Finally, stable, verifiable AI delivery is here with cognitive execution environments. loop-engineering builds cognitive execution environments. It externalizes goals, ensures stable AI delivery, verifiable evidence, and closed-loop validation. Optimized for Deepseek v4. \u201cI don't think the world needs a ne fixes AI handoff. It overhauls Claude design, bridging engineer-designer disagreements, ensuring seamless integration. Introducing Replica, an open-source is an AI prototyping tool. It accelerates development, simplifies testing, and empowers rapid iteration for AI. Comment REPOS below, and I will DM you the exact setup code right now.",
+    "items": [
+      {
+        "number": 1,
+        "name": "Loop Engineering",
+        "url": "https://github.com/topics/loop-engineering",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "### huiliyi37 / Tianshu-harness  Star  1.2k  \u5929\u67a2harness\u662f\u4e00\u4e2a\u7684\u7ec8\u7aef\u7f16\u7a0b\u667a\u80fd\u4f53\uff0c\u5b83\u8981\u56de\u7b54\u7684\u6838\u5fc3\u95ee\u9898\u662f\uff1a\u6a21\u578b\u4f55\u4ee5\u7a33\u5b9a\u5730\u4ea4\u4ed8\u2014\u2014\u76ee\u6807\u4e0d\u6f02\u79fb\u3001\u5b8c\u6210\u6709\u8bc1\u636e\u3001\u9a8c\u8bc1\u6709\u95ed\u73af\uff0c\u4e0d\u8bf4\"\u5e94\u8be5\u4fee\u597d\u4e86\"\u3002\u4e3a\u6b64\u5b83\u5728\u6a21\u578b\u4e0e\u771f\u5b9e\u4e16\u754c\u4e4b\u95f4\u5efa\u7acb\u4e00\u5c42\u8ba4\u77e5\u6267\u884c\u73af\u5883\uff08CVM\uff09\uff0c\u628a\u76ee\u6807\u3001\u72b6\u6001\u3001\u8bc1\u636e\u3001\u8d44\u6e90\u3001\u6743\u9650\u4e0e\u7ec8\u6b62\u6761\u4ef6\u4ece\u5bf9\u8bdd\u5386\u53f2\u4e2d\u5916\u90e8\u5316\uff0c\u7531\u8fd0\u884c\u65f6\u6301\u7eed\u7ba1\u7406\u3002\u540c\u65f6\u5bf9deepseek v4\u6781\u5ea6\u4f18\u5316\u3002  cli gui tui har",
+        "command": "git clone https://github.com/topics/loop-engineering.git\ncd loop-engineering\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 2,
+        "name": "\u201cI Don'T Think The World Needs A Ne",
+        "url": "https://thenewstack.io/github-agentic-infrastructure-rebuild",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "Jul 2nd 2026 10:00am, by   Jeff Hickman  Anthropic overhauled Claude Design to fix the handoff. A designer and an engineer disagree on whether it worked.   Jun 19th 2026 9:35am, by   Meredith Shubel  Google wants to make",
+        "command": "git clone https://thenewstack.io/github-agentic-infrastructure-rebuild.git\ncd \u201ci don't think the world needs a ne\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 3,
+        "name": "Introducing Replica, An Open Source",
+        "url": "https://github.blog/changelog/2026-10-28-introducing-replica-an-open-source-ai-prototyping-tool/",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "Introducing Replica, an open-source AI prototyping tool - GitHub Changelog   October 28, 2026 \u2022 2 minute read   # Introducing Replica, an open-source AI prototyping tool     We\u2019re open sourcing Replica, an AI-powered pro",
+        "command": "git clone https://github.blog/changelog/2026-10-28-introducing-replica-an-open-source-ai-prototyping-tool/.git\ncd introducing replica, an open-source\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      }
+    ],
+    "cta_text": "Want our studio to build custom autonomous AI employees for your workflow? Follow @jayant.digitalstudio and DM 'REPOS'.",
+    "tags": [
+      "#ai",
+      "#automation",
+      "#tech",
+      "#softwareengineer",
+      "#workflow"
+    ]
+  },
+  {
     "id": "2026-10-29-slot-2",
     "title": "Is your multi-agent AI system a chaotic mess? Managing complex workflows feels impossible now.",
     "date": "October 29, 2026",
