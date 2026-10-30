@@ -2894,5 +2894,79 @@
         "source": "Exa (24h Index)"
       }
     ]
+  },
+  {
+    "slot_id": 1,
+    "slot_name": "Morning Breakthrough (Slot 1)",
+    "timestamp_utc": "2026-10-30T20:03:18.296672+00:00",
+    "date_ist": "2026-10-31 9:00 AM IST (Scheduled for 03:30 UTC)",
+    "buffer_post_id": "6ae4f8041891472093955b13",
+    "channel_results": {
+      "instagram": "6ae4f8041891472093955b13",
+      "youtube": "6ae4f804b84259308b9b5e98",
+      "twitter": "6ae4f806eaa24d6f9a37e9fe",
+      "public_video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1793390567/slot_1_daily_reel_opt.mp4"
+    },
+    "video_path": "out/slot_1_daily_reel_opt.mp4",
+    "items": [
+      {
+        "title": "Latest in AI: New Models, Projects & Releases (2026) | olud.ai",
+        "name": "Latest in AI: New Models, Projects",
+        "description": "\u25b2 +2.9k\u2605 293k  ppt-master  by hugohe3  AI turns documents or topics into real, native PowerPoint decks\u2014with native shapes, transitions and animations, data-backed charts and tables on demand, audio narration from speaker",
+        "url": "https://olud.ai/latest.html",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "AI News - Live AI News & Trends | Blockchain.News",
+        "name": "AI News",
+        "description": "| OpenClaw v2026.10.9: Update rollback fixes and agent data repairs According to OpenClaw via its release notes and social post, v2026.10.9 delivers update rollback fixes, agent data and chat archive repairs, and project",
+        "url": "https://blockchain.news/ainews",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "Latest AI News Today (Oct 30, 2026) \u2014 Updates That Matter | HeadsUpAI",
+        "name": "Latest AI News Today (Oct 30, 2026)",
+        "description": "AIOZ Network released a unified developer repository for the AIOZ AI platform. The repository provides API access, official SDKs for Go, Python, and TypeScript, and an MCP Server for connecting AI agents. New Agent Skill",
+        "url": "https://headsupai.io/ai-news-and-updates/today",
+        "source": "Tavily (Real-Time)"
+      }
+    ]
+  },
+  {
+    "slot_id": 2,
+    "slot_name": "Evening AI Toolkit (Slot 2)",
+    "timestamp_utc": "2026-10-30T20:06:49.153410+00:00",
+    "date_ist": "2026-10-31 7:00 PM IST (Scheduled for 13:30 UTC)",
+    "buffer_post_id": "6ae4f8d7a1145743496896a6",
+    "channel_results": {
+      "instagram": "6ae4f8d7a1145743496896a6",
+      "youtube": "6ae4f8d8eaa24d6f9a383edf",
+      "twitter": "6ae4f8d9189147209395aa58",
+      "public_video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1793390784/slot_2_daily_reel_opt.mp4"
+    },
+    "video_path": "out/slot_2_daily_reel_opt.mp4",
+    "items": [
+      {
+        "title": "AI Agents News \u2014 Week of October 30, 2026 (Daily Updates)",
+        "name": "AI Agents News \u2014 Week of October 30",
+        "description": "Why it matters: If you run CI/CD or automated issue workflows that rely on GitHub's agent tooling, these fixes reduce surprise failures and the risk that an agent exposes or misuses credentials \u2014 which makes it safer to",
+        "url": "https://aiagentstore.ai/ai-agent-news/this-week",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "skill-builder \u00b7 GitHub Topics \u00b7 GitHub",
+        "name": "skill-builder",
+        "description": "### princekrz / skills-builder  Star  1  Universal toolkit for building, discovering, reviewing, testing, and securing Claude skills. 7 scripts, 10 reference docs, 6 workflows. Includes quality scoring, auto-testing, pro",
+        "url": "https://github.com/topics/skill-builder",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "AWS Step Functions workflows now available as AI agent tools - AWS",
+        "name": "AWS Step Functions workflows now av",
+        "description": "AWS Step Functions workflows now available as AI agent tools - AWS  # AWS Step Functions workflows now available as AI agent tools   Posted on: Oct 29, 2026   You can now use your AWS Step Functions workflows as tools fo",
+        "url": "https://aws.amazon.com/about-aws/whats-new/2026/10/step-functions-workflows-ai-agent-tools/",
+        "source": "Exa (24h Index)"
+      }
+    ]
   }
 ]

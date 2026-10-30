@@ -1,5 +1,111 @@
 [
   {
+    "id": "2026-10-31-slot-2",
+    "title": "Stop paying insane monthly SaaS subscriptions when free open-source AI builds this instantly.",
+    "date": "October 31, 2026",
+    "date_slug": "2026-10-31",
+    "slot_id": 2,
+    "slot_name": "Evening AI Toolkit (Slot 2)",
+    "badge": "AI RADAR",
+    "cta_keyword": "WORKFLOW",
+    "video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1793390784/slot_2_daily_reel_opt.mp4",
+    "summary": "Stop paying insane monthly SaaS subscriptions when free open-source AI builds this instantly.",
+    "voiceover_script": "Stop paying insane monthly SaaS subscriptions when free open-source AI builds this instantly. Three brand-new breakthrough developer repos just dropped on GitHub today. First is AI Agents News \u2014 Week of October 30. It eliminates manual coding pipelines with lightning-fast local model execution. Second is skill-builder. An autonomous engine executing deterministic workflows with sub-millisecond response latency. Third is AWS Step Functions workflows now av. A zero-cloud runtime running complex reasoning models directly on device. Comment WORKFLOW below, and I will DM you the exact setup code right now.",
+    "items": [
+      {
+        "number": 1,
+        "name": "Ai Agents News \u2014 Week Of October 30",
+        "url": "https://aiagentstore.ai/ai-agent-news/this-week",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "Why it matters: If you run CI/CD or automated issue workflows that rely on GitHub's agent tooling, these fixes reduce surprise failures and the risk that an agent exposes or misuses credentials \u2014 which makes it safer to",
+        "command": "git clone https://aiagentstore.ai/ai-agent-news/this-week.git\ncd ai agents news \u2014 week of october 30\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 2,
+        "name": "Skill Builder",
+        "url": "https://github.com/topics/skill-builder",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "### princekrz / skills-builder  Star  1  Universal toolkit for building, discovering, reviewing, testing, and securing Claude skills. 7 scripts, 10 reference docs, 6 workflows. Includes quality scoring, auto-testing, pro",
+        "command": "git clone https://github.com/topics/skill-builder.git\ncd skill-builder\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 3,
+        "name": "Aws Step Functions Workflows Now Av",
+        "url": "https://aws.amazon.com/about-aws/whats-new/2026/10/step-functions-workflows-ai-agent-tools/",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "AWS Step Functions workflows now available as AI agent tools - AWS  # AWS Step Functions workflows now available as AI agent tools   Posted on: Oct 29, 2026   You can now use your AWS Step Functions workflows as tools fo",
+        "command": "git clone https://aws.amazon.com/about-aws/whats-new/2026/10/step-functions-workflows-ai-agent-tools/.git\ncd aws step functions workflows now av\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      }
+    ],
+    "cta_text": "Want our studio to build custom autonomous AI employees for your workflow? Follow @jayant.digitalstudio and DM 'WORKFLOW'.",
+    "tags": [
+      "#ai",
+      "#automation",
+      "#tech",
+      "#softwareengineer",
+      "#workflow"
+    ]
+  },
+  {
+    "id": "2026-10-31-slot-1",
+    "title": "Manually building presentations? Wasting hours on docs? Your workflow is broken. You need this now.",
+    "date": "October 31, 2026",
+    "date_slug": "2026-10-31",
+    "slot_id": 1,
+    "slot_name": "Morning Breakthrough (Slot 1)",
+    "badge": "AI RADAR",
+    "cta_keyword": "REPOS",
+    "video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1793390567/slot_1_daily_reel_opt.mp4",
+    "summary": "Manually building presentations? Wasting hours on docs? Your workflow is broken. You need this now.",
+    "voiceover_script": "Manually building presentations? Wasting hours on docs? Your workflow is broken. You need this now. Automate everything. AI instantly crafts stunning decks, fixes data, unifies platforms. Latest in AI: New Models, Projects: AI instantly turns topics into native PowerPoint decks. It builds data-backed charts, adds transitions, and narrates presentations. AI News: OpenClaw v2026.10.9 delivers critical update rollback fixes. It repairs agent data and restores chat archives instantly. Latest AI News Today (Oct 30, 2026): AIOZ Network unifies developer access. It provides API access, SDKs, and connects AI agents efficiently. Comment REPOS below, and I will DM you the exact setup code right now.",
+    "items": [
+      {
+        "number": 1,
+        "name": "Latest In Ai: New Models, Projects",
+        "url": "https://olud.ai/latest.html",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "\u25b2 +2.9k\u2605 293k  ppt-master  by hugohe3  AI turns documents or topics into real, native PowerPoint decks\u2014with native shapes, transitions and animations, data-backed charts and tables on demand, audio narration from speaker",
+        "command": "git clone https://olud.ai/latest.html.git\ncd latest in ai: new models, projects\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 2,
+        "name": "Ai News",
+        "url": "https://blockchain.news/ainews",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "| OpenClaw v2026.10.9: Update rollback fixes and agent data repairs According to OpenClaw via its release notes and social post, v2026.10.9 delivers update rollback fixes, agent data and chat archive repairs, and project",
+        "command": "git clone https://blockchain.news/ainews.git\ncd ai news\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 3,
+        "name": "Latest Ai News Today (Oct 30, 2026)",
+        "url": "https://headsupai.io/ai-news-and-updates/today",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "AIOZ Network released a unified developer repository for the AIOZ AI platform. The repository provides API access, official SDKs for Go, Python, and TypeScript, and an MCP Server for connecting AI agents. New Agent Skill",
+        "command": "pip install latest ai news today (oct 30, 2026)",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      }
+    ],
+    "cta_text": "Want our studio to build custom autonomous AI employees for your workflow? Follow @jayant.digitalstudio and DM 'REPOS'.",
+    "tags": [
+      "#ai",
+      "#automation",
+      "#tech",
+      "#softwareengineer",
+      "#workflow"
+    ]
+  },
+  {
     "id": "2026-10-30-slot-2",
     "title": "Stuck building AI agents? Your workflows are slow, disjointed, and costing a fortune.",
     "date": "October 30, 2026",
