@@ -2968,5 +2968,79 @@
         "source": "Exa (24h Index)"
       }
     ]
+  },
+  {
+    "slot_id": 1,
+    "slot_name": "Morning Breakthrough (Slot 1)",
+    "timestamp_utc": "2026-10-31T19:30:04.761298+00:00",
+    "date_ist": "2026-11-01 9:00 AM IST (Scheduled for 03:30 UTC)",
+    "buffer_post_id": "6ae641ba21c807e9d57fb080",
+    "channel_results": {
+      "instagram": "6ae641ba21c807e9d57fb080",
+      "youtube": "6ae641bbf0984eef3328e135",
+      "twitter": "6ae641bc21c807e9d57fb290",
+      "public_video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1793474970/slot_1_daily_reel_opt.mp4"
+    },
+    "video_path": "out/slot_1_daily_reel_opt.mp4",
+    "items": [
+      {
+        "title": "Open-sourced: agent-preflight-kit: pre-action checklist for AI agents - Built for Cursor - Cursor - Community Forum",
+        "name": "Open-sourced: agent-preflight-kit:",
+        "description": "### Related topics  | Topic |  | Replies | Views | Activity |  ---  ---  | BlankVisuals\u00a9 Validator \u2014 evidence-backed validation for Cursor skills, agents, and agentic repos (open source, MIT)  Built for Cursor mcp ,  ski",
+        "url": "https://forum.cursor.com/t/open-sourced-agent-preflight-kit-pre-action-checklist-for-ai-agents/176865",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "New AI Agent Tools This Week (Oct 30, 2026): 6 Checked",
+        "name": "New AI Agent Tools This Week (Oct 3",
+        "description": "New AI Agent Tools This Week (Oct 30, 2026): 6 Checked  # New AI Agent Tools and Repos This Week, Checked (30 October 2026)  6 new AI agent and automation releases from 23 to 30 October 2026: GitHub Agentic Workflows GA,",
+        "url": "https://sophrai.com/new-ai-agent-tools-this-week-2026-10-30/",
+        "source": "Exa (24h Index)"
+      },
+      {
+        "title": "DeepSeek dsh-superagent: Proactive GitHub Agent (MIT) | explainx.ai Blog | explainx.ai",
+        "name": "DeepSeek dsh-superagent: Proactive",
+        "description": "DeepSeek dsh-superagent: Proactive GitHub Agent (MIT) | explainx.ai Blog | explainx.ai  # DeepSeek dsh-superagent: The Proactive GitHub Coding Agent It Just Open-Sourced  DeepSeek, DeepSeek Harness, AI Agents, Open Sourc",
+        "url": "https://explainx.ai/blog/deepseek-dsh-superagent-prototype-proactive-github-coding-agent-tickets-mandates-mit-2026",
+        "source": "Exa (24h Index)"
+      }
+    ]
+  },
+  {
+    "slot_id": 2,
+    "slot_name": "Evening AI Toolkit (Slot 2)",
+    "timestamp_utc": "2026-10-31T19:34:54.133623+00:00",
+    "date_ist": "2026-11-01 7:00 PM IST (Scheduled for 13:30 UTC)",
+    "buffer_post_id": "6ae642dcf0984eef3329315a",
+    "channel_results": {
+      "instagram": "6ae642dcf0984eef3329315a",
+      "youtube": "6ae642ddcf3a3112f3bd6eb9",
+      "twitter": "6ae642de37c1acd2a0c86edf",
+      "public_video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1793475262/slot_2_daily_reel_opt.mp4"
+    },
+    "video_path": "out/slot_2_daily_reel_opt.mp4",
+    "items": [
+      {
+        "title": "business-automation \u00b7 GitHub Topics \u00b7 GitHub",
+        "name": "business-automation",
+        "description": "### evolution-foundation / evo-nexus  Sponsor   Star  548  The open source operating system for AI-powered businesses  open-source automation dashboard multi-agent ai-agents claude business-automation ai-workspace anthro",
+        "url": "https://github.com/topics/business-automation",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "AI Agents News \u2014 Week of October 31, 2026 (Daily Updates)",
+        "name": "AI Agents News \u2014 Week of October 31",
+        "description": "Why it matters: If you run CI/CD or automated issue workflows that rely on GitHub's agent tooling, these fixes reduce surprise failures and the risk that an agent exposes or misuses credentials \u2014 which makes it safer to",
+        "url": "https://aiagentstore.ai/ai-agent-news/this-week",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "Droid 1.0: Building a Frontier Harness | Factory",
+        "name": "Droid 1.0: Building a Frontier Harn",
+        "description": "Droid 1.0: Building a Frontier Harness | Factory  # Droid 1.0: Building a Frontier Harness  A new engine powering Factory's enterprise agent, built for complex projects and everyday development.  Over the past year, we h",
+        "url": "https://factory.com/news/frontier-harness",
+        "source": "Exa (24h Index)"
+      }
+    ]
   }
 ]

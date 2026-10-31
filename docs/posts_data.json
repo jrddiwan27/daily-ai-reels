@@ -1,5 +1,111 @@
 [
   {
+    "id": "2026-11-01-slot-2",
+    "title": "Your dev workflows are slow, clunky, and absolutely killing productivity. You're losing hours daily.",
+    "date": "November 01, 2026",
+    "date_slug": "2026-11-01",
+    "slot_id": 2,
+    "slot_name": "Evening AI Toolkit (Slot 2)",
+    "badge": "AI RADAR",
+    "cta_keyword": "WORKFLOW",
+    "video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1793475262/slot_2_daily_reel_opt.mp4",
+    "summary": "Your dev workflows are slow, clunky, and absolutely killing productivity. You're losing hours daily.",
+    "voiceover_script": "Your dev workflows are slow, clunky, and absolutely killing productivity. You're losing hours daily. Elite AI tools just dropped. Automate everything. Reclaim your time. business-automation: Open-source OS for AI businesses. Launches multi-agent systems, automates complex tasks, transforming your workflow. AI Agents News \u2014 Week of October 31: Critical fixes secure CI/CD. Prevents agent failures, protects credentials, ensures safer workflows. Droid 1.0: Building a Frontier Harn: New engine powers enterprise agents. Handles complex projects, streamlines development, boosts team efficiency. Comment WORKFLOW below, and I will DM you the exact setup code right now.",
+    "items": [
+      {
+        "number": 1,
+        "name": "Business Automation",
+        "url": "https://github.com/topics/business-automation",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "### evolution-foundation / evo-nexus  Sponsor   Star  548  The open source operating system for AI-powered businesses  open-source automation dashboard multi-agent ai-agents claude business-automation ai-workspace anthro",
+        "command": "git clone https://github.com/topics/business-automation.git\ncd business-automation\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 2,
+        "name": "Ai Agents News \u2014 Week Of October 31",
+        "url": "https://aiagentstore.ai/ai-agent-news/this-week",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "Why it matters: If you run CI/CD or automated issue workflows that rely on GitHub's agent tooling, these fixes reduce surprise failures and the risk that an agent exposes or misuses credentials \u2014 which makes it safer to",
+        "command": "git clone https://aiagentstore.ai/ai-agent-news/this-week.git\ncd ai agents news \u2014 week of october 31\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 3,
+        "name": "Droid 1.0: Building A Frontier Harn",
+        "url": "https://factory.com/news/frontier-harness",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "Droid 1.0: Building a Frontier Harness | Factory  # Droid 1.0: Building a Frontier Harness  A new engine powering Factory's enterprise agent, built for complex projects and everyday development.  Over the past year, we h",
+        "command": "git clone https://factory.com/news/frontier-harness.git\ncd droid 1.0: building a frontier harn\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      }
+    ],
+    "cta_text": "Want our studio to build custom autonomous AI employees for your workflow? Follow @jayant.digitalstudio and DM 'WORKFLOW'.",
+    "tags": [
+      "#ai",
+      "#automation",
+      "#tech",
+      "#softwareengineer",
+      "#workflow"
+    ]
+  },
+  {
+    "id": "2026-11-01-slot-1",
+    "title": "Developers, tired of your AI agents failing silently? Debugging agentic workflows is a nightmare.",
+    "date": "November 01, 2026",
+    "date_slug": "2026-11-01",
+    "slot_id": 1,
+    "slot_name": "Morning Breakthrough (Slot 1)",
+    "badge": "AI RADAR",
+    "cta_keyword": "REPOS",
+    "video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1793474970/slot_1_daily_reel_opt.mp4",
+    "summary": "Developers, tired of your AI agents failing silently? Debugging agentic workflows is a nightmare.",
+    "voiceover_script": "Developers, tired of your AI agents failing silently? Debugging agentic workflows is a nightmare. Breakthrough: Instantly validate agent behavior, pinpointing errors before deployment. Open-sourced: agent-preflight-kit: Validates Cursor skills, agents, repos. Its evidence-backed precision catches issues, ensures AI performs flawlessly. New AI Agent Tools This Week (Oct 3: Six powerful agent releases. Automate workflows, boost efficiency, integrate cutting-edge AI solutions. DeepSeek dsh-superagent: Proactive: GitHub coding agent open-sourced. Proactively generates code, explains solutions, boosting developer productivity. Comment REPOS below. I'll DM you the exact setup code right now.",
+    "items": [
+      {
+        "number": 1,
+        "name": "Open Sourced: Agent Preflight Kit:",
+        "url": "https://forum.cursor.com/t/open-sourced-agent-preflight-kit-pre-action-checklist-for-ai-agents/176865",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "### Related topics  | Topic |  | Replies | Views | Activity |  ---  ---  | BlankVisuals\u00a9 Validator \u2014 evidence-backed validation for Cursor skills, agents, and agentic repos (open source, MIT)  Built for Cursor mcp ,  ski",
+        "command": "git clone https://forum.cursor.com/t/open-sourced-agent-preflight-kit-pre-action-checklist-for-ai-agents/176865.git\ncd open-sourced: agent-preflight-kit:\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 2,
+        "name": "New Ai Agent Tools This Week (Oct 3",
+        "url": "https://sophrai.com/new-ai-agent-tools-this-week-2026-10-30/",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "New AI Agent Tools This Week (Oct 30, 2026): 6 Checked  # New AI Agent Tools and Repos This Week, Checked (30 October 2026)  6 new AI agent and automation releases from 23 to 30 October 2026: GitHub Agentic Workflows GA,",
+        "command": "git clone https://sophrai.com/new-ai-agent-tools-this-week-2026-10-30/.git\ncd new ai agent tools this week (oct 3\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 3,
+        "name": "Deepseek Dsh Superagent: Proactive",
+        "url": "https://explainx.ai/blog/deepseek-dsh-superagent-prototype-proactive-github-coding-agent-tickets-mandates-mit-2026",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "DeepSeek dsh-superagent: Proactive GitHub Agent (MIT) | explainx.ai Blog | explainx.ai  # DeepSeek dsh-superagent: The Proactive GitHub Coding Agent It Just Open-Sourced  DeepSeek, DeepSeek Harness, AI Agents, Open Sourc",
+        "command": "git clone https://explainx.ai/blog/deepseek-dsh-superagent-prototype-proactive-github-coding-agent-tickets-mandates-mit-2026.git\ncd deepseek dsh-superagent: proactive\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      }
+    ],
+    "cta_text": "Want our studio to build custom autonomous AI employees for your workflow? Follow @jayant.digitalstudio and DM 'REPOS'.",
+    "tags": [
+      "#ai",
+      "#automation",
+      "#tech",
+      "#softwareengineer",
+      "#workflow"
+    ]
+  },
+  {
     "id": "2026-10-31-slot-2",
     "title": "Stop paying insane monthly SaaS subscriptions when free open-source AI builds this instantly.",
     "date": "October 31, 2026",
