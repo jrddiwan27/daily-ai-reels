@@ -3042,5 +3042,79 @@
         "source": "Exa (24h Index)"
       }
     ]
+  },
+  {
+    "slot_id": 1,
+    "slot_name": "Morning Breakthrough (Slot 1)",
+    "timestamp_utc": "2026-11-01T19:54:40.258535+00:00",
+    "date_ist": "2026-11-02 9:00 AM IST (Scheduled for 03:30 UTC)",
+    "buffer_post_id": "6ae798fe5604f9d85b852795",
+    "channel_results": {
+      "instagram": "6ae798fe5604f9d85b852795",
+      "youtube": "6ae798ffb7d22b897a0ca39b",
+      "twitter": "6ae79900b7d22b897a0ca3d1",
+      "public_video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1793562850/slot_1_daily_reel_opt.mp4"
+    },
+    "video_path": "out/slot_1_daily_reel_opt.mp4",
+    "items": [
+      {
+        "title": "64 No-Code AI Agent Statistics (2026): Who Builds Agents Now | MarketSplash",
+        "name": "64 No-Code AI Agent Statistics (202",
+        "description": "13. Gartner: Gartner Says Applying Uniform Governance Across AI Agents Will Lead to Enterprise AI Agent Failure (2026) 14. Replit Blog: The Future is Actually Very Human (2026) 15. n8n Blog: We need to re-learn what AI a",
+        "url": "https://marketsplash.com/no-code-ai-agent-builder-statistics",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "17 Best Free AI Coding Agents in 2026 | Agentic.ai",
+        "name": "17 Best Free AI Coding Agents in 20",
+        "description": "Agenticness22/36\u00b7Domain Specialist  Orbi is an open-source, self-hostable AI coding agent that takes GitHub Issues from implementation through independent review, merge, and release. It can run against your own model end",
+        "url": "https://agentic.ai/best/free-coding-agents",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "AI tools go autonomous, local, and UI-savvy \u00b7 Early Signal weekly",
+        "name": "AI tools go autonomous, local, and",
+        "description": "AI tools go autonomous, local, and UI-savvy \u00b7 Early Signal weekly  Updated 18:20 UTC, rescanned every two hours Sunday, November 1, 2026  The week in AI launches \u00b7 November 1, 2026  # AI tools go autonomous, local, and U",
+        "url": "https://earlysignal.news/weekly/2026-w44",
+        "source": "Exa (24h Index)"
+      }
+    ]
+  },
+  {
+    "slot_id": 2,
+    "slot_name": "Evening AI Toolkit (Slot 2)",
+    "timestamp_utc": "2026-11-01T19:58:51.302987+00:00",
+    "date_ist": "2026-11-02 7:00 PM IST (Scheduled for 13:30 UTC)",
+    "buffer_post_id": "6ae799f91e69de2cfc131ad6",
+    "channel_results": {
+      "instagram": "6ae799f91e69de2cfc131ad6",
+      "youtube": "6ae799fa3f7155902f73873c",
+      "twitter": "6ae799fb026a1294e55d3e5c",
+      "public_video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1793563104/slot_2_daily_reel_opt.mp4"
+    },
+    "video_path": "out/slot_2_daily_reel_opt.mp4",
+    "items": [
+      {
+        "title": "Test de PicoClaw : agent IA open source l\u00e9ger en Go",
+        "name": "Test de PicoClaw : agent IA open so",
+        "description": "Articles sur Hermes Agent (4)   Hermes Agent Review: Self-Hosted AI AgentMis \u00e0 jour 3 septembre 2026  Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous AgentsM",
+        "url": "https://www.promptquorum.com/power-local-llm/picoclaw-review",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "AI tools go autonomous, local, and UI-savvy \u00b7 Early Signal weekly",
+        "name": "AI tools go autonomous, local, and",
+        "description": "AI tools go autonomous, local, and UI-savvy \u00b7 Early Signal weekly  Updated 18:20 UTC, rescanned every two hours Sunday, November 1, 2026  The week in AI launches \u00b7 November 1, 2026  # AI tools go autonomous, local, and U",
+        "url": "https://earlysignal.news/weekly/2026-w44",
+        "source": "Exa (24h Index)"
+      },
+      {
+        "title": "Factory Droid 1.0\u00a0: A Model-Independent Coding Agent Built on Script Mode",
+        "name": "Factory Droid 1.0\u00a0: A Model-Indepen",
+        "description": "Factory Droid 1.0 : A Model-Independent Coding Agent Built on Script Mode  # Factory Droid 1.0 : A Model-Independent Coding Agent Built on Script Mode  November 1, 2026  AI / news  The company Factory has released Droid",
+        "url": "https://www.the-ai.news/en/factory-droid-10-coding-agent-script-mode/",
+        "source": "Exa (24h Index)"
+      }
+    ]
   }
 ]

@@ -1,5 +1,111 @@
 [
   {
+    "id": "2026-11-02-slot-2",
+    "title": "Still wrestling with clunky dev workflows? Your AI agent setup is painfully slow.",
+    "date": "November 02, 2026",
+    "date_slug": "2026-11-02",
+    "slot_id": 2,
+    "slot_name": "Evening AI Toolkit (Slot 2)",
+    "badge": "AI RADAR",
+    "cta_keyword": "WORKFLOW",
+    "video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1793563104/slot_2_daily_reel_opt.mp4",
+    "summary": "Still wrestling with clunky dev workflows? Your AI agent setup is painfully slow.",
+    "voiceover_script": "Still wrestling with clunky dev workflows? Your AI agent setup is painfully slow. Stop waiting! Autonomous AI agents now revolutionize your entire dev process. Test de PicoClaw : agent IA open so. Executes complex coding tasks locally. Optimizes workflows, deploys, debugs autonomously. Boost dev speed. AI tools go autonomous, local, and. Agents run independently on your machine. Boosts privacy, performance, deploys powerful AI locally. Unlocked potential. Factory Droid 1.0 : A Model-Indepen. This agent uses script mode. Adapts to any AI model, generating robust code. Build systems faster. Comment WORKFLOW below, and I will DM you the exact setup code right now.",
+    "items": [
+      {
+        "number": 1,
+        "name": "Test De Picoclaw : Agent Ia Open So",
+        "url": "https://www.promptquorum.com/power-local-llm/picoclaw-review",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "Articles sur Hermes Agent (4)   Hermes Agent Review: Self-Hosted AI AgentMis \u00e0 jour 3 septembre 2026  Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous AgentsM",
+        "command": "git clone https://www.promptquorum.com/power-local-llm/picoclaw-review.git\ncd test de picoclaw : agent ia open so\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 2,
+        "name": "Ai Tools Go Autonomous, Local, And",
+        "url": "https://earlysignal.news/weekly/2026-w44",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "AI tools go autonomous, local, and UI-savvy \u00b7 Early Signal weekly  Updated 18:20 UTC, rescanned every two hours Sunday, November 1, 2026  The week in AI launches \u00b7 November 1, 2026  # AI tools go autonomous, local, and U",
+        "command": "git clone https://earlysignal.news/weekly/2026-w44.git\ncd ai tools go autonomous, local, and\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 3,
+        "name": "Factory Droid 1.0\u00a0: A Model Indepen",
+        "url": "https://www.the-ai.news/en/factory-droid-10-coding-agent-script-mode/",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "Factory Droid 1.0 : A Model-Independent Coding Agent Built on Script Mode  # Factory Droid 1.0 : A Model-Independent Coding Agent Built on Script Mode  November 1, 2026  AI / news  The company Factory has released Droid",
+        "command": "git clone https://www.the-ai.news/en/factory-droid-10-coding-agent-script-mode/.git\ncd factory droid 1.0\u00a0: a model-indepen\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      }
+    ],
+    "cta_text": "Want our studio to build custom autonomous AI employees for your workflow? Follow @jayant.digitalstudio and DM 'WORKFLOW'.",
+    "tags": [
+      "#ai",
+      "#automation",
+      "#tech",
+      "#softwareengineer",
+      "#workflow"
+    ]
+  },
+  {
+    "id": "2026-11-02-slot-1",
+    "title": "Stuck building AI agents? Your no-code dreams are crashing hard. This bottleneck crushes innovation.",
+    "date": "November 02, 2026",
+    "date_slug": "2026-11-02",
+    "slot_id": 1,
+    "slot_name": "Morning Breakthrough (Slot 1)",
+    "badge": "AI RADAR",
+    "cta_keyword": "REPOS",
+    "video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1793562850/slot_1_daily_reel_opt.mp4",
+    "summary": "Stuck building AI agents? Your no-code dreams are crashing hard. This bottleneck crushes innovation.",
+    "voiceover_script": "Stuck building AI agents? Your no-code dreams are crashing hard. This bottleneck crushes innovation. Unlock autonomous power. Build agents faster, smarter, without complex code, instantly. 64 No-Code AI Agent Statistics (202 reveals critical insights. Avoid enterprise AI agent failure. Master agent governance, ensuring your projects succeed swiftly. 17 Best Free AI Coding Agents in 20 discovers open-source coding agents. Automate GitHub issues. Implement, review, merge, and release code independently. Boost dev workflow. AI tools go autonomous, local, and witnesses the future: AI tools become autonomous, local, and UI-savvy. Transform workflows with cutting-edge, self-managing solutions now. Comment REPOS below. I will DM you the exact setup code right now.",
+    "items": [
+      {
+        "number": 1,
+        "name": "64 No Code Ai Agent Statistics (202",
+        "url": "https://marketsplash.com/no-code-ai-agent-builder-statistics",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "13. Gartner: Gartner Says Applying Uniform Governance Across AI Agents Will Lead to Enterprise AI Agent Failure (2026) 14. Replit Blog: The Future is Actually Very Human (2026) 15. n8n Blog: We need to re-learn what AI a",
+        "command": "git clone https://marketsplash.com/no-code-ai-agent-builder-statistics.git\ncd 64 no-code ai agent statistics (202\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 2,
+        "name": "17 Best Free Ai Coding Agents In 20",
+        "url": "https://agentic.ai/best/free-coding-agents",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "Agenticness22/36\u00b7Domain Specialist  Orbi is an open-source, self-hostable AI coding agent that takes GitHub Issues from implementation through independent review, merge, and release. It can run against your own model end",
+        "command": "git clone https://agentic.ai/best/free-coding-agents.git\ncd 17 best free ai coding agents in 20\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 3,
+        "name": "Ai Tools Go Autonomous, Local, And",
+        "url": "https://earlysignal.news/weekly/2026-w44",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "AI tools go autonomous, local, and UI-savvy \u00b7 Early Signal weekly  Updated 18:20 UTC, rescanned every two hours Sunday, November 1, 2026  The week in AI launches \u00b7 November 1, 2026  # AI tools go autonomous, local, and U",
+        "command": "git clone https://earlysignal.news/weekly/2026-w44.git\ncd ai tools go autonomous, local, and\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      }
+    ],
+    "cta_text": "Want our studio to build custom autonomous AI employees for your workflow? Follow @jayant.digitalstudio and DM 'REPOS'.",
+    "tags": [
+      "#ai",
+      "#automation",
+      "#tech",
+      "#softwareengineer",
+      "#workflow"
+    ]
+  },
+  {
     "id": "2026-11-01-slot-2",
     "title": "Your dev workflows are slow, clunky, and absolutely killing productivity. You're losing hours daily.",
     "date": "November 01, 2026",
