@@ -3116,5 +3116,79 @@
         "source": "Exa (24h Index)"
       }
     ]
+  },
+  {
+    "slot_id": 1,
+    "slot_name": "Morning Breakthrough (Slot 1)",
+    "timestamp_utc": "2026-11-02T19:43:37.306214+00:00",
+    "date_ist": "2026-11-03 9:00 AM IST (Scheduled for 03:30 UTC)",
+    "buffer_post_id": "6ae8e7e74efbf4f5475eb0bf",
+    "channel_results": {
+      "instagram": "6ae8e7e74efbf4f5475eb0bf",
+      "youtube": "6ae8e7e8ff93b610bb95b5ac",
+      "twitter": "6ae8e7e902371b91fa50305a",
+      "public_video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1793648586/slot_1_daily_reel_opt.mp4"
+    },
+    "video_path": "out/slot_1_daily_reel_opt.mp4",
+    "items": [
+      {
+        "title": "17 Best Free AI Coding Agents in 2026 | Agentic.ai",
+        "name": "17 Best Free AI Coding Agents in 20",
+        "description": "Agenticness22/36\u00b7Domain Specialist  Orbi is an open-source, self-hostable AI coding agent that takes GitHub Issues from implementation through independent review, merge, and release. It can run against your own model end",
+        "url": "https://agentic.ai/best/free-coding-agents",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "Top Agent Skill Repositories on GitHub \u00b7 Linkly AI",
+        "name": "Top Agent Skill Repositories on Git",
+        "description": "| 92 | gosom/google-maps-scraper | 6,897 | +41 | 2026-10-21 | \u2014 | golanggoogle-maps-scrapingweb-scraper | | 93 | czlonkowski/n8n-skills | 6,525 | +3 | 2026-10-24 | \u2014 | ai-agentsn8nworkflow-automation | | 94 | browser-act",
+        "url": "https://linkly.ai/skills/top-repos",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "AI tools go autonomous, local, and UI-savvy \u00b7 Early Signal weekly",
+        "name": "AI tools go autonomous, local, and",
+        "description": "AI tools go autonomous, local, and UI-savvy \u00b7 Early Signal weekly  Updated 16:40 UTC, rescanned every two hours Monday, November 2, 2026  The week in AI launches \u00b7 November 1, 2026  # AI tools go autonomous, local, and U",
+        "url": "https://earlysignal.news/weekly/2026-w44",
+        "source": "Exa (24h Index)"
+      }
+    ]
+  },
+  {
+    "slot_id": 2,
+    "slot_name": "Evening AI Toolkit (Slot 2)",
+    "timestamp_utc": "2026-11-02T19:48:03.513733+00:00",
+    "date_ist": "2026-11-03 7:00 PM IST (Scheduled for 13:30 UTC)",
+    "buffer_post_id": "6ae8e8f0fb05897d9d3895ac",
+    "channel_results": {
+      "instagram": "6ae8e8f0fb05897d9d3895ac",
+      "youtube": "6ae8e8f2ff93b610bb95f242",
+      "twitter": "6ae8e8f3ff93b610bb95f29c",
+      "public_video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1793648852/slot_2_daily_reel_opt.mp4"
+    },
+    "video_path": "out/slot_2_daily_reel_opt.mp4",
+    "items": [
+      {
+        "title": "personal-ai-agent \u00b7 GitHub Topics \u00b7 GitHub",
+        "name": "personal-ai-agent",
+        "description": "allegro cursor poland obsidian browser-automation codex ai-agents psd2 playwright autonomous-checkout ap2 gemini-cli agent-skills claude-code agentic-commerce agentic-payments personal-ai-agent context-first ai-shopping-",
+        "url": "https://github.com/topics/personal-ai-agent",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "Best AI Workflow Agents: 4 Types Compared (2026)",
+        "name": "Best AI Workflow Agents: 4 Types Co",
+        "description": "AI-first autonomous workflows  Lindy for an AI teammate in Slack, email and iMessage that handles inbox triage, meeting prep, scheduling and CRM updates. Beam AI for enterprise operations agents that run processes on the",
+        "url": "https://theaiagentindex.com/resources/guides/best-ai-workflow-agents",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "This Week in AI Automation: Agents Beat Their Own Safety Monitors, and Commerce Barely Noticed",
+        "name": "This Week in AI Automation: Agents",
+        "description": "This Week in AI Automation: Agents Beat Their Own Safety Monitors, and Commerce Barely Noticed  ## Anthropic's red team proved a row-by-row monitor is not a safety layer. GitHub shipped agent workflows to GA. DoorDash co",
+        "url": "https://automateandgrow.beehiiv.com/p/new-post-bf7d",
+        "source": "Exa (24h Index)"
+      }
+    ]
   }
 ]

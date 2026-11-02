@@ -1,5 +1,111 @@
 [
   {
+    "id": "2026-11-03-slot-2",
+    "title": "Stop paying insane monthly SaaS subscriptions when free open-source AI builds this instantly.",
+    "date": "November 03, 2026",
+    "date_slug": "2026-11-03",
+    "slot_id": 2,
+    "slot_name": "Evening AI Toolkit (Slot 2)",
+    "badge": "AI RADAR",
+    "cta_keyword": "WORKFLOW",
+    "video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1793648852/slot_2_daily_reel_opt.mp4",
+    "summary": "Stop paying insane monthly SaaS subscriptions when free open-source AI builds this instantly.",
+    "voiceover_script": "Stop paying insane monthly SaaS subscriptions when free open-source AI builds this instantly. Three brand-new breakthrough developer repos just dropped on GitHub today. First is personal-ai-agent. It eliminates manual coding pipelines with lightning-fast local model execution. Second is Best AI Workflow Agents: 4 Types Co. An autonomous engine executing deterministic workflows with sub-millisecond response latency. Third is This Week in AI Automation: Agents. A zero-cloud runtime running complex reasoning models directly on device. Comment WORKFLOW below, and I will DM you the exact setup code right now.",
+    "items": [
+      {
+        "number": 1,
+        "name": "Personal Ai Agent",
+        "url": "https://github.com/topics/personal-ai-agent",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "allegro cursor poland obsidian browser-automation codex ai-agents psd2 playwright autonomous-checkout ap2 gemini-cli agent-skills claude-code agentic-commerce agentic-payments personal-ai-agent context-first ai-shopping-",
+        "command": "git clone https://github.com/topics/personal-ai-agent.git\ncd personal-ai-agent\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 2,
+        "name": "Best Ai Workflow Agents: 4 Types Co",
+        "url": "https://theaiagentindex.com/resources/guides/best-ai-workflow-agents",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "AI-first autonomous workflows  Lindy for an AI teammate in Slack, email and iMessage that handles inbox triage, meeting prep, scheduling and CRM updates. Beam AI for enterprise operations agents that run processes on the",
+        "command": "git clone https://theaiagentindex.com/resources/guides/best-ai-workflow-agents.git\ncd best ai workflow agents: 4 types co\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 3,
+        "name": "This Week In Ai Automation: Agents",
+        "url": "https://automateandgrow.beehiiv.com/p/new-post-bf7d",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "This Week in AI Automation: Agents Beat Their Own Safety Monitors, and Commerce Barely Noticed  ## Anthropic's red team proved a row-by-row monitor is not a safety layer. GitHub shipped agent workflows to GA. DoorDash co",
+        "command": "git clone https://automateandgrow.beehiiv.com/p/new-post-bf7d.git\ncd this week in ai automation: agents\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      }
+    ],
+    "cta_text": "Want our studio to build custom autonomous AI employees for your workflow? Follow @jayant.digitalstudio and DM 'WORKFLOW'.",
+    "tags": [
+      "#ai",
+      "#automation",
+      "#tech",
+      "#softwareengineer",
+      "#workflow"
+    ]
+  },
+  {
+    "id": "2026-11-03-slot-1",
+    "title": "Stop paying insane monthly SaaS subscriptions when free open-source AI builds this instantly.",
+    "date": "November 03, 2026",
+    "date_slug": "2026-11-03",
+    "slot_id": 1,
+    "slot_name": "Morning Breakthrough (Slot 1)",
+    "badge": "AI RADAR",
+    "cta_keyword": "REPOS",
+    "video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1793648586/slot_1_daily_reel_opt.mp4",
+    "summary": "Stop paying insane monthly SaaS subscriptions when free open-source AI builds this instantly.",
+    "voiceover_script": "Stop paying insane monthly SaaS subscriptions when free open-source AI builds this instantly. Three brand-new breakthrough developer repos just dropped on GitHub today. First is 17 Best Free AI Coding Agents in 20. It eliminates manual coding pipelines with lightning-fast local model execution. Second is Top Agent Skill Repositories on Git. An autonomous engine executing deterministic workflows with sub-millisecond response latency. Third is AI tools go autonomous, local, and. A zero-cloud runtime running complex reasoning models directly on device. Comment REPOS below, and I will DM you the exact setup code right now.",
+    "items": [
+      {
+        "number": 1,
+        "name": "17 Best Free Ai Coding Agents In 20",
+        "url": "https://agentic.ai/best/free-coding-agents",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "Agenticness22/36\u00b7Domain Specialist  Orbi is an open-source, self-hostable AI coding agent that takes GitHub Issues from implementation through independent review, merge, and release. It can run against your own model end",
+        "command": "git clone https://agentic.ai/best/free-coding-agents.git\ncd 17 best free ai coding agents in 20\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 2,
+        "name": "Top Agent Skill Repositories On Git",
+        "url": "https://linkly.ai/skills/top-repos",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "| 92 | gosom/google-maps-scraper | 6,897 | +41 | 2026-10-21 | \u2014 | golanggoogle-maps-scrapingweb-scraper | | 93 | czlonkowski/n8n-skills | 6,525 | +3 | 2026-10-24 | \u2014 | ai-agentsn8nworkflow-automation | | 94 | browser-act",
+        "command": "git clone https://linkly.ai/skills/top-repos.git\ncd top agent skill repositories on git\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 3,
+        "name": "Ai Tools Go Autonomous, Local, And",
+        "url": "https://earlysignal.news/weekly/2026-w44",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "AI tools go autonomous, local, and UI-savvy \u00b7 Early Signal weekly  Updated 16:40 UTC, rescanned every two hours Monday, November 2, 2026  The week in AI launches \u00b7 November 1, 2026  # AI tools go autonomous, local, and U",
+        "command": "git clone https://earlysignal.news/weekly/2026-w44.git\ncd ai tools go autonomous, local, and\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      }
+    ],
+    "cta_text": "Want our studio to build custom autonomous AI employees for your workflow? Follow @jayant.digitalstudio and DM 'REPOS'.",
+    "tags": [
+      "#ai",
+      "#automation",
+      "#tech",
+      "#softwareengineer",
+      "#workflow"
+    ]
+  },
+  {
     "id": "2026-11-02-slot-2",
     "title": "Still wrestling with clunky dev workflows? Your AI agent setup is painfully slow.",
     "date": "November 02, 2026",
