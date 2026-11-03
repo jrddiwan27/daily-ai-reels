@@ -1,5 +1,111 @@
 [
   {
+    "id": "2026-11-04-slot-2",
+    "title": "Drowning in lead calls? Manually qualifying prospects is crushing your productivity. Stop the grind.",
+    "date": "November 04, 2026",
+    "date_slug": "2026-11-04",
+    "slot_id": 2,
+    "slot_name": "Evening AI Toolkit (Slot 2)",
+    "badge": "AI RADAR",
+    "cta_keyword": "WORKFLOW",
+    "video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1793735400/slot_2_daily_reel_opt.mp4",
+    "summary": "Drowning in lead calls? Manually qualifying prospects is crushing your productivity. Stop the grind.",
+    "voiceover_script": "Drowning in lead calls? Manually qualifying prospects is crushing your productivity. Stop the grind. Autonomous AI agents now automate your entire sales workflow. Game over. ai-voice-agent dials leads, qualifies, books appointments, updates CRM. It handles 300 calls daily, unattended. Automate your outreach. Agentic Pipelines is generally avai. Run powerful agents in cloud or on Linux. Deploy intelligent workflows instantly. Snowflake CoCo and CoWork Power the agentic enterprise. They ground autonomous action in governed data. Build bots fast. Comment WORKFLOW below, and I will DM you the exact setup code right now.",
+    "items": [
+      {
+        "number": 1,
+        "name": "Ai Voice Agent",
+        "url": "https://github.com/topics/ai-voice-agent",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "Sponsor   Star  30  Autonomous AI call agent for GoHighLevel: calls leads, qualifies them, books appointments, and updates your CRM on autopilot. ~300 calls a day, unattended. Built in n8n with Vapi, Twilio & OpenAI.  au",
+        "command": "git clone https://github.com/topics/ai-voice-agent.git\ncd ai-voice-agent\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 2,
+        "name": "Agentic Pipelines Is Generally Avai",
+        "url": "https://www.atlassian.com/blog/bitbucket/agentic-pipelines-generally-available",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "Agentic Pipelines is generally available: run agents in Cloud or on your own Linux runners - Inside Atlassian  # Agentic Pipelines is generally available: run agents in Cloud or on your own Linux runners  November 2, 202",
+        "command": "pip install agentic pipelines is generally avai",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 3,
+        "name": "Snowflake Coco And Cowork Power The",
+        "url": "https://www.snowflake.com/en/news/press-releases/expedition-2026-coco-cowork/",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "Snowflake CoCo and CoWork Power the Agentic Enterprise  # Snowflake CoCo and CoWork Power the Agentic Enterprise, Grounded in Governed Data and Built for Autonomous Action  Snowflake CoCo and CoWork Bots work in the back",
+        "command": "git clone https://www.snowflake.com/en/news/press-releases/expedition-2026-coco-cowork/.git\ncd snowflake coco and cowork power the\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      }
+    ],
+    "cta_text": "Want our studio to build custom autonomous AI employees for your workflow? Follow @jayant.digitalstudio and DM 'WORKFLOW'.",
+    "tags": [
+      "#ai",
+      "#automation",
+      "#tech",
+      "#softwareengineer",
+      "#workflow"
+    ]
+  },
+  {
+    "id": "2026-11-04-slot-1",
+    "title": "Coding slow? Debugging nightmares? Your AI agents are stuck, costing you hours daily.",
+    "date": "November 04, 2026",
+    "date_slug": "2026-11-04",
+    "slot_id": 1,
+    "slot_name": "Morning Breakthrough (Slot 1)",
+    "badge": "AI RADAR",
+    "cta_keyword": "REPOS",
+    "video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1793735185/slot_1_daily_reel_opt.mp4",
+    "summary": "Coding slow? Debugging nightmares? Your AI agents are stuck, costing you hours daily.",
+    "voiceover_script": "Coding slow? Debugging nightmares? Your AI agents are stuck, costing you hours daily. Unleash autonomous AI agents! They code, review, and deploy for you. 17 Best Free AI Coding Agents in 20: Orbi automates GitHub issues, independently reviews, merges, and releases. Full cycle. free-ai-tool: Calabrass is your local, personal AI assistant for Windows. Chat models, organize files, boost productivity instantly. AI tools go autonomous, local, and: Embrace UI-savvy agents. They self-manage, operate locally, integrate seamlessly. Future is now. Comment REPOS below, and I will DM you the exact setup code right now.",
+    "items": [
+      {
+        "number": 1,
+        "name": "17 Best Free Ai Coding Agents In 20",
+        "url": "https://agentic.ai/best/free-coding-agents",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "Agenticness22/36\u00b7Domain Specialist  Orbi is an open-source, self-hostable AI coding agent that takes GitHub Issues from implementation through independent review, merge, and release. It can run against your own model end",
+        "command": "git clone https://agentic.ai/best/free-coding-agents.git\ncd 17 best free ai coding agents in 20\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 2,
+        "name": "Free Ai Tool",
+        "url": "https://github.com/topics/free-ai-tool",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "Updated Nov 3, 2026  JavaScript  ### CodewithMubasher / Calabrass  Star  5  Calabrass is a free, open-source personal AI assistant built to run locally on your Windows desktop. Chat with AI models, organize files in your",
+        "command": "git clone https://github.com/topics/free-ai-tool.git\ncd free-ai-tool\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 3,
+        "name": "Ai Tools Go Autonomous, Local, And",
+        "url": "https://earlysignal.news/weekly/2026-w44",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "AI tools go autonomous, local, and UI-savvy \u00b7 Early Signal weekly  Updated 14:40 UTC, rescanned every two hours Tuesday, November 3, 2026  The week in AI launches \u00b7 November 1, 2026  # AI tools go autonomous, local, and",
+        "command": "git clone https://earlysignal.news/weekly/2026-w44.git\ncd ai tools go autonomous, local, and\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      }
+    ],
+    "cta_text": "Want our studio to build custom autonomous AI employees for your workflow? Follow @jayant.digitalstudio and DM 'REPOS'.",
+    "tags": [
+      "#ai",
+      "#automation",
+      "#tech",
+      "#softwareengineer",
+      "#workflow"
+    ]
+  },
+  {
     "id": "2026-11-03-slot-2",
     "title": "Stop paying insane monthly SaaS subscriptions when free open-source AI builds this instantly.",
     "date": "November 03, 2026",
