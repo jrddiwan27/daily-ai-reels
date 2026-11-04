@@ -1,5 +1,111 @@
 [
   {
+    "id": "2026-11-05-slot-2",
+    "title": "Manual dev tasks crush your productivity? Building custom AI agents wastes endless hours?",
+    "date": "November 05, 2026",
+    "date_slug": "2026-11-05",
+    "slot_id": 2,
+    "slot_name": "Evening AI Toolkit (Slot 2)",
+    "badge": "AI RADAR",
+    "cta_keyword": "WORKFLOW",
+    "video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1793822916/slot_2_daily_reel_opt.mp4",
+    "summary": "Manual dev tasks crush your productivity? Building custom AI agents wastes endless hours?",
+    "voiceover_script": "Manual dev tasks crush your productivity? Building custom AI agents wastes endless hours? Automate everything! Deploy powerful AI agents instantly, revolutionize your workflow. First, ai-employees: it deploys autonomous AI agents, handles scheduled tasks, and generates code, automating your entire business workflow. Next, 'Best open-source AI agent framework' (LangGraph) lets you build complex, stateful AI agents, delivering incredible control and flexibility. Finally, 'Agentic Pipelines is generally avai': run your AI agents in the cloud or on Linux runners, ensuring scalable, secure, and rapid deployment. Comment WORKFLOW below, and I will DM you the exact setup code right now.",
+    "items": [
+      {
+        "number": 1,
+        "name": "Ai Employees",
+        "url": "https://github.com/topics/ai-employees?o=desc&s=updated",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "automation opencode scheduled-tasks codex small-business ai-agents antigravity claude-code claude-skill ai-employee ai-employees openclaw hermes-agent   Updated Oct 30, 2026  JavaScript  ### api-evangelist / ema  Star  0",
+        "command": "git clone https://github.com/topics/ai-employees?o=desc&s=updated.git\ncd ai-employees\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 2,
+        "name": "Best Open Source Ai Agent Framework",
+        "url": "https://www.reviewramble.com/best/open-source-ai-agent-frameworks",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "LangGraph: langchain-ai/langgraph on GitHub  Browser Use: browser-use/browser-use on GitHub (README)  Pydantic AI: pydantic/pydantic-ai on GitHub  Mastra: mastra-ai/mastra on GitHub  MCP Python SDK: modelcontextprotocol/",
+        "command": "pip install best open-source ai agent framework",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 3,
+        "name": "Agentic Pipelines Is Generally Avai",
+        "url": "https://www.atlassian.com/blog/bitbucket/agentic-pipelines-generally-available",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "Agentic Pipelines is generally available: run agents in Cloud or on your own Linux runners - Inside Atlassian  # Agentic Pipelines is generally available: run agents in Cloud or on your own Linux runners  November 2, 202",
+        "command": "pip install agentic pipelines is generally avai",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      }
+    ],
+    "cta_text": "Want our studio to build custom autonomous AI employees for your workflow? Follow @jayant.digitalstudio and DM 'WORKFLOW'.",
+    "tags": [
+      "#ai",
+      "#automation",
+      "#tech",
+      "#softwareengineer",
+      "#workflow"
+    ]
+  },
+  {
+    "id": "2026-11-05-slot-1",
+    "title": "Struggling to manage complex multi-repo AI agent orchestration? Your workflow is a mess.",
+    "date": "November 05, 2026",
+    "date_slug": "2026-11-05",
+    "slot_id": 1,
+    "slot_name": "Morning Breakthrough (Slot 1)",
+    "badge": "AI RADAR",
+    "cta_keyword": "REPOS",
+    "video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1793822597/slot_1_daily_reel_opt.mp4",
+    "summary": "Struggling to manage complex multi-repo AI agent orchestration? Your workflow is a mess.",
+    "voiceover_script": "Struggling to manage complex multi-repo AI agent orchestration? Your workflow is a mess. Stop the chaos! These three AI tools revolutionize your multi-repo development. 7 Best Multi-Repo AI Agent Orchestr unifies agent CLIs. Auto-detects, integrates 34 agents. Orchestrates multi-repo projects fast, boosting productivity. Gentleman-Programming accelerates AI coding. It refines workflows, generates optimized code. Boosts development speed, delivering elegant solutions fast. Harneo Introduces New Open-Source L manages Claude Code skills. It streamlines integration, enhances capabilities, optimizes performance. Unlock powerful AI. Comment REPOS below, and I will DM you the exact setup code right now.",
+    "items": [
+      {
+        "number": 1,
+        "name": "7 Best Multi Repo Ai Agent Orchestr",
+        "url": "https://www.gitkraken.com/blog/7-best-multi-repo-ai-agent-orchestration-tools-2026",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "Emdash is an open-source agentic development environment backed by Y Combinator (W26). It auto-detects installed agent CLIs on your machine, supporting 34 agents including Claude Code, Codex, Cursor, Amp, and Devin. Each",
+        "command": "git clone https://www.gitkraken.com/blog/7-best-multi-repo-ai-agent-orchestration-tools-2026.git\ncd 7 best multi-repo ai agent orchestr\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 2,
+        "name": "Gentleman Programming",
+        "url": "https://github.com/Gentleman-Programming",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "Astro   3  MIT   2  0  0  Updated Sep 22, 2026  gentle-ai-landing  Public   Forked from Reaan06/gentle-ai-landing    Landing page for Gentle-AI - The AI Coding Ecosystem    Gentleman-Programming/gentle-ai-landing's past",
+        "command": "git clone https://github.com/Gentleman-Programming.git\ncd gentleman-programming\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 3,
+        "name": "Harneo Introduces New Open Source L",
+        "url": "https://www.opensourceforu.com/2026/11/harneo-library-claude-code-skills/",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "Harneo Introduces New Open-Source Library: 5 Key Features of the Library  # Harneo Introduces New Open-Source Library for Managing Claude Code Skills  By  Nandini Roy Chowdhury  November 4, 2026  Representational Image",
+        "command": "git clone https://www.opensourceforu.com/2026/11/harneo-library-claude-code-skills/.git\ncd harneo introduces new open-source l\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      }
+    ],
+    "cta_text": "Want our studio to build custom autonomous AI employees for your workflow? Follow @jayant.digitalstudio and DM 'REPOS'.",
+    "tags": [
+      "#ai",
+      "#automation",
+      "#tech",
+      "#softwareengineer",
+      "#workflow"
+    ]
+  },
+  {
     "id": "2026-11-04-slot-2",
     "title": "Drowning in lead calls? Manually qualifying prospects is crushing your productivity. Stop the grind.",
     "date": "November 04, 2026",

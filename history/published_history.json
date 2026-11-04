@@ -3264,5 +3264,79 @@
         "source": "Exa (24h Index)"
       }
     ]
+  },
+  {
+    "slot_id": 1,
+    "slot_name": "Morning Breakthrough (Slot 1)",
+    "timestamp_utc": "2026-11-04T20:03:50.981978+00:00",
+    "date_ist": "2026-11-05 9:00 AM IST (Scheduled for 03:30 UTC)",
+    "buffer_post_id": "6aeb8fa4a101dc5e7730faec",
+    "channel_results": {
+      "instagram": "6aeb8fa4a101dc5e7730faec",
+      "youtube": "6aeb8fa601a821141727273f",
+      "twitter": "6aeb8fa660e67ef1d1cc097c",
+      "public_video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1793822597/slot_1_daily_reel_opt.mp4"
+    },
+    "video_path": "out/slot_1_daily_reel_opt.mp4",
+    "items": [
+      {
+        "title": "7 Best Multi-Repo AI Agent Orchestration Tools (2026)",
+        "name": "7 Best Multi-Repo AI Agent Orchestr",
+        "description": "Emdash is an open-source agentic development environment backed by Y Combinator (W26). It auto-detects installed agent CLIs on your machine, supporting 34 agents including Claude Code, Codex, Cursor, Amp, and Devin. Each",
+        "url": "https://www.gitkraken.com/blog/7-best-multi-repo-ai-agent-orchestration-tools-2026",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "Gentleman-Programming \u00b7 GitHub",
+        "name": "Gentleman-Programming",
+        "description": "Astro   3  MIT   2  0  0  Updated Sep 22, 2026  gentle-ai-landing  Public   Forked from Reaan06/gentle-ai-landing    Landing page for Gentle-AI - The AI Coding Ecosystem    Gentleman-Programming/gentle-ai-landing's past",
+        "url": "https://github.com/Gentleman-Programming",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "Harneo Introduces New Open-Source Library: 5 Key Features of the Library",
+        "name": "Harneo Introduces New Open-Source L",
+        "description": "Harneo Introduces New Open-Source Library: 5 Key Features of the Library  # Harneo Introduces New Open-Source Library for Managing Claude Code Skills  By  Nandini Roy Chowdhury  November 4, 2026  Representational Image",
+        "url": "https://www.opensourceforu.com/2026/11/harneo-library-claude-code-skills/",
+        "source": "Exa (24h Index)"
+      }
+    ]
+  },
+  {
+    "slot_id": 2,
+    "slot_name": "Evening AI Toolkit (Slot 2)",
+    "timestamp_utc": "2026-11-04T20:09:08.889067+00:00",
+    "date_ist": "2026-11-05 7:00 PM IST (Scheduled for 13:30 UTC)",
+    "buffer_post_id": "6aeb90e201a821141727a7d1",
+    "channel_results": {
+      "instagram": "6aeb90e201a821141727a7d1",
+      "youtube": "6aeb90e360e67ef1d1cc886b",
+      "twitter": "6aeb90e460e67ef1d1cc88b7",
+      "public_video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1793822916/slot_2_daily_reel_opt.mp4"
+    },
+    "video_path": "out/slot_2_daily_reel_opt.mp4",
+    "items": [
+      {
+        "title": "ai-employees \u00b7 GitHub Topics \u00b7 GitHub",
+        "name": "ai-employees",
+        "description": "automation opencode scheduled-tasks codex small-business ai-agents antigravity claude-code claude-skill ai-employee ai-employees openclaw hermes-agent   Updated Oct 30, 2026  JavaScript  ### api-evangelist / ema  Star  0",
+        "url": "https://github.com/topics/ai-employees?o=desc&s=updated",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "Best open-source AI agent frameworks (2026), ranked",
+        "name": "Best open-source AI agent framework",
+        "description": "LangGraph: langchain-ai/langgraph on GitHub  Browser Use: browser-use/browser-use on GitHub (README)  Pydantic AI: pydantic/pydantic-ai on GitHub  Mastra: mastra-ai/mastra on GitHub  MCP Python SDK: modelcontextprotocol/",
+        "url": "https://www.reviewramble.com/best/open-source-ai-agent-frameworks",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "Agentic Pipelines is generally available: run agents in Cloud or on your own Linux runners - Inside Atlassian",
+        "name": "Agentic Pipelines is generally avai",
+        "description": "Agentic Pipelines is generally available: run agents in Cloud or on your own Linux runners - Inside Atlassian  # Agentic Pipelines is generally available: run agents in Cloud or on your own Linux runners  November 2, 202",
+        "url": "https://www.atlassian.com/blog/bitbucket/agentic-pipelines-generally-available",
+        "source": "Exa (24h Index)"
+      }
+    ]
   }
 ]
