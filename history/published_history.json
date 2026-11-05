@@ -3338,5 +3338,79 @@
         "source": "Exa (24h Index)"
       }
     ]
+  },
+  {
+    "slot_id": 1,
+    "slot_name": "Morning Breakthrough (Slot 1)",
+    "timestamp_utc": "2026-11-05T20:16:14.006683+00:00",
+    "date_ist": "2026-11-06 9:00 AM IST (Scheduled for 03:30 UTC)",
+    "buffer_post_id": "6aece40b304e22db1527f620",
+    "channel_results": {
+      "instagram": "6aece40b304e22db1527f620",
+      "youtube": "6aece40c48c35583f6b9a476",
+      "twitter": "6aece40dbe5773ab37068ec9",
+      "public_video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1793909747/slot_1_daily_reel_opt.mp4"
+    },
+    "video_path": "out/slot_1_daily_reel_opt.mp4",
+    "items": [
+      {
+        "title": "Ever wondered which are the top GitHub repos of 2026? ...",
+        "name": "Ever wondered which are the top Git",
+        "description": "The most trending open-source projects on GitHub right now: three rapidly growing AI projects on GitHub. Strix, an open-source AI penetration testing agent for",
+        "url": "https://www.facebook.com/marantaya/posts/ever-wondered-which-are-the-top-github-repos-of-2026-wellllwe-all-love-recreatin/1043812052053055",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "Open source AI agents: the best in 2026, every license checked",
+        "name": "Open source AI agents: the best in",
+        "description": "contenox  # Open source AI agents: the best in 2026, every license checked  Updated  An open source AI agent is a program you can read, build and change that gives a language model tools and runs it in a loop until a tas",
+        "url": "https://contenox.com/compare/open-source-ai-agents",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "software-factory \u00b7 GitHub Topics \u00b7 GitHub",
+        "name": "software-factory",
+        "description": "Updated Oct 30, 2026  Go  ### Agent-Field / CodeAF  Star  605  Open-Source Software factory for Open Models  ai developer-tools harness software-factory open-source-models open-models coding-assistant llm coding-agents a",
+        "url": "https://github.com/topics/software-factory",
+        "source": "Tavily (Real-Time)"
+      }
+    ]
+  },
+  {
+    "slot_id": 2,
+    "slot_name": "Evening AI Toolkit (Slot 2)",
+    "timestamp_utc": "2026-11-05T20:19:50.796142+00:00",
+    "date_ist": "2026-11-06 7:00 PM IST (Scheduled for 13:30 UTC)",
+    "buffer_post_id": "6aece4e4554a1794e55c4cf4",
+    "channel_results": {
+      "instagram": "6aece4e4554a1794e55c4cf4",
+      "youtube": "6aece4e5304e22db15283ba3",
+      "twitter": "6aece4e6be5773ab3706e505",
+      "public_video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1793909967/slot_2_daily_reel_opt.mp4"
+    },
+    "video_path": "out/slot_2_daily_reel_opt.mp4",
+    "items": [
+      {
+        "title": "software-factory \u00b7 GitHub Topics \u00b7 GitHub",
+        "name": "software-factory",
+        "description": "### superplanehq / superplane  Star  8.5k  Open source factory for one-shot engineering  react go self-hosted developer-tools workflow-automation software-factory ai-agents agentic-workflows ai-software-engineering ai-co",
+        "url": "https://github.com/topics/software-factory",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "ai-browser \u00b7 GitHub Topics \u00b7 GitHub",
+        "name": "ai-browser",
+        "description": "Updated Oct 22, 2026  Swift  ### DeepFundAI / ai-browser  Star  170  \ud83e\udd16 An AI-powered desktop automation agent built with Electron & Next.js - Control your computer like manus, but as a native desktop app, an ai browser!",
+        "url": "https://github.com/topics/ai-browser",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "ai-employees \u00b7 GitHub Topics \u00b7 GitHub",
+        "name": "ai-employees",
+        "description": "automation opencode scheduled-tasks codex small-business ai-agents antigravity claude-code claude-skill ai-employee ai-employees openclaw hermes-agent   Updated Oct 30, 2026  JavaScript  ### api-evangelist / ema  Star  0",
+        "url": "https://github.com/topics/ai-employees?o=desc&s=updated",
+        "source": "Tavily (Real-Time)"
+      }
+    ]
   }
 ]

@@ -1,5 +1,111 @@
 [
   {
+    "id": "2026-11-06-slot-2",
+    "title": "Stop paying insane monthly SaaS subscriptions when free open-source AI builds this instantly.",
+    "date": "November 06, 2026",
+    "date_slug": "2026-11-06",
+    "slot_id": 2,
+    "slot_name": "Evening AI Toolkit (Slot 2)",
+    "badge": "AI RADAR",
+    "cta_keyword": "WORKFLOW",
+    "video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1793909967/slot_2_daily_reel_opt.mp4",
+    "summary": "Stop paying insane monthly SaaS subscriptions when free open-source AI builds this instantly.",
+    "voiceover_script": "Stop paying insane monthly SaaS subscriptions when free open-source AI builds this instantly. Three brand-new breakthrough developer repos just dropped on GitHub today. First is software-factory. It eliminates manual coding pipelines with lightning-fast local model execution. Second is ai-browser. An autonomous engine executing deterministic workflows with sub-millisecond response latency. Third is ai-employees. A zero-cloud runtime running complex reasoning models directly on device. Comment WORKFLOW below, and I will DM you the exact setup code right now.",
+    "items": [
+      {
+        "number": 1,
+        "name": "Software Factory",
+        "url": "https://github.com/topics/software-factory",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "### superplanehq / superplane  Star  8.5k  Open source factory for one-shot engineering  react go self-hosted developer-tools workflow-automation software-factory ai-agents agentic-workflows ai-software-engineering ai-co",
+        "command": "git clone https://github.com/topics/software-factory.git\ncd software-factory\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 2,
+        "name": "Ai Browser",
+        "url": "https://github.com/topics/ai-browser",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "Updated Oct 22, 2026  Swift  ### DeepFundAI / ai-browser  Star  170  \ud83e\udd16 An AI-powered desktop automation agent built with Electron & Next.js - Control your computer like manus, but as a native desktop app, an ai browser!",
+        "command": "git clone https://github.com/topics/ai-browser.git\ncd ai-browser\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 3,
+        "name": "Ai Employees",
+        "url": "https://github.com/topics/ai-employees?o=desc&s=updated",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "automation opencode scheduled-tasks codex small-business ai-agents antigravity claude-code claude-skill ai-employee ai-employees openclaw hermes-agent   Updated Oct 30, 2026  JavaScript  ### api-evangelist / ema  Star  0",
+        "command": "git clone https://github.com/topics/ai-employees?o=desc&s=updated.git\ncd ai-employees\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      }
+    ],
+    "cta_text": "Want our studio to build custom autonomous AI employees for your workflow? Follow @jayant.digitalstudio and DM 'WORKFLOW'.",
+    "tags": [
+      "#ai",
+      "#automation",
+      "#tech",
+      "#softwareengineer",
+      "#workflow"
+    ]
+  },
+  {
+    "id": "2026-11-06-slot-1",
+    "title": "Stuck finding cutting-edge AI repos? Stop wasting hours on outdated projects.",
+    "date": "November 06, 2026",
+    "date_slug": "2026-11-06",
+    "slot_id": 1,
+    "slot_name": "Morning Breakthrough (Slot 1)",
+    "badge": "AI RADAR",
+    "cta_keyword": "REPOS",
+    "video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1793909747/slot_1_daily_reel_opt.mp4",
+    "summary": "Stuck finding cutting-edge AI repos? Stop wasting hours on outdated projects.",
+    "voiceover_script": "Stuck finding cutting-edge AI repos? Stop wasting hours on outdated projects. Unlock the exact top trending open-source AI projects right now. Ever wondered which are the top Git? Strix, an AI penetration testing agent, rapidly identifies vulnerabilities, securing your systems fast. Open source AI agents: the best in Contenox. Build, change, deploy powerful language models. It runs models, completing tasks efficiently. software-factory CodeAF: an open-source factory for AI models. It harnesses LLMs, assisting coding, rapidly building applications. Comment REPOS below, and I will DM you the exact setup code right now.",
+    "items": [
+      {
+        "number": 1,
+        "name": "Ever Wondered Which Are The Top Git",
+        "url": "https://www.facebook.com/marantaya/posts/ever-wondered-which-are-the-top-github-repos-of-2026-wellllwe-all-love-recreatin/1043812052053055",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "The most trending open-source projects on GitHub right now: three rapidly growing AI projects on GitHub. Strix, an open-source AI penetration testing agent for",
+        "command": "git clone https://www.facebook.com/marantaya/posts/ever-wondered-which-are-the-top-github-repos-of-2026-wellllwe-all-love-recreatin/1043812052053055.git\ncd ever wondered which are the top git\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 2,
+        "name": "Open Source Ai Agents: The Best In",
+        "url": "https://contenox.com/compare/open-source-ai-agents",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "contenox  # Open source AI agents: the best in 2026, every license checked  Updated  An open source AI agent is a program you can read, build and change that gives a language model tools and runs it in a loop until a tas",
+        "command": "git clone https://contenox.com/compare/open-source-ai-agents.git\ncd open source ai agents: the best in\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 3,
+        "name": "Software Factory",
+        "url": "https://github.com/topics/software-factory",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "Updated Oct 30, 2026  Go  ### Agent-Field / CodeAF  Star  605  Open-Source Software factory for Open Models  ai developer-tools harness software-factory open-source-models open-models coding-assistant llm coding-agents a",
+        "command": "git clone https://github.com/topics/software-factory.git\ncd software-factory\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      }
+    ],
+    "cta_text": "Want our studio to build custom autonomous AI employees for your workflow? Follow @jayant.digitalstudio and DM 'REPOS'.",
+    "tags": [
+      "#ai",
+      "#automation",
+      "#tech",
+      "#softwareengineer",
+      "#workflow"
+    ]
+  },
+  {
     "id": "2026-11-05-slot-2",
     "title": "Manual dev tasks crush your productivity? Building custom AI agents wastes endless hours?",
     "date": "November 05, 2026",
