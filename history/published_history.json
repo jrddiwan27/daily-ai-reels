@@ -3412,5 +3412,79 @@
         "source": "Tavily (Real-Time)"
       }
     ]
+  },
+  {
+    "slot_id": 1,
+    "slot_name": "Morning Breakthrough (Slot 1)",
+    "timestamp_utc": "2026-11-06T20:10:58.731894+00:00",
+    "date_ist": "2026-11-07 9:00 AM IST (Scheduled for 03:30 UTC)",
+    "buffer_post_id": "6aee34509214322f68ac6c7d",
+    "channel_results": {
+      "instagram": "6aee34509214322f68ac6c7d",
+      "youtube": "6aee3451229bf05daf099fe1",
+      "twitter": "6aee3452af7e526d43dcabdc",
+      "public_video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1793995835/slot_1_daily_reel_opt.mp4"
+    },
+    "video_path": "out/slot_1_daily_reel_opt.mp4",
+    "items": [
+      {
+        "title": "StepSecurity Now Inventories AI Agent Skills in Your GitHub Repositories and on Developer Machines - StepSecurity",
+        "name": "StepSecurity Now Inventories AI Age",
+        "description": "Subham Ray  View LinkedIn  October 8, 2026  Read  ## Tensorlake npm Package Compromised: A Worm With a Hostage Token That Wipes Your Machine If You Revoke It  The malicious release was built from the project's own main b",
+        "url": "https://www.stepsecurity.io/blog/stepsecurity-now-inventories-ai-agent-skills-in-your-github-repositories-and-on-developer-machines",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "agentic-coding-environment \u00b7 GitHub Topics \u00b7 GitHub",
+        "name": "agentic-coding-environment",
+        "description": "macos linux agent application ai archlinux ide ace coding electron-app appimage ai-agents ai-coding coding-agent agent-harness agentic-coding-environment   Updated Nov 4, 2026  TypeScript  ### cs3b / ace  Star  3  ACE \u2014",
+        "url": "https://github.com/topics/agentic-coding-environment",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "Harneo Introduces New Open-Source Library: 5 Key Features of the Library",
+        "name": "Harneo Introduces New Open-Source L",
+        "description": "Harneo Introduces New Open-Source Library: 5 Key Features of the Library  # Harneo Introduces New Open-Source Library for Managing Claude Code Skills  By  Nandini Roy Chowdhury  November 4, 2026  Representational Image",
+        "url": "https://www.opensourceforu.com/2026/11/harneo-library-claude-code-skills/",
+        "source": "Exa (24h Index)"
+      }
+    ]
+  },
+  {
+    "slot_id": 2,
+    "slot_name": "Evening AI Toolkit (Slot 2)",
+    "timestamp_utc": "2026-11-06T20:15:13.192427+00:00",
+    "date_ist": "2026-11-07 7:00 PM IST (Scheduled for 13:30 UTC)",
+    "buffer_post_id": "6aee354e229bf05daf09f0e0",
+    "channel_results": {
+      "instagram": "6aee354e229bf05daf09f0e0",
+      "youtube": "6aee3550a7751de7c9a69041",
+      "twitter": "6aee3551a7751de7c9a690a0",
+      "public_video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1793996088/slot_2_daily_reel_opt.mp4"
+    },
+    "video_path": "out/slot_2_daily_reel_opt.mp4",
+    "items": [
+      {
+        "title": "custom-agents \u00b7 GitHub Topics \u00b7 GitHub",
+        "name": "custom-agents",
+        "description": "short-film react-patterns video-generation agent-framework ai-agent ai-filmmaking llm-orchestration multimodal-ai custom-agents short-films seedance open-source-agent script-pipeline film-automation   Updated Nov 2, 2026",
+        "url": "https://github.com/topics/custom-agents",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "AI Agents News \u2014 Week of November 6, 2026 (Daily Updates)",
+        "name": "AI Agents News \u2014 Week of November 6",
+        "description": "What changed: AWS published a hands\u2011on Machine Learning blog that provides a full recipe (five Jupyter notebooks + GitHub repo) for a multi\u2011agent engineering assistant built with Amazon Nova Multimodal Embeddings and Ama",
+        "url": "https://aiagentstore.ai/ai-agent-news/this-week",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "n8n-automation \u00b7 GitHub Topics \u00b7 GitHub",
+        "name": "n8n-automation",
+        "description": "### AnupamaCVenugopal / AutosarDebuggingAutomation  AI-assisted AUTOSAR debugging pipeline for baseline-vs-failure path analysis, RCA suggestion, dashboard generation, and human-in-the-loop review.  ### dinosauronthemoon",
+        "url": "https://github.com/topics/n8n-automation?l=html&o=desc&s=updated",
+        "source": "Tavily (Real-Time)"
+      }
+    ]
   }
 ]

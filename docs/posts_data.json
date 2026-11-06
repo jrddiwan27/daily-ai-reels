@@ -1,5 +1,111 @@
 [
   {
+    "id": "2026-11-07-slot-2",
+    "title": "Devs, AI projects drowning in manual tasks? Workflow bottlenecks crushing your velocity? Stop the grind now",
+    "date": "November 07, 2026",
+    "date_slug": "2026-11-07",
+    "slot_id": 2,
+    "slot_name": "Evening AI Toolkit (Slot 2)",
+    "badge": "AI RADAR",
+    "cta_keyword": "WORKFLOW",
+    "video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1793996088/slot_2_daily_reel_opt.mp4",
+    "summary": "Devs, AI projects drowning in manual tasks? Workflow bottlenecks crushing your velocity? Stop the grind now!",
+    "voiceover_script": "Devs, AI projects drowning in manual tasks? Workflow bottlenecks crushing your velocity? Stop the grind now! Automate everything. Unleash autonomous agents. Build faster, smarter, effortlessly. custom-agents generates entire short films. It orchestrates multimodal AI, automating script to screen. Create cinematic experiences rapidly. AI Agents News \u2014 Week of November 6 reveals AWS\u2019s multi-agent assistant. Build intelligent engineering workflows with Nova. Grab the recipe. n8n-automation builds AI-assisted AUTOSAR debugging pipelines. It analyzes failures, suggests root causes, generates dashboards. Debug faster. Comment WORKFLOW below, and I will DM you the exact setup code right now.",
+    "items": [
+      {
+        "number": 1,
+        "name": "Custom Agents",
+        "url": "https://github.com/topics/custom-agents",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "short-film react-patterns video-generation agent-framework ai-agent ai-filmmaking llm-orchestration multimodal-ai custom-agents short-films seedance open-source-agent script-pipeline film-automation   Updated Nov 2, 2026",
+        "command": "pip install custom-agents",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 2,
+        "name": "Ai Agents News \u2014 Week Of November 6",
+        "url": "https://aiagentstore.ai/ai-agent-news/this-week",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "What changed: AWS published a hands\u2011on Machine Learning blog that provides a full recipe (five Jupyter notebooks + GitHub repo) for a multi\u2011agent engineering assistant built with Amazon Nova Multimodal Embeddings and Ama",
+        "command": "git clone https://aiagentstore.ai/ai-agent-news/this-week.git\ncd ai agents news \u2014 week of november 6\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 3,
+        "name": "N8N Automation",
+        "url": "https://github.com/topics/n8n-automation?l=html&o=desc&s=updated",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "### AnupamaCVenugopal / AutosarDebuggingAutomation  AI-assisted AUTOSAR debugging pipeline for baseline-vs-failure path analysis, RCA suggestion, dashboard generation, and human-in-the-loop review.  ### dinosauronthemoon",
+        "command": "pip install n8n-automation",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      }
+    ],
+    "cta_text": "Want our studio to build custom autonomous AI employees for your workflow? Follow @jayant.digitalstudio and DM 'WORKFLOW'.",
+    "tags": [
+      "#ai",
+      "#automation",
+      "#tech",
+      "#softwareengineer",
+      "#workflow"
+    ]
+  },
+  {
+    "id": "2026-11-07-slot-1",
+    "title": "Are you still manually tracking AI supply chain risks? Your security is already compromised",
+    "date": "November 07, 2026",
+    "date_slug": "2026-11-07",
+    "slot_id": 1,
+    "slot_name": "Morning Breakthrough (Slot 1)",
+    "badge": "AI RADAR",
+    "cta_keyword": "REPOS",
+    "video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1793995835/slot_1_daily_reel_opt.mp4",
+    "summary": "Are you still manually tracking AI supply chain risks? Your security is already compromised!",
+    "voiceover_script": "Are you still manually tracking AI supply chain risks? Your security is already compromised! Automate AI security. Build faster. Deploy safer. The future is here now. StepSecurity Now Inventories AI Age instantly detects AI supply chain threats. It pinpoints malicious packages, prevents token hijacking, securing your whole system. agentic-coding-environment is your next-gen IDE. It empowers AI agents to autonomously write, debug, and optimize code. Develop faster. Harneo Introduces New Open-Source L revolutionizes Claude code skill management. It streamlines integration, enhances performance, providing robust control. Comment REPOS below, and I will DM you the exact setup code right now.",
+    "items": [
+      {
+        "number": 1,
+        "name": "Stepsecurity Now Inventories Ai Age",
+        "url": "https://www.stepsecurity.io/blog/stepsecurity-now-inventories-ai-agent-skills-in-your-github-repositories-and-on-developer-machines",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "Subham Ray  View LinkedIn  October 8, 2026  Read  ## Tensorlake npm Package Compromised: A Worm With a Hostage Token That Wipes Your Machine If You Revoke It  The malicious release was built from the project's own main b",
+        "command": "npx stepsecurity now inventories ai age --latest",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 2,
+        "name": "Agentic Coding Environment",
+        "url": "https://github.com/topics/agentic-coding-environment",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "macos linux agent application ai archlinux ide ace coding electron-app appimage ai-agents ai-coding coding-agent agent-harness agentic-coding-environment   Updated Nov 4, 2026  TypeScript  ### cs3b / ace  Star  3  ACE \u2014",
+        "command": "npx agentic-coding-environment --latest",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 3,
+        "name": "Harneo Introduces New Open Source L",
+        "url": "https://www.opensourceforu.com/2026/11/harneo-library-claude-code-skills/",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "Harneo Introduces New Open-Source Library: 5 Key Features of the Library  # Harneo Introduces New Open-Source Library for Managing Claude Code Skills  By  Nandini Roy Chowdhury  November 4, 2026  Representational Image",
+        "command": "git clone https://www.opensourceforu.com/2026/11/harneo-library-claude-code-skills/.git\ncd harneo introduces new open-source l\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      }
+    ],
+    "cta_text": "Want our studio to build custom autonomous AI employees for your workflow? Follow @jayant.digitalstudio and DM 'REPOS'.",
+    "tags": [
+      "#ai",
+      "#automation",
+      "#tech",
+      "#softwareengineer",
+      "#workflow"
+    ]
+  },
+  {
     "id": "2026-11-06-slot-2",
     "title": "Stop paying insane monthly SaaS subscriptions when free open-source AI builds this instantly.",
     "date": "November 06, 2026",
