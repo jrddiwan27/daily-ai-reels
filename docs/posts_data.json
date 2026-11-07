@@ -1,5 +1,111 @@
 [
   {
+    "id": "2026-11-08-slot-2",
+    "title": "AI development stalled by complex setups, security headaches? Stop wasting precious time now",
+    "date": "November 08, 2026",
+    "date_slug": "2026-11-08",
+    "slot_id": 2,
+    "slot_name": "Evening AI Toolkit (Slot 2)",
+    "badge": "AI RADAR",
+    "cta_keyword": "WORKFLOW",
+    "video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1794080491/slot_2_daily_reel_opt.mp4",
+    "summary": "AI development stalled by complex setups, security headaches? Stop wasting precious time now!",
+    "voiceover_script": "AI development stalled by complex setups, security headaches? Stop wasting precious time now! Unleash true self-hosted AI power with these game-changing open-source tools. n8n: Instantly sets up your local AI environment. This open-source kit enables building secure, self-hosted AI workflows efficiently. Self-Hosted AI Workflow Automation: Apache Airflow delivers robust scheduling, backfilling for data-intensive pipelines, powerfully empowering complex team needs. 17 Best Free AI Coding Agents in 20: Orbi, an open-source agent, fully automates GitHub issues: implementation, review, merge, and release. Comment WORKFLOW below, and I will DM you the exact setup code right now.",
+    "items": [
+      {
+        "number": 1,
+        "name": "N8N",
+        "url": "https://github.com/n8n-io",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "The Self-hosted AI Starter Kit is an open-source template that quickly sets up a local AI environment. Curated by n8n, it provides essential tools for creating secure, self-hosted AI workflows.     15.3k   3.8k  ### Repo",
+        "command": "git clone https://github.com/n8n-io.git\ncd n8n\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 2,
+        "name": "Self Hosted Ai Workflow Automation:",
+        "url": "https://www.activepieces.com/blog/self-hosted-ai-workflow-automation-a-2026-guide",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "47,101 stars are maintained by Apache Airflow for data-intensive pipelines, providing a mature foundation for teams that require strict scheduling and backfilling capabilities.  Conductor follows with 32,052 stars, servi",
+        "command": "pip install self-hosted ai workflow automation:",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 3,
+        "name": "17 Best Free Ai Coding Agents In 20",
+        "url": "https://agentic.ai/best/free-coding-agents",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "Agenticness22/36\u00b7Domain Specialist  Orbi is an open-source, self-hostable AI coding agent that takes GitHub Issues from implementation through independent review, merge, and release. It can run against your own model end",
+        "command": "git clone https://agentic.ai/best/free-coding-agents.git\ncd 17 best free ai coding agents in 20\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      }
+    ],
+    "cta_text": "Want our studio to build custom autonomous AI employees for your workflow? Follow @jayant.digitalstudio and DM 'WORKFLOW'.",
+    "tags": [
+      "#ai",
+      "#automation",
+      "#tech",
+      "#softwareengineer",
+      "#workflow"
+    ]
+  },
+  {
+    "id": "2026-11-08-slot-1",
+    "title": "Coding slow? Finding effective free AI agents feels impossible. You're wasting hours.",
+    "date": "November 08, 2026",
+    "date_slug": "2026-11-08",
+    "slot_id": 1,
+    "slot_name": "Morning Breakthrough (Slot 1)",
+    "badge": "AI RADAR",
+    "cta_keyword": "REPOS",
+    "video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1794080164/slot_1_daily_reel_opt.mp4",
+    "summary": "Coding slow? Finding effective free AI agents feels impossible. You're wasting hours.",
+    "voiceover_script": "Coding slow? Finding effective free AI agents feels impossible. You're wasting hours. No more. I found the ultimate AI agent lineup. Instant productivity boost. 17 Best Free AI Coding Agents in 20: Orbi automates GitHub issues, independently reviews, merges, and releases code fast. Work together, your way, with GitHu: Streamline team collaboration, agree on builds, and optimize development workflows effortlessly. Shipped today: new releases of AI b: Discover fresh AI builder tools, track stable releases, access changelogs for innovation. Comment REPOS below, and I will DM you the exact setup code right now.",
+    "items": [
+      {
+        "number": 1,
+        "name": "17 Best Free Ai Coding Agents In 20",
+        "url": "https://agentic.ai/best/free-coding-agents",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "Agenticness22/36\u00b7Domain Specialist  Orbi is an open-source, self-hostable AI coding agent that takes GitHub Issues from implementation through independent review, merge, and release. It can run against your own model end",
+        "command": "git clone https://agentic.ai/best/free-coding-agents.git\ncd 17 best free ai coding agents in 20\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 2,
+        "name": "Work Together, Your Way, With Githu",
+        "url": "https://www.youtube.com/watch?v=VJBTPepfWUI",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "### Description 815 views Posted: 2026-11-07 Your team might agree on what to build, but how to build it is another conversation. In this GitHub Universe 2026 session, join Pierce Boggan, Burke Holland, James Montemagno,",
+        "command": "git clone https://www.youtube.com/watch?v=VJBTPepfWUI.git\ncd work together, your way, with githu\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 3,
+        "name": "Shipped Today: New Releases Of Ai B",
+        "url": "https://pickoneai.com/shipped/",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "Shipped today: new releases of AI builder tools | PickOneAI  # Shipped today  Stable releases from tools we rank, last 14 days, from GitHub releases plus official changelogs for closed-source tools. Every item links to t",
+        "command": "git clone https://pickoneai.com/shipped/.git\ncd shipped today: new releases of ai b\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      }
+    ],
+    "cta_text": "Want our studio to build custom autonomous AI employees for your workflow? Follow @jayant.digitalstudio and DM 'REPOS'.",
+    "tags": [
+      "#ai",
+      "#automation",
+      "#tech",
+      "#softwareengineer",
+      "#workflow"
+    ]
+  },
+  {
     "id": "2026-11-07-slot-2",
     "title": "Devs, AI projects drowning in manual tasks? Workflow bottlenecks crushing your velocity? Stop the grind now",
     "date": "November 07, 2026",

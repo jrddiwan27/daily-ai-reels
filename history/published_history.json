@@ -3486,5 +3486,79 @@
         "source": "Tavily (Real-Time)"
       }
     ]
+  },
+  {
+    "slot_id": 1,
+    "slot_name": "Morning Breakthrough (Slot 1)",
+    "timestamp_utc": "2026-11-07T19:36:34.969283+00:00",
+    "date_ist": "2026-11-08 9:00 AM IST (Scheduled for 03:30 UTC)",
+    "buffer_post_id": "6aef7dc1229bf05daf6dde41",
+    "channel_results": {
+      "instagram": "6aef7dc1229bf05daf6dde41",
+      "youtube": "6aef7dc1229bf05daf6dde87",
+      "twitter": "6aef7dc29214322f6810fbe1",
+      "public_video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1794080164/slot_1_daily_reel_opt.mp4"
+    },
+    "video_path": "out/slot_1_daily_reel_opt.mp4",
+    "items": [
+      {
+        "title": "17 Best Free AI Coding Agents in 2026 | Agentic.ai",
+        "name": "17 Best Free AI Coding Agents in 20",
+        "description": "Agenticness22/36\u00b7Domain Specialist  Orbi is an open-source, self-hostable AI coding agent that takes GitHub Issues from implementation through independent review, merge, and release. It can run against your own model end",
+        "url": "https://agentic.ai/best/free-coding-agents",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "Work together, your way, with GitHub Copilot",
+        "name": "Work together, your way, with GitHu",
+        "description": "### Description 815 views Posted: 2026-11-07 Your team might agree on what to build, but how to build it is another conversation. In this GitHub Universe 2026 session, join Pierce Boggan, Burke Holland, James Montemagno,",
+        "url": "https://www.youtube.com/watch?v=VJBTPepfWUI",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "Shipped today: new releases of AI builder tools | PickOneAI",
+        "name": "Shipped today: new releases of AI b",
+        "description": "Shipped today: new releases of AI builder tools | PickOneAI  # Shipped today  Stable releases from tools we rank, last 14 days, from GitHub releases plus official changelogs for closed-source tools. Every item links to t",
+        "url": "https://pickoneai.com/shipped/",
+        "source": "Exa (24h Index)"
+      }
+    ]
+  },
+  {
+    "slot_id": 2,
+    "slot_name": "Evening AI Toolkit (Slot 2)",
+    "timestamp_utc": "2026-11-07T19:42:04.685498+00:00",
+    "date_ist": "2026-11-08 7:00 PM IST (Scheduled for 13:30 UTC)",
+    "buffer_post_id": "6aef7f0a51492b796ef85bf6",
+    "channel_results": {
+      "instagram": "6aef7f0a51492b796ef85bf6",
+      "youtube": "6aef7f0b51492b796ef85c30",
+      "twitter": "6aef7f0cd6bbae6fa1a90ffc",
+      "public_video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1794080491/slot_2_daily_reel_opt.mp4"
+    },
+    "video_path": "out/slot_2_daily_reel_opt.mp4",
+    "items": [
+      {
+        "title": "n8n - Workflow Automation \u00b7 GitHub",
+        "name": "n8n",
+        "description": "The Self-hosted AI Starter Kit is an open-source template that quickly sets up a local AI environment. Curated by n8n, it provides essential tools for creating secure, self-hosted AI workflows.     15.3k   3.8k  ### Repo",
+        "url": "https://github.com/n8n-io",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "Self-Hosted AI Workflow Automation: A 2026 Guide",
+        "name": "Self-Hosted AI Workflow Automation:",
+        "description": "47,101 stars are maintained by Apache Airflow for data-intensive pipelines, providing a mature foundation for teams that require strict scheduling and backfilling capabilities.  Conductor follows with 32,052 stars, servi",
+        "url": "https://www.activepieces.com/blog/self-hosted-ai-workflow-automation-a-2026-guide",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "17 Best Free AI Coding Agents in 2026 | Agentic.ai",
+        "name": "17 Best Free AI Coding Agents in 20",
+        "description": "Agenticness22/36\u00b7Domain Specialist  Orbi is an open-source, self-hostable AI coding agent that takes GitHub Issues from implementation through independent review, merge, and release. It can run against your own model end",
+        "url": "https://agentic.ai/best/free-coding-agents",
+        "source": "Tavily (Real-Time)"
+      }
+    ]
   }
 ]
