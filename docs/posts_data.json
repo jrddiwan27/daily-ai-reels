@@ -1,5 +1,111 @@
 [
   {
+    "id": "2026-11-09-slot-2",
+    "title": "Stuck managing endless AI agent updates? Your workflows are slow. Automation is failing you.",
+    "date": "November 09, 2026",
+    "date_slug": "2026-11-09",
+    "slot_id": 2,
+    "slot_name": "Evening AI Toolkit (Slot 2)",
+    "badge": "AI RADAR",
+    "cta_keyword": "WORKFLOW",
+    "video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1794168059/slot_2_daily_reel_opt.mp4",
+    "summary": "Stuck managing endless AI agent updates? Your workflows are slow. Automation is failing you.",
+    "voiceover_script": "Stuck managing endless AI agent updates? Your workflows are slow. Automation is failing you. Finally, next-gen AI agents automate everything. Unleash peak productivity now! AI Agents News \u2014 Week of November 8: Pilot agents on contract subsets. Review before bulk updates. Compare exception rates. Revolutionize workflows. Hedwig AI Agent Reads Your Inbox an: Free, open-source agent reads your inbox. Writes emails. Crafts autonomous AI workflows. Boost communication. Introducing IBM watsonx Assistant f: Watsonx Assistant for Z 4.0 transforms Q&A to operational action. Advanced AI analyzes, automates, executes. Boost enterprise. Comment WORKFLOW below. I will DM you the exact setup code right now.",
+    "items": [
+      {
+        "number": 1,
+        "name": "Ai Agents News \u2014 Week Of November 8",
+        "url": "https://aiagentstore.ai/ai-agent-news/this-week",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "Try/watch: Pilot the agent on a limited contract subset with mandatory review before bulk updates or signature transmission, and compare its exception rate with a rules-based workflow.  Thursday, November 5, 2026  ### Cr",
+        "command": "git clone https://aiagentstore.ai/ai-agent-news/this-week.git\ncd ai agents news \u2014 week of november 8\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 2,
+        "name": "Hedwig Ai Agent Reads Your Inbox An",
+        "url": "https://www.facebook.com/leadgenman/videos/this-ai-agent-knows-my-inbox-better-than-i-do-and-it-still-cant-send-a-single-em/949345968028885",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "Himalaya, a free GitHub open-source tool presented as a superior and free AI agent for email writing. in creating autonomous AI workflows.",
+        "command": "git clone https://www.facebook.com/leadgenman/videos/this-ai-agent-knows-my-inbox-better-than-i-do-and-it-still-cant-send-a-single-em/949345968028885.git\ncd hedwig ai agent reads your inbox an\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 3,
+        "name": "Introducing Ibm Watsonx Assistant F",
+        "url": "https://www.ibm.com/new/announcements/introducing-ibm-watsonx-assistant-for-z-4-0-from-q-a-to-operational-action",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "Introducing IBM watsonx Assistant for Z 4.0: From Q&A to operational action  # Introducing IBM watsonx Assistant for Z 4.0: From Q&A to operational action   IBM\u00ae watsonx Assistant\u00ae for Z 4.0 combines advanced AI analysis",
+        "command": "git clone https://www.ibm.com/new/announcements/introducing-ibm-watsonx-assistant-for-z-4-0-from-q-a-to-operational-action.git\ncd introducing ibm watsonx assistant f\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      }
+    ],
+    "cta_text": "Want our studio to build custom autonomous AI employees for your workflow? Follow @jayant.digitalstudio and DM 'WORKFLOW'.",
+    "tags": [
+      "#ai",
+      "#automation",
+      "#tech",
+      "#softwareengineer",
+      "#workflow"
+    ]
+  },
+  {
+    "id": "2026-11-09-slot-1",
+    "title": "Your AI agent builds fail. Endless configurations, broken dependencies, debugging nightmares kill productivity.",
+    "date": "November 09, 2026",
+    "date_slug": "2026-11-09",
+    "slot_id": 1,
+    "slot_name": "Morning Breakthrough (Slot 1)",
+    "badge": "AI RADAR",
+    "cta_keyword": "REPOS",
+    "video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1794167751/slot_1_daily_reel_opt.mp4",
+    "summary": "Your AI agent builds fail. Endless configurations, broken dependencies, debugging nightmares kill productivity.",
+    "voiceover_script": "Your AI agent builds fail. Endless configurations, broken dependencies, debugging nightmares kill productivity. Stop wasting time. New agentic tools automate everything. Ship robust AI agents fast. agent-operations: AI-assisted kit. Tests low-cost open-model orchestrator stacks. Streamlines agent deployment, slashes costs. Build faster, instantly. Best AI for Coding 2026: Top Tools: Claude 4.6 Opus resolves complex GitHub issues. Achieves 81% success on SWE-Bench. Code smarter. Agentic Software Engineering (ASE): Toolkit 2.0 empowers developers. Automates complex engineering tasks. Boosts productivity, code quality, instantly. Comment REPOS below, and I will DM you the exact setup code right now.",
+    "items": [
+      {
+        "number": 1,
+        "name": "Agent Operations",
+        "url": "https://github.com/topics/agent-operations",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "### tfolkman / open-model-agent-stack  Star  4  AI-assisted setup kit for testing a low-cost open-model orchestrator/executor stack.  developer-tools ai-agents open-models substack llm qwen deepseek model-routing agent-o",
+        "command": "git clone https://github.com/topics/agent-operations.git\ncd agent-operations\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 2,
+        "name": "Best Ai For Coding 2026: Top Tools",
+        "url": "https://www.activepieces.com/blog/best-ai-for-coding-2026-ranked-by-real-performance",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "According to AnotherWrapper, Claude 4.6 Opus achieved an 81.42% success rate on the SWE-Bench Verified benchmark. This meant it could resolve four out of five complex GitHub issues without intervention at that time.  ###",
+        "command": "git clone https://www.activepieces.com/blog/best-ai-for-coding-2026-ranked-by-real-performance.git\ncd best ai for coding 2026: top tools\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 3,
+        "name": "Agentic Software Engineering (Ase)",
+        "url": "https://dev.to/rse42/agentic-software-engineering-ase-toolkit-20-4kge",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "Agentic Software Engineering (ASE) Toolkit 2.0 - DEV Community  Dr. Ralf S. Engelschall   Posted on Nov 8   # Agentic Software Engineering (ASE) Toolkit 2.0   We are pleased to announce the release of version 2.0 of Agen",
+        "command": "git clone https://dev.to/rse42/agentic-software-engineering-ase-toolkit-20-4kge.git\ncd agentic software engineering (ase)\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      }
+    ],
+    "cta_text": "Want our studio to build custom autonomous AI employees for your workflow? Follow @jayant.digitalstudio and DM 'REPOS'.",
+    "tags": [
+      "#ai",
+      "#automation",
+      "#tech",
+      "#softwareengineer",
+      "#workflow"
+    ]
+  },
+  {
     "id": "2026-11-08-slot-2",
     "title": "AI development stalled by complex setups, security headaches? Stop wasting precious time now",
     "date": "November 08, 2026",

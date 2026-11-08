@@ -3560,5 +3560,79 @@
         "source": "Tavily (Real-Time)"
       }
     ]
+  },
+  {
+    "slot_id": 1,
+    "slot_name": "Morning Breakthrough (Slot 1)",
+    "timestamp_utc": "2026-11-08T19:56:21.975095+00:00",
+    "date_ist": "2026-11-09 9:00 AM IST (Scheduled for 03:30 UTC)",
+    "buffer_post_id": "6af0d3e3004e4879a7da1a18",
+    "channel_results": {
+      "instagram": "6af0d3e3004e4879a7da1a18",
+      "youtube": "6af0d3e4229bf05dafd077fa",
+      "twitter": "6af0d3e5562f2e6de9db9d33",
+      "public_video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1794167751/slot_1_daily_reel_opt.mp4"
+    },
+    "video_path": "out/slot_1_daily_reel_opt.mp4",
+    "items": [
+      {
+        "title": "agent-operations \u00b7 GitHub Topics \u00b7 GitHub",
+        "name": "agent-operations",
+        "description": "### tfolkman / open-model-agent-stack  Star  4  AI-assisted setup kit for testing a low-cost open-model orchestrator/executor stack.  developer-tools ai-agents open-models substack llm qwen deepseek model-routing agent-o",
+        "url": "https://github.com/topics/agent-operations",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "Best AI for Coding 2026: Top Tools and Safety Guide",
+        "name": "Best AI for Coding 2026: Top Tools",
+        "description": "According to AnotherWrapper, Claude 4.6 Opus achieved an 81.42% success rate on the SWE-Bench Verified benchmark. This meant it could resolve four out of five complex GitHub issues without intervention at that time.  ###",
+        "url": "https://www.activepieces.com/blog/best-ai-for-coding-2026-ranked-by-real-performance",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "Agentic Software Engineering (ASE) Toolkit 2.0 - DEV Community",
+        "name": "Agentic Software Engineering (ASE)",
+        "description": "Agentic Software Engineering (ASE) Toolkit 2.0 - DEV Community  Dr. Ralf S. Engelschall   Posted on Nov 8   # Agentic Software Engineering (ASE) Toolkit 2.0   We are pleased to announce the release of version 2.0 of Agen",
+        "url": "https://dev.to/rse42/agentic-software-engineering-ase-toolkit-20-4kge",
+        "source": "Exa (24h Index)"
+      }
+    ]
+  },
+  {
+    "slot_id": 2,
+    "slot_name": "Evening AI Toolkit (Slot 2)",
+    "timestamp_utc": "2026-11-08T20:01:28.532934+00:00",
+    "date_ist": "2026-11-09 7:00 PM IST (Scheduled for 13:30 UTC)",
+    "buffer_post_id": "6af0d516004e4879a7da9ed1",
+    "channel_results": {
+      "instagram": "6af0d516004e4879a7da9ed1",
+      "youtube": "6af0d517229bf05dafd11524",
+      "twitter": "6af0d518562f2e6de9dc1fc4",
+      "public_video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1794168059/slot_2_daily_reel_opt.mp4"
+    },
+    "video_path": "out/slot_2_daily_reel_opt.mp4",
+    "items": [
+      {
+        "title": "AI Agents News \u2014 Week of November 8, 2026 (Daily Updates)",
+        "name": "AI Agents News \u2014 Week of November 8",
+        "description": "Try/watch: Pilot the agent on a limited contract subset with mandatory review before bulk updates or signature transmission, and compare its exception rate with a rules-based workflow.  Thursday, November 5, 2026  ### Cr",
+        "url": "https://aiagentstore.ai/ai-agent-news/this-week",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "Hedwig AI Agent Reads Your Inbox and Drafts Replies ...",
+        "name": "Hedwig AI Agent Reads Your Inbox an",
+        "description": "Himalaya, a free GitHub open-source tool presented as a superior and free AI agent for email writing. in creating autonomous AI workflows.",
+        "url": "https://www.facebook.com/leadgenman/videos/this-ai-agent-knows-my-inbox-better-than-i-do-and-it-still-cant-send-a-single-em/949345968028885",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "Introducing IBM watsonx Assistant for Z 4.0: From Q&A to operational action",
+        "name": "Introducing IBM watsonx Assistant f",
+        "description": "Introducing IBM watsonx Assistant for Z 4.0: From Q&A to operational action  # Introducing IBM watsonx Assistant for Z 4.0: From Q&A to operational action   IBM\u00ae watsonx Assistant\u00ae for Z 4.0 combines advanced AI analysis",
+        "url": "https://www.ibm.com/new/announcements/introducing-ibm-watsonx-assistant-for-z-4-0-from-q-a-to-operational-action",
+        "source": "Exa (24h Index)"
+      }
+    ]
   }
 ]
