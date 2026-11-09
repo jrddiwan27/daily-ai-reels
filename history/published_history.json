@@ -3634,5 +3634,79 @@
         "source": "Exa (24h Index)"
       }
     ]
+  },
+  {
+    "slot_id": 1,
+    "slot_name": "Morning Breakthrough (Slot 1)",
+    "timestamp_utc": "2026-11-09T20:05:27.364483+00:00",
+    "date_ist": "2026-11-10 9:00 AM IST (Scheduled for 03:30 UTC)",
+    "buffer_post_id": "6af22785398ae91929abf584",
+    "channel_results": {
+      "instagram": "6af22785398ae91929abf584",
+      "youtube": "6af22786398ae91929abf5b3",
+      "twitter": "6af22787398ae91929abf645",
+      "public_video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1794254695/slot_1_daily_reel_opt.mp4"
+    },
+    "video_path": "out/slot_1_daily_reel_opt.mp4",
+    "items": [
+      {
+        "title": "agent-operations \u00b7 GitHub Topics \u00b7 GitHub",
+        "name": "agent-operations",
+        "description": "### tfolkman / open-model-agent-stack  Star  4  AI-assisted setup kit for testing a low-cost open-model orchestrator/executor stack.  developer-tools ai-agents open-models substack llm qwen deepseek model-routing agent-o",
+        "url": "https://github.com/topics/agent-operations",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "ai-orchestration \u00b7 GitHub Topics \u00b7 GitHub",
+        "name": "ai-orchestration",
+        "description": "### nyldn / claude-octopus  Star  4.4k  Run multiple AI models against the same research, design, or coding task. Surface disagreements before you ship.  gemini developer-tools copilot codex ai-agents ollama multi-llm mu",
+        "url": "https://github.com/topics/ai-orchestration?l=shell",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "Codenotary Releases AgentMon Live \u2013 Free, Open-Source Software to Improve AI Coding Productivity",
+        "name": "Codenotary Releases AgentMon Live \u2013",
+        "description": "Codenotary Releases AgentMon Live \u2013 Free, Open-Source Software to Improve AI Coding Productivity  Codenotary Releases AgentMon Live \u2013 Free, Open-Source Software to Improve AI Coding Productivity  New community contributi",
+        "url": "https://www.businesswire.com/news/home/20261109569795/en/Codenotary-Releases-AgentMon-Live-Free-Open-Source-Software-to-Improve-AI-Coding-Productivity",
+        "source": "Exa (24h Index)"
+      }
+    ]
+  },
+  {
+    "slot_id": 2,
+    "slot_name": "Evening AI Toolkit (Slot 2)",
+    "timestamp_utc": "2026-11-09T20:11:10.316046+00:00",
+    "date_ist": "2026-11-10 7:00 PM IST (Scheduled for 13:30 UTC)",
+    "buffer_post_id": "6af228dc8e5b33e529a10ba7",
+    "channel_results": {
+      "instagram": "6af228dc8e5b33e529a10ba7",
+      "youtube": "6af228dd1061607e3be5dde0",
+      "twitter": "6af228de0606df2887a2d0f0",
+      "public_video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1794255036/slot_2_daily_reel_opt.mp4"
+    },
+    "video_path": "out/slot_2_daily_reel_opt.mp4",
+    "items": [
+      {
+        "title": "ai-orchestration \u00b7 GitHub Topics \u00b7 GitHub",
+        "name": "ai-orchestration",
+        "description": "developer-tools meta-prompting ai-orchestration vibe-coding claude-code spec-driven-development context-engineering claude-code-plugin claude-skills   Updated Feb 17, 2026  Shell  ### SysAdminDoc / octopus-factory  Star",
+        "url": "https://github.com/topics/ai-orchestration?l=shell",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "Introducing Our Smallest, Most Efficient Model: Muse Ember",
+        "name": "Introducing Our Smallest, Most Effi",
+        "description": "Introducing Our Smallest, Most Efficient Model: Muse Ember  # Introducing Our Smallest, Most Efficient Model: Muse Ember  November 9, 2026\u00b7 3 minute read  Today, we're introducing Muse Ember, our smallest and most effici",
+        "url": "https://research.meta.ai/blog/muse-ember",
+        "source": "Exa (24h Index)"
+      },
+      {
+        "title": "Content Operations Agent is now generally available | Contentful",
+        "name": "Content Operations Agent is now gen",
+        "description": "Content Operations Agent is now generally available | Contentful  Nov 9, 2026  #### Content Operations Agent is now generally available  AI Documentation Web App  The Content Operations Agent is now generally available f",
+        "url": "https://www.contentful.com/developers/changelog/content-operations-agent-is-now-generally-available/",
+        "source": "Exa (24h Index)"
+      }
+    ]
   }
 ]
