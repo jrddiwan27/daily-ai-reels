@@ -1,5 +1,111 @@
 [
   {
+    "id": "2026-11-11-slot-2",
+    "title": "AI outputs inconsistent? Projects fail before shipping? Stop wasting time, eliminate errors.",
+    "date": "November 11, 2026",
+    "date_slug": "2026-11-11",
+    "slot_id": 2,
+    "slot_name": "Evening AI Toolkit (Slot 2)",
+    "badge": "AI RADAR",
+    "cta_keyword": "WORKFLOW",
+    "video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1794341456/slot_2_daily_reel_opt.mp4",
+    "summary": "AI outputs inconsistent? Projects fail before shipping? Stop wasting time, eliminate errors.",
+    "voiceover_script": "AI outputs inconsistent? Projects fail before shipping? Stop wasting time, eliminate errors. Unleash multi-agent AI power. Get perfect, validated results, every time. ai-orchestration: Run multiple AI models against the same tasks. Surface disagreements instantly. Ship flawless solutions fast. n8n-workflow: Automate complex AI agent calling. Create dynamic, self-healing workflows. Streamline your entire dev pipeline. 17 Best Free AI Coding Agents in 20: Deploy autonomous agents. Automate GitHub issues to release. Self-host for control. Comment WORKFLOW below. I will DM you the exact setup code right now.",
+    "items": [
+      {
+        "number": 1,
+        "name": "Ai Orchestration",
+        "url": "https://github.com/topics/ai-orchestration?l=shell",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "### nyldn / claude-octopus  Star  4.4k  Run multiple AI models against the same research, design, or coding task. Surface disagreements before you ship.  gemini developer-tools copilot codex ai-agents ollama multi-llm mu",
+        "command": "git clone https://github.com/topics/ai-orchestration?l=shell.git\ncd ai-orchestration\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 2,
+        "name": "N8N Workflow",
+        "url": "https://github.com/topics/n8n-workflow?l=html&o=desc&s=forks",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "workflow automation workflows n8n n8n-workflow n8n-automation n8n-template n8n-templates   Updated Oct 31, 2026  HTML  ### ayeshajadoon / Dentist-Appointment-Calling-Agent-  Star  1  An AI-powered calling agent that auto",
+        "command": "git clone https://github.com/topics/n8n-workflow?l=html&o=desc&s=forks.git\ncd n8n-workflow\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 3,
+        "name": "17 Best Free Ai Coding Agents In 20",
+        "url": "https://agentic.ai/best/free-coding-agents",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "Agenticness22/36\u00b7Domain Specialist  Orbi is an open-source, self-hostable AI coding agent that takes GitHub Issues from implementation through independent review, merge, and release. It can run against your own model end",
+        "command": "git clone https://agentic.ai/best/free-coding-agents.git\ncd 17 best free ai coding agents in 20\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      }
+    ],
+    "cta_text": "Want our studio to build custom autonomous AI employees for your workflow? Follow @jayant.digitalstudio and DM 'WORKFLOW'.",
+    "tags": [
+      "#ai",
+      "#automation",
+      "#tech",
+      "#softwareengineer",
+      "#workflow"
+    ]
+  },
+  {
+    "id": "2026-11-11-slot-1",
+    "title": "Is your AI agent workflow constantly hitting walls? Isolated skills, zero cohesion?",
+    "date": "November 11, 2026",
+    "date_slug": "2026-11-11",
+    "slot_id": 1,
+    "slot_name": "Morning Breakthrough (Slot 1)",
+    "badge": "AI RADAR",
+    "cta_keyword": "REPOS",
+    "video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1794340964/slot_1_daily_reel_opt.mp4",
+    "summary": "Is your AI agent workflow constantly hitting walls? Isolated skills, zero cohesion?",
+    "voiceover_script": "Is your AI agent workflow constantly hitting walls? Isolated skills, zero cohesion? Imagine agents dynamically acquiring, sharing, and executing skills instantly. Top Agent Skill Repositories on Git. Agents instantly access, learn, and integrate new capabilities. Centralized hubs dramatically boost versatility. ai-orchestration. Run multiple AI models against tasks. It surfaces disagreements before you ship, ensuring robust output. Meta Open Source. Access cutting-edge AI innovation. Drive your projects forward with community-powered tools and breakthroughs. Comment REPOS below, and I will DM you the exact setup code right now.",
+    "items": [
+      {
+        "number": 1,
+        "name": "Top Agent Skill Repositories On Git",
+        "url": "https://linkly.ai/skills/top-repos",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "| 18 | tt-a1i/archify | 94,197 | +342 | 2026-11-06 | 1 | architecture-diagramdeveloper-toolssystem-design | | 19 | Egonex-AI/Understand-Anything | 91,113 | +159 | 2026-11-06 | \u2014 | claude-codeclaude-skillsunderstandcode |",
+        "command": "git clone https://linkly.ai/skills/top-repos.git\ncd top agent skill repositories on git\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 2,
+        "name": "Ai Orchestration",
+        "url": "https://github.com/topics/ai-orchestration?l=shell",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "### nyldn / claude-octopus  Star  4.4k  Run multiple AI models against the same research, design, or coding task. Surface disagreements before you ship.  gemini developer-tools copilot codex ai-agents ollama multi-llm mu",
+        "command": "git clone https://github.com/topics/ai-orchestration?l=shell.git\ncd ai-orchestration\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 3,
+        "name": "Meta Open Source",
+        "url": "https://www.facebook.com/MetaOpenSource/posts/astryx-just-passed-20000-stars-on-github-and-were-2-trending-across-all-repos-to/1638444241420080",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "Log In  Log In  Forgot Account?  ## Meta Open Source's Post      [](  ### Meta Open Source  4 hours ago  Tuesday, November 10, 2026 at 1:53 AM  4h \u00b7   Astryx just passed 20,000 stars on GitHub \u2014 and we're #2 trending acr",
+        "command": "git clone https://www.facebook.com/MetaOpenSource/posts/astryx-just-passed-20000-stars-on-github-and-were-2-trending-across-all-repos-to/1638444241420080.git\ncd meta open source\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      }
+    ],
+    "cta_text": "Want our studio to build custom autonomous AI employees for your workflow? Follow @jayant.digitalstudio and DM 'REPOS'.",
+    "tags": [
+      "#ai",
+      "#automation",
+      "#tech",
+      "#softwareengineer",
+      "#workflow"
+    ]
+  },
+  {
     "id": "2026-11-10-slot-2",
     "title": "Your AI dev workflows are slow, clunky, and costing you precious time. Stop the chaos.",
     "date": "November 10, 2026",

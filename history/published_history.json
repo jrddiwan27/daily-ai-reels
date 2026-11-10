@@ -3708,5 +3708,79 @@
         "source": "Exa (24h Index)"
       }
     ]
+  },
+  {
+    "slot_id": 1,
+    "slot_name": "Morning Breakthrough (Slot 1)",
+    "timestamp_utc": "2026-11-10T20:03:10.793931+00:00",
+    "date_ist": "2026-11-11 9:00 AM IST (Scheduled for 03:30 UTC)",
+    "buffer_post_id": "6af3787dc0addee3a3142007",
+    "channel_results": {
+      "instagram": "6af3787dc0addee3a3142007",
+      "youtube": "6af3787d2cac17fcaff4e685",
+      "twitter": "6af3787e3edfccc6a4d6a6b7",
+      "public_video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1794340964/slot_1_daily_reel_opt.mp4"
+    },
+    "video_path": "out/slot_1_daily_reel_opt.mp4",
+    "items": [
+      {
+        "title": "Top Agent Skill Repositories on GitHub \u00b7 Linkly AI",
+        "name": "Top Agent Skill Repositories on Git",
+        "description": "| 18 | tt-a1i/archify | 94,197 | +342 | 2026-11-06 | 1 | architecture-diagramdeveloper-toolssystem-design | | 19 | Egonex-AI/Understand-Anything | 91,113 | +159 | 2026-11-06 | \u2014 | claude-codeclaude-skillsunderstandcode |",
+        "url": "https://linkly.ai/skills/top-repos",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "ai-orchestration \u00b7 GitHub Topics \u00b7 GitHub",
+        "name": "ai-orchestration",
+        "description": "### nyldn / claude-octopus  Star  4.4k  Run multiple AI models against the same research, design, or coding task. Surface disagreements before you ship.  gemini developer-tools copilot codex ai-agents ollama multi-llm mu",
+        "url": "https://github.com/topics/ai-orchestration?l=shell",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "Meta Open Source",
+        "name": "Meta Open Source",
+        "description": "Log In  Log In  Forgot Account?  ## Meta Open Source's Post      [](  ### Meta Open Source  4 hours ago  Tuesday, November 10, 2026 at 1:53 AM  4h \u00b7   Astryx just passed 20,000 stars on GitHub \u2014 and we're #2 trending acr",
+        "url": "https://www.facebook.com/MetaOpenSource/posts/astryx-just-passed-20000-stars-on-github-and-were-2-trending-across-all-repos-to/1638444241420080",
+        "source": "Tavily (Real-Time)"
+      }
+    ]
+  },
+  {
+    "slot_id": 2,
+    "slot_name": "Evening AI Toolkit (Slot 2)",
+    "timestamp_utc": "2026-11-10T20:11:21.925687+00:00",
+    "date_ist": "2026-11-11 7:00 PM IST (Scheduled for 13:30 UTC)",
+    "buffer_post_id": "6af37a68c0addee3a314dda7",
+    "channel_results": {
+      "instagram": "6af37a68c0addee3a314dda7",
+      "youtube": "6af37a68ead9c53d41ba7b4a",
+      "twitter": "6af37a692cac17fcaff599db",
+      "public_video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1794341456/slot_2_daily_reel_opt.mp4"
+    },
+    "video_path": "out/slot_2_daily_reel_opt.mp4",
+    "items": [
+      {
+        "title": "ai-orchestration \u00b7 GitHub Topics \u00b7 GitHub",
+        "name": "ai-orchestration",
+        "description": "### nyldn / claude-octopus  Star  4.4k  Run multiple AI models against the same research, design, or coding task. Surface disagreements before you ship.  gemini developer-tools copilot codex ai-agents ollama multi-llm mu",
+        "url": "https://github.com/topics/ai-orchestration?l=shell",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "n8n-workflow \u00b7 GitHub Topics \u00b7 GitHub",
+        "name": "n8n-workflow",
+        "description": "workflow automation workflows n8n n8n-workflow n8n-automation n8n-template n8n-templates   Updated Oct 31, 2026  HTML  ### ayeshajadoon / Dentist-Appointment-Calling-Agent-  Star  1  An AI-powered calling agent that auto",
+        "url": "https://github.com/topics/n8n-workflow?l=html&o=desc&s=forks",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "17 Best Free AI Coding Agents in 2026 | Agentic.ai",
+        "name": "17 Best Free AI Coding Agents in 20",
+        "description": "Agenticness22/36\u00b7Domain Specialist  Orbi is an open-source, self-hostable AI coding agent that takes GitHub Issues from implementation through independent review, merge, and release. It can run against your own model end",
+        "url": "https://agentic.ai/best/free-coding-agents",
+        "source": "Tavily (Real-Time)"
+      }
+    ]
   }
 ]
