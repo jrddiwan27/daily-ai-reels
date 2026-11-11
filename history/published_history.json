@@ -3782,5 +3782,79 @@
         "source": "Tavily (Real-Time)"
       }
     ]
+  },
+  {
+    "slot_id": 1,
+    "slot_name": "Morning Breakthrough (Slot 1)",
+    "timestamp_utc": "2026-11-11T19:52:41.651417+00:00",
+    "date_ist": "2026-11-12 9:00 AM IST (Scheduled for 03:30 UTC)",
+    "buffer_post_id": "6af4c788b459c6001d4a8396",
+    "channel_results": {
+      "instagram": "6af4c788b459c6001d4a8396",
+      "youtube": "6af4c788b459c6001d4a83e1",
+      "twitter": "6af4c789ceae26a3a50d069b",
+      "public_video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1794426734/slot_1_daily_reel_opt.mp4"
+    },
+    "video_path": "out/slot_1_daily_reel_opt.mp4",
+    "items": [
+      {
+        "title": "Top 10 Open-Source AI Agent Harnesses in 2026 | DataCamp",
+        "name": "Top 10 Open-Source AI Agent Harness",
+        "description": "To try OpenCode with a model running on your own machine, see our guide to running Qwen3.8-Flash-Next locally with OpenCode.  ## 3. OpenClaw: Best Open-Source AI Agent Harness for Personal AI Automation  OpenClaw is one",
+        "url": "https://www.datacamp.com/blog/top-open-source-ai-agent-harnesses",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "local-ai-agent \u00b7 GitHub Topics \u00b7 GitHub",
+        "name": "local-ai-agent",
+        "description": "Updated Aug 23, 2026  Rust  ### smshagor-dev / OpenMindAI  Star  2  OpenMindAI is an open-source, local-first AI desktop assistant with offline chat, GPU acceleration, persistent local memory, portable deployment, and no",
+        "url": "https://github.com/topics/local-ai-agent",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "agent-team \u00b7 GitHub Topics \u00b7 GitHub",
+        "name": "agent-team",
+        "description": "AionUi  ### iOfficeAI / AionUi  Star  34.2k  Open-source 24/7 Cowork app for OpenClaw, Hermes, Claude Code, Codex, OpenCode and 20+ more CLI Agent | Customize your assistants | Team them up\uff5cStar if you like it!  chat ai",
+        "url": "https://github.com/topics/agent-team",
+        "source": "Tavily (Real-Time)"
+      }
+    ]
+  },
+  {
+    "slot_id": 2,
+    "slot_name": "Evening AI Toolkit (Slot 2)",
+    "timestamp_utc": "2026-11-11T19:56:56.493064+00:00",
+    "date_ist": "2026-11-12 7:00 PM IST (Scheduled for 13:30 UTC)",
+    "buffer_post_id": "6af4c8872f8776bfa37ab513",
+    "channel_results": {
+      "instagram": "6af4c8872f8776bfa37ab513",
+      "youtube": "6af4c887ee6fced9f547d4ad",
+      "twitter": "6af4c888b459c6001d4ac25e",
+      "public_video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1794426990/slot_2_daily_reel_opt.mp4"
+    },
+    "video_path": "out/slot_2_daily_reel_opt.mp4",
+    "items": [
+      {
+        "title": "Top 10 Open-Source AI Agent Harnesses in 2026 | DataCamp",
+        "name": "Top 10 Open-Source AI Agent Harness",
+        "description": "To try OpenCode with a model running on your own machine, see our guide to running Qwen3.8-Flash-Next locally with OpenCode.  ## 3. OpenClaw: Best Open-Source AI Agent Harness for Personal AI Automation  OpenClaw is one",
+        "url": "https://www.datacamp.com/blog/top-open-source-ai-agent-harnesses",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "agent-team \u00b7 GitHub Topics \u00b7 GitHub",
+        "name": "agent-team",
+        "description": "multi-agent task-automation autonomous-agents ai-team multi-agent-system local-first agent-team ai-assistant ai-automation ai-workflow ai-productivity agent-collaboration desktop-agent agent-orchestration agent-workflow",
+        "url": "https://github.com/topics/agent-team",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "agentic-workflows \u00b7 GitHub Topics \u00b7 GitHub",
+        "name": "agentic-workflows",
+        "description": "Updated Jul 7, 2026  PowerShell  ### jcorpac / ai-skills-library  Star  1  A professional collection of 97 specialized AI skills for autonomous agents and advanced developers.  python docker rust productivity github-page",
+        "url": "https://github.com/topics/agentic-workflows?l=powershell&o=asc&s=forks",
+        "source": "Tavily (Real-Time)"
+      }
+    ]
   }
 ]
