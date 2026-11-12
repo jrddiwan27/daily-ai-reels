@@ -3856,5 +3856,79 @@
         "source": "Tavily (Real-Time)"
       }
     ]
+  },
+  {
+    "slot_id": 1,
+    "slot_name": "Morning Breakthrough (Slot 1)",
+    "timestamp_utc": "2026-11-12T20:21:56.849882+00:00",
+    "date_ist": "2026-11-13 9:00 AM IST (Scheduled for 03:30 UTC)",
+    "buffer_post_id": "6af61fe37d05892ccea5727a",
+    "channel_results": {
+      "instagram": "6af61fe37d05892ccea5727a",
+      "youtube": "6af61fe3c71c605d9ea8ad6a",
+      "twitter": "6af61fe4c71c605d9ea8adce",
+      "public_video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1794514883/slot_1_daily_reel_opt.mp4"
+    },
+    "video_path": "out/slot_1_daily_reel_opt.mp4",
+    "items": [
+      {
+        "title": "Open-Source AI Project addyosmani/agent-skills Surges on GitHub - Blockchain.News",
+        "name": "Open-Source AI Project addyosmani/a",
+        "description": "About  Advertisement  Login / Join  News  # Open-Source AI Project addyosmani/agent-skills Surges on GitHub  addyosmani/agent-skills gains 788 stars in 24 hours, reaching 115,717 stars and 12,138 forks. It provides produ",
+        "url": "https://blockchain.news/news/open-source-ai-project-addyosmani-agent-skills-github-trending",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "Top 20 Open-Source AI Projects to look in 2026",
+        "name": "Top 20 Open-Source AI Projects to l",
+        "description": "Press enter or click to view image in full size  Image 3  When the open-source community rallied behind OpenClaw, it signaled a fundamental shift in how developers interact with artificial intelligence. AI is no longer c",
+        "url": "https://medium.com/@JustSnehal/top-20-open-source-ai-projects-to-look-in-2026-5f668cc49044",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "36K views \u00b7 352 reactions | 7 GitHub Repos to Build AI Agents\n\n\u2705 7 GitHub repos to build AI agents faster\n\u2705 Browser Use: agents that run real browser workflows\n\u2705 Agent Memory: persistent memory for coding agents\n\u2705 Scientific Agent Skills: 160+ skills for research agents\n\u2705 Diagram Design: diagrams for Claude Code workflows\n\u2705 Anthropic Cybersecurity Skills: security skills for coding agents\n\u2705 Awesome Harness Engineering: orchestration patterns\n\u2705 OpenViking: context for your agents\n\nSubscribe to CodingSimplifiedSpace for AI Agents, MCP, Claude Code, and developer productivity\n\n7 github repos ai agents, github repos for ai agents, build ai agents, browser use github, agent memory github, scientific agent skills, diagram design claude code, anthropic cybersecurity skills, awesome harness engineering, openviking, claude code skills, ai agent tools, open source ai agents, ai agents github, CodingSimplifiedSpace | Coding Simplified Space",
+        "name": "36K views",
+        "description": "coding agent Slack Linear, ticket to pull request, AI agents 2026, AI news today, CodingSimplifiedSpace, Coding Simplified Space [...] awesome harness engineering, openviking, claude code skills, ai agent tools, open sou",
+        "url": "https://www.facebook.com/61556509444719/videos/7-github-repos-to-build-ai-agents-7-github-repos-to-build-ai-agents-faster-brows/4061724393958917",
+        "source": "Tavily (Real-Time)"
+      }
+    ]
+  },
+  {
+    "slot_id": 2,
+    "slot_name": "Evening AI Toolkit (Slot 2)",
+    "timestamp_utc": "2026-11-12T20:27:46.543108+00:00",
+    "date_ist": "2026-11-13 7:00 PM IST (Scheduled for 13:30 UTC)",
+    "buffer_post_id": "6af62140c71c605d9ea954c2",
+    "channel_results": {
+      "instagram": "6af62140c71c605d9ea954c2",
+      "youtube": "6af62141a01fb6efee47fbe2",
+      "twitter": "6af621427d05892ccea5ea57",
+      "public_video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1794515232/slot_2_daily_reel_opt.mp4"
+    },
+    "video_path": "out/slot_2_daily_reel_opt.mp4",
+    "items": [
+      {
+        "title": "Top 20 Open-Source AI Projects to look in 2026",
+        "name": "Top 20 Open-Source AI Projects to l",
+        "description": "Press enter or click to view image in full size  Image 3  When the open-source community rallied behind OpenClaw, it signaled a fundamental shift in how developers interact with artificial intelligence. AI is no longer c",
+        "url": "https://medium.com/@JustSnehal/top-20-open-source-ai-projects-to-look-in-2026-5f668cc49044",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "divyansh tiwari on X: \"9 open-source GitHub projects that make AI agents more capable. Useful if you're building autonomous agents, browser automation workflows, or AI-powered applications. 1. Browser Use Let AI agents interact with websites and complete browser tasks. https://t.co/kqvG8Svs9b 2.\u2026 / X",
+        "name": "divyansh tiwari on X: \"9 open-sourc",
+        "description": "6:13 PM \u00b7 Nov 11, 2026\u00b7943    Views    1  @veeramarni    @veeramarni    19h    browser agents are the fun ones until a site moves one button and the whole run falls over. the demo never shows that part [...] 6:13 PM \u00b7 No",
+        "url": "https://x.com/DivyanshT91162/status/2120580789150851527",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "agent-team \u00b7 GitHub Topics \u00b7 GitHub",
+        "name": "agent-team",
+        "description": "### GZX2211 / dsh-Visual-Workflow  Star  66  \u53ef\u89c6\u5316 Agent \u7f16\u6392\u5e73\u53f0\uff5c\u57fa\u4e8e DeepSeek Harness\uff0c\u652f\u6301 Workflow\u3001Multi-Agent\u3001\u5143\u7f16\u6392\u3001MCP \u4e0e Human-in-the-loop\uff5cVisual AI Agent orchestration platform for workflows, multi-agent teams, MCP and human-i",
+        "url": "https://github.com/topics/agent-team",
+        "source": "Tavily (Real-Time)"
+      }
+    ]
   }
 ]

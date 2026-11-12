@@ -1,5 +1,111 @@
 [
   {
+    "id": "2026-11-13-slot-2",
+    "title": "Stuck building AI with outdated, clunky open-source projects that waste time?",
+    "date": "November 13, 2026",
+    "date_slug": "2026-11-13",
+    "slot_id": 2,
+    "slot_name": "Evening AI Toolkit (Slot 2)",
+    "badge": "AI RADAR",
+    "cta_keyword": "WORKFLOW",
+    "video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1794515232/slot_2_daily_reel_opt.mp4",
+    "summary": "Stuck building AI with outdated, clunky open-source projects that waste time?",
+    "voiceover_script": "Stuck building AI with outdated, clunky open-source projects that waste time? Discover the game-changing tools transforming AI development right now. Top 20 Open-Source AI Projects to l. This project empowers developers, fundamentally shifting real-world AI interaction, democratizing advanced capabilities with community-driven innovation. divyansh tiwari on X: \"9 open-sourc\". This list curates robust browser agents, overcoming fragility, ensuring reliable automation for dynamic web applications. agent-team. This intuitive visual orchestration platform simplifies complex agent workflows, enabling multi-agent teams and human-in-the-loop control. Comment WORKFLOW below, and I will DM you the exact setup code right now.",
+    "items": [
+      {
+        "number": 1,
+        "name": "Top 20 Open Source Ai Projects To L",
+        "url": "https://medium.com/@JustSnehal/top-20-open-source-ai-projects-to-look-in-2026-5f668cc49044",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "Press enter or click to view image in full size  Image 3  When the open-source community rallied behind OpenClaw, it signaled a fundamental shift in how developers interact with artificial intelligence. AI is no longer c",
+        "command": "git clone https://medium.com/@JustSnehal/top-20-open-source-ai-projects-to-look-in-2026-5f668cc49044.git\ncd top 20 open-source ai projects to l\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 2,
+        "name": "Divyansh Tiwari On X: \"9 Open Sourc",
+        "url": "https://x.com/DivyanshT91162/status/2120580789150851527",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "6:13 PM \u00b7 Nov 11, 2026\u00b7943    Views    1  @veeramarni    @veeramarni    19h    browser agents are the fun ones until a site moves one button and the whole run falls over. the demo never shows that part [...] 6:13 PM \u00b7 No",
+        "command": "git clone https://x.com/DivyanshT91162/status/2120580789150851527.git\ncd divyansh tiwari on x: \"9 open-sourc\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 3,
+        "name": "Agent Team",
+        "url": "https://github.com/topics/agent-team",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "### GZX2211 / dsh-Visual-Workflow  Star  66  \u53ef\u89c6\u5316 Agent \u7f16\u6392\u5e73\u53f0\uff5c\u57fa\u4e8e DeepSeek Harness\uff0c\u652f\u6301 Workflow\u3001Multi-Agent\u3001\u5143\u7f16\u6392\u3001MCP \u4e0e Human-in-the-loop\uff5cVisual AI Agent orchestration platform for workflows, multi-agent teams, MCP and human-i",
+        "command": "git clone https://github.com/topics/agent-team.git\ncd agent-team\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      }
+    ],
+    "cta_text": "Want our studio to build custom autonomous AI employees for your workflow? Follow @jayant.digitalstudio and DM 'WORKFLOW'.",
+    "tags": [
+      "#ai",
+      "#automation",
+      "#tech",
+      "#softwareengineer",
+      "#workflow"
+    ]
+  },
+  {
+    "id": "2026-11-13-slot-1",
+    "title": "Struggling with AI agent development? Your projects stuck, innovation stalled, code messy?",
+    "date": "November 13, 2026",
+    "date_slug": "2026-11-13",
+    "slot_id": 1,
+    "slot_name": "Morning Breakthrough (Slot 1)",
+    "badge": "AI RADAR",
+    "cta_keyword": "REPOS",
+    "video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1794514883/slot_1_daily_reel_opt.mp4",
+    "summary": "Struggling with AI agent development? Your projects stuck, innovation stalled, code messy?",
+    "voiceover_script": "Struggling with AI agent development? Your projects stuck, innovation stalled, code messy? Break free! These open-source AI projects revolutionize your development workflow. Open-Source AI Project addyosmani/a provides production-ready agent skills. It empowers rapid AI development, scales projects instantly. Top 20 Open-Source AI Projects to l fosters community-driven AI. It redefines developer interaction, accelerating intelligent system creation. 36K views showcases cutting-edge AI coding agents. It streamlines workflows, automating pull requests and complex engineering tasks. Comment REPOS below, and I will DM you the exact setup code right now.",
+    "items": [
+      {
+        "number": 1,
+        "name": "Open Source Ai Project Addyosmani/A",
+        "url": "https://blockchain.news/news/open-source-ai-project-addyosmani-agent-skills-github-trending",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "About  Advertisement  Login / Join  News  # Open-Source AI Project addyosmani/agent-skills Surges on GitHub  addyosmani/agent-skills gains 788 stars in 24 hours, reaching 115,717 stars and 12,138 forks. It provides produ",
+        "command": "git clone https://blockchain.news/news/open-source-ai-project-addyosmani-agent-skills-github-trending.git\ncd open-source ai project addyosmani/a\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 2,
+        "name": "Top 20 Open Source Ai Projects To L",
+        "url": "https://medium.com/@JustSnehal/top-20-open-source-ai-projects-to-look-in-2026-5f668cc49044",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "Press enter or click to view image in full size  Image 3  When the open-source community rallied behind OpenClaw, it signaled a fundamental shift in how developers interact with artificial intelligence. AI is no longer c",
+        "command": "git clone https://medium.com/@JustSnehal/top-20-open-source-ai-projects-to-look-in-2026-5f668cc49044.git\ncd top 20 open-source ai projects to l\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 3,
+        "name": "36K Views",
+        "url": "https://www.facebook.com/61556509444719/videos/7-github-repos-to-build-ai-agents-7-github-repos-to-build-ai-agents-faster-brows/4061724393958917",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "coding agent Slack Linear, ticket to pull request, AI agents 2026, AI news today, CodingSimplifiedSpace, Coding Simplified Space [...] awesome harness engineering, openviking, claude code skills, ai agent tools, open sou",
+        "command": "git clone https://www.facebook.com/61556509444719/videos/7-github-repos-to-build-ai-agents-7-github-repos-to-build-ai-agents-faster-brows/4061724393958917.git\ncd 36k views\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      }
+    ],
+    "cta_text": "Want our studio to build custom autonomous AI employees for your workflow? Follow @jayant.digitalstudio and DM 'REPOS'.",
+    "tags": [
+      "#ai",
+      "#automation",
+      "#tech",
+      "#softwareengineer",
+      "#workflow"
+    ]
+  },
+  {
     "id": "2026-11-12-slot-2",
     "title": "Stuck building AI agents? Your workflows are slow, inefficient, and draining resources.",
     "date": "November 12, 2026",
