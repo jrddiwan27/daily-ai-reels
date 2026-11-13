@@ -1,5 +1,111 @@
 [
   {
+    "id": "2026-11-14-slot-2",
+    "title": "Stop paying insane monthly SaaS subscriptions when free open-source AI builds this instantly.",
+    "date": "November 14, 2026",
+    "date_slug": "2026-11-14",
+    "slot_id": 2,
+    "slot_name": "Evening AI Toolkit (Slot 2)",
+    "badge": "AI RADAR",
+    "cta_keyword": "WORKFLOW",
+    "video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1794600429/slot_2_daily_reel_opt.mp4",
+    "summary": "Stop paying insane monthly SaaS subscriptions when free open-source AI builds this instantly.",
+    "voiceover_script": "Stop paying insane monthly SaaS subscriptions when free open-source AI builds this instantly. Three brand-new breakthrough developer repos just dropped on GitHub today. First is n8n. It eliminates manual coding pipelines with lightning-fast local model execution. Second is Databricks Launches New Always-on G. An autonomous engine executing deterministic workflows with sub-millisecond response latency. Third is Anthropic's Claude for Manufacturin. A zero-cloud runtime running complex reasoning models directly on device. Comment WORKFLOW below, and I will DM you the exact setup code right now.",
+    "items": [
+      {
+        "number": 1,
+        "name": "N8N",
+        "url": "https://github.com/n8n-io",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "n8n-io/n8n's past year of commit activity    TypeScript   210,039  61,437  357  891  Updated Nov 11, 2026  nod  Public     Open source personal agent with its own computer. It chases invoices, preps your calls and cancel",
+        "command": "npx n8n --latest",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 2,
+        "name": "Databricks Launches New Always On G",
+        "url": "https://www.databricks.com/company/newsroom/press-releases/databricks-launches-new-always-genie-autonomous-ai-complex",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "Databricks Launches New Always-on Genie: Autonomous AI for Complex Enterprise Work - Databricks  # Databricks Launches New Always-on Genie: Autonomous AI for Complex Enterprise Work  November 11, 2026  ## Proactive, Alwa",
+        "command": "git clone https://www.databricks.com/company/newsroom/press-releases/databricks-launches-new-always-genie-autonomous-ai-complex.git\ncd databricks launches new always-on g\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 3,
+        "name": "Anthropic'S Claude For Manufacturin",
+        "url": "https://the-decoder.com/anthropics-claude-for-manufacturing-plugs-ai-directly-into-factory-software-to-automate-industrial-workflows/",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "Anthropic's Claude for Manufacturing plugs AI directly into factory software to automate industrial workflows  # Anthropic's Claude for Manufacturing plugs AI directly into factory software to automate industrial workflo",
+        "command": "git clone https://the-decoder.com/anthropics-claude-for-manufacturing-plugs-ai-directly-into-factory-software-to-automate-industrial-workflows/.git\ncd anthropic's claude for manufacturin\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      }
+    ],
+    "cta_text": "Want our studio to build custom autonomous AI employees for your workflow? Follow @jayant.digitalstudio and DM 'WORKFLOW'.",
+    "tags": [
+      "#ai",
+      "#automation",
+      "#tech",
+      "#softwareengineer",
+      "#workflow"
+    ]
+  },
+  {
+    "id": "2026-11-14-slot-1",
+    "title": "Developers, tired of slow, siloed AI tools? Missing the latest open-source breakthroughs?",
+    "date": "November 14, 2026",
+    "date_slug": "2026-11-14",
+    "slot_id": 1,
+    "slot_name": "Morning Breakthrough (Slot 1)",
+    "badge": "AI RADAR",
+    "cta_keyword": "REPOS",
+    "video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1794600156/slot_1_daily_reel_opt.mp4",
+    "summary": "Developers, tired of slow, siloed AI tools? Missing the latest open-source breakthroughs?",
+    "voiceover_script": "Developers, tired of slow, siloed AI tools? Missing the latest open-source breakthroughs? Unlock cutting-edge AI. Supercharge your workflow with these game-changers now. Clawd Coxey explodes open-source AI agents on GitHub. Access 71 agents, 311 skills. 455K stars. Revolutionize prompt engineering. Qwen Code: Open Source Alternative. Integrates directly into VS Code. Run AI agents from sidebar. No terminal. Boost coding. AI tool releases \u2014 what shipped in. Track open-source AI/ML. Daily updates from 16 repos. Stay ahead. Never miss a release. Comment REPOS below, and I will DM you the exact setup code right now.",
+    "items": [
+      {
+        "number": 1,
+        "name": "Clawd Coxey | Everyone'S Suddenly B",
+        "url": "https://www.instagram.com/p/DfqGavfBEAQ",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "open-source ones just exploded on GitHub at the same time. Trending AI Prompts on November 10, 2026. 455,000 GitHub stars. 71 agents, 311 skills and ~1,000",
+        "command": "git clone https://www.instagram.com/p/DfqGavfBEAQ.git\ncd clawd coxey | everyone's suddenly b\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 2,
+        "name": "Qwen Code: Open Source Alternative",
+        "url": "https://www.opensourcealternatives.to/item/qwen-code",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "What is the Qwen Code VS Code extension?  Qwen Code ships a VS Code extension listed on the marketplace as Qwen Code Companion. It provides a sidebar panel for running the agent inside VS Code without a terminal. The ext",
+        "command": "git clone https://www.opensourcealternatives.to/item/qwen-code.git\ncd qwen code: open source alternative\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 3,
+        "name": "Ai Tool Releases \u2014 What Shipped In",
+        "url": "https://www.dailyneuraldigest.com/releases/releases/",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "AI tool releases \u2014 what shipped in open-source AI and ML | Daily Neural Digest  # AI tool releases \u2014 what shipped in open-source AI and ML  Every release published in the last 45 days by 16 open-source AI and ML reposito",
+        "command": "git clone https://www.dailyneuraldigest.com/releases/releases/.git\ncd ai tool releases \u2014 what shipped in\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      }
+    ],
+    "cta_text": "Want our studio to build custom autonomous AI employees for your workflow? Follow @jayant.digitalstudio and DM 'REPOS'.",
+    "tags": [
+      "#ai",
+      "#automation",
+      "#tech",
+      "#softwareengineer",
+      "#workflow"
+    ]
+  },
+  {
     "id": "2026-11-13-slot-2",
     "title": "Stuck building AI with outdated, clunky open-source projects that waste time?",
     "date": "November 13, 2026",

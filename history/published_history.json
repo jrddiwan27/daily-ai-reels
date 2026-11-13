@@ -3930,5 +3930,79 @@
         "source": "Tavily (Real-Time)"
       }
     ]
+  },
+  {
+    "slot_id": 1,
+    "slot_name": "Morning Breakthrough (Slot 1)",
+    "timestamp_utc": "2026-11-13T20:03:09.692929+00:00",
+    "date_ist": "2026-11-14 9:00 AM IST (Scheduled for 03:30 UTC)",
+    "buffer_post_id": "6af76cfb4b28296eb110d9ba",
+    "channel_results": {
+      "instagram": "6af76cfb4b28296eb110d9ba",
+      "youtube": "6af76cfc4b28296eb110da8a",
+      "twitter": "6af76cfd81e1228421becdd0",
+      "public_video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1794600156/slot_1_daily_reel_opt.mp4"
+    },
+    "video_path": "out/slot_1_daily_reel_opt.mp4",
+    "items": [
+      {
+        "title": "Clawd Coxey | Everyone's suddenly building AI agents",
+        "name": "Clawd Coxey | Everyone's suddenly b",
+        "description": "open-source ones just exploded on GitHub at the same time. Trending AI Prompts on November 10, 2026. 455,000 GitHub stars. 71 agents, 311 skills and ~1,000",
+        "url": "https://www.instagram.com/p/DfqGavfBEAQ",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "Qwen Code: Open Source Alternative to GitHub Copilot",
+        "name": "Qwen Code: Open Source Alternative",
+        "description": "What is the Qwen Code VS Code extension?  Qwen Code ships a VS Code extension listed on the marketplace as Qwen Code Companion. It provides a sidebar panel for running the agent inside VS Code without a terminal. The ext",
+        "url": "https://www.opensourcealternatives.to/item/qwen-code",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "AI tool releases \u2014 what shipped in open-source AI and ML | Daily Neural Digest",
+        "name": "AI tool releases \u2014 what shipped in",
+        "description": "AI tool releases \u2014 what shipped in open-source AI and ML | Daily Neural Digest  # AI tool releases \u2014 what shipped in open-source AI and ML  Every release published in the last 45 days by 16 open-source AI and ML reposito",
+        "url": "https://www.dailyneuraldigest.com/releases/releases/",
+        "source": "Exa (24h Index)"
+      }
+    ]
+  },
+  {
+    "slot_id": 2,
+    "slot_name": "Evening AI Toolkit (Slot 2)",
+    "timestamp_utc": "2026-11-13T20:07:38.212867+00:00",
+    "date_ist": "2026-11-14 7:00 PM IST (Scheduled for 13:30 UTC)",
+    "buffer_post_id": "6af76e0881e1228421bf4f5d",
+    "channel_results": {
+      "instagram": "6af76e0881e1228421bf4f5d",
+      "youtube": "6af76e094b28296eb1115f27",
+      "twitter": "6af76e0a9257ce33980a9ba7",
+      "public_video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1794600429/slot_2_daily_reel_opt.mp4"
+    },
+    "video_path": "out/slot_2_daily_reel_opt.mp4",
+    "items": [
+      {
+        "title": "n8n - Workflow Automation \u00b7 GitHub",
+        "name": "n8n",
+        "description": "n8n-io/n8n's past year of commit activity    TypeScript   210,039  61,437  357  891  Updated Nov 11, 2026  nod  Public     Open source personal agent with its own computer. It chases invoices, preps your calls and cancel",
+        "url": "https://github.com/n8n-io",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "Databricks Launches New Always-on Genie: Autonomous AI for Complex Enterprise Work - Databricks",
+        "name": "Databricks Launches New Always-on G",
+        "description": "Databricks Launches New Always-on Genie: Autonomous AI for Complex Enterprise Work - Databricks  # Databricks Launches New Always-on Genie: Autonomous AI for Complex Enterprise Work  November 11, 2026  ## Proactive, Alwa",
+        "url": "https://www.databricks.com/company/newsroom/press-releases/databricks-launches-new-always-genie-autonomous-ai-complex",
+        "source": "Exa (24h Index)"
+      },
+      {
+        "title": "Anthropic's Claude for Manufacturing plugs AI directly into factory software to automate industrial workflows",
+        "name": "Anthropic's Claude for Manufacturin",
+        "description": "Anthropic's Claude for Manufacturing plugs AI directly into factory software to automate industrial workflows  # Anthropic's Claude for Manufacturing plugs AI directly into factory software to automate industrial workflo",
+        "url": "https://the-decoder.com/anthropics-claude-for-manufacturing-plugs-ai-directly-into-factory-software-to-automate-industrial-workflows/",
+        "source": "Exa (24h Index)"
+      }
+    ]
   }
 ]
