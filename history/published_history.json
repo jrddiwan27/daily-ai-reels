@@ -4004,5 +4004,79 @@
         "source": "Exa (24h Index)"
       }
     ]
+  },
+  {
+    "slot_id": 1,
+    "slot_name": "Morning Breakthrough (Slot 1)",
+    "timestamp_utc": "2026-11-14T20:04:52.994934+00:00",
+    "date_ist": "2026-11-15 9:00 AM IST (Scheduled for 03:30 UTC)",
+    "buffer_post_id": "6af8bee376c23bf1c73a1519",
+    "channel_results": {
+      "instagram": "6af8bee376c23bf1c73a1519",
+      "youtube": "6af8bee4e5a113497aa62dec",
+      "twitter": "6af8bee4918fe79d2ea01f53",
+      "public_video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1794686666/slot_1_daily_reel_opt.mp4"
+    },
+    "video_path": "out/slot_1_daily_reel_opt.mp4",
+    "items": [
+      {
+        "title": "Top Agent Skill Repositories on GitHub \u00b7 Linkly AI",
+        "name": "Top Agent Skill Repositories on Git",
+        "description": "| 51 | nanocoai/nanoclaw | 31,089 | +3 | 2026-11-06 | \u2014 | ai-agentsai-assistantclaude-code | | 52 | jackwener/OpenCLI | 30,939 | \u2014 | 2026-11-05 | 5 | ai-agentai-agentsai-tools | | 53 | alirezarezvani/claude-skills | 29,4",
+        "url": "https://linkly.ai/skills/top-repos",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "Superagentic AI \u00b7 GitHub",
+        "name": "Superagentic AI",
+        "description": "Python Host Client for the Prime Agent    SuperagenticAI/prime-agent-python-client's past year of commit activity    Python   2  Apache-2.0   2  0  2  Updated Nov 1, 2026  dspy-code  Public     Claude Code for DSPy: Comp",
+        "url": "https://github.com/superagenticAI",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "AI tool releases \u2014 what shipped in open-source AI and ML | Daily Neural Digest",
+        "name": "AI tool releases \u2014 what shipped in",
+        "description": "AI tool releases \u2014 what shipped in open-source AI and ML | Daily Neural Digest  # AI tool releases \u2014 what shipped in open-source AI and ML  Every release published in the last 45 days by 16 open-source AI and ML reposito",
+        "url": "https://www.dailyneuraldigest.com/releases/releases/",
+        "source": "Exa (24h Index)"
+      }
+    ]
+  },
+  {
+    "slot_id": 2,
+    "slot_name": "Evening AI Toolkit (Slot 2)",
+    "timestamp_utc": "2026-11-14T20:09:31.864139+00:00",
+    "date_ist": "2026-11-15 7:00 PM IST (Scheduled for 13:30 UTC)",
+    "buffer_post_id": "6af8bffae86a5789a6cca1d3",
+    "channel_results": {
+      "instagram": "6af8bffae86a5789a6cca1d3",
+      "youtube": "6af8bffb918fe79d2ea077ad",
+      "twitter": "6af8bffbe86a5789a6cca26e",
+      "public_video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1794686946/slot_2_daily_reel_opt.mp4"
+    },
+    "video_path": "out/slot_2_daily_reel_opt.mp4",
+    "items": [
+      {
+        "title": "screen-automation \u00b7 GitHub Topics \u00b7 GitHub",
+        "name": "screen-automation",
+        "description": "desktop-app python windows linux automation qt x11 uiautomation wayland gui-automation claude rpa ai-assistant pyside6 ai-agent llm anthropic agentic-ai computer-use screen-automation   Updated Oct 8, 2026  Python  ### d",
+        "url": "https://github.com/topics/screen-automation",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "17 Best Free AI Coding Agents in 2026 | Agentic.ai",
+        "name": "17 Best Free AI Coding Agents in 20",
+        "description": "Agenticness22/36\u00b7Domain Specialist  Orbi is an open-source, self-hostable AI coding agent that takes GitHub Issues from implementation through independent review, merge, and release. It can run against your own model end",
+        "url": "https://agentic.ai/best/free-coding-agents",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "Stop babysitting your coding agents and start building ... - Instagram",
+        "name": "Stop babysitting your coding agents",
+        "description": "Everyone's asking how to automate GitHub issues with AI and what the best open-source coding agent of 2026 is \u2014 this is DeepSeek's answer.",
+        "url": "https://www.instagram.com/p/Dfs4TxVBEFx",
+        "source": "Tavily (Real-Time)"
+      }
+    ]
   }
 ]

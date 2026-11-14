@@ -1,5 +1,111 @@
 [
   {
+    "id": "2026-11-15-slot-2",
+    "title": "Developers, your AI agents are stuck. Manual tasks devour your time. This changes everything.",
+    "date": "November 15, 2026",
+    "date_slug": "2026-11-15",
+    "slot_id": 2,
+    "slot_name": "Evening AI Toolkit (Slot 2)",
+    "badge": "AI RADAR",
+    "cta_keyword": "WORKFLOW",
+    "video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1794686946/slot_2_daily_reel_opt.mp4",
+    "summary": "Developers, your AI agents are stuck. Manual tasks devour your time. This changes everything.",
+    "voiceover_script": "Developers, your AI agents are stuck. Manual tasks devour your time. This changes everything. Imagine truly autonomous AI agents. They build, deploy, and review, alone. screen-automation empowers agents to control any desktop GUI. Automate complex workflows, integrating AI with existing applications effortlessly. 17 Best Free AI Coding Agents in 20 unveils Orbi. It autonomously tackles GitHub issues, from code to merge, no intervention needed. Stop babysitting your coding agents. DeepSeek delivers the ultimate open-source solution, automating GitHub issues end-to-end, completely hands-free. Comment WORKFLOW below, and I will DM you the exact setup code right now.",
+    "items": [
+      {
+        "number": 1,
+        "name": "Screen Automation",
+        "url": "https://github.com/topics/screen-automation",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "desktop-app python windows linux automation qt x11 uiautomation wayland gui-automation claude rpa ai-assistant pyside6 ai-agent llm anthropic agentic-ai computer-use screen-automation   Updated Oct 8, 2026  Python  ### d",
+        "command": "pip install screen-automation",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 2,
+        "name": "17 Best Free Ai Coding Agents In 20",
+        "url": "https://agentic.ai/best/free-coding-agents",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "Agenticness22/36\u00b7Domain Specialist  Orbi is an open-source, self-hostable AI coding agent that takes GitHub Issues from implementation through independent review, merge, and release. It can run against your own model end",
+        "command": "git clone https://agentic.ai/best/free-coding-agents.git\ncd 17 best free ai coding agents in 20\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 3,
+        "name": "Stop Babysitting Your Coding Agents",
+        "url": "https://www.instagram.com/p/Dfs4TxVBEFx",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "Everyone's asking how to automate GitHub issues with AI and what the best open-source coding agent of 2026 is \u2014 this is DeepSeek's answer.",
+        "command": "git clone https://www.instagram.com/p/Dfs4TxVBEFx.git\ncd stop babysitting your coding agents\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      }
+    ],
+    "cta_text": "Want our studio to build custom autonomous AI employees for your workflow? Follow @jayant.digitalstudio and DM 'WORKFLOW'.",
+    "tags": [
+      "#ai",
+      "#automation",
+      "#tech",
+      "#softwareengineer",
+      "#workflow"
+    ]
+  },
+  {
+    "id": "2026-11-15-slot-1",
+    "title": "STOP building AI agents from scratch. Your productivity is just cratering. There's a breakthrough.",
+    "date": "November 15, 2026",
+    "date_slug": "2026-11-15",
+    "slot_id": 1,
+    "slot_name": "Morning Breakthrough (Slot 1)",
+    "badge": "AI RADAR",
+    "cta_keyword": "REPOS",
+    "video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1794686666/slot_1_daily_reel_opt.mp4",
+    "summary": "STOP building AI agents from scratch. Your productivity is just cratering. There's a breakthrough.",
+    "voiceover_script": "STOP building AI agents from scratch. Your productivity is just cratering. There's a breakthrough. Access pre-built, high-performance agent skills. Elevate your AI game instantly. Top Agent Skill Repositories on Git unlock proven, ready-to-deploy AI agent capabilities. Integrate complex functions, accelerating development dramatically. Superagentic AI provides a robust Python client for Prime Agent. It deploys powerful Claude Code for DSPy, empowering advanced AI systems. AI tool releases \u2014 what shipped in tracks daily open-source AI and ML updates. Discover new tools, integrate features, stay ahead. Comment REPOS below, I will DM you the exact setup code right now.",
+    "items": [
+      {
+        "number": 1,
+        "name": "Top Agent Skill Repositories On Git",
+        "url": "https://linkly.ai/skills/top-repos",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "| 51 | nanocoai/nanoclaw | 31,089 | +3 | 2026-11-06 | \u2014 | ai-agentsai-assistantclaude-code | | 52 | jackwener/OpenCLI | 30,939 | \u2014 | 2026-11-05 | 5 | ai-agentai-agentsai-tools | | 53 | alirezarezvani/claude-skills | 29,4",
+        "command": "git clone https://linkly.ai/skills/top-repos.git\ncd top agent skill repositories on git\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 2,
+        "name": "Superagentic Ai",
+        "url": "https://github.com/superagenticAI",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "Python Host Client for the Prime Agent    SuperagenticAI/prime-agent-python-client's past year of commit activity    Python   2  Apache-2.0   2  0  2  Updated Nov 1, 2026  dspy-code  Public     Claude Code for DSPy: Comp",
+        "command": "pip install superagentic ai",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 3,
+        "name": "Ai Tool Releases \u2014 What Shipped In",
+        "url": "https://www.dailyneuraldigest.com/releases/releases/",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "AI tool releases \u2014 what shipped in open-source AI and ML | Daily Neural Digest  # AI tool releases \u2014 what shipped in open-source AI and ML  Every release published in the last 45 days by 16 open-source AI and ML reposito",
+        "command": "git clone https://www.dailyneuraldigest.com/releases/releases/.git\ncd ai tool releases \u2014 what shipped in\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      }
+    ],
+    "cta_text": "Want our studio to build custom autonomous AI employees for your workflow? Follow @jayant.digitalstudio and DM 'REPOS'.",
+    "tags": [
+      "#ai",
+      "#automation",
+      "#tech",
+      "#softwareengineer",
+      "#workflow"
+    ]
+  },
+  {
     "id": "2026-11-14-slot-2",
     "title": "Stop paying insane monthly SaaS subscriptions when free open-source AI builds this instantly.",
     "date": "November 14, 2026",
