@@ -4078,5 +4078,79 @@
         "source": "Tavily (Real-Time)"
       }
     ]
+  },
+  {
+    "slot_id": 1,
+    "slot_name": "Morning Breakthrough (Slot 1)",
+    "timestamp_utc": "2026-11-15T19:05:51.327645+00:00",
+    "date_ist": "2026-11-16 9:00 AM IST (Scheduled for 03:30 UTC)",
+    "buffer_post_id": "6afa028db9a106584ccbe090",
+    "channel_results": {
+      "instagram": "6afa028db9a106584ccbe090",
+      "youtube": "6afa028ee5a113497a099605",
+      "twitter": "6afa028fee359588b548950d",
+      "public_video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1794769527/slot_1_daily_reel_opt.mp4"
+    },
+    "video_path": "out/slot_1_daily_reel_opt.mp4",
+    "items": [
+      {
+        "title": "32 Best AI Coding Agents in 2026 | Agentic.ai",
+        "name": "32 Best AI Coding Agents in 2026 |",
+        "description": "TagCode  Agenticness19/36\u00b7Domain Specialist  TagCode is an open-source terminal coding agent that can inspect repositories, edit files, run shell commands, and search the web. It supports hosted model providers as well a",
+        "url": "https://agentic.ai/best/coding-agents",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "ai-pr-review \u00b7 GitHub Topics \u00b7 GitHub",
+        "name": "ai-pr-review",
+        "description": "open-source ai code-review ai-agents coding-assistant developer-tool pull-request-review code-review-bot byok generative-ai ai-code-review ai-coding-tools coderabbit-alternative ai-pr-review   Updated Nov 13, 2026  TypeS",
+        "url": "https://github.com/topics/ai-pr-review",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "AI tool releases \u2014 what shipped in open-source AI and ML | Daily Neural Digest",
+        "name": "AI tool releases \u2014 what shipped in",
+        "description": "AI tool releases \u2014 what shipped in open-source AI and ML | Daily Neural Digest  # AI tool releases \u2014 what shipped in open-source AI and ML  Every release published in the last 45 days by 16 open-source AI and ML reposito",
+        "url": "https://www.dailyneuraldigest.com/releases/releases/",
+        "source": "Exa (24h Index)"
+      }
+    ]
+  },
+  {
+    "slot_id": 2,
+    "slot_name": "Evening AI Toolkit (Slot 2)",
+    "timestamp_utc": "2026-11-15T19:10:13.601356+00:00",
+    "date_ist": "2026-11-16 7:00 PM IST (Scheduled for 13:30 UTC)",
+    "buffer_post_id": "6afa039355ad64be50512839",
+    "channel_results": {
+      "instagram": "6afa039355ad64be50512839",
+      "youtube": "6afa0394ee359588b548ec35",
+      "twitter": "6afa039555ad64be505128d3",
+      "public_video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1794769788/slot_2_daily_reel_opt.mp4"
+    },
+    "video_path": "out/slot_2_daily_reel_opt.mp4",
+    "items": [
+      {
+        "title": "n8n - Workflow Automation \u00b7 GitHub",
+        "name": "n8n",
+        "description": "n8n-io/n8n's past year of commit activity    TypeScript   210,039  61,437  357  891  Updated Nov 11, 2026  nod  Public     Open source personal agent with its own computer. It chases invoices, preps your calls and cancel",
+        "url": "https://github.com/n8n-io",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "openJiuwen \u00b7 GitHub",
+        "name": "openJiuwen",
+        "description": "A lightweight, extensible, fully offline development platform and agent/workflow toolkit for the AI era, with an intuitive TUI, easy deployment, and complete control over your data, agents, and workflows.    openJiuwen-a",
+        "url": "https://github.com/openJiuwen-ai",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "NiCE Launches Next-Generation NiCE Cognigy to Accelerate Enterprise AI Agent Deployment and Orchestration",
+        "name": "NiCE Launches Next-Generation NiCE",
+        "description": "NiCE Launches Next-Generation NiCE Cognigy to Accelerate Enterprise AI Agent Deployment and Orchestration  # NiCE Launches Next-Generation NiCE Cognigy to Accelerate Enterprise AI Agent Deployment and Orchestration  Medi",
+        "url": "https://www.cognigy.com/news/nice-launches-next-generation-nice-cognigy-to-accelerate-enterprise-ai-agent-deployment-and-orchestration",
+        "source": "Exa (24h Index)"
+      }
+    ]
   }
 ]

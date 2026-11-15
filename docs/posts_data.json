@@ -1,5 +1,111 @@
 [
   {
+    "id": "2026-11-16-slot-2",
+    "title": "Stop drowning in manual tasks. Your AI agents lack true autonomy and orchestration.",
+    "date": "November 16, 2026",
+    "date_slug": "2026-11-16",
+    "slot_id": 2,
+    "slot_name": "Evening AI Toolkit (Slot 2)",
+    "badge": "AI RADAR",
+    "cta_keyword": "WORKFLOW",
+    "video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1794769788/slot_2_daily_reel_opt.mp4",
+    "summary": "Stop drowning in manual tasks. Your AI agents lack true autonomy and orchestration.",
+    "voiceover_script": "Stop drowning in manual tasks. Your AI agents lack true autonomy and orchestration. Unleash hyper-efficient AI agents with next-gen workflow orchestration tools now. n8n builds your personal AI agent. It autonomously chases invoices, preps calls, and manages cancellations. Automate everything. openJiuwen delivers offline AI development. Control agents, data, and workflows completely. Deploy easily, ensuring total privacy. NiCE Launches Next-Generation NiCE accelerates enterprise AI. Deploy and orchestrate complex AI agents rapidly, boosting efficiency now. Comment WORKFLOW below, and I will DM you the exact setup code right now.",
+    "items": [
+      {
+        "number": 1,
+        "name": "N8N",
+        "url": "https://github.com/n8n-io",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "n8n-io/n8n's past year of commit activity    TypeScript   210,039  61,437  357  891  Updated Nov 11, 2026  nod  Public     Open source personal agent with its own computer. It chases invoices, preps your calls and cancel",
+        "command": "npx n8n --latest",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 2,
+        "name": "Openjiuwen",
+        "url": "https://github.com/openJiuwen-ai",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "A lightweight, extensible, fully offline development platform and agent/workflow toolkit for the AI era, with an intuitive TUI, easy deployment, and complete control over your data, agents, and workflows.    openJiuwen-a",
+        "command": "git clone https://github.com/openJiuwen-ai.git\ncd openjiuwen\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 3,
+        "name": "Nice Launches Next Generation Nice",
+        "url": "https://www.cognigy.com/news/nice-launches-next-generation-nice-cognigy-to-accelerate-enterprise-ai-agent-deployment-and-orchestration",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "NiCE Launches Next-Generation NiCE Cognigy to Accelerate Enterprise AI Agent Deployment and Orchestration  # NiCE Launches Next-Generation NiCE Cognigy to Accelerate Enterprise AI Agent Deployment and Orchestration  Medi",
+        "command": "git clone https://www.cognigy.com/news/nice-launches-next-generation-nice-cognigy-to-accelerate-enterprise-ai-agent-deployment-and-orchestration.git\ncd nice launches next-generation nice\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      }
+    ],
+    "cta_text": "Want our studio to build custom autonomous AI employees for your workflow? Follow @jayant.digitalstudio and DM 'WORKFLOW'.",
+    "tags": [
+      "#ai",
+      "#automation",
+      "#tech",
+      "#softwareengineer",
+      "#workflow"
+    ]
+  },
+  {
+    "id": "2026-11-16-slot-1",
+    "title": "Still manually coding every single line? Wasting hours on repetitive dev tasks?",
+    "date": "November 16, 2026",
+    "date_slug": "2026-11-16",
+    "slot_id": 1,
+    "slot_name": "Morning Breakthrough (Slot 1)",
+    "badge": "AI RADAR",
+    "cta_keyword": "REPOS",
+    "video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1794769527/slot_1_daily_reel_opt.mp4",
+    "summary": "Still manually coding every single line? Wasting hours on repetitive dev tasks?",
+    "voiceover_script": "Still manually coding every single line? Wasting hours on repetitive dev tasks? Stop. AI agents now write, review, and ship code faster for you. 32 Best AI Coding Agents in 2026 | TagCode inspects repos, edits files, runs shell commands, searches web. Automates terminal coding. ai-pr-review instantly automates all your code reviews. Ship faster, catch errors, elevate your entire dev workflow. AI tool releases \u2014 what shipped in tracks new open-source AI/ML tools daily. Stay ahead, discover breakthroughs fast. Comment REPOS below, and I will DM you the exact setup code right now.",
+    "items": [
+      {
+        "number": 1,
+        "name": "32 Best Ai Coding Agents In 2026 |",
+        "url": "https://agentic.ai/best/coding-agents",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "TagCode  Agenticness19/36\u00b7Domain Specialist  TagCode is an open-source terminal coding agent that can inspect repositories, edit files, run shell commands, and search the web. It supports hosted model providers as well a",
+        "command": "git clone https://agentic.ai/best/coding-agents.git\ncd 32 best ai coding agents in 2026 |\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 2,
+        "name": "Ai Pr Review",
+        "url": "https://github.com/topics/ai-pr-review",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "open-source ai code-review ai-agents coding-assistant developer-tool pull-request-review code-review-bot byok generative-ai ai-code-review ai-coding-tools coderabbit-alternative ai-pr-review   Updated Nov 13, 2026  TypeS",
+        "command": "git clone https://github.com/topics/ai-pr-review.git\ncd ai-pr-review\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 3,
+        "name": "Ai Tool Releases \u2014 What Shipped In",
+        "url": "https://www.dailyneuraldigest.com/releases/releases/",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "AI tool releases \u2014 what shipped in open-source AI and ML | Daily Neural Digest  # AI tool releases \u2014 what shipped in open-source AI and ML  Every release published in the last 45 days by 16 open-source AI and ML reposito",
+        "command": "git clone https://www.dailyneuraldigest.com/releases/releases/.git\ncd ai tool releases \u2014 what shipped in\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      }
+    ],
+    "cta_text": "Want our studio to build custom autonomous AI employees for your workflow? Follow @jayant.digitalstudio and DM 'REPOS'.",
+    "tags": [
+      "#ai",
+      "#automation",
+      "#tech",
+      "#softwareengineer",
+      "#workflow"
+    ]
+  },
+  {
     "id": "2026-11-15-slot-2",
     "title": "Developers, your AI agents are stuck. Manual tasks devour your time. This changes everything.",
     "date": "November 15, 2026",
