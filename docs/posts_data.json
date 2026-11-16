@@ -1,5 +1,111 @@
 [
   {
+    "id": "2026-11-17-slot-2",
+    "title": "Manually battling browser forms, complex dev workflows, fragmented healthcare? Your productivity is crashing hard.",
+    "date": "November 17, 2026",
+    "date_slug": "2026-11-17",
+    "slot_id": 2,
+    "slot_name": "Evening AI Toolkit (Slot 2)",
+    "badge": "AI RADAR",
+    "cta_keyword": "WORKFLOW",
+    "video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1794858972/slot_2_daily_reel_opt.mp4",
+    "summary": "Manually battling browser forms, complex dev workflows, fragmented healthcare? Your productivity is crashing hard.",
+    "voiceover_script": "Manually battling browser forms, complex dev workflows, fragmented healthcare? Your productivity is crashing hard. Stop wasting hours. AI agents now automate everything. Unlock insane efficiency. Best AI Browser Agents in 2026: 7 T automates web workflows. Logs into portals, downloads invoices, fills forms, handles CAPTCHAs, 2FA. 17 Best Free AI Coding Agents in 20 (Orbi) handles GitHub Issues. It implements, reviews, merges, releases code autonomously. Open-source. Advancing computer-use agents for h empowers healthcare teams. It moves information between fragmented systems, streamlines patient data, reduces errors. Comment WORKFLOW below, and I will DM you the exact setup code right now.",
+    "items": [
+      {
+        "number": 1,
+        "name": "Best Ai Browser Agents In 2026: 7 T",
+        "url": "https://www.simular.ai/alternatives/best-ai-browser-agents",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "### 4. Skyvern: browser automation for portals and forms  Skyvern automates workflows on websites with an AI agent: logging in to portals, downloading invoices, filling forms. It handles CAPTCHAs, 2FA and TOTP, proxies a",
+        "command": "git clone https://www.simular.ai/alternatives/best-ai-browser-agents.git\ncd best ai browser agents in 2026: 7 t\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 2,
+        "name": "17 Best Free Ai Coding Agents In 20",
+        "url": "https://agentic.ai/best/free-coding-agents",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "Agenticness22/36\u00b7Domain Specialist  Orbi is an open-source, self-hostable AI coding agent that takes GitHub Issues from implementation through independent review, merge, and release. It can run against your own model end",
+        "command": "git clone https://agentic.ai/best/free-coding-agents.git\ncd 17 best free ai coding agents in 20\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 3,
+        "name": "Advancing Computer Use Agents For H",
+        "url": "https://openai.com/index/advancing-computer-use-for-healthcare-teams/",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "Advancing computer-use agents for healthcare teams | OpenAI  November 16, 2026  # Advancing computer-use agents for healthcare teams  Healthcare is fragmented, and teams often need to move information between systems man",
+        "command": "git clone https://openai.com/index/advancing-computer-use-for-healthcare-teams/.git\ncd advancing computer-use agents for h\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      }
+    ],
+    "cta_text": "Want our studio to build custom autonomous AI employees for your workflow? Follow @jayant.digitalstudio and DM 'WORKFLOW'.",
+    "tags": [
+      "#ai",
+      "#automation",
+      "#tech",
+      "#softwareengineer",
+      "#workflow"
+    ]
+  },
+  {
+    "id": "2026-11-17-slot-1",
+    "title": "Coding bottlenecks crushing your productivity? AI agents are the game changer you're missing.",
+    "date": "November 17, 2026",
+    "date_slug": "2026-11-17",
+    "slot_id": 1,
+    "slot_name": "Morning Breakthrough (Slot 1)",
+    "badge": "AI RADAR",
+    "cta_keyword": "REPOS",
+    "video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1794858590/slot_1_daily_reel_opt.mp4",
+    "summary": "Coding bottlenecks crushing your productivity? AI agents are the game changer you're missing.",
+    "voiceover_script": "Coding bottlenecks crushing your productivity? AI agents are the game changer you're missing. Stop wasting time. Unleash these three insane AI tools now. '17 Best Free AI Coding Agents in 20' automates GitHub issues. It reviews, merges, releases code independently. Skyrocket your development. 'knowledge-graph' turbocharges all coding agents. It provides faster, cheaper, contextual understanding for your codebase. Boost efficiency. 'AI tool releases \u2014 what shipped in' tracks 16 open-source AI/ML repos. Daily digests deliver new tools, features. Stay updated. Comment REPOS below, and I will DM you the exact setup code right now.",
+    "items": [
+      {
+        "number": 1,
+        "name": "17 Best Free Ai Coding Agents In 20",
+        "url": "https://agentic.ai/best/free-coding-agents",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "Agenticness22/36\u00b7Domain Specialist  Orbi is an open-source, self-hostable AI coding agent that takes GitHub Issues from implementation through independent review, merge, and release. It can run against your own model end",
+        "command": "git clone https://agentic.ai/best/free-coding-agents.git\ncd 17 best free ai coding agents in 20\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 2,
+        "name": "Knowledge Graph",
+        "url": "https://github.com/topics/knowledge-graph",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "Updated Oct 10, 2026  Rust  ### trailhq / Graft  Star  9.8k  Turbocharge Claude Code, Cursor, Codex, Gemini & every coding agent: faster, cheaper, with contextual understanding specific to your codebase.  cli open-source",
+        "command": "git clone https://github.com/topics/knowledge-graph.git\ncd knowledge-graph\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 3,
+        "name": "Ai Tool Releases \u2014 What Shipped In",
+        "url": "https://www.dailyneuraldigest.com/releases/releases/",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "AI tool releases \u2014 what shipped in open-source AI and ML | Daily Neural Digest  # AI tool releases \u2014 what shipped in open-source AI and ML  Every release published in the last 45 days by 16 open-source AI and ML reposito",
+        "command": "git clone https://www.dailyneuraldigest.com/releases/releases/.git\ncd ai tool releases \u2014 what shipped in\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      }
+    ],
+    "cta_text": "Want our studio to build custom autonomous AI employees for your workflow? Follow @jayant.digitalstudio and DM 'REPOS'.",
+    "tags": [
+      "#ai",
+      "#automation",
+      "#tech",
+      "#softwareengineer",
+      "#workflow"
+    ]
+  },
+  {
     "id": "2026-11-16-slot-2",
     "title": "Stop drowning in manual tasks. Your AI agents lack true autonomy and orchestration.",
     "date": "November 16, 2026",

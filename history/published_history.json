@@ -4152,5 +4152,79 @@
         "source": "Exa (24h Index)"
       }
     ]
+  },
+  {
+    "slot_id": 1,
+    "slot_name": "Morning Breakthrough (Slot 1)",
+    "timestamp_utc": "2026-11-16T19:50:25.763299+00:00",
+    "date_ist": "2026-11-17 9:00 AM IST (Scheduled for 03:30 UTC)",
+    "buffer_post_id": "6afb5e803e6202be8784a476",
+    "channel_results": {
+      "instagram": "6afb5e803e6202be8784a476",
+      "youtube": "6afb5e80710e22a9c7b77254",
+      "twitter": "6afb5e815c671a37dd56d609",
+      "public_video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1794858590/slot_1_daily_reel_opt.mp4"
+    },
+    "video_path": "out/slot_1_daily_reel_opt.mp4",
+    "items": [
+      {
+        "title": "17 Best Free AI Coding Agents in 2026 | Agentic.ai",
+        "name": "17 Best Free AI Coding Agents in 20",
+        "description": "Agenticness22/36\u00b7Domain Specialist  Orbi is an open-source, self-hostable AI coding agent that takes GitHub Issues from implementation through independent review, merge, and release. It can run against your own model end",
+        "url": "https://agentic.ai/best/free-coding-agents",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "knowledge-graph \u00b7 GitHub Topics \u00b7 GitHub",
+        "name": "knowledge-graph",
+        "description": "Updated Oct 10, 2026  Rust  ### trailhq / Graft  Star  9.8k  Turbocharge Claude Code, Cursor, Codex, Gemini & every coding agent: faster, cheaper, with contextual understanding specific to your codebase.  cli open-source",
+        "url": "https://github.com/topics/knowledge-graph",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "AI tool releases \u2014 what shipped in open-source AI and ML | Daily Neural Digest",
+        "name": "AI tool releases \u2014 what shipped in",
+        "description": "AI tool releases \u2014 what shipped in open-source AI and ML | Daily Neural Digest  # AI tool releases \u2014 what shipped in open-source AI and ML  Every release published in the last 45 days by 16 open-source AI and ML reposito",
+        "url": "https://www.dailyneuraldigest.com/releases/releases/",
+        "source": "Exa (24h Index)"
+      }
+    ]
+  },
+  {
+    "slot_id": 2,
+    "slot_name": "Evening AI Toolkit (Slot 2)",
+    "timestamp_utc": "2026-11-16T19:56:49.605444+00:00",
+    "date_ist": "2026-11-17 7:00 PM IST (Scheduled for 13:30 UTC)",
+    "buffer_post_id": "6afb60009c7c07cbc84c2924",
+    "channel_results": {
+      "instagram": "6afb60009c7c07cbc84c2924",
+      "youtube": "6afb60003509d4c5b87def39",
+      "twitter": "6afb6001710e22a9c7b7e6a4",
+      "public_video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1794858972/slot_2_daily_reel_opt.mp4"
+    },
+    "video_path": "out/slot_2_daily_reel_opt.mp4",
+    "items": [
+      {
+        "title": "Best AI Browser Agents in 2026: 7 Tools Compared",
+        "name": "Best AI Browser Agents in 2026: 7 T",
+        "description": "### 4. Skyvern: browser automation for portals and forms  Skyvern automates workflows on websites with an AI agent: logging in to portals, downloading invoices, filling forms. It handles CAPTCHAs, 2FA and TOTP, proxies a",
+        "url": "https://www.simular.ai/alternatives/best-ai-browser-agents",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "17 Best Free AI Coding Agents in 2026 | Agentic.ai",
+        "name": "17 Best Free AI Coding Agents in 20",
+        "description": "Agenticness22/36\u00b7Domain Specialist  Orbi is an open-source, self-hostable AI coding agent that takes GitHub Issues from implementation through independent review, merge, and release. It can run against your own model end",
+        "url": "https://agentic.ai/best/free-coding-agents",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "Advancing computer-use agents for healthcare teams | OpenAI",
+        "name": "Advancing computer-use agents for h",
+        "description": "Advancing computer-use agents for healthcare teams | OpenAI  November 16, 2026  # Advancing computer-use agents for healthcare teams  Healthcare is fragmented, and teams often need to move information between systems man",
+        "url": "https://openai.com/index/advancing-computer-use-for-healthcare-teams/",
+        "source": "Exa (24h Index)"
+      }
+    ]
   }
 ]
