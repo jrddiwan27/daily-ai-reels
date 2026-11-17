@@ -1,5 +1,111 @@
 [
   {
+    "id": "2026-11-18-slot-2",
+    "title": "Stop paying insane monthly SaaS subscriptions when free open-source AI builds this instantly.",
+    "date": "November 18, 2026",
+    "date_slug": "2026-11-18",
+    "slot_id": 2,
+    "slot_name": "Evening AI Toolkit (Slot 2)",
+    "badge": "AI RADAR",
+    "cta_keyword": "WORKFLOW",
+    "video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1794941602/slot_2_daily_reel_opt.mp4",
+    "summary": "Stop paying insane monthly SaaS subscriptions when free open-source AI builds this instantly.",
+    "voiceover_script": "Stop paying insane monthly SaaS subscriptions when free open-source AI builds this instantly. Three brand-new breakthrough developer repos just dropped on GitHub today. First is Best AI Browser Agents in 2026: 7 T. It eliminates manual coding pipelines with lightning-fast local model execution. Second is Introducing Replit Missions | Repli. An autonomous engine executing deterministic workflows with sub-millisecond response latency. Third is Genpact Launches Genpact Onyx, the. A zero-cloud runtime running complex reasoning models directly on device. Comment WORKFLOW below, and I will DM you the exact setup code right now.",
+    "items": [
+      {
+        "number": 1,
+        "name": "Best Ai Browser Agents In 2026: 7 T",
+        "url": "https://www.simular.ai/alternatives/best-ai-browser-agents",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "### 4. Skyvern: browser automation for portals and forms  Skyvern automates workflows on websites with an AI agent: logging in to portals, downloading invoices, filling forms. It handles CAPTCHAs, 2FA and TOTP, proxies a",
+        "command": "git clone https://www.simular.ai/alternatives/best-ai-browser-agents.git\ncd best ai browser agents in 2026: 7 t\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 2,
+        "name": "Introducing Replit Missions | Repli",
+        "url": "https://replit.com/blog/introducing-replit-missions",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "Introducing Replit Missions | Replit  # Introducing Replit Missions  Agent swarms plan, build, test, and iterate toward the results you want, within the budget and boundaries you set.  Published:  Nov 17, 2026  The Repli",
+        "command": "git clone https://replit.com/blog/introducing-replit-missions.git\ncd introducing replit missions | repli\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 3,
+        "name": "Genpact Launches Genpact Onyx, The",
+        "url": "https://media.genpact.com/2026-11-16-Genpact-Launches-Genpact-Onyx,-the-Agentic-Operations-Platform-for-Building,-Running,-and-Governing-AI-Agents-in-Enterprise-Operations",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "Genpact Launches Genpact Onyx, the Agentic Operations Platform for Building, Running, and Governing AI Agents in Enterprise Operations - Nov 16, 2026  Genpact Launches Genpact Onyx, the Agentic Operations Platform for Bu",
+        "command": "git clone https://media.genpact.com/2026-11-16-Genpact-Launches-Genpact-Onyx,-the-Agentic-Operations-Platform-for-Building,-Running,-and-Governing-AI-Agents-in-Enterprise-Operations.git\ncd genpact launches genpact onyx, the\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      }
+    ],
+    "cta_text": "Want our studio to build custom autonomous AI employees for your workflow? Follow @jayant.digitalstudio and DM 'WORKFLOW'.",
+    "tags": [
+      "#ai",
+      "#automation",
+      "#tech",
+      "#softwareengineer",
+      "#workflow"
+    ]
+  },
+  {
+    "id": "2026-11-18-slot-1",
+    "title": "Your AI agents crash, lose context, waste compute. Frustrating, expensive, right?",
+    "date": "November 18, 2026",
+    "date_slug": "2026-11-18",
+    "slot_id": 1,
+    "slot_name": "Morning Breakthrough (Slot 1)",
+    "badge": "AI RADAR",
+    "cta_keyword": "REPOS",
+    "video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1794941199/slot_1_daily_reel_opt.mp4",
+    "summary": "Your AI agents crash, lose context, waste compute. Frustrating, expensive, right?",
+    "voiceover_script": "Your AI agents crash, lose context, waste compute. Frustrating, expensive, right? Finally, build robust, intelligent AI agents that remember everything. ai-memory: Julep builds durable, composable AI agents. It safely resumes crashed flows, retries, and explains every critical step. knowledge-graph: Graft turbocharges coding agents like Claude. Get faster, cheaper, deeply contextual understanding of your codebase. Discussion on \"10 Open-Source GitHu\": Uncover top open-source GitHub repositories. Discover gems, analyze trends, accelerate your next AI build. Comment REPOS below, and I will DM you the exact setup code now.",
+    "items": [
+      {
+        "number": 1,
+        "name": "Ai Memory",
+        "url": "https://github.com/topics/ai-memory",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "Updated Nov 16, 2026  Python  ### julep-ai / julep  Star  6.6k  Julep \u2014 durable, composable AI agents. Flows that crash and resume, retry safely, and explain every step.  nodejs python node ai developer-tools node-js age",
+        "command": "pip install ai-memory",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 2,
+        "name": "Knowledge Graph",
+        "url": "https://github.com/topics/knowledge-graph",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "Updated Oct 10, 2026  Rust  ### trailhq / Graft  Star  9.8k  Turbocharge Claude Code, Cursor, Codex, Gemini & every coding agent: faster, cheaper, with contextual understanding specific to your codebase.  cli open-source",
+        "command": "git clone https://github.com/topics/knowledge-graph.git\ncd knowledge-graph\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 3,
+        "name": "Discussion On \"10 Open Source Githu",
+        "url": "https://hashnode.com/posts/10-open-source-github-repositories-every-ai-agent-builder-needs-in-2026/6afb1519b3e810cf70206896",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "Home  Feed  Extend   Hashnode Pro  Hashnode for Agents  Resources   The foreword  Hashnode gql skill   Sign in  ## Search Hashnode  Search posts, tags, users, and pages  Discussion on \"10 Open-Source GitHub Repositories",
+        "command": "git clone https://hashnode.com/posts/10-open-source-github-repositories-every-ai-agent-builder-needs-in-2026/6afb1519b3e810cf70206896.git\ncd discussion on \"10 open-source githu\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      }
+    ],
+    "cta_text": "Want our studio to build custom autonomous AI employees for your workflow? Follow @jayant.digitalstudio and DM 'REPOS'.",
+    "tags": [
+      "#ai",
+      "#automation",
+      "#tech",
+      "#softwareengineer",
+      "#workflow"
+    ]
+  },
+  {
     "id": "2026-11-17-slot-2",
     "title": "Manually battling browser forms, complex dev workflows, fragmented healthcare? Your productivity is crashing hard.",
     "date": "November 17, 2026",

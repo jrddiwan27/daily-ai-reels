@@ -4226,5 +4226,79 @@
         "source": "Exa (24h Index)"
       }
     ]
+  },
+  {
+    "slot_id": 1,
+    "slot_name": "Morning Breakthrough (Slot 1)",
+    "timestamp_utc": "2026-11-17T18:47:20.518419+00:00",
+    "date_ist": "2026-11-18 9:00 AM IST (Scheduled for 03:30 UTC)",
+    "buffer_post_id": "6afca13676241fcf0c6c3916",
+    "channel_results": {
+      "instagram": "6afca13676241fcf0c6c3916",
+      "youtube": "6afca1377ab2c2731e0b7e81",
+      "twitter": "6afca13876241fcf0c6c397b",
+      "public_video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1794941199/slot_1_daily_reel_opt.mp4"
+    },
+    "video_path": "out/slot_1_daily_reel_opt.mp4",
+    "items": [
+      {
+        "title": "ai-memory \u00b7 GitHub Topics \u00b7 GitHub",
+        "name": "ai-memory",
+        "description": "Updated Nov 16, 2026  Python  ### julep-ai / julep  Star  6.6k  Julep \u2014 durable, composable AI agents. Flows that crash and resume, retry safely, and explain every step.  nodejs python node ai developer-tools node-js age",
+        "url": "https://github.com/topics/ai-memory",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "knowledge-graph \u00b7 GitHub Topics \u00b7 GitHub",
+        "name": "knowledge-graph",
+        "description": "Updated Oct 10, 2026  Rust  ### trailhq / Graft  Star  9.8k  Turbocharge Claude Code, Cursor, Codex, Gemini & every coding agent: faster, cheaper, with contextual understanding specific to your codebase.  cli open-source",
+        "url": "https://github.com/topics/knowledge-graph",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "Discussion on \"10 Open-Source GitHub Repositories Every AI Agent Builder Needs in 2026\" | Hashnode",
+        "name": "Discussion on \"10 Open-Source GitHu",
+        "description": "Home  Feed  Extend   Hashnode Pro  Hashnode for Agents  Resources   The foreword  Hashnode gql skill   Sign in  ## Search Hashnode  Search posts, tags, users, and pages  Discussion on \"10 Open-Source GitHub Repositories",
+        "url": "https://hashnode.com/posts/10-open-source-github-repositories-every-ai-agent-builder-needs-in-2026/6afb1519b3e810cf70206896",
+        "source": "Tavily (Real-Time)"
+      }
+    ]
+  },
+  {
+    "slot_id": 2,
+    "slot_name": "Evening AI Toolkit (Slot 2)",
+    "timestamp_utc": "2026-11-17T18:54:14.054135+00:00",
+    "date_ist": "2026-11-18 7:00 PM IST (Scheduled for 13:30 UTC)",
+    "buffer_post_id": "6afca2d4d4c8ef4106f803ab",
+    "channel_results": {
+      "instagram": "6afca2d4d4c8ef4106f803ab",
+      "youtube": "6afca2d41521a8d02296d3ff",
+      "twitter": "6afca2d57ab2c2731e0c2fa1",
+      "public_video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1794941602/slot_2_daily_reel_opt.mp4"
+    },
+    "video_path": "out/slot_2_daily_reel_opt.mp4",
+    "items": [
+      {
+        "title": "Best AI Browser Agents in 2026: 7 Tools Compared",
+        "name": "Best AI Browser Agents in 2026: 7 T",
+        "description": "### 4. Skyvern: browser automation for portals and forms  Skyvern automates workflows on websites with an AI agent: logging in to portals, downloading invoices, filling forms. It handles CAPTCHAs, 2FA and TOTP, proxies a",
+        "url": "https://www.simular.ai/alternatives/best-ai-browser-agents",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "Introducing Replit Missions | Replit",
+        "name": "Introducing Replit Missions | Repli",
+        "description": "Introducing Replit Missions | Replit  # Introducing Replit Missions  Agent swarms plan, build, test, and iterate toward the results you want, within the budget and boundaries you set.  Published:  Nov 17, 2026  The Repli",
+        "url": "https://replit.com/blog/introducing-replit-missions",
+        "source": "Exa (24h Index)"
+      },
+      {
+        "title": "Genpact Launches Genpact Onyx, the Agentic Operations Platform for Building, Running, and Governing AI Agents in Enterprise Operations - Nov 16, 2026",
+        "name": "Genpact Launches Genpact Onyx, the",
+        "description": "Genpact Launches Genpact Onyx, the Agentic Operations Platform for Building, Running, and Governing AI Agents in Enterprise Operations - Nov 16, 2026  Genpact Launches Genpact Onyx, the Agentic Operations Platform for Bu",
+        "url": "https://media.genpact.com/2026-11-16-Genpact-Launches-Genpact-Onyx,-the-Agentic-Operations-Platform-for-Building,-Running,-and-Governing-AI-Agents-in-Enterprise-Operations",
+        "source": "Exa (24h Index)"
+      }
+    ]
   }
 ]
