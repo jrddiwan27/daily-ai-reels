@@ -1,5 +1,111 @@
 [
   {
+    "id": "2026-11-19-slot-2",
+    "title": "Building AI agents feels like herding cats? Manual workflows kill your speed and progress.",
+    "date": "November 19, 2026",
+    "date_slug": "2026-11-19",
+    "slot_id": 2,
+    "slot_name": "Evening AI Toolkit (Slot 2)",
+    "badge": "AI RADAR",
+    "cta_keyword": "WORKFLOW",
+    "video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1795035551/slot_2_daily_reel_opt.mp4",
+    "summary": "Building AI agents feels like herding cats? Manual workflows kill your speed and progress.",
+    "voiceover_script": "Building AI agents feels like herding cats? Manual workflows kill your speed and progress. Finally, AI agents build themselves. Automation unleashes your true power. role-based-agents: Orchestrates powerful AI agent teams. It builds complex multi-agent pipelines, accelerating development with pre-built skills. Meet Bridget: The AI Agent that Bri: Learns browser apps rapidly. It bridges your systems, executing tasks autonomously, connecting them. Mermaid Flow: the visual builder fo: Visually build agentic workflows. It diagrams complex processes, then executes them, simplifying orchestration. Comment WORKFLOW below, and I will DM you the exact setup code right now.",
+    "items": [
+      {
+        "number": 1,
+        "name": "Role Based Agents",
+        "url": "https://github.com/topics/role-based-agents",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "cli typescript ai pipeline skills mcp multi-agent developer-tools constellation cursor codex ai-agents team-formation anthropic agentic skill-pack agent-orchestration agent-skills claude-code role-based-agents   Updated",
+        "command": "pip install role-based-agents",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 2,
+        "name": "Meet Bridget: The Ai Agent That Bri",
+        "url": "https://www.salesforce.com/blog/bridget-systems-integration-agent/",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "Meet Bridget: The AI Agent that Bridges Your Systems and Gets Work Done - Salesforce  # Meet Bridget: The AI Agent that Bridges Your Systems and Gets Work Done  Bridget learns a browser-based application in about an hour",
+        "command": "git clone https://www.salesforce.com/blog/bridget-systems-integration-agent/.git\ncd meet bridget: the ai agent that bri\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 3,
+        "name": "Mermaid Flow: The Visual Builder Fo",
+        "url": "https://mermaid.ai/blog/posts/mermaid-flow-the-visual-builder-for-agentic-workflows",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "Mermaid Flow: the visual builder for agentic workflows  # Mermaid Flow: the visual builder for agentic workflows    18 November 2026 \u2022 4 mins   Mermaid Flow lets you build agentic workflows as diagrams and run them the s",
+        "command": "git clone https://mermaid.ai/blog/posts/mermaid-flow-the-visual-builder-for-agentic-workflows.git\ncd mermaid flow: the visual builder fo\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      }
+    ],
+    "cta_text": "Want our studio to build custom autonomous AI employees for your workflow? Follow @jayant.digitalstudio and DM 'WORKFLOW'.",
+    "tags": [
+      "#ai",
+      "#automation",
+      "#tech",
+      "#softwareengineer",
+      "#workflow"
+    ]
+  },
+  {
+    "id": "2026-11-19-slot-1",
+    "title": "Stuck building clunky AI agents that barely understand context? Your dev workflow is a nightmare.",
+    "date": "November 19, 2026",
+    "date_slug": "2026-11-19",
+    "slot_id": 1,
+    "slot_name": "Morning Breakthrough (Slot 1)",
+    "badge": "AI RADAR",
+    "cta_keyword": "REPOS",
+    "video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1795035206/slot_1_daily_reel_opt.mp4",
+    "summary": "Stuck building clunky AI agents that barely understand context? Your dev workflow is a nightmare.",
+    "voiceover_script": "Stuck building clunky AI agents that barely understand context? Your dev workflow is a nightmare. Forget the old way. Breakthroughs just dropped, transforming AI development forever. multi-model: Build robust agent frameworks. Seamlessly integrate RAG, vector databases. Manage context, unleash powerful function calling. ai-memory: Create durable, composable AI agents. Flows now crash, safely resume, retry, and meticulously explain every single step. Introducing eve 1.0: A groundbreaking system that redefines AI interaction. Experience unparalleled intelligence and contextual understanding immediately. Comment REPOS below, and I will DM you the exact setup code right now.",
+    "items": [
+      {
+        "number": 1,
+        "name": "Multi Model",
+        "url": "https://github.com/topics/multi-model",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "nodejs rust vue multi-model plugin-system rag vector-database agent-framework ai-assistant ai-agent llm prompt-engineering function-calling context-management ai-companion openai-compatible context-management-system   Up",
+        "command": "git clone https://github.com/topics/multi-model.git\ncd multi-model\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 2,
+        "name": "Ai Memory",
+        "url": "https://github.com/topics/ai-memory",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "Updated Nov 16, 2026  Python  ### julep-ai / julep  Star  6.6k  Julep \u2014 durable, composable AI agents. Flows that crash and resume, retry safely, and explain every step.  nodejs python node ai developer-tools node-js age",
+        "command": "pip install ai-memory",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 3,
+        "name": "Introducing Eve 1.0",
+        "url": "https://vercel.com/blog/eve-is-now-generally-available",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "# Introducing eve 1.0  Published: November 17, 2026 | Authors: Andrew Barba, Shar Dara, Casey Gowrie, Colton Padden, Rui Conti, Ben Pankow, Owen Kephart, Murat Sutunc, Chad Hietala | Category: Company News  ---  Today we",
+        "command": "git clone https://vercel.com/blog/eve-is-now-generally-available.git\ncd introducing eve 1.0\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      }
+    ],
+    "cta_text": "Want our studio to build custom autonomous AI employees for your workflow? Follow @jayant.digitalstudio and DM 'REPOS'.",
+    "tags": [
+      "#ai",
+      "#automation",
+      "#tech",
+      "#softwareengineer",
+      "#workflow"
+    ]
+  },
+  {
     "id": "2026-11-18-slot-2",
     "title": "Stop paying insane monthly SaaS subscriptions when free open-source AI builds this instantly.",
     "date": "November 18, 2026",

@@ -4300,5 +4300,79 @@
         "source": "Exa (24h Index)"
       }
     ]
+  },
+  {
+    "slot_id": 1,
+    "slot_name": "Morning Breakthrough (Slot 1)",
+    "timestamp_utc": "2026-11-18T20:54:02.536086+00:00",
+    "date_ist": "2026-11-19 9:00 AM IST (Scheduled for 03:30 UTC)",
+    "buffer_post_id": "6afe10680a1fb75cd4168f09",
+    "channel_results": {
+      "instagram": "6afe10680a1fb75cd4168f09",
+      "youtube": "6afe10693f6dbb9998c25072",
+      "twitter": "6afe106aa8bd8e4ffd17e58f",
+      "public_video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1795035206/slot_1_daily_reel_opt.mp4"
+    },
+    "video_path": "out/slot_1_daily_reel_opt.mp4",
+    "items": [
+      {
+        "title": "multi-model \u00b7 GitHub Topics \u00b7 GitHub",
+        "name": "multi-model",
+        "description": "nodejs rust vue multi-model plugin-system rag vector-database agent-framework ai-assistant ai-agent llm prompt-engineering function-calling context-management ai-companion openai-compatible context-management-system   Up",
+        "url": "https://github.com/topics/multi-model",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "ai-memory \u00b7 GitHub Topics \u00b7 GitHub",
+        "name": "ai-memory",
+        "description": "Updated Nov 16, 2026  Python  ### julep-ai / julep  Star  6.6k  Julep \u2014 durable, composable AI agents. Flows that crash and resume, retry safely, and explain every step.  nodejs python node ai developer-tools node-js age",
+        "url": "https://github.com/topics/ai-memory",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "Introducing eve 1.0",
+        "name": "Introducing eve 1.0",
+        "description": "# Introducing eve 1.0  Published: November 17, 2026 | Authors: Andrew Barba, Shar Dara, Casey Gowrie, Colton Padden, Rui Conti, Ben Pankow, Owen Kephart, Murat Sutunc, Chad Hietala | Category: Company News  ---  Today we",
+        "url": "https://vercel.com/blog/eve-is-now-generally-available",
+        "source": "Exa (24h Index)"
+      }
+    ]
+  },
+  {
+    "slot_id": 2,
+    "slot_name": "Evening AI Toolkit (Slot 2)",
+    "timestamp_utc": "2026-11-18T20:59:45.305118+00:00",
+    "date_ist": "2026-11-19 7:00 PM IST (Scheduled for 13:30 UTC)",
+    "buffer_post_id": "6afe11bf570d3cc01e68dcce",
+    "channel_results": {
+      "instagram": "6afe11bf570d3cc01e68dcce",
+      "youtube": "6afe11c0a8bd8e4ffd1850ae",
+      "twitter": "6afe11c10d8c064ce4d62e84",
+      "public_video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1795035551/slot_2_daily_reel_opt.mp4"
+    },
+    "video_path": "out/slot_2_daily_reel_opt.mp4",
+    "items": [
+      {
+        "title": "role-based-agents \u00b7 GitHub Topics \u00b7 GitHub",
+        "name": "role-based-agents",
+        "description": "cli typescript ai pipeline skills mcp multi-agent developer-tools constellation cursor codex ai-agents team-formation anthropic agentic skill-pack agent-orchestration agent-skills claude-code role-based-agents   Updated",
+        "url": "https://github.com/topics/role-based-agents",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "Meet Bridget: The AI Agent that Bridges Your Systems and Gets Work Done - Salesforce",
+        "name": "Meet Bridget: The AI Agent that Bri",
+        "description": "Meet Bridget: The AI Agent that Bridges Your Systems and Gets Work Done - Salesforce  # Meet Bridget: The AI Agent that Bridges Your Systems and Gets Work Done  Bridget learns a browser-based application in about an hour",
+        "url": "https://www.salesforce.com/blog/bridget-systems-integration-agent/",
+        "source": "Exa (24h Index)"
+      },
+      {
+        "title": "Mermaid Flow: the visual builder for agentic workflows",
+        "name": "Mermaid Flow: the visual builder fo",
+        "description": "Mermaid Flow: the visual builder for agentic workflows  # Mermaid Flow: the visual builder for agentic workflows    18 November 2026 \u2022 4 mins   Mermaid Flow lets you build agentic workflows as diagrams and run them the s",
+        "url": "https://mermaid.ai/blog/posts/mermaid-flow-the-visual-builder-for-agentic-workflows",
+        "source": "Exa (24h Index)"
+      }
+    ]
   }
 ]
