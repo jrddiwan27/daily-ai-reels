@@ -1,5 +1,111 @@
 [
   {
+    "id": "2026-11-20-slot-2",
+    "title": "Your AI agents are stuck in the cloud, costing you a fortune. Slow. Insecure. Totally unacceptable.",
+    "date": "November 20, 2026",
+    "date_slug": "2026-11-20",
+    "slot_id": 2,
+    "slot_name": "Evening AI Toolkit (Slot 2)",
+    "badge": "AI RADAR",
+    "cta_keyword": "WORKFLOW",
+    "video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1795122190/slot_2_daily_reel_opt.mp4",
+    "summary": "Your AI agents are stuck in the cloud, costing you a fortune. Slow. Insecure. Totally unacceptable.",
+    "voiceover_script": "Your AI agents are stuck in the cloud, costing you a fortune. Slow. Insecure. Totally unacceptable. Break free! Run powerful AI agents locally, secure, blazing fast. local-ai-agent: Runs powerful open-weight AI models locally. Processes data on your machine. Ensures privacy. Delivers lightning speed. Bring Agents Into Your Workflows, R: Integrate AI agents directly into Slack. Automate tasks. Boost team productivity instantly. Automate Mac tasks with Gemini comp: Gemini navigates Mac apps. Automates complex chores. Finishes repetitive tasks. Save countless hours. Comment WORKFLOW below, and I will DM you the exact setup code right now.",
+    "items": [
+      {
+        "number": 1,
+        "name": "Local Ai Agent",
+        "url": "https://github.com/topics/local-ai-agent",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "### AtomicBot-ai / atomic-agent  Star  3.5k  Atomic Agent is a local-first AI agent. Runs open-weight models on your own machine via llama.cpp.  nodejs cli typescript mcp tui openai agents browser-automation local-first",
+        "command": "npx local-ai-agent --latest",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 2,
+        "name": "Bring Agents Into Your Workflows, R",
+        "url": "https://slack.com/blog/news/agents-in-workflow-builder",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "Bring Agents Into Your Workflows, Right in Slack | Slack  # Bring Agents Into Your Workflows, Right in Slack  Slack is where Workflow Builder, Slackbot, and your agents work together to get work done.  By the team at Sla",
+        "command": "git clone https://slack.com/blog/news/agents-in-workflow-builder.git\ncd bring agents into your workflows, r\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 3,
+        "name": "Automate Mac Tasks With Gemini Comp",
+        "url": "https://blog.google/innovation-and-ai/products/gemini-app/computer-use-mac/",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "Automate Mac tasks with Gemini computer use  # Let Gemini tackle repetitive chores on your Mac  Nov 19, 2026   Gemini can now navigate Mac apps and websites in the background to finish complex tasks.   Michael Friedman",
+        "command": "git clone https://blog.google/innovation-and-ai/products/gemini-app/computer-use-mac/.git\ncd automate mac tasks with gemini comp\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      }
+    ],
+    "cta_text": "Want our studio to build custom autonomous AI employees for your workflow? Follow @jayant.digitalstudio and DM 'WORKFLOW'.",
+    "tags": [
+      "#ai",
+      "#automation",
+      "#tech",
+      "#softwareengineer",
+      "#workflow"
+    ]
+  },
+  {
+    "id": "2026-11-20-slot-1",
+    "title": "Struggling to ship code fast? Your current AI agents are bottlenecks, not breakthroughs.",
+    "date": "November 20, 2026",
+    "date_slug": "2026-11-20",
+    "slot_id": 1,
+    "slot_name": "Morning Breakthrough (Slot 1)",
+    "badge": "AI RADAR",
+    "cta_keyword": "REPOS",
+    "video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1795121880/slot_1_daily_reel_opt.mp4",
+    "summary": "Struggling to ship code fast? Your current AI agents are bottlenecks, not breakthroughs.",
+    "voiceover_script": "Struggling to ship code fast? Your current AI agents are bottlenecks, not breakthroughs. Stop the grind. These new AI super-agents automate your entire development workflow now. '17 Best Free AI Coding Agents in 20' - Orbi automates GitHub issues. It handles implementation, review, merge, and release. Ships code fast. 'ai-memory' - Julep builds durable, composable AI agents. It retries safely, resumes, and explains every step. Boosts reliability. 'Introducing eve 1.0' - Eve 1.0 delivers breakthrough agentic capabilities. It truly enhances AI autonomy, enabling complex task execution. Comment REPOS below, and I will DM you the exact setup code right now.",
+    "items": [
+      {
+        "number": 1,
+        "name": "17 Best Free Ai Coding Agents In 20",
+        "url": "https://agentic.ai/best/free-coding-agents",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "Agenticness22/36\u00b7Domain Specialist  Orbi is an open-source, self-hostable AI coding agent that takes GitHub Issues from implementation through independent review, merge, and release. It can run against your own model end",
+        "command": "git clone https://agentic.ai/best/free-coding-agents.git\ncd 17 best free ai coding agents in 20\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 2,
+        "name": "Ai Memory",
+        "url": "https://github.com/topics/ai-memory",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "Updated Nov 16, 2026  Python  ### julep-ai / julep  Star  6.6k  Julep \u2014 durable, composable AI agents. Flows that crash and resume, retry safely, and explain every step.  nodejs python node ai developer-tools node-js age",
+        "command": "pip install ai-memory",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 3,
+        "name": "Introducing Eve 1.0",
+        "url": "https://vercel.com/blog/eve-is-now-generally-available",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "# Introducing eve 1.0  Published: November 17, 2026 | Authors: Andrew Barba, Shar Dara, Casey Gowrie, Colton Padden, Rui Conti, Ben Pankow, Owen Kephart, Murat Sutunc, Chad Hietala | Category: Company News  ---  Today we",
+        "command": "git clone https://vercel.com/blog/eve-is-now-generally-available.git\ncd introducing eve 1.0\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      }
+    ],
+    "cta_text": "Want our studio to build custom autonomous AI employees for your workflow? Follow @jayant.digitalstudio and DM 'REPOS'.",
+    "tags": [
+      "#ai",
+      "#automation",
+      "#tech",
+      "#softwareengineer",
+      "#workflow"
+    ]
+  },
+  {
     "id": "2026-11-19-slot-2",
     "title": "Building AI agents feels like herding cats? Manual workflows kill your speed and progress.",
     "date": "November 19, 2026",

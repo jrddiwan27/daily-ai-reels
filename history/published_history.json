@@ -4374,5 +4374,79 @@
         "source": "Exa (24h Index)"
       }
     ]
+  },
+  {
+    "slot_id": 1,
+    "slot_name": "Morning Breakthrough (Slot 1)",
+    "timestamp_utc": "2026-11-19T20:58:32.624320+00:00",
+    "date_ist": "2026-11-20 9:00 AM IST (Scheduled for 03:30 UTC)",
+    "buffer_post_id": "6aff62f66e5bb62d74cbe536",
+    "channel_results": {
+      "instagram": "6aff62f66e5bb62d74cbe536",
+      "youtube": "6aff62f78ba5b0cdc4ac3530",
+      "twitter": "6aff62f8d606779a4df87a9b",
+      "public_video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1795121880/slot_1_daily_reel_opt.mp4"
+    },
+    "video_path": "out/slot_1_daily_reel_opt.mp4",
+    "items": [
+      {
+        "title": "17 Best Free AI Coding Agents in 2026 | Agentic.ai",
+        "name": "17 Best Free AI Coding Agents in 20",
+        "description": "Agenticness22/36\u00b7Domain Specialist  Orbi is an open-source, self-hostable AI coding agent that takes GitHub Issues from implementation through independent review, merge, and release. It can run against your own model end",
+        "url": "https://agentic.ai/best/free-coding-agents",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "ai-memory \u00b7 GitHub Topics \u00b7 GitHub",
+        "name": "ai-memory",
+        "description": "Updated Nov 16, 2026  Python  ### julep-ai / julep  Star  6.6k  Julep \u2014 durable, composable AI agents. Flows that crash and resume, retry safely, and explain every step.  nodejs python node ai developer-tools node-js age",
+        "url": "https://github.com/topics/ai-memory",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "Introducing eve 1.0",
+        "name": "Introducing eve 1.0",
+        "description": "# Introducing eve 1.0  Published: November 17, 2026 | Authors: Andrew Barba, Shar Dara, Casey Gowrie, Colton Padden, Rui Conti, Ben Pankow, Owen Kephart, Murat Sutunc, Chad Hietala | Category: Company News  ---  Today we",
+        "url": "https://vercel.com/blog/eve-is-now-generally-available",
+        "source": "Exa (24h Index)"
+      }
+    ]
+  },
+  {
+    "slot_id": 2,
+    "slot_name": "Evening AI Toolkit (Slot 2)",
+    "timestamp_utc": "2026-11-19T21:03:41.168944+00:00",
+    "date_ist": "2026-11-20 7:00 PM IST (Scheduled for 13:30 UTC)",
+    "buffer_post_id": "6aff642b8ba5b0cdc4ad1478",
+    "channel_results": {
+      "instagram": "6aff642b8ba5b0cdc4ad1478",
+      "youtube": "6aff642c8ec824f4cebed697",
+      "twitter": "6aff642c373c7db3cb529431",
+      "public_video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1795122190/slot_2_daily_reel_opt.mp4"
+    },
+    "video_path": "out/slot_2_daily_reel_opt.mp4",
+    "items": [
+      {
+        "title": "local-ai-agent \u00b7 GitHub Topics \u00b7 GitHub",
+        "name": "local-ai-agent",
+        "description": "### AtomicBot-ai / atomic-agent  Star  3.5k  Atomic Agent is a local-first AI agent. Runs open-weight models on your own machine via llama.cpp.  nodejs cli typescript mcp tui openai agents browser-automation local-first",
+        "url": "https://github.com/topics/local-ai-agent",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "Bring Agents Into Your Workflows, Right in Slack | Slack",
+        "name": "Bring Agents Into Your Workflows, R",
+        "description": "Bring Agents Into Your Workflows, Right in Slack | Slack  # Bring Agents Into Your Workflows, Right in Slack  Slack is where Workflow Builder, Slackbot, and your agents work together to get work done.  By the team at Sla",
+        "url": "https://slack.com/blog/news/agents-in-workflow-builder",
+        "source": "Exa (24h Index)"
+      },
+      {
+        "title": "Automate Mac tasks with Gemini computer use",
+        "name": "Automate Mac tasks with Gemini comp",
+        "description": "Automate Mac tasks with Gemini computer use  # Let Gemini tackle repetitive chores on your Mac  Nov 19, 2026   Gemini can now navigate Mac apps and websites in the background to finish complex tasks.   Michael Friedman",
+        "url": "https://blog.google/innovation-and-ai/products/gemini-app/computer-use-mac/",
+        "source": "Exa (24h Index)"
+      }
+    ]
   }
 ]
