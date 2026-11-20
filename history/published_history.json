@@ -4448,5 +4448,79 @@
         "source": "Exa (24h Index)"
       }
     ]
+  },
+  {
+    "slot_id": 1,
+    "slot_name": "Morning Breakthrough (Slot 1)",
+    "timestamp_utc": "2026-11-20T20:44:09.285047+00:00",
+    "date_ist": "2026-11-21 9:00 AM IST (Scheduled for 03:30 UTC)",
+    "buffer_post_id": "6b00b11773831df014877cf3",
+    "channel_results": {
+      "instagram": "6b00b11773831df014877cf3",
+      "youtube": "6b00b118d425f1473a11ab21",
+      "twitter": "6b00b11973831df014877d2a",
+      "public_video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1795207416/slot_1_daily_reel_opt.mp4"
+    },
+    "video_path": "out/slot_1_daily_reel_opt.mp4",
+    "items": [
+      {
+        "title": "Medium",
+        "name": "Medium",
+        "description": "# 90% of Developers Don\u2019t Know These 20 AI Agent GitHub Repos.  20 GitHub Repositories That Are Absolute Gold Mines for AI Agents  ## 20 Open-Source GitHub Repositories to Learn and Build AI Agents in 2026  > From agent",
+        "url": "https://medium.com/@neuraldev/90-of-developers-dont-know-these-20-ai-agent-github-repos-1b43b1882b80",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "computer-use \u00b7 GitHub Topics \u00b7 GitHub",
+        "name": "computer-use",
+        "description": "### Anil-matcha / open-dots  Star  5.8k  Open-source, self-hosted AI agent workspace and alternative to OpenAI Dots, Meta Muse, Grok Bot, Instinct, Manus Cue, Claude Cowork, and ChatGPT agent. MIT-licensed; includes chat",
+        "url": "https://github.com/topics/computer-use",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "17 Best Free AI Coding Agents in 2026 | Agentic.ai",
+        "name": "17 Best Free AI Coding Agents in 20",
+        "description": "Agenticness22/36\u00b7Domain Specialist  Orbi is an open-source, self-hostable AI coding agent that takes GitHub Issues from implementation through independent review, merge, and release. It can run against your own model end",
+        "url": "https://agentic.ai/best/free-coding-agents",
+        "source": "Tavily (Real-Time)"
+      }
+    ]
+  },
+  {
+    "slot_id": 2,
+    "slot_name": "Evening AI Toolkit (Slot 2)",
+    "timestamp_utc": "2026-11-20T20:49:41.677698+00:00",
+    "date_ist": "2026-11-21 7:00 PM IST (Scheduled for 13:30 UTC)",
+    "buffer_post_id": "6b00b263dd205ed779958792",
+    "channel_results": {
+      "instagram": "6b00b263dd205ed779958792",
+      "youtube": "6b00b2646f199ec35b7f1403",
+      "twitter": "6b00b265861298c9b150afa5",
+      "public_video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1795207747/slot_2_daily_reel_opt.mp4"
+    },
+    "video_path": "out/slot_2_daily_reel_opt.mp4",
+    "items": [
+      {
+        "title": "Medium",
+        "name": "Medium",
+        "description": "# 90% of Developers Don\u2019t Know These 20 AI Agent GitHub Repos.  20 GitHub Repositories That Are Absolute Gold Mines for AI Agents  ## 20 Open-Source GitHub Repositories to Learn and Build AI Agents in 2026  > From agent",
+        "url": "https://medium.com/@neuraldev/90-of-developers-dont-know-these-20-ai-agent-github-repos-1b43b1882b80",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "orchestration \u00b7 GitHub Topics \u00b7 GitHub",
+        "name": "orchestration",
+        "description": "Updated Nov 13, 2026  TypeScript  ### cft0808 / edict  Star  17.1k  \ud83c\udfdb\ufe0f \u4e09\u7701\u516d\u90e8\u5236 \u00b7 OpenClaw Multi-Agent Orchestration System \u2014 9 specialized AI agents with real-time dashboard, model config, and full audit trails  python das",
+        "url": "https://github.com/topics/orchestration",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "computer-use \u00b7 GitHub Topics \u00b7 GitHub",
+        "name": "computer-use",
+        "description": "Updated Oct 17, 2026  JavaScript  ### bytedance / UI-TARS-desktop  Star  39.3k  The Open-Source Multimodal AI Agent Stack: Connecting Cutting-Edge AI Models and Agent Infra  agent mcp vision vlm tars multimodal cowork co",
+        "url": "https://github.com/topics/computer-use",
+        "source": "Tavily (Real-Time)"
+      }
+    ]
   }
 ]

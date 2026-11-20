@@ -1,5 +1,111 @@
 [
   {
+    "id": "2026-11-21-slot-2",
+    "title": "Your AI agents are stuck. Manual task execution? Slow. Inefficient. You're losing massive productivity.",
+    "date": "November 21, 2026",
+    "date_slug": "2026-11-21",
+    "slot_id": 2,
+    "slot_name": "Evening AI Toolkit (Slot 2)",
+    "badge": "AI RADAR",
+    "cta_keyword": "WORKFLOW",
+    "video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1795207747/slot_2_daily_reel_opt.mp4",
+    "summary": "Your AI agents are stuck. Manual task execution? Slow. Inefficient. You're losing massive productivity.",
+    "voiceover_script": "Your AI agents are stuck. Manual task execution? Slow. Inefficient. You're losing massive productivity. Unlock true autonomy. Automate everything. Exponentially boost your agent's capabilities now. Medium compiles 20 gold-mine GitHub repos. Discover cutting-edge frameworks, accelerate development, build powerful agents fast. Orchestration, like OpenClaw, coordinates 9 specialized AI agents. Visualize real-time dashboards, configure models, ensure full audit trails. Computer-use, via UI-TARS-desktop, connects cutting-edge AI models. This multimodal stack enables seamless interaction, dramatically expanding agent capabilities. Comment WORKFLOW below, and I will DM you the exact setup code right now.",
+    "items": [
+      {
+        "number": 1,
+        "name": "Medium",
+        "url": "https://medium.com/@neuraldev/90-of-developers-dont-know-these-20-ai-agent-github-repos-1b43b1882b80",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "# 90% of Developers Don\u2019t Know These 20 AI Agent GitHub Repos.  20 GitHub Repositories That Are Absolute Gold Mines for AI Agents  ## 20 Open-Source GitHub Repositories to Learn and Build AI Agents in 2026  > From agent",
+        "command": "git clone https://medium.com/@neuraldev/90-of-developers-dont-know-these-20-ai-agent-github-repos-1b43b1882b80.git\ncd medium\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 2,
+        "name": "Orchestration",
+        "url": "https://github.com/topics/orchestration",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "Updated Nov 13, 2026  TypeScript  ### cft0808 / edict  Star  17.1k  \ud83c\udfdb\ufe0f \u4e09\u7701\u516d\u90e8\u5236 \u00b7 OpenClaw Multi-Agent Orchestration System \u2014 9 specialized AI agents with real-time dashboard, model config, and full audit trails  python das",
+        "command": "pip install orchestration",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 3,
+        "name": "Computer Use",
+        "url": "https://github.com/topics/computer-use",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "Updated Oct 17, 2026  JavaScript  ### bytedance / UI-TARS-desktop  Star  39.3k  The Open-Source Multimodal AI Agent Stack: Connecting Cutting-Edge AI Models and Agent Infra  agent mcp vision vlm tars multimodal cowork co",
+        "command": "git clone https://github.com/topics/computer-use.git\ncd computer-use\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      }
+    ],
+    "cta_text": "Want our studio to build custom autonomous AI employees for your workflow? Follow @jayant.digitalstudio and DM 'WORKFLOW'.",
+    "tags": [
+      "#ai",
+      "#automation",
+      "#tech",
+      "#softwareengineer",
+      "#workflow"
+    ]
+  },
+  {
+    "id": "2026-11-21-slot-1",
+    "title": "Stuck building AI agents? Your current workflow is slow, inefficient, and costing you crucial time.",
+    "date": "November 21, 2026",
+    "date_slug": "2026-11-21",
+    "slot_id": 1,
+    "slot_name": "Morning Breakthrough (Slot 1)",
+    "badge": "AI RADAR",
+    "cta_keyword": "REPOS",
+    "video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1795207416/slot_1_daily_reel_opt.mp4",
+    "summary": "Stuck building AI agents? Your current workflow is slow, inefficient, and costing you crucial time.",
+    "voiceover_script": "Stuck building AI agents? Your current workflow is slow, inefficient, and costing you crucial time. Unlock viral open-source AI agent repos instantly. Supercharge your development now. Medium reveals 20 gold mine GitHub repos. Discover powerful open-source AI agents. Learn, build, and deploy cutting-edge solutions rapidly. computer-use provides a self-hosted AI agent workspace. Build, manage, and chat with your agents. Open-source freedom empowers your workflow. 17 Best Free AI Coding Agents in 20 introduces Orbi. Automate GitHub issues: implement, review, merge, release. Deploy code faster than ever. Comment REPOS below, and I will DM you the exact setup code right now.",
+    "items": [
+      {
+        "number": 1,
+        "name": "Medium",
+        "url": "https://medium.com/@neuraldev/90-of-developers-dont-know-these-20-ai-agent-github-repos-1b43b1882b80",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "# 90% of Developers Don\u2019t Know These 20 AI Agent GitHub Repos.  20 GitHub Repositories That Are Absolute Gold Mines for AI Agents  ## 20 Open-Source GitHub Repositories to Learn and Build AI Agents in 2026  > From agent",
+        "command": "git clone https://medium.com/@neuraldev/90-of-developers-dont-know-these-20-ai-agent-github-repos-1b43b1882b80.git\ncd medium\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 2,
+        "name": "Computer Use",
+        "url": "https://github.com/topics/computer-use",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "### Anil-matcha / open-dots  Star  5.8k  Open-source, self-hosted AI agent workspace and alternative to OpenAI Dots, Meta Muse, Grok Bot, Instinct, Manus Cue, Claude Cowork, and ChatGPT agent. MIT-licensed; includes chat",
+        "command": "git clone https://github.com/topics/computer-use.git\ncd computer-use\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 3,
+        "name": "17 Best Free Ai Coding Agents In 20",
+        "url": "https://agentic.ai/best/free-coding-agents",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "Agenticness22/36\u00b7Domain Specialist  Orbi is an open-source, self-hostable AI coding agent that takes GitHub Issues from implementation through independent review, merge, and release. It can run against your own model end",
+        "command": "git clone https://agentic.ai/best/free-coding-agents.git\ncd 17 best free ai coding agents in 20\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      }
+    ],
+    "cta_text": "Want our studio to build custom autonomous AI employees for your workflow? Follow @jayant.digitalstudio and DM 'REPOS'.",
+    "tags": [
+      "#ai",
+      "#automation",
+      "#tech",
+      "#softwareengineer",
+      "#workflow"
+    ]
+  },
+  {
     "id": "2026-11-20-slot-2",
     "title": "Your AI agents are stuck in the cloud, costing you a fortune. Slow. Insecure. Totally unacceptable.",
     "date": "November 20, 2026",
