@@ -1,5 +1,111 @@
 [
   {
+    "id": "2026-11-22-slot-2",
+    "title": "Stop wasting hours searching for the best AI agent repos. Your workflow is bottlenecked.",
+    "date": "November 22, 2026",
+    "date_slug": "2026-11-22",
+    "slot_id": 2,
+    "slot_name": "Evening AI Toolkit (Slot 2)",
+    "badge": "AI RADAR",
+    "cta_keyword": "WORKFLOW",
+    "video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1795290379/slot_2_daily_reel_opt.mp4",
+    "summary": "Stop wasting hours searching for the best AI agent repos. Your workflow is bottlenecked.",
+    "voiceover_script": "Stop wasting hours searching for the best AI agent repos. Your workflow is bottlenecked. Unlock instant productivity. These three AI agent tools revolutionize your dev. Medium unearths 20 hidden GitHub repos, absolute gold mines for AI agents. Discover, learn, build cutting-edge solutions rapidly. Desktop-ai-agent runs free on macOS/Windows. No API keys. Processes office files, web searches, and schedules autonomously. Genie ZeroOps, now in public beta: autonomously fixes data pipelines. Learns from 80,000 issues. Ensures flawless data flow. Comment WORKFLOW below, and I will DM you the exact setup code right now.",
+    "items": [
+      {
+        "number": 1,
+        "name": "Medium",
+        "url": "https://medium.com/@neuraldev/90-of-developers-dont-know-these-20-ai-agent-github-repos-1b43b1882b80",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "# 90% of Developers Don\u2019t Know These 20 AI Agent GitHub Repos.  20 GitHub Repositories That Are Absolute Gold Mines for AI Agents  ## 20 Open-Source GitHub Repositories to Learn and Build AI Agents in 2026  > From agent",
+        "command": "git clone https://medium.com/@neuraldev/90-of-developers-dont-know-these-20-ai-agent-github-repos-1b43b1882b80.git\ncd medium\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 2,
+        "name": "Desktop Ai Agent",
+        "url": "https://github.com/topics/desktop-ai-agent",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "### Astro-Han / pawwork  Star  228  PawWork \u2014 free, open-source desktop AI agent for macOS and Windows, built on DeepSeek Harness (DSH). Free models included, no API key or terminal. Office files, web search, and schedul",
+        "command": "git clone https://github.com/topics/desktop-ai-agent.git\ncd desktop-ai-agent\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 3,
+        "name": "Genie Zeroops, Now In Public Beta:",
+        "url": "https://www.databricks.com/blog/genie-zeroops-now-public-beta-autonomous-agent-fixes-data-pipelines-lessons-80000-customer",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "Genie ZeroOps, now in public beta: An autonomous agent that fixes data pipelines, with lessons from 80,000 customer issues | Databricks Blog  November 19, 2026  # Genie ZeroOps, now in public beta: An autonomous agent th",
+        "command": "pip install genie zeroops, now in public beta:",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      }
+    ],
+    "cta_text": "Want our studio to build custom autonomous AI employees for your workflow? Follow @jayant.digitalstudio and DM 'WORKFLOW'.",
+    "tags": [
+      "#ai",
+      "#automation",
+      "#tech",
+      "#softwareengineer",
+      "#workflow"
+    ]
+  },
+  {
+    "id": "2026-11-22-slot-1",
+    "title": "Stop paying insane monthly SaaS subscriptions when free open-source AI builds this instantly.",
+    "date": "November 22, 2026",
+    "date_slug": "2026-11-22",
+    "slot_id": 1,
+    "slot_name": "Morning Breakthrough (Slot 1)",
+    "badge": "AI RADAR",
+    "cta_keyword": "REPOS",
+    "video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1795290119/slot_1_daily_reel_opt.mp4",
+    "summary": "Stop paying insane monthly SaaS subscriptions when free open-source AI builds this instantly.",
+    "voiceover_script": "Stop paying insane monthly SaaS subscriptions when free open-source AI builds this instantly. Three brand-new breakthrough developer repos just dropped on GitHub today. First is \"   COMMENT \"CODE\" and I'll send yo. It eliminates manual coding pipelines with lightning-fast local model execution. Second is AI that won't pick your stocks: a t. An autonomous engine executing deterministic workflows with sub-millisecond response latency. Third is desktop-ai-agent. A zero-cloud runtime running complex reasoning models directly on device. Comment REPOS below, and I will DM you the exact setup code right now.",
+    "items": [
+      {
+        "number": 1,
+        "name": "\"   Comment \"Code\" And I'Ll Send Yo",
+        "url": "https://www.instagram.com/p/DgAIVZUjy9e",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "OpenCode is an open-source AI coding agent. It was on GitHub Trending today. GitHub stars on Oct 19, 2026. new AI tools, repos and agents.",
+        "command": "git clone https://www.instagram.com/p/DgAIVZUjy9e.git\ncd \"   comment \"code\" and i'll send yo\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 2,
+        "name": "Ai That Won'T Pick Your Stocks: A T",
+        "url": "https://www.youtube.com/watch?v=70QlZhCHTX8",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "#1 univer \u2014 Office SDK for people and AI agents  Source: GitHub Trending (stars gained in the 7 days ending Nov 20, 2026)  Fork & Star: GitHub's fastest-rising open-source projects, every day and every week.  Rankings fo",
+        "command": "git clone https://www.youtube.com/watch?v=70QlZhCHTX8.git\ncd ai that won't pick your stocks: a t\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 3,
+        "name": "Desktop Ai Agent",
+        "url": "https://github.com/topics/desktop-ai-agent",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "### Astro-Han / pawwork  Star  228  PawWork \u2014 free, open-source desktop AI agent for macOS and Windows, built on DeepSeek Harness (DSH). Free models included, no API key or terminal. Office files, web search, and schedul",
+        "command": "git clone https://github.com/topics/desktop-ai-agent.git\ncd desktop-ai-agent\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      }
+    ],
+    "cta_text": "Want our studio to build custom autonomous AI employees for your workflow? Follow @jayant.digitalstudio and DM 'REPOS'.",
+    "tags": [
+      "#ai",
+      "#automation",
+      "#tech",
+      "#softwareengineer",
+      "#workflow"
+    ]
+  },
+  {
     "id": "2026-11-21-slot-2",
     "title": "Your AI agents are stuck. Manual task execution? Slow. Inefficient. You're losing massive productivity.",
     "date": "November 21, 2026",

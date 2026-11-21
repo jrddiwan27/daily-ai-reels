@@ -4522,5 +4522,79 @@
         "source": "Tavily (Real-Time)"
       }
     ]
+  },
+  {
+    "slot_id": 1,
+    "slot_name": "Morning Breakthrough (Slot 1)",
+    "timestamp_utc": "2026-11-21T19:42:24.180147+00:00",
+    "date_ist": "2026-11-22 9:00 AM IST (Scheduled for 03:30 UTC)",
+    "buffer_post_id": "6b01f41e846b0ee90732cf93",
+    "channel_results": {
+      "instagram": "6b01f41e846b0ee90732cf93",
+      "youtube": "6b01f41f8bd84d596613ebe0",
+      "twitter": "6b01f420d5eabfb8cc577d69",
+      "public_video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1795290119/slot_1_daily_reel_opt.mp4"
+    },
+    "video_path": "out/slot_1_daily_reel_opt.mp4",
+    "items": [
+      {
+        "title": "\"   COMMENT \"CODE\" and I'll send you all the links. GitHub is a ...",
+        "name": "\"   COMMENT \"CODE\" and I'll send yo",
+        "description": "OpenCode is an open-source AI coding agent. It was on GitHub Trending today. GitHub stars on Oct 19, 2026. new AI tools, repos and agents.",
+        "url": "https://www.instagram.com/p/DgAIVZUjy9e",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "AI that won't pick your stocks: a top GitHub repo this week | GitHub Trending",
+        "name": "AI that won't pick your stocks: a t",
+        "description": "#1 univer \u2014 Office SDK for people and AI agents  Source: GitHub Trending (stars gained in the 7 days ending Nov 20, 2026)  Fork & Star: GitHub's fastest-rising open-source projects, every day and every week.  Rankings fo",
+        "url": "https://www.youtube.com/watch?v=70QlZhCHTX8",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "desktop-ai-agent \u00b7 GitHub Topics \u00b7 GitHub",
+        "name": "desktop-ai-agent",
+        "description": "### Astro-Han / pawwork  Star  228  PawWork \u2014 free, open-source desktop AI agent for macOS and Windows, built on DeepSeek Harness (DSH). Free models included, no API key or terminal. Office files, web search, and schedul",
+        "url": "https://github.com/topics/desktop-ai-agent",
+        "source": "Tavily (Real-Time)"
+      }
+    ]
+  },
+  {
+    "slot_id": 2,
+    "slot_name": "Evening AI Toolkit (Slot 2)",
+    "timestamp_utc": "2026-11-21T19:46:45.426812+00:00",
+    "date_ist": "2026-11-22 7:00 PM IST (Scheduled for 13:30 UTC)",
+    "buffer_post_id": "6b01f5238bd84d5966143e03",
+    "channel_results": {
+      "instagram": "6b01f5238bd84d5966143e03",
+      "youtube": "6b01f524d5eabfb8cc57e194",
+      "twitter": "6b01f525846b0ee907333fb5",
+      "public_video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1795290379/slot_2_daily_reel_opt.mp4"
+    },
+    "video_path": "out/slot_2_daily_reel_opt.mp4",
+    "items": [
+      {
+        "title": "Medium",
+        "name": "Medium",
+        "description": "# 90% of Developers Don\u2019t Know These 20 AI Agent GitHub Repos.  20 GitHub Repositories That Are Absolute Gold Mines for AI Agents  ## 20 Open-Source GitHub Repositories to Learn and Build AI Agents in 2026  > From agent",
+        "url": "https://medium.com/@neuraldev/90-of-developers-dont-know-these-20-ai-agent-github-repos-1b43b1882b80",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "desktop-ai-agent \u00b7 GitHub Topics \u00b7 GitHub",
+        "name": "desktop-ai-agent",
+        "description": "### Astro-Han / pawwork  Star  228  PawWork \u2014 free, open-source desktop AI agent for macOS and Windows, built on DeepSeek Harness (DSH). Free models included, no API key or terminal. Office files, web search, and schedul",
+        "url": "https://github.com/topics/desktop-ai-agent",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "Genie ZeroOps, now in public beta: An autonomous agent that fixes data pipelines, with lessons from 80,000 customer issues | Databricks Blog",
+        "name": "Genie ZeroOps, now in public beta:",
+        "description": "Genie ZeroOps, now in public beta: An autonomous agent that fixes data pipelines, with lessons from 80,000 customer issues | Databricks Blog  November 19, 2026  # Genie ZeroOps, now in public beta: An autonomous agent th",
+        "url": "https://www.databricks.com/blog/genie-zeroops-now-public-beta-autonomous-agent-fixes-data-pipelines-lessons-80000-customer",
+        "source": "Exa (24h Index)"
+      }
+    ]
   }
 ]
