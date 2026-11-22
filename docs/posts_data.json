@@ -1,5 +1,111 @@
 [
   {
+    "id": "2026-11-23-slot-2",
+    "title": "Stuck building repetitive dev tasks? Your AI agents lack real power? Manual workflows kill productivity.",
+    "date": "November 23, 2026",
+    "date_slug": "2026-11-23",
+    "slot_id": 2,
+    "slot_name": "Evening AI Toolkit (Slot 2)",
+    "badge": "AI RADAR",
+    "cta_keyword": "WORKFLOW",
+    "video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1795377819/slot_2_daily_reel_opt.mp4",
+    "summary": "Stuck building repetitive dev tasks? Your AI agents lack real power? Manual workflows kill productivity.",
+    "voiceover_script": "Stuck building repetitive dev tasks? Your AI agents lack real power? Manual workflows kill productivity. Unleash true automation. Deploy intelligent, self-optimizing AI workflows now. n8n-io/n8n is n8n \u2013 The Platform fo empowers AI agents. Automate complex workflows, integrate systems effortlessly. It's open source, trending, actively maintained. n8n acts as your personal agent. It chases invoices, preps calls, cancels tasks. Automate your daily grind effortlessly, saving hours. Build more capable automations thro chat. Flows in AWS Quick lets you build, run, manage automations seamlessly. Deploy powerful solutions fast. Comment WORKFLOW below, and I will DM you the exact setup code right now.",
+    "items": [
+      {
+        "number": 1,
+        "name": "N8N Io/N8N Is N8N \u2013 The Platform Fo",
+        "url": "https://www.instagram.com/p/DgBeLqsk5mK",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "The Platform for AI Agents and Workflow Automation. Open source on GitHub, ranked #10 in trending discovery; actively maintained (last push 2026-11-21). ranked",
+        "command": "git clone https://www.instagram.com/p/DgBeLqsk5mK.git\ncd n8n-io/n8n is n8n \u2013 the platform fo\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 2,
+        "name": "N8N",
+        "url": "https://github.com/n8n-io",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "n8n-io/n8n's past year of commit activity    TypeScript   210,039  61,437  357  891  Updated Nov 11, 2026  nod  Public     Open source personal agent with its own computer. It chases invoices, preps your calls and cancel",
+        "command": "npx n8n --latest",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 3,
+        "name": "Build More Capable Automations Thro",
+        "url": "https://aws.amazon.com/about-aws/whats-new/2026/11/aws-quick-flows-automations-chat/",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "Build more capable automations through chat with Flows in AWS Quick - AWS  # Build more capable automations through chat with Flows in AWS Quick   Posted on: Nov 20, 2026   Flows in AWS Quick now lets users build, run, a",
+        "command": "git clone https://aws.amazon.com/about-aws/whats-new/2026/11/aws-quick-flows-automations-chat/.git\ncd build more capable automations thro\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      }
+    ],
+    "cta_text": "Want our studio to build custom autonomous AI employees for your workflow? Follow @jayant.digitalstudio and DM 'WORKFLOW'.",
+    "tags": [
+      "#ai",
+      "#automation",
+      "#tech",
+      "#softwareengineer",
+      "#workflow"
+    ]
+  },
+  {
+    "id": "2026-11-23-slot-1",
+    "title": "AI agents write 99% of code. Your dev role just changed. Feeling overwhelmed?",
+    "date": "November 23, 2026",
+    "date_slug": "2026-11-23",
+    "slot_id": 1,
+    "slot_name": "Morning Breakthrough (Slot 1)",
+    "badge": "AI RADAR",
+    "cta_keyword": "REPOS",
+    "video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1795377525/slot_1_daily_reel_opt.mp4",
+    "summary": "AI agents write 99% of code. Your dev role just changed. Feeling overwhelmed?",
+    "voiceover_script": "AI agents write 99% of code. Your dev role just changed. Feeling overwhelmed? Master new AI dev workflows. Leverage cutting-edge tools to dominate. Opencode reveals 81 public repos. See AI agents write 99% of code. Understand what good looks like now. AI tool releases \u2014 what shipped in tracks 15 open-source AI repos. Discover daily neural digest updates fast. Vincent 0.14.0 redefines TUI. Rewind AI chats, compare agents side-by-side. Boost your AI development workflow. Comment REPOS below, and I will DM you the exact setup code right now.",
+    "items": [
+      {
+        "number": 1,
+        "name": "Opencode",
+        "url": "https://github.com/topics/opencode?l=c%23&o=desc&s=stars",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "# opencode  ## Here are 81 public repositories matching this topic...  AI agents can now write 99% of the code. This changes what it means to be a developer. Our role shifts to knowing \"what good looks like\". To do that,",
+        "command": "git clone https://github.com/topics/opencode?l=c%23&o=desc&s=stars.git\ncd opencode\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 2,
+        "name": "Ai Tool Releases \u2014 What Shipped In",
+        "url": "https://www.dailyneuraldigest.com/releases/releases/",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "AI tool releases \u2014 what shipped in open-source AI and ML | Daily Neural Digest  # AI tool releases \u2014 what shipped in open-source AI and ML  Every release published in the last 45 days by 15 open-source AI and ML reposito",
+        "command": "git clone https://www.dailyneuraldigest.com/releases/releases/.git\ncd ai tool releases \u2014 what shipped in\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 3,
+        "name": "Vincent 0.14.0: A Completely Redesi",
+        "url": "https://dev.to/lezli01/vincent-0140-a-completely-redesigned-tui-rewindable-ai-chats-and-side-by-side-agent-comparisons-46im",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "vincent 0.14.0: A Completely Redesigned TUI, Rewindable AI Chats, and Side-by-Side Agent Comparisons - DEV Community  L\u00e1szl\u00f3 Szab\u00f3   Posted on Nov 22   # vincent 0.14.0: A Completely Redesigned TUI, Rewindable AI Chats,",
+        "command": "git clone https://dev.to/lezli01/vincent-0140-a-completely-redesigned-tui-rewindable-ai-chats-and-side-by-side-agent-comparisons-46im.git\ncd vincent 0.14.0: a completely redesi\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      }
+    ],
+    "cta_text": "Want our studio to build custom autonomous AI employees for your workflow? Follow @jayant.digitalstudio and DM 'REPOS'.",
+    "tags": [
+      "#ai",
+      "#automation",
+      "#tech",
+      "#softwareengineer",
+      "#workflow"
+    ]
+  },
+  {
     "id": "2026-11-22-slot-2",
     "title": "Stop wasting hours searching for the best AI agent repos. Your workflow is bottlenecked.",
     "date": "November 22, 2026",

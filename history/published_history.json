@@ -4596,5 +4596,79 @@
         "source": "Exa (24h Index)"
       }
     ]
+  },
+  {
+    "slot_id": 1,
+    "slot_name": "Morning Breakthrough (Slot 1)",
+    "timestamp_utc": "2026-11-22T19:59:11.780720+00:00",
+    "date_ist": "2026-11-23 9:00 AM IST (Scheduled for 03:30 UTC)",
+    "buffer_post_id": "6b03498dcc364169c17f3431",
+    "channel_results": {
+      "instagram": "6b03498dcc364169c17f3431",
+      "youtube": "6b03498ed5eabfb8ccd601d0",
+      "twitter": "6b03498f846b0ee907b33bbf",
+      "public_video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1795377525/slot_1_daily_reel_opt.mp4"
+    },
+    "video_path": "out/slot_1_daily_reel_opt.mp4",
+    "items": [
+      {
+        "title": "opencode \u00b7 GitHub Topics \u00b7 GitHub",
+        "name": "opencode",
+        "description": "# opencode  ## Here are 81 public repositories matching this topic...  AI agents can now write 99% of the code. This changes what it means to be a developer. Our role shifts to knowing \"what good looks like\". To do that,",
+        "url": "https://github.com/topics/opencode?l=c%23&o=desc&s=stars",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "AI tool releases \u2014 what shipped in open-source AI and ML | Daily Neural Digest",
+        "name": "AI tool releases \u2014 what shipped in",
+        "description": "AI tool releases \u2014 what shipped in open-source AI and ML | Daily Neural Digest  # AI tool releases \u2014 what shipped in open-source AI and ML  Every release published in the last 45 days by 15 open-source AI and ML reposito",
+        "url": "https://www.dailyneuraldigest.com/releases/releases/",
+        "source": "Exa (24h Index)"
+      },
+      {
+        "title": "vincent 0.14.0: A Completely Redesigned TUI, Rewindable AI Chats, and Side-by-Side Agent Comparisons - DEV Community",
+        "name": "vincent 0.14.0: A Completely Redesi",
+        "description": "vincent 0.14.0: A Completely Redesigned TUI, Rewindable AI Chats, and Side-by-Side Agent Comparisons - DEV Community  L\u00e1szl\u00f3 Szab\u00f3   Posted on Nov 22   # vincent 0.14.0: A Completely Redesigned TUI, Rewindable AI Chats,",
+        "url": "https://dev.to/lezli01/vincent-0140-a-completely-redesigned-tui-rewindable-ai-chats-and-side-by-side-agent-comparisons-46im",
+        "source": "Exa (24h Index)"
+      }
+    ]
+  },
+  {
+    "slot_id": 2,
+    "slot_name": "Evening AI Toolkit (Slot 2)",
+    "timestamp_utc": "2026-11-22T20:04:07.857755+00:00",
+    "date_ist": "2026-11-23 7:00 PM IST (Scheduled for 13:30 UTC)",
+    "buffer_post_id": "6b034ab6bf5d5a73b6baac2d",
+    "channel_results": {
+      "instagram": "6b034ab6bf5d5a73b6baac2d",
+      "youtube": "6b034ab7bf5d5a73b6baac9f",
+      "twitter": "6b034ab7846b0ee907b40a07",
+      "public_video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1795377819/slot_2_daily_reel_opt.mp4"
+    },
+    "video_path": "out/slot_2_daily_reel_opt.mp4",
+    "items": [
+      {
+        "title": "n8n-io/n8n is n8n \u2013 The Platform for AI Agents and Workflow Automation. ...",
+        "name": "n8n-io/n8n is n8n \u2013 The Platform fo",
+        "description": "The Platform for AI Agents and Workflow Automation. Open source on GitHub, ranked #10 in trending discovery; actively maintained (last push 2026-11-21). ranked",
+        "url": "https://www.instagram.com/p/DgBeLqsk5mK",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "n8n - Workflow Automation \u00b7 GitHub",
+        "name": "n8n",
+        "description": "n8n-io/n8n's past year of commit activity    TypeScript   210,039  61,437  357  891  Updated Nov 11, 2026  nod  Public     Open source personal agent with its own computer. It chases invoices, preps your calls and cancel",
+        "url": "https://github.com/n8n-io",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "Build more capable automations through chat with Flows in AWS Quick - AWS",
+        "name": "Build more capable automations thro",
+        "description": "Build more capable automations through chat with Flows in AWS Quick - AWS  # Build more capable automations through chat with Flows in AWS Quick   Posted on: Nov 20, 2026   Flows in AWS Quick now lets users build, run, a",
+        "url": "https://aws.amazon.com/about-aws/whats-new/2026/11/aws-quick-flows-automations-chat/",
+        "source": "Exa (24h Index)"
+      }
+    ]
   }
 ]
