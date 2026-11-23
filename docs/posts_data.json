@@ -1,5 +1,111 @@
 [
   {
+    "id": "2026-11-24-slot-2",
+    "title": "Devs, drowning in GitHub issues? Manual PR reviews crushing velocity? Your code workflow is absolutely broken.",
+    "date": "November 24, 2026",
+    "date_slug": "2026-11-24",
+    "slot_id": 2,
+    "slot_name": "Evening AI Toolkit (Slot 2)",
+    "badge": "AI RADAR",
+    "cta_keyword": "WORKFLOW",
+    "video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1795459984/slot_2_daily_reel_opt.mp4",
+    "summary": "Devs, drowning in GitHub issues? Manual PR reviews crushing velocity? Your code workflow is absolutely broken.",
+    "voiceover_script": "Devs, drowning in GitHub issues? Manual PR reviews crushing velocity? Your code workflow is absolutely broken. AI agents now manage your entire software factory, autonomously. autonomous-coding-agent: Label issue, get reviewed, merged PRs, tagged releases. Your self-hosted, autonomous software factory is live. New in AWS Quick: More capable flow: Updated web experience, agents collaborate. Build powerful AI workflows, faster, smarter now. AWS Systems Manager Automation now: Automates operational tasks in Azure and Google Cloud. Extend your AWS automation instantly. Comment WORKFLOW below, and I will DM you the exact setup code right now.",
+    "items": [
+      {
+        "number": 1,
+        "name": "Autonomous Coding Agent",
+        "url": "https://github.com/topics/autonomous-coding-agent",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "Open-source (AGPL-3.0), self-hostable lights-out software factory for the agent era: label a GitHub Issue, get an independently reviewed, merged PR and a tagged release.  - Updated Nov 20, 2026 - Python  Autonomous LLM b",
+        "command": "pip install autonomous-coding-agent",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 2,
+        "name": "New In Aws Quick: More Capable Flow",
+        "url": "https://aws.amazon.com/blogs/machine-learning/new-in-aws-quick-more-capable-flows-an-updated-web-experience-and-agents-that-work-together/",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "New in AWS Quick: More capable flows, an updated web experience, and agents that work together | Artificial Intelligence  # New in AWS Quick: More capable flows, an updated web experience, and agents that work together",
+        "command": "git clone https://aws.amazon.com/blogs/machine-learning/new-in-aws-quick-more-capable-flows-an-updated-web-experience-and-agents-that-work-together/.git\ncd new in aws quick: more capable flow\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 3,
+        "name": "Aws Systems Manager Automation Now",
+        "url": "https://aws.amazon.com/about-aws/whats-new/2026/11/systems-manager-multicloud-automation/",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "AWS Systems Manager Automation now automates operational tasks in Azure and Google Cloud - AWS  # AWS Systems Manager Automation now automates operational tasks in Azure and Google Cloud   Posted on: Nov 23, 2026   AWS S",
+        "command": "git clone https://aws.amazon.com/about-aws/whats-new/2026/11/systems-manager-multicloud-automation/.git\ncd aws systems manager automation now\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      }
+    ],
+    "cta_text": "Want our studio to build custom autonomous AI employees for your workflow? Follow @jayant.digitalstudio and DM 'WORKFLOW'.",
+    "tags": [
+      "#ai",
+      "#automation",
+      "#tech",
+      "#softwareengineer",
+      "#workflow"
+    ]
+  },
+  {
+    "id": "2026-11-24-slot-1",
+    "title": "Stuck building AI? Your agent development feels slow, complex, and frustratingly closed-source.",
+    "date": "November 24, 2026",
+    "date_slug": "2026-11-24",
+    "slot_id": 1,
+    "slot_name": "Morning Breakthrough (Slot 1)",
+    "badge": "AI RADAR",
+    "cta_keyword": "REPOS",
+    "video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1795459602/slot_1_daily_reel_opt.mp4",
+    "summary": "Stuck building AI? Your agent development feels slow, complex, and frustratingly closed-source.",
+    "voiceover_script": "Stuck building AI? Your agent development feels slow, complex, and frustratingly closed-source. Unleash open-source power now! Autonomous agents build themselves, faster than you imagine. Open Source AI Agents (2026): 10+ S. Discover top agents, compare licenses, track stars, and deploy instantly. autonomous-coding-agent. Label GitHub issues, get independently reviewed PRs merged. Auto-generate code releases. AI tool releases \u2014 what shipped in. Track daily open-source AI and ML releases from 15+ critical repos. Comment REPOS below, and I will DM you the exact setup code right now.",
+    "items": [
+      {
+        "number": 1,
+        "name": "Open Source Ai Agents (2026): 10+ S",
+        "url": "https://aiagentslist.com/open-source",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "# Open Source AI Agents  Every agent here publishes its source code on GitHub under an OSI-approved license. Compare them by license, stars, pricing and category.  At a glance  ## Top 10 open source AI agents  Ranked by",
+        "command": "git clone https://aiagentslist.com/open-source.git\ncd open source ai agents (2026): 10+ s\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 2,
+        "name": "Autonomous Coding Agent",
+        "url": "https://github.com/topics/autonomous-coding-agent",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "Open-source (AGPL-3.0), self-hostable lights-out software factory for the agent era: label a GitHub Issue, get an independently reviewed, merged PR and a tagged release.  - Updated Nov 20, 2026 - Python  Autonomous LLM b",
+        "command": "pip install autonomous-coding-agent",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 3,
+        "name": "Ai Tool Releases \u2014 What Shipped In",
+        "url": "https://www.dailyneuraldigest.com/releases/releases/",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "AI tool releases \u2014 what shipped in open-source AI and ML | Daily Neural Digest  # AI tool releases \u2014 what shipped in open-source AI and ML  Every release published in the last 45 days by 15 open-source AI and ML reposito",
+        "command": "git clone https://www.dailyneuraldigest.com/releases/releases/.git\ncd ai tool releases \u2014 what shipped in\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      }
+    ],
+    "cta_text": "Want our studio to build custom autonomous AI employees for your workflow? Follow @jayant.digitalstudio and DM 'REPOS'.",
+    "tags": [
+      "#ai",
+      "#automation",
+      "#tech",
+      "#softwareengineer",
+      "#workflow"
+    ]
+  },
+  {
     "id": "2026-11-23-slot-2",
     "title": "Stuck building repetitive dev tasks? Your AI agents lack real power? Manual workflows kill productivity.",
     "date": "November 23, 2026",

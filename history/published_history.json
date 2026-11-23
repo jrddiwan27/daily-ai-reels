@@ -4670,5 +4670,79 @@
         "source": "Exa (24h Index)"
       }
     ]
+  },
+  {
+    "slot_id": 1,
+    "slot_name": "Morning Breakthrough (Slot 1)",
+    "timestamp_utc": "2026-11-23T18:47:18.366421+00:00",
+    "date_ist": "2026-11-24 9:00 AM IST (Scheduled for 03:30 UTC)",
+    "buffer_post_id": "6b048a346dffe25404d6abcc",
+    "channel_results": {
+      "instagram": "6b048a346dffe25404d6abcc",
+      "youtube": "6b048a3576f8581f13909b79",
+      "twitter": "6b048a366dffe25404d6ac68",
+      "public_video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1795459602/slot_1_daily_reel_opt.mp4"
+    },
+    "video_path": "out/slot_1_daily_reel_opt.mp4",
+    "items": [
+      {
+        "title": "Open Source AI Agents (2026): 10+ Self-Hosted Tools",
+        "name": "Open Source AI Agents (2026): 10+ S",
+        "description": "# Open Source AI Agents  Every agent here publishes its source code on GitHub under an OSI-approved license. Compare them by license, stars, pricing and category.  At a glance  ## Top 10 open source AI agents  Ranked by",
+        "url": "https://aiagentslist.com/open-source",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "autonomous-coding-agent \u00b7 GitHub Topics \u00b7 GitHub",
+        "name": "autonomous-coding-agent",
+        "description": "Open-source (AGPL-3.0), self-hostable lights-out software factory for the agent era: label a GitHub Issue, get an independently reviewed, merged PR and a tagged release.  - Updated Nov 20, 2026 - Python  Autonomous LLM b",
+        "url": "https://github.com/topics/autonomous-coding-agent",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "AI tool releases \u2014 what shipped in open-source AI and ML | Daily Neural Digest",
+        "name": "AI tool releases \u2014 what shipped in",
+        "description": "AI tool releases \u2014 what shipped in open-source AI and ML | Daily Neural Digest  # AI tool releases \u2014 what shipped in open-source AI and ML  Every release published in the last 45 days by 15 open-source AI and ML reposito",
+        "url": "https://www.dailyneuraldigest.com/releases/releases/",
+        "source": "Exa (24h Index)"
+      }
+    ]
+  },
+  {
+    "slot_id": 2,
+    "slot_name": "Evening AI Toolkit (Slot 2)",
+    "timestamp_utc": "2026-11-23T18:53:41.469940+00:00",
+    "date_ist": "2026-11-24 7:00 PM IST (Scheduled for 13:30 UTC)",
+    "buffer_post_id": "6b048bb30191a6ffcb86b57f",
+    "channel_results": {
+      "instagram": "6b048bb30191a6ffcb86b57f",
+      "youtube": "6b048bb483d02a163386fb51",
+      "twitter": "6b048bb50191a6ffcb86b822",
+      "public_video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1795459984/slot_2_daily_reel_opt.mp4"
+    },
+    "video_path": "out/slot_2_daily_reel_opt.mp4",
+    "items": [
+      {
+        "title": "autonomous-coding-agent \u00b7 GitHub Topics \u00b7 GitHub",
+        "name": "autonomous-coding-agent",
+        "description": "Open-source (AGPL-3.0), self-hostable lights-out software factory for the agent era: label a GitHub Issue, get an independently reviewed, merged PR and a tagged release.  - Updated Nov 20, 2026 - Python  Autonomous LLM b",
+        "url": "https://github.com/topics/autonomous-coding-agent",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "New in AWS Quick: More capable flows, an updated web experience, and agents that work together | Artificial Intelligence",
+        "name": "New in AWS Quick: More capable flow",
+        "description": "New in AWS Quick: More capable flows, an updated web experience, and agents that work together | Artificial Intelligence  # New in AWS Quick: More capable flows, an updated web experience, and agents that work together",
+        "url": "https://aws.amazon.com/blogs/machine-learning/new-in-aws-quick-more-capable-flows-an-updated-web-experience-and-agents-that-work-together/",
+        "source": "Exa (24h Index)"
+      },
+      {
+        "title": "AWS Systems Manager Automation now automates operational tasks in Azure and Google Cloud - AWS",
+        "name": "AWS Systems Manager Automation now",
+        "description": "AWS Systems Manager Automation now automates operational tasks in Azure and Google Cloud - AWS  # AWS Systems Manager Automation now automates operational tasks in Azure and Google Cloud   Posted on: Nov 23, 2026   AWS S",
+        "url": "https://aws.amazon.com/about-aws/whats-new/2026/11/systems-manager-multicloud-automation/",
+        "source": "Exa (24h Index)"
+      }
+    ]
   }
 ]
