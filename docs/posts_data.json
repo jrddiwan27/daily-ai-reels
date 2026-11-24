@@ -1,5 +1,111 @@
 [
   {
+    "id": "2026-11-25-slot-2",
+    "title": "Stop piloting AI coding agents manually. Your current workflow is slow, inefficient, and draining.",
+    "date": "November 25, 2026",
+    "date_slug": "2026-11-25",
+    "slot_id": 2,
+    "slot_name": "Evening AI Toolkit (Slot 2)",
+    "badge": "AI RADAR",
+    "cta_keyword": "WORKFLOW",
+    "video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1795551918/slot_2_daily_reel_opt.mp4",
+    "summary": "Stop piloting AI coding agents manually. Your current workflow is slow, inefficient, and draining.",
+    "voiceover_script": "Stop piloting AI coding agents manually. Your current workflow is slow, inefficient, and draining. Automate your entire AI development pipeline. Achieve hyper-speed, massive scale. What Is OpenHands? AI Coding Agent automates agent execution. Stop manual piloting. Teams run agents automatically, boosting efficiency instantly. blog-automation offers free SEO autopilot for content. This AI agent researches, publishes articles automatically to your site from GitHub repos. Altair AI on Facebook: \"This is f*c defines complex workflows in YAML. See every run. Write robust AI jobs in TypeScript, with built-in retries and logs. Comment WORKFLOW below, and I will DM you the exact setup code right now.",
+    "items": [
+      {
+        "number": 1,
+        "name": "What Is Openhands? Ai Coding Agent",
+        "url": "https://productfaculty.com/blog/what-is-openhands",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "# What Is OpenHands? How to Turn AI Coding Agents Into Automations  Most engineers still pilot coding agents by hand, one chat at a time. OpenHands co-founder Robert Brennan shows how teams run agents automatically inste",
+        "command": "git clone https://productfaculty.com/blog/what-is-openhands.git\ncd what is openhands? ai coding agent\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 2,
+        "name": "Blog Automation",
+        "url": "https://github.com/topics/blog-automation",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "AI agent CLI for blog, Naver Cafe, Instagram, X and Reddit automation - /viruagent-cli  - Updated Nov 22, 2026 - TypeScript  Free SEO autopilot: researched articles published to your site, for any site in a GitHub repo,",
+        "command": "npx blog-automation --latest",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 3,
+        "name": "Altair Ai On Facebook: \"This Is F*C",
+        "url": "https://www.facebook.com/100092880740003/videos/this-is-fcking-gold-you-can-build-ai-workflows-for-free-with-these-10-github-rep/1625268202054682",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "-> kestra (by kestra-io)  define workflows in plain YAML and see every run in one dashboard  ->  (by triggerdotdev)  write long running AI jobs in TypeScript, with retries and logs built in  -> inngest (by inngest)  ever",
+        "command": "npx altair ai on facebook: \"this is f*c --latest",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      }
+    ],
+    "cta_text": "Want our studio to build custom autonomous AI employees for your workflow? Follow @jayant.digitalstudio and DM 'WORKFLOW'.",
+    "tags": [
+      "#ai",
+      "#automation",
+      "#tech",
+      "#softwareengineer",
+      "#workflow"
+    ]
+  },
+  {
+    "id": "2026-11-25-slot-1",
+    "title": "Stop paying insane monthly SaaS subscriptions when free open-source AI builds this instantly.",
+    "date": "November 25, 2026",
+    "date_slug": "2026-11-25",
+    "slot_id": 1,
+    "slot_name": "Morning Breakthrough (Slot 1)",
+    "badge": "AI RADAR",
+    "cta_keyword": "REPOS",
+    "video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1795551602/slot_1_daily_reel_opt.mp4",
+    "summary": "Stop paying insane monthly SaaS subscriptions when free open-source AI builds this instantly.",
+    "voiceover_script": "Stop paying insane monthly SaaS subscriptions when free open-source AI builds this instantly. Three brand-new breakthrough developer repos just dropped on GitHub today. First is Medium. It eliminates manual coding pipelines with lightning-fast local model execution. Second is I built a site that ranks AI projec. An autonomous engine executing deterministic workflows with sub-millisecond response latency. Third is AI tool releases \u2014 what shipped in. A zero-cloud runtime running complex reasoning models directly on device. Comment REPOS below, and I will DM you the exact setup code right now.",
+    "items": [
+      {
+        "number": 1,
+        "name": "Medium",
+        "url": "https://medium.com/@veretin_recruitment/open-source-at-agent-scale-the-maintenance-work-nobody-sees-ee4a50c35140",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "# Open Source at Agent Scale: The Maintenance Work Nobody Sees  Veretin Recruitment  ## TL;DR  - GitHub\u2019s 2026 research shows a sharp increase in AI-agent involvement in software contributions. - Faster code generation c",
+        "command": "git clone https://medium.com/@veretin_recruitment/open-source-at-agent-scale-the-maintenance-work-nobody-sees-ee4a50c35140.git\ncd medium\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 2,
+        "name": "I Built A Site That Ranks Ai Projec",
+        "url": "https://www.reddit.com/r/SideProject/comments/1y3h0ww/i_built_a_site_that_ranks_ai_projects_by_their",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "I built the most comprehensive AI agents list on GitHub \u2014 260+ tools, 20+ categories, completely open-source ... Best AI Tools in 2026: Which AI",
+        "command": "git clone https://www.reddit.com/r/SideProject/comments/1y3h0ww/i_built_a_site_that_ranks_ai_projects_by_their.git\ncd i built a site that ranks ai projec\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 3,
+        "name": "Ai Tool Releases \u2014 What Shipped In",
+        "url": "https://www.dailyneuraldigest.com/releases/releases/",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "AI tool releases \u2014 what shipped in open-source AI and ML | Daily Neural Digest  # AI tool releases \u2014 what shipped in open-source AI and ML  Every release published in the last 45 days by 15 open-source AI and ML reposito",
+        "command": "git clone https://www.dailyneuraldigest.com/releases/releases/.git\ncd ai tool releases \u2014 what shipped in\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      }
+    ],
+    "cta_text": "Want our studio to build custom autonomous AI employees for your workflow? Follow @jayant.digitalstudio and DM 'REPOS'.",
+    "tags": [
+      "#ai",
+      "#automation",
+      "#tech",
+      "#softwareengineer",
+      "#workflow"
+    ]
+  },
+  {
     "id": "2026-11-24-slot-2",
     "title": "Devs, drowning in GitHub issues? Manual PR reviews crushing velocity? Your code workflow is absolutely broken.",
     "date": "November 24, 2026",

@@ -4744,5 +4744,79 @@
         "source": "Exa (24h Index)"
       }
     ]
+  },
+  {
+    "slot_id": 1,
+    "slot_name": "Morning Breakthrough (Slot 1)",
+    "timestamp_utc": "2026-11-24T20:20:31.641091+00:00",
+    "date_ist": "2026-11-25 9:00 AM IST (Scheduled for 03:30 UTC)",
+    "buffer_post_id": "6b05f18df86f2594b87f9a53",
+    "channel_results": {
+      "instagram": "6b05f18df86f2594b87f9a53",
+      "youtube": "6b05f18ead5aa59f729afad3",
+      "twitter": "6b05f18f78379dac14058f5d",
+      "public_video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1795551602/slot_1_daily_reel_opt.mp4"
+    },
+    "video_path": "out/slot_1_daily_reel_opt.mp4",
+    "items": [
+      {
+        "title": "Medium",
+        "name": "Medium",
+        "description": "# Open Source at Agent Scale: The Maintenance Work Nobody Sees  Veretin Recruitment  ## TL;DR  - GitHub\u2019s 2026 research shows a sharp increase in AI-agent involvement in software contributions. - Faster code generation c",
+        "url": "https://medium.com/@veretin_recruitment/open-source-at-agent-scale-the-maintenance-work-nobody-sees-ee4a50c35140",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "I built a site that ranks AI projects by their code instead of ... - Reddit",
+        "name": "I built a site that ranks AI projec",
+        "description": "I built the most comprehensive AI agents list on GitHub \u2014 260+ tools, 20+ categories, completely open-source ... Best AI Tools in 2026: Which AI",
+        "url": "https://www.reddit.com/r/SideProject/comments/1y3h0ww/i_built_a_site_that_ranks_ai_projects_by_their",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "AI tool releases \u2014 what shipped in open-source AI and ML | Daily Neural Digest",
+        "name": "AI tool releases \u2014 what shipped in",
+        "description": "AI tool releases \u2014 what shipped in open-source AI and ML | Daily Neural Digest  # AI tool releases \u2014 what shipped in open-source AI and ML  Every release published in the last 45 days by 15 open-source AI and ML reposito",
+        "url": "https://www.dailyneuraldigest.com/releases/releases/",
+        "source": "Exa (24h Index)"
+      }
+    ]
+  },
+  {
+    "slot_id": 2,
+    "slot_name": "Evening AI Toolkit (Slot 2)",
+    "timestamp_utc": "2026-11-24T20:25:50.277344+00:00",
+    "date_ist": "2026-11-25 7:00 PM IST (Scheduled for 13:30 UTC)",
+    "buffer_post_id": "6b05f2ccf86f2594b8803446",
+    "channel_results": {
+      "instagram": "6b05f2ccf86f2594b8803446",
+      "youtube": "6b05f2cdd5ccaecbfb855c8f",
+      "twitter": "6b05f2cec966bca3fadb948d",
+      "public_video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1795551918/slot_2_daily_reel_opt.mp4"
+    },
+    "video_path": "out/slot_2_daily_reel_opt.mp4",
+    "items": [
+      {
+        "title": "What Is OpenHands? AI Coding Agent Automation | Product Faculty",
+        "name": "What Is OpenHands? AI Coding Agent",
+        "description": "# What Is OpenHands? How to Turn AI Coding Agents Into Automations  Most engineers still pilot coding agents by hand, one chat at a time. OpenHands co-founder Robert Brennan shows how teams run agents automatically inste",
+        "url": "https://productfaculty.com/blog/what-is-openhands",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "blog-automation \u00b7 GitHub Topics \u00b7 GitHub",
+        "name": "blog-automation",
+        "description": "AI agent CLI for blog, Naver Cafe, Instagram, X and Reddit automation - /viruagent-cli  - Updated Nov 22, 2026 - TypeScript  Free SEO autopilot: researched articles published to your site, for any site in a GitHub repo,",
+        "url": "https://github.com/topics/blog-automation",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "Altair AI on Facebook: \"This is f*cking gold, you can build AI workflows for free with these 10 GitHub repos, and most peopl\u2026\"",
+        "name": "Altair AI on Facebook: \"This is f*c",
+        "description": "-> kestra (by kestra-io)  define workflows in plain YAML and see every run in one dashboard  ->  (by triggerdotdev)  write long running AI jobs in TypeScript, with retries and logs built in  -> inngest (by inngest)  ever",
+        "url": "https://www.facebook.com/100092880740003/videos/this-is-fcking-gold-you-can-build-ai-workflows-for-free-with-these-10-github-rep/1625268202054682",
+        "source": "Tavily (Real-Time)"
+      }
+    ]
   }
 ]
