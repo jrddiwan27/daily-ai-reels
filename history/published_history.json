@@ -4818,5 +4818,79 @@
         "source": "Tavily (Real-Time)"
       }
     ]
+  },
+  {
+    "slot_id": 1,
+    "slot_name": "Morning Breakthrough (Slot 1)",
+    "timestamp_utc": "2026-11-25T19:32:43.346302+00:00",
+    "date_ist": "2026-11-26 9:00 AM IST (Scheduled for 03:30 UTC)",
+    "buffer_post_id": "6b0737d9c06d6883dadafd8a",
+    "channel_results": {
+      "instagram": "6b0737d9c06d6883dadafd8a",
+      "youtube": "6b0737da636c52154b9bac04",
+      "twitter": "6b0737dbd1defc729c8a10e8",
+      "public_video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1795635135/slot_1_daily_reel_opt.mp4"
+    },
+    "video_path": "out/slot_1_daily_reel_opt.mp4",
+    "items": [
+      {
+        "title": "Best AI Coding Tools: Top 10 Picks in 2026",
+        "name": "Best AI Coding Tools: Top 10 Picks",
+        "description": "## 2. GitHub Copilot  GitHub Copilot works as an extension across many editors, with a CLI and a cloud agent that can work on issues and open pull requests. Its main edge is native integration with GitHub issues, pull re",
+        "url": "https://www.classicinformatics.com/blog/best-ai-coding-tools",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "Future AGI \u00b7 GitHub",
+        "name": "Future AGI",
+        "description": "TypeScript   0  26,081  0  0  Updated Oct 17, 2026  langflow  Public   Forked from langflow-ai/langflow    Langflow is a powerful tool for building and deploying AI-powered agents and workflows.    ### Uh oh!    There wa",
+        "url": "https://github.com/future-agi",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "AI tool releases \u2014 what shipped in open-source AI and ML | Daily Neural Digest",
+        "name": "AI tool releases \u2014 what shipped in",
+        "description": "AI tool releases \u2014 what shipped in open-source AI and ML | Daily Neural Digest  # AI tool releases \u2014 what shipped in open-source AI and ML  Every release published in the last 45 days by 15 open-source AI and ML reposito",
+        "url": "https://www.dailyneuraldigest.com/releases/releases/",
+        "source": "Exa (24h Index)"
+      }
+    ]
+  },
+  {
+    "slot_id": 2,
+    "slot_name": "Evening AI Toolkit (Slot 2)",
+    "timestamp_utc": "2026-11-25T19:37:33.605436+00:00",
+    "date_ist": "2026-11-26 7:00 PM IST (Scheduled for 13:30 UTC)",
+    "buffer_post_id": "6b0738fbd1defc729c8aadbb",
+    "channel_results": {
+      "instagram": "6b0738fbd1defc729c8aadbb",
+      "youtube": "6b0738fcd54ca56e4765202f",
+      "twitter": "6b0738fd26006f0325dcb22d",
+      "public_video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1795635426/slot_2_daily_reel_opt.mp4"
+    },
+    "video_path": "out/slot_2_daily_reel_opt.mp4",
+    "items": [
+      {
+        "title": "system-automation \u00b7 GitHub Topics \u00b7 GitHub",
+        "name": "system-automation",
+        "description": "### Hanan-Abbas / Operonix  Star  2  An intelligent desktop AI that understands voice commands, automates workflows, and learns to extend itself across any application.  python3 event-driven desktop-automation speech-to-",
+        "url": "https://github.com/topics/system-automation",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "always-on-agent \u00b7 GitHub Topics \u00b7 GitHub",
+        "name": "always-on-agent",
+        "description": "Waku Agent is an open-source AI agent harness you own: loop, memory, evals, and an always-on layer (event inbox, timers, approvals, outbox), in code that stays readable.  - Updated Nov 21, 2026 - Python  \u4f4f\u5728\u81ea\u5df1\u624b\u673a\u4e0a\u7684\u89d2\u8272\uff0cDeepS",
+        "url": "https://github.com/topics/always-on-agent",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "pcb-automation \u00b7 GitHub Topics \u00b7 GitHub",
+        "name": "pcb-automation",
+        "description": "\u5609\u7acb\u521b EDA \u4e13\u4e1a\u7248\uff08EasyEDA Pro\uff09\u5f00\u6e90 AI \u81ea\u52a8\u5316\uff1a\u539f\u7406\u56fe\u3001PCB \u5e03\u5c40\u5e03\u7ebf\u4e0e\u5de5\u7a0b\u68c0\u67e5\uff0c\u652f\u6301 CLI / Agent Skill / MCP\u3002\u914d\u5957 EdaDesk Desktop \u5185\u6d4b\u7248\u53ef\u4e0b\u8f7d\u4f53\u9a8c\u3002Open-source AI schematic and PCB automation for EasyEDA Pro.  - Updated Nov 23, 2026 - Go  PCB Flow \u2014 autonomous,",
+        "url": "https://github.com/topics/pcb-automation",
+        "source": "Tavily (Real-Time)"
+      }
+    ]
   }
 ]
