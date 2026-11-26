@@ -4892,5 +4892,79 @@
         "source": "Tavily (Real-Time)"
       }
     ]
+  },
+  {
+    "slot_id": 1,
+    "slot_name": "Morning Breakthrough (Slot 1)",
+    "timestamp_utc": "2026-11-26T19:15:01.646096+00:00",
+    "date_ist": "2026-11-27 9:00 AM IST (Scheduled for 03:30 UTC)",
+    "buffer_post_id": "6b0885331fa40915828f1563",
+    "channel_results": {
+      "instagram": "6b0885331fa40915828f1563",
+      "youtube": "6b0885349068b6e079597cfb",
+      "twitter": "6b088535f0a96d0f21832d5d",
+      "public_video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1795720471/slot_1_daily_reel_opt.mp4"
+    },
+    "video_path": "out/slot_1_daily_reel_opt.mp4",
+    "items": [
+      {
+        "title": "Best Open Source AI Agents in 2026: What to Use for Each Job | HyzenPro",
+        "name": "Best Open Source AI Agents in 2026:",
+        "description": "## Open source AI coding agents  OpenHands (MIT) is the most autonomous choice. It works inside a sandbox, can run headless, and suits teams that want everything self-hosted.  Cline (Apache 2.0) lives in VS Code and asks",
+        "url": "https://hyzenpro.com/blog/best-open-source-ai-agents-in-2026-what-to-use-for-each-job",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "These AI Tools Are Blowing Up On GitHub Right Now",
+        "name": "These AI Tools Are Blowing Up On Gi",
+        "description": "We go deep on Claude Code and Cursor for AI coding, AI agents and MCP servers, the open-source AI tools and GitHub repos most people miss, RAG and vector search, fine-tuning, and running local LLMs on your own machine wi",
+        "url": "https://www.youtube.com/watch?v=UDXjRN4DroQ",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "Amir Tech on Facebook: \"Comment \u201cTRENDING\u201d and I\u2019ll DM you all four GitHub link. 4 Trending GitHub Repos You Need to Know Ab\u2026\"",
+        "name": "Amir Tech on Facebook: \"Comment \u201cTR",
+        "description": "# Amir Tech on Facebook: \"Comment \u201cTRENDING\u201d and I\u2019ll DM you all four GitHub link. 4 Trending GitHub Repos You Need to Know Ab\u2026\"  Comment \u201cTRENDING\u201d and I\u2019ll DM you all four GitHub link. 4 Trending GitHub Repos You Need",
+        "url": "https://www.facebook.com/theamirafridi/posts/comment-trending-and-ill-dm-you-all-four-github-link-4-trending-github-repos-you/1730330629105873",
+        "source": "Tavily (Real-Time)"
+      }
+    ]
+  },
+  {
+    "slot_id": 2,
+    "slot_name": "Evening AI Toolkit (Slot 2)",
+    "timestamp_utc": "2026-11-26T19:20:45.826637+00:00",
+    "date_ist": "2026-11-27 7:00 PM IST (Scheduled for 13:30 UTC)",
+    "buffer_post_id": "6b08868c9068b6e0795a3826",
+    "channel_results": {
+      "instagram": "6b08868c9068b6e0795a3826",
+      "youtube": "6b08868d1fa40915828fcb25",
+      "twitter": "6b08868d9068b6e0795a38d8",
+      "public_video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1795720805/slot_2_daily_reel_opt.mp4"
+    },
+    "video_path": "out/slot_2_daily_reel_opt.mp4",
+    "items": [
+      {
+        "title": "Best Open Source AI Agents in 2026: What to Use for Each Job | HyzenPro",
+        "name": "Best Open Source AI Agents in 2026:",
+        "description": "## Open source AI coding agents  OpenHands (MIT) is the most autonomous choice. It works inside a sandbox, can run headless, and suits teams that want everything self-hosted.  Cline (Apache 2.0) lives in VS Code and asks",
+        "url": "https://hyzenpro.com/blog/best-open-source-ai-agents-in-2026-what-to-use-for-each-job",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "[Week 3, November 2026] Weekly GitHub Trending TOP 5: Five Must-Watch AI Breakthroughs",
+        "name": "[Week 3, November 2026] Weekly GitH",
+        "description": "and video editing tasks into deterministic agent tools, forcing a probe [music] script to inspect real codecs and frame rates before touching any footage. All running 100% locally offline. [music] Those 42 deterministic",
+        "url": "https://www.youtube.com/watch?v=BSHpLf7dhYw",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "Sabib Ahamed on Facebook: \"\ud83d\ude80 Introducing **Open-Agent**! What if you could automate your work just by having a conversation? Me\u2026\"",
+        "name": "Sabib Ahamed on Facebook: \"\ud83d\ude80 Introd",
+        "description": "# Sabib Ahamed on Facebook: \"\ud83d\ude80 Introducing Open-Agent! What if you could automate your work just by having a conversation? Me\u2026\"  \ud83d\ude80 Introducing Open-Agent!  What if you could automate your work just by having a conversati",
+        "url": "https://www.facebook.com/groups/aiautomationbangladesh/posts/4640336212906151",
+        "source": "Tavily (Real-Time)"
+      }
+    ]
   }
 ]

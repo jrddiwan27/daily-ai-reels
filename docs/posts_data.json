@@ -1,5 +1,111 @@
 [
   {
+    "id": "2026-11-27-slot-2",
+    "title": "Stuck with AI agents that fail, hallucinate, or just can't finish tasks?",
+    "date": "November 27, 2026",
+    "date_slug": "2026-11-27",
+    "slot_id": 2,
+    "slot_name": "Evening AI Toolkit (Slot 2)",
+    "badge": "AI RADAR",
+    "cta_keyword": "WORKFLOW",
+    "video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1795720805/slot_2_daily_reel_opt.mp4",
+    "summary": "Stuck with AI agents that fail, hallucinate, or just can't finish tasks?",
+    "voiceover_script": "Stuck with AI agents that fail, hallucinate, or just can't finish tasks? Break free. These open source agents redefine autonomous AI. Real results. Best Open Source AI Agents in 2026: OpenHands autonomously executes in sandbox, runs headless, ideal for self-hosted teams. Cline integrates VS Code. [Week 3, November 2026] Weekly GitH: Transforms video editing to deterministic agents. Inspects codecs, frame rates. Runs 100% locally offline. Gain full control. Sabib Ahamed on Facebook: \"\ud83d\ude80 Introd: Open-Agent automates work purely via conversation. Chat to complete tasks. Revolutionize your workflow.\" Comment WORKFLOW below. I'll DM you the exact setup code right now.",
+    "items": [
+      {
+        "number": 1,
+        "name": "Best Open Source Ai Agents In 2026:",
+        "url": "https://hyzenpro.com/blog/best-open-source-ai-agents-in-2026-what-to-use-for-each-job",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "## Open source AI coding agents  OpenHands (MIT) is the most autonomous choice. It works inside a sandbox, can run headless, and suits teams that want everything self-hosted.  Cline (Apache 2.0) lives in VS Code and asks",
+        "command": "git clone https://hyzenpro.com/blog/best-open-source-ai-agents-in-2026-what-to-use-for-each-job.git\ncd best open source ai agents in 2026:\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 2,
+        "name": "[Week 3, November 2026] Weekly Gith",
+        "url": "https://www.youtube.com/watch?v=BSHpLf7dhYw",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "and video editing tasks into deterministic agent tools, forcing a probe [music] script to inspect real codecs and frame rates before touching any footage. All running 100% locally offline. [music] Those 42 deterministic",
+        "command": "git clone https://www.youtube.com/watch?v=BSHpLf7dhYw.git\ncd [week 3, november 2026] weekly gith\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 3,
+        "name": "Sabib Ahamed On Facebook: \"\ud83d\ude80 Introd",
+        "url": "https://www.facebook.com/groups/aiautomationbangladesh/posts/4640336212906151",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "# Sabib Ahamed on Facebook: \"\ud83d\ude80 Introducing Open-Agent! What if you could automate your work just by having a conversation? Me\u2026\"  \ud83d\ude80 Introducing Open-Agent!  What if you could automate your work just by having a conversati",
+        "command": "git clone https://www.facebook.com/groups/aiautomationbangladesh/posts/4640336212906151.git\ncd sabib ahamed on facebook: \"\ud83d\ude80 introd\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      }
+    ],
+    "cta_text": "Want our studio to build custom autonomous AI employees for your workflow? Follow @jayant.digitalstudio and DM 'WORKFLOW'.",
+    "tags": [
+      "#ai",
+      "#automation",
+      "#tech",
+      "#softwareengineer",
+      "#workflow"
+    ]
+  },
+  {
+    "id": "2026-11-27-slot-1",
+    "title": "Stop paying insane monthly SaaS subscriptions when free open-source AI builds this instantly.",
+    "date": "November 27, 2026",
+    "date_slug": "2026-11-27",
+    "slot_id": 1,
+    "slot_name": "Morning Breakthrough (Slot 1)",
+    "badge": "AI RADAR",
+    "cta_keyword": "REPOS",
+    "video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1795720471/slot_1_daily_reel_opt.mp4",
+    "summary": "Stop paying insane monthly SaaS subscriptions when free open-source AI builds this instantly.",
+    "voiceover_script": "Stop paying insane monthly SaaS subscriptions when free open-source AI builds this instantly. Three brand-new breakthrough developer repos just dropped on GitHub today. First is Best Open Source AI Agents in 2026:. It eliminates manual coding pipelines with lightning-fast local model execution. Second is These AI Tools Are Blowing Up On Gi. An autonomous engine executing deterministic workflows with sub-millisecond response latency. Third is Amir Tech on Facebook: \"Comment \u201cTR. A zero-cloud runtime running complex reasoning models directly on device. Comment REPOS below, and I will DM you the exact setup code right now.",
+    "items": [
+      {
+        "number": 1,
+        "name": "Best Open Source Ai Agents In 2026:",
+        "url": "https://hyzenpro.com/blog/best-open-source-ai-agents-in-2026-what-to-use-for-each-job",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "## Open source AI coding agents  OpenHands (MIT) is the most autonomous choice. It works inside a sandbox, can run headless, and suits teams that want everything self-hosted.  Cline (Apache 2.0) lives in VS Code and asks",
+        "command": "git clone https://hyzenpro.com/blog/best-open-source-ai-agents-in-2026-what-to-use-for-each-job.git\ncd best open source ai agents in 2026:\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 2,
+        "name": "These Ai Tools Are Blowing Up On Gi",
+        "url": "https://www.youtube.com/watch?v=UDXjRN4DroQ",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "We go deep on Claude Code and Cursor for AI coding, AI agents and MCP servers, the open-source AI tools and GitHub repos most people miss, RAG and vector search, fine-tuning, and running local LLMs on your own machine wi",
+        "command": "git clone https://www.youtube.com/watch?v=UDXjRN4DroQ.git\ncd these ai tools are blowing up on gi\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 3,
+        "name": "Amir Tech On Facebook: \"Comment \u201cTr",
+        "url": "https://www.facebook.com/theamirafridi/posts/comment-trending-and-ill-dm-you-all-four-github-link-4-trending-github-repos-you/1730330629105873",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "# Amir Tech on Facebook: \"Comment \u201cTRENDING\u201d and I\u2019ll DM you all four GitHub link. 4 Trending GitHub Repos You Need to Know Ab\u2026\"  Comment \u201cTRENDING\u201d and I\u2019ll DM you all four GitHub link. 4 Trending GitHub Repos You Need",
+        "command": "git clone https://www.facebook.com/theamirafridi/posts/comment-trending-and-ill-dm-you-all-four-github-link-4-trending-github-repos-you/1730330629105873.git\ncd amir tech on facebook: \"comment \u201ctr\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      }
+    ],
+    "cta_text": "Want our studio to build custom autonomous AI employees for your workflow? Follow @jayant.digitalstudio and DM 'REPOS'.",
+    "tags": [
+      "#ai",
+      "#automation",
+      "#tech",
+      "#softwareengineer",
+      "#workflow"
+    ]
+  },
+  {
     "id": "2026-11-26-slot-2",
     "title": "Devs, drowning in repetitive tasks? Your productivity crashes. Manual work kills your flow.",
     "date": "November 26, 2026",
