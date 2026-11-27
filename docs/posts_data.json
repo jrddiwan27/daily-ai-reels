@@ -1,5 +1,111 @@
 [
   {
+    "id": "2026-11-28-slot-2",
+    "title": "Stuck building AI agents from scratch? Manual coding bottlenecks are crushing your project productivity.",
+    "date": "November 28, 2026",
+    "date_slug": "2026-11-28",
+    "slot_id": 2,
+    "slot_name": "Evening AI Toolkit (Slot 2)",
+    "badge": "AI RADAR",
+    "cta_keyword": "WORKFLOW",
+    "video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1795806970/slot_2_daily_reel_opt.mp4",
+    "summary": "Stuck building AI agents from scratch? Manual coding bottlenecks are crushing your project productivity.",
+    "voiceover_script": "Stuck building AI agents from scratch? Manual coding bottlenecks are crushing your project productivity. Stop wasting hours! These open-source AI agent frameworks automate everything. Best Open-Source AI Agents (2026): orchestrates complex AI workflows. It builds dynamic graphs, manages shared state, integrates human checkpoints effectively. Top 10 AI Agents Changing How Devel: revolutionizes coding. Offers free, open-source AI tools, replaces costly subscriptions, automates dev workflows. code-generation-ai-workflow: empowers persistent multi-agent teams. Agents discuss, code, sync, and verify, rapidly accelerating complex project completion. Comment WORKFLOW below, and I will DM you the exact setup code right now.",
+    "items": [
+      {
+        "number": 1,
+        "name": "Best Open Source Ai Agents (2026):",
+        "url": "https://www.betterclaw.io/blog/best-open-source-ai-agents",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "| Tool | Licence | How it orchestrates | GitHub stars | ------| | LangGraph | MIT | Graphs of shared state, with checkpoints and human-in-the-loop | about 45k | | CrewAI Flows | MIT | Event-driven flows that wrap role-ba",
+        "command": "git clone https://www.betterclaw.io/blog/best-open-source-ai-agents.git\ncd best open-source ai agents (2026):\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 2,
+        "name": "Top 10 Ai Agents Changing How Devel",
+        "url": "https://www.youtube.com/watch?v=3s31FWCoA_w",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "# Top 10 AI Agents Changing How Developers Code - Top 10 GitHub Repos (2026)  These 10 free, open-source AI tools and developer frameworks can replace expensive paid software subscriptions for coding, automation, workflo",
+        "command": "git clone https://www.youtube.com/watch?v=3s31FWCoA_w.git\ncd top 10 ai agents changing how devel\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 3,
+        "name": "Code Generation Ai Workflow",
+        "url": "https://github.com/topics/code-generation-ai-workflow",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "A coding assistant built on persistent multi-agent teams: durable members that discuss, chat, and re-sync continuously \u2014 Discuss -&gt; Code in parallel -&gt; Sync -&gt; Verify together.  - Updated Oct 31, 2026 - TypeScri",
+        "command": "git clone https://github.com/topics/code-generation-ai-workflow.git\ncd code-generation-ai-workflow\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      }
+    ],
+    "cta_text": "Want our studio to build custom autonomous AI employees for your workflow? Follow @jayant.digitalstudio and DM 'WORKFLOW'.",
+    "tags": [
+      "#ai",
+      "#automation",
+      "#tech",
+      "#softwareengineer",
+      "#workflow"
+    ]
+  },
+  {
+    "id": "2026-11-28-slot-1",
+    "title": "AI agents are chaotic. Your projects stall. You're drowning in unmanageable code.",
+    "date": "November 28, 2026",
+    "date_slug": "2026-11-28",
+    "slot_id": 1,
+    "slot_name": "Morning Breakthrough (Slot 1)",
+    "badge": "AI RADAR",
+    "cta_keyword": "REPOS",
+    "video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1795806632/slot_1_daily_reel_opt.mp4",
+    "summary": "AI agents are chaotic. Your projects stall. You're drowning in unmanageable code.",
+    "voiceover_script": "AI agents are chaotic. Your projects stall. You're drowning in unmanageable code. Stop the chaos. Orchestrate agents. Build robust, reliable AI workflows. Best Open-Source AI Agents (2026): LangGraph builds stateful graphs with human-in-loop. CrewAI Flows orchestrates dynamic, event-driven agent teams. Top 10 AI Agents Changing How Devel: Free open-source tools replace costly subscriptions. Empower developers, supercharge workflows, democratize AI access. code-generation-ai-workflow: Persistent multi-agent teams discuss, code in parallel, sync, and verify. Accelerates complex code generation. Comment REPOS below, and I will DM you the exact setup code right now.",
+    "items": [
+      {
+        "number": 1,
+        "name": "Best Open Source Ai Agents (2026):",
+        "url": "https://www.betterclaw.io/blog/best-open-source-ai-agents",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "| Tool | Licence | How it orchestrates | GitHub stars | ------| | LangGraph | MIT | Graphs of shared state, with checkpoints and human-in-the-loop | about 45k | | CrewAI Flows | MIT | Event-driven flows that wrap role-ba",
+        "command": "git clone https://www.betterclaw.io/blog/best-open-source-ai-agents.git\ncd best open-source ai agents (2026):\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 2,
+        "name": "Top 10 Ai Agents Changing How Devel",
+        "url": "https://www.youtube.com/watch?v=3s31FWCoA_w",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "These 10 free open-source AI tools and developer frameworks can replace expensive paid software subscriptions. Here are the top 10 GitHub projects taking over the community today, ranked from 10 down to one. Coming in at",
+        "command": "git clone https://www.youtube.com/watch?v=3s31FWCoA_w.git\ncd top 10 ai agents changing how devel\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      },
+      {
+        "number": 3,
+        "name": "Code Generation Ai Workflow",
+        "url": "https://github.com/topics/code-generation-ai-workflow",
+        "stars": "\u2605 10,000",
+        "badge": "AI TOOL",
+        "description": "A coding assistant built on persistent multi-agent teams: durable members that discuss, chat, and re-sync continuously \u2014 Discuss -&gt; Code in parallel -&gt; Sync -&gt; Verify together.  - Updated Oct 31, 2026 - TypeScri",
+        "command": "git clone https://github.com/topics/code-generation-ai-workflow.git\ncd code-generation-ai-workflow\n./setup.sh",
+        "image": "assets/repos/heygen-com_hyperframes/og_banner.png"
+      }
+    ],
+    "cta_text": "Want our studio to build custom autonomous AI employees for your workflow? Follow @jayant.digitalstudio and DM 'REPOS'.",
+    "tags": [
+      "#ai",
+      "#automation",
+      "#tech",
+      "#softwareengineer",
+      "#workflow"
+    ]
+  },
+  {
     "id": "2026-11-27-slot-2",
     "title": "Stuck with AI agents that fail, hallucinate, or just can't finish tasks?",
     "date": "November 27, 2026",

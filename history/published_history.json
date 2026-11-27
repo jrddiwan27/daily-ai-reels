@@ -4966,5 +4966,79 @@
         "source": "Tavily (Real-Time)"
       }
     ]
+  },
+  {
+    "slot_id": 1,
+    "slot_name": "Morning Breakthrough (Slot 1)",
+    "timestamp_utc": "2026-11-27T19:11:06.597417+00:00",
+    "date_ist": "2026-11-28 9:00 AM IST (Scheduled for 03:30 UTC)",
+    "buffer_post_id": "6b09d5c7819e60b3bdcc904a",
+    "channel_results": {
+      "instagram": "6b09d5c7819e60b3bdcc904a",
+      "youtube": "6b09d5c9fc786b6e1a8b60bb",
+      "twitter": "6b09d5ca79bc6b27517b1881",
+      "public_video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1795806632/slot_1_daily_reel_opt.mp4"
+    },
+    "video_path": "out/slot_1_daily_reel_opt.mp4",
+    "items": [
+      {
+        "title": "Best Open-Source AI Agents (2026): Top 10 + How to Run Them",
+        "name": "Best Open-Source AI Agents (2026):",
+        "description": "| Tool | Licence | How it orchestrates | GitHub stars | ------| | LangGraph | MIT | Graphs of shared state, with checkpoints and human-in-the-loop | about 45k | | CrewAI Flows | MIT | Event-driven flows that wrap role-ba",
+        "url": "https://www.betterclaw.io/blog/best-open-source-ai-agents",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "Top 10 AI Agents Changing How Developers Code - Top 10 GitHub Repos (2026)",
+        "name": "Top 10 AI Agents Changing How Devel",
+        "description": "These 10 free open-source AI tools and developer frameworks can replace expensive paid software subscriptions. Here are the top 10 GitHub projects taking over the community today, ranked from 10 down to one. Coming in at",
+        "url": "https://www.youtube.com/watch?v=3s31FWCoA_w",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "code-generation-ai-workflow \u00b7 GitHub Topics \u00b7 GitHub",
+        "name": "code-generation-ai-workflow",
+        "description": "A coding assistant built on persistent multi-agent teams: durable members that discuss, chat, and re-sync continuously \u2014 Discuss -&gt; Code in parallel -&gt; Sync -&gt; Verify together.  - Updated Oct 31, 2026 - TypeScri",
+        "url": "https://github.com/topics/code-generation-ai-workflow",
+        "source": "Tavily (Real-Time)"
+      }
+    ]
+  },
+  {
+    "slot_id": 2,
+    "slot_name": "Evening AI Toolkit (Slot 2)",
+    "timestamp_utc": "2026-11-27T19:16:43.105162+00:00",
+    "date_ist": "2026-11-28 7:00 PM IST (Scheduled for 13:30 UTC)",
+    "buffer_post_id": "6b09d719fc786b6e1a8c1ea8",
+    "channel_results": {
+      "instagram": "6b09d719fc786b6e1a8c1ea8",
+      "youtube": "6b09d71ae19dcd08fbf40ace",
+      "twitter": "6b09d71ae19dcd08fbf40b0d",
+      "public_video_url": "https://github.com/jrddiwan27/daily-ai-reels/releases/download/reel-1795806970/slot_2_daily_reel_opt.mp4"
+    },
+    "video_path": "out/slot_2_daily_reel_opt.mp4",
+    "items": [
+      {
+        "title": "Best Open-Source AI Agents (2026): Top 10 + How to Run Them",
+        "name": "Best Open-Source AI Agents (2026):",
+        "description": "| Tool | Licence | How it orchestrates | GitHub stars | ------| | LangGraph | MIT | Graphs of shared state, with checkpoints and human-in-the-loop | about 45k | | CrewAI Flows | MIT | Event-driven flows that wrap role-ba",
+        "url": "https://www.betterclaw.io/blog/best-open-source-ai-agents",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "Top 10 AI Agents Changing How Developers Code - Top 10 GitHub Repos (2026)",
+        "name": "Top 10 AI Agents Changing How Devel",
+        "description": "# Top 10 AI Agents Changing How Developers Code - Top 10 GitHub Repos (2026)  These 10 free, open-source AI tools and developer frameworks can replace expensive paid software subscriptions for coding, automation, workflo",
+        "url": "https://www.youtube.com/watch?v=3s31FWCoA_w",
+        "source": "Tavily (Real-Time)"
+      },
+      {
+        "title": "code-generation-ai-workflow \u00b7 GitHub Topics \u00b7 GitHub",
+        "name": "code-generation-ai-workflow",
+        "description": "A coding assistant built on persistent multi-agent teams: durable members that discuss, chat, and re-sync continuously \u2014 Discuss -&gt; Code in parallel -&gt; Sync -&gt; Verify together.  - Updated Oct 31, 2026 - TypeScri",
+        "url": "https://github.com/topics/code-generation-ai-workflow",
+        "source": "Tavily (Real-Time)"
+      }
+    ]
   }
 ]
